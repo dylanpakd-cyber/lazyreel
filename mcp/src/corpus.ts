@@ -157,6 +157,22 @@ export function getWinners(): Teardown[] {
   catch { _winners = []; }
   return _winners;
 }
+export type Example = { url: string; niche: string; hookPattern: string; framework: string; videoFormat: string | null; emotion: string | null; views: number; viewsPerFollower: number };
+let _examples: Example[] | null = null;
+export function getExamples(): Example[] {
+  if (_examples) return _examples;
+  try { _examples = (JSON.parse(readFileSync(dataPath("examples.json"), "utf8")).examples || []) as Example[]; }
+  catch { _examples = []; }
+  return _examples;
+}
+// real example videos to study, filtered by niche / format / hook pattern, best breakouts first
+export function examplesFor(opts: { niche?: string; videoFormat?: string; hookPattern?: string }, limit = 6): Example[] {
+  let ex = getExamples();
+  const m = (a?: string | null, b?: string) => !b || (a || "").toLowerCase().includes(b.toLowerCase()) || b.toLowerCase().includes((a || "").toLowerCase());
+  ex = ex.filter((e) => m(e.niche, opts.niche) && m(e.videoFormat, opts.videoFormat) && m(e.hookPattern, opts.hookPattern));
+  return ex.slice(0, limit);
+}
+
 export type Trend = { name: string; formula: string | null; whyItTravels: string | null; framework: string; videoFormat: string; hookPattern: string; recurrence: string; transfer: string[]; medianVpf: number };
 let _trends: Trend[] | null = null;
 export function getTrends(): Trend[] {

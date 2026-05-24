@@ -9,7 +9,7 @@ import {
   ListToolsRequestSchema,
 } from "@modelcontextprotocol/sdk/types.js";
 import {
-  videoIdeas, nicheDecode, formatTeardown, crackedHooks, shootBrief, killTheSlop, searchCorpus, viralTeardowns, contentGaps, formatPlaybook, findTrends, status,
+  videoIdeas, nicheDecode, formatTeardown, crackedHooks, shootBrief, killTheSlop, searchCorpus, viralTeardowns, contentGaps, formatPlaybook, findTrends, studyExamples, status,
 } from "./skills.js";
 import { SCRIPT_FRAMEWORKS } from "./frameworks.js";
 
@@ -143,6 +143,11 @@ const tools = [
     inputSchema: { type: "object", properties: { niche: { type: "string", description: "Optional niche filter." }, limit: { type: "number", description: "Max trends (1-18). Default 8." } } },
   },
   {
+    name: "study_examples",
+    description: "Return links to REAL TikTok videos to watch and study, filtered by niche, video format, and/or hook pattern, best breakouts first (with reach multiple + views). Use when the user wants to SEE real examples of a pattern/format/niche, get reference videos, or find videos to replicate. This grounds every recommendation in actual videos.",
+    inputSchema: { type: "object", properties: { niche: { type: "string", description: "Niche filter (e.g. 'skincare')." }, videoFormat: { type: "string", description: "Format filter (e.g. 'before-after', 'talking-head')." }, hookPattern: { type: "string", description: "Hook pattern filter (e.g. 'direct-callout')." }, limit: { type: "number", description: "Max videos (1-20). Default 8." } } },
+  },
+  {
     name: "get_status",
     description: "Explain what this MCP server can do and what is intentionally not live yet.",
     inputSchema: { type: "object", properties: {} },
@@ -181,6 +186,8 @@ server.setRequestHandler(CallToolRequestSchema, async (req) => {
         text = formatPlaybook(str("niche")); break;
       case "find_trends":
         text = findTrends(str("niche"), num("limit") ?? 8); break;
+      case "study_examples":
+        text = studyExamples(str("niche"), str("videoFormat"), str("hookPattern"), num("limit") ?? 8); break;
       case "get_status":
         text = status(process.env.ABG_TOKEN); break;
       default:

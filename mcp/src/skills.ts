@@ -9,25 +9,49 @@ import {
 import {
   searchVideos, relatedTrendingTags, corpusCounts, nicheInsight, overallHookLift, insightsMeta,
   getWinners, winnersForNiche, getVisualInsights, visualForNiche, wordsForNiche,
-  getTrends, trendsForNiche,
+  getTrends, trendsForNiche, getExamples, examplesFor, type Example,
   type AnalyzedVideo, type HookLift, type Teardown,
 } from "./corpus.js";
+
+function exampleLine(e: Example): string {
+  const tags = [e.videoFormat, e.hookPattern, e.emotion].filter(Boolean).join(" · ");
+  return `- ${e.url}  _(${e.viewsPerFollower}x reach · ${(e.views || 0).toLocaleString()} views · ${tags})_`;
+}
+
+export function studyExamples(niche = "", videoFormat = "", hookPattern = "", limit = 8): string {
+  const ex = examplesFor({ niche: niche.trim() || undefined, videoFormat: videoFormat.trim() || undefined, hookPattern: hookPattern.trim() || undefined }, Math.min(Math.max(limit, 1), 20));
+  const filt = [niche, videoFormat, hookPattern].filter(Boolean).join(" / ");
+  if (!ex.length) return `# No example videos for "${filt}"\nTry a broader niche, format, or hook pattern. ${getExamples().length} real videos in the library.`;
+  return [
+    `# ${ex.length} real videos to study${filt ? ` — ${filt}` : ""}`,
+    `_Actual TikToks behind the patterns, best breakouts first (reach = views ÷ creator followers). Watch these to see the format live, then replicate it. From ${getExamples().length} curated examples._`,
+    "",
+    ...ex.map(exampleLine),
+    "",
+    `> Open the links, watch the first 3 seconds, and note the hook + the prop + what changes mid-video. That's the format you're replicating.`,
+  ].join("\n");
+}
 
 export function findTrends(niche = "", limit = 8): string {
   const ts = trendsForNiche(niche.trim(), Math.min(Math.max(limit, 1), 18));
   if (!ts.length) return `# No trends yet\nRun pipeline/cluster-trends.mjs to mine cross-niche trends from the corpus.`;
   return [
     `# ${ts.length} cross-niche trends${niche ? ` for ${niche}` : ""}`,
-    `_Patterns that recur across multiple creators AND niches and over-perform. Clustered by creative-unit, not topic (from ${getTrends().length} validated). Each is a copyable formula._`,
+    `_Patterns that recur across multiple creators AND niches and over-perform. Clustered by creative-unit, not topic (from ${getTrends().length} validated). Each is a copyable formula with real videos to study._`,
     "",
-    ...ts.flatMap((t) => [
-      `## ${t.name}`,
-      t.formula ? `- **Formula:** ${t.formula}` : "",
-      t.whyItTravels ? `- **Why it travels:** ${t.whyItTravels}` : "",
-      `- **Built on:** ${t.framework} framework · ${t.videoFormat} format · ${t.hookPattern} hook`,
-      `- **Proof:** ${t.recurrence}, across ${t.transfer.join(", ")} (median ${t.medianVpf}x reach)`,
-      "",
-    ].filter(Boolean)),
+    ...ts.flatMap((t) => {
+      let ex = examplesFor({ niche, videoFormat: t.videoFormat, hookPattern: t.hookPattern }, 2);
+      if (!ex.length) ex = examplesFor({ videoFormat: t.videoFormat, hookPattern: t.hookPattern }, 2);
+      return [
+        `## ${t.name}`,
+        t.formula ? `- **Formula:** ${t.formula}` : "",
+        t.whyItTravels ? `- **Why it travels:** ${t.whyItTravels}` : "",
+        `- **Built on:** ${t.framework} framework · ${t.videoFormat} format · ${t.hookPattern} hook`,
+        `- **Proof:** ${t.recurrence}, across ${t.transfer.join(", ")} (median ${t.medianVpf}x reach)`,
+        ...(ex.length ? [`- **Study it live:** ${ex.map((e) => e.url).join("  ·  ")}`] : []),
+        "",
+      ].filter(Boolean);
+    }),
   ].join("\n");
 }
 
@@ -456,7 +480,7 @@ export function status(token?: string): string {
     tokenLine,
     "",
     "**Live now:**",
-    "- 11 skills: video_ideas, niche_decode, format_teardown, cracked_hooks, shoot_brief, kill_the_slop, search_corpus, viral_teardowns, content_gaps, format_playbook, find_trends",
+    "- 12 skills incl. study_examples (real video links), find_trends, viral_teardowns, content_gaps, format_playbook",
     `- ${getWinners().length} real breakout videos torn down (the actual viral mechanism, diagnosed from transcript + engagement)`,
     getVisualInsights().analyzed ? `- ${getVisualInsights().analyzed} videos analyzed visually (format + craft from the first 3 seconds of frames)` : "- visual/format layer: scripts ready, run pipeline/visual.mjs to populate",
     `- ${SCRIPT_FRAMEWORKS.length} named script frameworks, ${HOOK_PATTERNS.length} hook patterns, ${ANGLES.length} proven UGC angles`,
