@@ -49,7 +49,7 @@ function liftAnalysis(subset, key) {
     const n = inW + inR;
     return { label, lift, nWinners: inW, nTotal: n, medianVpf: Number(median(withVpf.filter((r) => r[key] === label).map((r) => r.viewsPerFollower)).toFixed?.(2) ?? 0) };
   })
-    .filter((x) => x.nTotal >= 6 && !["unclassified", "generic", "none", "other", ""].includes(x.label))
+    .filter((x) => x.nTotal >= 6 && x.label && !["unclassified", "generic", "none", "null", "other", "n/a", ""].includes(String(x.label).toLowerCase()))
     .sort((a, b) => b.lift - a.lift);
 
   return {

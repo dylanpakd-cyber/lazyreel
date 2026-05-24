@@ -51,7 +51,8 @@ Return ONLY a JSON object, no prose:
 }`;
 }
 
-async function label(r) {
+const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
+async function label(r, attempt = 0) {
   const body = {
     model, max_tokens: 350, system: SYSTEM,
     messages: [{ role: "user", content: prompt(r) }],
@@ -61,7 +62,12 @@ async function label(r) {
     headers: { "x-api-key": key, "anthropic-version": "2023-06-01", "content-type": "application/json" },
     body: JSON.stringify(body),
   });
-  if (!res.ok) throw new Error(`${res.status} ${(await res.text()).slice(0, 160)}`);
+  if (!res.ok) {
+    if ((res.status === 429 || res.status >= 500) && attempt < 4) {
+      await sleep(1500 * (attempt + 1)); return label(r, attempt + 1);
+    }
+    throw new Error(`${res.status} ${(await res.text()).slice(0, 160)}`);
+  }
   const data = await res.json();
   const text = (data.content?.[0]?.text || "").trim();
   const json = JSON.parse(text.replace(/^```json\s*|\s*```$/g, ""));

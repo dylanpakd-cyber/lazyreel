@@ -102,8 +102,14 @@ async function fetchTranscript(item) {
 // ---- normalize (transcripts fetched in parallel, the slow part) -----------
 let withTranscript = 0, done = 0;
 const CONCURRENCY = 12;
+function sourceHashtag(v) {
+  // the actor returns searchHashtag as a string OR { name } depending on run size
+  if (typeof v.searchHashtag === "string") return v.searchHashtag;
+  if (v.searchHashtag?.name) return v.searchHashtag.name;
+  return v.input || "";
+}
 async function normalizeOne(v) {
-  const niche = HASHTAG_NICHE[v.searchHashtag] || "general";
+  const niche = HASHTAG_NICHE[sourceHashtag(v)] || "general";
   const transcript = await fetchTranscript(v);
   if (transcript) withTranscript++;
   done++;
