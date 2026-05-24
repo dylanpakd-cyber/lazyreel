@@ -1,0 +1,492 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>ABG CMO — make your agent an ABG CMO</title>
+<meta name="description" content="Plug in the taste, formats, and hooks it takes to make short-form video that performs. Your agent stops writing AI ad mush and starts shipping UGC that converts." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;700&family=Instrument+Serif:ital@1&display=swap" rel="stylesheet" />
+<style>
+:root{
+  --paper:#FBF8F0; --paper-soft:#FAFAF7; --cream:#F4F0E6; --cream-2:#EAE3D2;
+  --ink:#17150F; --body:#3C3A33; --mute:#807D72;
+  --card:#FFFFFF; --hairline:#E6E3DA; --hairline-strong:#CFCBC0;
+  --ink-2:#1A1916; --ink-3:#23211B; --ink-text:#EDEAE0; --ink-mute:#8A877C;
+  --hl:#D4FF3F; --flag:#F54E00; --term-green:#C7F24A;
+  --r-card:14px; --r-pill:999px; --r-term:12px; --r-sm:8px;
+  --gut:clamp(20px,4vw,32px); --maxw:1180px;
+  --ease:cubic-bezier(.2,.7,.2,1);
+  --dot:rgba(23,21,15,.07);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0; background:var(--paper); color:var(--ink);
+  font-family:Inter,system-ui,sans-serif; font-size:17px; line-height:1.55;
+  -webkit-font-smoothing:antialiased;
+  background-image:radial-gradient(var(--dot) 1px,transparent 1px);
+  background-size:26px 26px; background-position:-1px -1px;
+}
+a{color:inherit;text-decoration:none}
+h1,h2,h3{font-family:"Space Grotesk",sans-serif;font-weight:600;letter-spacing:-.025em;line-height:1.02;margin:0}
+p{margin:0}
+.serif{font-family:"Instrument Serif",Georgia,serif;font-style:italic;font-weight:400;letter-spacing:-.01em}
+.hl{background:linear-gradient(transparent 58%, var(--hl) 58%, var(--hl) 94%, transparent 94%);padding:0 .06em;-webkit-box-decoration-break:clone;box-decoration-break:clone}
+.mono{font-family:"JetBrains Mono",ui-monospace,monospace}
+.label{font-family:"JetBrains Mono",monospace;font-size:12px;font-weight:500;letter-spacing:.14em;text-transform:uppercase;color:var(--mute)}
+.wrap{width:min(var(--maxw),calc(100% - var(--gut)*2));margin-inline:auto}
+section{padding-block:clamp(64px,9vw,104px)}
+.rule{border:0;border-top:1px solid var(--hairline);margin:0;width:100%}
+:focus-visible{outline:3px solid var(--flag);outline-offset:3px;border-radius:4px}
+
+/* buttons + pills */
+.btn{display:inline-flex;align-items:center;gap:.5em;min-height:46px;padding:0 22px;border-radius:var(--r-pill);font-weight:600;font-size:15px;border:1px solid transparent;cursor:pointer;transition:transform var(--ease) .18s, background .18s}
+.btn-primary{background:var(--ink);color:var(--paper)}
+.btn-primary:hover{transform:translateY(-2px)}
+.btn-flag{background:var(--flag);color:#fff}
+.btn-flag:hover{transform:translateY(-2px)}
+.btn-ghost{background:transparent;color:var(--ink);border-color:var(--hairline-strong)}
+.btn-ghost:hover{background:var(--cream)}
+.txtlink{font-weight:600;font-size:15px;display:inline-flex;align-items:center;gap:.35em}
+.txtlink .arr{transition:transform .2s var(--ease)}
+.txtlink:hover .arr{transform:translateX(4px)}
+.pill{display:inline-flex;align-items:center;gap:.5em;height:30px;padding:0 12px;border-radius:var(--r-pill);border:1px solid var(--hairline-strong);font-family:"JetBrains Mono",monospace;font-size:11.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--body);background:var(--paper-soft)}
+.dot{width:7px;height:7px;border-radius:50%;background:var(--flag);box-shadow:0 0 0 0 rgba(245,78,0,.5);animation:pulse 2.4s var(--ease) infinite}
+@keyframes pulse{0%{box-shadow:0 0 0 0 rgba(245,78,0,.45)}70%{box-shadow:0 0 0 7px rgba(245,78,0,0)}100%{box-shadow:0 0 0 0 rgba(245,78,0,0)}}
+
+/* nav */
+.nav{position:sticky;top:0;z-index:50;background:rgba(251,248,240,.82);backdrop-filter:saturate(1.4) blur(10px);border-bottom:1px solid var(--hairline)}
+.nav-in{display:flex;align-items:center;justify-content:space-between;gap:24px;height:62px}
+.brand{display:inline-flex;align-items:center;gap:10px;font-family:"Space Grotesk";font-weight:700;font-size:16px;letter-spacing:-.01em}
+.brand .mk{display:inline-grid;place-items:center;width:30px;height:30px;border-radius:8px;background:var(--ink);color:var(--hl);font-size:12px;font-weight:700;font-family:"JetBrains Mono"}
+.brand .sl{color:var(--flag)}
+.nav-links{display:flex;gap:26px;font-size:14.5px;font-weight:500;color:var(--body)}
+.nav-links a:hover{color:var(--ink)}
+.nav-right{display:flex;align-items:center;gap:12px}
+
+/* hero */
+.hero{text-align:center;padding-top:clamp(40px,7vw,76px)}
+.hero h1{font-size:clamp(2.7rem,6.4vw,5rem);font-weight:600;max-width:15ch;margin-inline:auto}
+.hero .sub{max-width:60ch;margin:22px auto 0;color:var(--body);font-size:clamp(1.05rem,1.4vw,1.22rem)}
+.hero-cta{display:flex;gap:18px;justify-content:center;align-items:center;margin-top:34px;flex-wrap:wrap}
+.compat{margin-top:26px;font-size:12.5px;color:var(--mute)}
+.hero-stage{position:relative;max-width:760px;margin:54px auto 0}
+
+/* terminal */
+.term{border-radius:var(--r-term);background:var(--ink-2);border:1px solid #000;text-align:left;overflow:hidden;box-shadow:0 30px 60px -34px rgba(23,21,15,.5)}
+.term-bar{display:flex;align-items:center;gap:7px;height:38px;padding:0 14px;background:var(--ink-3);border-bottom:1px solid #000}
+.term-bar i{width:11px;height:11px;border-radius:50%;background:#3a3833;display:inline-block}
+.term-bar i:nth-child(1){background:#f54e00aa}.term-bar i:nth-child(2){background:#d4ff3f88}.term-bar i:nth-child(3){background:#7a776c}
+.term-bar span{margin-left:8px;font-family:"JetBrains Mono";font-size:12px;color:var(--ink-mute)}
+.term-body{padding:18px 18px 22px;font-family:"JetBrains Mono";font-size:13.5px;line-height:1.85;min-height:188px}
+.term-body .ln{white-space:pre-wrap;opacity:0}
+.term-body .ln.show{opacity:1}
+.t-cmd{color:#fff}.t-pr{color:var(--flag)}.t-mut{color:var(--ink-mute)}.t-ok{color:var(--term-green)}
+.cursor{display:inline-block;width:8px;height:15px;background:var(--term-green);transform:translateY(2px);animation:blink 1.05s steps(1) infinite}
+@keyframes blink{50%{opacity:0}}
+.receipt{position:absolute;right:-14px;bottom:-26px;width:230px;background:var(--card);border:1px solid var(--hairline-strong);border-radius:var(--r-card);padding:14px;box-shadow:0 22px 40px -26px rgba(23,21,15,.4);animation:floaty 6s var(--ease) infinite}
+@keyframes floaty{50%{transform:translateY(-7px)}}
+.receipt .rh{display:flex;align-items:center;gap:7px;font-family:"JetBrains Mono";font-size:11px;color:var(--mute);text-transform:uppercase;letter-spacing:.1em}
+.receipt .rh .ok{color:#1f8a65;font-weight:700}
+.receipt b{display:block;margin-top:8px;font-family:"Space Grotesk";font-size:15px}
+.receipt small{display:block;margin-top:4px;color:var(--mute);font-size:12.5px;line-height:1.5}
+
+/* slogan tape */
+.tape{border-block:1px solid var(--hairline);background:var(--cream);overflow:hidden;padding-block:0}
+.tape-track{display:flex;gap:0;white-space:nowrap;animation:marq 38s linear infinite;will-change:transform}
+.tape-track span{font-family:"Space Grotesk";font-weight:500;font-size:20px;padding:18px 0;color:var(--ink)}
+.tape-track .s{color:var(--flag);padding-inline:22px}
+@keyframes marq{to{transform:translateX(-50%)}}
+
+/* section heads */
+.shead{max-width:34ch}
+.shead h2{font-size:clamp(1.9rem,3.2vw,2.7rem);margin-top:12px}
+.shead p{margin-top:14px;color:var(--body);max-width:52ch}
+
+/* skills */
+.skills-grid{display:grid;grid-template-columns:0.92fr 1.08fr;gap:18px;margin-top:34px;align-items:start}
+.rail{display:grid;gap:8px}
+.srow{display:block;width:100%;text-align:left;background:var(--card);border:1px solid var(--hairline);border-radius:var(--r-card);padding:16px 18px;cursor:pointer;transition:transform .18s var(--ease),border-color .18s}
+.srow:hover{transform:translateY(-3px) rotate(-.5deg)}
+.srow[aria-selected="true"]{border-color:var(--ink);box-shadow:inset 3px 0 0 var(--hl)}
+.srow .cmd{font-family:"JetBrains Mono";font-size:12.5px;color:var(--flag)}
+.srow .ti{font-family:"Space Grotesk";font-weight:600;font-size:16.5px;margin-top:5px}
+.srow .de{color:var(--mute);font-size:13.5px;margin-top:5px;line-height:1.5}
+.srow[aria-selected="true"] .bucket{color:var(--ink)}
+.bucket{float:right;font-family:"JetBrains Mono";font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--mute);border:1px solid var(--hairline-strong);border-radius:var(--r-pill);padding:2px 8px}
+.preview{position:sticky;top:84px;background:var(--ink-2);border-radius:var(--r-term);overflow:hidden;border:1px solid #000;min-height:360px}
+.pv-bar{display:flex;align-items:center;justify-content:space-between;height:40px;padding:0 14px;background:var(--ink-3);border-bottom:1px solid #000;font-family:"JetBrains Mono";font-size:12px;color:var(--ink-mute)}
+.pv-copy{cursor:pointer;color:var(--term-green);background:none;border:1px solid #3a3833;border-radius:var(--r-pill);padding:3px 11px;font-family:"JetBrains Mono";font-size:11px}
+.pv-body{padding:22px 22px 26px;color:var(--ink-text)}
+.pv-body h4{font-family:"Space Grotesk";font-weight:600;font-size:18px;color:#fff;margin:0 0 14px}
+.pv-line{font-family:"JetBrains Mono";font-size:13px;line-height:1.95;color:#cfccc2}
+.pv-line .slot{color:var(--hl)}
+.pv-line .strike{color:#a8675f;text-decoration:line-through}
+.pv-line .good{color:var(--ink);background:var(--hl);border-radius:3px;padding:1px 5px}
+
+/* stats */
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;text-align:left}
+.stat .n{font-family:"Space Grotesk";font-weight:700;font-size:clamp(2.6rem,5vw,4rem);letter-spacing:-.04em;line-height:1}
+.stat .l{font-family:"JetBrains Mono";font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--mute);margin-top:8px}
+
+/* difference */
+.cmp{position:relative;margin-top:30px;border:1px solid var(--hairline-strong);border-radius:var(--r-card);overflow:hidden;height:340px;background:var(--card);user-select:none;touch-action:pan-y}
+.cmp .pane{position:absolute;inset:0;display:flex;flex-direction:column;justify-content:center;padding:clamp(24px,5vw,56px)}
+.cmp .with{background:var(--cream)}
+.cmp .without{clip-path:inset(0 50% 0 0);background:var(--card)}
+.cmp .tag{position:absolute;top:18px;font-family:"JetBrains Mono";font-size:11px;letter-spacing:.1em;text-transform:uppercase}
+.cmp .without .tag{left:20px;color:var(--mute)}
+.cmp .with .tag{right:20px;color:var(--flag)}
+.cmp .copy{font-family:"Space Grotesk";font-weight:500;font-size:clamp(1.05rem,2.1vw,1.5rem);line-height:1.3;max-width:30ch}
+.cmp .without .copy{color:var(--mute)}
+.cmp-handle{position:absolute;top:0;bottom:0;left:50%;width:2px;background:var(--ink);transform:translateX(-1px);cursor:ew-resize}
+.cmp-handle .grab{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:42px;height:42px;border-radius:50%;background:var(--ink);color:var(--paper);display:grid;place-items:center;font-size:14px;box-shadow:0 6px 16px rgba(0,0,0,.25)}
+.cmp-hint{margin-top:14px;font-size:13px;color:var(--mute)}
+
+/* tools */
+.tool-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:30px}
+.tool{background:var(--card);border:1px solid var(--hairline);border-radius:var(--r-card);padding:20px;transition:transform .18s var(--ease)}
+.tool:hover{transform:translateY(-4px) rotate(-.5deg)}
+.tool code{font-family:"JetBrains Mono";font-size:13.5px;color:var(--flag)}
+.tool p{margin-top:10px;color:var(--mute);font-size:14px;line-height:1.5}
+.tool-note{margin-top:18px;font-family:"JetBrains Mono";font-size:12px;color:var(--mute)}
+
+/* pricing */
+.price-head{text-align:center;max-width:40ch;margin-inline:auto}
+.price-head .pos{margin-top:14px;color:var(--body)}
+.price-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:34px}
+.plan{background:var(--card);border:1px solid var(--hairline-strong);border-radius:var(--r-card);padding:30px}
+.plan .l{margin-bottom:14px}
+.plan .pr{font-family:"Space Grotesk";font-weight:700;font-size:2.4rem;letter-spacing:-.03em}
+.plan .pr small{display:block;font-size:13px;font-weight:400;color:var(--mute);font-family:"JetBrains Mono";margin-top:2px}
+.plan ul{list-style:none;padding:0;margin:22px 0 26px;display:grid;gap:12px}
+.plan li{display:flex;gap:10px;font-size:15px;color:var(--body)}
+.plan li::before{content:"+";color:var(--flag);font-weight:700}
+.plan .btn{width:100%;justify-content:center}
+
+/* one prompt */
+.op{background:var(--cream);border-radius:var(--r-card)}
+.op-in{display:grid;grid-template-columns:0.85fr 1.15fr;gap:40px;align-items:center}
+.op h2{font-size:clamp(1.9rem,3.2vw,2.7rem)}
+.op p{margin-top:14px;color:var(--body);max-width:42ch}
+.op-block{background:var(--ink-2);border:1px solid #000;border-radius:var(--r-term);overflow:hidden}
+.op-block .ob-bar{display:flex;justify-content:space-between;align-items:center;height:42px;padding:0 14px;background:var(--ink-3);font-family:"JetBrains Mono";font-size:12px;color:var(--ink-mute)}
+.op-block pre{margin:0;padding:18px;font-family:"JetBrains Mono";font-size:12.5px;line-height:1.75;color:#cfccc2;white-space:pre-wrap}
+.op-note{margin-top:12px;font-family:"JetBrains Mono";font-size:11.5px;color:var(--mute)}
+
+/* faq */
+.faq{display:grid;gap:10px;margin-top:28px;max-width:760px}
+.faq details{background:var(--card);border:1px solid var(--hairline);border-radius:var(--r-card);padding:4px 20px}
+.faq summary{cursor:pointer;list-style:none;display:flex;justify-content:space-between;align-items:center;gap:16px;padding:16px 0;font-family:"Space Grotesk";font-weight:600;font-size:16.5px;min-height:48px}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary .chev{transition:transform .25s var(--ease);color:var(--mute)}
+.faq details[open] summary .chev{transform:rotate(45deg)}
+.faq details p{color:var(--body);font-size:15px;padding-bottom:18px;max-width:64ch}
+
+/* footer */
+.foot{background:var(--ink-2);color:var(--ink-text);background-image:radial-gradient(rgba(255,255,255,.04) 1px,transparent 1px);background-size:26px 26px}
+.foot-kick{font-family:"Space Grotesk";font-weight:700;font-size:clamp(2.4rem,7vw,5.4rem);letter-spacing:-.04em;line-height:.98;color:#fff;padding-top:8px}
+.foot-kick .hl{color:var(--ink)}
+.foot-cols{display:flex;flex-wrap:wrap;gap:48px;margin-top:48px}
+.foot-cols .col{min-width:120px}
+.foot-cols h5{font-family:"JetBrains Mono";font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-mute);margin:0 0 14px;font-weight:500}
+.foot-cols a{display:block;color:#cfccc2;font-size:14.5px;padding:5px 0}
+.foot-cols a:hover{color:#fff}
+.foot-legal{margin-top:48px;padding-top:22px;border-top:1px solid #2c2a24;font-family:"JetBrains Mono";font-size:12px;color:var(--ink-mute)}
+
+@media (max-width:860px){
+  .nav-links{display:none}
+  .skills-grid,.op-in{grid-template-columns:1fr;gap:16px}
+  .preview{position:static;min-height:300px}
+  .stats{grid-template-columns:1fr;gap:28px}
+  .tool-grid{grid-template-columns:1fr}
+  .price-grid{grid-template-columns:1fr}
+  .receipt{display:none}
+  .bucket{display:none}
+}
+@media (max-width:480px){
+  .hero-cta{flex-direction:column}.hero-cta .btn,.hero-cta .txtlink{width:100%;justify-content:center}
+  .cmp{height:300px}
+}
+@media (prefers-reduced-motion:reduce){
+  *{animation:none!important;transition:none!important;scroll-behavior:auto!important}
+  .term-body .ln{opacity:1!important}
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<header class="nav">
+  <div class="wrap nav-in">
+    <a class="brand" href="#top" aria-label="ABG CMO home"><span class="mk">A</span>ABG<span class="sl">/</span>CMO</a>
+    <nav class="nav-links" aria-label="Primary">
+      <a href="#skills">Skills</a><a href="#how">How it works</a><a href="#pricing">Pricing</a><a href="#faq">FAQ</a>
+    </nav>
+    <div class="nav-right">
+      <span class="pill" aria-hidden="true"><span class="dot"></span>live · listening</span>
+      <a class="btn btn-flag" href="mcp-install.html">Get started</a>
+    </div>
+  </div>
+</header>
+
+<main id="top">
+
+<!-- HERO -->
+<section class="hero wrap">
+  <span class="label">Agent-first UGC</span>
+  <h1>Make your agent an <span class="hl"><span class="serif">ABG</span></span> CMO.</h1>
+  <p class="sub">Plug in the taste, formats, and hooks it takes to make short-form video that performs. Your agent stops writing generic AI ad mush and starts shipping UGC that actually converts.</p>
+  <div class="hero-cta">
+    <a class="btn btn-primary" href="mcp-install.html">Get started</a>
+    <a class="txtlink" href="#skills">See it work <span class="arr">→</span></a>
+  </div>
+  <p class="compat mono">Works with Claude Code, Cursor &amp; Codex</p>
+
+  <div class="hero-stage">
+    <div class="term" role="img" aria-label="Terminal running the /abg command and saving a shoot-ready brief">
+      <div class="term-bar"><i></i><i></i><i></i><span>abg-cmo — zsh</span></div>
+      <div class="term-body" id="term">
+        <div class="ln t-cmd">$ claude</div>
+        <div class="ln"><span class="t-pr">&gt; /abg</span> <span class="t-cmd">"launch video for my matcha brand, ABG beauty niche"</span></div>
+        <div class="ln t-mut">↳ loading 12,400 winning UGC formats...</div>
+        <div class="ln t-mut">↳ matched 3 formats · pulled 18 hook patterns · read the niche</div>
+        <div class="ln t-mut">↳ writing hooks, script, shot list, on-screen text...</div>
+        <div class="ln t-ok">✓ shoot-ready brief saved — 3 hooks · 5 scenes · A/B variants <span class="cursor"></span></div>
+      </div>
+    </div>
+    <aside class="receipt" aria-hidden="true">
+      <div class="rh"><span class="ok">✓</span> brief ready</div>
+      <b>matcha-launch.md</b>
+      <small>3 hooks · 5 scenes · on-screen text · CTA. Niche read: ABG beauty.</small>
+    </aside>
+  </div>
+</section>
+
+<!-- SLOGAN TAPE -->
+<div class="tape" aria-hidden="true">
+  <div class="tape-track" id="tape"></div>
+</div>
+
+<!-- SKILLS -->
+<section id="skills" class="wrap">
+  <div class="shead">
+    <span class="label">01 / Skills</span>
+    <h2>Six opinionated skills, not <span class="hl">prompt templates</span>.</h2>
+    <p>Break down what it takes to make a video and each step becomes a skill your agent runs the same way every time. From the idea to the shoot-ready brief. Click one to see what it gives back.</p>
+  </div>
+  <div class="skills-grid">
+    <div class="rail" id="rail" role="tablist" aria-label="Skills"></div>
+    <div class="preview" role="tabpanel" aria-label="Skill output preview">
+      <div class="pv-bar"><span id="pvName">/video-ideas — output</span><button class="pv-copy" id="pvCopy">Copy this prompt</button></div>
+      <div class="pv-body" id="pvBody"></div>
+    </div>
+  </div>
+</section>
+
+<hr class="rule" />
+
+<!-- STATS -->
+<section id="how" class="wrap">
+  <span class="label">02 / The data</span>
+  <div class="stats" style="margin-top:30px">
+    <div class="stat"><div class="n" data-to="44000" data-suffix="+">0</div><div class="l">UGC videos decoded</div></div>
+    <div class="stat"><div class="n" data-to="3.4" data-suffix="B+" data-dec="1">0</div><div class="l">views reverse-engineered</div></div>
+    <div class="stat"><div class="n" data-to="6">0</div><div class="l">agent skills, zero fluff</div></div>
+  </div>
+  <p class="label" style="margin-top:24px;text-transform:none;letter-spacing:0;color:var(--mute)">Based on the past year alone.</p>
+</section>
+
+<hr class="rule" />
+
+<!-- DIFFERENCE -->
+<section class="wrap">
+  <div class="shead">
+    <span class="label">03 / The difference</span>
+    <h2>Same prompt. ABG context. <span class="hl">Better videos.</span></h2>
+    <p>Drag to compare what your agent writes with and without ABG CMO.</p>
+  </div>
+  <div class="cmp" id="cmp" aria-label="Comparison slider, use left and right arrow keys" tabindex="0" role="slider" aria-valuemin="0" aria-valuemax="100" aria-valuenow="50">
+    <div class="pane with"><span class="tag">With ABG CMO</span><p class="copy">"you have 6 of these in a drawer. you reach for <em class="serif">one</em>. here's why." <span style="color:var(--mute);font-size:.78em">[Belief-challenging hook · holds 3s · cut to the use · text: "the only one that survived my bag" · brand named at 0:08]</span></p></div>
+    <div class="pane without" id="without"><span class="tag">Without</span><p class="copy">Discover the revolutionary power of our product to elevate your everyday routine. 🚀 Seamless. Innovative. Game-changing. Shop now and transform your life.</p></div>
+    <div class="cmp-handle" id="handle" style="left:50%"><span class="grab" aria-hidden="true">⟺</span></div>
+  </div>
+  <p class="cmp-hint">Drag the handle, or focus it and use ← / →.</p>
+</section>
+
+<hr class="rule" />
+
+<!-- TOOLS -->
+<section class="wrap">
+  <div class="shead">
+    <span class="label">04 / MCP</span>
+    <h2>A real MCP, wired into your agent.</h2>
+    <p>Six tools your agent calls mid-task. It reads the niche, finds the format, and writes the brief without leaving the chat.</p>
+  </div>
+  <div class="tool-grid" id="tools"></div>
+  <p class="tool-note">Connect once. Free for agents.</p>
+</section>
+
+<hr class="rule" />
+
+<!-- PRICING -->
+<section id="pricing" class="wrap">
+  <div class="price-head">
+    <span class="label">05 / Pricing</span>
+    <h2 style="font-size:clamp(1.9rem,3.4vw,2.8rem);margin-top:12px">Free for humans. <span class="hl">Free for agents.</span></h2>
+    <p class="pos">Video context for AI. Not AI for video creation.</p>
+  </div>
+  <div class="price-grid">
+    <div class="plan">
+      <div class="label">For agents</div>
+      <div class="pr">Free<small>forever</small></div>
+      <ul><li>The MCP + 6 tools</li><li>All six opinionated skills</li><li>No card, no account</li></ul>
+      <a class="btn btn-primary" href="mcp-install.html">Get the MCP</a>
+    </div>
+    <div class="plan">
+      <div class="label">For humans</div>
+      <div class="pr">Free<small>forever</small></div>
+      <ul><li>Browse the format library</li><li>Steal the skeletons</li><li>Bring your own agent</li></ul>
+      <a class="btn btn-ghost" href="#skills">Browse formats</a>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section id="faq" class="wrap">
+  <span class="label">06 / Questions</span>
+  <h2 style="font-size:clamp(1.9rem,3.2vw,2.7rem);margin-top:12px">Questions</h2>
+  <div class="faq" id="faq-list"></div>
+</section>
+
+</main>
+
+<!-- FOOTER -->
+<footer class="foot">
+  <div class="wrap" style="padding-block:clamp(56px,8vw,96px)">
+    <div class="foot-kick">Stay online.<br>Ship <span class="serif" style="color:var(--hl)">video</span>.</div>
+    <div class="foot-cols">
+      <div class="col"><h5>Product</h5><a href="#skills">Skills</a><a href="#how">How it works</a><a href="#pricing">Pricing</a><a href="#start">MCP</a></div>
+      <div class="col"><h5>Elsewhere</h5><a href="#">GitHub</a><a href="#">Changelog</a><a href="#">X</a></div>
+      <div class="col"><h5>Operators</h5><a href="#">Manifesto</a><a href="#">Contact</a></div>
+    </div>
+    <div class="foot-legal">© ABG CMO 2026. All conversions reserved. Touch grass occasionally.</div>
+  </div>
+</footer>
+
+<script>
+// ---- slogan tape ----
+(function(){
+  var sla=["ship the hook","kill the slop","receipts not vibes","always be testing","make the joke, then the business","taste is a hard constraint","post like it's your job"];
+  var t=document.getElementById('tape'),h="";
+  for(var k=0;k<2;k++){sla.forEach(function(s){h+='<span>'+s+'</span><span class="s">✦</span>';});}
+  t.innerHTML=h;
+})();
+
+// ---- skills data + showcase ----
+var SKILLS=[
+ {cmd:"/video-ideas",bucket:"Ideation",ti:"Concepts mapped to real frameworks",de:"Six scroll-worthy concepts for {product} in {niche}, each built on a named script framework, placed on the awareness ladder, with the visual approach and why it lands.",
+  prompt:"Use video_ideas: product = {your product}, niche = {your niche}, audience = {who it's for}. Give me 5 concepts, each on a different script framework, mapped to awareness + sophistication, with a hook and why it lands.",
+  lines:['<b class="x">01 · Industry Contrarian (DISRUPT)</b>','Hook: "Why <span class="slot">{niche}</span> pros quietly reach for this — and not the $220 one."','Who: solution-aware buyer · sophistication 4 (skeptical) · visual: product-in-action','Why: a burned market believes a mechanism, not another claim.','<b class="x">02 · Problem-Agitate-Solution (PAS)</b>','Hook: "still fighting <span class="slot">{category}</span> in 2026? it\'s not what you think."']},
+ {cmd:"/niche-decode",bucket:"Analysis",ti:"Read the niche before you write",de:"A structured read of {niche}: where it sits on awareness + sophistication, what the winning videos repeat, the dominant visual approach, and the gap nobody's filling.",
+  prompt:"Use niche_decode: niche = {your niche}. Tell me the awareness + sophistication level, the 3 hook patterns winning right now, the dominant visual approach, and 2-3 angles the niche isn't running yet.",
+  lines:['Awareness: <span class="slot">solution-aware</span> — lead with the mechanism, not the category.','Sophistication 4 — burned market; identity + reframe beats claims.','Winning hooks now: POV-recognition · belief-challenging · direct call-out.','Dominant visual: authentic-UGC, face-to-camera (polish reads as an ad here).','The gap: <span class="slot">everyone shows the product, nobody shows the problem state.</span>']},
+ {cmd:"/format-teardown",bucket:"Reverse-engineer",ti:"Steal the skeleton, not the pixels",de:"Paste a winning video. Get its narrative DNA (framework + hook pattern), its edit DNA (signature device + density), and exactly how to rebuild it for your product.",
+  prompt:"Use format_teardown: description = {paste or describe a winning video}. Break down the framework, hook pattern, signature device, edit density, and how to rebuild it for my product.",
+  lines:['Framework: Testimonial → Symptom → Switch → Proof.','Hook pattern: <span class="slot">belief-challenging POV</span>, caption-safe.','Signature device: the 7am / 7pm mirror cut — that\'s the whole video.','Density: LOW, one continuous selfie. The lack of polish IS the trust.','To clone: keep one shot, swap the mirror demo for your before/after.']},
+ {cmd:"/cracked-hooks",bucket:"Hooks",ti:"Hooks that survive the scroll",de:"Ranked hooks for {product}, each a different pattern from a 13-pattern taxonomy, each a different angle, all caption-safe and brand named late.",
+  prompt:"Use cracked_hooks: product = {your product}, niche = {your niche}, audience = {who}. Give me 8 hooks, each a different pattern, caption-safe, none naming the brand in line 1.",
+  lines:['<b class="x">[POV]</b> "POV: it\'s 7pm and your <span class="slot">{category}</span> looks exactly like it did at 7am."','<b class="x">[Belief]</b> "I thought every <span class="slot">{category}</span> was the same. Not this one."','<b class="x">[Call-out]</b> "for the girlies checking their under-eyes every 2 hours — this is for you."','<b class="x">[Size]</b> "92 of the 102 things your routine\'s missing. in one step."']},
+ {cmd:"/shoot-brief",bucket:"Brief",ti:"Product in, shoot-ready brief out",de:"A full brief for {product}: framework, angle, hook bank, and a Beat / VO / on-screen-text / B-roll table a creator can film, plus the CTA and shoot notes.",
+  prompt:"Use shoot_brief: product = {your product}, audience = {who}, objective = {goal}. Give me the framework, angle, a hook bank, and a Beat/VO/on-screen-text/B-roll table I can hand to a creator.",
+  lines:['Framework: Problem-Agitate-Solution · Angle: Testimonial (4 shots)','<b class="x">Beat · VO · Text · B-roll</b>','Hook · "okay so I\'ve tried like 6 of these" · <span class="slot">6 IN A DRAWER</span> · handheld, to camera','Agitate · "and every one died by noon" · <span class="slot">STILL FADED</span> · the stuck-state, before','Solution · "this is the only one that held" · <span class="slot">9PM. STILL ON.</span> · the result, no narration']},
+ {cmd:"/kill-the-slop",bucket:"Rewrite",ti:"Point it at weak copy, get a sharper cut",de:"Names exactly what's wrong with weak copy — AI-tell words, brand-centric voice, no specificity, no curiosity gap — then rewrites it shorter and sharper.",
+  prompt:"Use kill_the_slop: copy = {paste your weak copy}. Name what's wrong against the anti-slop bar, then rewrite it in customer voice with a real hook pattern.",
+  lines:['<b class="x">What\'s wrong:</b>','<span class="strike">"Discover the revolutionary power of our product to elevate your routine. 🚀"</span>','AI-tell words · brand-first · zero specificity · no curiosity gap.','<b class="x">Rewrite (belief-challenging):</b>','<span class="good">"I thought every one of these was the same. I was wrong about this one."</span>']}
+];
+var rail=document.getElementById('rail'),pvName=document.getElementById('pvName'),pvBody=document.getElementById('pvBody'),sel=0;
+SKILLS.forEach(function(s,i){
+  var b=document.createElement('button');
+  b.className='srow';b.setAttribute('role','tab');b.setAttribute('aria-selected',i===0?'true':'false');b.tabIndex=i===0?0:-1;
+  b.innerHTML='<span class="bucket">'+s.bucket+'</span><div class="cmd">'+s.cmd+'</div><div class="ti">'+s.ti+'</div><div class="de">'+s.de+'</div>';
+  b.addEventListener('click',function(){pick(i);});
+  b.addEventListener('keydown',function(e){
+    if(e.key==='ArrowDown'||e.key==='ArrowRight'){e.preventDefault();pick((sel+1)%SKILLS.length,true);}
+    if(e.key==='ArrowUp'||e.key==='ArrowLeft'){e.preventDefault();pick((sel-1+SKILLS.length)%SKILLS.length,true);}
+  });
+  rail.appendChild(b);
+});
+function pick(i,focus){
+  sel=i;var rows=rail.children;
+  for(var j=0;j<rows.length;j++){rows[j].setAttribute('aria-selected',j===i?'true':'false');rows[j].tabIndex=j===i?0:-1;}
+  if(focus)rows[i].focus();
+  var s=SKILLS[i];pvName.textContent=s.cmd+' — output';
+  pvBody.innerHTML='<h4>'+s.ti+'</h4>'+s.lines.map(function(l){return '<div class="pv-line">'+l+'</div>';}).join('');
+  pvBody.dataset.prompt=s.prompt;
+}
+pick(0);
+document.getElementById('pvCopy').addEventListener('click',function(){copy(this,SKILLS[sel].prompt);});
+
+// ---- tools ----
+var TOOLS=[
+ ["video_ideas","Scroll-worthy concepts, each mapped to a named framework, awareness level, and visual approach."],
+ ["niche_decode","A structured read on what's actually working in a niche before you write a line."],
+ ["format_teardown","Reverse-engineer a winning video's narrative + edit DNA, and how to rebuild it."],
+ ["cracked_hooks","Ranked hooks, each a different pattern, caption-safe, brand named late."],
+ ["shoot_brief","Full brief: framework, angle, hook bank, Beat/VO/Text/B-roll table, CTA, shoot notes."],
+ ["kill_the_slop","Critique weak copy against the anti-slop bar, then rewrite it sharper."]
+];
+document.getElementById('tools').innerHTML=TOOLS.map(function(t){return '<div class="tool"><code>'+t[0]+'</code><p>'+t[1]+'</p></div>';}).join('');
+
+// ---- faq ----
+var FAQ=[
+ ["Wait, what's \"ABG\"?","A very-online word we're having fun with. Under the hood it's a UGC CMO: an agent that does the real work of making short-form video, from the idea to the shoot-ready brief."],
+ ["Is this just prompt templates?","No. Templates make every video sound the same. ABG CMO gives the agent the workflow plus a library of formats that actually worked, so it picks the right shape for your product and niche instead of reaching for the same three lines."],
+ ["Will it make my agent sound like every other AI?","The opposite is the entire point. The skills are tuned to kill the tells: the \"revolutionary,\" the 🚀, the feature-list hook, the studio-ad polish. If it sounds like AI, it failed."],
+ ["Do I need the MCP, or can I just browse?","Browse the format library free as a human. Connect the MCP free when you want your agent to do it for you. Both cost nothing."],
+ ["What's actually live today?","The format library, the six skills, and the six MCP tools. Live ingestion of new winning videos and private niche libraries are on the way. We'll always tell you which is which."]
+];
+document.getElementById('faq-list').innerHTML=FAQ.map(function(f){return '<details><summary>'+f[0]+'<span class="chev">+</span></summary><p>'+f[1]+'</p></details>';}).join('');
+
+// ---- copy helper ----
+function copy(btn,txt){var old=btn.textContent;navigator.clipboard.writeText(txt).then(function(){btn.textContent='Copied';setTimeout(function(){btn.textContent=old;},1600);}).catch(function(){btn.textContent='Copy failed';});}
+
+// ---- terminal typewriter ----
+(function(){
+  if(window.matchMedia('(prefers-reduced-motion:reduce)').matches)return;
+  var lines=document.querySelectorAll('#term .ln');lines.forEach(function(l){l.classList.remove('show');});
+  var i=0;function step(){if(i<lines.length){lines[i].classList.add('show');i++;setTimeout(step,520);}}
+  var io=new IntersectionObserver(function(e){if(e[0].isIntersecting){step();io.disconnect();}},{threshold:.4});
+  io.observe(document.getElementById('term'));
+})();
+
+// ---- stats count up ----
+(function(){
+  var reduce=window.matchMedia('(prefers-reduced-motion:reduce)').matches;
+  document.querySelectorAll('.stat .n').forEach(function(el){
+    var to=parseFloat(el.dataset.to),dec=parseInt(el.dataset.dec||0),suf=el.dataset.suffix||"";
+    function fmt(v){var s=dec?v.toFixed(dec):Math.round(v).toLocaleString();return s+suf;}
+    if(reduce){el.textContent=fmt(to);return;}
+    var io=new IntersectionObserver(function(e){if(e[0].isIntersecting){
+      var st=null;function run(ts){if(!st)st=ts;var p=Math.min((ts-st)/1100,1);var e2=1-Math.pow(1-p,3);el.textContent=fmt(to*e2);if(p<1)requestAnimationFrame(run);}requestAnimationFrame(run);io.disconnect();}},{threshold:.5});
+    io.observe(el);
+  });
+})();
+
+// ---- comparison slider ----
+(function(){
+  var cmp=document.getElementById('cmp'),without=document.getElementById('without'),handle=document.getElementById('handle');
+  function set(p){p=Math.max(2,Math.min(98,p));without.style.clipPath='inset(0 '+(100-p)+'% 0 0)';handle.style.left=p+'%';cmp.setAttribute('aria-valuenow',Math.round(p));}
+  var drag=false;
+  function fromX(x){var r=cmp.getBoundingClientRect();set((x-r.left)/r.width*100);}
+  cmp.addEventListener('pointerdown',function(e){drag=true;cmp.setPointerCapture(e.pointerId);fromX(e.clientX);});
+  cmp.addEventListener('pointermove',function(e){if(drag)fromX(e.clientX);});
+  cmp.addEventListener('pointerup',function(){drag=false;});
+  cmp.addEventListener('keydown',function(e){var cur=parseFloat(cmp.getAttribute('aria-valuenow'));if(e.key==='ArrowLeft'){e.preventDefault();set(cur-4);}if(e.key==='ArrowRight'){e.preventDefault();set(cur+4);}});
+  set(50);
+})();
+</script>
+</body>
+</html>

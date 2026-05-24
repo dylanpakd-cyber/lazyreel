@@ -1,0 +1,4 @@
+node_modules/
+mcp/build/
+.DS_Store
+*.log

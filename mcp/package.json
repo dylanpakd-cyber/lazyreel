@@ -1,0 +1,25 @@
+{
+  "name": "abg-cmo-mcp",
+  "version": "0.1.0",
+  "description": "ABG CMO — an MCP server that gives a coding agent genuinely good short-form / UGC video marketing skills (ideation, niche analysis, format teardown, hooks, shoot briefs, anti-slop rewrites).",
+  "type": "module",
+  "bin": {
+    "abg-cmo-mcp": "build/index.js"
+  },
+  "files": [
+    "build"
+  ],
+  "scripts": {
+    "build": "tsc && chmod +x build/index.js",
+    "start": "node build/index.js",
+    "smoke": "node scripts/smoke.mjs"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.0.4",
+    "zod": "^3.23.8"
+  },
+  "devDependencies": {
+    "typescript": "^5.5.4",
+    "@types/node": "^22.0.0"
+  }
+}
