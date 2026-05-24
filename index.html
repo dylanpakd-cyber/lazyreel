@@ -3,8 +3,9 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>LazyReel — the feed your agent already doomscrolled</title>
-<meta name="description" content="Make your agent a UGC doomscroller. 5,560+ real short-form videos decoded, 21B+ views reverse-engineered, and the breakout formats behind them — the research from doomscrolling so you don't have to. Free, MCP-connected." />
+<title>LazyReel · the feed your agent already doomscrolled</title>
+<meta name="description" content="Make your agent a UGC doomscroller. 5,560+ real short-form videos decoded, 21B+ views reverse-engineered, and every breakout format behind them. Everything we found doomscrolling so you don't have to. Free, MCP-connected." />
+<link rel="icon" href="favicon.svg" type="image/svg+xml" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;700&family=Instrument+Serif:ital@1&display=swap" rel="stylesheet" />
@@ -290,7 +291,7 @@ section{padding-block:clamp(72px,9.5vw,116px)}
     <div class="hero-copy">
       <span class="label">Agent-first UGC research</span>
       <h1>Make your<br>agent a UGC<br><span class="hl serif">doomscroller</span>.</h1>
-      <p class="sub">The AI that doomscrolled so you don't have to. 5,560+ real videos decoded, 21B+ views reverse-engineered, and the breakout formats behind them — handed to your agent, labeled.</p>
+      <p class="sub">The AI that doomscrolled so you don't have to. It decoded 5,560+ real videos, reverse-engineered 21B+ views, and pulled every breakout format behind them. Then handed it all to your agent, already labeled.</p>
       <div class="hero-cta">
         <a class="btn btn-primary" href="mcp-install.html">Get started</a>
         <a class="btn btn-ghost" href="#skills">See it work <span class="arr">→</span></a>
@@ -326,7 +327,7 @@ section{padding-block:clamp(72px,9.5vw,116px)}
   <div class="skills-grid">
     <div class="rail" id="rail" role="tablist" aria-label="Skills"></div>
     <div class="preview" role="tabpanel" aria-label="Skill output preview">
-      <div class="pv-bar"><span id="pvName">/video-ideas — output</span><button class="pv-copy" id="pvCopy">Copy this prompt</button></div>
+      <div class="pv-bar"><span id="pvName">/video-ideas · output</span><button class="pv-copy" id="pvCopy">Copy this prompt</button></div>
       <div class="pv-body" id="pvBody"></div>
     </div>
   </div>
@@ -369,7 +370,7 @@ section{padding-block:clamp(72px,9.5vw,116px)}
   <div class="shead">
     <span class="label"><span class="n">04</span> / App space</span>
     <h2>It decoded the <span class="hl">app ads</span>, too.</h2>
-    <p>3,000+ mobile-app ads, broken down the same way as the rest of the corpus. This is about <strong style="color:var(--ink);font-weight:600">views, not installs</strong> — what wins the feed is the hook × format, not a polished product demo.</p>
+    <p>3,000+ mobile-app ads, broken down the same way as the rest of the corpus. This is about <strong style="color:var(--ink);font-weight:600">views, not installs</strong>. What wins the feed is the hook × format, not a polished product demo.</p>
   </div>
   <div class="app-grid">
     <div class="app-cats">
@@ -380,7 +381,7 @@ section{padding-block:clamp(72px,9.5vw,116px)}
     <div class="app-pat">
       <h4>What wins app-ad <span class="hl">views</span></h4>
       <div id="appPats"></div>
-      <p class="app-note">Lift = view-breakout rate vs. the rest of the app set. A breakout is a top-views video — so above 1.0× over-indexes on <strong style="color:var(--ink);font-weight:600">views</strong>, not conversions.</p>
+      <p class="app-note">Lift = view-breakout rate vs. the rest of the app set. A breakout is a top-views video, so above 1.0× over-indexes on <strong style="color:var(--ink);font-weight:600">views</strong>, not conversions.</p>
     </div>
   </div>
 </section>
@@ -511,20 +512,20 @@ section{padding-block:clamp(72px,9.5vw,116px)}
 var SKILLS=[
  {cmd:"/video-ideas",bucket:"Ideation",ti:"Concepts mapped to real frameworks",de:"Six scroll-worthy concepts for {product} in {niche}, each built on a named script framework, placed on the awareness ladder, with the visual approach and why it lands.",
   prompt:"Use video_ideas: product = {your product}, niche = {your niche}, audience = {who it's for}. Give me 5 concepts, each on a different script framework, mapped to awareness + sophistication, with a hook and why it lands.",
-  lines:['<b class="x">01 · Industry Contrarian (DISRUPT)</b>','Hook: "Why <span class="slot">{niche}</span> pros quietly reach for this — and not the $220 one."','Who: solution-aware buyer · sophistication 4 (skeptical) · visual: product-in-action','Why: a burned market believes a mechanism, not another claim.','<b class="x">02 · Problem-Agitate-Solution (PAS)</b>','Hook: "still fighting <span class="slot">{category}</span> in 2026? it\'s not what you think."']},
+  lines:['<b class="x">01 · Industry Contrarian (DISRUPT)</b>','Hook: "Why <span class="slot">{niche}</span> pros quietly reach for this, not the $220 one."','Who: solution-aware buyer · sophistication 4 (skeptical) · visual: product-in-action','Why: a burned market believes a mechanism, not another claim.','<b class="x">02 · Problem-Agitate-Solution (PAS)</b>','Hook: "still fighting <span class="slot">{category}</span> in 2026? it\'s not what you think."']},
  {cmd:"/niche-decode",bucket:"Analysis",ti:"Read the niche before you write",de:"A structured read of {niche}: where it sits on awareness + sophistication, what the winning videos repeat, the dominant visual approach, and the gap nobody's filling.",
   prompt:"Use niche_decode: niche = {your niche}. Tell me the awareness + sophistication level, the 3 hook patterns winning right now, the dominant visual approach, and 2-3 angles the niche isn't running yet.",
-  lines:['Awareness: <span class="slot">solution-aware</span> — lead with the mechanism, not the category.','Sophistication 4 — burned market; identity + reframe beats claims.','Winning hooks now: POV-recognition · belief-challenging · direct call-out.','Dominant visual: authentic-UGC, face-to-camera (polish reads as an ad here).','The gap: <span class="slot">everyone shows the product, nobody shows the problem state.</span>']},
+  lines:['Awareness: <span class="slot">solution-aware</span>. Lead with the mechanism, not the category.','Sophistication 4 (burned market). Identity + reframe beats claims.','Winning hooks now: POV-recognition · belief-challenging · direct call-out.','Dominant visual: authentic-UGC, face-to-camera (polish reads as an ad here).','The gap: <span class="slot">everyone shows the product, nobody shows the problem state.</span>']},
  {cmd:"/format-teardown",bucket:"Reverse-engineer",ti:"Steal the skeleton, not the pixels",de:"Paste a winning video. Get its narrative DNA (framework + hook pattern), its edit DNA (signature device + density), and exactly how to rebuild it for your product.",
   prompt:"Use format_teardown: description = {paste or describe a winning video}. Break down the framework, hook pattern, signature device, edit density, and how to rebuild it for my product.",
-  lines:['Framework: Testimonial → Symptom → Switch → Proof.','Hook pattern: <span class="slot">belief-challenging POV</span>, caption-safe.','Signature device: the 7am / 7pm mirror cut — that\'s the whole video.','Density: LOW, one continuous selfie. The lack of polish IS the trust.','To clone: keep one shot, swap the mirror demo for your before/after.']},
+  lines:['Framework: Testimonial → Symptom → Switch → Proof.','Hook pattern: <span class="slot">belief-challenging POV</span>, caption-safe.','Signature device: the 7am / 7pm mirror cut. That\'s the whole video.','Density: LOW, one continuous selfie. The lack of polish IS the trust.','To clone: keep one shot, swap the mirror demo for your before/after.']},
  {cmd:"/cracked-hooks",bucket:"Hooks",ti:"Hooks that survive the scroll",de:"Ranked hooks for {product}, each a different pattern from a 13-pattern taxonomy, each a different angle, all caption-safe and brand named late.",
   prompt:"Use cracked_hooks: product = {your product}, niche = {your niche}, audience = {who}. Give me 8 hooks, each a different pattern, caption-safe, none naming the brand in line 1.",
-  lines:['<b class="x">[POV]</b> "POV: it\'s 7pm and your <span class="slot">{category}</span> looks exactly like it did at 7am."','<b class="x">[Belief]</b> "I thought every <span class="slot">{category}</span> was the same. Not this one."','<b class="x">[Call-out]</b> "for the girlies checking their under-eyes every 2 hours — this is for you."','<b class="x">[Size]</b> "92 of the 102 things your routine\'s missing. in one step."']},
+  lines:['<b class="x">[POV]</b> "POV: it\'s 7pm and your <span class="slot">{category}</span> looks exactly like it did at 7am."','<b class="x">[Belief]</b> "I thought every <span class="slot">{category}</span> was the same. Not this one."','<b class="x">[Call-out]</b> "for the girlies checking their under-eyes every 2 hours, this is for you."','<b class="x">[Size]</b> "92 of the 102 things your routine\'s missing. in one step."']},
  {cmd:"/shoot-brief",bucket:"Brief",ti:"Product in, shoot-ready brief out",de:"A full brief for {product}: framework, angle, hook bank, and a Beat / VO / on-screen-text / B-roll table a creator can film, plus the CTA and shoot notes.",
   prompt:"Use shoot_brief: product = {your product}, audience = {who}, objective = {goal}. Give me the framework, angle, a hook bank, and a Beat/VO/on-screen-text/B-roll table I can hand to a creator.",
   lines:['Framework: Problem-Agitate-Solution · Angle: Testimonial (4 shots)','<b class="x">Beat · VO · Text · B-roll</b>','Hook · "okay so I\'ve tried like 6 of these" · <span class="slot">6 IN A DRAWER</span> · handheld, to camera','Agitate · "and every one died by noon" · <span class="slot">STILL FADED</span> · the stuck-state, before','Solution · "this is the only one that held" · <span class="slot">9PM. STILL ON.</span> · the result, no narration']},
- {cmd:"/kill-the-slop",bucket:"Rewrite",ti:"Point it at weak copy, get a sharper cut",de:"Names exactly what's wrong with weak copy — AI-tell words, brand-centric voice, no specificity, no curiosity gap — then rewrites it shorter and sharper.",
+ {cmd:"/kill-the-slop",bucket:"Rewrite",ti:"Point it at weak copy, get a sharper cut",de:"Names exactly what's wrong with weak copy (AI-tell words, brand-centric voice, no specificity, no curiosity gap), then rewrites it shorter and sharper.",
   prompt:"Use kill_the_slop: copy = {paste your weak copy}. Name what's wrong against the anti-slop bar, then rewrite it in customer voice with a real hook pattern.",
   lines:['<b class="x">What\'s wrong:</b>','<span class="strike">"Discover the revolutionary power of our product to elevate your routine."</span>','AI-tell words · brand-first · zero specificity · no curiosity gap.','<b class="x">Rewrite (belief-challenging):</b>','<span class="good">"I thought every one of these was the same. I was wrong about this one."</span>']}
 ];
@@ -544,7 +545,7 @@ function pick(i,focus){
   sel=i;var rows=rail.children;
   for(var j=0;j<rows.length;j++){rows[j].setAttribute('aria-selected',j===i?'true':'false');rows[j].tabIndex=j===i?0:-1;}
   if(focus)rows[i].focus();
-  var s=SKILLS[i];pvName.textContent=s.cmd+' — output';
+  var s=SKILLS[i];pvName.textContent=s.cmd+' · output';
   pvBody.innerHTML='<h4>'+s.ti+'</h4>'+s.lines.map(function(l){return '<div class="pv-line">'+l+'</div>';}).join('');
   pvBody.dataset.prompt=s.prompt;
 }
@@ -580,11 +581,11 @@ document.getElementById('pvCopy').addEventListener('click',function(){copy(this,
 // ---- tools ----
 var TOOLS=[
  ["niche_decode","A structured read on what's actually working in a niche before you write a line."],
- ["find_trends","What's breaking out right now — formats and hooks over-indexing in the decoded feed."],
+ ["find_trends","What's breaking out right now: formats and hooks over-indexing in the decoded feed."],
  ["study_examples","Pull real decoded videos by niche, format, or hook pattern to learn from."],
  ["winning_combos","The hook × format pairings that over-index in breakouts, with the lift."],
  ["viral_teardowns","Real breakouts diagnosed: hook technique, why it spread, what to steal."],
- ["content_gaps","Angles a niche isn't running yet — the open lane nobody's filling."],
+ ["content_gaps","Angles a niche isn't running yet. The open lane nobody's filling."],
  ["format_playbook","A named format turned into a repeatable step-by-step you can shoot."],
  ["app_insights","The app-space vertical: app-ad hook × format patterns and breakout lift."],
  ["replicate_format","Take a winning format and rebuild it end-to-end for your product."],
@@ -596,7 +597,7 @@ document.getElementById('tools').innerHTML=TOOLS.map(function(t){return '<div cl
 
 // ---- faq ----
 var FAQ=[
- ["Wait, what's \"LazyReel\"?","It's the lazy way to know what's working: an MCP that already doomscrolled 21B+ views of short-form (and app ads) so your agent doesn't start from zero. You stay lazy; it hands you the decoded research — what's breaking out, why, and the real videos behind it."],
+ ["Wait, what's \"LazyReel\"?","It's the lazy way to know what's working: an MCP that already doomscrolled 21B+ views of short-form (and app ads) so your agent doesn't start from zero. You stay lazy; it hands you the decoded research: what's breaking out, why, and the real videos behind it."],
  ["Is this just prompt templates?","No. Templates make every video sound the same. LazyReel gives the agent the workflow plus a library of formats that actually worked, so it picks the right shape for your product and niche instead of reaching for the same three lines."],
  ["Will it make my agent sound like every other AI?","The opposite is the entire point. The skills are tuned to kill the tells: the \"revolutionary,\" the rocket emoji, the feature-list hook, the studio-ad polish. If it sounds like AI, it failed."],
  ["Do I need the MCP, or can I just browse?","Browse the format library free as a human. Connect the MCP free when you want your agent to do it for you. Both cost nothing."],

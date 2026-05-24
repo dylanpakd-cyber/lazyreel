@@ -3,8 +3,9 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Install LazyReel — one prompt, your agent does the rest</title>
+<title>Install LazyReel · one prompt, your agent does the rest</title>
 <meta name="description" content="Generate a free install token and paste one prompt into Claude Code, Cursor, or Codex. Your agent installs the LazyReel MCP and is ready to make a video." />
+<link rel="icon" href="favicon.svg" type="image/svg+xml" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;700&family=Instrument+Serif:ital@1&display=swap" rel="stylesheet" />
@@ -92,17 +93,17 @@ section{padding-block:clamp(28px,5vw,44px)}
 <section class="hero wrap">
   <span class="label">MCP install</span>
   <h1>One prompt your agent can <span class="hl"><span class="serif">safely</span></span> run.</h1>
-  <p>Your free token is generated below. Copy the block, paste it into Claude Code, Cursor, Codex, or any MCP-capable agent — it installs LazyReel and is ready on the next message. No sign-up.</p>
+  <p>Your free token is generated below. Copy the block, paste it into Claude Code, Cursor, Codex, or any MCP-capable agent. It installs LazyReel and is ready on the next message. No sign-up.</p>
   <span class="safe"><span class="dot"></span>Free · read-only research · won't spend, buy, or touch private data</span>
 </section>
 
 <section class="wrap" style="padding-top:6px">
   <div class="block">
-    <div class="block-bar"><span>install-lazyreel.md — works with any agent</span>
+    <div class="block-bar"><span>install-lazyreel.md · works with any agent</span>
       <span style="display:inline-flex;gap:8px"><button class="copy" id="regen">Regenerate</button><button class="copy" id="promptCopy">Copy</button></span></div>
     <pre id="prompt"></pre>
   </div>
-  <p class="label" style="margin-top:14px;text-transform:none;letter-spacing:0;color:var(--mute)">A fresh token is auto-generated each visit and stored only in your browser. After it connects, ask your agent to run <code style="font-family:'JetBrains Mono'">get_status</code> to confirm the skills are live — then ask for a niche read, a hook, or what's breaking out.</p>
+  <p class="label" style="margin-top:14px;text-transform:none;letter-spacing:0;color:var(--mute)">A fresh token is auto-generated each visit and stored only in your browser. After it connects, ask your agent to run <code style="font-family:'JetBrains Mono'">get_status</code> to confirm the skills are live, then ask for a niche read, a hook, or what's breaking out.</p>
 </section>
 
 <div class="wrap foot">© LazyReel 2026. The MCP is free and open. <a style="color:var(--flag)" href="index.html">Back to the site →</a></div>
@@ -115,7 +116,7 @@ function makeToken(){var b=new Uint8Array(20);crypto.getRandomValues(b);return '
 var token=makeToken();
 try{localStorage.setItem('lazyreel_mcp_token',token);}catch(e){}
 
-// ONE universal install block — works for Claude Code, Cursor, Codex, or any MCP client.
+// ONE universal install block: works for Claude Code, Cursor, Codex, or any MCP client.
 function block(t){return (
 'Install the LazyReel MCP for me. It\'s free and read-only: it gives you a decoded\n'+
 'research feed of what\'s breaking out in short-form (hooks, formats, real example\n'+
