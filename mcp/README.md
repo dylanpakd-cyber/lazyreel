@@ -1,4 +1,4 @@
-# ABG CMO — MCP server
+# LazyReel — MCP server
 
 A real stdio MCP server that gives a coding agent genuinely good short-form / UGC
 video marketing skills. No video editing — ideation, niche analysis, format
@@ -32,7 +32,7 @@ npm run smoke   # spawns the server, calls every tool, prints pass/fail
 **Claude Code:**
 
 ```bash
-claude mcp add abg-cmo -- node /ABSOLUTE/PATH/TO/cracked-marketer/mcp/build/index.js
+claude mcp add lazyreel -- node /ABSOLUTE/PATH/TO/cracked-marketer/mcp/build/index.js
 ```
 
 **Cursor / Codex / any MCP client** — add a stdio server entry:
@@ -40,7 +40,7 @@ claude mcp add abg-cmo -- node /ABSOLUTE/PATH/TO/cracked-marketer/mcp/build/inde
 ```json
 {
   "mcpServers": {
-    "abg-cmo": {
+    "lazyreel": {
       "command": "node",
       "args": ["/ABSOLUTE/PATH/TO/cracked-marketer/mcp/build/index.js"]
     }

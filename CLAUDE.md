@@ -1,6 +1,6 @@
-# ABG CMO
+# LazyReel
 
-Marketing site + real MCP server for **ABG CMO** — a connector + skill set that turns any coding agent into a short-form / UGC video marketer. ("ABG" is the trend-word hook; functionally it's a UGC CMO. Positioning: *video context for AI, not AI for video creation.*)
+Marketing site + real MCP server for **LazyReel** — a connector + skill set that turns any coding agent into a short-form / UGC video marketer. ("ABG" is the trend-word hook; functionally it's a UGC CMO. Positioning: *video context for AI, not AI for video creation.*)
 
 ## What's here (built)
 

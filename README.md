@@ -1,10 +1,10 @@
-# ABG CMO
+# LazyReel
 
-Make your agent an ABG CMO.
+The feed your agent already doomscrolled.
 
-ABG CMO is a free MCP server that gives a coding agent the taste, formats, and hooks it takes to make short form video that actually performs. Plug it in and your agent stops writing generic AI ad mush and starts shipping UGC that converts.
+LazyReel is a free MCP server that doomscrolled 21B+ views of short form video (and app ads) so your coding agent doesn't have to. Plug it in and it already knows what's breaking out in your niche — the hooks, formats, and the real videos behind them — before it writes a thing. Your agent stops writing generic AI ad mush and starts shipping UGC that converts.
 
-Think of it as video context for AI, not AI for video creation. It does not edit video. It does the thinking and the writing: ideas, niche reads, teardowns, hooks, and shoot ready briefs.
+Think of it as video research for AI, not AI for video creation. It does the thinking and the writing: what's working, why, ideas, niche reads, teardowns, hooks, and shoot ready briefs. The companion skills (in `skills/`) turn that into the actual generation prompts.
 
 ## What it gives your agent
 
@@ -43,10 +43,10 @@ The easy way is the install page. It generates a free token and gives you one pr
 To do it by hand with Claude Code:
 
 ```
-git clone https://github.com/dylanpakd-cyber/abg-cmo ~/abg-cmo
-cd ~/abg-cmo/mcp
+git clone https://github.com/dylanpakd-cyber/lazyreel ~/lazyreel
+cd ~/lazyreel/mcp
 npm install && npm run build
-claude mcp add abg-cmo --scope user -- node "$(pwd)/build/index.js"
+claude mcp add lazyreel --scope user -- node "$(pwd)/build/index.js"
 ```
 
 Then ask your agent to call get_status to confirm the six skills are live.

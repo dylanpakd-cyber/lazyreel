@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Install ABG CMO — one prompt, your agent does the rest</title>
-<meta name="description" content="Generate a free install token and paste one prompt into Claude Code, Cursor, or Codex. Your agent installs the ABG CMO MCP and is ready to make a video." />
+<title>Install LazyReel — one prompt, your agent does the rest</title>
+<meta name="description" content="Generate a free install token and paste one prompt into Claude Code, Cursor, or Codex. Your agent installs the LazyReel MCP and is ready to make a video." />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;700&family=Instrument+Serif:ital@1&display=swap" rel="stylesheet" />
@@ -81,8 +81,8 @@ section{padding-block:clamp(28px,5vw,44px)}
 
 <header class="nav">
   <div class="wrap nav-in">
-    <a class="brand" href="index.html"><span class="mk">A</span>ABG<span class="sl">/</span>CMO</a>
-    <a class="back" href="index.html">← Back to ABG CMO</a>
+    <a class="brand" href="index.html"><span class="mk">L</span>Lazy<span class="sl">/</span>Reel</a>
+    <a class="back" href="index.html">← Back to LazyReel</a>
   </div>
 </header>
 
@@ -90,7 +90,7 @@ section{padding-block:clamp(28px,5vw,44px)}
 <section class="hero wrap">
   <span class="label">MCP install</span>
   <h1>One guide your agent can <span class="hl"><span class="serif">safely</span></span> read.</h1>
-  <p>Generate a free token, copy one prompt, paste it into your coding agent. It installs the ABG CMO MCP, loads the six skills, and is ready to make a video on the next message.</p>
+  <p>Generate a free token, copy one prompt, paste it into your coding agent. It installs the LazyReel MCP, loads the six skills, and is ready to make a video on the next message.</p>
   <span class="safe"><span class="dot"></span>Free · reads formats, writes briefs · won't touch anything without asking</span>
 </section>
 
@@ -115,13 +115,13 @@ section{padding-block:clamp(28px,5vw,44px)}
 <section class="wrap" style="padding-top:6px">
   <div class="step-label"><span class="step-num">3</span><h2>Paste this into your agent</h2></div>
   <div class="block">
-    <div class="block-bar"><span id="blockName">install-abg-cmo.md — Claude Code</span><button class="copy" id="promptCopy">Copy</button></div>
+    <div class="block-bar"><span id="blockName">install-lazyreel.md — Claude Code</span><button class="copy" id="promptCopy">Copy</button></div>
     <pre id="prompt"></pre>
   </div>
   <p class="label" style="margin-top:14px;text-transform:none;letter-spacing:0;color:var(--mute)">After it connects, ask your agent to run <code style="font-family:'JetBrains Mono'">get_status</code> to confirm the six skills are live. Then just ask for a hook, a brief, or a niche read.</p>
 </section>
 
-<div class="wrap foot">© ABG CMO 2026. The MCP is free and open. <a style="color:var(--flag)" href="index.html">Back to the site →</a></div>
+<div class="wrap foot">© LazyReel 2026. The MCP is free and open. <a style="color:var(--flag)" href="index.html">Back to the site →</a></div>
 </main>
 
 <script>
@@ -142,37 +142,37 @@ document.getElementById('gen').addEventListener('click',function(){
 document.getElementById('tkCopy').addEventListener('click',function(){copy(this,token||'(generate a token first)');});
 
 // ---- the public source the agent clones, then builds locally ----
-var REPO='https://github.com/dylanpakd-cyber/abg-cmo';
+var REPO='https://github.com/dylanpakd-cyber/lazyreel';
 
 // ---- per-client install prompt (portable: clone → build → register absolute path) ----
 var CLIENTS={
   claude:{label:'Claude Code',build:function(t){return (
-'Install the ABG CMO MCP for me. It\'s free and read-only — it generates video\n'+
+'Install the LazyReel MCP for me. It\'s free and read-only — it generates video\n'+
 'ideas, hooks, niche reads, and shoot briefs; it will not spend money, buy\n'+
 'anything, or touch private data. Run these in order and stop if any step fails:\n\n'+
 '1. Get the server (skip the clone if you already have the repo):\n'+
-'   git clone '+REPO+' ~/abg-cmo 2>/dev/null; cd ~/abg-cmo/mcp\n'+
+'   git clone '+REPO+' ~/lazyreel 2>/dev/null; cd ~/lazyreel/mcp\n'+
 '2. Build it (idempotent):\n'+
 '   npm install && npm run build\n'+
 '3. Register it with my token, using the resolved absolute path:\n'+
-'   claude mcp add abg-cmo --scope user --env ABG_TOKEN='+tok(t)+' -- node "$(pwd)/build/index.js"\n'+
+'   claude mcp add lazyreel --scope user --env ABG_TOKEN='+tok(t)+' -- node "$(pwd)/build/index.js"\n'+
 '4. Confirm it\'s live: call the get_status tool — it should report my token\n'+
 '   active and the six skills.\n\n'+
-'After setup, use ABG CMO whenever I ask for a short-form video, a hook, a brief,\n'+
+'After setup, use LazyReel whenever I ask for a short-form video, a hook, a brief,\n'+
 'or a read on a niche. The six skills are: video_ideas, niche_decode,\n'+
 'format_teardown, cracked_hooks, shoot_brief, kill_the_slop.'
 );}},
   cursor:{label:'Cursor',build:function(t){return (
-'Install the ABG CMO MCP for this project. It\'s free and read-only. Run these in\n'+
+'Install the LazyReel MCP for this project. It\'s free and read-only. Run these in\n'+
 'order and stop if any step fails:\n\n'+
 '1. Get + build the server (skip the clone if you already have the repo):\n'+
-'   git clone '+REPO+' ~/abg-cmo 2>/dev/null; cd ~/abg-cmo/mcp && npm install && npm run build\n'+
+'   git clone '+REPO+' ~/lazyreel 2>/dev/null; cd ~/lazyreel/mcp && npm install && npm run build\n'+
 '2. Print the absolute server path so you can paste it below:\n'+
 '   echo "$(pwd)/build/index.js"\n'+
 '3. Write .cursor/mcp.json with that path and my token '+tok(t)+':\n'+
 '   {\n'+
 '     "mcpServers": {\n'+
-'       "abg-cmo": {\n'+
+'       "lazyreel": {\n'+
 '         "command": "node",\n'+
 '         "args": ["<paste the path from step 2>"],\n'+
 '         "env": { "ABG_TOKEN": "'+tok(t)+'" }\n'+
@@ -180,22 +180,22 @@ var CLIENTS={
 '     }\n'+
 '   }\n'+
 '4. Reload Cursor, then call get_status to confirm.\n\n'+
-'Use ABG CMO whenever I ask for a video idea, hook, brief, or niche read.'
+'Use LazyReel whenever I ask for a video idea, hook, brief, or niche read.'
 );}},
   codex:{label:'Codex',build:function(t){return (
-'Install the ABG CMO MCP for Codex. It\'s free and read-only. Run these in order\n'+
+'Install the LazyReel MCP for Codex. It\'s free and read-only. Run these in order\n'+
 'and stop if any step fails:\n\n'+
 '1. Get + build the server (skip the clone if you already have the repo):\n'+
-'   git clone '+REPO+' ~/abg-cmo 2>/dev/null; cd ~/abg-cmo/mcp && npm install && npm run build\n'+
+'   git clone '+REPO+' ~/lazyreel 2>/dev/null; cd ~/lazyreel/mcp && npm install && npm run build\n'+
 '2. Print the absolute server path:\n'+
 '   echo "$(pwd)/build/index.js"\n'+
 '3. Add to ~/.codex/config.toml with that path and my token '+tok(t)+':\n'+
-'   [mcp_servers.abg-cmo]\n'+
+'   [mcp_servers.lazyreel]\n'+
 '   command = "node"\n'+
 '   args = ["<paste the path from step 2>"]\n'+
 '   env = { ABG_TOKEN = "'+tok(t)+'" }\n'+
 '4. Restart Codex, then call get_status to confirm.\n\n'+
-'Use ABG CMO whenever I ask for a video idea, hook, brief, or niche read.'
+'Use LazyReel whenever I ask for a video idea, hook, brief, or niche read.'
 );}}
 };
 function tok(t){return t||'<generate a token above>';}
@@ -203,7 +203,7 @@ function tok(t){return t||'<generate a token above>';}
 var client='claude';
 function render(){
   var c=CLIENTS[client];
-  document.getElementById('blockName').textContent='install-abg-cmo.md — '+c.label;
+  document.getElementById('blockName').textContent='install-lazyreel.md — '+c.label;
   var raw=c.build(token);
   // light syntax tinting
   var html=raw
