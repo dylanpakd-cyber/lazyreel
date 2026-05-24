@@ -1,26 +1,28 @@
 # ABG CMO — video-creation skills
 
-These are the **"make it"** half of ABG CMO. The MCP (`../mcp`) tells you *what works*; these skills turn that into *actual videos*.
+The **"make it"** half of ABG CMO. The MCP (`../mcp`) tells you *what works*; these skills turn that into *actual videos*.
 
 | Skill | Job |
 | --- | --- |
-| **abg-format-deconstructor** | Take a breakout video → diagnose *why* it broke out → a rich, copyable shot-by-shot FormatSpec you can prompt from. |
-| **abg-ugc-ad-director** | Take a product + a proven format → copy-paste UGC video-generation prompts (Seedance 2.0 / Kling / Veo / Higgsfield), with the spoken hook, shot grammar, on-screen text, and audio direction. |
+| **abg-format-deconstructor** | Breakout video → *why* it broke out (3 gates + false-positive labels) → a rich, copyable shot-by-shot FormatSpec. The "understand it well enough to rebuild it" skill. |
+| **abg-format-prompt-builder** | Break a video into a shot/effects timeline (density map, energy arc, signature device) you can prompt from. |
+| **abg-ugc-ad-director** | Product/concept/format → copy-paste UGC video prompts (Seedance 2.0): Pinterest creator refs, shot-by-shot prompts, native audio direction, anti-cinematic rules. |
+| **abg-ugc-ad-generator** | Product image + ad angle → a full multi-shot UGC ad generated via Seedance on fal.ai, stitched with ffmpeg (includes `scripts/` + `references/`). End-to-end automation. |
 
-## How they pair with the MCP (the full loop)
+## The full loop (insight → creation)
 
 ```
 MCP: find_trends / niche_decode / study_examples / viral_teardowns   →  what wins + real videos to study
 abg-format-deconstructor                                             →  why it wins, as a copyable spec
-abg-ugc-ad-director                                                  →  the model-ready generation prompts
+abg-ugc-ad-director  (or  abg-ugc-ad-generator for full automation)  →  the model-ready prompts / the finished ad
 ```
 
-So a creator goes: *see what's working in my niche → watch the real breakouts → understand why they broke out → get the prompts to make my own.*
+A creator goes: *see what's working in my niche → watch the real breakouts → understand why → get the prompts (or the generated ad) to make my own.*
 
 ## Install (Claude Code / Cursor / Codex)
 
-Copy a skill folder into your agent's skills directory (e.g. `~/.claude/skills/`), or point your agent at this repo. Each `SKILL.md` is self-contained.
+Copy a skill folder into your agent's skills directory (e.g. `~/.claude/skills/`), or point your agent at this repo. Each `SKILL.md` is self-contained; `abg-ugc-ad-generator` also bundles `scripts/` (fal.ai generate + ffmpeg stitch) and `references/`.
 
 ## Design note
 
-These are **original** skills authored for ABG CMO, grounded in real DTC/UGC ad craft (anti-cinematic UGC rules, shot grammar, the framework catalogue) and wired to the ABG CMO corpus — not generic copies. The value is the pairing: prompts grounded in a *proven, real* format, never a guess. We deliberately do NOT auto-emit a finished prompt from the MCP; the MCP is the curated insight feed, and these skills are where the human + agent compose the prompt from that grounding.
+These are the project's own video-creation skills (renamed to ABG CMO). The MCP stays the **curated insight feed** — it grounds every prompt in a *proven, real* format with links to the actual videos — and these skills are where the human + agent compose the prompt from that grounding. The point is the pairing: prompts grounded in what genuinely broke out, never a guess.
