@@ -9,7 +9,7 @@ import {
   ListToolsRequestSchema,
 } from "@modelcontextprotocol/sdk/types.js";
 import {
-  videoIdeas, nicheDecode, formatTeardown, crackedHooks, shootBrief, killTheSlop, searchCorpus, viralTeardowns, contentGaps, status,
+  videoIdeas, nicheDecode, formatTeardown, crackedHooks, shootBrief, killTheSlop, searchCorpus, viralTeardowns, contentGaps, formatPlaybook, status,
 } from "./skills.js";
 import { SCRIPT_FRAMEWORKS } from "./frameworks.js";
 
@@ -129,6 +129,15 @@ const tools = [
     },
   },
   {
+    name: "format_playbook",
+    description: "How winning videos in a niche actually LOOK, read from the first 3 seconds of real videos: which content formats (talking-head, before-after, voiceover-broll, etc.) over-perform, plus the craft attributes (styling, framing, lighting) that correlate with breakouts. Use when the user asks what format to shoot, how a video should look, or about production/visual style.",
+    inputSchema: {
+      type: "object",
+      properties: { niche: { type: "string", description: "The niche (e.g. 'skincare')." } },
+      required: ["niche"],
+    },
+  },
+  {
     name: "get_status",
     description: "Explain what this MCP server can do and what is intentionally not live yet.",
     inputSchema: { type: "object", properties: {} },
@@ -163,6 +172,8 @@ server.setRequestHandler(CallToolRequestSchema, async (req) => {
         text = viralTeardowns(str("niche"), num("limit") ?? 5); break;
       case "content_gaps":
         text = contentGaps(str("niche")); break;
+      case "format_playbook":
+        text = formatPlaybook(str("niche")); break;
       case "get_status":
         text = status(process.env.ABG_TOKEN); break;
       default:

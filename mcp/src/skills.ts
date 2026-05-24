@@ -8,7 +8,8 @@ import {
 } from "./frameworks.js";
 import {
   searchVideos, relatedTrendingTags, corpusCounts, nicheInsight, overallHookLift, insightsMeta,
-  getWinners, winnersForNiche, type AnalyzedVideo, type HookLift, type Teardown,
+  getWinners, winnersForNiche, getVisualInsights, visualForNiche, wordsForNiche,
+  type AnalyzedVideo, type HookLift, type Teardown,
 } from "./corpus.js";
 
 // --- tiny deterministic helpers -------------------------------------------
@@ -120,6 +121,11 @@ export function nicheDecode(niche: string, examples?: string): string {
   if (insightBlock.length) {
     insightBlock.push(`_Method: ${meta.method || "contrastive lift on views-per-follower"}. Source: ${meta.source}, ${meta.decoded.toLocaleString()} videos decoded. Lift>1 = over-indexed in breakouts; read small samples with caution._`);
   }
+  const words = wordsForNiche(n);
+  const wordBlock = (words && words.wordsThatOverIndex?.length)
+    ? ["", `## Words the winners open with in ${n} (over-index in breakouts)`,
+       words.wordsThatOverIndex.slice(0, 8).map((x) => `${x.term} (${x.lift}x)`).join(" · ")]
+    : [];
   const winners = winnersForNiche(n, 3);
   const winnerBlock = winners.length
     ? ["", `## Real breakouts in ${n}, torn down (why they over-reached)`,
@@ -165,12 +171,48 @@ export function nicheDecode(niche: string, examples?: string): string {
     `- Name 2-3 angles the niche is NOT running yet. That's your shot.`,
     examples ? `\n## Notes from what you pasted\n${examples.trim()}` : "",
     ...insightBlock,
+    ...wordBlock,
     ...winnerBlock,
     ...corpusBlock,
     ...tagBlock,
     "",
     `> Output you should end with: top-10 pains (each w/ a real quote), the 3 hook patterns winning now, the dominant visual approach, and 2-3 unused angles.`,
   ].filter(Boolean).join("\n");
+}
+
+export function formatPlaybook(niche: string): string {
+  const n = niche.trim();
+  const v = getVisualInsights();
+  if (!v.analyzed) {
+    return `# Visual format analysis not run yet\nRun pipeline/visual.mjs + aggregate-visual.mjs to label video formats and craft from the actual frames.`;
+  }
+  const nv = visualForNiche(n);
+  const lines = [
+    `# Format playbook: ${n}`,
+    `_How winning videos in this niche actually look, read from the first 3 seconds of real videos (${v.analyzed} analyzed). The shape of the video, not just the words._`,
+    "",
+  ];
+  if (nv && nv.formatsThatOverIndex?.length) {
+    lines.push(`## Formats that over-perform in ${n}`);
+    lines.push(...nv.formatsThatOverIndex.slice(0, 5).map((f) => `- **${f.label}** — ${f.lift}x more common among breakouts (n=${f.nTotal})`));
+    if (nv.formatDistribution) {
+      const top = Object.entries(nv.formatDistribution).slice(0, 3).map(([k, c]) => `${k} (${c})`).join(", ");
+      lines.push("", `Most-used formats here: ${top}.`);
+    }
+  } else {
+    lines.push(`## Cross-niche format signal (niche sample still small)`);
+    lines.push(...(v.formatsThatOverIndex || []).slice(0, 5).map((f) => `- **${f.label}** — ${f.lift}x among breakouts (n=${f.nTotal})`));
+  }
+  // craft attributes (the Lightreel-style moat)
+  const craft = v.craft || {};
+  const craftLines: string[] = [];
+  for (const [dim, label] of [["creatorStyling", "Styling"], ["cameraFraming", "Framing"], ["lighting", "Lighting"], ["faceInFirst3s", "Face in first 3s"]] as const) {
+    const top = craft[dim]?.lift?.[0];
+    if (top && top.lift > 1.1) craftLines.push(`- **${label}:** ${top.label} over-indexes ${top.lift}x in breakouts`);
+  }
+  if (craftLines.length) { lines.push("", `## Craft that correlates with breakouts`, ...craftLines); }
+  lines.push("", `> The shape matters as much as the script. Match the winning format before you obsess over the hook words.`);
+  return lines.join("\n");
 }
 
 export function contentGaps(niche: string): string {
@@ -393,8 +435,9 @@ export function status(token?: string): string {
     tokenLine,
     "",
     "**Live now:**",
-    "- 9 skills: video_ideas, niche_decode, format_teardown, cracked_hooks, shoot_brief, kill_the_slop, search_corpus, viral_teardowns, content_gaps",
+    "- 10 skills: video_ideas, niche_decode, format_teardown, cracked_hooks, shoot_brief, kill_the_slop, search_corpus, viral_teardowns, content_gaps, format_playbook",
     `- ${getWinners().length} real breakout videos torn down (the actual viral mechanism, diagnosed from transcript + engagement)`,
+    getVisualInsights().analyzed ? `- ${getVisualInsights().analyzed} videos analyzed visually (format + craft from the first 3 seconds of frames)` : "- visual/format layer: scripts ready, run pipeline/visual.mjs to populate",
     `- ${SCRIPT_FRAMEWORKS.length} named script frameworks, ${HOOK_PATTERNS.length} hook patterns, ${ANGLES.length} proven UGC angles`,
     `- ${corpusCounts().videos} hand-authored teardowns + ${corpusCounts().tags} real TikTok trending tags (2022-2025, MIT)`,
     `- ${corpusCounts().decoded.toLocaleString()} real TikTok videos decoded: LLM-labeled hook + framework, engagement normalized by follower count, patterns mined by contrastive lift (breakouts vs rest)`,

@@ -103,6 +103,48 @@ export function insightsMeta() {
   return { source: i.source, decoded: i.decoded ?? 0, method: i.method };
 }
 
+export type WordLift = { term: string; lift: number; nWinners: number; nTotal: number };
+type WordInsights = { overall?: any; byNiche?: Record<string, { wordsThatOverIndex?: WordLift[]; phrasesThatOverIndex?: WordLift[]; commonOpeningWords?: { term: string; count: number }[] }> };
+let _words: WordInsights | null = null;
+function getWordInsights(): WordInsights {
+  if (_words) return _words;
+  let w: WordInsights;
+  try { w = JSON.parse(readFileSync(dataPath("word-insights.json"), "utf8")); }
+  catch { w = {}; }
+  _words = w;
+  return w;
+}
+export function wordsForNiche(niche: string) {
+  const by = getWordInsights().byNiche || {};
+  if (by[niche]) return by[niche];
+  const key = Object.keys(by).find((k) => k.toLowerCase().includes(niche.toLowerCase()) || niche.toLowerCase().includes(k.toLowerCase()));
+  return key ? by[key] : null;
+}
+
+export type VisualLift = { label: string; lift: number; nWinners: number; nTotal: number; sharePct?: number };
+type VisualInsights = {
+  analyzed?: number;
+  formatDistribution?: Record<string, number>;
+  formatsThatOverIndex?: VisualLift[];
+  craft?: Record<string, { distribution?: Record<string, number>; lift?: VisualLift[] }>;
+  byNiche?: Record<string, { sampleSize: number; formatDistribution?: Record<string, number>; formatsThatOverIndex?: VisualLift[] }>;
+};
+let _visual: VisualInsights | null = null;
+export function getVisualInsights(): VisualInsights {
+  if (_visual) return _visual;
+  let v: VisualInsights;
+  try { v = JSON.parse(readFileSync(dataPath("visual-insights.json"), "utf8")); }
+  catch { v = {}; }
+  _visual = v;
+  return v;
+}
+export function visualForNiche(niche: string) {
+  const by = getVisualInsights().byNiche || {};
+  if (by[niche]) return by[niche];
+  const key = Object.keys(by).find((k) => k.toLowerCase().includes(niche.toLowerCase()) || niche.toLowerCase().includes(k.toLowerCase()));
+  return key ? by[key] : null;
+}
+
 export type Teardown = {
   niche: string; hookPattern: string; framework: string; reach: string; viewBucket: string;
   hookTechnique: string; retentionDevice: string; viralMechanism: string; stealThis: string;
