@@ -99,6 +99,24 @@ export function insightsMeta() {
   return { source: i.source, decoded: i.decoded ?? 0, method: i.method };
 }
 
+export type Teardown = {
+  niche: string; hookPattern: string; framework: string; reach: string; viewBucket: string;
+  hookTechnique: string; retentionDevice: string; viralMechanism: string; stealThis: string;
+};
+let _winners: Teardown[] | null = null;
+export function getWinners(): Teardown[] {
+  if (_winners) return _winners;
+  try { _winners = (JSON.parse(readFileSync(dataPath("winners.json"), "utf8")).teardowns || []) as Teardown[]; }
+  catch { _winners = []; }
+  return _winners;
+}
+export function winnersForNiche(niche: string, limit = 5): Teardown[] {
+  const all = getWinners();
+  const exact = all.filter((w) => w.niche.toLowerCase() === niche.toLowerCase());
+  const loose = exact.length ? exact : all.filter((w) => w.niche.toLowerCase().includes(niche.toLowerCase()) || niche.toLowerCase().includes(w.niche.toLowerCase()));
+  return (loose.length ? loose : all).slice(0, limit);
+}
+
 function searchable(v: AnalyzedVideo): string {
   return [v.niche, v.productType, v.format, v.framework, v.hookPattern, v.hook, v.whyItWorked, ...v.tags]
     .join(" ").toLowerCase();

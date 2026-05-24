@@ -9,7 +9,7 @@ import {
   ListToolsRequestSchema,
 } from "@modelcontextprotocol/sdk/types.js";
 import {
-  videoIdeas, nicheDecode, formatTeardown, crackedHooks, shootBrief, killTheSlop, searchCorpus, status,
+  videoIdeas, nicheDecode, formatTeardown, crackedHooks, shootBrief, killTheSlop, searchCorpus, viralTeardowns, status,
 } from "./skills.js";
 import { SCRIPT_FRAMEWORKS } from "./frameworks.js";
 
@@ -108,6 +108,18 @@ const tools = [
     },
   },
   {
+    name: "viral_teardowns",
+    description: "Return real breakout videos in a niche, each diagnosed for WHY it over-reached the creator's following: the hook technique, retention device, viral mechanism, and the one move to steal. Grounded in the actual transcript + engagement, not view counts. Use when the user asks what made videos go viral or wants proven mechanics to copy.",
+    inputSchema: {
+      type: "object",
+      properties: {
+        niche: { type: "string", description: "The niche to pull breakout teardowns for (e.g. 'skincare', 'ABG beauty')." },
+        limit: { type: "number", description: "Max teardowns (1-10). Default 5." },
+      },
+      required: ["niche"],
+    },
+  },
+  {
     name: "get_status",
     description: "Explain what this MCP server can do and what is intentionally not live yet.",
     inputSchema: { type: "object", properties: {} },
@@ -138,6 +150,8 @@ server.setRequestHandler(CallToolRequestSchema, async (req) => {
         text = killTheSlop(str("copy")); break;
       case "search_corpus":
         text = searchCorpus(str("query"), num("limit") ?? 6); break;
+      case "viral_teardowns":
+        text = viralTeardowns(str("niche"), num("limit") ?? 5); break;
       case "get_status":
         text = status(process.env.ABG_TOKEN); break;
       default:

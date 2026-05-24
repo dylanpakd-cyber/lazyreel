@@ -293,7 +293,7 @@ section{padding-block:clamp(64px,9vw,104px)}
   <span class="label">02 / The data</span>
   <div class="stats" style="margin-top:30px">
     <div class="stat"><div class="n" data-to="3800" data-suffix="+">0</div><div class="l">real videos decoded</div></div>
-    <div class="stat"><div class="n" data-to="17" data-suffix="B+">0</div><div class="l">views analyzed</div></div>
+    <div class="stat"><div class="n" data-to="17.1" data-suffix="B" data-dec="1">0</div><div class="l">views analyzed</div></div>
     <div class="stat"><div class="n" data-to="10">0</div><div class="l">niches mapped</div></div>
   </div>
   <p class="label" style="margin-top:24px;text-transform:none;letter-spacing:0;color:var(--mute)">Real TikTok videos, decoded by our own pipeline. The number grows every run.</p>
@@ -342,7 +342,7 @@ section{padding-block:clamp(64px,9vw,104px)}
     <div class="plan">
       <div class="label">For agents</div>
       <div class="pr">Free<small>forever</small></div>
-      <ul><li>The MCP + 6 tools</li><li>All six opinionated skills</li><li>No card, no account</li></ul>
+      <ul><li>The full MCP (8 tools)</li><li>Every opinionated skill + real teardowns</li><li>No card, no account</li></ul>
       <a class="btn btn-primary" href="mcp-install.html">Get the MCP</a>
     </div>
     <div class="plan">
@@ -436,7 +436,9 @@ var TOOLS=[
  ["format_teardown","Reverse-engineer a winning video's narrative + edit DNA, and how to rebuild it."],
  ["cracked_hooks","Ranked hooks, each a different pattern, caption-safe, brand named late."],
  ["shoot_brief","Full brief: framework, angle, hook bank, Beat/VO/Text/B-roll table, CTA, shoot notes."],
- ["kill_the_slop","Critique weak copy against the anti-slop bar, then rewrite it sharper."]
+ ["kill_the_slop","Critique weak copy against the anti-slop bar, then rewrite it sharper."],
+ ["search_corpus","Search the decoded-video library for real teardowns by niche, format, or hook pattern."],
+ ["viral_teardowns","Real breakouts in your niche, diagnosed: hook technique, why it spread, what to steal."]
 ];
 document.getElementById('tools').innerHTML=TOOLS.map(function(t){return '<div class="tool"><code>'+t[0]+'</code><p>'+t[1]+'</p></div>';}).join('');
 
@@ -446,7 +448,7 @@ var FAQ=[
  ["Is this just prompt templates?","No. Templates make every video sound the same. ABG CMO gives the agent the workflow plus a library of formats that actually worked, so it picks the right shape for your product and niche instead of reaching for the same three lines."],
  ["Will it make my agent sound like every other AI?","The opposite is the entire point. The skills are tuned to kill the tells: the \"revolutionary,\" the 🚀, the feature-list hook, the studio-ad polish. If it sounds like AI, it failed."],
  ["Do I need the MCP, or can I just browse?","Browse the format library free as a human. Connect the MCP free when you want your agent to do it for you. Both cost nothing."],
- ["What's actually live today?","The format library, the six skills, and the six MCP tools. Live ingestion of new winning videos and private niche libraries are on the way. We'll always tell you which is which."]
+ ["What's actually live today?","Eight MCP tools, a library of script frameworks and hook patterns, and real breakout teardowns decoded from thousands of scraped videos. Live re-scraping on demand and private niche libraries are next. We'll always tell you which is which."]
 ];
 document.getElementById('faq-list').innerHTML=FAQ.map(function(f){return '<details><summary>'+f[0]+'<span class="chev">+</span></summary><p>'+f[1]+'</p></details>';}).join('');
 

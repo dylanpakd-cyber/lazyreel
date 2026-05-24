@@ -7,7 +7,8 @@ import {
   SOPHISTICATION, BANNED_WORDS, VOICE_RULES, UGC_MODIFIERS, type HookPattern,
 } from "./frameworks.js";
 import {
-  searchVideos, relatedTrendingTags, corpusCounts, nicheInsight, overallHookLift, insightsMeta, type AnalyzedVideo, type HookLift,
+  searchVideos, relatedTrendingTags, corpusCounts, nicheInsight, overallHookLift, insightsMeta,
+  getWinners, winnersForNiche, type AnalyzedVideo, type HookLift, type Teardown,
 } from "./corpus.js";
 
 // --- tiny deterministic helpers -------------------------------------------
@@ -119,6 +120,16 @@ export function nicheDecode(niche: string, examples?: string): string {
   if (insightBlock.length) {
     insightBlock.push(`_Method: ${meta.method || "contrastive lift on views-per-follower"}. Source: ${meta.source}, ${meta.decoded.toLocaleString()} videos decoded. Lift>1 = over-indexed in breakouts; read small samples with caution._`);
   }
+  const winners = winnersForNiche(n, 3);
+  const winnerBlock = winners.length
+    ? ["", `## Real breakouts in ${n}, torn down (why they over-reached)`,
+       ...winners.flatMap((w) => [
+         `**${w.reach} · ${w.viewBucket} · ${w.hookPattern}**`,
+         `- Hook technique: ${w.hookTechnique}`,
+         `- Why it spread: ${w.viralMechanism}`,
+         `- Steal this: ${w.stealThis}`,
+       ])]
+    : [];
   const matches = searchVideos(n, 4);
   const tags = relatedTrendingTags(n, 8);
   const corpusBlock = matches.length
@@ -154,11 +165,31 @@ export function nicheDecode(niche: string, examples?: string): string {
     `- Name 2-3 angles the niche is NOT running yet. That's your shot.`,
     examples ? `\n## Notes from what you pasted\n${examples.trim()}` : "",
     ...insightBlock,
+    ...winnerBlock,
     ...corpusBlock,
     ...tagBlock,
     "",
     `> Output you should end with: top-10 pains (each w/ a real quote), the 3 hook patterns winning now, the dominant visual approach, and 2-3 unused angles.`,
   ].filter(Boolean).join("\n");
+}
+
+export function viralTeardowns(niche: string, limit = 5): string {
+  const n = niche.trim();
+  const ws = winnersForNiche(n, Math.min(Math.max(limit, 1), 10));
+  if (!ws.length) return `# No teardowns yet for "${n}"\nRun pipeline/teardown.mjs over a scrape, or try a broader niche.`;
+  return [
+    `# ${ws.length} real breakout teardowns: ${n}`,
+    `_Videos that out-reached their creator's following. Diagnosed from the real transcript + engagement, not view counts. ${getWinners().length} teardowns in the library._`,
+    "",
+    ...ws.flatMap((w) => [
+      `## ${w.reach} reach · ${w.viewBucket} views · ${w.hookPattern} / ${w.framework}`,
+      `- **Hook technique:** ${w.hookTechnique}`,
+      `- **Retention device:** ${w.retentionDevice}`,
+      `- **Why it spread:** ${w.viralMechanism}`,
+      `- **Steal this:** ${w.stealThis}`,
+      "",
+    ]),
+  ].join("\n");
 }
 
 export function searchCorpus(query: string, limit = 6): string {
@@ -334,7 +365,8 @@ export function status(token?: string): string {
     tokenLine,
     "",
     "**Live now:**",
-    "- 7 skills: video_ideas, niche_decode, format_teardown, cracked_hooks, shoot_brief, kill_the_slop, search_corpus",
+    "- 8 skills: video_ideas, niche_decode, format_teardown, cracked_hooks, shoot_brief, kill_the_slop, search_corpus, viral_teardowns",
+    `- ${getWinners().length} real breakout videos torn down (the actual viral mechanism, diagnosed from transcript + engagement)`,
     `- ${SCRIPT_FRAMEWORKS.length} named script frameworks, ${HOOK_PATTERNS.length} hook patterns, ${ANGLES.length} proven UGC angles`,
     `- ${corpusCounts().videos} hand-authored teardowns + ${corpusCounts().tags} real TikTok trending tags (2022-2025, MIT)`,
     `- ${corpusCounts().decoded.toLocaleString()} real TikTok videos decoded: LLM-labeled hook + framework, engagement normalized by follower count, patterns mined by contrastive lift (breakouts vs rest)`,
