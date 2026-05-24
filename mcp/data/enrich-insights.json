@@ -1,20 +1,22 @@
 {
   "generatedAt": "2026-05-24",
-  "analyzed": 3864,
+  "analyzed": 5711,
   "note": "Full-corpus enrichment (cover-image vision + free trend signals). Contrastive lift on views-per-follower; switch to creator-median when scored. Derived only, no source text.",
   "distributions": {
     "videoFormat": {
-      "talking-head": 993,
+      "talking-head": 2189,
       "product-demo": 902,
       "lifestyle-broll": 554,
       "text-overlay-heavy": 509,
-      "grwm": 293,
-      "pov-handheld": 199,
-      "before-after": 160,
+      "grwm": 380,
+      "tutorial": 339,
+      "before-after": 255,
+      "pov-handheld": 207,
+      "screen-recording": 154,
       "voiceover-broll": 94,
       "carousel-slideshow": 48,
-      "screen-recording": 41,
       "other": 29,
+      "comparison": 9,
       "green-screen": 1
     },
     "presenterGender": {
@@ -902,8 +904,8 @@
       "outdoor spa/resort pavilion": 1,
       "modern indoor living room": 1
     },
-    "danceRate": 0.013,
-    "trendRate": 0.118
+    "danceRate": 0.009,
+    "trendRate": 0.126
   },
   "overIndexInBreakouts": {
     "videoFormat": [
