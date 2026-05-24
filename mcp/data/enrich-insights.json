@@ -4,39 +4,39 @@
   "note": "Full-corpus enrichment (cover-image vision + free trend signals). Contrastive lift on views-per-follower; switch to creator-median when scored. Derived only, no source text.",
   "distributions": {
     "videoFormat": {
-      "talking-head": 2146,
-      "product-demo": 909,
-      "lifestyle-broll": 579,
-      "text-overlay-heavy": 515,
+      "talking-head": 2148,
+      "product-demo": 904,
+      "lifestyle-broll": 593,
+      "text-overlay-heavy": 495,
       "grwm": 381,
-      "tutorial": 328,
-      "before-after": 258,
-      "pov-handheld": 209,
-      "screen-recording": 147,
-      "voiceover-broll": 103,
+      "tutorial": 327,
+      "before-after": 257,
+      "pov-handheld": 226,
+      "screen-recording": 146,
+      "voiceover-broll": 97,
       "carousel-slideshow": 48,
       "other": 29,
+      "meme-edit": 9,
       "comparison": 9,
-      "meme-edit": 8,
       "green-screen": 1
     },
     "presenterGender": {
-      "woman": 2131,
-      "no-person": 992,
-      "man": 558,
+      "woman": 2116,
+      "no-person": 1009,
+      "man": 559,
       "multiple-people": 222
     },
     "setting": {
-      "bedroom": 984,
-      "kitchen": 385,
-      "bathroom": 324,
-      "studio": 247,
-      "gym": 184,
-      "n-a": 175,
+      "bedroom": 989,
+      "kitchen": 386,
+      "bathroom": 321,
+      "studio": 243,
+      "n-a": 207,
+      "gym": 185,
       "car": 121,
-      "outdoors": 77,
+      "outdoors": 71,
       "living room": 54,
-      "store": 41,
+      "store": 48,
       "home interior": 32,
       "home interior, living room": 20,
       "indoor, home/bedroom": 18,
@@ -45,55 +45,53 @@
       "bedroom/home interior": 12,
       "desk/workspace": 11,
       "indoor, bedroom/home": 10,
-      "beach": 10,
-      "indoor, home/living room": 10,
+      "outdoor": 10,
       "hallway/corridor": 9,
       "outdoors, urban street": 9,
       "home, living room": 9,
       "indoors": 9,
+      "beach": 9,
+      "indoor, home/living room": 9,
       "indoors, neutral background": 8,
       "indoor/home": 8,
       "bedroom or home interior": 7,
       "bedroom/gaming setup": 7,
       "n/a": 7,
       "kitchen/home interior": 6,
-      "home/bedroom": 6,
       "bedroom/hallway": 6,
       "car interior": 6,
       "indoor, home/apartment": 6,
+      "office": 6,
       "indoor, home/kitchen": 5,
+      "home/bedroom": 5,
       "bedroom/closet": 5,
-      "indoors, wooden surface": 5,
       "outdoors, backyard": 5,
       "indoors, home": 5,
       "indoor, home/studio": 5,
       "gym or fitness studio": 5,
       "home interior, hallway/entryway": 5,
-      "home office/desk": 5,
       "indoor/living room": 5,
       "classroom": 4,
       "bathroom/vanity": 4,
       "outdoors, parking lot": 4,
       "hallway/entryway": 4,
+      "indoors, wooden surface": 4,
       "home interior, kitchen/dining area": 4,
       "gym locker room": 4,
-      "desk/gaming setup": 4,
-      "bedroom/desk setup": 4,
       "salon/beauty studio": 4,
       "salon or beauty studio": 4,
+      "home office/desk": 4,
       "indoors, residential floor": 4,
       "home entryway/hallway": 4,
       "indoors, bedroom/home": 3,
       "bedroom or living room": 3,
-      "indoor, home/room": 3,
       "outdoors, storefront": 3,
-      "café/restaurant": 3,
-      "bedroom/desk": 3,
       "indoors, tiled floor": 3,
       "indoor, home": 3,
       "indoor, home interior": 3,
       "home office / desk setup": 3,
-      "office": 3,
+      "desk/gaming setup": 3,
+      "bedroom/desk setup": 3,
       "outdoors, street/pavement": 3,
       "outdoors, residential driveway": 3,
       "home, wooden floor": 3,
@@ -111,6 +109,7 @@
       "bathroom or vanity": 2,
       "indoor, home/bathroom": 2,
       "restaurant": 2,
+      "indoor, home/room": 2,
       "cafe/coffee shop": 2,
       "home, kitchen/dining area": 2,
       "indoor, dark background": 2,
@@ -121,8 +120,6 @@
       "desk setup / gaming room": 2,
       "retail store": 2,
       "indoors, studio/neutral background": 2,
-      "home/living room": 2,
-      "indoor desk/office": 2,
       "home office / desk": 2,
       "indoor, wooden floor": 2,
       "outdoors, driveway/car": 2,
@@ -138,14 +135,10 @@
       "indoor, studio or bedroom": 2,
       "indoor, residential/bedroom": 2,
       "indoors, near window": 2,
-      "indoors, home interior": 2,
       "bedroom/indoors": 2,
       "close-up / n-a": 2,
       "restaurant or food establishment": 2,
       "indoor, neutral background with blinds": 2,
-      "medical facility / hospital room": 2,
-      "indoor, home/table surface": 2,
-      "café/coffee shop": 2,
       "bedroom / gaming setup": 2,
       "office/desk": 2,
       "bedroom/home office": 2,
@@ -154,11 +147,9 @@
       "indoor, studio/bedroom": 2,
       "outdoors, residential driveway/patio": 2,
       "closet/bedroom": 2,
-      "living room / home interior": 2,
       "backyard patio": 2,
       "indoors, home/couch": 2,
       "cardboard box": 2,
-      "cafe or restaurant": 2,
       "indoor, studio/neutral background": 2,
       "outdoors, residential area": 2,
       "outdoors, driveway/parking area": 2,
@@ -170,16 +161,14 @@
       "outdoors, snowy mountain landscape": 2,
       "industrial/warehouse space": 2,
       "bathroom or salon": 2,
-      "kitchen or dining area": 2,
       "indoors, living room/couch": 2,
       "indoor, bedroom or personal space": 2,
-      "gym / fitness facility": 2,
       "party/event indoors": 2,
       "indoor home/kitchen": 2,
       "bedroom/gaming room": 2,
       "home interior, wall with electrical outlet": 2,
       "retail store / showroom": 2,
-      "desk/office workspace": 2,
+      "bedroom/desk": 2,
       "outdoors, farm/rural area": 2,
       "airplane": 2,
       "indoor, couch/furniture": 2,
@@ -190,7 +179,6 @@
       "indoor home/bedroom": 2,
       "outdoor/parking lot": 2,
       "outdoor/street": 2,
-      "outdoor": 2,
       "indoor, residential (bedroom/room)": 1,
       "bedroom or home studio": 1,
       "bathroom/vanity with shelving": 1,
@@ -210,7 +198,6 @@
       "beauty store / Sephora": 1,
       "indoor mixed (bathroom, bedroom, home)": 1,
       "warehouse or industrial storage facility": 1,
-      "indoor, room with white walls": 1,
       "indoor, kitchen/home": 1,
       "kitchen, refrigerator interior": 1,
       "kitchen or dining surface": 1,
@@ -230,7 +217,6 @@
       "outdoor shopping center/parking lot": 1,
       "indoor, home/apartment with window": 1,
       "outdoors, nighttime rooftop/balcony": 1,
-      "indoors, marble/light background": 1,
       "indoor, casual space with lighting": 1,
       "underpass/bridge": 1,
       "stage, concert venue": 1,
@@ -275,8 +261,9 @@
       "indoor, desk/table surface": 1,
       "home/kitchen": 1,
       "indoor room with ceiling fan and wood paneling": 1,
-      "indoors, home/kitchen": 1,
       "trade show / expo booth": 1,
+      "home/living room": 1,
+      "indoor desk/office": 1,
       "indoors, blurred background with bokeh lights": 1,
       "indoors, wall/home": 1,
       "outdoors, street/urban area": 1,
@@ -326,11 +313,9 @@
       "bedroom/home": 1,
       "bedroom or home office": 1,
       "indoor, crate/pen": 1,
-      "daycare or indoor facility": 1,
       "outdoors, rural/farm setting": 1,
       "indoors, entryway/hallway": 1,
       "indoor, white background, home/studio": 1,
-      "indoors, concrete floor": 1,
       "brick wall (outdoor/industrial)": 1,
       "toy store": 1,
       "indoors, residential/basement": 1,
@@ -353,6 +338,7 @@
       "outdoors, urban street/parking area": 1,
       "aquarium/tank indoors": 1,
       "indoor living room": 1,
+      "indoors, home interior": 1,
       "Dollar Tree store": 1,
       "street food market/alley at night": 1,
       "indoor, kitchen/dining table": 1,
@@ -383,6 +369,7 @@
       "indoors, food/kitchen setup": 1,
       "modern restaurant or café": 1,
       "close-up product shot on dark surface": 1,
+      "café/restaurant": 1,
       "modern kitchen with large windows": 1,
       "food truck or mobile kitchen": 1,
       "tech workspace/desk": 1,
@@ -455,7 +442,6 @@
       "indoor, apartment/living room": 1,
       "window/indoors": 1,
       "indoor home, living room": 1,
-      "indoors, residential room": 1,
       "outdoors, rural path with fencing": 1,
       "outdoors, snowy field": 1,
       "home interior, hallway/living room": 1,
@@ -482,7 +468,7 @@
       "indoors, plain wall background": 1,
       "outdoors, tabletop/vanity setup": 1,
       "indoor, classroom or office": 1,
-      "indoor, living room/home": 1,
+      "cafe or restaurant": 1,
       "outdoors, park with trees": 1,
       "outdoors, rural stream/countryside": 1,
       "commercial kitchen": 1,
@@ -490,7 +476,6 @@
       "indoors, nighttime setting with blue/dark background": 1,
       "indoor, indeterminate (residential/casual)": 1,
       "windowsill/indoor": 1,
-      "kitchen or dining table": 1,
       "bedroom / home office": 1,
       "poolside": 1,
       "modern gym or fitness studio": 1,
@@ -539,10 +524,10 @@
       "outdoors, urban street/alley at night": 1,
       "indoor lounge/living room": 1,
       "home, indoor table/counter": 1,
+      "kitchen or dining area": 1,
       "home - wall with electrical outlets": 1,
       "indoors, neutral/light background": 1,
       "new home construction/unfinished interior": 1,
-      "home, doorway/entryway": 1,
       "outdoors, park bench": 1,
       "salon or office with window view": 1,
       "indoor, modern home with white walls and ceiling": 1,
@@ -564,6 +549,7 @@
       "indoors, residential": 1,
       "airport tarmac": 1,
       "home gym / living room": 1,
+      "gym / fitness facility": 1,
       "bedroom/bathroom": 1,
       "indoors, residential/apartment with window view": 1,
       "outdoors, rural/village setting with thatched roof structure": 1,
@@ -577,10 +563,8 @@
       "indoor classroom or school facility": 1,
       "indoor, salon or bathroom": 1,
       "outdoors, covered patio/pergola area": 1,
-      "indoors, home/living room": 1,
       "poolside, residential backyard": 1,
       "outdoors, urban park with historic buildings": 1,
-      "outdoors, grassy field": 1,
       "café or restaurant interior": 1,
       "indoor event space/party venue": 1,
       "indoor, white wall, table/counter": 1,
@@ -619,7 +603,6 @@
       "office or clinical setting": 1,
       "store/mall": 1,
       "parking lot / shopping center": 1,
-      "classroom or educational facility": 1,
       "outdoors, train station/railway platform": 1,
       "bedroom or streaming setup with purple LED lighting": 1,
       "electronics store": 1,
@@ -648,13 +631,14 @@
       "dark background, studio or indoor": 1,
       "indoor, room with warm lighting": 1,
       "industrial/warehouse space with 3D printing equipment": 1,
-      "bedroom/room with posters and memorabilia": 1,
       "multiple locations (outdoor, beach, store, home)": 1,
       "school hallway with lockers": 1,
+      "medical facility / hospital room": 1,
       "urban street/sidewalk": 1,
       "indoor, wooden surface/table": 1,
       "indoor room with wall art": 1,
       "indoor, studio/lounge with couch": 1,
+      "desk/office workspace": 1,
       "indoor, retail store (QVC)": 1,
       "indoor room with modern decor": 1,
       "outdoors, brick building with holiday lights": 1,
@@ -682,7 +666,6 @@
       "outdoors, park/grassy field": 1,
       "apartment/high-rise interior": 1,
       "multiple (outdoors, car, indoor)": 1,
-      "indoor, security camera footage": 1,
       "home, bedroom/living room": 1,
       "airport terminal": 1,
       "outdoors, farm/orchard": 1,
@@ -708,8 +691,10 @@
       "home interior, hallway/bedroom": 1,
       "indoors, product display": 1,
       "indoor office/medical": 1,
+      "living room / home interior": 1,
       "outdoors, garden gate with flowering vines": 1,
       "indoor, ornate background": 1,
+      "indoor, home/table surface": 1,
       "indoor, couch/sofa": 1,
       "home office/streaming setup": 1,
       "home interior, bright room with windows": 1,
@@ -772,6 +757,7 @@
       "indoor, home/casual space": 1,
       "pilates studio": 1,
       "home gym / fitness studio": 1,
+      "café/coffee shop": 1,
       "indoors, residential/office space": 1,
       "cafe/shop counter": 1,
       "indoors, over papers/homework": 1,
@@ -786,14 +772,11 @@
       "classroom or office": 1,
       "kitchen or café counter": 1,
       "outdoors, urban street in Tokyo": 1,
-      "ice cream shop / freezer display": 1,
       "indoor, home/room with white wall and decorative light fixture": 1,
-      "outdoors, coastal promenade with palm trees": 1,
       "indoor, studio or home with neutral background": 1,
       "home library/bookshelf": 1,
       "indoor windowsill, high-rise apartment": 1,
       "home office/studio": 1,
-      "indoors, wall/electrical outlet": 1,
       "indoor, room": 1,
       "indoors, close-up handheld": 1,
       "porch/outdoor residential area": 1,
@@ -843,7 +826,6 @@
       "school hallway or corridor": 1,
       "outdoors, urban plaza with crowd": 1,
       "kitchen/home office": 1,
-      "medical/clinical facility": 1,
       "parking garage / underground garage": 1,
       "spa or wellness studio": 1,
       "grocery store - produce section": 1,
@@ -889,7 +871,6 @@
       "indoors, table/surface": 1,
       "indoor, multiple locations (bedroom/bathroom)": 1,
       "office/home office": 1,
-      "indoor, kitchen/countertop": 1,
       "craft/maker space (3D printing setup)": 1,
       "retail/cosmetics store": 1,
       "close-up product shot": 1,
@@ -925,9 +906,9 @@
     "videoFormat": [
       {
         "label": "screen-recording",
-        "lift": 2.35,
-        "nWinners": 18,
-        "nTotal": 41
+        "lift": 2.22,
+        "nWinners": 17,
+        "nTotal": 40
       },
       {
         "label": "other",
@@ -937,9 +918,15 @@
       },
       {
         "label": "before-after",
-        "lift": 1.69,
-        "nWinners": 57,
-        "nTotal": 158
+        "lift": 1.66,
+        "nWinners": 56,
+        "nTotal": 157
+      },
+      {
+        "label": "pov-handheld",
+        "lift": 1.63,
+        "nWinners": 75,
+        "nTotal": 213
       },
       {
         "label": "carousel-slideshow",
@@ -948,40 +935,34 @@
         "nTotal": 48
       },
       {
-        "label": "voiceover-broll",
-        "lift": 1.34,
-        "nWinners": 29,
-        "nTotal": 94
-      },
-      {
-        "label": "pov-handheld",
-        "lift": 1.28,
-        "nWinners": 59,
-        "nTotal": 197
-      },
-      {
-        "label": "text-overlay-heavy",
-        "lift": 1.24,
-        "nWinners": 149,
-        "nTotal": 508
+        "label": "lifestyle-broll",
+        "lift": 1.2,
+        "nWinners": 161,
+        "nTotal": 564
       },
       {
         "label": "product-demo",
-        "lift": 1.13,
-        "nWinners": 245,
-        "nTotal": 894
+        "lift": 1.11,
+        "nWinners": 240,
+        "nTotal": 889
       },
       {
-        "label": "lifestyle-broll",
-        "lift": 1.1,
-        "nWinners": 148,
-        "nTotal": 551
+        "label": "text-overlay-heavy",
+        "lift": 1.08,
+        "nWinners": 129,
+        "nTotal": 488
+      },
+      {
+        "label": "voiceover-broll",
+        "lift": 1.06,
+        "nWinners": 23,
+        "nTotal": 88
       },
       {
         "label": "talking-head",
-        "lift": 0.62,
-        "nWinners": 169,
-        "nTotal": 982
+        "lift": 0.63,
+        "nWinners": 172,
+        "nTotal": 985
       },
       {
         "label": "grwm",
@@ -993,9 +974,9 @@
     "presenterGender": [
       {
         "label": "no-person",
-        "lift": 1.58,
-        "nWinners": 328,
-        "nTotal": 950
+        "lift": 1.66,
+        "nWinners": 345,
+        "nTotal": 967
       },
       {
         "label": "multiple-people",
@@ -1011,12 +992,18 @@
       },
       {
         "label": "woman",
-        "lift": 0.8,
-        "nWinners": 438,
-        "nTotal": 2077
+        "lift": 0.77,
+        "nWinners": 421,
+        "nTotal": 2060
       }
     ],
     "setting": [
+      {
+        "label": "n-a",
+        "lift": 2.4,
+        "nWinners": 89,
+        "nTotal": 200
+      },
       {
         "label": "indoor, neutral background",
         "lift": 1.87,
@@ -1030,28 +1017,16 @@
         "nTotal": 11
       },
       {
-        "label": "n-a",
-        "lift": 1.54,
-        "nWinners": 57,
-        "nTotal": 168
-      },
-      {
-        "label": "outdoors",
-        "lift": 1.53,
-        "nWinners": 26,
-        "nTotal": 77
+        "label": "store",
+        "lift": 1.6,
+        "nWinners": 16,
+        "nTotal": 46
       },
       {
         "label": "gym",
-        "lift": 1.49,
-        "nWinners": 59,
-        "nTotal": 178
-      },
-      {
-        "label": "indoor, home/living room",
-        "lift": 1.28,
-        "nWinners": 3,
-        "nTotal": 10
+        "lift": 1.51,
+        "nWinners": 60,
+        "nTotal": 179
       },
       {
         "label": "car",
@@ -1060,16 +1035,16 @@
         "nTotal": 119
       },
       {
-        "label": "kitchen",
-        "lift": 0.92,
-        "nWinners": 87,
-        "nTotal": 372
+        "label": "outdoors",
+        "lift": 1.18,
+        "nWinners": 20,
+        "nTotal": 71
       },
       {
-        "label": "store",
-        "lift": 0.9,
-        "nWinners": 9,
-        "nTotal": 39
+        "label": "kitchen",
+        "lift": 0.93,
+        "nWinners": 88,
+        "nTotal": 373
       },
       {
         "label": "hallway/corridor",
@@ -1090,16 +1065,16 @@
         "nTotal": 9
       },
       {
+        "label": "indoor, home/living room",
+        "lift": 0.86,
+        "nWinners": 2,
+        "nTotal": 9
+      },
+      {
         "label": "home interior",
         "lift": 0.84,
         "nWinners": 7,
         "nTotal": 32
-      },
-      {
-        "label": "studio",
-        "lift": 0.77,
-        "nWinners": 49,
-        "nTotal": 240
       },
       {
         "label": "living room",
@@ -1108,22 +1083,22 @@
         "nTotal": 54
       },
       {
-        "label": "beach",
-        "lift": 0.75,
-        "nWinners": 2,
-        "nTotal": 10
+        "label": "bedroom",
+        "lift": 0.74,
+        "nWinners": 189,
+        "nTotal": 958
       },
       {
-        "label": "bedroom",
-        "lift": 0.73,
-        "nWinners": 186,
-        "nTotal": 955
+        "label": "studio",
+        "lift": 0.71,
+        "nWinners": 45,
+        "nTotal": 236
       },
       {
         "label": "bathroom",
-        "lift": 0.71,
-        "nWinners": 60,
-        "nTotal": 314
+        "lift": 0.67,
+        "nWinners": 57,
+        "nTotal": 311
       },
       {
         "label": "indoor, home/bedroom",
@@ -1145,6 +1120,12 @@
       },
       {
         "label": "home, living room",
+        "lift": 0.37,
+        "nWinners": 1,
+        "nTotal": 9
+      },
+      {
+        "label": "beach",
         "lift": 0.37,
         "nWinners": 1,
         "nTotal": 9
