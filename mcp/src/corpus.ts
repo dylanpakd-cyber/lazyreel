@@ -157,6 +157,21 @@ export function getWinners(): Teardown[] {
   catch { _winners = []; }
   return _winners;
 }
+export type Trend = { name: string; formula: string | null; whyItTravels: string | null; framework: string; videoFormat: string; hookPattern: string; recurrence: string; transfer: string[]; medianVpf: number };
+let _trends: Trend[] | null = null;
+export function getTrends(): Trend[] {
+  if (_trends) return _trends;
+  try { _trends = (JSON.parse(readFileSync(dataPath("trends.json"), "utf8")).trends || []) as Trend[]; }
+  catch { _trends = []; }
+  return _trends;
+}
+export function trendsForNiche(niche: string, limit = 8): Trend[] {
+  const all = getTrends();
+  if (!niche) return all.slice(0, limit);
+  const hit = all.filter((t) => t.transfer.some((n) => n.toLowerCase().includes(niche.toLowerCase()) || niche.toLowerCase().includes(n.toLowerCase())));
+  return (hit.length ? hit : all).slice(0, limit);
+}
+
 export function winnersForNiche(niche: string, limit = 5): Teardown[] {
   const all = getWinners();
   const exact = all.filter((w) => w.niche.toLowerCase() === niche.toLowerCase());

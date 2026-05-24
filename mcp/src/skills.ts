@@ -9,8 +9,27 @@ import {
 import {
   searchVideos, relatedTrendingTags, corpusCounts, nicheInsight, overallHookLift, insightsMeta,
   getWinners, winnersForNiche, getVisualInsights, visualForNiche, wordsForNiche,
+  getTrends, trendsForNiche,
   type AnalyzedVideo, type HookLift, type Teardown,
 } from "./corpus.js";
+
+export function findTrends(niche = "", limit = 8): string {
+  const ts = trendsForNiche(niche.trim(), Math.min(Math.max(limit, 1), 18));
+  if (!ts.length) return `# No trends yet\nRun pipeline/cluster-trends.mjs to mine cross-niche trends from the corpus.`;
+  return [
+    `# ${ts.length} cross-niche trends${niche ? ` for ${niche}` : ""}`,
+    `_Patterns that recur across multiple creators AND niches and over-perform. Clustered by creative-unit, not topic (from ${getTrends().length} validated). Each is a copyable formula._`,
+    "",
+    ...ts.flatMap((t) => [
+      `## ${t.name}`,
+      t.formula ? `- **Formula:** ${t.formula}` : "",
+      t.whyItTravels ? `- **Why it travels:** ${t.whyItTravels}` : "",
+      `- **Built on:** ${t.framework} framework · ${t.videoFormat} format · ${t.hookPattern} hook`,
+      `- **Proof:** ${t.recurrence}, across ${t.transfer.join(", ")} (median ${t.medianVpf}x reach)`,
+      "",
+    ].filter(Boolean)),
+  ].join("\n");
+}
 
 // --- tiny deterministic helpers -------------------------------------------
 function seed(str: string): number {
@@ -437,7 +456,7 @@ export function status(token?: string): string {
     tokenLine,
     "",
     "**Live now:**",
-    "- 10 skills: video_ideas, niche_decode, format_teardown, cracked_hooks, shoot_brief, kill_the_slop, search_corpus, viral_teardowns, content_gaps, format_playbook",
+    "- 11 skills: video_ideas, niche_decode, format_teardown, cracked_hooks, shoot_brief, kill_the_slop, search_corpus, viral_teardowns, content_gaps, format_playbook, find_trends",
     `- ${getWinners().length} real breakout videos torn down (the actual viral mechanism, diagnosed from transcript + engagement)`,
     getVisualInsights().analyzed ? `- ${getVisualInsights().analyzed} videos analyzed visually (format + craft from the first 3 seconds of frames)` : "- visual/format layer: scripts ready, run pipeline/visual.mjs to populate",
     `- ${SCRIPT_FRAMEWORKS.length} named script frameworks, ${HOOK_PATTERNS.length} hook patterns, ${ANGLES.length} proven UGC angles`,

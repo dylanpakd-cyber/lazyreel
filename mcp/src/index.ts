@@ -9,7 +9,7 @@ import {
   ListToolsRequestSchema,
 } from "@modelcontextprotocol/sdk/types.js";
 import {
-  videoIdeas, nicheDecode, formatTeardown, crackedHooks, shootBrief, killTheSlop, searchCorpus, viralTeardowns, contentGaps, formatPlaybook, status,
+  videoIdeas, nicheDecode, formatTeardown, crackedHooks, shootBrief, killTheSlop, searchCorpus, viralTeardowns, contentGaps, formatPlaybook, findTrends, status,
 } from "./skills.js";
 import { SCRIPT_FRAMEWORKS } from "./frameworks.js";
 
@@ -138,6 +138,11 @@ const tools = [
     },
   },
   {
+    name: "find_trends",
+    description: "Surface cross-niche trends mined from the corpus: patterns that recur across multiple creators AND niches and over-perform, each as a copyable formula + name (clustered by creative-unit, not topic). Use when the user asks what's trending, what patterns are working across niches, or for copyable formats.",
+    inputSchema: { type: "object", properties: { niche: { type: "string", description: "Optional niche filter." }, limit: { type: "number", description: "Max trends (1-18). Default 8." } } },
+  },
+  {
     name: "get_status",
     description: "Explain what this MCP server can do and what is intentionally not live yet.",
     inputSchema: { type: "object", properties: {} },
@@ -174,6 +179,8 @@ server.setRequestHandler(CallToolRequestSchema, async (req) => {
         text = contentGaps(str("niche")); break;
       case "format_playbook":
         text = formatPlaybook(str("niche")); break;
+      case "find_trends":
+        text = findTrends(str("niche"), num("limit") ?? 8); break;
       case "get_status":
         text = status(process.env.ABG_TOKEN); break;
       default:

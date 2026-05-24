@@ -1,0 +1,328 @@
+{
+  "generatedAt": "2026-05-24",
+  "method": "cluster by creative-unit (framework|format|hook) -> gates: recurrence>=2 creators, transfer>=2 niches, performance>=corpus-median vpf -> LLM formula+3-part name",
+  "count": 18,
+  "corpusMedianVpf": 5.45,
+  "trends": [
+    {
+      "name": "Constraint-to-freedom reveal with tactile proof object",
+      "formula": "Problem state (visual constraint/limitation) -> Reaction (surprise/disgust/frustration) -> Solution reveal -> Application demo -> Transformation payoff (2-3 beats)",
+      "whyItTravels": "Universal human satisfaction of watching invisible/ignored problems become undeniably visible then solved, triggering relief across any category",
+      "framework": "organic",
+      "videoFormat": "before-after",
+      "hookPattern": "removing-limitations",
+      "recurrence": "6 creators",
+      "transfer": [
+        "hair",
+        "ABG beauty",
+        "fitness",
+        "home and cleaning"
+      ],
+      "medianVpf": 267.89,
+      "examples": 6
+    },
+    {
+      "name": "Direct-callout text-overlay bandwagon",
+      "formula": "Problem callout -> Social proof showcase -> Bandwagon momentum -> Quick fix reveal (4-6 beats of escalating urgency)",
+      "whyItTravels": "Low production barrier, instant relatability through text overlays, and the bandwagon hook triggers FOMO across any niche by making the solution feel like everyone's already doing it.",
+      "framework": "bandwagon",
+      "videoFormat": "text-overlay-heavy",
+      "hookPattern": "direct-callout",
+      "recurrence": "6 creators",
+      "transfer": [
+        "fitness",
+        "home and cleaning",
+        "pets"
+      ],
+      "medianVpf": 160.52,
+      "examples": 8
+    },
+    {
+      "name": "Screen-Recorded Problem-Solution Flip",
+      "formula": "Problem reveal (screen-recorded pain point) -> Tool demo (fast-paced walkthrough) -> Result proof (before/after metric or workflow win) -> fix/payoff (template, shortcut, or free resource offer)",
+      "whyItTravels": "Information-stacking in visual format feels like insider access, works equally for SaaS workflows and fashion trends because both audiences crave the 'how' shortcut over the 'why' lecture.",
+      "framework": "organic",
+      "videoFormat": "screen-recording",
+      "hookPattern": "information-offering",
+      "recurrence": "13 creators",
+      "transfer": [
+        "tech and SaaS",
+        "fashion"
+      ],
+      "medianVpf": 158.62,
+      "examples": 13
+    },
+    {
+      "name": "Doubt-to-proof reveal",
+      "formula": "Relatable problem state -> Skeptical reaction/disbelief -> Quick demonstration -> Satisfying reveal/transformation (4-6 short beats of escalation)",
+      "whyItTravels": "Taps into universal desire to be wrong about something—converts viewer doubt into payoff dopamine regardless of category, making it niche-agnostic",
+      "framework": "organic",
+      "videoFormat": "pov-handheld",
+      "hookPattern": "belief-challenging",
+      "recurrence": "10 creators",
+      "transfer": [
+        "food and beverage",
+        "skincare",
+        "home and cleaning",
+        "hair",
+        "fashion",
+        "fitness",
+        "pets"
+      ],
+      "medianVpf": 119.15,
+      "examples": 10
+    },
+    {
+      "name": "Dark Surface Contrast Reveal",
+      "formula": "Problem reveal -> Product introduction -> Application demo -> Satisfying transformation (4-6 short beats)",
+      "whyItTravels": "Visual contrast creates immediate cognitive tension that resolves with product clarity, making any item feel like a solution regardless of category.",
+      "framework": "organic",
+      "videoFormat": "product-demo",
+      "hookPattern": "generic",
+      "recurrence": "12 creators",
+      "transfer": [
+        "food and beverage",
+        "tech and SaaS",
+        "ABG beauty",
+        "fashion",
+        "fitness"
+      ],
+      "medianVpf": 105.69,
+      "examples": 12
+    },
+    {
+      "name": "Grimy-to-gleaming shock reveal",
+      "formula": "Visual mess/problem -> Reaction shot -> Product application -> Transformation reveal (4-6 second beats: setup, shock, application, mid-process, final reveal, satisfaction)",
+      "whyItTravels": "Before-after satisfies completion loops across any category (beauty fixes skin, cleaning fixes surfaces, fashion fixes outfits, pet care fixes appearance), while handheld POV makes viewers feel like discovering the trick themselves.",
+      "framework": "organic",
+      "videoFormat": "pov-handheld",
+      "hookPattern": "before-after",
+      "recurrence": "10 creators",
+      "transfer": [
+        "ABG beauty",
+        "home and cleaning",
+        "fashion",
+        "pets"
+      ],
+      "medianVpf": 83.83,
+      "examples": 10
+    },
+    {
+      "name": "Before-After Shock Reveal",
+      "formula": "Problem state (visual) -> Reaction (emotional) -> Solution application -> Reveal/transformation (payoff in 4-6 beats)",
+      "whyItTravels": "Universal contrast creates cognitive curiosity that transcends niche—the brain compels completion regardless of category, and text-overlays guide interpretation so any creator can apply it to their domain's pain point.",
+      "framework": "organic",
+      "videoFormat": "text-overlay-heavy",
+      "hookPattern": "before-after",
+      "recurrence": "19 creators",
+      "transfer": [
+        "pets",
+        "food and beverage",
+        "home and cleaning",
+        "fashion",
+        "fitness",
+        "tech and SaaS",
+        "hair"
+      ],
+      "medianVpf": 81.55,
+      "examples": 20
+    },
+    {
+      "name": "Before-After Shock Fix",
+      "formula": "Problem state -> Dramatic reveal -> Solution application -> Satisfying transformation (4-6 beats)",
+      "whyItTravels": "Universal visual contrast + text-guided anticipation + payoff dopamine hit works regardless of whether you're fixing a water bottle, outfit, room, or pet situation",
+      "framework": "organic",
+      "videoFormat": "text-overlay-heavy",
+      "hookPattern": "generic",
+      "recurrence": "11 creators",
+      "transfer": [
+        "fitness",
+        "fashion",
+        "home and cleaning",
+        "pets"
+      ],
+      "medianVpf": 63.93,
+      "examples": 11
+    },
+    {
+      "name": "Before-After Reveal Shock",
+      "formula": "Problem reveal -> Skeptical reaction -> Product application -> Instant transformation (4-6 beats)",
+      "whyItTravels": "Visual contrast triggers pattern recognition across all categories—whether it's dirty to clean, broken to fixed, or bland to stunning—making the brain crave the resolution regardless of product type.",
+      "framework": "organic",
+      "videoFormat": "product-demo",
+      "hookPattern": "direct-callout",
+      "recurrence": "25 creators",
+      "transfer": [
+        "ABG beauty",
+        "food and beverage",
+        "fashion",
+        "home and cleaning",
+        "tech and SaaS",
+        "pets"
+      ],
+      "medianVpf": 59.91,
+      "examples": 25
+    },
+    {
+      "name": "Messy-to-moment contrast reveal",
+      "formula": "Before state (comparison hook) -> Reaction/frustration beat -> Solution reveal -> Quick transformation -> Payoff/satisfaction -> Call-to-action (4-6 beats, 15-30 sec)",
+      "whyItTravels": "Comparison hooks are universally satisfying; the emotional arc (frustration→relief) transcends niche, and home settings provide infinite relatable 'before' scenarios",
+      "framework": "organic",
+      "videoFormat": "lifestyle-broll",
+      "hookPattern": "comparison",
+      "recurrence": "4 creators",
+      "transfer": [
+        "pets",
+        "fashion"
+      ],
+      "medianVpf": 59.29,
+      "examples": 7
+    },
+    {
+      "name": "Before-After Reveal Carousel",
+      "formula": "Problem reveal -> Unexpected cause -> Quick solution -> satisfying result (4-6 short beats)",
+      "whyItTravels": "Information-offering hook combined with visual transformation creates inherent curiosity loop that works whether showing cleaning hacks, outfit switches, pet training, recipe fixes, or software bugs—the niche doesn't matter, the payoff does.",
+      "framework": "organic",
+      "videoFormat": "carousel-slideshow",
+      "hookPattern": "information-offering",
+      "recurrence": "8 creators",
+      "transfer": [
+        "home and cleaning",
+        "fashion",
+        "pets",
+        "food and beverage",
+        "tech and SaaS"
+      ],
+      "medianVpf": 54.26,
+      "examples": 8
+    },
+    {
+      "name": "Belief-flip setup prop",
+      "formula": "Contrarian claim -> Visual contradiction -> Authority reveal -> Solution demo (4-6 beats)",
+      "whyItTravels": "Pattern hijacks pattern-recognition instinct across niches by making viewers question assumed truth, then delivering credibility payoff that feels earned rather than sold.",
+      "framework": "industry-contrarian",
+      "videoFormat": "lifestyle-broll",
+      "hookPattern": "belief-challenging",
+      "recurrence": "9 creators",
+      "transfer": [
+        "supplements",
+        "fashion",
+        "fitness",
+        "pets",
+        "food and beverage"
+      ],
+      "medianVpf": 30.91,
+      "examples": 9
+    },
+    {
+      "name": "Before-State Authority Flip",
+      "formula": "Problem reveal (close-up product state) -> Authority positioning (expert comparison/claim) -> Transformation demo (before/after in real-time) -> Payoff (result shot + implicit lifestyle flex)",
+      "whyItTravels": "Establishes immediate credibility through contrast while keeping viewers in the intimate home space they already inhabit, making the product feel like a personal discovery rather than an ad.",
+      "framework": "organic",
+      "videoFormat": "product-demo",
+      "hookPattern": "authority",
+      "recurrence": "9 creators",
+      "transfer": [
+        "ABG beauty",
+        "food and beverage",
+        "home and cleaning",
+        "supplements",
+        "skincare"
+      ],
+      "medianVpf": 29.13,
+      "examples": 9
+    },
+    {
+      "name": "Limitation-removal reveal",
+      "formula": "Problem reveal -> Agitation/frustration -> Solution demo -> Satisfaction payoff (4-6 beats with voiceover narration over B-roll)",
+      "whyItTravels": "Shows tangible before/after transformation that feels like discovering a hidden hack, works equally for pet messes or home grime because the emotional arc (stuck → freed) is universal",
+      "framework": "problem-agitate-solution",
+      "videoFormat": "voiceover-broll",
+      "hookPattern": "removing-limitations",
+      "recurrence": "6 creators",
+      "transfer": [
+        "home and cleaning",
+        "pets"
+      ],
+      "medianVpf": 28.26,
+      "examples": 6
+    },
+    {
+      "name": "Caught-in-motion reveal mechanic",
+      "formula": "Problem reveal (POV handheld catch) -> Skeptical reaction (direct callout to viewer) -> Product application/transformation -> Before/after payoff (4-6 beats of visual proof)",
+      "whyItTravels": "Interrupts scroll with genuine surprise moment that positions product as solution to something viewers already unconsciously notice about themselves, works identically whether showing food texture, hair damage, pet mess, skin condition, or supplement effect.",
+      "framework": "organic",
+      "videoFormat": "pov-handheld",
+      "hookPattern": "direct-callout",
+      "recurrence": "14 creators",
+      "transfer": [
+        "food and beverage",
+        "hair",
+        "pets",
+        "fashion",
+        "skincare",
+        "supplements"
+      ],
+      "medianVpf": 25.62,
+      "examples": 14
+    },
+    {
+      "name": "Messy-to-Moments Transform",
+      "formula": "Problem state (before) -> Reaction/realization (hook) -> Solution application -> Payoff reveal (after)",
+      "whyItTravels": "Universal relatability: every niche has a 'before mess' that triggers shame or curiosity, solved by a simple fix shown in real-time, creating satisfying payoff across all demographics.",
+      "framework": "organic",
+      "videoFormat": "lifestyle-broll",
+      "hookPattern": "before-after",
+      "recurrence": "13 creators",
+      "transfer": [
+        "pets",
+        "home and cleaning",
+        "hair",
+        "fitness",
+        "fashion",
+        "supplements"
+      ],
+      "medianVpf": 23.13,
+      "examples": 13
+    },
+    {
+      "name": "Neglect-to-Redemption Shock Flip",
+      "formula": "Problem state (visual contrast) -> Emotional reaction/agitation (disbelief, disgust, frustration) -> Solution application -> Transformation reveal (4-6 second beats)",
+      "whyItTravels": "Combines instant visual satisfaction (the before-after dopamine hit) with the psychological relief of a quick fix, making any product category feel like a miracle solution.",
+      "framework": "problem-agitate-solution",
+      "videoFormat": "before-after",
+      "hookPattern": "before-after",
+      "recurrence": "11 creators",
+      "transfer": [
+        "hair",
+        "home and cleaning",
+        "supplements",
+        "fitness",
+        "ABG beauty"
+      ],
+      "medianVpf": 22.74,
+      "examples": 12
+    },
+    {
+      "name": "Before-After Product Shock",
+      "formula": "Problem state (before) -> Product introduction -> Application/transformation -> Reveal payoff (after)",
+      "whyItTravels": null,
+      "framework": "organic",
+      "videoFormat": "product-demo",
+      "hookPattern": "before-after",
+      "recurrence": "18 creators",
+      "transfer": [
+        "home and cleaning",
+        "hair",
+        "skincare",
+        "pets",
+        "food and beverage",
+        "supplements",
+        "ABG beauty",
+        "tech and SaaS"
+      ],
+      "medianVpf": 21.21,
+      "examples": 18
+    }
+  ]
+}
