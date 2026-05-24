@@ -7,48 +7,49 @@
 <meta name="description" content="Generate a free install token and paste one prompt into Claude Code, Cursor, or Codex. Your agent installs the LazyReel MCP and is ready to make a video." />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;700&family=Instrument+Serif:ital@1&display=swap" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;700&family=Instrument+Serif:ital@1&display=swap" rel="stylesheet" />
 <style>
 :root{
-  --paper:#FBF8F0;--paper-soft:#FAFAF7;--cream:#F4F0E6;--cream-2:#EAE3D2;
-  --ink:#17150F;--body:#3C3A33;--mute:#807D72;
-  --card:#FFFFFF;--hairline:#E6E3DA;--hairline-strong:#CFCBC0;
-  --ink-2:#1A1916;--ink-3:#23211B;--ink-text:#EDEAE0;--ink-mute:#8A877C;
-  --hl:#D4FF3F;--flag:#F54E00;--term-green:#C7F24A;
-  --r-card:14px;--r-pill:999px;--r-term:12px;--gut:clamp(20px,4vw,32px);--maxw:1000px;
-  --ease:cubic-bezier(.2,.7,.2,1);--dot:rgba(23,21,15,.07);
+  --canvas:#F6F1E6;--surface-1:#FBF7EE;--surface-2:#F0EADC;--surface-3:#E9E1CF;
+  --card:#FFFFFF;
+  --hairline:#E7E1D1;--hairline-strong:#D4CDBA;
+  --ink:#1A1812;--body:#46423A;--mute:#6B6557;
+  --lime:#D4FF3F;--on-lime:#1A1A0A;--lime-ink:#46570A;--flag:#F54E00;--flag-ink:#C73E00;
+  --good:#2E8B57;
+  --r-card:16px;--r-pill:999px;--r-term:14px;--gut:clamp(20px,4vw,32px);--maxw:1000px;
+  --ease:cubic-bezier(.2,.7,.2,1);--dot:rgba(26,24,18,.05);
 }
 *{box-sizing:border-box}
-body{margin:0;background:var(--paper);color:var(--ink);font-family:Inter,system-ui,sans-serif;font-size:17px;line-height:1.55;-webkit-font-smoothing:antialiased;
-  background-image:radial-gradient(var(--dot) 1px,transparent 1px);background-size:26px 26px}
+body{margin:0;background:var(--canvas);color:var(--body);font-family:Inter,system-ui,sans-serif;font-size:17px;line-height:1.55;-webkit-font-smoothing:antialiased;
+  background-image:radial-gradient(var(--dot) 1px,transparent 1px);background-size:28px 28px}
 a{color:inherit;text-decoration:none}
-h1,h2,h3{font-family:"Space Grotesk",sans-serif;font-weight:600;letter-spacing:-.025em;line-height:1.04;margin:0}
+h1,h2,h3{font-family:"Bricolage Grotesque",sans-serif;font-weight:800;letter-spacing:-.04em;line-height:1.02;margin:0;color:var(--ink);font-optical-sizing:auto}
 .serif{font-family:"Instrument Serif",Georgia,serif;font-style:italic;font-weight:400}
-.hl{background:linear-gradient(transparent 58%,var(--hl) 58%,var(--hl) 94%,transparent 94%);padding:0 .06em}
-.label{font-family:"JetBrains Mono",monospace;font-size:12px;font-weight:500;letter-spacing:.14em;text-transform:uppercase;color:var(--mute)}
+.hl{background:linear-gradient(transparent 58%,var(--lime) 58%,var(--lime) 94%,transparent 94%);padding:0 .06em;-webkit-box-decoration-break:clone;box-decoration-break:clone;color:inherit}
+.label{font-family:"JetBrains Mono",monospace;font-size:12px;font-weight:500;letter-spacing:.16em;text-transform:uppercase;color:var(--mute)}
 .wrap{width:min(var(--maxw),calc(100% - var(--gut)*2));margin-inline:auto}
-:focus-visible{outline:3px solid var(--flag);outline-offset:3px;border-radius:4px}
-.btn{display:inline-flex;align-items:center;gap:.5em;min-height:46px;padding:0 22px;border-radius:var(--r-pill);font-weight:600;font-size:15px;border:1px solid transparent;cursor:pointer;transition:transform .18s var(--ease);font-family:inherit}
-.btn-primary{background:var(--ink);color:var(--paper)}.btn-primary:hover{transform:translateY(-2px)}
-.btn-flag{background:var(--flag);color:#fff}.btn-flag:hover{transform:translateY(-2px)}
-.btn-ghost{background:transparent;color:var(--ink);border:1px solid var(--hairline-strong)}.btn-ghost:hover{background:var(--cream)}
+:focus-visible{outline:3px solid var(--lime);outline-offset:3px;border-radius:4px}
+.btn{display:inline-flex;align-items:center;gap:.5em;min-height:48px;padding:0 24px;border-radius:var(--r-pill);font-weight:600;font-size:15px;border:1px solid transparent;cursor:pointer;transition:transform .18s var(--ease),background .18s;font-family:inherit}
+.btn-primary{background:var(--ink);color:var(--canvas)}.btn-primary:hover{transform:translateY(-2px);background:#2C2820}
+.btn-flag{background:var(--flag);color:#fff}.btn-flag:hover{transform:translateY(-2px);background:#FF5E14}
+.btn-ghost{background:transparent;color:var(--ink);border:1px solid var(--hairline-strong)}.btn-ghost:hover{background:var(--surface-2)}
 
-.nav{position:sticky;top:0;z-index:50;background:rgba(251,248,240,.82);backdrop-filter:saturate(1.4) blur(10px);border-bottom:1px solid var(--hairline)}
-.nav-in{display:flex;align-items:center;justify-content:space-between;height:62px}
-.brand{display:inline-flex;align-items:center;gap:10px;font-family:"Space Grotesk";font-weight:700;font-size:16px}
-.brand .mk{display:inline-grid;place-items:center;width:30px;height:30px;border-radius:8px;background:var(--ink);color:var(--hl);font-size:12px;font-weight:700;font-family:"JetBrains Mono"}
+.nav{position:sticky;top:0;z-index:50;background:rgba(246,241,230,.78);backdrop-filter:saturate(1.4) blur(12px);border-bottom:1px solid var(--hairline)}
+.nav-in{display:flex;align-items:center;justify-content:space-between;height:64px}
+.brand{display:inline-flex;align-items:center;gap:10px;font-family:"Bricolage Grotesque";font-weight:800;font-size:17px;letter-spacing:-.02em;color:var(--ink)}
+.brand .mk{display:inline-grid;place-items:center;width:24px;height:24px}
 .brand .sl{color:var(--flag)}
-.back{font-size:14.5px;font-weight:500;color:var(--body)}.back:hover{color:var(--ink)}
+.back{font-size:14.5px;font-weight:500;color:var(--mute)}.back:hover{color:var(--ink)}
 
 .hero{padding-top:clamp(44px,7vw,72px);padding-bottom:8px}
-.hero h1{font-size:clamp(2.3rem,5vw,3.6rem);max-width:18ch}
+.hero h1{font-size:clamp(2.3rem,5vw,3.6rem);max-width:18ch;letter-spacing:-.045em}
 .hero p{margin-top:18px;color:var(--body);max-width:56ch;font-size:1.08rem}
-.safe{margin-top:16px;display:inline-flex;gap:8px;align-items:center;font-family:"JetBrains Mono";font-size:12px;color:var(--mute);border:1px solid var(--hairline-strong);border-radius:var(--r-pill);padding:6px 14px}
-.safe .dot{width:7px;height:7px;border-radius:50%;background:#1f8a65}
+.safe{margin-top:16px;display:inline-flex;gap:8px;align-items:center;font-family:"JetBrains Mono";font-size:12px;color:var(--body);border:1px solid var(--hairline-strong);border-radius:var(--r-pill);padding:6px 14px;background:var(--surface-1)}
+.safe .dot{width:7px;height:7px;border-radius:50%;background:var(--good)}
 
 section{padding-block:clamp(28px,5vw,44px)}
 .step-label{display:flex;align-items:center;gap:12px;margin-bottom:14px}
-.step-num{display:inline-grid;place-items:center;width:28px;height:28px;border-radius:50%;background:var(--ink);color:var(--paper);font-family:"JetBrains Mono";font-size:13px;font-weight:700}
+.step-num{display:inline-grid;place-items:center;width:28px;height:28px;border-radius:50%;background:var(--lime);color:var(--on-lime);font-family:"JetBrains Mono";font-size:13px;font-weight:700}
 .step-label h2{font-size:1.35rem}
 
 /* token */
@@ -60,17 +61,18 @@ section{padding-block:clamp(28px,5vw,44px)}
 
 /* client tabs */
 .tabs{display:flex;gap:8px;margin-bottom:14px;flex-wrap:wrap}
-.tab{font-family:"JetBrains Mono";font-size:12.5px;padding:8px 16px;border-radius:var(--r-pill);border:1px solid var(--hairline-strong);background:var(--paper-soft);cursor:pointer;color:var(--body)}
-.tab[aria-selected="true"]{background:var(--ink);color:var(--paper);border-color:var(--ink)}
+.tab{font-family:"JetBrains Mono";font-size:12.5px;padding:8px 16px;border-radius:var(--r-pill);border:1px solid var(--hairline-strong);background:var(--surface-1);cursor:pointer;color:var(--body)}
+.tab[aria-selected="true"]{background:var(--lime);color:var(--on-lime);border-color:var(--lime)}
 
 /* prompt block */
-.block{background:var(--ink-2);border:1px solid #000;border-radius:var(--r-term);overflow:hidden}
-.block-bar{display:flex;justify-content:space-between;align-items:center;height:42px;padding:0 14px;background:var(--ink-3);font-family:"JetBrains Mono";font-size:12px;color:var(--ink-mute)}
-.copy{cursor:pointer;color:var(--term-green);background:none;border:1px solid #3a3833;border-radius:var(--r-pill);padding:4px 13px;font-family:"JetBrains Mono";font-size:11.5px}
-.block pre{margin:0;padding:18px;font-family:"JetBrains Mono";font-size:13px;line-height:1.7;color:#d2cfc5;white-space:pre-wrap;overflow-x:auto}
-.block pre .c{color:var(--ink-mute)}
-.block pre .g{color:var(--term-green)}
-.block pre .o{color:#ff9a6b}
+.block{background:#0B0B09;border:1px solid var(--hairline-strong);border-radius:var(--r-term);overflow:hidden}
+.block-bar{display:flex;justify-content:space-between;align-items:center;height:44px;padding:0 14px;background:var(--surface-2);border-bottom:1px solid var(--hairline);font-family:"JetBrains Mono";font-size:12px;color:var(--mute)}
+.copy{cursor:pointer;color:var(--lime);background:none;border:1px solid var(--hairline-strong);border-radius:var(--r-pill);padding:5px 13px;font-family:"JetBrains Mono";font-size:11.5px;transition:background .18s}
+.copy:hover{background:var(--surface-3)}
+.block pre{margin:0;padding:18px;font-family:"JetBrains Mono";font-size:13px;line-height:1.7;color:#C4BEB0;white-space:pre-wrap;overflow-x:auto}
+.block pre .c{color:var(--mute)}
+.block pre .g{color:var(--lime)}
+.block pre .o{color:var(--flag-2)}
 
 .foot{margin-top:40px;border-top:1px solid var(--hairline);padding-block:36px;font-family:"JetBrains Mono";font-size:12px;color:var(--mute)}
 @media (max-width:560px){.token-box{flex-direction:column;align-items:flex-start}}
@@ -81,7 +83,7 @@ section{padding-block:clamp(28px,5vw,44px)}
 
 <header class="nav">
   <div class="wrap nav-in">
-    <a class="brand" href="index.html"><span class="mk">L</span>Lazy<span class="sl">/</span>Reel</a>
+    <a class="brand" href="index.html"><span class="mk" aria-hidden="true"><svg viewBox="0 0 26 26" width="22" height="22" fill="none"><path d="M4.5 6.5 L13 13 L21.5 6.5" stroke="#1A1812" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"/><path d="M4.5 14.5 L13 21 L21.5 14.5" stroke="#F54E00" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span>LazyReel</a>
     <a class="back" href="index.html">← Back to LazyReel</a>
   </div>
 </header>
