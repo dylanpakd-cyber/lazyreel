@@ -6,3 +6,8 @@ mcp/build/
 *.env
 mcp/.env
 research/
+mcp/frames/
+mcp/data/_*.json
+mcp/data/*.bak.jsonl
+mcp/data/raw/normalized-batch2.jsonl
+mcp/data/raw/scraped-batch2.jsonl
