@@ -369,7 +369,7 @@ section{padding-block:clamp(72px,9.5vw,116px)}
   <div class="shead">
     <span class="label"><span class="n">04</span> / App space</span>
     <h2>It decoded the <span class="hl">app ads</span>, too.</h2>
-    <p>3,000+ mobile-app ads, broken down the same way as the rest of the corpus. What gets installs isn't a polished product demo — it's the hook × format that beats the feed.</p>
+    <p>3,000+ mobile-app ads, broken down the same way as the rest of the corpus. This is about <strong style="color:var(--ink);font-weight:600">views, not installs</strong> — what wins the feed is the hook × format, not a polished product demo.</p>
   </div>
   <div class="app-grid">
     <div class="app-cats">
@@ -378,9 +378,9 @@ section{padding-block:clamp(72px,9.5vw,116px)}
       <p class="app-note">Category share of the 3,000+ decoded app-ad videos. Coverage grows every scrape.</p>
     </div>
     <div class="app-pat">
-      <h4>What lifts app-ad breakouts</h4>
+      <h4>What wins app-ad <span class="hl">views</span></h4>
       <div id="appPats"></div>
-      <p class="app-note">Lift = breakout rate vs. the rest of the app set. Above 1.0× over-indexes in breakouts.</p>
+      <p class="app-note">Lift = view-breakout rate vs. the rest of the app set. A breakout is a top-views video — so above 1.0× over-indexes on <strong style="color:var(--ink);font-weight:600">views</strong>, not conversions.</p>
     </div>
   </div>
 </section>
@@ -448,7 +448,11 @@ section{padding-block:clamp(72px,9.5vw,116px)}
 <script>
 // ---- annotated doomscroll feed (real compressed breakout clips + real decoded labels) ----
 (function(){
-  // clips live in assets/feed/ (gitignored, local-preview only); gradient + poster are the fallback when absent
+  // CONFIG: where the feed clips are served from.
+  //   ''  -> use the clips committed in /assets/feed (works on Vercel out of the box)
+  //   'https://your-cdn.com/'  -> serve assets/feed/<id>.mp4|jpg from your CDN/bucket instead
+  var CDN_BASE='';
+  function clip(id,ext){return (CDN_BASE||'')+'assets/feed/'+id+'.'+ext;}
   var FEED=[
    {id:'7381474248075889953',handle:'@arianopoien',niche:'fitness',hook:'removing-limitations',fmt:'pov-handheld',views:'115.3M',grad:'linear-gradient(160deg,#262d33,#101317)'},
    {id:'7364556621512527146',handle:'@meghasinghx',niche:'beauty',hook:'information-offering',fmt:'talking-head',views:'28.5M',grad:'linear-gradient(160deg,#3a2a2e,#191115)'},
@@ -459,7 +463,7 @@ section{padding-block:clamp(72px,9.5vw,116px)}
   ];
   function card(it){
     return '<div class="fcard" style="--grad:'+it.grad+'">'
-      +'<video class="fvid" src="assets/feed/'+it.id+'.mp4" poster="assets/feed/'+it.id+'.jpg" muted loop playsinline preload="metadata" aria-hidden="true"></video>'
+      +'<video class="fvid" src="'+clip(it.id,'mp4')+'" poster="'+clip(it.id,'jpg')+'" muted loop playsinline preload="metadata" aria-hidden="true"></video>'
       +'<span class="glyph">'+it.niche+' · breakout</span>'
       +'<div class="bracket" aria-hidden="true"></div>'
       +'<span class="anno hook anno-pop"><span class="k">hook</span> '+it.hook+'</span>'
