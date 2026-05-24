@@ -71,7 +71,7 @@ export const HOOK_PATTERNS: HookPattern[] = [
   { id: "question", name: "Question-based", template: "{a question the buyer can't not answer}", example: "Still failing at hydration in 2026? It's not the water." },
   { id: "howto", name: "Information-offering", template: "How to {outcome} in {year/constraint}", example: "How to actually film a UGC ad in one afternoon, no studio." },
   { id: "newness", name: "Newness", template: "The {category} thing nobody's talking about yet", example: "The matcha format quietly eating every beauty page right now." },
-  { id: "exclusivity", name: "Exclusivity", template: "The only {category} that actually {does the job}", example: "The only lash serum that survived my 5am-to-midnight days." },
+  { id: "exclusivity", name: "Exclusivity", template: "The only {category} that {does the job}", example: "The only lash serum that survived my 5am-to-midnight days." },
   { id: "contrast", name: "Comparing to rivals", template: "{the rival way} vs {your way}", example: "$220 serum vs the $30 one dermatologists keep re-buying." },
 ];
 

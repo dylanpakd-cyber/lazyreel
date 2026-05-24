@@ -15,7 +15,11 @@ function seed(str: string): number {
 }
 function pick<T>(arr: T[], s: number, offset = 0): T { return arr[(s + offset) % arr.length]; }
 function cleanCat(str: string): string {
-  return str.trim().replace(/^(a|an|the)\s+/i, "").replace(/\s*(kit|set|bundle|niche)\s*$/i, "").trim() || "product";
+  return str.trim()
+    .replace(/^(a|an|the)\s+/i, "")
+    .replace(/\$?\d[\d,.]*\s*/g, "")            // strip price / number tokens
+    .replace(/\s*(kit|set|bundle|niche)\s*$/i, "")
+    .trim() || "product";
 }
 function rotate<T>(arr: T[], s: number, n: number): T[] {
   const out: T[] = []; const used = new Set<number>();
@@ -35,7 +39,7 @@ function fillHook(p: HookPattern, product: string, niche: string, avatar: string
     .replace("{the after state}", `${product}, end of day, still holding`)
     .replace("{a big, specific number}", `the one ${category} stat nobody quotes`)
     .replace("{result}", `${category} that lasts`)
-    .replace("{surprisingly short time}", "one afternoon")
+    .replace("{surprisingly short time}", "one use")
     .replace("{experts}", `${niche} pros`)
     .replace("{do this}", `reach for ${product}`)
     .replace("{the usual disqualifier}", "you've quit every routine by day 3")
@@ -54,7 +58,7 @@ export function videoIdeas(i: IdeaInput): string {
   const product = i.product.trim();
   const niche = (i.niche || "your niche").trim();
   const avatar = (i.audience || "the buyer").trim();
-  const category = cleanCat(niche.replace(/\s*niche\s*/i, ""));
+  const category = cleanCat(product) || cleanCat(niche.replace(/\s*niche\s*/i, ""));
   const n = Math.min(Math.max(i.count || 5, 3), 8);
   const s = seed(product + niche + avatar);
   const fw = rotate(SCRIPT_FRAMEWORKS, s, n);
@@ -151,7 +155,7 @@ export function crackedHooks(i: HookInput): string {
   const product = i.product.trim();
   const niche = (i.niche || "your niche").trim();
   const avatar = (i.audience || "your buyer").trim();
-  const category = cleanCat(niche.replace(/\s*niche\s*/i, ""));
+  const category = cleanCat(product) || cleanCat(niche.replace(/\s*niche\s*/i, ""));
   const n = Math.min(Math.max(i.count || 8, 5), 12);
   const s = seed(product + avatar);
   const patterns = rotate(HOOK_PATTERNS, s, n);
