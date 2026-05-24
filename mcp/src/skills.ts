@@ -228,36 +228,29 @@ export function nicheDecode(niche: string, examples?: string): string {
        `Piggyback one only if it genuinely fits the product:`,
        tags.map((t) => `#${t.tag} (${t.year}, rank ${t.rank})`).join(" · ")]
     : [];
+  // real videos to watch for this niche (links lead, not a checklist)
+  const ex = examplesFor({ niche: n }, 5);
+  const exBlock = ex.length
+    ? ["", `## Watch these real breakouts in ${n}`, ...ex.map(exampleLine)]
+    : [];
   return [
-    `# Niche read: ${n}`,
-    `_How to decode what's actually working before you write a single hook._`,
-    "",
-    `## 1. Place the market`,
-    `- **Awareness:** which of the 5 levels is the feed targeting? (Unaware story-leads vs Most-Aware offer-leads.)`,
-    `- **Sophistication:** is the niche on plain claims (lvl 1-2), mechanism (lvl 3-4), or burned/skeptical (lvl 5)? Burned markets need identity + reframe, not another claim.`,
-    "",
-    `## 2. Mine the inputs (the part everyone skips)`,
-    `- Pull 10-30 of your reviews + 10-30 competitor reviews + 100+ TikTok comments.`,
-    `- Sort every line into: pain_points · failed_solutions · desired_outcomes · objections · misconceptions · golden_nuggets · language_notes.`,
-    `- The golden_nuggets and language_notes are your actual hook copy. Write in their words, not yours.`,
-    "",
-    `## 3. Read the winning videos`,
-    `- Study the 20-25 top hooks; the ones running longest are winning — model those patterns.`,
-    `- Dominant visual approach? (problem / benefit / product / product-in-action.)`,
-    `- Production style: authentic-UGC or polished? In ${n}, match the trust signal, don't fight it.`,
-    `- Which content structure repeats: Symptom→Problem→Solution→Product→Offer, or a shorter cut?`,
-    "",
-    `## 4. Find the gap`,
-    `- The exploitable opening is usually "everyone shows the product, nobody shows the problem state."`,
-    `- Name 2-3 angles the niche is NOT running yet. That's your shot.`,
-    examples ? `\n## Notes from what you pasted\n${examples.trim()}` : "",
+    `# What's working in ${n} — from ${insightsMeta().decoded.toLocaleString()} real decoded videos`,
+    // DATA LEADS: the findings + real videos come first
     ...insightBlock,
     ...wordBlock,
+    ...exBlock,
     ...winnerBlock,
     ...corpusBlock,
     ...tagBlock,
+    examples ? `\n## Notes from what you pasted\n${examples.trim()}` : "",
     "",
-    `> Output you should end with: top-10 pains (each w/ a real quote), the 3 hook patterns winning now, the dominant visual approach, and 2-3 unused angles.`,
+    // methodology footer (was the lead; now a compact how-to-go-deeper)
+    `---`,
+    `## Go deeper yourself`,
+    `- **Place the market:** awareness level (Unaware→Most-Aware) + sophistication (plain claim → mechanism → burned/skeptical). Burned markets need identity + reframe, not another claim.`,
+    `- **Mine the inputs:** 10-30 of your + competitor reviews + 100+ comments → sort into pain_points · failed_solutions · desired_outcomes · objections · golden_nuggets · language_notes. The golden_nuggets are your hook copy — write in their words.`,
+    `- **Find the gap:** the opening is usually "everyone shows the product, nobody shows the problem state." Name 2-3 angles the niche isn't running.`,
+    `> Then: ${"`"}find_trends${"`"} for copyable formats, ${"`"}study_examples${"`"} for more real videos, ${"`"}replicate_format${"`"} to turn a winner into a brief.`,
   ].filter(Boolean).join("\n");
 }
 
