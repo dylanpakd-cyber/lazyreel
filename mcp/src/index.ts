@@ -210,7 +210,7 @@ server.setRequestHandler(CallToolRequestSchema, async (req) => {
       case "app_insights":
         text = appInsights(); break;
       case "get_status":
-        text = status(process.env.ABG_TOKEN); break;
+        text = status(process.env.LAZYREEL_TOKEN || process.env.ABG_TOKEN); break;
       default:
         return { content: [{ type: "text", text: `Unknown tool: ${name}` }], isError: true };
     }
