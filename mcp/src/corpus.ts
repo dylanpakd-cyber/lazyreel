@@ -167,6 +167,22 @@ export function getAppInsights(): AppInsights {
   return a;
 }
 
+export type BreakoutLaw = { law: string; evidence: string; corpusEcho?: string };
+export type BreakoutPair = { concept: string; winnerViews: number; dudViews: number; gap: string; firstFrameDelta: string; viewDriver: string; lesson: string };
+export type BreakoutModel = {
+  generatedAt?: string; method?: string;
+  confound?: { note?: string; takeaway?: string; medianFollowersHigh?: number; medianFollowersLow?: number; oneMplusThatAreTrueBreakouts_vpf10?: string };
+  corpusContrast?: Record<string, { value: string; pctHigh: number; pctLow: number; lift: number | null }[]>;
+  conceptControlledPairs?: BreakoutPair[]; laws?: BreakoutLaw[];
+};
+let _bvd: BreakoutModel | null = null;
+export function getBreakoutModel(): BreakoutModel {
+  if (_bvd) return _bvd;
+  try { _bvd = JSON.parse(readFileSync(dataPath("breakout-vs-dud.json"), "utf8")); }
+  catch { _bvd = {}; }
+  return _bvd!;
+}
+
 export type Combo = { combo: string; dims: string; lift: number; nWinners: number; nTotal: number };
 type ComboInsights = { analyzable?: number; overall?: Combo[]; byNiche?: Record<string, Combo[]> };
 let _combos: ComboInsights | null = null;

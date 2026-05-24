@@ -10,7 +10,7 @@ import {
   searchVideos, relatedTrendingTags, corpusCounts, nicheInsight, overallHookLift, insightsMeta,
   getWinners, winnersForNiche, getVisualInsights, visualForNiche, wordsForNiche,
   getTrends, trendsForNiche, getExamples, examplesFor, type Example,
-  combosFor, getAppInsights,
+  combosFor, getAppInsights, getBreakoutModel,
   type AnalyzedVideo, type HookLift, type Teardown,
 } from "./corpus.js";
 
@@ -491,6 +491,9 @@ export function shootBrief(i: BriefInput): string {
     `| --- | --- | --- | --- |`,
     ...rows,
     "",
+    `## First 3 seconds (the breakout lever — clear all of these)`,
+    ...breakoutChecklist().map(l => `- [ ] ${l}`),
+    "",
     `## CTA`,
     `- Implicit and punchy: "link in bio", "you'll want this one", or identity-led ("if you're ${audience}, this is for you"). Never "Shop now".`,
     "",
@@ -500,6 +503,37 @@ export function shootBrief(i: BriefInput): string {
     `- Product name lands in shot 2-3, not shot 1. ~3 words of dialogue per second of screen time.`,
     `- Voice: calm, slightly serious, documentary — not a YouTuber shouting.`,
   ].join("\n");
+}
+
+// The 5 first-3-seconds laws, read live from the breakout-vs-dud analysis.
+function breakoutChecklist(): string[] {
+  return (getBreakoutModel().laws || []).map(l => l.law);
+}
+
+export function breakoutVsDud(): string {
+  const m = getBreakoutModel();
+  const laws = m.laws || [];
+  if (!laws.length) return `# Breakout-vs-dud model not populated yet\nRun the breakout analysis pipeline (data/breakout-vs-dud.json).`;
+  const cc = m.corpusContrast || {};
+  const topLift = (Object.values(cc).flat() as any[]).filter(x => x && x.lift).sort((a, b) => b.lift - a.lift).slice(0, 6);
+  const pairs = (m.conceptControlledPairs || []).slice(0, 3);
+  return [
+    `# Breakout vs dud — why the same concept gets 1K vs 1M views`,
+    m.method ? `_${m.method}_` : "",
+    "",
+    `## The first-3-seconds laws (patterns that over-index, not guarantees)`,
+    ...laws.map((l, i) => `**${i + 1}. ${l.law}**\n   - ${l.evidence}${l.corpusEcho ? `\n   - _corpus echo: ${l.corpusEcho}_` : ""}`),
+    "",
+    `## What over-indexes in 1M+ winners vs <10K duds`,
+    ...topLift.map(x => `- **${x.value}** — ${x.lift}x (${x.pctHigh}% of winners vs ${x.pctLow}% of duds)`),
+    "",
+    `## Concept-matched proof (same niche + hook, winner vs dud, compared frame-by-frame)`,
+    ...pairs.map(p => `- **${p.concept}** (${p.gap}): ${(p.firstFrameDelta || "").slice(0, 220)}\n  → _steal:_ ${(p.lesson || "").slice(0, 160)}`),
+    "",
+    `## Honest caveat (read before trusting this)`,
+    `- ${m.confound?.takeaway || "Raw views are confounded by audience size; judge craft by creator-baseline (vpf), not raw views."}`,
+    `- Small sample (${(m.conceptControlledPairs || []).length} concept-matched pairs) and the "why" is inferred from still frames, not watch-time/A-B. Use as a first-3-seconds QC checklist + hypotheses, not laws.`,
+  ].filter(Boolean).join("\n");
 }
 
 export function killTheSlop(copy: string): string {
@@ -512,6 +546,7 @@ export function killTheSlop(copy: string): string {
   if (!/[0-9]/.test(c)) problems.push("**No specificity:** zero numbers or concrete detail. Adjectives don't convince; specifics do.");
   if (/[🚀✨🔥💯]/.test(c)) problems.push("**Emoji hype:** rocket/sparkle energy reads as an AI ad.");
   if (c.length < 120 && !/\?/.test(c) && !/\b(pov|how|why)\b/i.test(c)) problems.push("**No curiosity gap:** nothing makes the viewer need to keep watching.");
+  if (/\b(honest review|review|tutorial|how to use|unboxing|#ad|paid partnership|sponsored)\b/i.test(lower)) problems.push("**Signals the format:** announcing 'review/tutorial/ad' tells the feed it's a sales video and kills the mystery — show it, don't label it (breakout law: don't signal the format).");
   if (!problems.length) problems.push("**Soft:** no banned words, but it's generic. Sharpen with a named hook pattern + one concrete number.");
 
   const s = seed(c);
@@ -534,6 +569,9 @@ export function killTheSlop(copy: string): string {
     `- Watch-through: one idea, concrete, no wasted words.`,
     `- Brand-blindness: speaks to the buyer, names the product late.`,
     "",
+    `## First 3 seconds (breakout QC — does the rewrite clear these?)`,
+    ...breakoutChecklist().map(l => `- [ ] ${l}`),
+    "",
     `## Voice rules this enforces`,
     ...VOICE_RULES.slice(0, 5).map(r => `- ${r}`),
   ].join("\n");
@@ -550,7 +588,7 @@ export function status(token?: string): string {
     tokenLine,
     "",
     "**Live now:**",
-    "- 14 skills incl. winning_combos (what mix wins), replicate_format, study_examples (real links), find_trends, viral_teardowns",
+    "- 16 skills incl. breakout_vs_dud (why 1K vs 1M), winning_combos (what mix wins), replicate_format, study_examples (real links), find_trends, viral_teardowns",
     `- ${getWinners().length} real breakout videos torn down (the actual viral mechanism, diagnosed from transcript + engagement)`,
     getVisualInsights().analyzed ? `- ${getVisualInsights().analyzed} videos analyzed visually (format + craft from the first 3 seconds of frames)` : "- visual/format layer: scripts ready, run pipeline/visual.mjs to populate",
     `- ${SCRIPT_FRAMEWORKS.length} named script frameworks, ${HOOK_PATTERNS.length} hook patterns, ${ANGLES.length} proven UGC angles`,

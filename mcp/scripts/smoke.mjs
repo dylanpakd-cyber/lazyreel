@@ -39,6 +39,7 @@ const cases = [
   ["search_corpus", { query: "skincare before-after", limit: 4 }],
   ["viral_teardowns", { niche: "skincare", limit: 3 }],
   ["content_gaps", { niche: "skincare" }],
+  ["breakout_vs_dud", {}],
   ["get_status", {}],
 ];
 

@@ -9,7 +9,7 @@ import {
   ListToolsRequestSchema,
 } from "@modelcontextprotocol/sdk/types.js";
 import {
-  videoIdeas, nicheDecode, formatTeardown, crackedHooks, shootBrief, killTheSlop, searchCorpus, viralTeardowns, contentGaps, formatPlaybook, findTrends, studyExamples, replicateFormat, winningCombos, appInsights, status,
+  videoIdeas, nicheDecode, formatTeardown, crackedHooks, shootBrief, killTheSlop, searchCorpus, viralTeardowns, contentGaps, formatPlaybook, findTrends, studyExamples, replicateFormat, winningCombos, appInsights, breakoutVsDud, status,
 } from "./skills.js";
 import { SCRIPT_FRAMEWORKS } from "./frameworks.js";
 
@@ -163,6 +163,11 @@ const tools = [
     inputSchema: { type: "object", properties: {} },
   },
   {
+    name: "breakout_vs_dud",
+    description: "Why the SAME concept gets 1K vs 1M views: the first-3-seconds laws that separate breakouts from duds, derived from concept-matched winner/dud pairs (same niche+hook) compared frame-by-frame PLUS corpus-wide lift. Returns the laws, what over-indexes in winners, matched proof, and an honest confound caveat. Use when the user asks why a video flopped vs went viral, how to fix a weak opening, or what to nail in the first 3 seconds.",
+    inputSchema: { type: "object", properties: {} },
+  },
+  {
     name: "get_status",
     description: "Explain what this MCP server can do and what is intentionally not live yet.",
     inputSchema: { type: "object", properties: {} },
@@ -209,6 +214,8 @@ server.setRequestHandler(CallToolRequestSchema, async (req) => {
         text = winningCombos(str("niche")); break;
       case "app_insights":
         text = appInsights(); break;
+      case "breakout_vs_dud":
+        text = breakoutVsDud(); break;
       case "get_status":
         text = status(process.env.LAZYREEL_TOKEN || process.env.ABG_TOKEN); break;
       default:
