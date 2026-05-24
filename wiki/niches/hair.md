@@ -1,27 +1,28 @@
 # hair
 
-[← all niches](../README.md) · 296 videos decoded · breakout threshold 63.64x views-per-follower
+[← all niches](../README.md) · 410 videos decoded · breakout threshold 61.71x views-per-follower
 
 ## The opening (high performance, under-used)
-- **[question](../patterns/question.md)** — over-indexes 2.99x but only 4.1% of videos use it. The opening.
-- **[pov](../patterns/pov.md)** — over-indexes 2.39x but only 3.1% of videos use it. The opening.
-- **[removing-limitations](../patterns/removing-limitations.md)** — over-indexes 1.9x but only 6.1% of videos use it. The opening.
-- **[direct-callout](../patterns/direct-callout.md)** — over-indexes 1.9x but only 6.1% of videos use it. The opening.
+- **[authority](../patterns/authority.md)** — over-indexes 2.97x but only 1.5% of videos use it. The opening.
+- **[question](../patterns/question.md)** — over-indexes 2.23x but only 3.4% of videos use it. The opening.
+- **[pov](../patterns/pov.md)** — over-indexes 1.49x but only 2.9% of videos use it. The opening.
 
 ## Crowded (hard to stand out)
-- **information-offering** — 45.4% of videos, performs 0.75x. Crowded.
+- **information-offering** — 48.4% of videos, performs 0.87x. Crowded.
 
 ## Every hook pattern here
 | Pattern | Videos | Share | Lift in breakouts |
 | --- | --- | --- | --- |
-| [information-offering](../patterns/information-offering.md) | 134 | 45.4% | 0.75x |
-| [before-after](../patterns/before-after.md) | 40 | 13.6% | 1x |
-| [belief-challenging](../patterns/belief-challenging.md) | 23 | 7.8% | 0.45x |
-| [removing-limitations](../patterns/removing-limitations.md) | 18 | 6.1% | 1.9x |
-| [direct-callout](../patterns/direct-callout.md) | 18 | 6.1% | 1.9x |
-| [question](../patterns/question.md) | 12 | 4.1% | 2.99x |
-| [pov](../patterns/pov.md) | 9 | 3.1% | 2.39x |
-| [newness](../patterns/newness.md) | 7 | 2.4% | 0.5x |
+| [information-offering](../patterns/information-offering.md) | 198 | 48.4% | 0.87x |
+| [before-after](../patterns/before-after.md) | 53 | 13% | 1.07x |
+| [belief-challenging](../patterns/belief-challenging.md) | 32 | 7.8% | 0.31x |
+| [direct-callout](../patterns/direct-callout.md) | 23 | 5.6% | 1.91x |
+| [removing-limitations](../patterns/removing-limitations.md) | 20 | 4.9% | 1.6x |
+| [question](../patterns/question.md) | 14 | 3.4% | 2.23x |
+| [pov](../patterns/pov.md) | 12 | 2.9% | 1.49x |
+| [size-of-claim](../patterns/size-of-claim.md) | 10 | 2.4% | 0.74x |
+| [newness](../patterns/newness.md) | 8 | 2% | 0.42x |
+| [authority](../patterns/authority.md) | 6 | 1.5% | 2.97x |
 
 ## Real breakouts, torn down
 _No breakout teardowns for this niche yet._

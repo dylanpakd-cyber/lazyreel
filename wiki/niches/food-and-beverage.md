@@ -1,9 +1,9 @@
 # food and beverage
 
-[← all niches](../README.md) · 481 videos decoded · breakout threshold 48.3x views-per-follower
+[← all niches](../README.md) · 572 videos decoded · breakout threshold 43.73x views-per-follower
 
 ## The opening (high performance, under-used)
-- **[pov](../patterns/pov.md)** — over-indexes 1.71x but only 2.3% of videos use it. The opening.
+- **[speed-of-claim](../patterns/speed-of-claim.md)** — over-indexes 1.28x but only 3.5% of videos use it. The opening.
 
 ## Crowded (hard to stand out)
 _Nothing dominant._
@@ -11,16 +11,16 @@ _Nothing dominant._
 ## Every hook pattern here
 | Pattern | Videos | Share | Lift in breakouts |
 | --- | --- | --- | --- |
-| [information-offering](../patterns/information-offering.md) | 217 | 45.6% | 1.12x |
-| [belief-challenging](../patterns/belief-challenging.md) | 51 | 10.7% | 0.64x |
-| [removing-limitations](../patterns/removing-limitations.md) | 35 | 7.4% | 0.39x |
-| [direct-callout](../patterns/direct-callout.md) | 30 | 6.3% | 2.29x |
-| [newness](../patterns/newness.md) | 24 | 5% | 0.27x |
-| [question](../patterns/question.md) | 21 | 4.4% | 0.71x |
-| [before-after](../patterns/before-after.md) | 15 | 3.2% | 1.09x |
-| [size-of-claim](../patterns/size-of-claim.md) | 14 | 2.9% | 0.23x |
-| [pov](../patterns/pov.md) | 11 | 2.3% | 1.71x |
-| [authority](../patterns/authority.md) | 11 | 2.3% | 1.13x |
+| [information-offering](../patterns/information-offering.md) | 261 | 46% | 1.16x |
+| [belief-challenging](../patterns/belief-challenging.md) | 58 | 10.2% | 0.7x |
+| [removing-limitations](../patterns/removing-limitations.md) | 35 | 6.2% | 0.39x |
+| [direct-callout](../patterns/direct-callout.md) | 31 | 5.5% | 2.16x |
+| [newness](../patterns/newness.md) | 27 | 4.8% | 0.24x |
+| [question](../patterns/question.md) | 23 | 4.1% | 0.83x |
+| [size-of-claim](../patterns/size-of-claim.md) | 23 | 4.1% | 0.29x |
+| [speed-of-claim](../patterns/speed-of-claim.md) | 20 | 3.5% | 1.28x |
+| [pov](../patterns/pov.md) | 17 | 3% | 0.92x |
+| [before-after](../patterns/before-after.md) | 15 | 2.6% | 1.09x |
 
 ## Real breakouts, torn down
 ### 13565.89x following · 1M+ · direct-callout

@@ -1,10 +1,11 @@
 # ABG beauty
 
-[← all niches](../README.md) · 633 videos decoded · breakout threshold 31.01x views-per-follower
+[← all niches](../README.md) · 716 videos decoded · breakout threshold 28.88x views-per-follower
 
 ## The opening (high performance, under-used)
-- **[exclusivity](../patterns/exclusivity.md)** — over-indexes 7.45x but only 1.1% of videos use it. The opening.
-- **[comparison](../patterns/comparison.md)** — over-indexes 2.13x but only 1.9% of videos use it. The opening.
+- **[exclusivity](../patterns/exclusivity.md)** — over-indexes 7.5x but only 1% of videos use it. The opening.
+- **[comparison](../patterns/comparison.md)** — over-indexes 2.14x but only 1.7% of videos use it. The opening.
+- **[newness](../patterns/newness.md)** — over-indexes 1.25x but only 2.4% of videos use it. The opening.
 
 ## Crowded (hard to stand out)
 _Nothing dominant._
@@ -12,16 +13,16 @@ _Nothing dominant._
 ## Every hook pattern here
 | Pattern | Videos | Share | Lift in breakouts |
 | --- | --- | --- | --- |
-| [information-offering](../patterns/information-offering.md) | 276 | 43.6% | 1.05x |
-| [before-after](../patterns/before-after.md) | 51 | 8.1% | 1.13x |
-| [removing-limitations](../patterns/removing-limitations.md) | 41 | 6.5% | 0.84x |
-| [direct-callout](../patterns/direct-callout.md) | 41 | 6.5% | 0.61x |
-| [pov](../patterns/pov.md) | 40 | 6.3% | 1.28x |
-| [belief-challenging](../patterns/belief-challenging.md) | 39 | 6.2% | 0.34x |
-| [question](../patterns/question.md) | 29 | 4.6% | 0.95x |
-| [newness](../patterns/newness.md) | 17 | 2.7% | 0.92x |
-| [comparison](../patterns/comparison.md) | 12 | 1.9% | 2.13x |
-| [authority](../patterns/authority.md) | 8 | 1.3% | 0.99x |
+| [information-offering](../patterns/information-offering.md) | 322 | 45% | 1.03x |
+| [pov](../patterns/pov.md) | 60 | 8.4% | 1.19x |
+| [before-after](../patterns/before-after.md) | 52 | 7.3% | 1.22x |
+| [removing-limitations](../patterns/removing-limitations.md) | 44 | 6.1% | 0.77x |
+| [direct-callout](../patterns/direct-callout.md) | 44 | 6.1% | 0.57x |
+| [belief-challenging](../patterns/belief-challenging.md) | 43 | 6% | 0.31x |
+| [question](../patterns/question.md) | 33 | 4.6% | 0.96x |
+| [newness](../patterns/newness.md) | 17 | 2.4% | 1.25x |
+| [comparison](../patterns/comparison.md) | 12 | 1.7% | 2.14x |
+| [authority](../patterns/authority.md) | 8 | 1.1% | 1x |
 
 ## Real breakouts, torn down
 ### 1325.58x following · 10M+ · information-offering
