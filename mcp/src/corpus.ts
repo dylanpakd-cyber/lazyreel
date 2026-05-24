@@ -157,6 +157,16 @@ export function getWinners(): Teardown[] {
   catch { _winners = []; }
   return _winners;
 }
+type AppInsights = { analyzed?: number; appsTracked?: { count?: number; list?: { appName: string; appCategory: string; count: number }[] }; categoryCounts?: Record<string, number>; appAdPatterns?: any };
+let _apps: AppInsights | null = null;
+export function getAppInsights(): AppInsights {
+  if (_apps) return _apps;
+  let a: AppInsights;
+  try { a = JSON.parse(readFileSync(dataPath("app-insights.json"), "utf8")); } catch { a = {}; }
+  _apps = a;
+  return a;
+}
+
 export type Combo = { combo: string; dims: string; lift: number; nWinners: number; nTotal: number };
 type ComboInsights = { analyzable?: number; overall?: Combo[]; byNiche?: Record<string, Combo[]> };
 let _combos: ComboInsights | null = null;

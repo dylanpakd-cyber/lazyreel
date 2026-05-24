@@ -9,7 +9,7 @@ import {
   ListToolsRequestSchema,
 } from "@modelcontextprotocol/sdk/types.js";
 import {
-  videoIdeas, nicheDecode, formatTeardown, crackedHooks, shootBrief, killTheSlop, searchCorpus, viralTeardowns, contentGaps, formatPlaybook, findTrends, studyExamples, replicateFormat, winningCombos, status,
+  videoIdeas, nicheDecode, formatTeardown, crackedHooks, shootBrief, killTheSlop, searchCorpus, viralTeardowns, contentGaps, formatPlaybook, findTrends, studyExamples, replicateFormat, winningCombos, appInsights, status,
 } from "./skills.js";
 import { SCRIPT_FRAMEWORKS } from "./frameworks.js";
 
@@ -158,6 +158,11 @@ const tools = [
     inputSchema: { type: "object", properties: { niche: { type: "string", description: "Optional niche filter (else cross-niche)." } } },
   },
   {
+    name: "app_insights",
+    description: "The app-space vertical: how mobile apps market on short-form — which app categories advertise on UGC, the apps tracked, and which app-ad patterns over-index in breakouts. Use when the user asks about marketing a mobile app, app-store UGC, or app-ad formats.",
+    inputSchema: { type: "object", properties: {} },
+  },
+  {
     name: "get_status",
     description: "Explain what this MCP server can do and what is intentionally not live yet.",
     inputSchema: { type: "object", properties: {} },
@@ -202,6 +207,8 @@ server.setRequestHandler(CallToolRequestSchema, async (req) => {
         text = replicateFormat({ product: str("product"), niche: str("niche"), trend: str("trend"), model: str("model") }); break;
       case "winning_combos":
         text = winningCombos(str("niche")); break;
+      case "app_insights":
+        text = appInsights(); break;
       case "get_status":
         text = status(process.env.ABG_TOKEN); break;
       default:

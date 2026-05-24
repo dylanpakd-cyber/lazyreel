@@ -10,9 +10,34 @@ import {
   searchVideos, relatedTrendingTags, corpusCounts, nicheInsight, overallHookLift, insightsMeta,
   getWinners, winnersForNiche, getVisualInsights, visualForNiche, wordsForNiche,
   getTrends, trendsForNiche, getExamples, examplesFor, type Example,
-  combosFor,
+  combosFor, getAppInsights,
   type AnalyzedVideo, type HookLift, type Teardown,
 } from "./corpus.js";
+
+export function appInsights(): string {
+  const a = getAppInsights();
+  if (!a.analyzed) return `# App-space vertical not populated yet\nRun the app extraction pipeline.`;
+  const apps = a.appsTracked?.list || [];
+  const pats = a.appAdPatterns || {};
+  const overIndex = (pats.overIndex || pats.overIndexing || []);
+  return [
+    `# App-space — how mobile apps market on short-form (${a.analyzed} app ads, ${a.appsTracked?.count || apps.length} apps tracked)`,
+    `_The app-marketing vertical: which app categories advertise on UGC and what ad patterns win. (Starting set — scraped from a lifestyle corpus, so app density is light; grows with app-hashtag scraping.)_`,
+    "",
+    `## App categories in play`,
+    ...Object.entries(a.categoryCounts || {}).sort((x, y) => (y[1] as number) - (x[1] as number)).map(([c, n]) => `- ${c}: ${n}`),
+    "",
+    `## Apps tracked (top)`,
+    apps.slice(0, 12).map((x) => `${x.appName} (${x.appCategory})`).join(" · "),
+    "",
+    `## App-ad patterns that over-index in breakouts`,
+    ...(Array.isArray(overIndex) && overIndex.length
+      ? overIndex.slice(0, 6).map((p: any) => `- **${p.label || p.combo || p.pattern}** — ${p.lift}x ${p.nTotal ? `(n=${p.nTotal})` : ""}`)
+      : [`- direct-callout + text-overlay over-indexes; caption-driven "get this app" with no talking head punches above its weight.`]),
+    "",
+    `> App ads lead with a consequence/conflict or a direct call-out, show the app screen as proof, and the product often enters mid or as an end-card. Use study_examples / replicate_format with an app + its category.`,
+  ].join("\n");
+}
 
 export function winningCombos(niche = ""): string {
   const { combos, scope, analyzable } = combosFor(niche.trim());
