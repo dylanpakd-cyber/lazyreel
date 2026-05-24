@@ -4,7 +4,7 @@
 
 import {
   SCRIPT_FRAMEWORKS, HOOK_PATTERNS, ANGLES, VISUAL_APPROACHES, AWARENESS,
-  SOPHISTICATION, BANNED_WORDS, VOICE_RULES, UGC_MODIFIERS, FALSE_POSITIVE_LABELS, BREAKOUT_GATES, type HookPattern,
+  SOPHISTICATION, BANNED_WORDS, VOICE_RULES, UGC_MODIFIERS, FALSE_POSITIVE_LABELS, BREAKOUT_GATES, VIDEO_MODELS, type HookPattern,
 } from "./frameworks.js";
 import {
   searchVideos, relatedTrendingTags, corpusCounts, nicheInsight, overallHookLift, insightsMeta,
@@ -30,6 +30,44 @@ export function studyExamples(niche = "", videoFormat = "", hookPattern = "", li
     "",
     `> Open the links, watch the first 3 seconds, and note the hook + the prop + what changes mid-video. That's the format you're replicating.`,
   ].join("\n");
+}
+
+export type ReplicateInput = { product: string; niche?: string; trend?: string; model?: string };
+
+export function replicateFormat(i: ReplicateInput): string {
+  const product = i.product.trim();
+  const niche = (i.niche || "your niche").trim();
+  // pick the trend: by name if given, else the top trend that fits the niche
+  const trends = getTrends();
+  const trend = (i.trend && trends.find((t) => t.name.toLowerCase().includes(i.trend!.toLowerCase())))
+    || trendsForNiche(niche, 1)[0] || trends[0];
+  if (!trend) return `# No trends available\nRun the trend pipeline first.`;
+  const model = VIDEO_MODELS.find((m) => i.model && (m.id === i.model.toLowerCase() || m.name.toLowerCase().includes(i.model.toLowerCase()))) || VIDEO_MODELS[0];
+  const ex = (examplesFor({ niche, videoFormat: trend.videoFormat, hookPattern: trend.hookPattern }, 3).length
+    ? examplesFor({ niche, videoFormat: trend.videoFormat, hookPattern: trend.hookPattern }, 3)
+    : examplesFor({ videoFormat: trend.videoFormat, hookPattern: trend.hookPattern }, 3));
+  const brief = shootBrief({ product, audience: niche + " buyer", objective: "first purchase", framework: trend.framework });
+
+  return [
+    `# Replicate: ${trend.name}`,
+    `_Turning a proven format into a video for **${product}**. Format chosen for ${niche} (recurs across ${trend.recurrence}, ${trend.transfer.join(", ")}, ${trend.medianVpf}x median reach)._`,
+    "",
+    `## 1. The format you're copying`,
+    trend.formula ? `- **Mechanic:** ${trend.formula}` : "",
+    trend.whyItTravels ? `- **Why it works:** ${trend.whyItTravels}` : "",
+    `- **Shape:** ${trend.framework} framework · ${trend.videoFormat} format · ${trend.hookPattern} hook`,
+    "",
+    ...(ex.length ? [`## 2. Watch these real ones first`, ...ex.map(exampleLine), ""] : []),
+    `## 3. Your shoot-ready brief`,
+    brief,
+    "",
+    `## 4. Generate it with ${model.name}`,
+    `- **Prompt grammar:** ${model.promptGrammar}`,
+    ...model.notes.map((n) => `- ${n}`),
+    `- **Apply it:** take each beat from the brief above, write it as one ${model.name} shot using that grammar, keep the spoken hook in quotes, and chain the shots. Replace the example's product moment with ${product}.`,
+    "",
+    `> The format + the real examples are the proof; the brief + the model prompt are how you ship it this afternoon.`,
+  ].filter(Boolean).join("\n");
 }
 
 export function findTrends(niche = "", limit = 8): string {
@@ -480,7 +518,7 @@ export function status(token?: string): string {
     tokenLine,
     "",
     "**Live now:**",
-    "- 12 skills incl. study_examples (real video links), find_trends, viral_teardowns, content_gaps, format_playbook",
+    "- 13 skills incl. replicate_format (format→brief→model prompt), study_examples (real links), find_trends, viral_teardowns",
     `- ${getWinners().length} real breakout videos torn down (the actual viral mechanism, diagnosed from transcript + engagement)`,
     getVisualInsights().analyzed ? `- ${getVisualInsights().analyzed} videos analyzed visually (format + craft from the first 3 seconds of frames)` : "- visual/format layer: scripts ready, run pipeline/visual.mjs to populate",
     `- ${SCRIPT_FRAMEWORKS.length} named script frameworks, ${HOOK_PATTERNS.length} hook patterns, ${ANGLES.length} proven UGC angles`,

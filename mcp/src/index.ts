@@ -9,7 +9,7 @@ import {
   ListToolsRequestSchema,
 } from "@modelcontextprotocol/sdk/types.js";
 import {
-  videoIdeas, nicheDecode, formatTeardown, crackedHooks, shootBrief, killTheSlop, searchCorpus, viralTeardowns, contentGaps, formatPlaybook, findTrends, studyExamples, status,
+  videoIdeas, nicheDecode, formatTeardown, crackedHooks, shootBrief, killTheSlop, searchCorpus, viralTeardowns, contentGaps, formatPlaybook, findTrends, studyExamples, replicateFormat, status,
 } from "./skills.js";
 import { SCRIPT_FRAMEWORKS } from "./frameworks.js";
 
@@ -148,6 +148,11 @@ const tools = [
     inputSchema: { type: "object", properties: { niche: { type: "string", description: "Niche filter (e.g. 'skincare')." }, videoFormat: { type: "string", description: "Format filter (e.g. 'before-after', 'talking-head')." }, hookPattern: { type: "string", description: "Hook pattern filter (e.g. 'direct-callout')." }, limit: { type: "number", description: "Max videos (1-20). Default 8." } } },
   },
   {
+    name: "replicate_format",
+    description: "The make-a-video bridge: given a product (and niche/trend/model), return the proven format to copy, real example videos to watch first, a shoot-ready brief, AND a generation prompt scaffold for a specific AI video model (Seedance/Kling/Veo/Higgsfield). Use when the user wants to actually MAKE or replicate a video, not just analyze.",
+    inputSchema: { type: "object", properties: { product: { type: "string", description: "The product/offer to make a video for." }, niche: { type: "string", description: "The niche (picks the fitting trend)." }, trend: { type: "string", description: "Optional: a specific trend name to replicate." }, model: { type: "string", description: "Optional video model: seedance|kling|veo|higgsfield." } }, required: ["product"] },
+  },
+  {
     name: "get_status",
     description: "Explain what this MCP server can do and what is intentionally not live yet.",
     inputSchema: { type: "object", properties: {} },
@@ -188,6 +193,8 @@ server.setRequestHandler(CallToolRequestSchema, async (req) => {
         text = findTrends(str("niche"), num("limit") ?? 8); break;
       case "study_examples":
         text = studyExamples(str("niche"), str("videoFormat"), str("hookPattern"), num("limit") ?? 8); break;
+      case "replicate_format":
+        text = replicateFormat({ product: str("product"), niche: str("niche"), trend: str("trend"), model: str("model") }); break;
       case "get_status":
         text = status(process.env.ABG_TOKEN); break;
       default:

@@ -168,3 +168,31 @@ export const BREAKOUT_GATES = [
   "engagement-quality: organic engagement rate, not boosted/zero-share reach",
   "product-necessity + recurrence: the product is necessary to the video AND the mechanic repeats across creators",
 ];
+
+// VIDEO MODELS — per-model generation guidance for turning a decoded format into
+// an actual AI-video prompt. The Seedance grammar is mined from real UGC ad skills;
+// the others share the same UGC-first principles with model-specific notes.
+export type VideoModel = {
+  id: string;
+  name: string;
+  promptGrammar: string;
+  notes: string[];
+};
+export const VIDEO_MODELS: VideoModel[] = [
+  { id: "seedance", name: "Seedance 2.0",
+    promptGrammar: "Per 5s shot: [shot type + framing] of [subject] [ONE action]. [environment + light source]. [camera: static or slight handheld]. Audio: \"[dialogue in quotes, ~3 words per second]\". [UGC modifiers].",
+    notes: [
+      "Reference a consistent creator with @Image1 and lock the character across shots with @Video1; clone the voice with @Audio1.",
+      "ALWAYS include: iPhone handheld, natural/window light, slight camera shake, casual, authentic, 9:16. NEVER: cinematic, film grain, dramatic lighting, lens flare, dolly/crane/gimbal, color grade, bokeh, slow motion.",
+      "Describe every hand, the exact expression, what's on the surface AND what's NOT — if you don't describe it, Seedance invents it.",
+      "For risky categories (makeup application, food being eaten, tiny text): use the restrictive-negative pattern — state the exact action + starting state + an explicit forbidden-element list — or steer to hold-and-show." ] },
+  { id: "kling", name: "Kling",
+    promptGrammar: "Subject + action + environment + camera move + style, one clear motion per clip; keep prompts concrete and short.",
+    notes: ["Strong at realistic motion; keep one action per generation and chain clips.", "Same UGC-first rules: handheld, natural light, 9:16, no cinematic jargon.", "Use image-to-video from a consistent first frame to hold the creator/look."] },
+  { id: "veo", name: "Veo 3",
+    promptGrammar: "Scene description + subject + action + camera + audio cue; supports native audio/dialogue.",
+    notes: ["Can generate dialogue/audio natively — write the spoken hook in quotes.", "Keep the look UGC: phone-shot, real setting, imperfect framing.", "Specify the first-3s hook beat explicitly; that's what carries it."] },
+  { id: "higgsfield", name: "Higgsfield",
+    promptGrammar: "Subject + motion preset + environment; lean on its motion/character presets for consistent talent.",
+    notes: ["Good for consistent character + motion presets across a series.", "Still hold the UGC aesthetic; avoid over-stylized presets for native-feeling ads."] },
+];
