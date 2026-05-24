@@ -3,8 +3,8 @@
 [← all patterns](../README.md)
 
 ## Niches where it over-performs
-- [skincare](../niches/skincare.md) — 5.93x
-- [supplements](../niches/supplements.md) — 1.19x
+- [skincare](../niches/skincare.md) — 8.91x
+- [supplements](../niches/supplements.md) — 1.2x
 
 ## How it actually worked (from real teardowns)
 _No teardown examples using this pattern yet._

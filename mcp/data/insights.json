@@ -1,34 +1,35 @@
 {
   "generatedAt": "2026-05-24",
   "source": "apify:tiktok + llm-label",
-  "decoded": 3701,
+  "decoded": 4475,
   "method": "contrastive lift: breakouts (top-quartile views-per-follower) vs rest, per niche",
   "note": "Derived aggregates only; no source video text. Lift>1 means the hook pattern is over-represented among videos that over-reached their creator's following. Read low nTotal with caution.",
   "classifiedShare": 1,
   "hookPatternCounts": {
-    "information-offering": 1573,
-    "belief-challenging": 395,
-    "direct-callout": 248,
-    "removing-limitations": 232,
-    "before-after": 232,
-    "none": 164,
-    "question": 160,
-    "newness": 155,
-    "pov": 118,
-    "size-of-claim": 77,
-    "comparison": 76,
-    "authority": 70,
-    "generic": 62,
-    "problem-agitate-solution": 39,
-    "exclusivity": 32,
-    "speed-of-claim": 30,
-    "humor": 9,
+    "information-offering": 1881,
+    "belief-challenging": 483,
+    "removing-limitations": 315,
+    "direct-callout": 288,
+    "before-after": 270,
+    "none": 229,
+    "question": 186,
+    "newness": 171,
+    "pov": 123,
+    "comparison": 99,
+    "authority": 98,
+    "size-of-claim": 98,
+    "generic": 64,
+    "problem-agitate-solution": 49,
+    "speed-of-claim": 40,
+    "exclusivity": 38,
+    "humor": 10,
+    "bandwagon": 5,
+    "x-without-y": 5,
     "unknown": 5,
-    "bandwagon": 4,
-    "x-without-y": 4,
     "listicle": 2,
     "organic": 2,
     "tease": 2,
+    "observation": 2,
     "none - no spoken hook present": 2,
     "industry-contrarian": 1,
     "aspiration": 1,
@@ -37,367 +38,400 @@
     "nostalgia": 1,
     "storytelling": 1,
     "unidentifiable": 1,
-    "observation": 1
+    "removal-of-limitations": 1
   },
   "frameworkCounts": {
-    "organic": 2289,
-    "listicle": 516,
-    "problem-agitate-solution": 421,
-    "industry-contrarian": 155,
-    "bandwagon": 53,
-    "us-vs-them": 51,
-    "founder-objections": 49,
-    "x-without-y": 39,
-    "founder": 37,
-    "information-offering": 28,
-    "none": 18,
-    "ugly-ad": 15,
+    "organic": 2680,
+    "listicle": 657,
+    "problem-agitate-solution": 537,
+    "industry-contrarian": 197,
+    "x-without-y": 73,
+    "us-vs-them": 62,
+    "founder-objections": 62,
+    "bandwagon": 56,
+    "founder": 44,
+    "information-offering": 30,
+    "none": 28,
+    "ugly-ad": 17,
     "problem-agitate-solve": 13,
+    "tease": 6,
     "unknown": 5,
-    "tease": 4,
     "unidentifiable": 4,
     "comparison": 3,
     "before-after": 1
   },
   "nicheCounts": {
-    "ABG beauty": 557,
-    "fashion": 400,
-    "home and cleaning": 399,
-    "food and beverage": 398,
-    "tech and SaaS": 395,
-    "pets": 383,
-    "supplements": 329,
-    "skincare": 326,
-    "fitness": 317,
-    "hair": 197
+    "ABG beauty": 633,
+    "tech and SaaS": 487,
+    "food and beverage": 481,
+    "home and cleaning": 461,
+    "pets": 442,
+    "fitness": 432,
+    "fashion": 425,
+    "supplements": 420,
+    "skincare": 398,
+    "hair": 296
   },
   "overallHookLift": [
     {
-      "label": "before-after",
-      "lift": 1.52,
-      "nWinners": 78,
-      "nTotal": 232,
+      "label": "humor",
+      "lift": 2,
+      "nWinners": 4,
+      "nTotal": 10,
       "medianVpf": 13
     },
     {
-      "label": "humor",
-      "lift": 1.5,
-      "nWinners": 3,
-      "nTotal": 9,
-      "medianVpf": 9.06
-    },
-    {
       "label": "direct-callout",
-      "lift": 1.4,
-      "nWinners": 79,
-      "nTotal": 248,
-      "medianVpf": 11
+      "lift": 1.48,
+      "nWinners": 95,
+      "nTotal": 288,
+      "medianVpf": 9
     },
     {
       "label": "exclusivity",
-      "lift": 1.17,
-      "nWinners": 9,
-      "nTotal": 32,
+      "lift": 1.38,
+      "nWinners": 12,
+      "nTotal": 38,
       "medianVpf": 7
     },
     {
+      "label": "before-after",
+      "lift": 1.35,
+      "nWinners": 84,
+      "nTotal": 270,
+      "medianVpf": 9
+    },
+    {
       "label": "pov",
-      "lift": 1.16,
-      "nWinners": 33,
-      "nTotal": 118,
-      "medianVpf": 8
+      "lift": 1.24,
+      "nWinners": 36,
+      "nTotal": 123,
+      "medianVpf": 8.36
     }
   ],
   "byNiche": {
     "ABG beauty": {
-      "sampleSize": 557,
-      "breakoutThresholdVpf": 37.6,
+      "sampleSize": 633,
+      "breakoutThresholdVpf": 31.01,
       "hookPatternsThatOverIndex": [
         {
           "label": "exclusivity",
-          "lift": 5.96,
-          "nWinners": 4,
-          "nTotal": 6,
-          "medianVpf": 42
+          "lift": 7.45,
+          "nWinners": 5,
+          "nTotal": 7,
+          "medianVpf": 40.6
         },
         {
           "label": "comparison",
-          "lift": 2.48,
+          "lift": 2.13,
           "nWinners": 5,
-          "nTotal": 11,
-          "medianVpf": 25.99
+          "nTotal": 12,
+          "medianVpf": 22
         },
         {
-          "label": "authority",
-          "lift": 1.19,
-          "nWinners": 2,
-          "nTotal": 7,
-          "medianVpf": 9.6
-        },
-        {
-          "label": "before-after",
-          "lift": 1.19,
-          "nWinners": 14,
-          "nTotal": 49,
-          "medianVpf": 8.73
+          "label": "pov",
+          "lift": 1.28,
+          "nWinners": 12,
+          "nTotal": 40,
+          "medianVpf": 7
         }
       ],
       "frameworks": [
         {
-          "label": "problem-agitate-solution",
-          "lift": 1.62,
-          "nWinners": 12,
-          "nTotal": 34,
-          "medianVpf": 10
-        },
-        {
-          "label": "us-vs-them",
-          "lift": 1.32,
-          "nWinners": 4,
-          "nTotal": 13,
-          "medianVpf": 7.31
-        },
-        {
           "label": "founder-objections",
-          "lift": 1.19,
-          "nWinners": 2,
-          "nTotal": 7,
-          "medianVpf": 8.24
+          "lift": 1.79,
+          "nWinners": 3,
+          "nTotal": 8,
+          "medianVpf": 14
+        },
+        {
+          "label": "problem-agitate-solution",
+          "lift": 1.23,
+          "nWinners": 12,
+          "nTotal": 41,
+          "medianVpf": 7.2
         }
       ],
       "patternTable": [
         {
           "label": "information-offering",
-          "count": 234,
-          "sharePct": 42,
-          "lift": 1.03
+          "count": 276,
+          "sharePct": 43.6,
+          "lift": 1.05
         },
         {
           "label": "before-after",
-          "count": 49,
-          "sharePct": 8.8,
-          "lift": 1.19
-        },
-        {
-          "label": "pov",
-          "count": 39,
-          "sharePct": 7,
-          "lift": 1.03
-        },
-        {
-          "label": "direct-callout",
-          "count": 35,
-          "sharePct": 6.3,
-          "lift": 0.62
-        },
-        {
-          "label": "belief-challenging",
-          "count": 35,
-          "sharePct": 6.3,
-          "lift": 0.38
+          "count": 51,
+          "sharePct": 8.1,
+          "lift": 1.13
         },
         {
           "label": "removing-limitations",
-          "count": 34,
-          "sharePct": 6.1,
-          "lift": 0.92
+          "count": 41,
+          "sharePct": 6.5,
+          "lift": 0.84
+        },
+        {
+          "label": "direct-callout",
+          "count": 41,
+          "sharePct": 6.5,
+          "lift": 0.61
+        },
+        {
+          "label": "pov",
+          "count": 40,
+          "sharePct": 6.3,
+          "lift": 1.28
+        },
+        {
+          "label": "belief-challenging",
+          "count": 39,
+          "sharePct": 6.2,
+          "lift": 0.34
         },
         {
           "label": "question",
           "count": 29,
-          "sharePct": 5.2,
+          "sharePct": 4.6,
           "lift": 0.95
         },
         {
           "label": "newness",
-          "count": 15,
+          "count": 17,
           "sharePct": 2.7,
-          "lift": 1.08
+          "lift": 0.92
         },
         {
           "label": "comparison",
-          "count": 11,
-          "sharePct": 2,
-          "lift": 2.48
+          "count": 12,
+          "sharePct": 1.9,
+          "lift": 2.13
         },
         {
           "label": "authority",
-          "count": 7,
+          "count": 8,
           "sharePct": 1.3,
-          "lift": 1.19
+          "lift": 0.99
+        },
+        {
+          "label": "exclusivity",
+          "count": 7,
+          "sharePct": 1.1,
+          "lift": 7.45
         },
         {
           "label": "problem-agitate-solution",
           "count": 7,
-          "sharePct": 1.3,
-          "lift": 0.5
-        },
-        {
-          "label": "exclusivity",
-          "count": 6,
           "sharePct": 1.1,
-          "lift": 5.96
+          "lift": 0.5
         }
       ],
       "gaps": [
         {
           "label": "exclusivity",
-          "count": 6,
+          "count": 7,
           "sharePct": 1.1,
-          "lift": 5.96
+          "lift": 7.45
         },
         {
           "label": "comparison",
-          "count": 11,
-          "sharePct": 2,
-          "lift": 2.48
+          "count": 12,
+          "sharePct": 1.9,
+          "lift": 2.13
         }
       ],
       "saturated": []
     },
     "fitness": {
-      "sampleSize": 317,
-      "breakoutThresholdVpf": 58.76,
+      "sampleSize": 432,
+      "breakoutThresholdVpf": 39.01,
       "hookPatternsThatOverIndex": [
         {
           "label": "before-after",
-          "lift": 3.39,
-          "nWinners": 8,
-          "nTotal": 15,
-          "medianVpf": 70.48
+          "lift": 2.45,
+          "nWinners": 9,
+          "nTotal": 20,
+          "medianVpf": 21
         },
         {
           "label": "direct-callout",
-          "lift": 1.35,
-          "nWinners": 10,
-          "nTotal": 32,
-          "medianVpf": 9
+          "lift": 1.68,
+          "nWinners": 14,
+          "nTotal": 39,
+          "medianVpf": 5.17
+        },
+        {
+          "label": "size-of-claim",
+          "lift": 1.5,
+          "nWinners": 2,
+          "nTotal": 6,
+          "medianVpf": 20
         },
         {
           "label": "pov",
-          "lift": 1.27,
+          "lift": 1.29,
           "nWinners": 3,
           "nTotal": 10,
           "medianVpf": 9
+        },
+        {
+          "label": "belief-challenging",
+          "lift": 1.18,
+          "nWinners": 20,
+          "nTotal": 71,
+          "medianVpf": 3.92
         }
       ],
       "frameworks": [
         {
           "label": "bandwagon",
-          "lift": 2.37,
+          "lift": 2.4,
           "nWinners": 4,
           "nTotal": 9,
           "medianVpf": 5.98
         },
         {
           "label": "us-vs-them",
-          "lift": 1.48,
+          "lift": 1.5,
           "nWinners": 3,
           "nTotal": 9,
           "medianVpf": 8.64
+        },
+        {
+          "label": "industry-contrarian",
+          "lift": 1.24,
+          "nWinners": 7,
+          "nTotal": 24,
+          "medianVpf": 4
+        },
+        {
+          "label": "organic",
+          "lift": 1.16,
+          "nWinners": 80,
+          "nTotal": 287,
+          "medianVpf": 7.33
         }
       ],
       "patternTable": [
         {
           "label": "information-offering",
-          "count": 81,
-          "sharePct": 25.6,
-          "lift": 0.73
+          "count": 125,
+          "sharePct": 28.9,
+          "lift": 0.83
         },
         {
           "label": "belief-challenging",
-          "count": 65,
-          "sharePct": 20.5,
-          "lift": 1.05
+          "count": 71,
+          "sharePct": 16.4,
+          "lift": 1.18
         },
         {
           "label": "removing-limitations",
-          "count": 38,
-          "sharePct": 12,
-          "lift": 0.92
+          "count": 50,
+          "sharePct": 11.6,
+          "lift": 0.75
         },
         {
           "label": "direct-callout",
-          "count": 32,
-          "sharePct": 10.1,
-          "lift": 1.35
+          "count": 39,
+          "sharePct": 9,
+          "lift": 1.68
         },
         {
           "label": "before-after",
-          "count": 15,
-          "sharePct": 4.7,
-          "lift": 3.39
+          "count": 20,
+          "sharePct": 4.6,
+          "lift": 2.45
         },
         {
           "label": "question",
-          "count": 13,
-          "sharePct": 4.1,
-          "lift": 0
+          "count": 16,
+          "sharePct": 3.7,
+          "lift": 0.2
         },
         {
           "label": "pov",
           "count": 10,
-          "sharePct": 3.2,
-          "lift": 1.27
+          "sharePct": 2.3,
+          "lift": 1.29
+        },
+        {
+          "label": "size-of-claim",
+          "count": 6,
+          "sharePct": 1.4,
+          "lift": 1.5
+        },
+        {
+          "label": "newness",
+          "count": 6,
+          "sharePct": 1.4,
+          "lift": 0.6
         }
       ],
       "gaps": [
         {
           "label": "before-after",
-          "count": 15,
-          "sharePct": 4.7,
-          "lift": 3.39
+          "count": 20,
+          "sharePct": 4.6,
+          "lift": 2.45
         },
         {
-          "label": "direct-callout",
-          "count": 32,
-          "sharePct": 10.1,
-          "lift": 1.35
+          "label": "size-of-claim",
+          "count": 6,
+          "sharePct": 1.4,
+          "lift": 1.5
         },
         {
           "label": "pov",
           "count": 10,
-          "sharePct": 3.2,
-          "lift": 1.27
+          "sharePct": 2.3,
+          "lift": 1.29
         }
       ],
       "saturated": [
         {
           "label": "information-offering",
-          "count": 81,
-          "sharePct": 25.6,
-          "lift": 0.73
+          "count": 125,
+          "sharePct": 28.9,
+          "lift": 0.83
         }
       ]
     },
     "supplements": {
-      "sampleSize": 329,
-      "breakoutThresholdVpf": 13.86,
+      "sampleSize": 420,
+      "breakoutThresholdVpf": 12.72,
       "hookPatternsThatOverIndex": [
         {
           "label": "direct-callout",
-          "lift": 3.62,
-          "nWinners": 11,
-          "nTotal": 20,
-          "medianVpf": 24
+          "lift": 3,
+          "nWinners": 12,
+          "nTotal": 24,
+          "medianVpf": 13
         },
         {
           "label": "exclusivity",
-          "lift": 2.96,
+          "lift": 2.25,
           "nWinners": 3,
-          "nTotal": 6,
-          "medianVpf": 12
+          "nTotal": 7,
+          "medianVpf": 10.47
         },
         {
-          "label": "authority",
-          "lift": 1.48,
-          "nWinners": 9,
-          "nTotal": 27,
-          "medianVpf": 2.03
+          "label": "before-after",
+          "lift": 1.38,
+          "nWinners": 6,
+          "nTotal": 19,
+          "medianVpf": 3.04
+        },
+        {
+          "label": "comparison",
+          "lift": 1.33,
+          "nWinners": 4,
+          "nTotal": 13,
+          "medianVpf": 0.6
         },
         {
           "label": "speed-of-claim",
-          "lift": 1.19,
+          "lift": 1.2,
           "nWinners": 2,
           "nTotal": 7,
           "medianVpf": 2.68
@@ -405,468 +439,556 @@
       ],
       "frameworks": [
         {
+          "label": "x-without-y",
+          "lift": 3,
+          "nWinners": 3,
+          "nTotal": 6,
+          "medianVpf": 10
+        },
+        {
           "label": "founder",
-          "lift": 1.48,
+          "lift": 1.5,
           "nWinners": 2,
           "nTotal": 6,
           "medianVpf": 0
         },
         {
-          "label": "problem-agitate-solution",
-          "lift": 1.37,
-          "nWinners": 19,
-          "nTotal": 60,
-          "medianVpf": 4
+          "label": "organic",
+          "lift": 1.31,
+          "nWinners": 31,
+          "nTotal": 102,
+          "medianVpf": 2
+        },
+        {
+          "label": "founder-objections",
+          "lift": 1.2,
+          "nWinners": 4,
+          "nTotal": 14,
+          "medianVpf": 3
         }
       ],
       "patternTable": [
         {
           "label": "information-offering",
-          "count": 141,
-          "sharePct": 42.9,
-          "lift": 0.77
+          "count": 156,
+          "sharePct": 37.1,
+          "lift": 0.9
         },
         {
           "label": "belief-challenging",
-          "count": 69,
-          "sharePct": 21,
-          "lift": 0.75
+          "count": 102,
+          "sharePct": 24.3,
+          "lift": 0.69
         },
         {
           "label": "authority",
-          "count": 27,
-          "sharePct": 8.2,
-          "lift": 1.48
-        },
-        {
-          "label": "direct-callout",
-          "count": 20,
-          "sharePct": 6.1,
-          "lift": 3.62
-        },
-        {
-          "label": "removing-limitations",
-          "count": 18,
-          "sharePct": 5.5,
-          "lift": 0.59
-        },
-        {
-          "label": "before-after",
-          "count": 15,
-          "sharePct": 4.6,
+          "count": 34,
+          "sharePct": 8.1,
           "lift": 1.08
         },
         {
+          "label": "removing-limitations",
+          "count": 26,
+          "sharePct": 6.2,
+          "lift": 0.71
+        },
+        {
+          "label": "direct-callout",
+          "count": 24,
+          "sharePct": 5.7,
+          "lift": 3
+        },
+        {
+          "label": "before-after",
+          "count": 19,
+          "sharePct": 4.5,
+          "lift": 1.38
+        },
+        {
+          "label": "comparison",
+          "count": 13,
+          "sharePct": 3.1,
+          "lift": 1.33
+        },
+        {
           "label": "size-of-claim",
-          "count": 9,
-          "sharePct": 2.7,
-          "lift": 0.85
+          "count": 11,
+          "sharePct": 2.6,
+          "lift": 1.13
+        },
+        {
+          "label": "question",
+          "count": 11,
+          "sharePct": 2.6,
+          "lift": 1.13
+        },
+        {
+          "label": "exclusivity",
+          "count": 7,
+          "sharePct": 1.7,
+          "lift": 2.25
         },
         {
           "label": "speed-of-claim",
           "count": 7,
-          "sharePct": 2.1,
-          "lift": 1.19
-        },
-        {
-          "label": "question",
-          "count": 7,
-          "sharePct": 2.1,
-          "lift": 0.49
-        },
-        {
-          "label": "exclusivity",
-          "count": 6,
-          "sharePct": 1.8,
-          "lift": 2.96
+          "sharePct": 1.7,
+          "lift": 1.2
         }
       ],
       "gaps": [
         {
           "label": "exclusivity",
-          "count": 6,
-          "sharePct": 1.8,
-          "lift": 2.96
+          "count": 7,
+          "sharePct": 1.7,
+          "lift": 2.25
+        },
+        {
+          "label": "before-after",
+          "count": 19,
+          "sharePct": 4.5,
+          "lift": 1.38
+        },
+        {
+          "label": "comparison",
+          "count": 13,
+          "sharePct": 3.1,
+          "lift": 1.33
+        },
+        {
+          "label": "speed-of-claim",
+          "count": 7,
+          "sharePct": 1.7,
+          "lift": 1.2
         }
       ],
       "saturated": [
         {
           "label": "information-offering",
-          "count": 141,
-          "sharePct": 42.9,
-          "lift": 0.77
+          "count": 156,
+          "sharePct": 37.1,
+          "lift": 0.9
         },
         {
           "label": "belief-challenging",
-          "count": 69,
-          "sharePct": 21,
-          "lift": 0.75
+          "count": 102,
+          "sharePct": 24.3,
+          "lift": 0.69
         }
       ]
     },
     "skincare": {
-      "sampleSize": 326,
-      "breakoutThresholdVpf": 9.73,
+      "sampleSize": 398,
+      "breakoutThresholdVpf": 7.63,
       "hookPatternsThatOverIndex": [
         {
           "label": "speed-of-claim",
-          "lift": 5.93,
+          "lift": 8.91,
+          "nWinners": 6,
+          "nTotal": 8,
+          "medianVpf": 30
+        },
+        {
+          "label": "question",
+          "lift": 5.94,
           "nWinners": 4,
           "nTotal": 6,
-          "medianVpf": 50
+          "medianVpf": 10
         },
         {
           "label": "problem-agitate-solution",
-          "lift": 2.96,
+          "lift": 2.97,
           "nWinners": 3,
           "nTotal": 6,
           "medianVpf": 9
         },
         {
+          "label": "direct-callout",
+          "lift": 1.49,
+          "nWinners": 5,
+          "nTotal": 15,
+          "medianVpf": 3.62
+        },
+        {
           "label": "pov",
-          "lift": 1.48,
+          "lift": 1.49,
           "nWinners": 2,
           "nTotal": 6,
           "medianVpf": 2
-        },
-        {
-          "label": "belief-challenging",
-          "lift": 1.36,
-          "nWinners": 11,
-          "nTotal": 35,
-          "medianVpf": 1.63
-        },
-        {
-          "label": "comparison",
-          "lift": 1.19,
-          "nWinners": 2,
-          "nTotal": 7,
-          "medianVpf": 4.39
         }
       ],
       "frameworks": [
         {
           "label": "industry-contrarian",
-          "lift": 1.98,
+          "lift": 1.62,
           "nWinners": 6,
-          "nTotal": 15,
+          "nTotal": 17,
           "medianVpf": 0.92
+        },
+        {
+          "label": "founder",
+          "lift": 1.49,
+          "nWinners": 2,
+          "nTotal": 6,
+          "medianVpf": 2
         }
       ],
       "patternTable": [
         {
           "label": "information-offering",
-          "count": 175,
-          "sharePct": 53.8,
-          "lift": 0.85
+          "count": 195,
+          "sharePct": 49.1,
+          "lift": 0.84
         },
         {
           "label": "belief-challenging",
-          "count": 35,
-          "sharePct": 10.8,
-          "lift": 1.36
-        },
-        {
-          "label": "before-after",
-          "count": 26,
-          "sharePct": 8,
-          "lift": 0.89
+          "count": 46,
+          "sharePct": 11.6,
+          "lift": 1.3
         },
         {
           "label": "removing-limitations",
-          "count": 23,
-          "sharePct": 7.1,
-          "lift": 0.62
+          "count": 37,
+          "sharePct": 9.3,
+          "lift": 0.46
+        },
+        {
+          "label": "before-after",
+          "count": 34,
+          "sharePct": 8.6,
+          "lift": 0.91
         },
         {
           "label": "authority",
-          "count": 20,
-          "sharePct": 6.2,
-          "lift": 0.99
+          "count": 26,
+          "sharePct": 6.5,
+          "lift": 1.09
         },
         {
           "label": "direct-callout",
-          "count": 11,
-          "sharePct": 3.4,
-          "lift": 0.66
+          "count": 15,
+          "sharePct": 3.8,
+          "lift": 1.49
+        },
+        {
+          "label": "speed-of-claim",
+          "count": 8,
+          "sharePct": 2,
+          "lift": 8.91
         },
         {
           "label": "comparison",
           "count": 7,
-          "sharePct": 2.2,
+          "sharePct": 1.8,
           "lift": 1.19
         },
         {
-          "label": "speed-of-claim",
+          "label": "question",
           "count": 6,
-          "sharePct": 1.8,
-          "lift": 5.93
+          "sharePct": 1.5,
+          "lift": 5.94
         },
         {
           "label": "problem-agitate-solution",
           "count": 6,
-          "sharePct": 1.8,
-          "lift": 2.96
+          "sharePct": 1.5,
+          "lift": 2.97
         },
         {
           "label": "pov",
           "count": 6,
-          "sharePct": 1.8,
-          "lift": 1.48
+          "sharePct": 1.5,
+          "lift": 1.49
         }
       ],
       "gaps": [
         {
           "label": "speed-of-claim",
+          "count": 8,
+          "sharePct": 2,
+          "lift": 8.91
+        },
+        {
+          "label": "question",
           "count": 6,
-          "sharePct": 1.8,
-          "lift": 5.93
+          "sharePct": 1.5,
+          "lift": 5.94
         },
         {
           "label": "problem-agitate-solution",
           "count": 6,
-          "sharePct": 1.8,
-          "lift": 2.96
+          "sharePct": 1.5,
+          "lift": 2.97
+        },
+        {
+          "label": "direct-callout",
+          "count": 15,
+          "sharePct": 3.8,
+          "lift": 1.49
         },
         {
           "label": "pov",
           "count": 6,
-          "sharePct": 1.8,
-          "lift": 1.48
+          "sharePct": 1.5,
+          "lift": 1.49
         }
       ],
       "saturated": [
         {
           "label": "information-offering",
-          "count": 175,
-          "sharePct": 53.8,
-          "lift": 0.85
+          "count": 195,
+          "sharePct": 49.1,
+          "lift": 0.84
         }
       ]
     },
     "food and beverage": {
-      "sampleSize": 398,
-      "breakoutThresholdVpf": 54.26,
+      "sampleSize": 481,
+      "breakoutThresholdVpf": 48.3,
       "hookPatternsThatOverIndex": [
         {
           "label": "direct-callout",
-          "lift": 2.1,
-          "nWinners": 12,
-          "nTotal": 29,
-          "medianVpf": 16.04
+          "lift": 2.29,
+          "nWinners": 13,
+          "nTotal": 30,
+          "medianVpf": 27
         },
         {
           "label": "pov",
-          "lift": 1.7,
+          "lift": 1.71,
           "nWinners": 4,
           "nTotal": 11,
           "medianVpf": 25.41
-        },
-        {
-          "label": "before-after",
-          "lift": 1.19,
-          "nWinners": 4,
-          "nTotal": 14,
-          "medianVpf": 1
         }
       ],
       "frameworks": [
         {
           "label": "organic",
-          "lift": 1.21,
-          "nWinners": 86,
-          "nTotal": 297,
-          "medianVpf": 7.16
+          "lift": 1.24,
+          "nWinners": 104,
+          "nTotal": 355,
+          "medianVpf": 6.41
         }
       ],
       "patternTable": [
         {
           "label": "information-offering",
-          "count": 185,
-          "sharePct": 47.1,
-          "lift": 1.04
+          "count": 217,
+          "sharePct": 45.6,
+          "lift": 1.12
         },
         {
           "label": "belief-challenging",
-          "count": 48,
-          "sharePct": 12.2,
-          "lift": 0.59
-        },
-        {
-          "label": "direct-callout",
-          "count": 29,
-          "sharePct": 7.4,
-          "lift": 2.1
-        },
-        {
-          "label": "question",
-          "count": 20,
-          "sharePct": 5.1,
-          "lift": 0.74
-        },
-        {
-          "label": "newness",
-          "count": 20,
-          "sharePct": 5.1,
-          "lift": 0.33
-        },
-        {
-          "label": "before-after",
-          "count": 14,
-          "sharePct": 3.6,
-          "lift": 1.19
+          "count": 51,
+          "sharePct": 10.7,
+          "lift": 0.64
         },
         {
           "label": "removing-limitations",
+          "count": 35,
+          "sharePct": 7.4,
+          "lift": 0.39
+        },
+        {
+          "label": "direct-callout",
+          "count": 30,
+          "sharePct": 6.3,
+          "lift": 2.29
+        },
+        {
+          "label": "newness",
+          "count": 24,
+          "sharePct": 5,
+          "lift": 0.27
+        },
+        {
+          "label": "question",
+          "count": 21,
+          "sharePct": 4.4,
+          "lift": 0.71
+        },
+        {
+          "label": "before-after",
+          "count": 15,
+          "sharePct": 3.2,
+          "lift": 1.09
+        },
+        {
+          "label": "size-of-claim",
           "count": 14,
-          "sharePct": 3.6,
-          "lift": 0.49
+          "sharePct": 2.9,
+          "lift": 0.23
         },
         {
           "label": "pov",
           "count": 11,
-          "sharePct": 2.8,
-          "lift": 1.7
+          "sharePct": 2.3,
+          "lift": 1.71
+        },
+        {
+          "label": "authority",
+          "count": 11,
+          "sharePct": 2.3,
+          "lift": 1.13
         },
         {
           "label": "comparison",
           "count": 10,
-          "sharePct": 2.5,
-          "lift": 0
+          "sharePct": 2.1,
+          "lift": 0.33
         },
         {
-          "label": "size-of-claim",
+          "label": "speed-of-claim",
           "count": 9,
-          "sharePct": 2.3,
-          "lift": 0.37
+          "sharePct": 1.9,
+          "lift": 0.38
         }
       ],
       "gaps": [
         {
           "label": "pov",
           "count": 11,
-          "sharePct": 2.8,
-          "lift": 1.7
+          "sharePct": 2.3,
+          "lift": 1.71
         }
       ],
       "saturated": []
     },
     "tech and SaaS": {
-      "sampleSize": 395,
-      "breakoutThresholdVpf": 117.65,
+      "sampleSize": 487,
+      "breakoutThresholdVpf": 87.46,
       "hookPatternsThatOverIndex": [
         {
           "label": "before-after",
-          "lift": 2.99,
+          "lift": 1.79,
           "nWinners": 6,
-          "nTotal": 12,
-          "medianVpf": 169
+          "nTotal": 16,
+          "medianVpf": 15
         },
         {
           "label": "removing-limitations",
-          "lift": 1.24,
-          "nWinners": 12,
-          "nTotal": 41,
-          "medianVpf": 16.03
+          "lift": 1.4,
+          "nWinners": 16,
+          "nTotal": 50,
+          "medianVpf": 10
+        },
+        {
+          "label": "newness",
+          "lift": 1.23,
+          "nWinners": 21,
+          "nTotal": 72,
+          "medianVpf": 18
         }
       ],
       "frameworks": [
         {
-          "label": "organic",
-          "lift": 1.31,
-          "nWinners": 65,
-          "nTotal": 213,
-          "medianVpf": 23.44
+          "label": "x-without-y",
+          "lift": 1.99,
+          "nWinners": 4,
+          "nTotal": 10,
+          "medianVpf": 32
         },
         {
           "label": "bandwagon",
-          "lift": 1.28,
-          "nWinners": 3,
-          "nTotal": 10,
+          "lift": 1.49,
+          "nWinners": 4,
+          "nTotal": 12,
           "medianVpf": 11
+        },
+        {
+          "label": "organic",
+          "lift": 1.33,
+          "nWinners": 73,
+          "nTotal": 237,
+          "medianVpf": 21.61
         }
       ],
       "patternTable": [
         {
           "label": "information-offering",
-          "count": 143,
-          "sharePct": 36.2,
-          "lift": 0.9
+          "count": 181,
+          "sharePct": 37.2,
+          "lift": 0.87
         },
         {
           "label": "newness",
-          "count": 65,
-          "sharePct": 16.5,
-          "lift": 1.15
+          "count": 72,
+          "sharePct": 14.8,
+          "lift": 1.23
         },
         {
           "label": "removing-limitations",
-          "count": 41,
-          "sharePct": 10.4,
-          "lift": 1.24
+          "count": 50,
+          "sharePct": 10.3,
+          "lift": 1.4
         },
         {
           "label": "belief-challenging",
-          "count": 24,
-          "sharePct": 6.1,
-          "lift": 1
+          "count": 32,
+          "sharePct": 6.6,
+          "lift": 0.84
         },
         {
           "label": "question",
-          "count": 22,
+          "count": 27,
           "sharePct": 5.6,
-          "lift": 0.66
+          "lift": 0.85
         },
         {
           "label": "comparison",
-          "count": 15,
-          "sharePct": 3.8,
-          "lift": 0.46
+          "count": 25,
+          "sharePct": 5.1,
+          "lift": 0.41
         },
         {
           "label": "size-of-claim",
-          "count": 15,
-          "sharePct": 3.8,
-          "lift": 0.46
+          "count": 18,
+          "sharePct": 3.7,
+          "lift": 0.6
         },
         {
           "label": "before-after",
-          "count": 12,
-          "sharePct": 3,
-          "lift": 2.99
+          "count": 16,
+          "sharePct": 3.3,
+          "lift": 1.79
         },
         {
           "label": "direct-callout",
-          "count": 10,
-          "sharePct": 2.5,
-          "lift": 0.75
+          "count": 11,
+          "sharePct": 2.3,
+          "lift": 0.66
         },
         {
           "label": "exclusivity",
-          "count": 8,
-          "sharePct": 2,
-          "lift": 0.43
+          "count": 9,
+          "sharePct": 1.9,
+          "lift": 0.37
+        },
+        {
+          "label": "problem-agitate-solution",
+          "count": 7,
+          "sharePct": 1.4,
+          "lift": 0
         }
       ],
       "gaps": [
         {
           "label": "before-after",
-          "count": 12,
-          "sharePct": 3,
-          "lift": 2.99
+          "count": 16,
+          "sharePct": 3.3,
+          "lift": 1.79
         }
       ],
       "saturated": [
         {
           "label": "information-offering",
-          "count": 143,
-          "sharePct": 36.2,
-          "lift": 0.9
+          "count": 181,
+          "sharePct": 37.2,
+          "lift": 0.87
         }
       ]
     },
     "fashion": {
-      "sampleSize": 400,
+      "sampleSize": 425,
       "breakoutThresholdVpf": 30.38,
       "hookPatternsThatOverIndex": [
         {
@@ -878,7 +1000,7 @@
         },
         {
           "label": "comparison",
-          "lift": 1.99,
+          "lift": 2,
           "nWinners": 6,
           "nTotal": 15,
           "medianVpf": 19.18
@@ -891,24 +1013,24 @@
           "medianVpf": 13.93
         },
         {
+          "label": "belief-challenging",
+          "lift": 1.5,
+          "nWinners": 12,
+          "nTotal": 36,
+          "medianVpf": 5
+        },
+        {
           "label": "removing-limitations",
           "lift": 1.33,
           "nWinners": 4,
           "nTotal": 13,
           "medianVpf": 5.79
-        },
-        {
-          "label": "belief-challenging",
-          "lift": 1.25,
-          "nWinners": 10,
-          "nTotal": 34,
-          "medianVpf": 5
         }
       ],
       "frameworks": [
         {
           "label": "problem-agitate-solution",
-          "lift": 1.79,
+          "lift": 1.8,
           "nWinners": 3,
           "nTotal": 8,
           "medianVpf": 8
@@ -917,56 +1039,56 @@
       "patternTable": [
         {
           "label": "information-offering",
-          "count": 180,
-          "sharePct": 45.1,
-          "lift": 0.75
+          "count": 189,
+          "sharePct": 44.6,
+          "lift": 0.71
         },
         {
           "label": "belief-challenging",
-          "count": 34,
+          "count": 36,
           "sharePct": 8.5,
-          "lift": 1.25
+          "lift": 1.5
         },
         {
           "label": "direct-callout",
           "count": 31,
-          "sharePct": 7.8,
+          "sharePct": 7.3,
           "lift": 1.89
         },
         {
           "label": "newness",
-          "count": 22,
-          "sharePct": 5.5,
-          "lift": 0.66
+          "count": 23,
+          "sharePct": 5.4,
+          "lift": 0.63
+        },
+        {
+          "label": "question",
+          "count": 18,
+          "sharePct": 4.2,
+          "lift": 0.6
         },
         {
           "label": "before-after",
           "count": 16,
-          "sharePct": 4,
+          "sharePct": 3.8,
           "lift": 2.33
         },
         {
           "label": "comparison",
           "count": 15,
-          "sharePct": 3.8,
-          "lift": 1.99
-        },
-        {
-          "label": "question",
-          "count": 15,
-          "sharePct": 3.8,
-          "lift": 0.75
+          "sharePct": 3.5,
+          "lift": 2
         },
         {
           "label": "removing-limitations",
           "count": 13,
-          "sharePct": 3.3,
+          "sharePct": 3.1,
           "lift": 1.33
         },
         {
           "label": "size-of-claim",
           "count": 6,
-          "sharePct": 1.5,
+          "sharePct": 1.4,
           "lift": 0
         }
       ],
@@ -974,339 +1096,320 @@
         {
           "label": "before-after",
           "count": 16,
-          "sharePct": 4,
+          "sharePct": 3.8,
           "lift": 2.33
         },
         {
           "label": "comparison",
           "count": 15,
-          "sharePct": 3.8,
-          "lift": 1.99
+          "sharePct": 3.5,
+          "lift": 2
         },
         {
           "label": "removing-limitations",
           "count": 13,
-          "sharePct": 3.3,
+          "sharePct": 3.1,
           "lift": 1.33
         }
       ],
       "saturated": [
         {
           "label": "information-offering",
-          "count": 180,
-          "sharePct": 45.1,
-          "lift": 0.75
+          "count": 189,
+          "sharePct": 44.6,
+          "lift": 0.71
         }
       ]
     },
     "home and cleaning": {
-      "sampleSize": 399,
-      "breakoutThresholdVpf": 25.02,
+      "sampleSize": 461,
+      "breakoutThresholdVpf": 22.02,
       "hookPatternsThatOverIndex": [
         {
-          "label": "authority",
-          "lift": 2.25,
+          "label": "exclusivity",
+          "lift": 2.24,
           "nWinners": 3,
           "nTotal": 7,
-          "medianVpf": 5.72
+          "medianVpf": 10.99
         },
         {
           "label": "before-after",
-          "lift": 1.8,
-          "nWinners": 12,
-          "nTotal": 32,
-          "medianVpf": 17
-        },
-        {
-          "label": "direct-callout",
-          "lift": 1.62,
-          "nWinners": 7,
-          "nTotal": 20,
-          "medianVpf": 9
+          "lift": 1.79,
+          "nWinners": 15,
+          "nTotal": 40,
+          "medianVpf": 13
         },
         {
           "label": "removing-limitations",
-          "lift": 1.57,
-          "nWinners": 12,
-          "nTotal": 35,
-          "medianVpf": 6.66
+          "lift": 1.49,
+          "nWinners": 13,
+          "nTotal": 39,
+          "medianVpf": 6.12
         },
         {
-          "label": "exclusivity",
-          "lift": 1.5,
-          "nWinners": 2,
-          "nTotal": 6,
-          "medianVpf": 16
+          "label": "direct-callout",
+          "lift": 1.3,
+          "nWinners": 7,
+          "nTotal": 23,
+          "medianVpf": 4.61
         }
       ],
       "frameworks": [
         {
           "label": "bandwagon",
-          "lift": 3,
+          "lift": 2.98,
           "nWinners": 4,
           "nTotal": 8,
           "medianVpf": 21
         },
         {
-          "label": "problem-agitate-solution",
-          "lift": 1.87,
-          "nWinners": 33,
-          "nTotal": 86,
-          "medianVpf": 9
+          "label": "x-without-y",
+          "lift": 2.98,
+          "nWinners": 4,
+          "nTotal": 8,
+          "medianVpf": 16
         },
         {
-          "label": "x-without-y",
-          "lift": 1.2,
-          "nWinners": 2,
-          "nTotal": 7,
-          "medianVpf": 7.22
+          "label": "problem-agitate-solution",
+          "lift": 1.7,
+          "nWinners": 37,
+          "nTotal": 102,
+          "medianVpf": 7
         }
       ],
       "patternTable": [
         {
           "label": "information-offering",
-          "count": 193,
-          "sharePct": 48.7,
-          "lift": 0.74
-        },
-        {
-          "label": "removing-limitations",
-          "count": 35,
-          "sharePct": 8.8,
-          "lift": 1.57
+          "count": 216,
+          "sharePct": 47.2,
+          "lift": 0.72
         },
         {
           "label": "before-after",
-          "count": 32,
-          "sharePct": 8.1,
-          "lift": 1.8
+          "count": 40,
+          "sharePct": 8.7,
+          "lift": 1.79
         },
         {
-          "label": "size-of-claim",
-          "count": 25,
-          "sharePct": 6.3,
-          "lift": 1.17
+          "label": "removing-limitations",
+          "count": 39,
+          "sharePct": 8.5,
+          "lift": 1.49
         },
         {
           "label": "belief-challenging",
-          "count": 25,
+          "count": 31,
+          "sharePct": 6.8,
+          "lift": 0.87
+        },
+        {
+          "label": "size-of-claim",
+          "count": 29,
           "sharePct": 6.3,
-          "lift": 0.95
+          "lift": 1.14
         },
         {
           "label": "direct-callout",
-          "count": 20,
-          "sharePct": 5.1,
-          "lift": 1.62
+          "count": 23,
+          "sharePct": 5,
+          "lift": 1.3
         },
         {
           "label": "pov",
           "count": 13,
-          "sharePct": 3.3,
-          "lift": 0.9
+          "sharePct": 2.8,
+          "lift": 0.89
         },
         {
           "label": "newness",
           "count": 11,
-          "sharePct": 2.8,
-          "lift": 1.13
-        },
-        {
-          "label": "problem-agitate-solution",
-          "count": 9,
-          "sharePct": 2.3,
-          "lift": 0
+          "sharePct": 2.4,
+          "lift": 1.12
         },
         {
           "label": "authority",
-          "count": 7,
-          "sharePct": 1.8,
-          "lift": 2.25
+          "count": 11,
+          "sharePct": 2.4,
+          "lift": 1.12
+        },
+        {
+          "label": "problem-agitate-solution",
+          "count": 11,
+          "sharePct": 2.4,
+          "lift": 0.3
         },
         {
           "label": "question",
-          "count": 7,
-          "sharePct": 1.8,
-          "lift": 0.5
+          "count": 9,
+          "sharePct": 2,
+          "lift": 0.37
         },
         {
           "label": "exclusivity",
-          "count": 6,
+          "count": 7,
           "sharePct": 1.5,
-          "lift": 1.5
+          "lift": 2.24
         },
         {
           "label": "comparison",
           "count": 6,
-          "sharePct": 1.5,
+          "sharePct": 1.3,
           "lift": 0.6
         }
       ],
       "gaps": [
         {
-          "label": "authority",
-          "count": 7,
-          "sharePct": 1.8,
-          "lift": 2.25
-        },
-        {
           "label": "exclusivity",
-          "count": 6,
+          "count": 7,
           "sharePct": 1.5,
-          "lift": 1.5
+          "lift": 2.24
         }
       ],
       "saturated": [
         {
           "label": "information-offering",
-          "count": 193,
-          "sharePct": 48.7,
-          "lift": 0.74
+          "count": 216,
+          "sharePct": 47.2,
+          "lift": 0.72
         }
       ]
     },
     "hair": {
-      "sampleSize": 197,
-      "breakoutThresholdVpf": 70.42,
+      "sampleSize": 296,
+      "breakoutThresholdVpf": 63.64,
       "hookPatternsThatOverIndex": [
         {
-          "label": "direct-callout",
-          "lift": 3,
-          "nWinners": 7,
-          "nTotal": 14,
-          "medianVpf": 66
+          "label": "question",
+          "lift": 2.99,
+          "nWinners": 6,
+          "nTotal": 12,
+          "medianVpf": 50
         },
         {
           "label": "pov",
-          "lift": 2.4,
+          "lift": 2.39,
           "nWinners": 4,
           "nTotal": 9,
           "medianVpf": 52.31
         },
         {
-          "label": "question",
-          "lift": 2.14,
-          "nWinners": 5,
-          "nTotal": 12,
-          "medianVpf": 50
+          "label": "removing-limitations",
+          "lift": 1.9,
+          "nWinners": 7,
+          "nTotal": 18,
+          "medianVpf": 6
         },
         {
-          "label": "removing-limitations",
-          "lift": 2,
-          "nWinners": 4,
-          "nTotal": 10,
-          "medianVpf": 10
+          "label": "direct-callout",
+          "lift": 1.9,
+          "nWinners": 7,
+          "nTotal": 18,
+          "medianVpf": 26
         }
       ],
       "frameworks": [
         {
-          "label": "problem-agitate-solution",
-          "lift": 1.42,
-          "nWinners": 9,
-          "nTotal": 28,
-          "medianVpf": 25
+          "label": "organic",
+          "lift": 1.2,
+          "nWinners": 54,
+          "nTotal": 188,
+          "medianVpf": 14
         }
       ],
       "patternTable": [
         {
           "label": "information-offering",
-          "count": 69,
-          "sharePct": 35.2,
-          "lift": 0.63
+          "count": 134,
+          "sharePct": 45.4,
+          "lift": 0.75
         },
         {
           "label": "before-after",
-          "count": 36,
-          "sharePct": 18.4,
+          "count": 40,
+          "sharePct": 13.6,
           "lift": 1
         },
         {
           "label": "belief-challenging",
-          "count": 15,
-          "sharePct": 7.7,
-          "lift": 0.75
+          "count": 23,
+          "sharePct": 7.8,
+          "lift": 0.45
+        },
+        {
+          "label": "removing-limitations",
+          "count": 18,
+          "sharePct": 6.1,
+          "lift": 1.9
         },
         {
           "label": "direct-callout",
-          "count": 14,
-          "sharePct": 7.1,
-          "lift": 3
+          "count": 18,
+          "sharePct": 6.1,
+          "lift": 1.9
         },
         {
           "label": "question",
           "count": 12,
-          "sharePct": 6.1,
-          "lift": 2.14
-        },
-        {
-          "label": "removing-limitations",
-          "count": 10,
-          "sharePct": 5.1,
-          "lift": 2
+          "sharePct": 4.1,
+          "lift": 2.99
         },
         {
           "label": "pov",
           "count": 9,
-          "sharePct": 4.6,
-          "lift": 2.4
+          "sharePct": 3.1,
+          "lift": 2.39
         },
         {
           "label": "newness",
           "count": 7,
-          "sharePct": 3.6,
+          "sharePct": 2.4,
           "lift": 0.5
         }
       ],
       "gaps": [
         {
-          "label": "direct-callout",
-          "count": 14,
-          "sharePct": 7.1,
-          "lift": 3
+          "label": "question",
+          "count": 12,
+          "sharePct": 4.1,
+          "lift": 2.99
         },
         {
           "label": "pov",
           "count": 9,
-          "sharePct": 4.6,
-          "lift": 2.4
-        },
-        {
-          "label": "question",
-          "count": 12,
-          "sharePct": 6.1,
-          "lift": 2.14
+          "sharePct": 3.1,
+          "lift": 2.39
         },
         {
           "label": "removing-limitations",
-          "count": 10,
-          "sharePct": 5.1,
-          "lift": 2
+          "count": 18,
+          "sharePct": 6.1,
+          "lift": 1.9
+        },
+        {
+          "label": "direct-callout",
+          "count": 18,
+          "sharePct": 6.1,
+          "lift": 1.9
         }
       ],
       "saturated": [
         {
           "label": "information-offering",
-          "count": 69,
-          "sharePct": 35.2,
-          "lift": 0.63
-        },
-        {
-          "label": "before-after",
-          "count": 36,
-          "sharePct": 18.4,
-          "lift": 1
+          "count": 134,
+          "sharePct": 45.4,
+          "lift": 0.75
         }
       ]
     },
     "pets": {
-      "sampleSize": 383,
-      "breakoutThresholdVpf": 100,
+      "sampleSize": 442,
+      "breakoutThresholdVpf": 97.9,
       "hookPatternsThatOverIndex": [
         {
           "label": "before-after",
-          "lift": 2.09,
-          "nWinners": 7,
-          "nTotal": 17,
+          "lift": 2.17,
+          "nWinners": 8,
+          "nTotal": 19,
           "medianVpf": 42.04
         },
         {
@@ -1317,77 +1420,97 @@
           "medianVpf": 36
         }
       ],
-      "frameworks": [],
+      "frameworks": [
+        {
+          "label": "us-vs-them",
+          "lift": 1.49,
+          "nWinners": 2,
+          "nTotal": 6,
+          "medianVpf": 12
+        }
+      ],
       "patternTable": [
         {
           "label": "information-offering",
-          "count": 166,
-          "sharePct": 43.3,
-          "lift": 0.95
+          "count": 185,
+          "sharePct": 41.9,
+          "lift": 0.96
         },
         {
           "label": "direct-callout",
-          "count": 46,
-          "sharePct": 12,
-          "lift": 0.83
+          "count": 56,
+          "sharePct": 12.7,
+          "lift": 0.99
         },
         {
           "label": "belief-challenging",
-          "count": 44,
+          "count": 51,
           "sharePct": 11.5,
-          "lift": 1
+          "lift": 0.92
         },
         {
           "label": "question",
-          "count": 30,
-          "sharePct": 7.8,
-          "lift": 0.75
+          "count": 36,
+          "sharePct": 8.1,
+          "lift": 0.72
         },
         {
           "label": "pov",
-          "count": 23,
-          "sharePct": 6,
-          "lift": 1.06
+          "count": 27,
+          "sharePct": 6.1,
+          "lift": 1.04
         },
         {
           "label": "before-after",
-          "count": 17,
-          "sharePct": 4.4,
-          "lift": 2.09
+          "count": 19,
+          "sharePct": 4.3,
+          "lift": 2.17
         },
         {
           "label": "newness",
-          "count": 8,
-          "sharePct": 2.1,
-          "lift": 1
+          "count": 9,
+          "sharePct": 2,
+          "lift": 0.85
         },
         {
           "label": "removing-limitations",
           "count": 6,
-          "sharePct": 1.6,
+          "sharePct": 1.4,
           "lift": 1.49
+        },
+        {
+          "label": "humor",
+          "count": 6,
+          "sharePct": 1.4,
+          "lift": 0.6
+        },
+        {
+          "label": "comparison",
+          "count": 6,
+          "sharePct": 1.4,
+          "lift": 0.6
         }
       ],
       "gaps": [
         {
           "label": "before-after",
-          "count": 17,
-          "sharePct": 4.4,
-          "lift": 2.09
+          "count": 19,
+          "sharePct": 4.3,
+          "lift": 2.17
         },
         {
           "label": "removing-limitations",
           "count": 6,
-          "sharePct": 1.6,
+          "sharePct": 1.4,
           "lift": 1.49
         }
       ],
       "saturated": [
         {
           "label": "information-offering",
-          "count": 166,
-          "sharePct": 43.3,
-          "lift": 0.95
+          "count": 185,
+          "sharePct": 41.9,
+          "lift": 0.96
         }
       ]
     }

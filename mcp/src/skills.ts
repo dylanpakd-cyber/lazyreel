@@ -4,7 +4,7 @@
 
 import {
   SCRIPT_FRAMEWORKS, HOOK_PATTERNS, ANGLES, VISUAL_APPROACHES, AWARENESS,
-  SOPHISTICATION, BANNED_WORDS, VOICE_RULES, UGC_MODIFIERS, type HookPattern,
+  SOPHISTICATION, BANNED_WORDS, VOICE_RULES, UGC_MODIFIERS, FALSE_POSITIVE_LABELS, BREAKOUT_GATES, type HookPattern,
 } from "./frameworks.js";
 import {
   searchVideos, relatedTrendingTags, corpusCounts, nicheInsight, overallHookLift, insightsMeta,
@@ -463,6 +463,7 @@ export function status(token?: string): string {
     `- ${corpusCounts().videos} hand-authored teardowns + ${corpusCounts().tags} real TikTok trending tags (2022-2025, MIT)`,
     `- ${corpusCounts().decoded.toLocaleString()} real TikTok videos decoded: LLM-labeled hook + framework, engagement normalized by follower count, patterns mined by contrastive lift (breakouts vs rest)`,
     "- Awareness + sophistication models, the anti-slop bar, UGC prompt modifiers",
+    `- ${BREAKOUT_GATES.length} breakout-quality gates + ${FALSE_POSITIVE_LABELS.length} false-positive labels (distilled from 117 applied teardowns)`,
     "",
     "**How it actually decodes (honest):**",
     "- A model reads each video's real spoken hook + caption and labels it (not regex guessing)",

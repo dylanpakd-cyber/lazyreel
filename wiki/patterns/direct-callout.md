@@ -1,14 +1,15 @@
 # Hook pattern: direct-callout
 
-[← all patterns](../README.md) · overall lift 1.4x (n=248)
+[← all patterns](../README.md) · overall lift 1.48x (n=288)
 
 ## Niches where it over-performs
-- [supplements](../niches/supplements.md) — 3.62x
-- [hair](../niches/hair.md) — 3x
-- [food and beverage](../niches/food-and-beverage.md) — 2.1x
+- [supplements](../niches/supplements.md) — 3x
+- [food and beverage](../niches/food-and-beverage.md) — 2.29x
+- [hair](../niches/hair.md) — 1.9x
 - [fashion](../niches/fashion.md) — 1.89x
-- [home and cleaning](../niches/home-and-cleaning.md) — 1.62x
-- [fitness](../niches/fitness.md) — 1.35x
+- [fitness](../niches/fitness.md) — 1.68x
+- [skincare](../niches/skincare.md) — 1.49x
+- [home and cleaning](../niches/home-and-cleaning.md) — 1.3x
 
 ## How it actually worked (from real teardowns)
 - _(ABG beauty)_ Shock-comedy in a beauty wrapper: the mismatch between sweet GRWM expectations and a profane us-vs-them tirade is inherently shareable to friends ('this is so unhinged'), driving the 10.5% engagement rate on a tiny account.

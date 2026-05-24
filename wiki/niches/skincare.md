@@ -1,28 +1,30 @@
 # skincare
 
-[← all niches](../README.md) · 326 videos decoded · breakout threshold 9.73x views-per-follower
+[← all niches](../README.md) · 398 videos decoded · breakout threshold 7.63x views-per-follower
 
 ## The opening (high performance, under-used)
-- **[speed-of-claim](../patterns/speed-of-claim.md)** — over-indexes 5.93x but only 1.8% of videos use it. The opening.
-- **[problem-agitate-solution](../patterns/problem-agitate-solution.md)** — over-indexes 2.96x but only 1.8% of videos use it. The opening.
-- **[pov](../patterns/pov.md)** — over-indexes 1.48x but only 1.8% of videos use it. The opening.
+- **[speed-of-claim](../patterns/speed-of-claim.md)** — over-indexes 8.91x but only 2% of videos use it. The opening.
+- **[question](../patterns/question.md)** — over-indexes 5.94x but only 1.5% of videos use it. The opening.
+- **[problem-agitate-solution](../patterns/problem-agitate-solution.md)** — over-indexes 2.97x but only 1.5% of videos use it. The opening.
+- **[direct-callout](../patterns/direct-callout.md)** — over-indexes 1.49x but only 3.8% of videos use it. The opening.
+- **[pov](../patterns/pov.md)** — over-indexes 1.49x but only 1.5% of videos use it. The opening.
 
 ## Crowded (hard to stand out)
-- **information-offering** — 53.8% of videos, performs 0.85x. Crowded.
+- **information-offering** — 49.1% of videos, performs 0.84x. Crowded.
 
 ## Every hook pattern here
 | Pattern | Videos | Share | Lift in breakouts |
 | --- | --- | --- | --- |
-| [information-offering](../patterns/information-offering.md) | 175 | 53.8% | 0.85x |
-| [belief-challenging](../patterns/belief-challenging.md) | 35 | 10.8% | 1.36x |
-| [before-after](../patterns/before-after.md) | 26 | 8% | 0.89x |
-| [removing-limitations](../patterns/removing-limitations.md) | 23 | 7.1% | 0.62x |
-| [authority](../patterns/authority.md) | 20 | 6.2% | 0.99x |
-| [direct-callout](../patterns/direct-callout.md) | 11 | 3.4% | 0.66x |
-| [comparison](../patterns/comparison.md) | 7 | 2.2% | 1.19x |
-| [speed-of-claim](../patterns/speed-of-claim.md) | 6 | 1.8% | 5.93x |
-| [problem-agitate-solution](../patterns/problem-agitate-solution.md) | 6 | 1.8% | 2.96x |
-| [pov](../patterns/pov.md) | 6 | 1.8% | 1.48x |
+| [information-offering](../patterns/information-offering.md) | 195 | 49.1% | 0.84x |
+| [belief-challenging](../patterns/belief-challenging.md) | 46 | 11.6% | 1.3x |
+| [removing-limitations](../patterns/removing-limitations.md) | 37 | 9.3% | 0.46x |
+| [before-after](../patterns/before-after.md) | 34 | 8.6% | 0.91x |
+| [authority](../patterns/authority.md) | 26 | 6.5% | 1.09x |
+| [direct-callout](../patterns/direct-callout.md) | 15 | 3.8% | 1.49x |
+| [speed-of-claim](../patterns/speed-of-claim.md) | 8 | 2% | 8.91x |
+| [comparison](../patterns/comparison.md) | 7 | 1.8% | 1.19x |
+| [question](../patterns/question.md) | 6 | 1.5% | 5.94x |
+| [problem-agitate-solution](../patterns/problem-agitate-solution.md) | 6 | 1.5% | 2.97x |
 
 ## Real breakouts, torn down
 ### 877.99x following · 1M+ · belief-challenging

@@ -143,3 +143,28 @@ export const UGC_MODIFIERS = [
   "iPhone handheld", "natural window light", "slight camera shake", "selfie-style arm extension",
   "imperfect framing", "natural skin texture, visible pores", "real apartment not staged", "9:16 vertical",
 ];
+
+// FALSE-POSITIVE LABELS — a breakout that isn't a copyable model. Distilled from
+// 117 applied critiques (the recurring, generalizable failure modes). Used to gate
+// "what works": a high-view video can still be a bad creative model.
+export const FALSE_POSITIVE_LABELS = [
+  { id: "paid_reach_suspect", test: "huge views, engagement rate <0.3% — likely boosted/non-organic reach" },
+  { id: "zero_share_high_view", test: "lots of views but ~0 shares — attention without the spread signal" },
+  { id: "celebrity_or_personality_dependent", test: "a celebrity/borrowed clip/known personality carried it, not the product" },
+  { id: "trend_or_sound_overfit", test: "a trending sound/meme template carried it; won't repeat without that trend" },
+  { id: "caption_only_product_claim", test: "the product only appears in the caption, never shown on screen" },
+  { id: "delayed_product_proof", test: "product proof arrives only as an end-card, not native to the story" },
+  { id: "product_not_necessary", test: "remove the product mentally and the video still works — weak UGC model" },
+  { id: "weak_recurrence", test: "one-off premise; the same creator's other posts don't repeat the mechanic" },
+  { id: "tiny_account_spike", test: "a one-off spike on a tiny account whose other posts collapse back to tiny numbers" },
+  { id: "query_context_mismatch", test: "surfaced by a search but doesn't actually match the product/niche intent" },
+  { id: "attention_not_conversion", test: "wins the first second but never sells — good hook study, bad full model" },
+];
+
+// BREAKOUT GATES — three INDEPENDENT gates a video must pass to count as a copyable
+// breakout (Codex finding: product-necessity + recurrence are gates separate from raw views).
+export const BREAKOUT_GATES = [
+  "relative-lift: out-performs the CREATOR'S median (views / creator-median), not just high raw views",
+  "engagement-quality: organic engagement rate, not boosted/zero-share reach",
+  "product-necessity + recurrence: the product is necessary to the video AND the mechanic repeats across creators",
+];

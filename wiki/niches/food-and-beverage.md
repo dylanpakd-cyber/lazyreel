@@ -1,9 +1,9 @@
 # food and beverage
 
-[← all niches](../README.md) · 398 videos decoded · breakout threshold 54.26x views-per-follower
+[← all niches](../README.md) · 481 videos decoded · breakout threshold 48.3x views-per-follower
 
 ## The opening (high performance, under-used)
-- **[pov](../patterns/pov.md)** — over-indexes 1.7x but only 2.8% of videos use it. The opening.
+- **[pov](../patterns/pov.md)** — over-indexes 1.71x but only 2.3% of videos use it. The opening.
 
 ## Crowded (hard to stand out)
 _Nothing dominant._
@@ -11,16 +11,16 @@ _Nothing dominant._
 ## Every hook pattern here
 | Pattern | Videos | Share | Lift in breakouts |
 | --- | --- | --- | --- |
-| [information-offering](../patterns/information-offering.md) | 185 | 47.1% | 1.04x |
-| [belief-challenging](../patterns/belief-challenging.md) | 48 | 12.2% | 0.59x |
-| [direct-callout](../patterns/direct-callout.md) | 29 | 7.4% | 2.1x |
-| [question](../patterns/question.md) | 20 | 5.1% | 0.74x |
-| [newness](../patterns/newness.md) | 20 | 5.1% | 0.33x |
-| [before-after](../patterns/before-after.md) | 14 | 3.6% | 1.19x |
-| [removing-limitations](../patterns/removing-limitations.md) | 14 | 3.6% | 0.49x |
-| [pov](../patterns/pov.md) | 11 | 2.8% | 1.7x |
-| [comparison](../patterns/comparison.md) | 10 | 2.5% | 0x |
-| [size-of-claim](../patterns/size-of-claim.md) | 9 | 2.3% | 0.37x |
+| [information-offering](../patterns/information-offering.md) | 217 | 45.6% | 1.12x |
+| [belief-challenging](../patterns/belief-challenging.md) | 51 | 10.7% | 0.64x |
+| [removing-limitations](../patterns/removing-limitations.md) | 35 | 7.4% | 0.39x |
+| [direct-callout](../patterns/direct-callout.md) | 30 | 6.3% | 2.29x |
+| [newness](../patterns/newness.md) | 24 | 5% | 0.27x |
+| [question](../patterns/question.md) | 21 | 4.4% | 0.71x |
+| [before-after](../patterns/before-after.md) | 15 | 3.2% | 1.09x |
+| [size-of-claim](../patterns/size-of-claim.md) | 14 | 2.9% | 0.23x |
+| [pov](../patterns/pov.md) | 11 | 2.3% | 1.71x |
+| [authority](../patterns/authority.md) | 11 | 2.3% | 1.13x |
 
 ## Real breakouts, torn down
 ### 13565.89x following · 1M+ · direct-callout

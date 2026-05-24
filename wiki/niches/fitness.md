@@ -1,25 +1,27 @@
 # fitness
 
-[← all niches](../README.md) · 317 videos decoded · breakout threshold 58.76x views-per-follower
+[← all niches](../README.md) · 432 videos decoded · breakout threshold 39.01x views-per-follower
 
 ## The opening (high performance, under-used)
-- **[before-after](../patterns/before-after.md)** — over-indexes 3.39x but only 4.7% of videos use it. The opening.
-- **[direct-callout](../patterns/direct-callout.md)** — over-indexes 1.35x but only 10.1% of videos use it. The opening.
-- **[pov](../patterns/pov.md)** — over-indexes 1.27x but only 3.2% of videos use it. The opening.
+- **[before-after](../patterns/before-after.md)** — over-indexes 2.45x but only 4.6% of videos use it. The opening.
+- **[size-of-claim](../patterns/size-of-claim.md)** — over-indexes 1.5x but only 1.4% of videos use it. The opening.
+- **[pov](../patterns/pov.md)** — over-indexes 1.29x but only 2.3% of videos use it. The opening.
 
 ## Crowded (hard to stand out)
-- **information-offering** — 25.6% of videos, performs 0.73x. Crowded.
+- **information-offering** — 28.9% of videos, performs 0.83x. Crowded.
 
 ## Every hook pattern here
 | Pattern | Videos | Share | Lift in breakouts |
 | --- | --- | --- | --- |
-| [information-offering](../patterns/information-offering.md) | 81 | 25.6% | 0.73x |
-| [belief-challenging](../patterns/belief-challenging.md) | 65 | 20.5% | 1.05x |
-| [removing-limitations](../patterns/removing-limitations.md) | 38 | 12% | 0.92x |
-| [direct-callout](../patterns/direct-callout.md) | 32 | 10.1% | 1.35x |
-| [before-after](../patterns/before-after.md) | 15 | 4.7% | 3.39x |
-| [question](../patterns/question.md) | 13 | 4.1% | 0x |
-| [pov](../patterns/pov.md) | 10 | 3.2% | 1.27x |
+| [information-offering](../patterns/information-offering.md) | 125 | 28.9% | 0.83x |
+| [belief-challenging](../patterns/belief-challenging.md) | 71 | 16.4% | 1.18x |
+| [removing-limitations](../patterns/removing-limitations.md) | 50 | 11.6% | 0.75x |
+| [direct-callout](../patterns/direct-callout.md) | 39 | 9% | 1.68x |
+| [before-after](../patterns/before-after.md) | 20 | 4.6% | 2.45x |
+| [question](../patterns/question.md) | 16 | 3.7% | 0.2x |
+| [pov](../patterns/pov.md) | 10 | 2.3% | 1.29x |
+| [size-of-claim](../patterns/size-of-claim.md) | 6 | 1.4% | 1.5x |
+| [newness](../patterns/newness.md) | 6 | 1.4% | 0.6x |
 
 ## Real breakouts, torn down
 ### 2550.64x following · 1M+ · belief-challenging
