@@ -1,7 +1,8 @@
 {
   "generatedAt": "2026-05-24",
   "curatedTeardowns": 31,
-  "decodedByPipeline": 499,
+  "decodedByPipeline": 500,
   "trendingTags": 1830,
-  "note": "Counts are computed from committed data by pipeline/aggregate.mjs, not hand-typed. curatedTeardowns are hand-authored on-domain teardowns; decodedByPipeline is the last automated run (off-domain demo unless re-run on real ad transcripts)."
+  "classifiedShare": 1,
+  "note": "Counts computed from committed/derived data by pipeline/aggregate.mjs, not hand-typed."
 }

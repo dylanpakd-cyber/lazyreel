@@ -40,20 +40,23 @@ const NICHE = {
 };
 
 // ---- hook-pattern signals (the 13 taxonomy) -------------------------------
+// Ordered most-specific first. The generic "question" is intentionally narrow
+// (the FIRST line must itself be a question), and there is NO catch-all sink:
+// if nothing matches we label "unclassified" rather than inflating one bucket.
 const HOOK_SIGNALS = [
-  ["pov", /\bpov\b/i],
-  ["belief", /i thought|turns out|was wrong|i used to think|nobody told me/i],
-  ["callout", /for (everyone|the|those|anyone|all) (who|girlies)|to the (person|people|girlies|one)/i],
-  ["beforeafter", /before .* after|day 1|week \d|→|over \d+ (days|weeks)/i],
-  ["howto", /^how (to|i)\b/i],
-  ["question", /\?|^(why|how|what|is|are|do|does|can|should|did)\b/i],
-  ["authority", /experts?|doctors?|dermatolog|researchers?|scientists?|professionals?/i],
-  ["removelimit", /even if|without (a|the|any)|no (experience|gym|skill|budget)/i],
-  ["exclusivity", /the only|nothing else|no other|never found another/i],
-  ["contrast", /\bvs\b|versus|compared to|\$\d+.*\$\d+/i],
-  ["speed", /in (one|1|two|2|\d+) (use|day|days|week|weeks|minute|minutes|night)/i],
-  ["newness", /\bnew\b|nobody('?s| is) talking|just (dropped|launched)|trending|2025|2026/i],
-  ["size", /\b\d{2,}\b/],
+  ["pov", /\bpov\b|when you|that moment when/i],
+  ["belief", /i (used to )?thought|turns out|was wrong|nobody (told|tells) (me|you)|plot twist/i],
+  ["callout", /\b(for|to) (the |all the |everyone |anyone |those |my )?(girlies|girls|people|person|moms|guys|men|women)\b.*\b(who|that|with)\b/i],
+  ["beforeafter", /before .*(after|→)|day (1|one).*(day|week)|week \d+.*(week|month)|\d+ (days|weeks) later/i],
+  ["howto", /^\s*how (to|i|she|he|they)\b/i],
+  ["authority", /\b(experts?|doctors?|dermatologists?|derms?|researchers?|scientists?|nutritionists?|estheticians?)\b/i],
+  ["removelimit", /\beven if\b|\bwithout (a|the|any|ever)\b|no (experience|gym|skill|budget|time|effort)/i],
+  ["exclusivity", /\bthe only\b|nothing else (works|comes close)|no other\b/i],
+  ["contrast", /\bvs\.?\b|versus|compared to|\$\d[\d,]*\s.*\$\d/i],
+  ["speed", /\bin (one|1|two|2|three|3|\d+) (use|day|days|week|weeks|minute|minutes|night|seconds)\b|overnight/i],
+  ["newness", /nobody('?s| is) talking|just (dropped|launched|found)|new (it|holy grail|favorite)|viral/i],
+  ["size", /\b\d{2,}(\b|%|x| million| billion| of)/i],
+  ["question", /^\s*(why|how|what|when|is|are|do|does|can|should|did|have you|ever)\b|^[^.?!]{4,90}\?/i],
 ];
 
 // ---- framework signals (the 12) -------------------------------------------
@@ -78,6 +81,14 @@ function firstSentence(text) {
 function classify(text, signals, fallback) {
   for (const [id, re] of signals) if (re.test(text)) return id;
   return fallback;
+}
+// classify on the HOOK (first line) only, not the whole transcript, so a long
+// transcript doesn't trip every regex. This is what a viewer sees in 2 seconds.
+function hookText(r) {
+  const spoken = (r.transcript || "").trim();
+  const cap = (r.caption || "").trim();
+  const base = spoken || cap;
+  return firstSentence(base);
 }
 function detectNiche(text) {
   const lo = text.toLowerCase();
@@ -148,27 +159,34 @@ const WHY = {
 
 const out = [];
 for (const r of records) {
-  const text = [r.transcript, r.caption, (r.hashtags || []).join(" ")].filter(Boolean).join(" ");
-  if (!text.trim()) continue;
-  const hookPattern = classify(text, HOOK_SIGNALS, "question");
-  const framework = classify(text, FRAMEWORK_SIGNALS, "pas");
-  const detected = detectNiche(text);
+  const hk = hookText(r);
+  const fullText = [r.transcript, r.caption, (r.hashtags || []).join(" ")].filter(Boolean).join(" ");
+  if (!hk && !fullText.trim()) continue;
+  // hook pattern is judged on the hook line; framework on the fuller text
+  const hookPattern = classify(hk, HOOK_SIGNALS, "unclassified");
+  const framework = classify(fullText, FRAMEWORK_SIGNALS, "unclassified");
+  const detected = detectNiche(fullText);
   const niche = r.niche && r.niche !== "general" ? r.niche : detected.niche;
-  const nicheHits = r.niche && r.niche !== "general" ? 1 : detected.nicheHits;
   const eng = { views: r.views || 0, likes: r.likes || 0, shares: r.shares || 0, comments: r.comments || 0, saves: r.saves || 0 };
-  // confidence: did we get a real niche + a strong hook signal?
-  const strongHook = hookPattern !== "question";
-  const confidence = Number((0.4 + (nicheHits > 0 ? 0.3 : 0) + (strongHook ? 0.3 : 0)).toFixed(2));
+  const followers = r.followers || 0;
+  // views-per-follower: the over-performance signal. >1 means the video reached
+  // beyond the creator's own audience (a real breakout, not just a big account).
+  const vpf = followers > 0 ? Number((eng.views / followers).toFixed(2)) : null;
+  const engagementRate = eng.views > 0 ? Number(((eng.likes + eng.comments + eng.shares + eng.saves) / eng.views).toFixed(4)) : 0;
   out.push({
     source: sourceLabel,
-    hook: firstSentence(r.transcript || r.caption || ""),
+    hook: hk,
     hookPattern,
     framework,
     niche,
-    engagementTier: tier(eng.views),
+    method: "heuristic-v2",          // honest: regex-on-hook-line, not an LLM (yet)
     engagement: eng,
-    whyItWorked: WHY[hookPattern],
-    confidence,
+    followers,
+    viewsPerFollower: vpf,           // null when follower count unknown
+    engagementRate,
+    durationSec: r.duration || 0,
+    hasTranscript: !!(r.transcript && r.transcript.trim()),
+    isAd: !!r.isAd,
   });
 }
 

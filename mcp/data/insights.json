@@ -1,389 +1,150 @@
 {
   "generatedAt": "2026-05-24",
-  "source": "apify:tiktok",
-  "decoded": 499,
-  "note": "Derived aggregate statistics from an automated decode run over real scraped videos. Safe to redistribute. No source video content (transcripts/captions) is included here.",
+  "source": "apify:tiktok + llm-label",
+  "decoded": 500,
+  "method": "contrastive lift: breakouts (top-quartile views-per-follower) vs rest, per niche",
+  "note": "Derived aggregates only; no source video text. Lift>1 means the hook pattern is over-represented among videos that over-reached their creator's following. Read low nTotal with caution.",
+  "classifiedShare": 1,
   "hookPatternCounts": {
-    "question": 336,
-    "size": 58,
-    "newness": 31,
-    "removelimit": 15,
-    "belief": 13,
-    "authority": 12,
-    "beforeafter": 10,
-    "howto": 7,
-    "exclusivity": 6,
-    "callout": 5,
-    "speed": 2,
-    "pov": 2,
-    "contrast": 2
+    "information-offering": 251,
+    "belief-challenging": 43,
+    "removing-limitations": 32,
+    "before-after": 30,
+    "question": 28,
+    "direct-callout": 24,
+    "newness": 19,
+    "authority": 16,
+    "pov": 11,
+    "comparison": 11,
+    "size-of-claim": 10,
+    "speed-of-claim": 9,
+    "generic": 6,
+    "none": 4,
+    "problem-agitate-solution": 3,
+    "exclusivity": 2,
+    "unknown": 1
   },
   "frameworkCounts": {
-    "pas": 359,
-    "without": 40,
-    "organic": 34,
-    "bandwagon": 20,
-    "objections": 17,
-    "contrarian": 11,
-    "tripleg": 8,
-    "usvsthem": 5,
-    "founder": 3,
-    "listicle": 2
+    "organic": 260,
+    "listicle": 123,
+    "problem-agitate-solution": 64,
+    "industry-contrarian": 16,
+    "information-offering": 7,
+    "x-without-y": 7,
+    "bandwagon": 5,
+    "founder-objections": 5,
+    "us-vs-them": 4,
+    "ugly-ad": 3,
+    "founder": 2,
+    "unknown": 1,
+    "unidentifiable": 1,
+    "problem-agitate-solve": 1,
+    "tease": 1
   },
   "nicheCounts": {
-    "tech and SaaS": 79,
-    "fitness": 75,
-    "skincare": 65,
-    "ABG beauty": 60,
-    "fashion": 44,
-    "home and cleaning": 39,
-    "pets": 36,
-    "supplements": 32,
-    "food and beverage": 32,
-    "general": 28,
-    "hair": 9
+    "general": 500
   },
-  "avgViewsByHookPattern": {
-    "pov": 4582850,
-    "question": 4036625,
-    "size": 3756941,
-    "newness": 3264504,
-    "removelimit": 3149960,
-    "exclusivity": 1969444,
-    "beforeafter": 1685986,
-    "authority": 1310032,
-    "callout": 1274200,
-    "belief": 1062769,
-    "howto": 745729,
-    "contrast": 462400,
-    "speed": 283905
-  },
+  "overallHookLift": [
+    {
+      "label": "direct-callout",
+      "lift": 2.54,
+      "nWinners": 11,
+      "nTotal": 24,
+      "medianVpf": 6
+    },
+    {
+      "label": "speed-of-claim",
+      "lift": 2.4,
+      "nWinners": 4,
+      "nTotal": 9,
+      "medianVpf": 8.84
+    },
+    {
+      "label": "question",
+      "lift": 1.42,
+      "nWinners": 9,
+      "nTotal": 28,
+      "medianVpf": 10
+    },
+    {
+      "label": "newness",
+      "lift": 1.38,
+      "nWinners": 6,
+      "nTotal": 19,
+      "medianVpf": 5.34
+    },
+    {
+      "label": "authority",
+      "lift": 1.36,
+      "nWinners": 5,
+      "nTotal": 16,
+      "medianVpf": 7
+    }
+  ],
   "byNiche": {
-    "fitness": {
-      "sampleSize": 75,
-      "topHookPatterns": [
-        {
-          "pattern": "pov",
-          "avgViews": 9000000,
-          "n": 1
-        },
-        {
-          "pattern": "size",
-          "avgViews": 5272017,
-          "n": 6
-        },
-        {
-          "pattern": "callout",
-          "avgViews": 4400000,
-          "n": 1
-        },
-        {
-          "pattern": "newness",
-          "avgViews": 4101117,
-          "n": 2
-        }
-      ],
-      "topFrameworks": [
-        "pas",
-        "bandwagon",
-        "tripleg"
-      ]
-    },
-    "skincare": {
-      "sampleSize": 65,
-      "topHookPatterns": [
-        {
-          "pattern": "question",
-          "avgViews": 5629159,
-          "n": 34
-        },
-        {
-          "pattern": "size",
-          "avgViews": 2009294,
-          "n": 16
-        },
-        {
-          "pattern": "newness",
-          "avgViews": 1980229,
-          "n": 7
-        },
-        {
-          "pattern": "removelimit",
-          "avgViews": 1933333,
-          "n": 3
-        }
-      ],
-      "topFrameworks": [
-        "pas",
-        "contrarian",
-        "without"
-      ]
-    },
-    "supplements": {
-      "sampleSize": 32,
-      "topHookPatterns": [
-        {
-          "pattern": "exclusivity",
-          "avgViews": 3600388,
-          "n": 3
-        },
-        {
-          "pattern": "beforeafter",
-          "avgViews": 1046587,
-          "n": 3
-        },
-        {
-          "pattern": "authority",
-          "avgViews": 989750,
-          "n": 2
-        },
-        {
-          "pattern": "newness",
-          "avgViews": 929800,
-          "n": 1
-        }
-      ],
-      "topFrameworks": [
-        "pas",
-        "without",
-        "bandwagon"
-      ]
-    },
-    "ABG beauty": {
-      "sampleSize": 60,
-      "topHookPatterns": [
-        {
-          "pattern": "question",
-          "avgViews": 6009423,
-          "n": 37
-        },
-        {
-          "pattern": "size",
-          "avgViews": 5428367,
-          "n": 6
-        },
-        {
-          "pattern": "beforeafter",
-          "avgViews": 3950000,
-          "n": 2
-        },
-        {
-          "pattern": "removelimit",
-          "avgViews": 3289000,
-          "n": 6
-        }
-      ],
-      "topFrameworks": [
-        "pas",
-        "without",
-        "organic"
-      ]
-    },
     "general": {
-      "sampleSize": 28,
-      "topHookPatterns": [
+      "sampleSize": 500,
+      "breakoutThresholdVpf": 24.4,
+      "hookPatternsThatOverIndex": [
         {
-          "pattern": "authority",
-          "avgViews": 4400000,
-          "n": 1
+          "label": "direct-callout",
+          "lift": 2.54,
+          "nWinners": 11,
+          "nTotal": 24,
+          "medianVpf": 6
         },
         {
-          "pattern": "newness",
-          "avgViews": 2950750,
-          "n": 2
+          "label": "speed-of-claim",
+          "lift": 2.4,
+          "nWinners": 4,
+          "nTotal": 9,
+          "medianVpf": 8.84
         },
         {
-          "pattern": "question",
-          "avgViews": 2740480,
-          "n": 25
+          "label": "question",
+          "lift": 1.42,
+          "nWinners": 9,
+          "nTotal": 28,
+          "medianVpf": 10
+        },
+        {
+          "label": "newness",
+          "lift": 1.38,
+          "nWinners": 6,
+          "nTotal": 19,
+          "medianVpf": 5.34
+        },
+        {
+          "label": "authority",
+          "lift": 1.36,
+          "nWinners": 5,
+          "nTotal": 16,
+          "medianVpf": 7
         }
       ],
-      "topFrameworks": [
-        "pas",
-        "organic",
-        "objections"
-      ]
-    },
-    "tech and SaaS": {
-      "sampleSize": 79,
-      "topHookPatterns": [
+      "frameworks": [
         {
-          "pattern": "question",
-          "avgViews": 6337641,
-          "n": 50
+          "label": "x-without-y",
+          "lift": 2.25,
+          "nWinners": 3,
+          "nTotal": 7,
+          "medianVpf": 0.44
         },
         {
-          "pattern": "newness",
-          "avgViews": 4440320,
-          "n": 10
+          "label": "problem-agitate-solution",
+          "lift": 1.36,
+          "nWinners": 20,
+          "nTotal": 64,
+          "medianVpf": 6
         },
         {
-          "pattern": "size",
-          "avgViews": 3325716,
-          "n": 11
-        },
-        {
-          "pattern": "removelimit",
-          "avgViews": 2200000,
-          "n": 2
+          "label": "organic",
+          "lift": 1.24,
+          "nWinners": 76,
+          "nTotal": 260,
+          "medianVpf": 6
         }
-      ],
-      "topFrameworks": [
-        "pas",
-        "without",
-        "objections"
-      ]
-    },
-    "fashion": {
-      "sampleSize": 44,
-      "topHookPatterns": [
-        {
-          "pattern": "belief",
-          "avgViews": 8500000,
-          "n": 1
-        },
-        {
-          "pattern": "size",
-          "avgViews": 6608133,
-          "n": 3
-        },
-        {
-          "pattern": "question",
-          "avgViews": 2343629,
-          "n": 35
-        },
-        {
-          "pattern": "howto",
-          "avgViews": 988500,
-          "n": 3
-        }
-      ],
-      "topFrameworks": [
-        "pas",
-        "organic",
-        "bandwagon"
-      ]
-    },
-    "home and cleaning": {
-      "sampleSize": 39,
-      "topHookPatterns": [
-        {
-          "pattern": "size",
-          "avgViews": 14500000,
-          "n": 2
-        },
-        {
-          "pattern": "newness",
-          "avgViews": 7869500,
-          "n": 2
-        },
-        {
-          "pattern": "removelimit",
-          "avgViews": 5350000,
-          "n": 2
-        },
-        {
-          "pattern": "question",
-          "avgViews": 4567078,
-          "n": 25
-        }
-      ],
-      "topFrameworks": [
-        "pas",
-        "organic",
-        "without"
-      ]
-    },
-    "food and beverage": {
-      "sampleSize": 32,
-      "topHookPatterns": [
-        {
-          "pattern": "removelimit",
-          "avgViews": 6600000,
-          "n": 1
-        },
-        {
-          "pattern": "size",
-          "avgViews": 6338385,
-          "n": 4
-        },
-        {
-          "pattern": "newness",
-          "avgViews": 5500000,
-          "n": 1
-        },
-        {
-          "pattern": "authority",
-          "avgViews": 3200000,
-          "n": 1
-        }
-      ],
-      "topFrameworks": [
-        "pas",
-        "without",
-        "usvsthem"
-      ]
-    },
-    "pets": {
-      "sampleSize": 36,
-      "topHookPatterns": [
-        {
-          "pattern": "question",
-          "avgViews": 6339021,
-          "n": 27
-        },
-        {
-          "pattern": "size",
-          "avgViews": 1595860,
-          "n": 5
-        },
-        {
-          "pattern": "belief",
-          "avgViews": 1100000,
-          "n": 1
-        },
-        {
-          "pattern": "newness",
-          "avgViews": 570300,
-          "n": 2
-        }
-      ],
-      "topFrameworks": [
-        "pas",
-        "bandwagon",
-        "contrarian"
-      ]
-    },
-    "hair": {
-      "sampleSize": 9,
-      "topHookPatterns": [
-        {
-          "pattern": "question",
-          "avgViews": 2304600,
-          "n": 5
-        },
-        {
-          "pattern": "exclusivity",
-          "avgViews": 977400,
-          "n": 1
-        },
-        {
-          "pattern": "newness",
-          "avgViews": 570400,
-          "n": 1
-        },
-        {
-          "pattern": "howto",
-          "avgViews": 525950,
-          "n": 2
-        }
-      ],
-      "topFrameworks": [
-        "pas",
-        "bandwagon",
-        "without"
       ]
     }
-  },
-  "avgConfidence": 0.78
+  }
 }

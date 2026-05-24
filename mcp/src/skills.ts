@@ -7,7 +7,7 @@ import {
   SOPHISTICATION, BANNED_WORDS, VOICE_RULES, UGC_MODIFIERS, type HookPattern,
 } from "./frameworks.js";
 import {
-  searchVideos, relatedTrendingTags, corpusCounts, nicheInsight, insightsMeta, type AnalyzedVideo,
+  searchVideos, relatedTrendingTags, corpusCounts, nicheInsight, overallHookLift, insightsMeta, type AnalyzedVideo, type HookLift,
 } from "./corpus.js";
 
 // --- tiny deterministic helpers -------------------------------------------
@@ -102,14 +102,23 @@ function videoCard(v: AnalyzedVideo): string {
 
 export function nicheDecode(niche: string, examples?: string): string {
   const n = niche.trim();
+  const meta = insightsMeta();
+  const fmtLift = (h: HookLift) => `- **${h.label}** — ${h.lift}x more common in breakouts (${h.nWinners}/${h.nTotal})`;
   const insight = nicheInsight(n);
-  const insightBlock = insight
-    ? ["", `## What's actually pulling views in ${n} (real scraped data, n=${insight.sampleSize})`,
-       `Hook patterns ranked by average views on real videos:`,
-       ...insight.topHookPatterns.map((h) => `- **${h.pattern}** — ${h.avgViews.toLocaleString()} avg views (${h.n} videos)`),
-       `Most-used frameworks here: ${insight.topFrameworks.join(", ")}.`,
-       `_Source: ${insightsMeta().source || "decode pipeline"}, ${insightsMeta().decoded.toLocaleString()} videos decoded._`]
-    : [];
+  const overall = overallHookLift();
+  let insightBlock: string[] = [];
+  if (insight && insight.hookPatternsThatOverIndex.length) {
+    insightBlock = ["", `## What over-performs in ${n} (real data, n=${insight.sampleSize})`,
+      `Hook patterns over-represented among breakouts (videos that out-reached the creator's own following):`,
+      ...insight.hookPatternsThatOverIndex.slice(0, 5).map(fmtLift)];
+  } else if (overall.length) {
+    insightBlock = ["", `## What over-performs across all niches (real data)`,
+      `Not enough ${n} videos yet for a niche-specific read, so here's the cross-niche signal. Hook patterns over-represented among breakouts:`,
+      ...overall.slice(0, 5).map(fmtLift)];
+  }
+  if (insightBlock.length) {
+    insightBlock.push(`_Method: ${meta.method || "contrastive lift on views-per-follower"}. Source: ${meta.source}, ${meta.decoded.toLocaleString()} videos decoded. Lift>1 = over-indexed in breakouts; read small samples with caution._`);
+  }
   const matches = searchVideos(n, 4);
   const tags = relatedTrendingTags(n, 8);
   const corpusBlock = matches.length
@@ -328,12 +337,14 @@ export function status(token?: string): string {
     "- 7 skills: video_ideas, niche_decode, format_teardown, cracked_hooks, shoot_brief, kill_the_slop, search_corpus",
     `- ${SCRIPT_FRAMEWORKS.length} named script frameworks, ${HOOK_PATTERNS.length} hook patterns, ${ANGLES.length} proven UGC angles`,
     `- ${corpusCounts().videos} hand-authored teardowns + ${corpusCounts().tags} real TikTok trending tags (2022-2025, MIT)`,
-    `- ${corpusCounts().decoded.toLocaleString()} real TikTok videos decoded via the Apify pipeline, with per-niche hook-pattern performance (avg views) computed from live engagement`,
+    `- ${corpusCounts().decoded.toLocaleString()} real TikTok videos decoded: LLM-labeled hook + framework, engagement normalized by follower count, patterns mined by contrastive lift (breakouts vs rest)`,
     "- Awareness + sophistication models, the anti-slop bar, UGC prompt modifiers",
     "",
-    "**How the numbers grow (honest):**",
-    "- Run `pipeline/ingest-apify.mjs` with your own Apify key to decode more videos; counts are computed from the data, never hand-typed",
-    "- Raw scraped content stays local; only derived aggregates (no source text) ship in the public repo",
+    "**How it actually decodes (honest):**",
+    "- A model reads each video's real spoken hook + caption and labels it (not regex guessing)",
+    "- 'What works' = which hook patterns over-index among videos that out-reached their creator's following, not raw view averages",
+    "- Visual decoding (frames, cuts, on-screen text) is the next layer and not built yet; today's signal is hook/transcript + engagement",
+    "- Run `pipeline/` with your own keys to grow it; raw scraped content stays local, only derived aggregates ship",
     "- Transcript/embedding search over a hosted video DB",
     "- Private per-account niche libraries",
     "",

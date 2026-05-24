@@ -42,7 +42,7 @@ const hashtags = Object.keys(HASHTAG_NICHE);
 
 console.error(`scraping ${hashtags.length} hashtags x ${per} = ~${hashtags.length * per} videos...`);
 
-// ---- run the actor synchronously -----------------------------------------
+// ---- run the actor asynchronously, then poll (handles large runs) ---------
 const input = {
   hashtags,
   resultsPerPage: per,
@@ -51,10 +51,27 @@ const input = {
   shouldDownloadSubtitles: true,
   proxyCountryCode: "US",
 };
-const runUrl = `https://api.apify.com/v2/acts/clockworks~tiktok-scraper/run-sync-get-dataset-items?token=${token}&timeout=600`;
-const res = await fetch(runUrl, { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify(input) });
-if (!res.ok) { console.error("apify run failed:", res.status, (await res.text()).slice(0, 300)); process.exit(1); }
-const items = await res.json();
+const startRes = await fetch(`https://api.apify.com/v2/acts/clockworks~tiktok-scraper/runs?token=${token}`,
+  { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify(input) });
+if (!startRes.ok) { console.error("apify start failed:", startRes.status, (await startRes.text()).slice(0, 300)); process.exit(1); }
+const run = (await startRes.json()).data;
+const runId = run.id, datasetId = run.defaultDatasetId;
+console.error(`run ${runId} started; polling...`);
+
+const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
+let status = run.status, waited = 0;
+while (!["SUCCEEDED", "FAILED", "ABORTED", "TIMED-OUT"].includes(status)) {
+  await sleep(8000); waited += 8;
+  const s = await fetch(`https://api.apify.com/v2/actor-runs/${runId}?token=${token}`);
+  const d = (await s.json()).data;
+  status = d.status;
+  process.stderr.write(`\r  ${status} (${waited}s, ~$${(d.usageTotalUsd || 0).toFixed(2)})   `);
+  if (waited > 1800) { console.error("\npolling timed out at 30min; continuing with whatever scraped"); break; }
+}
+console.error(`\nrun ${status}; fetching dataset...`);
+
+const itemsRes = await fetch(`https://api.apify.com/v2/datasets/${datasetId}/items?token=${token}&clean=true&limit=100000`);
+const items = await itemsRes.json();
 console.error(`got ${items.length} raw items`);
 
 // save raw (gitignored) for audit
@@ -82,31 +99,41 @@ async function fetchTranscript(item) {
   } catch { return ""; }
 }
 
-// ---- normalize ------------------------------------------------------------
-const normalized = [];
-let withTranscript = 0;
-for (const v of items) {
+// ---- normalize (transcripts fetched in parallel, the slow part) -----------
+let withTranscript = 0, done = 0;
+const CONCURRENCY = 12;
+async function normalizeOne(v) {
   const niche = HASHTAG_NICHE[v.searchHashtag] || "general";
   const transcript = await fetchTranscript(v);
   if (transcript) withTranscript++;
+  done++;
+  if (done % 250 === 0) process.stderr.write(`\r  transcripts ${done}/${items.length}   `);
   const tags = (v.hashtags || []).map((h) => h.name).filter(Boolean);
-  normalized.push({
+  return {
     source: "apify:tiktok",
     url: v.webVideoUrl || "",
     niche,
-    transcript,                    // spoken hook (may be empty)
-    caption: v.text || "",         // on-screen / caption hook
+    transcript,
+    caption: v.text || "",
     hashtags: tags,
     views: v.playCount || 0,
     likes: v.diggCount || 0,
     shares: v.shareCount || 0,
     comments: v.commentCount || 0,
     saves: v.collectCount || 0,
+    followers: v.authorMeta?.fans || 0,   // creator following size, for over-performance math
+    author: v.authorMeta?.name || "",
     duration: v.videoMeta?.duration || 0,
     isAd: !!(v.isAd || v.isSponsored),
     createdAt: v.createTimeISO || "",
-  });
+  };
 }
+const normalized = [];
+for (let i = 0; i < items.length; i += CONCURRENCY) {
+  const batch = items.slice(i, i + CONCURRENCY);
+  normalized.push(...await Promise.all(batch.map(normalizeOne)));
+}
+process.stderr.write("\n");
 
 mkdirSync("data/raw", { recursive: true });
 writeFileSync(outFile, normalized.map((n) => JSON.stringify(n)).join("\n") + "\n");

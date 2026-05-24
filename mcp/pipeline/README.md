@@ -8,21 +8,47 @@ This is how "videos decoded" becomes a real, computed number instead of a claim.
 ingest-apify.mjs   scrape real TikTok videos (Apify) + fetch spoken transcripts
         |          -> data/raw/normalized.jsonl   (local only, gitignored)
         v
-decode.mjs         turn each video into one structured record:
-        |          hook, hook pattern, framework, niche, engagement tier, why it worked
-        v          -> data/decoded/decoded.jsonl  (local only, gitignored)
-aggregate.mjs      compute shippable aggregates + the corpus counts
+llm-label.mjs      a model reads the real spoken hook + caption and labels each video:
+        |          hook pattern, framework, beats, grounded reason, confidence
+        |          (the real decoder; replaces regex guessing)
+        v          -> data/decoded/llm-labeled.jsonl  (local only, gitignored)
+aggregate.mjs      contrastive lift: which hook patterns over-index among breakouts
+                   (top-quartile views-per-follower) vs the rest, per niche + overall
                    -> data/insights.json + data/corpus-stats.json  (committed)
 ```
+
+`decode.mjs` is the fast, free, regex-on-the-hook-line fallback (honest about its
+limits: it leaves ~75% of real hooks `unclassified` rather than inflating a
+catch-all bucket). `llm-label.mjs` is the real labeler and gets ~80%+ confidently
+classified for cents per hundred videos.
+
+## The method (why it's honest)
+
+Averaging views is the trap: view counts are dominated by a few mega-viral
+outliers and by big accounts. So instead:
+
+1. **Engagement is normalized by reach.** Each video's `views-per-follower` tells
+   you if it out-reached the creator's own audience (a real breakout) rather than
+   just having a big creator behind it.
+2. **Patterns are mined by contrastive lift, not averages.** Within a niche, split
+   videos into breakouts (top quartile by views-per-follower) vs the rest, then
+   measure which hook patterns are over-represented among breakouts. Lift > 1 with
+   a real sample size is a genuine signal; small samples are flagged.
+
+This mirrors the rigorous open-source / academic approaches (view-normalized
+engagement + per-feature risk-ratios). The next depth layer is visual: frames,
+cut-rate, and on-screen text via a vision model. Not built yet, and the output
+says so.
 
 ## Run it
 
 ```bash
 cd mcp
-echo "APIFY_TOKEN=your_token_here" > .env     # gitignored
-node pipeline/ingest-apify.mjs --per 25       # scrape (spends Apify credits)
-node pipeline/decode.mjs --in data/raw/normalized.jsonl --out data/decoded/decoded.jsonl --source apify:tiktok
-node pipeline/aggregate.mjs --in data/decoded/decoded.jsonl --source apify:tiktok
+echo "APIFY_TOKEN=your_token_here" > .env          # gitignored
+echo "ANTHROPIC_API_KEY=your_key_here" >> .env      # for the real labeler
+node pipeline/ingest-apify.mjs --per 25             # scrape (spends Apify credits)
+node pipeline/llm-label.mjs --in data/raw/normalized.jsonl --out data/decoded/llm-labeled.jsonl
+node pipeline/aggregate.mjs --in data/decoded/llm-labeled.jsonl --source "apify:tiktok + llm-label"
 npm run build
 ```
 

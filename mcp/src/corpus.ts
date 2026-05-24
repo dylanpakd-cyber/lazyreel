@@ -64,12 +64,18 @@ export function corpusCounts() {
   };
 }
 
+export type HookLift = { label: string; lift: number; nWinners: number; nTotal: number };
 export type NicheInsight = {
   sampleSize: number;
-  topHookPatterns: { pattern: string; avgViews: number; n: number }[];
-  topFrameworks: string[];
+  breakoutThresholdVpf?: number;
+  hookPatternsThatOverIndex: HookLift[];
+  frameworks?: HookLift[];
 };
-type Insights = { source?: string; decoded?: number; byNiche?: Record<string, NicheInsight> };
+type Insights = {
+  source?: string; decoded?: number; method?: string;
+  overallHookLift?: HookLift[];
+  byNiche?: Record<string, NicheInsight>;
+};
 let _insights: Insights | null = null;
 function getInsights(): Insights {
   if (_insights) return _insights;
@@ -82,13 +88,15 @@ function getInsights(): Insights {
 export function nicheInsight(niche: string): NicheInsight | null {
   const by = getInsights().byNiche || {};
   if (by[niche]) return by[niche];
-  // loose match
   const key = Object.keys(by).find((k) => k.toLowerCase().includes(niche.toLowerCase()) || niche.toLowerCase().includes(k.toLowerCase()));
   return key ? by[key] : null;
 }
+export function overallHookLift(): HookLift[] {
+  return getInsights().overallHookLift || [];
+}
 export function insightsMeta() {
   const i = getInsights();
-  return { source: i.source, decoded: i.decoded ?? 0 };
+  return { source: i.source, decoded: i.decoded ?? 0, method: i.method };
 }
 
 function searchable(v: AnalyzedVideo): string {
