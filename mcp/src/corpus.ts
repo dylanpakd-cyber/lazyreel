@@ -148,6 +148,7 @@ export function visualForNiche(niche: string) {
 export type Teardown = {
   niche: string; hookPattern: string; framework: string; reach: string; viewBucket: string;
   hookTechnique: string; retentionDevice: string; viralMechanism: string; stealThis: string;
+  dimensionRatings?: Record<string, string> | null; vsCreatorNorm?: string | null;
 };
 let _winners: Teardown[] | null = null;
 export function getWinners(): Teardown[] {

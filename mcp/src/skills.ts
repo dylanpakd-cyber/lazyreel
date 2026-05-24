@@ -256,6 +256,8 @@ export function viralTeardowns(niche: string, limit = 5): string {
       `- **Hook technique:** ${w.hookTechnique}`,
       `- **Retention device:** ${w.retentionDevice}`,
       `- **Why it spread:** ${w.viralMechanism}`,
+      ...(w.dimensionRatings ? [`- **Dimension ratings:** ${Object.entries(w.dimensionRatings).map(([k, v]) => `${k}: ${v}`).join(" · ")}`] : []),
+      ...(w.vsCreatorNorm ? [`- **vs the creator's normal posts:** ${w.vsCreatorNorm}`] : []),
       `- **Steal this:** ${w.stealThis}`,
       "",
     ]),

@@ -32,10 +32,18 @@ const model = args.model || "claude-sonnet-4-6";
 // We need the transcript, which lives in the normalized scrape, joined by url.
 const labeled = readFileSync(inFile, "utf8").split(/\r?\n/).filter(Boolean).map((l) => JSON.parse(l));
 const normById = new Map();
+const siblingsByAuthor = new Map(); // author -> their other posts, for the same-creator A/B diff
 if (existsSync("data/raw/normalized.jsonl")) {
   for (const n of readFileSync("data/raw/normalized.jsonl", "utf8").split(/\r?\n/).filter(Boolean).map((l) => JSON.parse(l))) {
     normById.set(n.url, n);
+    if (n.author) { (siblingsByAuthor.get(n.author) || siblingsByAuthor.set(n.author, []).get(n.author)).push(n); }
   }
+}
+// the creator's OTHER posts (lower-view), as "normal" comparison points for the A/B diff
+function creatorNormSamples(author, excludeUrl, breakoutViews) {
+  const all = (siblingsByAuthor.get(author) || []).filter((p) => p.url !== excludeUrl);
+  const normal = all.filter((p) => (p.views || 0) < breakoutViews * 0.5).sort((a, b) => (b.views || 0) - (a.views || 0));
+  return (normal.length ? normal : all).slice(0, 3);
 }
 
 // Select genuine breakouts: real transcript, real reach, top views-per-follower per niche.
@@ -59,17 +67,26 @@ function prompt(x) {
   const r = x.r, n = x.norm;
   const e = r.engagement || {};
   const mult = r.viewsPerFollower;
-  return `A video in the "${r.niche}" niche over-performed: it got ${e.views.toLocaleString()} views from a creator with ${(r.followers || 0).toLocaleString()} followers (that is ${mult}x its following, a real breakout). Engagement: ${e.likes} likes, ${e.comments} comments, ${e.shares} shares, ${e.saves} saves. Duration ~${n.duration || "?"}s.
+  const sibs = creatorNormSamples(n.author, r.url, e.views);
+  const sibBlock = sibs.length
+    ? sibs.map((p) => `- ${(p.views || 0).toLocaleString()} views: "${((p.transcript || p.caption || "").slice(0, 120))}"`).join("\n")
+    : "(no lower-performing posts from this creator available)";
+  return `A video in the "${r.niche}" niche over-performed: it got ${e.views.toLocaleString()} views from a creator with ${(r.followers || 0).toLocaleString()} followers (${mult}x its following, a real breakout). Engagement: ${e.likes} likes, ${e.comments} comments, ${e.shares} shares, ${e.saves} saves. Duration ~${n.duration || "?"}s.
 
 Spoken transcript:
 """${(n.transcript || "").slice(0, 900)}"""
 Caption: "${(n.caption || "").slice(0, 200)}"
 
+This creator's OTHER (more normal) posts, for comparison:
+${sibBlock}
+
 Diagnose WHY this reached far beyond the creator's audience. Return ONLY JSON:
 {
   "hookTechnique": "the specific technique in the first ~3s, in your own words (do not quote the transcript verbatim)",
   "retentionDevice": "what keeps the viewer watching past the hook",
-  "viralMechanism": "the single biggest reason this got shared/saved beyond the following (be specific to THIS video)",
+  "viralMechanism": "the single biggest reason this got shared/saved beyond the following (specific to THIS video)",
+  "dimensionRatings": { "hook": "very-strong|strong|weak + 4-word why", "format": "...", "visual": "...", "audio": "..." },
+  "vsCreatorNorm": "what specifically made THIS post separate from this creator's other posts above (the one changed variable), or 'insufficient comparison' if no siblings",
   "stealThis": "one concrete, reusable move another brand could copy",
   "confidence": 0.0-1.0
 }`;
@@ -111,6 +128,8 @@ for (let i = 0; i < picks.length; i += CONC) {
       hookTechnique: j.hookTechnique,
       retentionDevice: j.retentionDevice,
       viralMechanism: j.viralMechanism,
+      dimensionRatings: j.dimensionRatings || null,
+      vsCreatorNorm: j.vsCreatorNorm || null,
       stealThis: j.stealThis,
     });
   }));
