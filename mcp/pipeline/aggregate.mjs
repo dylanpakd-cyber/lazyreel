@@ -16,7 +16,17 @@ const args = Object.fromEntries(
 const inFile = args.in || "data/decoded/decoded.jsonl";
 const source = args.source || "input";
 
-const rows = readFileSync(inFile, "utf8").split(/\r?\n/).filter(Boolean).map((l) => JSON.parse(l));
+const rows = readFileSync(inFile, "utf8").split(/\r?\n/).filter(Boolean).map((l) => JSON.parse(l)).map((r) => {
+  // WS-4 (Lightreel-derived): engagement-rate quality gate + boost detection.
+  const e = r.engagement || {};
+  const v = e.views || 0;
+  const engagementRate = v > 0 ? (e.likes + e.comments + e.shares + (e.saves || 0)) / v : 0;
+  const engagementBand = engagementRate >= 0.05 ? "strong" : engagementRate >= 0.03 ? "solid" : engagementRate >= 0.003 ? "mixed" : "weak";
+  // high views + near-zero engagement = likely boosted/low-quality reach -> exclude from "what works"
+  const suspectedBoost = v >= 500000 && engagementRate < 0.003;
+  return { ...r, engagementRate: Number(engagementRate.toFixed(4)), engagementBand, suspectedBoost };
+});
+const boosted = rows.filter((r) => r.suspectedBoost).length;
 
 const median = (arr) => {
   if (!arr.length) return 0;
@@ -32,7 +42,7 @@ function quantile(arr, q) {
 
 // Contrastive lift of a categorical label (hookPattern/framework) within a row set.
 function liftAnalysis(subset, key) {
-  const withVpf = subset.filter((r) => typeof r.viewsPerFollower === "number");
+  const withVpf = subset.filter((r) => typeof r.viewsPerFollower === "number" && !r.suspectedBoost);
   if (withVpf.length < 12) return null; // too small to split honestly
   const thresh = quantile(withVpf.map((r) => r.viewsPerFollower), 0.75);
   const winners = withVpf.filter((r) => r.viewsPerFollower >= thresh);

@@ -554,35 +554,35 @@
       "hookPatternsThatOverIndex": [
         {
           "label": "problem-agitate-solution",
-          "lift": 5.9,
+          "lift": 5.96,
           "nWinners": 4,
           "nTotal": 6,
           "medianVpf": 11
         },
         {
           "label": "speed-of-claim",
-          "lift": 2.95,
+          "lift": 2.98,
           "nWinners": 5,
           "nTotal": 10,
           "medianVpf": 22
         },
         {
           "label": "question",
-          "lift": 2.95,
+          "lift": 2.98,
           "nWinners": 4,
           "nTotal": 8,
           "medianVpf": 10
         },
         {
           "label": "authority",
-          "lift": 1.4,
+          "lift": 1.41,
           "nWinners": 9,
           "nTotal": 28,
           "medianVpf": 3
         },
         {
           "label": "belief-challenging",
-          "lift": 1.28,
+          "lift": 1.29,
           "nWinners": 13,
           "nTotal": 43,
           "medianVpf": 4.42
@@ -591,14 +591,14 @@
       "frameworks": [
         {
           "label": "information-offering",
-          "lift": 1.97,
+          "lift": 1.99,
           "nWinners": 4,
           "nTotal": 10,
           "medianVpf": 2
         },
         {
           "label": "industry-contrarian",
-          "lift": 1.77,
+          "lift": 1.79,
           "nWinners": 6,
           "nTotal": 16,
           "medianVpf": 1
@@ -607,69 +607,69 @@
       "patternTable": [
         {
           "label": "information-offering",
-          "count": 208,
-          "sharePct": 52.1,
-          "lift": 0.81
+          "count": 207,
+          "sharePct": 52,
+          "lift": 0.8
         },
         {
           "label": "belief-challenging",
           "count": 43,
           "sharePct": 10.8,
-          "lift": 1.28
+          "lift": 1.29
         },
         {
           "label": "before-after",
           "count": 31,
           "sharePct": 7.8,
-          "lift": 0.71
+          "lift": 0.72
         },
         {
           "label": "authority",
           "count": 28,
           "sharePct": 7,
-          "lift": 1.4
+          "lift": 1.41
         },
         {
           "label": "removing-limitations",
           "count": 28,
           "sharePct": 7,
-          "lift": 0.8
+          "lift": 0.81
         },
         {
           "label": "direct-callout",
           "count": 15,
           "sharePct": 3.8,
-          "lift": 0.45
+          "lift": 0.46
         },
         {
           "label": "speed-of-claim",
           "count": 10,
           "sharePct": 2.5,
-          "lift": 2.95
+          "lift": 2.98
         },
         {
           "label": "pov",
           "count": 10,
           "sharePct": 2.5,
-          "lift": 1.26
+          "lift": 1.28
         },
         {
           "label": "question",
           "count": 8,
           "sharePct": 2,
-          "lift": 2.95
+          "lift": 2.98
         },
         {
           "label": "comparison",
           "count": 8,
           "sharePct": 2,
-          "lift": 0.98
+          "lift": 0.99
         },
         {
           "label": "problem-agitate-solution",
           "count": 6,
           "sharePct": 1.5,
-          "lift": 5.9
+          "lift": 5.96
         }
       ],
       "gaps": [
@@ -677,33 +677,33 @@
           "label": "problem-agitate-solution",
           "count": 6,
           "sharePct": 1.5,
-          "lift": 5.9
+          "lift": 5.96
         },
         {
           "label": "speed-of-claim",
           "count": 10,
           "sharePct": 2.5,
-          "lift": 2.95
+          "lift": 2.98
         },
         {
           "label": "question",
           "count": 8,
           "sharePct": 2,
-          "lift": 2.95
+          "lift": 2.98
         },
         {
           "label": "pov",
           "count": 10,
           "sharePct": 2.5,
-          "lift": 1.26
+          "lift": 1.28
         }
       ],
       "saturated": [
         {
           "label": "information-offering",
-          "count": 208,
-          "sharePct": 52.1,
-          "lift": 0.81
+          "count": 207,
+          "sharePct": 52,
+          "lift": 0.8
         }
       ]
     },
@@ -1063,139 +1063,132 @@
     },
     "home and cleaning": {
       "sampleSize": 399,
-      "breakoutThresholdVpf": 24.3,
+      "breakoutThresholdVpf": 25.02,
       "hookPatternsThatOverIndex": [
         {
           "label": "before-after",
-          "lift": 2.19,
+          "lift": 2.21,
           "nWinners": 14,
           "nTotal": 33,
           "medianVpf": 20.59
         },
         {
           "label": "authority",
-          "lift": 1.78,
+          "lift": 1.8,
           "nWinners": 3,
           "nTotal": 8,
           "medianVpf": 5
         },
         {
-          "label": "removing-limitations",
-          "lift": 1.55,
-          "nWinners": 12,
-          "nTotal": 35,
-          "medianVpf": 4.08
-        },
-        {
           "label": "direct-callout",
-          "lift": 1.49,
+          "lift": 1.5,
           "nWinners": 7,
           "nTotal": 21,
           "medianVpf": 4.71
         },
         {
           "label": "exclusivity",
-          "lift": 1.49,
+          "lift": 1.5,
           "nWinners": 2,
           "nTotal": 6,
           "medianVpf": 16
+        },
+        {
+          "label": "removing-limitations",
+          "lift": 1.37,
+          "nWinners": 11,
+          "nTotal": 35,
+          "medianVpf": 4.08
         }
       ],
       "frameworks": [
         {
           "label": "bandwagon",
-          "lift": 2.97,
+          "lift": 3,
           "nWinners": 4,
           "nTotal": 8,
           "medianVpf": 21
         },
         {
           "label": "problem-agitate-solution",
-          "lift": 1.61,
+          "lift": 1.66,
           "nWinners": 32,
-          "nTotal": 91,
-          "medianVpf": 7.6
-        },
-        {
-          "label": "x-without-y",
-          "lift": 1.48,
-          "nWinners": 3,
-          "nTotal": 9,
-          "medianVpf": 7.22
+          "nTotal": 90,
+          "medianVpf": 8
         }
       ],
       "patternTable": [
         {
           "label": "information-offering",
-          "count": 196,
-          "sharePct": 49.4,
-          "lift": 0.71
+          "count": 195,
+          "sharePct": 49.2,
+          "lift": 0.73
         },
         {
           "label": "removing-limitations",
           "count": 35,
           "sharePct": 8.8,
-          "lift": 1.55
+          "lift": 1.37
         },
         {
           "label": "before-after",
           "count": 33,
           "sharePct": 8.3,
-          "lift": 2.19
+          "lift": 2.21
         },
         {
           "label": "belief-challenging",
           "count": 25,
           "sharePct": 6.3,
-          "lift": 0.94
+          "lift": 0.95
         },
         {
           "label": "direct-callout",
           "count": 21,
           "sharePct": 5.3,
-          "lift": 1.49
+          "lift": 1.5
         },
         {
           "label": "size-of-claim",
           "count": 21,
           "sharePct": 5.3,
-          "lift": 1.19
+          "lift": 1.2
         },
         {
           "label": "pov",
           "count": 18,
           "sharePct": 4.5,
-          "lift": 1.14
+          "lift": 1.15
         },
         {
           "label": "newness",
           "count": 11,
           "sharePct": 2.8,
-          "lift": 1.11
+          "lift": 1.13
         },
         {
           "label": "authority",
           "count": 8,
           "sharePct": 2,
-          "lift": 1.78
+          "lift": 1.8
         },
         {
           "label": "question",
           "count": 7,
           "sharePct": 1.8,
-          "lift": 0.49
+          "lift": 0.5
         },
         {
           "label": "exclusivity",
           "count": 6,
           "sharePct": 1.5,
-          "lift": 1.49
+          "lift": 1.5
         },
         {
           "label": "comparison",
           "count": 6,
           "sharePct": 1.5,
-          "lift": 0.59
+          "lift": 0.6
         }
       ],
       "gaps": [
@@ -1203,27 +1196,33 @@
           "label": "authority",
           "count": 8,
           "sharePct": 2,
-          "lift": 1.78
+          "lift": 1.8
         },
         {
           "label": "direct-callout",
           "count": 21,
           "sharePct": 5.3,
-          "lift": 1.49
+          "lift": 1.5
         },
         {
           "label": "exclusivity",
           "count": 6,
           "sharePct": 1.5,
-          "lift": 1.49
+          "lift": 1.5
+        },
+        {
+          "label": "size-of-claim",
+          "count": 21,
+          "sharePct": 5.3,
+          "lift": 1.2
         }
       ],
       "saturated": [
         {
           "label": "information-offering",
-          "count": 196,
-          "sharePct": 49.4,
-          "lift": 0.71
+          "count": 195,
+          "sharePct": 49.2,
+          "lift": 0.73
         }
       ]
     },
