@@ -344,24 +344,7 @@ section{padding-block:clamp(72px,9.5vw,116px)}
     <div class="stat"><div class="n" data-to="21.2" data-suffix="B" data-dec="1">0</div><div class="l">views reverse-engineered</div></div>
     <div class="stat"><div class="n" data-to="10">0</div><div class="l">niches mapped</div></div>
   </div>
-  <p class="label" style="margin-top:24px;text-transform:none;letter-spacing:0;color:var(--mute)">Real TikTok videos, decoded by our own pipeline. The number grows every run.</p>
-</section>
-
-<hr class="rule" />
-
-<!-- DIFFERENCE -->
-<section class="wrap">
-  <div class="shead">
-    <span class="label"><span class="n">03</span> / The difference</span>
-    <h2>Same prompt. LazyReel context. <span class="hl">Better videos.</span></h2>
-    <p>Drag to compare what your agent writes with and without LazyReel.</p>
-  </div>
-  <div class="cmp" id="cmp" aria-label="Comparison slider, use left and right arrow keys" tabindex="0" role="slider" aria-valuemin="0" aria-valuemax="100" aria-valuenow="50">
-    <div class="pane with"><span class="tag">With LazyReel</span><p class="copy">"you have 6 of these in a drawer. you reach for <em>one</em>. here's why." <span style="color:var(--mute);font-size:.78em">[Belief-challenging hook · holds 3s · cut to the use · text: "the only one that survived my bag" · brand named at 0:08]</span></p></div>
-    <div class="pane without" id="without"><span class="tag">Without</span><p class="copy">Discover the revolutionary power of our product to elevate your everyday routine. Seamless. Innovative. Game-changing. Shop now and transform your life.</p></div>
-    <div class="cmp-handle" id="handle" style="left:50%"><span class="grab" aria-hidden="true">⟺</span></div>
-  </div>
-  <p class="cmp-hint">Drag the handle, or focus it and use ← / →.</p>
+  <p class="label" style="margin-top:24px;text-transform:none;letter-spacing:0;color:var(--mute)">Real TikTok &amp; Instagram videos, decoded by our own pipeline. The number grows every day.</p>
 </section>
 
 <hr class="rule" />
@@ -369,7 +352,7 @@ section{padding-block:clamp(72px,9.5vw,116px)}
 <!-- APP VERTICAL -->
 <section id="apps" class="wrap">
   <div class="shead">
-    <span class="label"><span class="n">04</span> / App space</span>
+    <span class="label"><span class="n">03</span> / App space</span>
     <h2>It decoded the <span class="hl">app ads</span>, too.</h2>
     <p>3,000+ mobile-app ads, broken down the same way as the rest of the corpus. This is about <strong style="color:var(--ink);font-weight:600">views, not installs</strong>. What wins the feed is the hook × format, not a polished product demo.</p>
   </div>
@@ -392,7 +375,7 @@ section{padding-block:clamp(72px,9.5vw,116px)}
 <!-- TOOLS -->
 <section class="wrap">
   <div class="shead">
-    <span class="label"><span class="n">05</span> / MCP</span>
+    <span class="label"><span class="n">04</span> / MCP</span>
     <h2>A real MCP, wired into your agent.</h2>
     <p>The tools your agent calls mid-task. It reads the niche, finds the format, pulls real examples, and writes the brief without leaving the chat.</p>
   </div>
@@ -405,7 +388,7 @@ section{padding-block:clamp(72px,9.5vw,116px)}
 <!-- PRICING -->
 <section id="pricing" class="wrap">
   <div class="price-head">
-    <span class="label"><span class="n">06</span> / Pricing</span>
+    <span class="label"><span class="n">05</span> / Pricing</span>
     <h2 style="font-size:clamp(1.9rem,3.4vw,2.8rem);margin-top:12px">Free for agents. <span class="hl">Forever.</span></h2>
     <p class="pos">The feed your agent already doomscrolled. Video research for AI, not AI for video.</p>
   </div>
@@ -421,7 +404,7 @@ section{padding-block:clamp(72px,9.5vw,116px)}
 
 <!-- FAQ -->
 <section id="faq" class="wrap">
-  <span class="label"><span class="n">07</span> / Questions</span>
+  <span class="label"><span class="n">06</span> / Questions</span>
   <h2 style="font-size:clamp(1.9rem,3.2vw,2.7rem);margin-top:12px">Questions</h2>
   <div class="faq" id="faq-list"></div>
 </section>
@@ -614,19 +597,6 @@ function copy(btn,txt){var old=btn.textContent;navigator.clipboard.writeText(txt
       var st=null;function run(ts){if(!st)st=ts;var p=Math.min((ts-st)/1100,1);var e2=1-Math.pow(1-p,3);el.textContent=fmt(to*e2);if(p<1)requestAnimationFrame(run);}requestAnimationFrame(run);io.disconnect();}},{threshold:.5});
     io.observe(el);
   });
-})();
-
-// ---- comparison slider ----
-(function(){
-  var cmp=document.getElementById('cmp'),without=document.getElementById('without'),handle=document.getElementById('handle');
-  function set(p){p=Math.max(2,Math.min(98,p));without.style.clipPath='inset(0 '+(100-p)+'% 0 0)';handle.style.left=p+'%';cmp.setAttribute('aria-valuenow',Math.round(p));}
-  var drag=false;
-  function fromX(x){var r=cmp.getBoundingClientRect();set((x-r.left)/r.width*100);}
-  cmp.addEventListener('pointerdown',function(e){drag=true;cmp.setPointerCapture(e.pointerId);fromX(e.clientX);});
-  cmp.addEventListener('pointermove',function(e){if(drag)fromX(e.clientX);});
-  cmp.addEventListener('pointerup',function(){drag=false;});
-  cmp.addEventListener('keydown',function(e){var cur=parseFloat(cmp.getAttribute('aria-valuenow'));if(e.key==='ArrowLeft'){e.preventDefault();set(cur-4);}if(e.key==='ArrowRight'){e.preventDefault();set(cur+4);}});
-  set(50);
 })();
 </script>
 </body>
