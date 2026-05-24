@@ -1,349 +1,31 @@
 {
   "generatedAt": "2026-05-24",
   "note": "Derived viral teardowns of real breakout videos (over-reached the creator's following). Our analysis in our words; no verbatim transcript or source URL. The full audit version stays local.",
-  "count": 60,
+  "count": 18,
   "teardowns": [
-    {
-      "niche": "food and beverage",
-      "hookPattern": "direct-callout",
-      "framework": "organic",
-      "reach": "13565.89x following",
-      "viewBucket": "1M+",
-      "hookTechnique": "Rapid-fire single-word repetition of a trend keyword immediately signals tribal belonging to an already-activated niche audience before a single second of context is given",
-      "retentionDevice": "The incomplete social loop — a third party ('you') is referenced as the matcha-maker, implying an off-screen relationship dynamic the viewer wants to resolve; the phrase 'famous matcha station' creates a micro-reveal payoff that keeps the viewer through the 9 seconds",
-      "viralMechanism": "The video functions as a mirror for matcha-obsessed viewers — the self-deprecating caption ('addiction is getting real') combined with the pleading, dependent tone ('get me a matcha and I'm good') is a shareable confession that matcha drinkers forward to their own enablers; the shares-to-views ratio (~4.1%) is driven by tag-your-dealer behavior, not passive appreciation",
-      "dimensionRatings": {
-        "hook": "very-strong — repetition triggers algorithm scroll-stop",
-        "format": "strong — candid POV collapses parasocial distance",
-        "visual": "weak — cannot verify from transcript alone",
-        "audio": "strong — rhythmic chant is inherently loopable"
-      },
-      "vsCreatorNorm": "insufficient comparison",
-      "stealThis": "Open with 3–5 rapid repetitions of your hero ingredient or product name before any sentence structure — the chant pattern exploits audio pattern-recognition to manufacture a scroll-stop without requiring visual production value"
-    },
-    {
-      "niche": "food and beverage",
-      "hookPattern": "belief-challenging",
-      "framework": "problem-agitate-solution",
-      "reach": "13454.55x following",
-      "viewBucket": "10M+",
-      "hookTechnique": "Opens mid-scene with a self-aware 'caught in the act' framing—the narrator positions themselves as the subject of an embarrassing reveal before any context is given, triggering the viewer's pattern-recognition for a classic meme format",
-      "retentionDevice": "The Rasputin lyric drop at the end of an 8-second clip forces the viewer to re-watch to confirm the joke landed—the caption's health confession recontextualizes the audio as self-deprecating punishment, creating a loop incentive",
-      "viralMechanism": "The video hijacks the 'Yep that's me' meme audio (a culturally pre-loaded comedic structure) and maps it onto a hyper-specific niche grievance (matcha + iron absorption) that a large, passionate subculture—matcha drinkers, health-conscious women, anemia sufferers—immediately recognizes as their own lived experience. The specificity of the health claim ('blocks iron absorption') gives sharers a reason to tag someone or send it as a proxy for a conversation they've already had. The save rate (~2% of views) suggests people are bookmarking it as practical health information, not just entertainment.",
-      "dimensionRatings": {
-        "hook": "very-strong: pre-loaded meme recognition",
-        "format": "strong: caption carries payload",
-        "visual": "weak: no visual evidence provided",
-        "audio": "very-strong: Rasputin triggers completion"
-      },
-      "vsCreatorNorm": "insufficient comparison",
-      "stealThis": "Attach a well-known 'caught' or 'sentenced' meme audio to a product's real, specific downside that your core customer already privately complains about—the self-aware admission of a flaw travels faster than any benefit claim"
-    },
-    {
-      "niche": "tech and SaaS",
-      "hookPattern": "belief-challenging",
-      "framework": "problem-agitate-solution",
-      "reach": "5802.05x following",
-      "viewBucket": "1M+",
-      "hookTechnique": "Opens with a self-deprecating admission of low value, deliberately triggering curiosity by making the viewer feel they know something the creator is about to disprove — a contradiction frame that baits the brain into waiting for the resolution",
-      "retentionDevice": "A rapid escalating sequence of use cases (phone → tablet → laptop) that keeps raising the stakes every 2-3 seconds, so the viewer stays to see how far the claim goes; each new device is a micro-reward that pays off the hook's promise",
-      "viralMechanism": "The save-and-share driver is the product's compressible utility: it solves three separate device problems in a 23-second clip, making viewers mentally file it as a practical purchase reference — the high save count (2268) confirms this is 'bookmark behavior,' not entertainment behavior. Shares are fueled by the 'I need to send this to someone who has this problem' reflex, not identity signaling",
-      "dimensionRatings": {
-        "hook": "very-strong: contradiction defeats viewer assumption",
-        "format": "strong: escalating demos fill runtime",
-        "visual": "strong: shape-shifting product is inherently demonstrable",
-        "audio": "weak: no tempo or sound data"
-      },
-      "vsCreatorNorm": "insufficient comparison",
-      "stealThis": "Lead with a genuine-sounding concession that your product looks unimpressive or unnecessary, then immediately pivot to a stacked use-case demo that systematically dismantles that concession — the gap between the lowered expectation and the delivered proof is what triggers both saves and shares"
-    },
-    {
-      "niche": "tech and SaaS",
-      "hookPattern": "belief-challenging",
-      "framework": "industry-contrarian",
-      "reach": "5498.89x following",
-      "viewBucket": "10M+",
-      "hookTechnique": "Delivers a plausible-sounding 'pro tip' in an authoritative tone, then immediately acts on dangerous-seeming advice, creating a gap between expected expertise and apparent recklessness that demands resolution",
-      "retentionDevice": "The escalating absurdity — each sentence adds a new layer of commitment to the 'wrong' action (getting it in the fans, then the ports, then 'all over it'), which creates a mounting 'will they actually destroy it?' tension that holds viewers through the 41 seconds",
-      "viralMechanism": "The video is a trap for algorithmic sharing: it looks, in the first 3 seconds, like a genuinely harmful PC tutorial, triggering a 'warn others' share impulse, but the caption reveals the mineral oil punchline — meaning it gets shared TWICE by different audiences (the outrage sharers and the 'actually clever' sharers), doubling its distribution surface",
-      "dimensionRatings": {
-        "hook": "very-strong — authoritative misdirect baits outrage",
-        "format": "strong — 41s prevents abandonment and loop-watch",
-        "visual": "strong — liquid on hardware is viscerally alarming",
-        "audio": "strong — calm deadpan amplifies wrongness"
-      },
-      "vsCreatorNorm": "insufficient comparison",
-      "stealThis": "Open with a confident, expert-framed instruction that appears to violate a sacred rule of your niche, execute it on camera without flinching, and bury the technical justification in the caption — the gap between visual horror and actual correctness is the share engine"
-    },
-    {
-      "niche": "pets",
-      "hookPattern": "direct-callout",
-      "framework": "organic",
-      "reach": "3519.06x following",
-      "viewBucket": "1M+",
-      "hookTechnique": "A dog appears to be delivering a confrontational, dismissive monologue — the absurdist mismatch of aggressive human speech attributed to a small French Bulldog creates instant cognitive dissonance that arrests the scroll reflex within the first second",
-      "retentionDevice": "At only 5 seconds, there is no retention problem to solve — the video ends before the viewer can leave. The brevity itself functions as a retention device: the entire payoff is front-loaded, and the loop replay is virtually guaranteed because the clip ends so abruptly it feels unfinished",
-      "viralMechanism": "The share driver is pure social currency: this clip is a readymade punchline people want to send to a specific person in their life. The phrase 'standing on business' combined with the dog's deadpan delivery gives viewers a culturally legible template for saying 'this is me when...' — it functions as a personality badge and a DM weapon simultaneously. The 61,300 shares relative to 294 comments confirms this is tag-a-friend/send-to-someone behavior, not community discussion",
-      "dimensionRatings": {
-        "hook": "very-strong — dog talks like human",
-        "format": "very-strong — loopable sub-5s clip",
-        "visual": "strong — subject fills frame clearly",
-        "audio": "very-strong — dialogue IS the product"
-      },
-      "vsCreatorNorm": "insufficient comparison",
-      "stealThis": "Dub confrontational or absurdly relatable human dialogue over a pet's neutral facial expression and keep the clip under 6 seconds — the animal's deadpan non-reaction is what makes the voiceover land; do not cut to reactions or add music that competes with the audio"
-    },
-    {
-      "niche": "pets",
-      "hookPattern": "direct-callout",
-      "framework": "organic",
-      "reach": "2777.78x following",
-      "viewBucket": "10M+",
-      "hookTechnique": "The audio opens mid-interaction, implying the cat is caught doing something — the phrase 'I know you see me watching' creates an immediate relational tension that demands the viewer see what the cat is doing visually",
-      "retentionDevice": "The lyric loops and the cat's unblinking, wide-eyed stare creates a slow-burn uncanny effect — each repeat of 'I know you see me watching' recontextualizes the cat's expression, rewarding a second and third watch within the same 13-second clip",
-      "viralMechanism": "Perfect audio-visual sync between a trending/emotionally resonant sound and a cat whose facial expression independently looks unhinged — the caption 'possessed' is confirmatory, not explanatory, which means viewers feel they discovered the joke themselves and are compelled to share it to others who 'need to see this'",
-      "dimensionRatings": {
-        "hook": "very-strong — sound implies confrontation immediately",
-        "format": "strong — 13s enables full loop replay",
-        "visual": "very-strong — cat expression matches audio eerily",
-        "audio": "very-strong — lyric anthropomorphizes cat perfectly"
-      },
-      "vsCreatorNorm": "insufficient comparison",
-      "stealThis": "Pair a trending sound whose lyric assigns a human emotional state to your subject, then find or wait for a moment where the subject's expression or behavior independently validates that lyric without coaching — the creator does nothing; the content 'agrees' with the audio on its own"
-    },
-    {
-      "niche": "fitness",
-      "hookPattern": "belief-challenging",
-      "framework": "problem-agitate-solution",
-      "reach": "2550.64x following",
-      "viewBucket": "1M+",
-      "hookTechnique": "Opens with a knowledge-gap statement implying the viewer is already failing — 'you don't have this because you don't know it exists' — which triggers immediate self-audit and prevents scrolling",
-      "retentionDevice": "The name-drop of Mike Metzler (a legitimizing authority signal) followed by 'so do I' creates a credibility bridge; the viewer stays to find out what the secret actually is, though the video withholds full specificity, sustaining tension through the end",
-      "viralMechanism": "The save-and-share driver is the implicit promise of a hidden training variable ('this muscle') that is never fully named or shown in the transcript — viewers share to ask 'what muscle is this?' and save to return to it, essentially crowdsourcing the answer through comments; the ambiguity is the mechanism, not a flaw",
-      "dimensionRatings": {
-        "hook": "very-strong — engineered exclusion gap",
-        "format": "strong — 26s forces density",
-        "visual": "unclear — transcript only",
-        "audio": "unclear — transcript only"
-      },
-      "vsCreatorNorm": "insufficient comparison",
-      "stealThis": "Lead with 'most people don't know [X] exists — that's why they don't have [desired result]' then name one credible historical figure who used it, without ever fully defining X until the call-to-action; the undefined variable forces comments and saves"
-    },
-    {
-      "niche": "supplements",
-      "hookPattern": "speed-of-claim",
-      "framework": "problem-agitate-solution",
-      "reach": "2010.58x following",
-      "viewBucket": "1M+",
-      "hookTechnique": "Opens with a conditional promise ('if you do X, then Y happens') that immediately frames a frightening physical transformation as both imminent and effortless, collapsing the skeptic's delay mechanism before they can scroll",
-      "retentionDevice": "Escalating medical jeopardy: the script sequences symptoms (numbness, gasping) → catastrophic internal imagery (arteries as straws, heart 'struggling for survival') → mechanism explanation → refund guarantee. Each clause raises the stakes, so dropping off feels like abandoning a diagnosis mid-sentence",
-      "viralMechanism": "The save-and-share driver is the refund guarantee at the end combined with the extreme specificity of the claim ('twice their width,' '7 days,' named compounds L-arginine and L-citrulline). Viewers save it as a 'receipt' — either to buy later or to fact-check/debunk — and share it to at-risk relatives (older men with circulation issues), which is the exact demo the 'man/healthy' tags are targeting. The fear-based symptom list ('numbness in hands and feet,' 'gasping from walking') is a direct mirror for a large, anxious audience who will forward it as a warning",
-      "dimensionRatings": {
-        "hook": "very-strong — conditional threat activates immediately",
-        "format": "strong — 32s eliminates dropout window",
-        "visual": "unclear — transcript provides no visual data",
-        "audio": "unclear — transcript provides no audio data"
-      },
-      "vsCreatorNorm": "insufficient comparison",
-      "stealThis": "Lead with a symptom the target audience is quietly experiencing but hasn't named ('if you feel X'), then give that symptom a terrifying clinical explanation before introducing the product — this converts passive scrollers into self-identified patients before they realize they've been hooked"
-    },
-    {
-      "niche": "tech and SaaS",
-      "hookPattern": "removing-limitations",
-      "framework": "problem-agitate-solution",
-      "reach": "1983.04x following",
-      "viewBucket": "10M+",
-      "hookTechnique": "Negative command with implied personal pain: opens by telling the viewer to stop a common action (buying a charger) until they witness something, activating both loss-aversion and curiosity simultaneously before any product is named",
-      "retentionDevice": "The transcript sequences micro-reveals in a problem→solution→bonus→urgency chain: it names the specific physical frustration (blocked hand space), then shows the flat-profile fix, then unlocks a hidden feature (the flip stand), then escalates to a spec payoff (240W), keeping each beat dependent on the previous one so dropping off feels like leaving mid-sentence",
-      "viralMechanism": "The video solves a universal, unnamed friction that millions have felt but never articulated — the charger brick blocking comfortable hand position while watching content. Naming that exact sensation ('can't quite get your hand in the freaking space') triggers a 'that's literally me' recognition reflex, which is the primary share/save driver: people send it to themselves as a purchase reminder or forward it to others who they know have complained about this",
-      "dimensionRatings": {
-        "hook": "very-strong — stops scroll via prohibition",
-        "format": "strong — problem-feature-urgency arc",
-        "visual": "strong — physical demo implied throughout",
-        "audio": "strong — conversational expletive builds trust"
-      },
-      "vsCreatorNorm": "insufficient comparison",
-      "stealThis": "Open with a negative command ('Do not buy X until you see this') paired with a hyper-specific physical annoyance the target audience has experienced but has no name for — the combination of stopping behavior + validating an unvoiced frustration forces a pause that algorithmic watch-time rewards"
-    },
-    {
-      "niche": "home and cleaning",
-      "hookPattern": "information-offering",
-      "framework": "problem-agitate-solution",
-      "reach": "1924.69x following",
-      "viewBucket": "500k+",
-      "hookTechnique": "Opens with a category label ('mom hack') plus a specific product type, immediately signaling a concrete solution to a recognized parental frustration before the viewer has time to scroll",
-      "retentionDevice": "The problem-solution structure compresses a relatable pain point ('yelling kids' names') into the first 5 seconds, then dangles specific product specs (52 melodies, 5 volume levels, 1000-foot range) as justification, making viewers stay to validate whether the purchase is worth it",
-      "viralMechanism": "The share/save split (7746 shares, 5946 saves) reveals a dual-utility dynamic: parents saved it as a purchase reminder and shared it to other parents as a parenting shortcut recommendation. The $18 price point — stated in the caption but not the transcript — is low enough to trigger impulse-gift behavior. The 'save your vocal cords' payoff line reframes a mundane product as a self-care solution for parents, which increases emotional resonance and shareability beyond pure utility",
-      "dimensionRatings": {
-        "hook": "strong — labels problem identity fast",
-        "format": "strong — 29s removes decision fatigue",
-        "visual": "unclear — transcript provides no visual evidence",
-        "audio": "weak — no sonic differentiation evident"
-      },
-      "vsCreatorNorm": "insufficient comparison",
-      "stealThis": "Lead with the problem behavior being eliminated ('sick of yelling'), not the product feature — then name the price in the caption to collapse the friction between discovery and purchase intent"
-    },
-    {
-      "niche": "fashion",
-      "hookPattern": "direct-callout",
-      "framework": "organic",
-      "reach": "1703.94x following",
-      "viewBucket": "1M+",
-      "hookTechnique": "Opens mid-conflict with a scolding 'Dude' directed offscreen, dropping the viewer into an already-escalating social confrontation with zero setup — forces the brain to orient and ask 'what happened?'",
-      "retentionDevice": "The video is ~6 seconds total, so retention is structurally guaranteed, but the three-voice escalation (narrator → mom → implied guilty party) compresses a full comedic arc into the runtime, rewarding the viewer before they can leave",
-      "viralMechanism": "It functions as a relatable proxy experience — anyone who has thrifted, had a sibling, or witnessed store-hoarding immediately pattern-matches to a personal memory. The 'thrifting greed' scenario is universally understood and emotionally charged enough to share as social currency ('this is literally my [person]'). Shares and comments are identity-signaling, not algorithm-gaming.",
-      "dimensionRatings": {
-        "hook": "very-strong — mid-scene entry no setup",
-        "format": "strong — complete story arc six seconds",
-        "visual": "unclear — no visual data available",
-        "audio": "strong — three-voice dialogue escalation"
-      },
-      "vsCreatorNorm": "insufficient comparison",
-      "stealThis": "Drop into a scene that is already in conflict — skip all preamble, use a direct accusatory opener ('Dude,' 'Wait,' 'Why would you—'), and let the viewer's brain fill in the backstory; the gap between what they see and what they don't know is the engine"
-    },
-    {
-      "niche": "pets",
-      "hookPattern": "direct-callout",
-      "framework": "organic",
-      "reach": "1490.64x following",
-      "viewBucket": "1M+",
-      "hookTechnique": "Opens with a direct command ('please look') plus an anthropomorphic label ('dramatic') applied to a turtle — a cognitive mismatch that forces the viewer to verify the claim with their own eyes before they can scroll.",
-      "retentionDevice": "The payoff is delayed: the creator explains the turtle's behavior BEFORE the viewer can see it clearly, building a micro-anticipation loop. Viewers stay to confirm whether the animal actually 'performs' the described behavior. The creator then delivers a second beat — talking directly to the turtle ('enjoy your soak') — which extends the scene and rewards patience with a punchline.",
-      "viralMechanism": "The video provides a universally shareable 'proof clip' for a relatable personality archetype (the petty, passive-aggressive drama queen) but embodied in a species — a turtle — nobody expects to have personality. This species-surprise gap is the core engine: people share it specifically to say 'I didn't know turtles did this,' which works as social currency across audiences with zero prior interest in turtles.",
-      "dimensionRatings": {
-        "hook": "very-strong — commands attention via mismatch",
-        "format": "strong — narration structures payoff",
-        "visual": "strong — turtle floating motionless confirms claim",
-        "audio": "strong — conversational tone signals authenticity"
-      },
-      "vsCreatorNorm": "insufficient comparison",
-      "stealThis": "Lead with a direct-address command ('please look at') + a human personality trait assigned to a non-human subject — this forces verification-watching and pre-frames the entire clip as a 'can you believe this?' proof video before a single frame of evidence appears."
-    },
-    {
-      "niche": "tech and SaaS",
-      "hookPattern": "before-after",
-      "framework": "problem-agitate-solution",
-      "reach": "1448.38x following",
-      "viewBucket": "1M+",
-      "hookTechnique": "Opens with a direct curiosity gap framed as a challenge—implying a surprising or extreme result is about to be revealed, compelling viewers to stay to see the payoff rather than leading with product features",
-      "retentionDevice": "A live, real-time physical demonstration with a visible, unambiguous result (condensation forming on metal) that unfolds progressively—the viewer stays because the 'proof' is still happening on screen, not stated but shown",
-      "viralMechanism": "Extreme weather urgency ('heat wave,' 'hot summer,' 'stay safe') fused with a tangible low-friction purchase path (TikTok Shop, 'super cheap') turns passive viewers into active savers and sharers—the 17,690 saves signal people bookmarking it as a buying reference, which the algorithm reads as high-intent engagement and amplifies far outside the follower base",
-      "dimensionRatings": {
-        "hook": "very-strong: explicit payoff promise imminent",
-        "format": "strong: demo resolves within scroll-window",
-        "visual": "strong: condensation visible proof moment",
-        "audio": "weak: no music urgency created"
-      },
-      "vsCreatorNorm": "insufficient comparison",
-      "stealThis": "Trigger condensation, frost, steam, or any irreversible physical change on camera during the product demo—the moment matter transforms state on screen, you have undeniable proof that no spec sheet can match, and it compresses credibility into under 5 seconds"
-    },
-    {
-      "niche": "fashion",
-      "hookPattern": "question",
-      "framework": "organic",
-      "reach": "1447.18x following",
-      "viewBucket": "1M+",
-      "hookTechnique": "An unprompted street-interview question about age and money creates immediate social curiosity — the viewer is cast as an eavesdropper on a stranger's private financial disclosure, which triggers a compulsive need to hear the answer",
-      "retentionDevice": "The subject visibly struggles to describe the item — halting, self-correcting, saying 'poop skirt' — which creates a micro-tension loop: the viewer stays to resolve the verbal fumble and see what the item actually is, then gets a second reward with the niche J-pop reference that filters for a passionate sub-audience",
-      "viralMechanism": "The 'most expensive item' question acts as a social comparison trigger: viewers benchmark themselves against a 15-year-old's answer, which generates both saves (to reference the item/brand) and comments (to react to the unexpected answer). The saves-to-shares ratio (3694 saves vs 413 shares) specifically indicates the item or the J-pop group name 'Phantom Seater' was being bookmarked for later lookup — the video functioned as a discovery artifact, not just entertainment",
-      "dimensionRatings": {
-        "hook": "very-strong — age-plus-money tension immediate",
-        "format": "strong — street interview universally legible",
-        "visual": "weak — transcript reveals no visual context",
-        "audio": "strong — conversational stumble feels unscripted"
-      },
-      "vsCreatorNorm": "insufficient comparison",
-      "stealThis": "Ask a stranger one financial-disclosure question ('most expensive item you own') where the honest answer is almost guaranteed to be surprising or niche — the stumble in delivery and the unexpected answer together manufacture authenticity that algorithmic content cannot replicate, and the item name drives saves as a search artifact"
-    },
-    {
-      "niche": "hair",
-      "hookPattern": "pov",
-      "framework": "organic",
-      "reach": "1367.02x following",
-      "viewBucket": "10M+",
-      "hookTechnique": "Opens mid-conflict with a distressed refusal ('No, I can't pay for this') — drops the viewer into an already-escalated emotional moment with zero setup, triggering immediate curiosity about what went wrong",
-      "retentionDevice": "The tension oscillates: complaint spikes (she hates the result), then releases (it smells good, haters are a flex), then resets into a new negotiation about what she actually wants. Each micro-resolution is immediately followed by a new problem or joke, preventing a natural exit point across the full 144 seconds",
-      "viralMechanism": "The video dramatizes a universally relatable 'client vs. hairdresser' power dynamic that most women have lived. The stylist is family (cousin), which makes the unfiltered complaint safe and funny rather than cruel — it signals authenticity and gives viewers permission to share it as 'this is literally me at the salon' content. The saves (37k) suggest women are also bookmarking it as behavioral reference for how to communicate with their own stylist",
-      "dimensionRatings": {
-        "hook": "very-strong — mid-conflict no-setup",
-        "format": "strong — conflict loop sustains",
-        "visual": "unclear — transcript only",
-        "audio": "strong — raw unscripted chaos"
-      },
-      "vsCreatorNorm": "insufficient comparison",
-      "stealThis": "Start any client-facing service video mid-complaint with zero introduction — the conflict IS the hook — then let the resolution and re-negotiation play out in real time without editing the mess out"
-    },
-    {
-      "niche": "pets",
-      "hookPattern": "pov",
-      "framework": "organic",
-      "reach": "1363.88x following",
-      "viewBucket": "1M+",
-      "hookTechnique": "Countdown ultimatum delivered in authoritative human voice creates immediate suspense about whether a consequence will actually happen — viewer is placed inside a familiar, tense scenario before they can choose to scroll",
-      "retentionDevice": "The countdown structure is a built-in retention scaffold: each number is a micro-cliffhanger. The viewer cannot leave until the count hits zero because the payoff (what happens at 'one') is baked into the format. At 18 seconds, the video ends just as the emotional release lands, leaving no dead time to lose the viewer.",
-      "viralMechanism": "Role-reversal anthropomorphism: the caption reframes the video as the DOG's POV ('She abandoned me'), making the pet the comedic victim-narrator. This transforms a common owner behavior into a shareable joke that dog owners recognize as their own life. The share motivation is 'this is literally my dog' — it functions as a proxy for millions of owners to tag their pet or send it to someone who will get it instantly. The saves likely come from people wanting to replicate the bit with their own pet.",
-      "dimensionRatings": {
-        "hook": "very-strong — countdown forces involuntary watch",
-        "format": "very-strong — 18s zero waste",
-        "visual": "strong — cannot rate precisely",
-        "audio": "very-strong — voice IS the content"
-      },
-      "vsCreatorNorm": "insufficient comparison",
-      "stealThis": "Use a real countdown ultimatum directed at your subject (pet, product, person) and then let the caption flip the POV to the 'victim' — the structural tension of the countdown plus the perspective inversion in text is the repeatable unit, not the chihuahua."
-    },
-    {
-      "niche": "home and cleaning",
-      "hookPattern": "information-offering",
-      "framework": "problem-agitate-solution",
-      "reach": "1358.78x following",
-      "viewBucket": "10M+",
-      "hookTechnique": "Opens with performative, slightly sarcastic gratitude directed at an unnamed 'you' for a specific behavior — creating immediate parasocial curiosity about who is being thanked and why, pulling the viewer into a scene already in progress",
-      "retentionDevice": "The transcript reveals a compliment about using a glass top, which implies a tutorial or reveal is incoming — viewers stay to find out what behavior is being validated and what the payoff tip is; the caption's claim about drains and pest control adds a stakes layer (bugs in your home) that makes leaving feel risky",
-      "viralMechanism": "The caption delivers an actionable, zero-cost, 30-second household habit (run water in every drain monthly) tied to a visceral fear trigger — roaches and palmetto bugs — that is geographically specific enough to feel credible but universal enough to be shareable to anyone who has ever seen a bug near a drain; the saves-to-views ratio (~0.38%) signals people bookmarking it as a reference, and the shares indicate people tagging others out of genuine alarm or practical concern, not entertainment",
-      "dimensionRatings": {
-        "hook": "strong — guilt-trip-via-gratitude disarms",
-        "format": "strong — short tip perfectly paced",
-        "visual": "unclear — transcript insufficient data",
-        "audio": "unclear — transcript insufficient data"
-      },
-      "vsCreatorNorm": "insufficient comparison",
-      "stealThis": "Open with exaggerated, slightly sarcastic 'thank you' directed at a viewer behavior you want to reinforce — it creates a parasocial in-group feeling and instantly signals the video will validate something the viewer already does or fears they're doing wrong, without leading with a direct claim that triggers a skip"
-    },
-    {
-      "niche": "home and cleaning",
-      "hookPattern": "before-after",
-      "framework": "problem-agitate-solution",
-      "reach": "1338.97x following",
-      "viewBucket": "1M+",
-      "hookTechnique": "A cold-open command ('Ready? Go.') immediately followed by a shocked profanity reaction creates a pattern interrupt — it mimics a live, unscripted moment that triggers curiosity about what just happened before the viewer even knows the product",
-      "retentionDevice": "The transcript promises visual proof of a skeptic's objection ('for anyone who doubts whether it really cleans') and then immediately delivers a before/during wipe sequence — viewers stay to see if the payoff matches the claim, which is a classic proof-arc structure",
-      "viralMechanism": "The caption and hook are completely misaligned with the video body — caption says 'brand-new couch was ruined' but the video shows car interior cleaning. This gap forces shares and comments ('wrong video?', 'wait what?') and also means the algorithm served it to two distinct intent audiences (car cleaning AND couch cleaning) simultaneously, multiplying distribution surface area beyond what either audience alone would generate. The saves are also high (9,847) because viewers bookmark it as a 'product to buy later' — the 46-second runtime is short enough to rewatch but long enough to demonstrate credibility",
-      "dimensionRatings": {
-        "hook": "very-strong — profanity creates instant rewatch",
-        "format": "strong — proof arc compresses doubt",
-        "visual": "strong — wipe reveal is satisfying",
-        "audio": "weak — no music drives energy"
-      },
-      "vsCreatorNorm": "insufficient comparison",
-      "stealThis": "Open with a two-word command followed by a genuine shocked reaction before showing the product — it signals authenticity and forces the algorithm's completion-rate meter up in the first 3 seconds when most drops occur"
-    },
     {
       "niche": "ABG beauty",
       "hookPattern": "information-offering",
       "framework": "organic",
       "reach": "1325.58x following",
       "viewBucket": "10M+",
-      "hookTechnique": "Opens by naming an alarming, culturally-charged object ('black face paint') before revealing it is actually a foundation product — forcing the viewer to reconcile a loaded expectation with a beauty context",
-      "retentionDevice": "The sentence is deliberately left incomplete at the 3-second mark ('the darkest shade of the...'), a syntactic cliffhanger that cannot be resolved without watching further; the viewer's brain is wired to finish the sentence",
-      "viralMechanism": "The video is functionally a public callout of the brand Youthforia for releasing what appears to be an unacceptably dark foundation shade — tagging @golloria (a known beauty critic in this space) converts the video into pre-existing discourse, letting it piggyback on an audience already primed to react and share as social commentary rather than just beauty content",
+      "videoFormat": "duet/stitch reaction with face-paint demo",
+      "openingVisual": "A dark-skinned creator in a grey headwrap and pink zip-top, head tilted up, holding a makeup brush loaded with near-black product to her cheek; a small inset box in the lower-left shows the original lighter-skinned creator she is responding to.",
+      "onScreenTextHook": "this is black face paint",
+      "lighting": "Soft, even key light against a clean light-grey/cream room; flattering and bright, not low-fi.",
+      "cameraFraming": "Tight selfie close-up, face fills the frame, with a stitch/inset window pinning the original creator she is clapping back at.",
+      "creatorStyling": "Minimal, deliberately understated — headwrap, gold hoops, dewy skin — so all attention is on the brush and the deadpan delivery.",
+      "hookTechnique": "She literally paints the 'darkest shade' foundation on as 'black face paint,' turning a shade-range complaint into a visual that you cannot scroll past because you need to know whether she is serious.",
+      "retentionDevice": "The duet structure plants an unresolved conflict — you keep watching to see how far she takes the bit and how she lands the comeback at the original creator.",
+      "viralMechanism": "It rides an active discourse (foundation shade inclusivity, @golloria) and weaponizes deadpan satire; viewers share to take a side, and the caption 'you all way too dramatic' is itself a quote-able stance that drives the comment war.",
       "dimensionRatings": {
-        "hook": "very-strong — weaponizes racial-charge dissonance",
-        "format": "strong — unresolved sentence forces completion",
-        "visual": "strong — product contrast is self-evident",
-        "audio": "weak — transcript shows no audio details"
+        "hook": "very-strong — paints provocation onto her face",
+        "format": "strong — duet pins the conflict instantly",
+        "visual": "strong — bright clean shot, brush draws eye",
+        "audio": "strong — flat sarcastic delivery sells satire"
       },
       "vsCreatorNorm": "insufficient comparison",
-      "stealThis": "Name the most extreme, alarming version of your product or result in the first two words, then pause before revealing the actual context — the gap between the alarming label and the mundane truth is the engine that holds attention and triggers sharing"
+      "stealThis": "Don't argue a complaint — physically perform the exaggerated version of it on camera so the rebuttal is a visual the feed can't ignore."
     },
     {
       "niche": "ABG beauty",
@@ -351,215 +33,47 @@
       "framework": "organic",
       "reach": "1316.18x following",
       "viewBucket": "10M+",
-      "hookTechnique": "Opens mid-action on a transgressive premise — refreshing makeup you slept in — which signals a hack rather than a tutorial, instantly differentiating from standard 'get ready with me' content",
-      "retentionDevice": "The unscripted dad interruption mid-video (~line 4) creates an authentic, unedited moment that resets attention; viewers stay to see if the intimacy continues and whether the technique actually works on slept-in makeup",
-      "viralMechanism": "The core share driver is the permission structure: 'you don't have to redo your makeup, here's how to fix it.' This resolves a universal, slightly shameful behavior (sleeping in makeup) with a practical solution. The share is social currency — 'this is us' — especially in the ABG community where this is a common but rarely-acknowledged practice. The saves (39K+) confirm it's being bookmarked as a reusable reference, not just entertained as content.",
+      "videoFormat": "talking-head meltdown GRWM",
+      "openingVisual": "A woman in glasses filling the whole frame, face caked in still-unblended powder and bright green eyeshadow with a flushed under-eye, looking dead into the lens; large yellow caption 'makeup touch up' sits over her chin.",
+      "onScreenTextHook": "makeup touch up",
+      "lighting": "Harsh indoor overhead/office light, unflattering on purpose — it exposes the uneven powder and is part of the joke.",
+      "cameraFraming": "Extreme handheld selfie close-up, slightly low angle, so the in-progress face is unavoidable.",
+      "creatorStyling": "Anti-glam: visible flyaways, mid-process makeup, ordinary clothes — the gap between 'tutorial' framing and the chaotic result is the entertainment.",
+      "hookTechnique": "Frames itself as a normal 'touch up' tutorial while showing a face that looks anything but finished, so the viewer stays to see whether it's serious, satire, or a trainwreck.",
+      "retentionDevice": "An ongoing 'is she actually going to fix this?' open loop, plus the 'Dad, is that you?' interruption mid-video that resets attention.",
+      "viralMechanism": "It works as forced-productivity comedy: the value is watching someone perform a beauty ritual with zero polish and full confidence, which reads as funny-relatable and gets stitched/dueted; the absurd length (288s) survives because each segment adds a new bit.",
       "dimensionRatings": {
-        "hook": "very-strong — transgressive premise signals hack",
-        "format": "strong — unedited intimacy builds trust",
-        "visual": "weak — inferred from transcript only",
-        "audio": "strong — dad interruption resets retention"
+        "hook": "very-strong — finished framing, unfinished face",
+        "format": "strong — tutorial shell carries comedy",
+        "visual": "strong — unflattering light is the joke",
+        "audio": "strong — casual narration plus dad cameo"
       },
       "vsCreatorNorm": "insufficient comparison",
-      "stealThis": "Open by naming the behavior your audience does but feels slightly embarrassed about, then immediately frame the video as the fix — this collapses defensiveness and converts shame into shareability"
+      "stealThis": "Use a familiar tutorial frame ('touch up') but let the visible reality contradict it — the gap between promise and image is the hook."
     },
     {
-      "niche": "tech and SaaS",
-      "hookPattern": "newness",
-      "framework": "problem-agitate-solution",
-      "reach": "1267.73x following",
-      "viewBucket": "1M+",
-      "hookTechnique": "Opens with a identity-targeted promise ('best invention if you're a hot girly') that functions as a self-selection filter — viewers who match the label feel personally summoned before they know what the product even is",
-      "retentionDevice": "The product demo is stacked with use-case pivots in rapid succession (hot flashes, baseball game, summertime) which keeps requalifying new sub-audiences mid-watch, making each viewer feel the video is still 'for them' as it progresses",
-      "viralMechanism": "The share driver is the 'tagging behavior' trigger: 'hot girly' is a shareable identity label women use to describe friends, making this a gifting/recommendation vehicle — 37,000 shares and 30,098 saves indicate viewers were sending it to specific people ('this is you') rather than broadcasting it, which is a fundamentally different and more powerful distribution loop than algorithmic reach alone",
-      "dimensionRatings": {
-        "hook": "very-strong — identity label pre-qualifies audience",
-        "format": "strong — rapid use-cases sustain runtime",
-        "visual": "unclear — transcript provides no visual evidence",
-        "audio": "unclear — transcript provides no audio evidence"
-      },
-      "vsCreatorNorm": "insufficient comparison",
-      "stealThis": "Lead with a hyper-specific identity label ('if you're a X') before naming the product — it front-loads self-selection, which collapses the audience into a highly motivated group and creates a social gifting reflex that drives shares to matching friends"
-    },
-    {
-      "niche": "pets",
-      "hookPattern": "information-offering",
-      "framework": "organic",
-      "reach": "1267.59x following",
-      "viewBucket": "10M+",
-      "hookTechnique": "A mundane, disembodied tech audio cue plays over footage of a cat, creating instant cognitive dissonance — the viewer's brain expects a phone or laptop, not an animal, forcing a double-take in the first second",
-      "retentionDevice": "The video is only ~5 seconds, so retention is near-total by default, but the unresolved absurdity of the audio-visual mismatch compels an immediate replay loop — viewers rewatch to confirm what they just saw, artificially inflating watch time metrics",
-      "viralMechanism": "This is a sound-trend participation video where the humor lives entirely in the gap between the Bluetooth connection notification audio and the implication that the cat is the device being 'connected.' The joke is universally legible — anyone who has heard that sound (billions of people) gets it instantly without any prior context, pet knowledge, or following of this creator. That zero-context-required humor is the primary share driver. Shares spiked because people were essentially texting the video to a specific person in their life — the joke is a delivery mechanism for a personal reference.",
-      "dimensionRatings": {
-        "hook": "very-strong — zero-context immediate payoff",
-        "format": "strong — loop-optimized frictionless length",
-        "visual": "strong — cat face sells punchline",
-        "audio": "very-strong — universal recognition triggers laugh"
-      },
-      "vsCreatorNorm": "insufficient comparison",
-      "stealThis": "Pair a universally recognized, non-pet audio cue (a notification sound, a system alert, a familiar jingle) with your animal or product as the implied 'source' of that sound — the humor requires no caption explanation and works on first-time viewers with zero brand awareness"
-    },
-    {
-      "niche": "tech and SaaS",
-      "hookPattern": "newness",
-      "framework": "organic",
-      "reach": "1252.54x following",
-      "viewBucket": "10M+",
-      "hookTechnique": "Delayed-gratification payoff framing: the creator opens mid-emotion, acting as if the viewer is already in on a long-running story ('it finally came'), manufacturing the sensation of a climax arriving rather than a video starting",
-      "retentionDevice": "The 7-second runtime eliminates the retention problem entirely — the video ends before the brain can decide to leave. The product reveal IS the content, so the loop between hook and payoff is instantaneous, creating a rewatch reflex rather than a retention challenge",
-      "viralMechanism": "The product itself — a 2-in-1 spatula — is the share unit, not the creator. Viewers are not sharing the person; they are tagging friends and saving it as a 'I need to buy this' bookmark. The save count (289K) nearly matches the share count (298K), confirming this functioned as a discovery/wish-list mechanism. The creator is just the delivery vehicle for a product-desire trigger",
-      "dimensionRatings": {
-        "hook": "strong — anticipation without context",
-        "format": "very-strong — zero-friction consumption",
-        "visual": "strong — product does visual work",
-        "audio": "weak — transcript carries no sonic strategy"
-      },
-      "vsCreatorNorm": "insufficient comparison",
-      "stealThis": "Open mid-reaction as if the audience already knows what you've been waiting for — no setup, no intro — forcing the viewer to reverse-engineer the context while the payoff is already happening. This creates curiosity and momentum simultaneously in under 3 seconds"
-    },
-    {
-      "niche": "food and beverage",
-      "hookPattern": "newness",
-      "framework": "organic",
-      "reach": "1213.41x following",
-      "viewBucket": "10M+",
-      "hookTechnique": "Declares a universally relatable first-time experience in under two seconds, immediately positioning the viewer as a potential witness to an authentic, unfiltered reaction rather than a performance",
-      "retentionDevice": "The language progressively collapses — full sentences dissolve into fragments, then single words, then near-silence — creating a comedic escalation that pulls viewers forward because the next 'word' keeps promising a punchline that never fully arrives, triggering loop behavior",
-      "viralMechanism": "The phrase 'drinking a vanilla football field' is a sensory metaphor specific enough to be recognizable (matcha IS grassy) yet absurd enough to be quotable and shareable as a reaction image or comment. It gave the internet a new shorthand for a shared experience millions already had but couldn't articulate, which is why shares and comments spiked — people were tagging matcha-drinking friends, not just laughing alone",
-      "dimensionRatings": {
-        "hook": "very-strong — names relatable experience instantly",
-        "format": "strong — collapse structure forces rewatch",
-        "visual": "weak — transcript reveals nothing compelling visually",
-        "audio": "strong — deadpan delivery sells the confusion"
-      },
-      "vsCreatorNorm": "insufficient comparison",
-      "stealThis": "Open with 'I just tried X for the first time' then let the description visibly fail mid-sentence — the breakdown itself is the joke, and the failed articulation signals authenticity more than any polished review could"
-    },
-    {
-      "niche": "supplements",
-      "hookPattern": "authority",
-      "framework": "organic",
-      "reach": "1202.89x following",
-      "viewBucket": "1M+",
-      "hookTechnique": "Opens with a personal workplace story involving a specific authority figure (a doctor) doing an unusual, concrete action — buying supplements for every Black woman in the office — which creates immediate curiosity about why he cared so much",
-      "retentionDevice": "The Greek-doctor-caring-for-Black-women tension is a social novelty that delays the actual health information, making viewers wait through the anecdote to get the payoff explanation. The conversational 'why do you care so much?' question mirrors what the viewer is also asking, keeping them locked in.",
-      "viralMechanism": "The video delivers a specific, biologically-grounded health vulnerability ('melanated skin reduces UV absorption → vitamin D deficiency') that applies to a large, identifiable group who have historically been underserved by mainstream health content. This creates a 'this is for ME specifically' identity trigger that drives saves as a personal health reference and shares as protective community behavior — 'I need to tell every Black woman I know.'",
-      "dimensionRatings": {
-        "hook": "very-strong — authority-plus-racial-specificity immediately",
-        "format": "strong — anecdote-to-fact structure earns trust",
-        "visual": "unclear — transcript provides no visual evidence",
-        "audio": "strong — conversational tone lowers resistance walls"
-      },
-      "vsCreatorNorm": "insufficient comparison",
-      "stealThis": "Lead with a credible third party (doctor, researcher, specialist) taking an unusually personal or costly action on behalf of a specific demographic, then reveal the biological or systemic reason why — this converts a generic health tip into a targeted, shareable alert for that community"
-    },
-    {
-      "niche": "food and beverage",
-      "hookPattern": "listicle",
-      "framework": "organic",
-      "reach": "1186.06x following",
-      "viewBucket": "1M+",
-      "hookTechnique": "Opens with a self-deprecating list format ('three things I'm good at') that creates immediate anticipatory tension — the viewer expects the list to go somewhere surprising, so they stay to collect all three items",
-      "retentionDevice": "The list structure is a psychological completion loop: once you announce a numbered list, viewers are neurologically compelled to hear every item. At 8 seconds, the video ends before the urge to leave can form. The third item also delivers a comedic callback that recontextualizes item two — you need all three to get the joke, so leaving early kills the payoff.",
-      "viralMechanism": "The punchline ('spending money on matcha') is a self-aware confession that matcha enthusiasts instantly recognize as their own behavior. It functions as a mirror — viewers share it not to show others something funny, but to tag themselves or signal tribal identity to the matcha community. The share/save ratio (41k shares, 21k saves) confirms dual-use: sharing as social confession, saving as a personal keepsake of 'this is me.' The specificity of 'matcha' (not just 'coffee' or 'food') activates a tight but passionate niche audience that already over-indexes on social sharing.",
-      "dimensionRatings": {
-        "hook": "very-strong — list primes completion drive",
-        "format": "very-strong — 8s removes drop-off window",
-        "visual": "unclear — transcript provides no visual data",
-        "audio": "unclear — transcript provides no audio data"
-      },
-      "vsCreatorNorm": "insufficient comparison",
-      "stealThis": "Build a three-item list where items 1 and 2 seem unrelated or self-deprecating, and item 3 reveals they are secretly the same thing — the reveal reframes the whole list retroactively, making the joke land harder and making the content re-watchable or shareable as a personality confession."
-    },
-    {
-      "niche": "fitness",
-      "hookPattern": "belief-challenging",
-      "framework": "industry-contrarian",
-      "reach": "1100.68x following",
+      "niche": "ABG beauty",
+      "hookPattern": "direct-callout",
+      "framework": "us-vs-them",
+      "reach": "957.42x following",
       "viewBucket": "500k+",
-      "hookTechnique": "Opens mid-suppressed-scream with an abrupt cutoff ('but when. Yeah.'), implying the creator just witnessed something absurd and almost lost composure — forces the viewer to ask 'what happened?' before a single claim is made",
-      "retentionDevice": "The creator withholds the full scene/context throughout, delivering gym science as explanation *for* the thing we never fully see — the unrevealed footage or incident acts as a dangling thread, and the argument escalates to a safety claim ('jump scare... dangerous to everyone else') that reframes the anecdote from funny to consequential, pulling viewers to the end",
-      "viralMechanism": "The video exploits a universal gym experience — loud screamers — and delivers a biomechanical debunking ('you're letting out all that air and strength so fast') that gives viewers intellectual ammunition to share. The share/save ratio is asymmetric: saves (3223) suggest people are storing the breathing technique explanation as useful; shares (1480) suggest the 'jump scare' framing is meme-worthy social currency. The caption's Ronnie Coleman reference ('prime Ronnie') anchors it to bodybuilding culture without gatekeeping, expanding the addressable audience",
+      "videoFormat": "talking-head GRWM rant",
+      "openingVisual": "A young creator in a satin leopard-print bonnet and black hoodie, face flushed bright pink (a skincare/mask stage), staring intensely into the camera in a cluttered home setting; pink script text reads 'grwm fo[r]'.",
+      "onScreenTextHook": "grwm for the first day of school!!!",
+      "lighting": "Flat indoor home light with a pink color cast on the skin; low-fi and unpolished.",
+      "cameraFraming": "Handheld selfie, head-and-shoulders, slightly chaotic framing matching the manic energy.",
+      "creatorStyling": "Bonnet + hoodie 'just woke up' look; the styling signals authenticity and the relatable not-ready-for-school chaos.",
+      "hookTechnique": "Opens mid-rant with a confrontational direct address ('what the f*** are you doing') that pattern-interrupts a calm beauty feed and dares you to keep watching.",
+      "retentionDevice": "Repeated escalating 'get ready with me for the third week / for school' beats create a chant-like loop, and the aggressive tone keeps tension high across the short 10s.",
+      "viralMechanism": "Shock-comedy in a beauty wrapper: the mismatch between sweet GRWM expectations and a profane us-vs-them tirade is inherently shareable to friends ('this is so unhinged'), driving the 10.5% engagement rate on a tiny account.",
       "dimensionRatings": {
-        "hook": "very-strong — interrupted self-reaction creates gap",
-        "format": "strong — tight 68s argument arc",
-        "visual": "unclear — no visual data in transcript",
-        "audio": "strong — tonal shift sells authenticity"
+        "hook": "very-strong — profane confrontation stops scroll",
+        "format": "strong — GRWM shell, comedy payload",
+        "visual": "weak — pink masked face but cluttered messy frame",
+        "audio": "very-strong — manic profane delivery is the draw"
       },
       "vsCreatorNorm": "insufficient comparison",
-      "stealThis": "Start a video by almost-reacting to something off-screen, then cut yourself off — the incomplete reaction primes curiosity better than stating the topic outright, and forces the algorithm to keep viewers in the first 3 seconds while they wait for the payoff"
-    },
-    {
-      "niche": "pets",
-      "hookPattern": "belief-challenging",
-      "framework": "organic",
-      "reach": "1017.24x following",
-      "viewBucket": "1M+",
-      "hookTechnique": "Creator opens mid-action with a casual, understated taste reaction that signals something unexpected is already happening — viewer is dropped into a moment already in progress, creating immediate curiosity about what's being tasted and why",
-      "retentionDevice": "The escalating reaction structure — mild curiosity ('pretty chewy') → mild surprise ('I was not expecting that') → genuine startle ('you scared me, Jesus') — each beat resets attention and promises the next beat will be bigger; viewer stays to see the payoff of the dog ambush",
-      "viralMechanism": "The dog's jump-scare moment is a shareable emotional spike — it produces a genuine, unscripted startle reaction that viewers want to send to friends as a 'watch this person get scared' clip; the share is social currency ('look how funny this is'), not pet appreciation. The 97k shares vs 460 comments ratio confirms low-friction sharing (no discussion needed, just pass it on).",
-      "dimensionRatings": {
-        "hook": "strong — ambiguous food reaction teases",
-        "format": "very-strong — escalating payoff in 57s",
-        "visual": "strong — practical jump-scare moment",
-        "audio": "very-strong — raw unscripted startle sound"
-      },
-      "vsCreatorNorm": "insufficient comparison",
-      "stealThis": "Engineer a two-act structure where Act 1 is a mundane, slightly off sensory experience (tasting, smelling, touching something odd) and Act 2 is an unrelated but timed interruption that produces a genuine startle — the mismatch between the two acts is the comedic engine, and the raw audio of the startle is the share trigger"
-    },
-    {
-      "niche": "hair",
-      "hookPattern": "removing-limitations",
-      "framework": "problem-agitate-solution",
-      "reach": "988.47x following",
-      "viewBucket": "1M+",
-      "hookTechnique": "Opens with a rhetorical question that frames the viewer's current behavior as outdated and inconvenient, implying they've been doing something the hard way — triggering immediate self-relevance before the product is even named",
-      "retentionDevice": "The product's mechanism is counterintuitive (a comb that dyes hair) and the claim is compressed into a 21-second demo, so the viewer stays to resolve the cognitive gap of 'how does a comb actually do this'",
-      "viralMechanism": "Saves-to-views ratio (~0.32%) and shares (~0.31%) are nearly equal, indicating this hit two distinct sharing modes simultaneously: people saving it as a personal purchase reference AND forwarding it to friends who dye hair or have gray hair — the 'send this to your mom' effect. The product solves a universally relatable friction point (salon cost, time, appointments) with a single low-effort substitute, making it trivially easy to tag someone else in",
-      "dimensionRatings": {
-        "hook": "very-strong — reframes existing behavior as unnecessary",
-        "format": "strong — product demo compressed tightly",
-        "visual": "unclear — transcript alone cannot assess",
-        "audio": "unclear — no audio description available"
-      },
-      "vsCreatorNorm": "insufficient comparison",
-      "stealThis": "Lead with a question that makes the viewer's current habit feel like unnecessary effort ('Do you still [do inconvenient thing]?'), then immediately present your product as the shortcut — this primes the audience to feel relief rather than skepticism before you've shown anything"
-    },
-    {
-      "niche": "home and cleaning",
-      "hookPattern": "removing-limitations",
-      "framework": "problem-agitate-solution",
-      "reach": "981.1x following",
-      "viewBucket": "1M+",
-      "hookTechnique": "Opens with unprompted personal conviction ('I love this method') about something visually unfamiliar, creating a curiosity gap — the viewer doesn't yet know what 'this' is or why it deserves enthusiasm, which forces them to keep watching to resolve the ambiguity.",
-      "retentionDevice": "The transcript delivers a cause-and-effect chain in real time: problem (sound transfer) → physical mechanism (staggered studs, no shared contact point) → logical conclusion (vibration can't cross). Each clause answers the question raised by the previous one, making it feel incomplete to stop before the end. The 28-second duration is also short enough that the cognitive cost of finishing is near zero.",
-      "viralMechanism": "The save rate is the tell — 27,585 saves on 2.7M views is roughly 1% save rate, which is high. The mechanism: this video encodes a specific, buildable piece of construction knowledge (staggered-stud decoupled framing for sound isolation) that homeowners, builders, and buyers want to reference later. It functions as a bookmark for a future decision, not just entertainment. Saves drove the algorithmic signal that pushed it beyond the existing audience.",
-      "dimensionRatings": {
-        "hook": "strong — conviction without context",
-        "format": "very-strong — problem/mechanism/payoff in 28s",
-        "visual": "strong — physical structure makes abstract concept concrete",
-        "audio": "weak — transcript-only, no audio cues diagnosable"
-      },
-      "vsCreatorNorm": "insufficient comparison",
-      "stealThis": "Introduce a niche construction or product detail by leading with unprompted personal conviction ('I love this'), withhold the subject noun for the first sentence so the viewer has to resolve what 'this' refers to, then immediately deliver the functional benefit in plain cause-and-effect language — the save comes when the benefit is specific enough to be personally actionable later."
-    },
-    {
-      "niche": "fitness",
-      "hookPattern": "belief-challenging",
-      "framework": "organic",
-      "reach": "937.97x following",
-      "viewBucket": "1M+",
-      "hookTechnique": "Opens mid-emotional-crisis by addressing the viewer's internal state as a presumed fact — 'if you are feeling disheartened' — which functions as a mirror, not an invitation. It assumes the wound before the viewer has consented to being vulnerable, collapsing the scroll reflex.",
-      "retentionDevice": "The transcript cuts off mid-sentence ('You may feel like...'), which means the video itself ends on an incomplete thought. This creates a syntactic cliffhanger that registers as unresolved tension — the brain resists leaving before closure, driving replays and inflating view count artificially beyond single-watch behavior.",
-      "viralMechanism": "The save mechanism: the phrase 'set your heart ablaze, dry your eyes and look ahead' functions as a portable mantra — emotionally dense, quotable, detached from any specific fitness context. Users save it to re-consume during future low moments, not because of the creator's identity. The caption ('10 months in, just had to remind myself') adds a confessional layer that reframes the content as personal testimony rather than performance, which lowers resistance to sharing because it feels like forwarding a feeling, not promoting a creator.",
-      "dimensionRatings": {
-        "hook": "very-strong — assumes viewer's pain immediately",
-        "format": "strong — 14s forces emotional density",
-        "visual": "unclear — transcript reveals no visual information",
-        "audio": "strong — motivational cadence signals genre fast"
-      },
-      "vsCreatorNorm": "insufficient comparison",
-      "stealThis": "Begin with a second-person emotional presumption ('If you've been feeling like X is no longer worth it') stated as fact rather than question — this collapses the psychological distance between content and viewer before they've decided to engage, and it works across any niche where the audience carries a recurring private doubt."
+      "stealThis": "Open on raw confrontational energy, not a greeting — an unhinged direct address out-performs a polite 'hey guys' for scroll-stop."
     },
     {
       "niche": "ABG beauty",
@@ -567,53 +81,95 @@
       "framework": "organic",
       "reach": "927.88x following",
       "viewBucket": "1M+",
-      "hookTechnique": "The opener frames the video as a relatable milestone event ('first day back to school'), instantly activating a high-curiosity, seasonally-primed audience before any product or technique is shown",
-      "retentionDevice": "The unpolished, low-stakes narration creates a gap between expectation (polished beauty tutorial) and delivery (lost beauty blender, uncertainty about shade, visible fumbling), making viewers stay to see whether the final look actually coheres — it functions as ambient tension",
-      "viralMechanism": "The video is aggressively un-curated in a niche defined by hyper-curation. Lines like 'I don't know where my beauty blender went' and 'you can't really see it' signal authenticity that ABG-adjacent viewers recognize as rare and shareable precisely because it mirrors their own rushed morning routine — it travels via identity projection, not aspiration. The save rate (15,030 on 7.9M views) and share count (18,800) confirm this: people are bookmarking it as a reference for a 'real' school makeup routine, not a fantasy one",
+      "videoFormat": "talking-head school GRWM",
+      "openingVisual": "A teen creator with pink-streaked dark hair and bold brows in a pale tank top, mid-sentence in a messy bedroom; centered white text 'GRWM for school' and a TikTok search-bar overlay 'GRWM for school' frame it as part of a trending search.",
+      "onScreenTextHook": "GRWM for school",
+      "lighting": "Natural daylight from a window, slightly blown out — ordinary teen-bedroom lighting.",
+      "cameraFraming": "Selfie at arm's length, head-and-shoulders, casual handheld bob.",
+      "creatorStyling": "Everyday tank top, undone hair, no studio polish — the relatable 'real teenager' aesthetic that the school-GRWM trend rewards.",
+      "hookTechnique": "Pins the video to a high-volume seasonal search ('GRWM for school') so it surfaces to an already-activated audience, then opens on a confident first-day-back premise.",
+      "retentionDevice": "The promise of a 'final look' reveal at the end (plus relatable self-deprecating asides like losing the beauty blender) keeps viewers to the payoff.",
+      "viralMechanism": "Seasonal trend-surfing: back-to-school GRWM is a recurring high-demand format, and a believable, imperfect teen doing the routine collects mass relatability and saves/shares from the same-age audience.",
       "dimensionRatings": {
-        "hook": "strong — milestone event primes immediately",
-        "format": "strong — GRWM structure auto-retains viewers",
-        "visual": "weak — self-described invisible results",
-        "audio": "weak — no music, flat delivery"
+        "hook": "strong — rides a seasonal search trend",
+        "format": "strong — proven GRWM transformation arc",
+        "visual": "weak — flat bedroom light, low polish",
+        "audio": "strong — casual relatable real-time narration"
       },
       "vsCreatorNorm": "insufficient comparison",
-      "stealThis": "Deliberately narrate one visible imperfection or missing tool mid-routine ('can't find my X, so I'm just using my finger') — it short-circuits the polish expectation and makes the content feel like a peer's routine rather than a performance, which drives saves and shares in utility-heavy niches"
+      "stealThis": "Mirror the exact trending search phrase as on-screen text so the algorithm files you under an active query the audience is already scrolling."
     },
     {
-      "niche": "ABG beauty",
-      "hookPattern": "before-after",
-      "framework": "organic",
-      "reach": "920.19x following",
-      "viewBucket": "1M+",
-      "hookTechnique": "Opens mid-conflict with a emotionally charged, context-free accusation directed at an unseen person, forcing the viewer to ask 'what happened?' before any beauty content is established",
-      "retentionDevice": "The creator explicitly promises a 'story time' layered on top of the GRWM format, creating a dual-track tension: the beauty routine is the visual anchor but the unresolved conflict (cops, concert, household drama) is the narrative engine that makes leaving feel like abandoning a story mid-sentence",
-      "viralMechanism": "The hashtag '#subtleforshadowing' signals to algorithm-aware viewers that the mundane routine content is packaging for escalating drama — the saves (31K) and shares (11.5K) suggest people were archiving it to share the story, not the makeup steps; the GRWM format provided algorithmic distribution cover while the soap-opera structure drove human sharing",
-      "dimensionRatings": {
-        "hook": "very-strong — unresolved conflict demands context",
-        "format": "strong — dual-layer routine+storytime",
-        "visual": "weak — transcript reveals no visual differentiation",
-        "audio": "strong — conversational confrontation tone"
-      },
-      "vsCreatorNorm": "insufficient comparison",
-      "stealThis": "Open with an emotionally loaded out-of-context statement that has nothing to do with your product category, then connect it to your routine format within 10 seconds — the cognitive dissonance forces watch-through while the routine provides algorithmic category signals"
-    },
-    {
-      "niche": "home and cleaning",
-      "hookPattern": "removing-limitations",
+      "niche": "fitness",
+      "hookPattern": "belief-challenging",
       "framework": "problem-agitate-solution",
-      "reach": "914.68x following",
-      "viewBucket": "500k+",
-      "hookTechnique": "A staged competition countdown immediately frames two products head-to-head, manufacturing instant curiosity about which wins before the viewer has any context",
-      "retentionDevice": "The self-interrupting rhetorical question ('Why is mine so weak?') creates an unresolved tension loop — the viewer needs to see the contrast resolved, and the transcript sustains urgency by stacking rapid-fire use cases (cars, patios, driveways) without pausing",
-      "viralMechanism": "The shares and saves are driven by purchase-intent utility: the video functions as a product discovery shortcut for a high-desire, low-awareness item (hose nozzle that mimics power washing). Saves are 'bookmark to buy later' behavior; shares are 'sending this to someone with a dirty driveway.' The specific pain point — driveway mud, car grime — is universally relatable and visually demonstrable in under 30 seconds, which makes forwarding it feel like doing someone a favor",
+      "reach": "2550.64x following",
+      "viewBucket": "1M+",
+      "videoFormat": "gym b-roll with text-overlay claim",
+      "openingVisual": "A heavily muscled older man in a white tank doing a standing cable exercise in a green-accented commercial gym, shot from the side; white caption 'Most people don't even know this muscle exists.' sits across his torso.",
+      "onScreenTextHook": "Most people don't even know this muscle exists.",
+      "lighting": "Bright fluorescent gym lighting, clean and visible; ordinary commercial-gym look.",
+      "cameraFraming": "Mid-distance side profile that shows the full muscle contraction, then cuts closer on the working area.",
+      "creatorStyling": "Old-school bodybuilder presentation — tank, conspicuous physique — which lends the 'secret muscle' claim borrowed authority.",
+      "hookTechnique": "A curiosity-gap belief-challenge ('a muscle you don't know exists, that's why you don't have it') that makes the viewer feel they're missing something everyone else is too.",
+      "retentionDevice": "Withholds exactly which muscle and how to train it, forcing the viewer to stay for the 'train it like it matters' payoff.",
+      "viralMechanism": "Combines an authority physique with a contrarian secret-knowledge frame; gym audiences save and share 'hidden muscle' tips, though the modest 2% engagement signals it spread more on reach than deep resonance.",
       "dimensionRatings": {
-        "hook": "very-strong — countdown triggers immediate watch",
-        "format": "strong — problem-solution compressed tightly",
-        "visual": "unclear — transcript alone cannot confirm",
-        "audio": "strong — profanity pattern breaks passive scrolling"
+        "hook": "very-strong — secret-knowledge curiosity gap",
+        "format": "strong — physique proof under the claim",
+        "visual": "strong — clean gym demo shows the movement",
+        "audio": "strong — confident old-school delivery"
       },
       "vsCreatorNorm": "insufficient comparison",
-      "stealThis": "Open with a side-by-side failure moment framed as a competition ('three, two, one') so the viewer is already invested in an outcome before you've named your product — the reveal then lands as payoff, not a pitch"
+      "stealThis": "Frame a basic tip as hidden knowledge 'most people don't even know' — the implied gap in the viewer's own training is the hook."
+    },
+    {
+      "niche": "fitness",
+      "hookPattern": "belief-challenging",
+      "framework": "industry-contrarian",
+      "reach": "1100.68x following",
+      "viewBucket": "500k+",
+      "videoFormat": "stitch reaction talking-head",
+      "openingVisual": "A clip of a woman straining and screaming on a chest-press machine (a stitched original) cuts to the creator in a dark hoodie, bare-faced in a dim room, holding up four fingers as he starts his take; on-screen text 'I try my best to not scream.'",
+      "onScreenTextHook": "I try my best to not scream",
+      "lighting": "Dim, warm indoor home lighting on the reaction half; the stitched gym clip is brighter and grittier.",
+      "cameraFraming": "Reaction selfie close-up intercut with the full-body gym source clip.",
+      "creatorStyling": "Plain hoodie, no styling — positions him as a credible everyman correcting a viral clip.",
+      "hookTechnique": "Stitches an already-viral 'gym screaming lady' clip, borrowing its reach, then opens a contrarian correction that invites the viewer to take a side.",
+      "retentionDevice": "Sets up a 'here's why that's actually wrong' explainer loop, so viewers stay to get the physiology verdict and to judge whether he's right.",
+      "viralMechanism": "Reaction-to-a-controversy: piggybacking a trending clip plus a confident myth-bust generates comment debate (8.9% engagement) and shares from both people who agree and people defending the original.",
+      "dimensionRatings": {
+        "hook": "strong — borrows a viral clip's momentum",
+        "format": "strong — stitch sets instant context",
+        "visual": "weak — dim flat reaction lighting",
+        "audio": "strong — calm authoritative correction"
+      },
+      "vsCreatorNorm": "insufficient comparison",
+      "stealThis": "Stitch a clip that's already moving and add a confident contrarian correction — you inherit its reach and farm the debate."
+    },
+    {
+      "niche": "fitness",
+      "hookPattern": "belief-challenging",
+      "framework": "organic",
+      "reach": "937.97x following",
+      "viewBucket": "1M+",
+      "videoFormat": "body-transformation talking-head",
+      "openingVisual": "A shirtless young man with curly hair stands in a plain home hallway facing the camera, soft body visible; he holds up a hand mid-gesture — the unglamorous 'before/current' self shown without flattering angles.",
+      "onScreenTextHook": "",
+      "lighting": "Flat natural home lighting, no contouring shadows — honest and exposed, which is the point.",
+      "cameraFraming": "Static head-to-stomach shot at conversational distance so the body is fully visible.",
+      "creatorStyling": "Deliberately undressed and unstyled to make the vulnerability and the eventual progress real.",
+      "hookTechnique": "Visual vulnerability — showing his real, unflattering body — pattern-interrupts a feed full of shredded physiques and earns immediate empathy.",
+      "retentionDevice": "An emotional motivational voiceover ('if you feel like you're not enough') builds toward a reassurance payoff, and the caption '10 months in' promises an implied transformation arc.",
+      "viralMechanism": "Identity-and-encouragement: viewers who feel insecure see themselves in him, and the affirming message gets saved (58k saves) and shared as motivation; the 11% engagement reflects genuine emotional resonance, not just reach.",
+      "dimensionRatings": {
+        "hook": "strong — raw body vulnerability stops scroll",
+        "format": "strong — relatable transformation arc",
+        "visual": "strong — honest unflattering framing builds trust",
+        "audio": "very-strong — emotional motivational voiceover"
+      },
+      "vsCreatorNorm": "insufficient comparison",
+      "stealThis": "Lead with the unflattering, honest 'before' on camera — vulnerability earns the empathy and saves that a polished physique can't."
     },
     {
       "niche": "fitness",
@@ -621,197 +177,72 @@
       "framework": "organic",
       "reach": "886.61x following",
       "viewBucket": "1M+",
-      "hookTechnique": "Opens with a direct, intimate question addressed to an unnamed individual — 'Do you impress your own father?' — which functions as a personal challenge that forces the viewer to self-locate before the video has even established its context.",
-      "retentionDevice": "Each exchange compounds the previous tragedy: dead father → then dead mother → then mother not dead but abandoned → then abandoned *twice* → then father literally 'torn to pieces.' The viewer stays because every answer reframes the prior answer as incomplete, creating a narrative staircase of escalating devastation with no bottom visible until the final line.",
-      "viralMechanism": "The saves-to-shares ratio (66,882 saves vs. 1,467 shares) reveals the primary mechanic: this is a private grief mirror, not a public broadcast. Viewers are saving it to return to it alone — likely because the transcript maps a specific emotional experience (parental abandonment + loss + compound trauma) that people rarely see articulated out loud, especially inside a fitness frame. The fitness caption is almost irrelevant; the video functions as trauma validation dressed in gym clothes, which means it reached people who would never search fitness content but were algorithmically served it and felt seen.",
+      "videoFormat": "moody gym b-roll over meme audio",
+      "openingVisual": "A silhouetted lifter using a seated machine against a bright window, shot dark and cinematic in a concrete gym; white subtitle 'Impresiones a tu propio padre' (then 'mi padre está muerto señor') overlays a viral comedic dialogue audio.",
+      "onScreenTextHook": "Impresiones a tu propio padre",
+      "lighting": "High-contrast backlit silhouette against window glare — moody, aspirational gym-cinema look.",
+      "cameraFraming": "Wide static side shot keeping the lifter small and shadowed, prioritizing mood over detail.",
+      "creatorStyling": "Anonymous silhouette, hoodie, headphones — universal 'grind' avatar the viewer can project onto.",
+      "hookTechnique": "Pairs aspirational training imagery with a recognizable comedic meme-audio (the 'impress your father' bit), so the recognition of the sound is the hook, not the visual.",
+      "retentionDevice": "The escalating absurd dialogue ('my father is dead, sir... abandoned us twice') is a known audio loop people stay to hear pay off and re-watch.",
+      "viralMechanism": "Trend-audio adaptation: dropping a moody gym aesthetic onto a viral sound lets fitness creators ride the audio's reach; the very low share rate vs high saves suggests it traveled as motivational save-bait riding the sound.",
       "dimensionRatings": {
-        "hook": "very-strong — confrontational question demands self-assessment",
-        "format": "strong — escalating dialogue sustains 27s",
-        "visual": "unclear — transcript only, no visual data available",
-        "audio": "strong — dialogue delivery implies emotional weight"
+        "hook": "strong — recognizable meme audio hooks instantly",
+        "format": "strong — aspirational gym aesthetic",
+        "visual": "strong — cinematic backlit silhouette",
+        "audio": "very-strong — the viral sound is the engine"
       },
       "vsCreatorNorm": "insufficient comparison",
-      "stealThis": "Structure a 20–30s video as a rapid-fire dialogue where each answer to a single opening question reveals a worse layer of a relatable struggle — the viewer must keep watching because they don't yet know how deep the hole goes, and the final line must reframe everything preceding it."
+      "stealThis": "Lay your niche's most aspirational b-roll over a currently-trending audio — the sound does the reach, your visuals do the vibe."
     },
     {
-      "niche": "ABG beauty",
-      "hookPattern": "comparison",
-      "framework": "organic",
-      "reach": "717.98x following",
-      "viewBucket": "1M+",
-      "hookTechnique": "Opens by naming two massive celebrity brands in direct juxtaposition, immediately signaling a comparison is coming — triggering the viewer's need to pick a side before a single product is shown",
-      "retentionDevice": "The preemptive disclaimer ('I'm not trying to compare Haley and Selena') defuses tribal defensiveness just enough to keep both fan camps watching, while the structural promise of a side-by-side breakdown creates an open loop the viewer stays to close",
-      "viralMechanism": "The video functions as a proxy debate between two celebrity fandoms (Hailey Bieber vs. Selena Gomez) that already have massive, pre-existing conflict online — the creator didn't generate the tension, she simply tapped into it, making the share button a vote in an ongoing culture war",
-      "dimensionRatings": {
-        "hook": "very-strong — celebrity name collision",
-        "format": "strong — comparison structure holds",
-        "visual": "strong — aesthetic brand footage",
-        "audio": "weak — transcript cuts abruptly"
-      },
-      "vsCreatorNorm": "insufficient comparison",
-      "stealThis": "Frame brand analysis as a comparison between two culturally charged rivals rather than a standalone review — the comparison format hijacks existing audience tribalism and turns passive viewers into sharers defending their side"
-    },
-    {
-      "niche": "ABG beauty",
-      "hookPattern": "before-after",
+      "niche": "supplements",
+      "hookPattern": "size-of-claim",
       "framework": "problem-agitate-solution",
-      "reach": "697.99x following",
-      "viewBucket": "10M+",
-      "hookTechnique": "Opens with a direct pain-point identification ('dark spots') paired with a past-tense personal confession, immediately signaling the viewer that a solution is coming — creating a problem-solution contract in under 2.5 seconds",
-      "retentionDevice": "The phrase 'let me put you on' followed by 'if I can sum up the solution in two words' is a deliberate withhold — it delays the payoff (Korean skincare) just long enough to force the viewer to stay for the reveal, using a countdown-style tension structure in a 34-second video",
-      "viralMechanism": "The saves (29,654) and shares (6,582) disproportionate to follower count indicate this functioned as a utility bookmark — viewers saved it as a reference for a product or routine recommendation. The caption hashtag #TikTokShop combined with the 'Korean skincare' answer suggests a specific product recommendation followed in the truncated transcript, making the video a discovery vehicle for a purchasable solution to a high-frequency, high-frustration skin concern",
-      "dimensionRatings": {
-        "hook": "very-strong — solves named viewer pain",
-        "format": "strong — tight withhold structure",
-        "visual": "unclear — transcript only available",
-        "audio": "unclear — transcript only available"
-      },
-      "vsCreatorNorm": "insufficient comparison",
-      "stealThis": "Open with 'if you struggle with [specific problem] like I used to' — the past tense is load-bearing: it positions the creator as a peer who solved it, not an expert lecturing, which lowers resistance and makes the solution feel earned rather than sold"
-    },
-    {
-      "niche": "skincare",
-      "hookPattern": "belief-challenging",
-      "framework": "industry-contrarian",
-      "reach": "692.66x following",
+      "reach": "2010.58x following",
       "viewBucket": "1M+",
-      "hookTechnique": "Opens with a tribal conspiracy claim ('we are being scammed') that immediately positions the viewer as a fellow victim, then preemptively neutralizes counter-arguments in the same breath — eliminating the viewer's reason to scroll away before the premise is even established",
-      "retentionDevice": "A embedded narrative mystery: the boyfriend with perfect skin using only two unknown products, bought for superficial reasons, whose identity is withheld until the end. The transcript ends mid-story ('all he had was those two freaking products') — a deliberate cliffhanger that forces watch-through and likely a follow-up video click or comment demand",
-      "viralMechanism": "The boyfriend functions as a living control group — same environment, same sun exposure, zero effort, objectively better results. This is not an opinion or a product pitch; it's anecdotal but structurally scientific, which makes it feel like proof rather than content. It validates what millions of skincare consumers already privately suspect (that they're over-investing for under-results), giving them something concrete and emotionally charged to share as vindication rather than just entertainment. The save rate (23,316) confirms people are bookmarking it for the product reveal that hasn't happened yet in this clip.",
+      "videoFormat": "3D medical-animation VSL",
+      "openingVisual": "A rendered cross-section of an artery clogged with yellow plaque, red blood cells squeezing past, with a white supplement capsule entering frame against a faint anatomical-diagram background; yellow caption 'If you take this'.",
+      "onScreenTextHook": "If you take this",
+      "lighting": "Rendered CGI lighting — glossy, high-saturation medical animation, no real-world set.",
+      "cameraFraming": "Macro CGI push-in on the artery and pill; no human, no creator presence.",
+      "creatorStyling": "None — this is a faceless animated direct-response ad, not a creator video.",
+      "hookTechnique": "An outsized physiological promise ('arteries withered to a straw forcibly dilated to twice their width in 3 days') with a fear-based symptom callout grabs an older health-anxious viewer.",
+      "retentionDevice": "Escalating dramatic stakes (gasping for air, heart's desperate struggle) plus a money-back guarantee keep the pitch moving to the CTA.",
+      "viralMechanism": "Classic fear-then-mechanism VSL: it scares, names a 'mechanism' (nitric oxide power-washer), and de-risks with a refund. The 0.75% engagement rate (likes 9k on 1.9M views) is a red flag the reach is paid/boosted, not organic resonance.",
       "dimensionRatings": {
-        "hook": "very-strong — preemptive objection-killing immediately",
-        "format": "very-strong — cliffhanger structure withholds payoff",
-        "visual": "insufficient data — transcript only, cannot diagnose",
-        "audio": "strong — conversational frustration tone matches caption"
+        "hook": "strong — outsized fear-based claim",
+        "format": "weak — generic faceless animation ad",
+        "visual": "strong — vivid artery CGI grabs attention",
+        "audio": "strong — ominous authoritative VSL voiceover"
       },
       "vsCreatorNorm": "insufficient comparison",
-      "stealThis": "Use a real person in your life as an unwitting control group — someone who ignores your category entirely yet gets the outcome your audience desperately wants. Don't reveal what they use until a follow-up. The gap between their effortlessness and your audience's effortfulness is the entire engine."
+      "falsePositiveFlag": "PAID_REACH_SUSPECT",
+      "stealThis": "Only the structure is steal-worthy (fear → named mechanism → guarantee); treat the reach as bought, not proof the creative resonates."
     },
     {
-      "niche": "hair",
-      "hookPattern": "direct-callout",
-      "framework": "problem-agitate-solution",
-      "reach": "686.49x following",
-      "viewBucket": "10M+",
-      "hookTechnique": "Opens with a parasocial direct address ('baddie') attached to a specific, aspirational outcome with a deadline (waist-length hair by end of summer), creating immediate personal relevance before the viewer can scroll",
-      "retentionDevice": "The creator builds a credibility loop: she teases proof ('I have all the pictures, I have all the proof'), then delays delivering it by telling the origin story of a low-follower TikTok lady with 'no likes' — this underdog sourcing paradoxically increases trust and curiosity about what the actual tip is, keeping viewers watching to get the payoff",
-      "viralMechanism": "The save driver is the actionable tip (rosemary in shampoo) embedded inside a before/after social proof claim ('people come up to me and ask how your hair is growing so fast') — the save is functional, not emotional. The share driver is the origin story: she found a tip from an obscure, no-follower woman and it worked, which is a discovery-validation loop that viewers forward to friends as 'proof this works for regular people.' The combination of high saves (hair how-to reference) plus the shareability of the underdog-tip-that-worked is the specific dual engine here.",
-      "dimensionRatings": {
-        "hook": "very-strong — deadline plus identity address",
-        "format": "strong — story wraps actionable tip",
-        "visual": "insufficient data — transcript only",
-        "audio": "strong — urgency without scripted feel"
-      },
-      "vsCreatorNorm": "insufficient comparison",
-      "stealThis": "Source your tip from an obscure, low-follower account and say so explicitly — 'I found this from a lady with no likes and tried it anyway' — because it removes the influencer-shill filter in the viewer's brain and reframes the tip as self-discovered truth rather than sponsored content, dramatically increasing share and save intent"
-    },
-    {
-      "niche": "hair",
-      "hookPattern": "direct-callout",
-      "framework": "problem-agitate-solution",
-      "reach": "677.42x following",
-      "viewBucket": "10M+",
-      "hookTechnique": "Opens with a hyper-specific geographic warning followed by immediate visual proof of damage, turning the first sentence into a threat with named targets and a visible consequence",
-      "retentionDevice": "The narrative is structured as a slow-building injustice sequence — the viewer is primed by the hook to expect escalation, so each new slight (ignored greeting, delayed service) functions as a ratchet keeping them waiting for the climactic damage reveal; named employees and a specific salon create accountability stakes that feel unresolved",
-      "viralMechanism": "The video weaponizes local specificity: naming the salon, the city, and individual employees by name transforms passive viewers into active sharers who either want to warn their network or are curious whether they know these people — the caption's explicit 'DO NOT' directive lowers the activation energy for resharing as a protective act, and the saves spike suggests people are bookmarking it as a reference before visiting Little Rock salons",
-      "dimensionRatings": {
-        "hook": "very-strong — named place, named damage",
-        "format": "strong — grievance narrative arc",
-        "visual": "strong — fried hair as proof",
-        "audio": "strong — calm tone amplifies outrage"
-      },
-      "vsCreatorNorm": "insufficient comparison",
-      "stealThis": "Lead with a city-name + business-name warning in the first sentence paired with an immediate visual of the bad outcome — specificity of target plus visible proof converts passive scrollers into sharers because it feels like information their local network needs"
-    },
-    {
-      "niche": "fashion",
-      "hookPattern": "before-after",
+      "niche": "supplements",
+      "hookPattern": "authority",
       "framework": "organic",
-      "reach": "662.07x following",
-      "viewBucket": "10M+",
-      "hookTechnique": "An anticipatory greeting followed by an immediate, unscripted negative reaction ('Oh, shit') signals something went visibly wrong on camera — triggering a curiosity gap before the viewer even knows what they're watching",
-      "retentionDevice": "The chaotic, fragmented transcript ('Rock and roll. Rock and roll... smell that shit... what the hell') suggests a rapid-cut series of escalating outfit disasters rather than a single fail — each new clip resets the viewer's expectation of 'how bad can this get,' creating a loop of micro-rewards that fights drop-off across the 62 seconds",
-      "viralMechanism": "The share driver is social currency through schadenfreude relatability — the caption frames a universal vanity experience (trying to look good, failing publicly) and the hashtags explicitly tag it as funny outfit content, making it trivially easy for a viewer to send it to a friend as a 'this is literally you' message; the 469,200 shares relative to 1,818 comments indicates passive forwarding, not community discussion — people shared it without stopping to talk about it",
-      "dimensionRatings": {
-        "hook": "very-strong — expletive signals immediate disaster",
-        "format": "strong — multi-fail escalation sustains runtime",
-        "visual": "strong — outfit context makes fails legible",
-        "audio": "weak — transcript is largely incoherent/unclear"
-      },
-      "vsCreatorNorm": "insufficient comparison",
-      "stealThis": "Open with an unguarded, unscripted negative reaction (a gasp, expletive, or visible flinch) before the audience understands what went wrong — the knowledge gap created in those first 2 seconds is what converts passive scrollers into committed viewers"
-    },
-    {
-      "niche": "skincare",
-      "hookPattern": "information-offering",
-      "framework": "organic",
-      "reach": "650.94x following",
+      "reach": "1202.89x following",
       "viewBucket": "1M+",
-      "hookTechnique": "Opens with a direct genre promise ('skincare routine') immediately followed by a conspiratorial reassurance ('I got you, girl'), collapsing the viewer's reason to scroll past before they've processed the first sentence",
-      "retentionDevice": "The unscripted, fumbling delivery ('I don't know where I put it') creates an unresolved loop — the viewer stays to see if she finds the product and completes the demonstration, even though she never fully does; the incompleteness itself signals authenticity and holds attention",
-      "viralMechanism": "The save rate is the dominant signal here (5,883 saves vs 11 comments) — the video functions as a product bookmark. She names a specific, purchasable TikTok Shop SKU ('Medicube zero pore pads') with blunt, unqualified endorsement ('clean my face hella good'), giving viewers a concrete item to save-for-later without needing to trust her as an authority figure. The saves drove algorithmic surface area, not the comments or shares.",
+      "videoFormat": "talking-head storytime",
+      "openingVisual": "A young Black woman with a sleek bob in a black top sits in a dim bedroom (purple headphones visible behind her) speaking directly to camera, conversational and grounded — no product yet in frame.",
+      "onScreenTextHook": "",
+      "lighting": "Soft warm bedroom lamp light; intimate, low-fi, trustworthy.",
+      "cameraFraming": "Selfie close-up, face-centered, steady — a confidante telling you something.",
+      "creatorStyling": "Understated everyday look that keeps the focus on the spoken story and credibility.",
+      "hookTechnique": "Borrowed authority via storytime — 'I used to work for this doctor who stressed vitamin D for Black women' — anchors the recommendation in a credible third party.",
+      "retentionDevice": "The narrative ('why did he care so much?') opens a small mystery, then resolves into a community-specific health reason that the target audience needs to hear out.",
+      "viralMechanism": "Identity + authority: it speaks directly to Black women's vitamin D deficiency with a doctor's backing, which the community saves (47k) and shares as a trusted PSA; the huge 21% engagement reflects strong in-group resonance.",
       "dimensionRatings": {
-        "hook": "strong — genre+reassurance combo collapses skip impulse",
-        "format": "strong — 19s removes commitment barrier entirely",
-        "visual": "weak — product location is lost on camera",
-        "audio": "strong — unpolished cadence reads as peer not ad"
+        "hook": "strong — borrowed doctor authority",
+        "format": "strong — confiding storytime structure",
+        "visual": "weak — dim plain bedroom, low detail",
+        "audio": "very-strong — warm credible personal delivery"
       },
       "vsCreatorNorm": "insufficient comparison",
-      "stealThis": "Name one specific purchasable product by its exact SKU or full product name inside the first 5 seconds, then deliver a single blunt sensory claim ('cleans your face hella good') with zero hedging — this converts passive viewers into saves without requiring follower trust or production polish"
-    },
-    {
-      "niche": "fitness",
-      "hookPattern": "belief-challenging",
-      "framework": "founder",
-      "reach": "609.76x following",
-      "viewBucket": "1M+",
-      "hookTechnique": "Opens with a first-person confession of a compulsion ('I can never leave') that immediately signals obsessive commitment — it frames the speaker as an extremist, not a coach, making the viewer want to understand *why*",
-      "retentionDevice": "The '5%' concept is introduced as a named, mysterious threshold ('magic place where very few people go') and never fully explained upfront — the brain stays engaged waiting for the payoff definition, which keeps escalating rather than resolving, forcing completion",
-      "viralMechanism": "The save-to-view ratio (~2.1%) is the diagnostic signal here: this is a motivational speech that functions as a reusable artifact — people saved it to replay before workouts. The line 'if you can do this, you can do anything' transcends gym context and maps onto any high-stakes personal situation, which is what drove shares. It's not gym content; it's identity content wrapped in gym packaging. The caption 'You could have been that guy' adds a guilt-based personal challenge that makes sharing it feel like issuing a dare to someone else.",
-      "dimensionRatings": {
-        "hook": "very-strong — confessional compulsion demands explanation",
-        "format": "strong — tight single-idea loop",
-        "visual": "unclear — transcript only available",
-        "audio": "strong — speech rhythm escalates urgency"
-      },
-      "vsCreatorNorm": "insufficient comparison",
-      "stealThis": "Name a small, concrete threshold (a percentage, a rep, a minute) as the 'magic place where most people stop' — then frame everything after that threshold as identity-defining rather than physical. This converts a fitness tip into a character test, which is what gets saved and shared."
-    },
-    {
-      "niche": "hair",
-      "hookPattern": "pov",
-      "framework": "organic",
-      "reach": "592.04x following",
-      "viewBucket": "10M+",
-      "hookTechnique": "Drops the viewer into a mid-conflict moment with no setup — the stylist says 'Ready?' and the client immediately rejects the result, creating instant dramatic tension before the viewer has time to scroll away",
-      "retentionDevice": "The escalating back-and-forth argument structure — each exchange raises the stakes (client demands bleach, stylist warns of pixie cut outcome) — functions as a loop of unresolved tension; the viewer stays to see if the client will get burned by her own stubbornness, and the resolution is never fully delivered, which forces rewatches",
-      "viralMechanism": "Universal social proxy — every viewer has either been the unreasonable client, the patient professional, or has witnessed this exact dynamic; the video gets shared not as a hair tutorial but as a 'this is literally my client/my experience' recognition trigger, making it a relationship/workplace video wearing a hair niche costume",
-      "dimensionRatings": {
-        "hook": "very-strong — conflict before context established",
-        "format": "strong — dialogue drives unscripted tension",
-        "visual": "strong — transformation reveal amplifies stakes",
-        "audio": "strong — raw unscripted confrontation sounds real"
-      },
-      "vsCreatorNorm": "insufficient comparison",
-      "stealThis": "Film the moment a client or customer rejects your work before you respond — no intro, no setup — drop into the conflict at frame one; the viewer's need to resolve whose fault it is becomes the retention engine"
-    },
-    {
-      "niche": "hair",
-      "hookPattern": "before-after",
-      "framework": "organic",
-      "reach": "581.7x following",
-      "viewBucket": "1M+",
-      "hookTechnique": "Invites the viewer into a real-time ritual reveal — framing the opening action as 'come watch this with me' turns passive viewing into shared anticipation before any result is shown",
-      "retentionDevice": "A sequence of micro-suspense checkpoints — damp hair doubt, the side-part failure, the comb struggle — each one delays the payoff and resets the viewer's reason to keep watching; the result is withheld until the final seconds",
-      "viralMechanism": "The save-and-share trigger is the practical replicability: overnight braids are a no-heat, low-effort method, and the transcript ends with a direct request for more recommendations, which activates comments and algorithmic reply behavior; the 9,380 saves specifically indicate viewers bookmarking this as a how-to reference, which signals to the algorithm that the content has durable utility — not just entertainment — and gets redistributed to 'hair care' interest graphs far outside the creator's follower base",
-      "dimensionRatings": {
-        "hook": "very-strong — ritual reveal creates immediate investment",
-        "format": "strong — structured suspense payoff arc",
-        "visual": "strong — curl transformation is inherently visual proof",
-        "audio": "weak — no musical or tonal evidence in transcript"
-      },
-      "vsCreatorNorm": "insufficient comparison",
-      "stealThis": "Delay the result with at least two named obstacles before showing the payoff — each obstacle ('hair still damp,' 'wrong part') functions as a retention gate that resets watch time and makes the final result feel earned rather than assumed"
+      "stealThis": "Anchor a health rec in a specific credible third party and a specific identity group — borrowed authority plus belonging drives saves."
     },
     {
       "niche": "supplements",
@@ -819,17 +250,95 @@
       "framework": "listicle",
       "reach": "579.59x following",
       "viewBucket": "10M+",
-      "hookTechnique": "Opens with a visceral, body-specific physical symptom ('bra off, everything falls to the floor') that acts as a self-diagnostic trigger — the viewer immediately maps the symptom to themselves before any product is mentioned",
-      "retentionDevice": "A rapid-fire 'if you have X, you need Y' list structure creates a serial pattern where each new symptom is a fresh lottery ticket — viewers stay to hear if their specific complaint gets called",
-      "viralMechanism": "The video functions as a personalized prescription tool: saves are extremely high (91,856) relative to likes because viewers are bookmarking it as reference material to shop from later — the structure explicitly names different magnesium types per symptom, making it a decision guide worth keeping",
+      "videoFormat": "stethoscope-authority demo listicle",
+      "openingVisual": "A blonde woman in a grey cardigan with a stethoscope around her neck sits at a wooden table behind an empty clear plastic cup, mid-sentence; she then pours water from a bottle over green capsules in the cup to demo dissolution.",
+      "onScreenTextHook": "",
+      "lighting": "Clean even indoor light against a calm grey wall with a plant — composed, credible 'clinical' set.",
+      "cameraFraming": "Static medium shot framing the table-top demo so the cup and pills are visible alongside her face.",
+      "creatorStyling": "Stethoscope and cardigan signal medical authority; the prop borrows clinician credibility for the magnesium claims.",
+      "hookTechnique": "Symptom-mirroring open ('if you take your bra off and everything falls, you need magnesium citrate') makes each viewer self-diagnose, hooking them into their own line of the list.",
+      "retentionDevice": "Rapid-fire 'if you [symptom], you need [type]' stacking keeps viewers scanning for their own symptom, and the closing 'buying these separately costs a fortune' sets up the bundle CTA.",
+      "viralMechanism": "Diagnostic listicle: personalized symptom callouts maximize saves (91k) as a reference, and the relatable body complaints get shared; modest 2.1% engagement on 14.2M views shows broad reach with light per-view resonance.",
       "dimensionRatings": {
-        "hook": "very-strong — body shame activates instantly",
-        "format": "very-strong — list serializes re-watch compulsion",
-        "visual": "unclear — transcript provides no visual evidence",
-        "audio": "strong — conversational tone mimics trusted friend"
+        "hook": "strong — symptom-mirror self-diagnosis open",
+        "format": "strong — save-worthy diagnostic listicle",
+        "visual": "strong — stethoscope + dissolve demo adds proof",
+        "audio": "strong — brisk relatable list delivery"
       },
       "vsCreatorNorm": "insufficient comparison",
-      "stealThis": "Lead with a single embarrassing or hyper-specific physical symptom (not a vague wellness claim) as the very first sentence — it bypasses skepticism by making the viewer self-diagnose before they realize they are being sold to"
+      "stealThis": "Build a symptom→solution listicle where each line makes a different viewer point at themselves; that's what drives the save-for-later behavior."
+    },
+    {
+      "niche": "skincare",
+      "hookPattern": "belief-challenging",
+      "framework": "listicle",
+      "reach": "877.99x following",
+      "viewBucket": "1M+",
+      "videoFormat": "walk-and-talk storefront talking-head",
+      "openingVisual": "A composed middle-aged man in a navy quarter-zip stands outside a 'Boots' pharmacy storefront, gesturing to camera; bold white text 'Korean SECRET to GLASS skin at 50 in Boots' with a smaller 'Listen carefully' below.",
+      "onScreenTextHook": "Korean SECRET to GLASS skin at 50 in Boots",
+      "lighting": "Bright outdoor daylight, clean and credible; the recognizable storefront grounds it.",
+      "cameraFraming": "Selfie walk-up shot framed against the named retailer so the location reads as legit.",
+      "creatorStyling": "Mature, put-together 'trustworthy uncle' presentation that backs the at-50 glass-skin promise.",
+      "hookTechnique": "Stacks a curiosity-gap secret + an age qualifier + a specific retailer ('at 50, in Boots') so an older skincare buyer feels it's made for exactly them.",
+      "retentionDevice": "'Listen carefully' plus a numbered countdown of three products withholds the full set until the end, pulling viewers through the list.",
+      "viralMechanism": "Aspirational age-defying listicle anchored to a real shop: the specificity (Korean, glass skin, 50, Boots) makes it feel actionable, and the high share count signals it traveled as a 'where do I buy this' recommendation.",
+      "dimensionRatings": {
+        "hook": "very-strong — secret + age + named store",
+        "format": "strong — countdown listicle structure",
+        "visual": "strong — recognizable storefront adds trust",
+        "audio": "strong — calm authoritative explainer"
+      },
+      "vsCreatorNorm": "insufficient comparison",
+      "stealThis": "Pin a curiosity-secret to a concrete, recognizable place and a specific age — specificity converts a vague tip into a 'where do I get it' share."
+    },
+    {
+      "niche": "skincare",
+      "hookPattern": "belief-challenging",
+      "framework": "industry-contrarian",
+      "reach": "692.66x following",
+      "viewBucket": "1M+",
+      "videoFormat": "confessional talking-head",
+      "openingVisual": "A blonde woman, bare-faced with visible texture/redness, fills the lower frame against a plain ceiling; large centered white text 'I'm confident that us girlies are being scammed by the skincare industry.'",
+      "onScreenTextHook": "I'm confident that us girlies are being scammed by the skincare industry",
+      "lighting": "Flat natural indoor light that intentionally shows her real skin — supports the honesty frame.",
+      "cameraFraming": "Low selfie angle looking up, face in bottom third, text occupying the top — designed for the text to be read first.",
+      "creatorStyling": "No makeup, no styling — the bare skin is the credential for an anti-industry claim.",
+      "hookTechnique": "A confident contrarian accusation against an entire industry ('we're being scammed') provokes both agreement and defense, demanding a reaction.",
+      "retentionDevice": "A personal-story open loop (her boyfriend with perfect skin using just two cheap products) keeps viewers for the reveal of what those products are.",
+      "viralMechanism": "Industry-contrarian storytime: the 'expensive routines are a scam, here's the cheap truth' arc earns trust and 10.4% engagement, with shares from people who feel validated; bare-faced honesty is the proof device.",
+      "dimensionRatings": {
+        "hook": "very-strong — industry-scam accusation",
+        "format": "strong — confession plus reveal loop",
+        "visual": "strong — bare skin authenticates the claim",
+        "audio": "strong — earnest indignant delivery"
+      },
+      "vsCreatorNorm": "insufficient comparison",
+      "stealThis": "Accuse the whole category of scamming people, then withhold the cheap alternative — the open loop plus your bare-faced proof carries it."
+    },
+    {
+      "niche": "skincare",
+      "hookPattern": "information-offering",
+      "framework": "organic",
+      "reach": "650.94x following",
+      "viewBucket": "1M+",
+      "videoFormat": "TikTok-LIVE screen-recording repost",
+      "openingVisual": "A screen-recorded TikTok LIVE: a young woman touches her nose mid skincare routine, live-chat comments and floating heart reactions overlaid, plus a 'Daily Ranking' gift bar and the title text 'Amanda putting us on her skin care routine.'",
+      "onScreenTextHook": "Amanda putting us on her skin care routine",
+      "lighting": "Casual bedroom light captured through a LIVE stream — soft, slightly compressed, very low-fi.",
+      "cameraFraming": "Vertical screen-capture of a LIVE, so chat UI and gift animations frame the creator's face.",
+      "creatorStyling": "Glam-casual influencer look, but the raw LIVE-capture UI is what signals 'unfiltered, happening now.'",
+      "hookTechnique": "Reposting a LIVE moment with chat visible borrows the parasocial 'you're in the room' energy and the implied credibility of a real-time crowd asking questions.",
+      "retentionDevice": "Live chat questions ('how many syringes did you get') create voyeuristic micro-stories, and the casual product callout (Medicube pore pads) lands as an offhand real recommendation.",
+      "viralMechanism": "LIVE-clip repurposing: clipping a candid stream feels more authentic than a produced video, and the casual TikTok-Shop product mention gets saved as a real-person endorsement.",
+      "dimensionRatings": {
+        "hook": "strong — voyeuristic live-stream framing",
+        "format": "strong — screen-recorded LIVE feels candid",
+        "visual": "weak — compressed low-fi stream capture",
+        "audio": "strong — offhand casual product callout"
+      },
+      "vsCreatorNorm": "insufficient comparison",
+      "stealThis": "Clip a candid LIVE with the chat still visible — the real-time crowd and unpolished UI make a product mention read as genuine, not an ad."
     },
     {
       "niche": "skincare",
@@ -837,251 +346,95 @@
       "framework": "industry-contrarian",
       "reach": "576.78x following",
       "viewBucket": "1M+",
-      "hookTechnique": "Opens with a bold, provocative verdict ('biggest exaggeration') that positions the creator as a skeptic calling out an absurd trend — this creates immediate tribal alignment for viewers who feel overwhelmed by overcomplicated routines",
-      "retentionDevice": "The video functions as a live audit of someone else's viral routine, itemizing each step with escalating absurdity (three cleansers, nail filing mid-routine, multiple unexplained serums). Each new product mentioned is a micro-reward that confirms the premise, pulling the viewer through to see how far the excess goes",
-      "viralMechanism": "Permission-granting simplicity: the creator tells a mass audience that fears being 'wrong' about skincare that all those extra steps are unnecessary — even potentially harmful. This is actionable relief, not just entertainment. The saves (6,398) signal people bookmarking it as validation to stop buying products. The shares indicate people sending it to friends currently doing over-complicated routines. The caption explicitly names 'barrier damage,' which converts the joke into a credible warning, making sharing feel helpful rather than petty",
+      "videoFormat": "duet/green-screen reaction critique",
+      "openingVisual": "The creator in a white top stands lower-left while a large washed-out projection of another woman in a bonnet doing a face-taping/strap routine fills the screen behind her; she points up at it, Spanish caption 'Esta es la exa[geración]'.",
+      "onScreenTextHook": "Esta es la exageración (skincare routine)",
+      "lighting": "Clean light on the foreground creator; the reacted clip is intentionally blown-out/desaturated to mark it as 'the thing being judged.'",
+      "cameraFraming": "Green-screen/duet composite — small reactor in front, large source clip behind — so the contrast of stances is instant.",
+      "creatorStyling": "Minimal, neutral foreground styling positioning her as the sensible voice against the over-the-top routine.",
+      "hookTechnique": "Reacts to an absurd-looking 10-step nightly routine (chin strap, masks, multiple serums) — the visual excess of the source clip is the scroll-stopper.",
+      "retentionDevice": "A running 'let's analyze this' critique with escalating 'why does she even need all this' beats keeps viewers for the verdict ('less is more').",
+      "viralMechanism": "Contrarian critique of viral excess: judging an over-engineered routine lets the audience feel sane and validated, generating debate and shares; the visible absurdity of the source carries the reach.",
       "dimensionRatings": {
-        "hook": "very-strong — frames target as absurd",
-        "format": "strong — reactive critique sustains structure",
-        "visual": "unknown — transcript only",
-        "audio": "unknown — transcript only"
+        "hook": "strong — reacts to visually absurd routine",
+        "format": "strong — green-screen sets the contrast",
+        "visual": "strong — exaggerated source clip is the draw",
+        "audio": "strong — measured skeptical narration"
       },
       "vsCreatorNorm": "insufficient comparison",
-      "stealThis": "React to a viral overcomplicated routine in your niche by naming each excessive step aloud in ascending order, then close with a single sentence that reframes the excess as potential harm — this converts entertainment into save-worthy advice"
+      "stealThis": "React to the most visually excessive example in your niche from a sensible-voice angle — the absurd clip is the hook, your verdict is the share."
     },
     {
-      "niche": "supplements",
-      "hookPattern": "comparison",
-      "framework": "listicle",
-      "reach": "566.39x following",
-      "viewBucket": "1M+",
-      "hookTechnique": "Opens mid-comparison already in progress — viewer is dropped into a structured head-to-head verdict format ('pure form vs. simply supplements') with specific numbers (50B CFU, 90 capsules) in the first breath, signaling immediately that concrete, actionable data is coming rather than opinion",
-      "retentionDevice": "The transcript withholds the winner verdict by first making Pure Form appear superior on paper (higher CFU count), then reversing with 'what is beautiful is simple supplements' — this classic setup/subvert pattern creates tension that demands the viewer stay to hear the resolution, compounded by the symptom list (bloating, irritation, pimples) that reframes the comparison in personal health terms",
-      "viralMechanism": "The saves-to-likes ratio (8827 saves vs 26200 likes = ~34% save rate) is the dominant signal — the video functions as a reference card: two named products, ranked criteria (gut condition, CFU count, strains, doctor recommendation), and a specific symptom-to-formulation mapping. Viewers saved it to retrieve it at the pharmacy or before purchasing. The share mechanism is the symptom list: 'bloating, irritation, pimples' — these are embarrassing conditions people send to friends privately rather than commenting publicly, explaining why shares (2182) and saves nearly match while comments are relatively low",
-      "dimensionRatings": {
-        "hook": "strong — drops data immediately",
-        "format": "very-strong — structured decision framework",
-        "visual": "unclear — transcript only",
-        "audio": "weak — fragmented delivery, unclear transcription"
-      },
-      "vsCreatorNorm": "insufficient comparison",
-      "stealThis": "Build a 'looks better on paper BUT' reversal inside any product comparison — state the obvious winner by one metric first, then flip to a less obvious metric that maps directly to viewer symptoms. The flip is what gets saved."
-    },
-    {
-      "niche": "fashion",
-      "hookPattern": "removing-limitations",
-      "framework": "organic",
-      "reach": "495.68x following",
-      "viewBucket": "500k+",
-      "hookTechnique": "Opens with rapid-fire nonsense cadence and numeric sequence that pattern-interrupts the scroll — the brain cannot categorize it quickly, so it pauses to resolve the confusion",
-      "retentionDevice": "The absurdist escalation from incomprehensible rap cadence to a polite 'Hello' to the opening lyric of a well-known 90s song creates a three-beat tonal whiplash in 11 seconds — each beat resets expectation and delays exit",
-      "viralMechanism": "The video functions as a meme delivery vehicle: the Skee-Lo 'I Wish I Was a Little Bit Taller' lyric drop is a recognizable cultural touchstone that triggers completion and sharing because viewers want to tag someone who will also recognize it — the saves likely reflect people bookmarking it to rewatch or use as a reaction. The fashion content is essentially irrelevant to the spread; the song recognition loop is the engine.",
-      "dimensionRatings": {
-        "hook": "very-strong — defeats categorical sorting fast",
-        "format": "strong — 11s removes friction entirely",
-        "visual": "unclear — transcript provides no visual information",
-        "audio": "very-strong — nostalgia audio triggers recognition loop"
-      },
-      "vsCreatorNorm": "insufficient comparison",
-      "stealThis": "Pair an outfit reveal with the first two bars of a hyper-recognizable 90s or early-2000s lyric that gets cut off mid-line — the incomplete song creates a compulsion loop that drives replays and saves independent of the clothing being shown"
-    },
-    {
-      "niche": "fitness",
+      "niche": "food and beverage",
       "hookPattern": "direct-callout",
-      "framework": "bandwagon",
-      "reach": "477.48x following",
-      "viewBucket": "1M+",
-      "hookTechnique": "Opens mid-confrontation with an emotionally charged rhetorical challenge directed at someone already in pain — the viewer is dropped into an unresolved moment of conflict and must stay to understand who is crying and why",
-      "retentionDevice": "The countdown structure ('Two more. One more.') creates a micro-completion loop — the brain is wired to finish countdowns, so leaving before 'one more' feels like abandonment of a cycle already started; the emotional stakes (someone crying under duress) also demand resolution",
-      "viralMechanism": "The phrase 'Don't cry if you know it hurts to cry' functions as an accidental motivational aphorism — it is paradoxical, slightly absurd, and universally applicable to any hard thing in life, making it screenshot-able and quotable far outside gym culture; this drove saves and shares as people treated it like a life philosophy clip, not a workout video",
-      "dimensionRatings": {
-        "hook": "very-strong — mid-scene emotional conflict",
-        "format": "strong — countdown enforces completion",
-        "visual": "unclear — transcript alone insufficient",
-        "audio": "very-strong — raw distress signals authenticity"
-      },
-      "vsCreatorNorm": "insufficient comparison",
-      "stealThis": "Drop the audience into an already-escalated emotional moment with zero setup, then let a countdown or visible endpoint force them to stay for the resolution — the lack of introduction is the hook"
-    },
-    {
-      "niche": "food and beverage",
-      "hookPattern": "information-offering",
-      "framework": "listicle",
-      "reach": "435.19x following",
-      "viewBucket": "1M+",
-      "hookTechnique": "Opens by naming a specific audience segment ('beginners') and promising to fix their mistakes — a self-qualifying frame that makes the target viewer feel called out and compelled to verify whether they're making the listed errors",
-      "retentionDevice": "Numbered list structure creates an implicit contract with the viewer: the brain wants to complete the sequence. Each item is short enough to feel low-cost to stay for, but the list is long enough (6 items) that leaving feels like abandoning progress. The unexpected line 'do not raw dog it with the whisk' (item 5) is a pattern interrupt that resets attention mid-video when drop-off would normally spike.",
-      "viralMechanism": "Extremely high saves-to-views ratio (3.1%) signals this was treated as a reference card — a how-to checklist people wanted to retrieve later. The numbered mistake format made it inherently saveable as a 'matcha prep cheat sheet,' which algorithmically signals high-value content and drives distribution independent of the follower base. Shares (19.4k) further confirm it was forwarded to friends who own a matcha whisk and are doing it wrong.",
-      "dimensionRatings": {
-        "hook": "very-strong — self-qualifies target viewer instantly",
-        "format": "very-strong — numbered list drives completion compulsion",
-        "visual": "unclear — transcript alone cannot confirm",
-        "audio": "strong — 'raw dog' line resets mid-video attention"
-      },
-      "vsCreatorNorm": "The comparison post (819k views) relies on intrigue/mystery phrasing ('Listen closely because that's exactly what it says') — a curiosity hook with no instructional payload, producing views but low saves. This video flips to a utility-first format: explicit promise, numbered structure, actionable fixes. The single changed variable is instructional specificity, which converts passive viewers into savers and sharers rather than just watchers.",
-      "stealThis": "Build a 'mistakes beginners make' numbered list video for any consumable product in your category — keep each item under 10 seconds, bury one deliberately casual/unexpected phrase in items 4-5 to reset attention, and end each item with a single concrete fix. The save behavior is triggered by the list format, not the personality."
-    },
-    {
-      "niche": "food and beverage",
-      "hookPattern": "removing-limitations",
       "framework": "organic",
-      "reach": "403.27x following",
+      "reach": "13565.89x following",
       "viewBucket": "1M+",
-      "hookTechnique": "Opens with a direct, slow-paced vocal command to decompress ('relax, chill, breathe') — functioning as a pattern interrupt against fast-paced food content, immediately recruiting viewers already in a stressed or scrolling-fatigued state",
-      "retentionDevice": "The transcript's rhythm is deliberately halting and repetitive — each micro-pause ('it's cooler than tea... it's a little ice... little colder than tea... but matcha') creates a looping, almost incomplete logic that compels the viewer to stay for the payoff comparison that never fully resolves, paired with ASMR/aesthetic tags suggesting the visual is likely slow pour or condensation footage that rewards passive watching",
-      "viralMechanism": "The audio itself is the shareable unit — it functions as a mood artifact, not a tutorial. The phrase structure ('relax... have a matcha... it's cooler than tea') is vague enough to be universally relatable and emotionally projectable, making it trivially easy to duet, stitch, or reuse on someone else's matcha content. The caption explicitly says 'obsessed with this audio' — signaling the creator knows the audio is doing the work, which is itself a replication invitation to other creators in the niche",
+      "videoFormat": "shock-prop ASMR pour",
+      "openingVisual": "An overhead shot of bright green matcha being poured from a pale-green jug straight over a bowl of brown chocolate cereal, an ice cube tumbling in; bold white text 'is this illegal???' sits over the bowl.",
+      "onScreenTextHook": "is this illegal???",
+      "lighting": "Clean overhead kitchen light on a marble counter; high color contrast (vivid green on brown) is engineered for the thumbnail.",
+      "cameraFraming": "Top-down close-up on the bowl so the unnatural food combination fills the frame.",
+      "creatorStyling": "No creator on camera — hands and product only, all attention on the gross/curious act.",
+      "hookTechnique": "A transgressive food act ('pouring matcha on cereal — is this illegal?') triggers disgust-curiosity; you watch to judge whether it's genius or cursed.",
+      "retentionDevice": "The satisfying/horrifying pour itself, plus the open question in the text, makes viewers stay to react and comment their verdict.",
+      "viralMechanism": "Shock-prop + tribe-bait: it fuses the matcha-obsession trend with a polarizing 'is this allowed' food act; the absurd 13.7% engagement and huge share count come from tag-your-friend disgust/delight, not from selling anything.",
       "dimensionRatings": {
-        "hook": "very-strong — commands emotional state immediately",
-        "format": "strong — nine-second loop maximizes rewatch",
-        "visual": "strong — aesthetic/ASMR tags imply high sensory payoff",
-        "audio": "very-strong — meme-ready reusable sound"
+        "hook": "very-strong — transgressive food act + dare",
+        "format": "strong — overhead ASMR pour is hypnotic",
+        "visual": "very-strong — vivid green-on-brown contrast",
+        "audio": "strong — ASMR pour sound carries it"
       },
       "vsCreatorNorm": "insufficient comparison",
-      "stealThis": "Record a 6–9 second ambient audio clip built around a slow emotional command ('slow down, sit with this, have your X') tied to your product — make the audio the shareable asset, not the information, so other creators in your niche are incentivized to reuse it on their own content, turning your sound into a distribution engine"
+      "stealThis": "Stage one polarizing visual act and label it with a dare ('is this illegal?') — disgust-curiosity drives shares no product pitch can match."
     },
     {
-      "niche": "home and cleaning",
-      "hookPattern": "information-offering",
-      "framework": "problem-agitate-solution",
-      "reach": "371.8x following",
-      "viewBucket": "1M+",
-      "hookTechnique": "Opens with a how-to promise on a hyper-specific, relatable problem, then immediately pre-empts the obvious theft accusation with a self-deprecating legal disclaimer — creating tension and curiosity simultaneously in under 3 seconds",
-      "retentionDevice": "The creator admits she already removed three tags off-camera, which manufactures a proof-of-concept credibility gap the viewer needs to close by watching the fourth one live — plus the step-by-step physical manipulation of common household objects creates a 'will it actually work?' suspense loop that only resolves at the pop",
-      "viralMechanism": "The video solves a universal, embarrassing, low-stakes problem (self-checkout failure) that millions have experienced or fear experiencing, and the solution requires zero tools anyone doesn't already own — making it instantly shareable as a practical gift to friends, which explains the 15,400 shares and 52,161 saves: it functions as a bookmark for future use and a warning to send others",
+      "niche": "food and beverage",
+      "hookPattern": "pov",
+      "framework": "organic",
+      "reach": "13454.55x following",
+      "viewBucket": "10M+",
+      "videoFormat": "meme-audio hospital skit",
+      "openingVisual": "A woman lies in a hospital recliner under a fuzzy cow-print blanket, eyes closed with an IV pole and monitors behind her in a real infusion ward; white text 'RIP to my Matcha era' over the scene, set to the 'Rasputin' meme audio.",
+      "onScreenTextHook": "RIP to my Matcha era",
+      "lighting": "Real fluorescent hospital lighting — the authentic clinical setting is the joke's anchor.",
+      "cameraFraming": "Handheld POV looking down at herself in the hospital chair, then cuts; framing sells 'this really happened.'",
+      "creatorStyling": "Patient-in-treatment realism (blanket, IV) deliberately undercut by the comedic caption and meme sound.",
+      "hookTechnique": "Pairs a genuinely alarming visual (hospital IV) with a trivial cause ('matcha blocks iron absorption') and the 'you're probably wondering how I ended up here' meme frame, creating instant comedic dissonance.",
+      "retentionDevice": "The 'how I ended up in this situation' meme structure plus the Rasputin audio is a known loop people stay to hear resolve.",
+      "viralMechanism": "Meme-format self-deprecation: over-dramatizing a tiny health fact via a recognizable audio makes it endlessly relatable to matcha lovers, driving 222k shares as a 'this is literally me' forward.",
       "dimensionRatings": {
-        "hook": "very-strong — accusation-deflection creates instant stakes",
-        "format": "very-strong — 58s matches exactly the information needed",
-        "visual": "strong — fork-tag manipulation is tactile and clear",
-        "audio": "strong — conversational tone lowers perceived risk"
+        "hook": "very-strong — alarming visual, trivial cause",
+        "format": "strong — proven meme-audio skit frame",
+        "visual": "strong — real hospital setting sells the bit",
+        "audio": "very-strong — Rasputin meme audio is the engine"
       },
       "vsCreatorNorm": "insufficient comparison",
-      "stealThis": "Open with the how-to title, then immediately neutralize the single biggest viewer objection or suspicion in one sentence before demonstrating anything — this converts skeptics into invested watchers rather than bouncers"
+      "stealThis": "Dramatize a trivial niche fact with a real high-stakes setting and a known meme audio — the dissonance is the whole joke."
     },
     {
-      "niche": "supplements",
-      "hookPattern": "information-offering",
-      "framework": "problem-agitate-solution",
-      "reach": "348.96x following",
-      "viewBucket": "1M+",
-      "hookTechnique": "Opens with a conditional-outcome question framing ('if you do X, what happens?'), which forces the brain to stay for the answer rather than offering a claim it can accept or reject immediately",
-      "retentionDevice": "The 'secret your doctor won't tell you' framing creates an institutional-distrust loop — the viewer is implicitly told that completing the video gives them access to suppressed information, making early exit feel like a loss",
-      "viralMechanism": "The D3+K2 calcium-routing mechanism (D3 pulls calcium in, K2 directs it away from arteries) is a specific, non-obvious biochemical relationship that sounds counter-intuitive enough to spark 'I didn't know this' sharing — it reframes something mundane (vitamin D) as potentially dangerous without the K2 co-factor, which creates urgency to forward to family members concerned about heart disease or osteoporosis",
-      "dimensionRatings": {
-        "hook": "very-strong — question forces answer-seeking",
-        "format": "strong — dense claims per second",
-        "visual": "unclear — transcript only available",
-        "audio": "unclear — transcript only available"
-      },
-      "vsCreatorNorm": "insufficient comparison",
-      "stealThis": "Lead with a paired-nutrient or paired-ingredient mechanism where ingredient A creates a risk that ingredient B neutralizes — this structure manufactures both alarm and relief in under 10 seconds, which is the emotional engine behind the share and save numbers here"
-    },
-    {
-      "niche": "supplements",
-      "hookPattern": "belief-challenging",
-      "framework": "information-offering",
-      "reach": "293.11x following",
-      "viewBucket": "1M+",
-      "hookTechnique": "Opens by naming four specific, widely-used supplements before delivering any advice — pre-loading recognition so every viewer self-selects as the target audience within the first two seconds",
-      "retentionDevice": "The video is structured as a four-item checklist, one supplement per beat. Viewers who use any of these are compelled to stay for 'their' item, and the sequential format creates micro-commitment — leaving early means missing actionable information you presumably came for",
-      "viralMechanism": "The save driver is the primary engine here: 86,769 saves against only 436 comments signals this was treated as reference content. The specific, non-obvious details — creatine requiring daily accumulation even on rest days, omega-3s needing dietary fat for absorption, magnesium timed to cortisol suppression — gave viewers a concrete reason to archive it rather than just like and scroll. Each fact is a small belief-correction about something they already do, which triggers the 'I've been doing this wrong' response the caption explicitly names",
-      "dimensionRatings": {
-        "hook": "very-strong — pre-qualifies via product name-drop",
-        "format": "very-strong — checklist structure drives completion",
-        "visual": "unclear — transcript provides no visual evidence",
-        "audio": "unclear — transcript provides no audio evidence"
-      },
-      "vsCreatorNorm": "insufficient comparison",
-      "stealThis": "Lead with a named list of products your audience already owns ('If you use X, Y, Z or W…'), then deliver one non-obvious correction per item framed as a usage mistake — this converts passive viewers into savers because the content functions as a cheat-sheet they will want to retrieve later"
-    },
-    {
-      "niche": "fashion",
-      "hookPattern": "belief-challenging",
-      "framework": "industry-contrarian",
-      "reach": "268.17x following",
-      "viewBucket": "1M+",
-      "hookTechnique": "Opens with a permission-granting 'normalize' frame that positions the viewer as a potential ally against unnamed critics — instantly sorts the audience into 'us vs. them' before any product or opinion is stated",
-      "retentionDevice": "The list escalation ('handbags, watches, clothes') keeps the viewer waiting to see if their specific item gets named, and the mild social indignation maintains forward momentum — but at 16s total, retention is structurally forced; there is almost no time to drop off",
-      "viralMechanism": "The video functions as a social weapon: luxury consumers can share it as a low-effort, high-validation response to people who have judged them, which explains the disproportionately high share and save counts relative to comments — it is not being discussed, it is being deployed",
-      "dimensionRatings": {
-        "hook": "very-strong — 'normalize' triggers tribal sorting",
-        "format": "strong — 16s removes all friction",
-        "visual": "unclear — transcript provides no visual data",
-        "audio": "unclear — transcript provides no audio data"
-      },
-      "vsCreatorNorm": "insufficient comparison",
-      "stealThis": "Lead with 'Can we normalize [behavior your audience already does but feels judged for]' — it pre-selects an audience, manufactures an outgroup, and turns the viewer into a sharer who is defending their own identity rather than endorsing your content"
-    },
-    {
-      "niche": "fashion",
+      "niche": "food and beverage",
       "hookPattern": "newness",
       "framework": "organic",
-      "reach": "237.67x following",
+      "reach": "1213.41x following",
       "viewBucket": "10M+",
-      "hookTechnique": "Opens with a sequel promise ('another dress') plus an immediate high-contrast identity claim ('most iconic Maori color, blood red'), collapsing craft context and cultural intrigue into the first breath — viewer is oriented AND curious before the first second is over",
-      "retentionDevice": "A compounding tension arc: the creator explicitly references a prior failure ('dropped my mannequin, almost failed last time'), then self-imposes a live high-stakes caveat ('this time I'll be extra careful'), converting a simple dress-making process video into a redemption narrative with a potential failure point the viewer waits to see play out",
-      "viralMechanism": "The phrase 'She's so satisfying to touch' applied to a mannequin mid-molding creates a jarring, ambiguous sensory statement that functions as a comment-bait tripwire — it is just unusual enough to make viewers pause, rewatch, and tag others to decode it, which explains the disproportionate share count (23,800) relative to a sub-45K account; shares are driven by 'you have to see this' confusion-curiosity, not admiration",
+      "videoFormat": "first-try reaction in car",
+      "openingVisual": "A man with locs sits in a car, mouth open in a disgusted/confused reaction, holding up a clear cup of bright green iced matcha toward the lens; white text 'POV: Drinking Matcha for the first time' across the top.",
+      "onScreenTextHook": "POV: Drinking Matcha for the first time",
+      "lighting": "Natural daylight through the car windows — casual, unstaged, very relatable.",
+      "cameraFraming": "Selfie close-up in the car with the green drink thrust toward camera, so his expression and the product share the frame.",
+      "creatorStyling": "Completely casual — just a guy in his car — which makes the honest reaction believable.",
+      "hookTechnique": "A first-time-trying-it POV plus an instantly funny visceral reaction ('tastes like a vanilla football field... this is grass') hooks both matcha fans and skeptics.",
+      "retentionDevice": "The escalating string of absurd taste comparisons keeps viewers laughing to the final 'yep'; the open question of whether he'll like it holds attention.",
+      "viralMechanism": "Reaction-bait on a trend's polarizing taste: matcha lovers defend it and haters agree, fueling a 16.8% engagement rate and 581k shares as a comment-war and tag-a-friend video.",
       "dimensionRatings": {
-        "hook": "very-strong — sequel plus cultural specificity",
-        "format": "strong — failure callback creates arc",
-        "visual": "strong — tactile molding process",
-        "audio": "weak — transcript only, unverifiable"
+        "hook": "very-strong — funny first-try disgust reaction",
+        "format": "strong — POV reaction is endlessly relatable",
+        "visual": "strong — vivid green drink + expressive face",
+        "audio": "very-strong — quotable absurd taste similes"
       },
       "vsCreatorNorm": "insufficient comparison",
-      "stealThis": "Explicitly reference a prior public failure in the setup of your next process video ('last time X went wrong, this time I'm doing Y differently') — it reframes a routine tutorial as a personal redemption attempt, which generates emotional investment and watch-through from viewers who weren't even there for the original failure"
-    },
-    {
-      "niche": "skincare",
-      "hookPattern": "direct-callout",
-      "framework": "listicle",
-      "reach": "169.38x following",
-      "viewBucket": "500k+",
-      "hookTechnique": "Dual identity gate: instantly filters for a hyper-specific demographic (age + retailer) while simultaneously credentialing the speaker, making the target viewer feel the next 70 seconds were made exclusively for them",
-      "retentionDevice": "Numbered scoring system with inflating, irrational scores (14/10, 15/10, 13/10, then '10,000 points') creates a gamified list structure — viewers stay to collect the next score and to resolve the cognitive dissonance of scores exceeding 10",
-      "viralMechanism": "The save-worthy utility is the primary driver: three specific named products with purchase locations (Dollar Tree accessibility) and concrete anti-aging mechanisms (fills expression lines, lifts sagging, fills sunken faces overnight) make this a reference card women over 40 will return to while shopping — explaining the 23,766 saves (4.2% save rate on views, extremely high) and the 12,100 shares to peer groups of similar-age women",
-      "dimensionRatings": {
-        "hook": "very-strong — demographic gates instantly self-select",
-        "format": "very-strong — list structure rewards completion",
-        "visual": "insufficient data — transcript only",
-        "audio": "strong — benefit language is visceral and body-specific"
-      },
-      "vsCreatorNorm": "insufficient comparison",
-      "stealThis": "Open with a dual-filter hook ('If you are [age range] and shop at [accessible retailer]') before any product mention — it collapses the audience to exactly the people who will save and share, which is what signals the algorithm to push beyond your existing followers"
-    },
-    {
-      "niche": "skincare",
-      "hookPattern": "before-after",
-      "framework": "problem-agitate-solution",
-      "reach": "141.45x following",
-      "viewBucket": "10M+",
-      "hookTechnique": "Opens with a visual-identity qualifier ('if you have these') that forces viewers to self-diagnose before the product is introduced — triggering immediate self-relevance filtering rather than passive watching",
-      "retentionDevice": "A nested promise structure: the 'before' gross-out visual of extraction is shown before the 10-minute wait, then the creator verbally resets anticipation ('that's when it gets really crazy'), creating a micro-cliffhanger that pays off with the 'pores literally gone' reveal — plus a short enough runtime (33s) that exit before resolution feels irrational",
-      "viralMechanism": "The save/share driver is the combination of the pore-extraction visual payoff (satisfies the brain's disgust-curiosity loop and is inherently screenshot-worthy) plus the scarcity-and-regret close ('I'm pissed because right after I buy one they go on sale / might be sold out') — this converts passive viewers into savers who bookmark it as a purchase-intent reminder, explaining the disproportionately high 31,877 saves relative to comments",
-      "dimensionRatings": {
-        "hook": "very-strong — forces instant personal identification",
-        "format": "very-strong — before/during/after arc compressed",
-        "visual": "strong — extraction close-up is scroll-stopper",
-        "audio": "weak — no musical tension or audio cue structure"
-      },
-      "vsCreatorNorm": "insufficient comparison",
-      "stealThis": "Open with a visual or verbal exclusion qualifier ('if your skin does X') before naming the product — it converts passive scrollers into active self-diagnosers, which locks attention in the first 2 seconds without requiring a verbal hook line at all"
-    },
-    {
-      "niche": "skincare",
-      "hookPattern": "direct-callout",
-      "framework": "organic",
-      "reach": "88.94x following",
-      "viewBucket": "1M+",
-      "hookTechnique": "Opens mid-energy with crowd-hype audio already in progress, forcing the viewer to orient themselves to an unresolved social moment — the brain can't scroll because it hasn't resolved 'what is happening here'",
-      "retentionDevice": "The audio is a looping, escalating call-and-response chant that has no natural stopping point in 9 seconds; the viewer reaches the end before the audio resolves, creating a replay impulse to catch what they missed",
-      "viralMechanism": "The caption does the entire comedic payload — the video is contextless hype audio, and the caption reframes it as absurd endorsement of an overpriced leg moisturizer; the joke only lands when caption and audio collide, which means viewers screenshot or share it to deliver the punchline to someone else, making the share the joke itself",
-      "dimensionRatings": {
-        "hook": "strong — unresolved audio demands context",
-        "format": "strong — 9s forces full watch",
-        "visual": "weak — transcript reveals no visual information",
-        "audio": "very-strong — hype loop drives replays"
-      },
-      "vsCreatorNorm": "insufficient comparison",
-      "stealThis": "Pair a contextless crowd-hype or celebration audio clip with a deadpan caption that reframes the energy as an absurd product endorsement — the gap between the audio's grandiosity and the mundane product IS the joke, and that gap is what gets shared"
+      "stealThis": "Film an honest first-time reaction to a polarizing trendy item with quotable similes — defenders and haters both share it to argue."
     }
   ]
 }

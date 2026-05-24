@@ -1,7 +1,7 @@
 {
   "generatedAt": "2026-05-24",
   "curatedTeardowns": 31,
-  "decodedByPipeline": 3839,
+  "decodedByPipeline": 3701,
   "trendingTags": 1830,
   "classifiedShare": 1,
   "note": "Counts computed from committed/derived data by pipeline/aggregate.mjs, not hand-typed."
