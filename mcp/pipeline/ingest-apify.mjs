@@ -24,6 +24,7 @@ const args = Object.fromEntries(
 );
 const per = Number(args.per || 25);
 const outFile = args.out || "data/raw/normalized.jsonl";
+const rawOut = args.rawout || "data/raw/scraped.jsonl";
 
 // hashtag -> our canonical niche
 const HASHTAG_NICHE = {
@@ -37,8 +38,25 @@ const HASHTAG_NICHE = {
   cleantok: "home and cleaning", homehacks: "home and cleaning",
   hairtok: "hair",
   dogtok: "pets", pettok: "pets",
+  // batch-2 expansion hashtags (fresh videos, same niches)
+  skincaretips: "skincare", glowyskin: "skincare",
+  makeuptutorial: "ABG beauty", grwmmakeup: "ABG beauty",
+  proteinpowder: "supplements", creatine: "supplements",
+  workoutroutine: "fitness", fitcheck: "fitness",
+  easyrecipe: "food and beverage", cooking: "food and beverage",
+  appsyouneed: "tech and SaaS", techreview: "tech and SaaS",
+  outfitinspo: "fashion", fashionhaul: "fashion",
+  cleaningtok: "home and cleaning", homeorganization: "home and cleaning",
+  hairtutorial: "hair", haircare: "hair",
+  dogsoftiktok: "pets", cattok: "pets",
 };
-const hashtags = Object.keys(HASHTAG_NICHE);
+// --only restricts to a comma-separated subset (e.g. the batch-2 hashtags)
+const hashtags = args.only ? args.only.split(",").map((s) => s.trim()).filter(Boolean) : Object.keys(HASHTAG_NICHE);
+// --dedup excludes URLs already present in an existing normalized file
+let dedupUrls = new Set();
+if (args.dedup && existsSync(args.dedup)) {
+  for (const l of readFileSync(args.dedup, "utf8").split(/\r?\n/)) { try { const u = JSON.parse(l).url; if (u) dedupUrls.add(u); } catch {} }
+}
 
 console.error(`scraping ${hashtags.length} hashtags x ${per} = ~${hashtags.length * per} videos...`);
 
@@ -76,7 +94,7 @@ console.error(`got ${items.length} raw items`);
 
 // save raw (gitignored) for audit
 mkdirSync("data/raw", { recursive: true });
-writeFileSync("data/raw/scraped.jsonl", items.map((i) => JSON.stringify(i)).join("\n") + "\n");
+writeFileSync(rawOut, items.map((i) => JSON.stringify(i)).join("\n") + "\n");
 
 // ---- fetch spoken transcript (best-effort) --------------------------------
 function vttToText(vtt) {
@@ -142,6 +160,12 @@ for (let i = 0; i < items.length; i += CONCURRENCY) {
 process.stderr.write("\n");
 
 mkdirSync("data/raw", { recursive: true });
-writeFileSync(outFile, normalized.map((n) => JSON.stringify(n)).join("\n") + "\n");
-console.error(`normalized ${normalized.length} videos (${withTranscript} with spoken transcript) -> ${outFile}`);
-console.log(normalized.length);
+// drop dupes vs an existing corpus (and within this batch) when --dedup is set
+const seenUrls = new Set();
+const deduped = normalized.filter((n) => {
+  if (!n.url || dedupUrls.has(n.url) || seenUrls.has(n.url)) return false;
+  seenUrls.add(n.url); return true;
+});
+writeFileSync(outFile, deduped.map((n) => JSON.stringify(n)).join("\n") + "\n");
+console.error(`normalized ${deduped.length} NEW videos (${normalized.length - deduped.length} dupes dropped; ${withTranscript} had transcript) -> ${outFile}`);
+console.log(deduped.length);

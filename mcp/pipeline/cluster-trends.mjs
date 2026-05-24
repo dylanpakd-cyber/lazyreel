@@ -72,6 +72,14 @@ Return ONLY JSON:
   try { return JSON.parse((await res.json()).content[0].text.trim().replace(/^```json\s*|\s*```$/g, "")); } catch { return { formula: null, name: null }; }
 }
 
+// --cluster-only: emit the gated clusters WITHOUT naming (no API call), so a
+// Claude Code agent can do the formula + 3-part naming directly in-context.
+if (process.argv.includes("--cluster-only")) {
+  writeFileSync("data/_clusters-to-name.json", JSON.stringify({ corpusMedianVpf: Number(corpusMedianVpf.toFixed(2)), clusters: top }, null, 2) + "\n");
+  console.error(`wrote ${top.length} unnamed clusters -> data/_clusters-to-name.json (name them with an agent, then write data/trends.json)`);
+  process.exit(0);
+}
+
 const trends = [];
 for (const c of top) {
   const named = await name(c);
