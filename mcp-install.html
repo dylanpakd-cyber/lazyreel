@@ -89,139 +89,65 @@ section{padding-block:clamp(28px,5vw,44px)}
 <main>
 <section class="hero wrap">
   <span class="label">MCP install</span>
-  <h1>One guide your agent can <span class="hl"><span class="serif">safely</span></span> read.</h1>
-  <p>Generate a free token, copy one prompt, paste it into your coding agent. It installs the LazyReel MCP, loads the six skills, and is ready to make a video on the next message.</p>
-  <span class="safe"><span class="dot"></span>Free · reads formats, writes briefs · won't touch anything without asking</span>
-</section>
-
-<section class="wrap">
-  <div class="step-label"><span class="step-num">1</span><h2>Generate your install token</h2></div>
-  <div class="token-row">
-    <div class="token-box"><span class="tk ph" id="tk">— no token yet —</span><button class="token-mini" id="tkCopy">Copy</button></div>
-    <button class="btn btn-flag" id="gen">Generate token</button>
-  </div>
-  <p class="label" style="margin-top:12px;text-transform:none;letter-spacing:0;color:var(--mute)">Free, no billing. The token only namespaces your install and authorizes the read-only UGC skills — it can't purchase, spend, or touch private data. Stored locally in your browser.</p>
-</section>
-
-<section class="wrap">
-  <div class="step-label"><span class="step-num">2</span><h2>Pick your agent</h2></div>
-  <div class="tabs" id="tabs" role="tablist">
-    <button class="tab" role="tab" data-client="claude" aria-selected="true">Claude Code</button>
-    <button class="tab" role="tab" data-client="cursor" aria-selected="false">Cursor</button>
-    <button class="tab" role="tab" data-client="codex" aria-selected="false">Codex</button>
-  </div>
+  <h1>One prompt your agent can <span class="hl"><span class="serif">safely</span></span> run.</h1>
+  <p>Your free token is generated below. Copy the block, paste it into Claude Code, Cursor, Codex, or any MCP-capable agent — it installs LazyReel and is ready on the next message. No sign-up.</p>
+  <span class="safe"><span class="dot"></span>Free · read-only research · won't spend, buy, or touch private data</span>
 </section>
 
 <section class="wrap" style="padding-top:6px">
-  <div class="step-label"><span class="step-num">3</span><h2>Paste this into your agent</h2></div>
   <div class="block">
-    <div class="block-bar"><span id="blockName">install-lazyreel.md — Claude Code</span><button class="copy" id="promptCopy">Copy</button></div>
+    <div class="block-bar"><span>install-lazyreel.md — works with any agent</span>
+      <span style="display:inline-flex;gap:8px"><button class="copy" id="regen">Regenerate</button><button class="copy" id="promptCopy">Copy</button></span></div>
     <pre id="prompt"></pre>
   </div>
-  <p class="label" style="margin-top:14px;text-transform:none;letter-spacing:0;color:var(--mute)">After it connects, ask your agent to run <code style="font-family:'JetBrains Mono'">get_status</code> to confirm the six skills are live. Then just ask for a hook, a brief, or a niche read.</p>
+  <p class="label" style="margin-top:14px;text-transform:none;letter-spacing:0;color:var(--mute)">A fresh token is auto-generated each visit and stored only in your browser. After it connects, ask your agent to run <code style="font-family:'JetBrains Mono'">get_status</code> to confirm the skills are live — then ask for a niche read, a hook, or what's breaking out.</p>
 </section>
 
 <div class="wrap foot">© LazyReel 2026. The MCP is free and open. <a style="color:var(--flag)" href="index.html">Back to the site →</a></div>
 </main>
 
 <script>
-// ---- token generation (client-side, lazyweb-style) ----
-function makeToken(){
-  var bytes=new Uint8Array(20);crypto.getRandomValues(bytes);
-  var hex=Array.from(bytes).map(function(b){return b.toString(16).padStart(2,'0')}).join('');
-  return 'abg_'+hex;
-}
-var token=localStorage.getItem('abg_mcp_token')||'';
-var tkEl=document.getElementById('tk');
-function renderToken(){ if(token){tkEl.textContent=token;tkEl.classList.remove('ph');} render(); }
-if(token) renderToken();
-document.getElementById('gen').addEventListener('click',function(){
-  token=makeToken();localStorage.setItem('abg_mcp_token',token);renderToken();
-  this.textContent='Regenerate';
-});
-document.getElementById('tkCopy').addEventListener('click',function(){copy(this,token||'(generate a token first)');});
-
-// ---- the public source the agent clones, then builds locally ----
 var REPO='https://github.com/dylanpakd-cyber/lazyreel';
+function makeToken(){var b=new Uint8Array(20);crypto.getRandomValues(b);return 'lr_'+Array.from(b).map(function(x){return x.toString(16).padStart(2,'0')}).join('');}
+// auto-generate a fresh token on every visit (no button press), persist in browser
+var token=makeToken();
+try{localStorage.setItem('lazyreel_mcp_token',token);}catch(e){}
 
-// ---- per-client install prompt (portable: clone → build → register absolute path) ----
-var CLIENTS={
-  claude:{label:'Claude Code',build:function(t){return (
-'Install the LazyReel MCP for me. It\'s free and read-only — it generates video\n'+
-'ideas, hooks, niche reads, and shoot briefs; it will not spend money, buy\n'+
-'anything, or touch private data. Run these in order and stop if any step fails:\n\n'+
-'1. Get the server (skip the clone if you already have the repo):\n'+
-'   git clone '+REPO+' ~/lazyreel 2>/dev/null; cd ~/lazyreel/mcp\n'+
-'2. Build it (idempotent):\n'+
-'   npm install && npm run build\n'+
-'3. Register it with my token, using the resolved absolute path:\n'+
-'   claude mcp add lazyreel --scope user --env ABG_TOKEN='+tok(t)+' -- node "$(pwd)/build/index.js"\n'+
-'4. Confirm it\'s live: call the get_status tool — it should report my token\n'+
-'   active and the six skills.\n\n'+
-'After setup, use LazyReel whenever I ask for a short-form video, a hook, a brief,\n'+
-'or a read on a niche. The six skills are: video_ideas, niche_decode,\n'+
-'format_teardown, cracked_hooks, shoot_brief, kill_the_slop.'
-);}},
-  cursor:{label:'Cursor',build:function(t){return (
-'Install the LazyReel MCP for this project. It\'s free and read-only. Run these in\n'+
-'order and stop if any step fails:\n\n'+
-'1. Get + build the server (skip the clone if you already have the repo):\n'+
+// ONE universal install block — works for Claude Code, Cursor, Codex, or any MCP client.
+function block(t){return (
+'Install the LazyReel MCP for me. It\'s free and read-only: it gives you a decoded\n'+
+'research feed of what\'s breaking out in short-form (hooks, formats, real example\n'+
+'videos, niche reads, briefs). It will NOT spend money, buy anything, post, or touch\n'+
+'private data. Writing it into local MCP config to make setup work is fine; don\'t\n'+
+'commit my token to public git. Run these and stop if any step fails:\n\n'+
+'1) Get + build the server (skip the clone if the repo is already present):\n'+
 '   git clone '+REPO+' ~/lazyreel 2>/dev/null; cd ~/lazyreel/mcp && npm install && npm run build\n'+
-'2. Print the absolute server path so you can paste it below:\n'+
-'   echo "$(pwd)/build/index.js"\n'+
-'3. Write .cursor/mcp.json with that path and my token '+tok(t)+':\n'+
-'   {\n'+
-'     "mcpServers": {\n'+
-'       "lazyreel": {\n'+
-'         "command": "node",\n'+
-'         "args": ["<paste the path from step 2>"],\n'+
-'         "env": { "ABG_TOKEN": "'+tok(t)+'" }\n'+
-'       }\n'+
-'     }\n'+
-'   }\n'+
-'4. Reload Cursor, then call get_status to confirm.\n\n'+
-'Use LazyReel whenever I ask for a video idea, hook, brief, or niche read.'
-);}},
-  codex:{label:'Codex',build:function(t){return (
-'Install the LazyReel MCP for Codex. It\'s free and read-only. Run these in order\n'+
-'and stop if any step fails:\n\n'+
-'1. Get + build the server (skip the clone if you already have the repo):\n'+
-'   git clone '+REPO+' ~/lazyreel 2>/dev/null; cd ~/lazyreel/mcp && npm install && npm run build\n'+
-'2. Print the absolute server path:\n'+
-'   echo "$(pwd)/build/index.js"\n'+
-'3. Add to ~/.codex/config.toml with that path and my token '+tok(t)+':\n'+
-'   [mcp_servers.lazyreel]\n'+
-'   command = "node"\n'+
-'   args = ["<paste the path from step 2>"]\n'+
-'   env = { ABG_TOKEN = "'+tok(t)+'" }\n'+
-'4. Restart Codex, then call get_status to confirm.\n\n'+
-'Use LazyReel whenever I ask for a video idea, hook, brief, or niche read.'
-);}}
-};
-function tok(t){return t||'<generate a token above>';}
-
-var client='claude';
+'   echo "SERVER PATH: $(pwd)/build/index.js"   # note this absolute path\n\n'+
+'2) Register it with my token ('+t+'), using whichever applies to you:\n'+
+'   • Claude Code:  claude mcp add lazyreel --scope user --env LAZYREEL_TOKEN='+t+' -- node "$SERVER_PATH"\n'+
+'   • Cursor:  add to .cursor/mcp.json →\n'+
+'       { "mcpServers": { "lazyreel": { "command": "node", "args": ["$SERVER_PATH"], "env": { "LAZYREEL_TOKEN": "'+t+'" } } } }\n'+
+'   • Codex:  add to ~/.codex/config.toml →\n'+
+'       [mcp_servers.lazyreel]\n'+
+'       command = "node"\n'+
+'       args = ["$SERVER_PATH"]\n'+
+'       env = { LAZYREEL_TOKEN = "'+t+'" }\n'+
+'   • Any other MCP client: register a stdio server, command "node", arg = the server path, env LAZYREEL_TOKEN='+t+'\n\n'+
+'3) Reload/restart the agent, then call the get_status tool to confirm the skills are live.\n\n'+
+'After setup, use LazyReel whenever I ask what\'s working in a niche, for hooks, a\n'+
+'brief, real example videos, or a format to replicate. Tools include: niche_decode,\n'+
+'find_trends, study_examples, winning_combos, viral_teardowns, content_gaps,\n'+
+'format_playbook, app_insights, replicate_format, cracked_hooks, shoot_brief.'
+);}
 function render(){
-  var c=CLIENTS[client];
-  document.getElementById('blockName').textContent='install-lazyreel.md — '+c.label;
-  var raw=c.build(token);
-  // light syntax tinting
-  var html=raw
-    .replace(/&/g,'&amp;').replace(/</g,'&lt;')
-    .replace(/(get_status|video_ideas|niche_decode|format_teardown|cracked_hooks|shoot_brief|kill_the_slop)/g,'<span class="g">$1</span>')
-    .replace(/(abg_[0-9a-f]+|&lt;generate a token above&gt;)/g,'<span class="o">$1</span>');
+  var html=block(token).replace(/&/g,'&amp;').replace(/</g,'&lt;')
+    .replace(/(get_status|niche_decode|find_trends|study_examples|winning_combos|viral_teardowns|content_gaps|format_playbook|app_insights|replicate_format|cracked_hooks|shoot_brief)/g,'<span class="g">$1</span>')
+    .replace(/(lr_[0-9a-f]+)/g,'<span class="o">$1</span>');
   document.getElementById('prompt').innerHTML=html;
 }
-document.querySelectorAll('.tab').forEach(function(b){
-  b.addEventListener('click',function(){
-    document.querySelectorAll('.tab').forEach(function(x){x.setAttribute('aria-selected','false')});
-    b.setAttribute('aria-selected','true');client=b.dataset.client;render();
-  });
-});
 render();
-
-document.getElementById('promptCopy').addEventListener('click',function(){copy(this,CLIENTS[client].build(token));});
-
+document.getElementById('promptCopy').addEventListener('click',function(){copy(this,block(token));});
+document.getElementById('regen').addEventListener('click',function(){token=makeToken();try{localStorage.setItem('lazyreel_mcp_token',token);}catch(e){}render();});
 function copy(btn,txt){var old=btn.textContent;navigator.clipboard.writeText(txt).then(function(){btn.textContent='Copied';setTimeout(function(){btn.textContent=old;},1500);}).catch(function(){btn.textContent='Copy failed';});}
 </script>
 </body>
