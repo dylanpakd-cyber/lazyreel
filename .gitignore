@@ -12,3 +12,7 @@ mcp/data/*.bak.jsonl
 mcp/data/raw/normalized-batch2.jsonl
 mcp/data/raw/scraped-batch2.jsonl
 mcp/data/decoded/app-ads.jsonl
+mcp/covers/
+mcp/data/decoded/_*.jsonl
+mcp/data/raw/_*.jsonl
+mcp/data/raw/_*.json
