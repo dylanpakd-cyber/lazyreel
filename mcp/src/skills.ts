@@ -173,6 +173,34 @@ export function nicheDecode(niche: string, examples?: string): string {
   ].filter(Boolean).join("\n");
 }
 
+export function contentGaps(niche: string): string {
+  const n = niche.trim();
+  const ins = nicheInsight(n);
+  if (!ins || !ins.patternTable) {
+    return `# No gap map for "${n}" yet\nNot enough decoded videos in this niche. Try a broader niche or scrape more.`;
+  }
+  const gaps = ins.gaps || [];
+  const sat = ins.saturated || [];
+  const out = [
+    `# Content gap map: ${n}`,
+    `_Supply (how often a hook is used) vs demand (how it performs). The opening is what works but nobody's doing yet. n=${ins.sampleSize}._`,
+    "",
+  ];
+  if (sat.length) {
+    out.push(`## Crowded (hard to stand out)`);
+    out.push(...sat.map((s) => `- **${s.label}** — ${s.sharePct}% of videos use it, but it only performs at ${s.lift}x. Saturated.`));
+    out.push("");
+  }
+  if (gaps.length) {
+    out.push(`## The openings (high performance, low supply)`);
+    out.push(...gaps.map((g) => `- **${g.label}** — over-indexes ${g.lift}x among breakouts but only ${g.sharePct}% of videos use it. Do more of this.`));
+  } else {
+    out.push(`## The openings`, `No clear under-supplied winner yet at this sample size; lean on the over-indexing patterns from niche_decode.`);
+  }
+  out.push("", `> The move: drop the crowded pattern, test the opening. That's where reach is cheapest.`);
+  return out.join("\n");
+}
+
 export function viralTeardowns(niche: string, limit = 5): string {
   const n = niche.trim();
   const ws = winnersForNiche(n, Math.min(Math.max(limit, 1), 10));
@@ -365,7 +393,7 @@ export function status(token?: string): string {
     tokenLine,
     "",
     "**Live now:**",
-    "- 8 skills: video_ideas, niche_decode, format_teardown, cracked_hooks, shoot_brief, kill_the_slop, search_corpus, viral_teardowns",
+    "- 9 skills: video_ideas, niche_decode, format_teardown, cracked_hooks, shoot_brief, kill_the_slop, search_corpus, viral_teardowns, content_gaps",
     `- ${getWinners().length} real breakout videos torn down (the actual viral mechanism, diagnosed from transcript + engagement)`,
     `- ${SCRIPT_FRAMEWORKS.length} named script frameworks, ${HOOK_PATTERNS.length} hook patterns, ${ANGLES.length} proven UGC angles`,
     `- ${corpusCounts().videos} hand-authored teardowns + ${corpusCounts().tags} real TikTok trending tags (2022-2025, MIT)`,

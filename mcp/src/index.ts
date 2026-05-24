@@ -9,7 +9,7 @@ import {
   ListToolsRequestSchema,
 } from "@modelcontextprotocol/sdk/types.js";
 import {
-  videoIdeas, nicheDecode, formatTeardown, crackedHooks, shootBrief, killTheSlop, searchCorpus, viralTeardowns, status,
+  videoIdeas, nicheDecode, formatTeardown, crackedHooks, shootBrief, killTheSlop, searchCorpus, viralTeardowns, contentGaps, status,
 } from "./skills.js";
 import { SCRIPT_FRAMEWORKS } from "./frameworks.js";
 
@@ -120,6 +120,15 @@ const tools = [
     },
   },
   {
+    name: "content_gaps",
+    description: "Map supply vs demand in a niche: which hook patterns are crowded (everyone uses them) vs which over-perform but are under-used (the opening). Use when the user asks where the opportunity is, what's saturated, or how to stand out in a niche.",
+    inputSchema: {
+      type: "object",
+      properties: { niche: { type: "string", description: "The niche to map (e.g. 'skincare')." } },
+      required: ["niche"],
+    },
+  },
+  {
     name: "get_status",
     description: "Explain what this MCP server can do and what is intentionally not live yet.",
     inputSchema: { type: "object", properties: {} },
@@ -152,6 +161,8 @@ server.setRequestHandler(CallToolRequestSchema, async (req) => {
         text = searchCorpus(str("query"), num("limit") ?? 6); break;
       case "viral_teardowns":
         text = viralTeardowns(str("niche"), num("limit") ?? 5); break;
+      case "content_gaps":
+        text = contentGaps(str("niche")); break;
       case "get_status":
         text = status(process.env.ABG_TOKEN); break;
       default:

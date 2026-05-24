@@ -65,11 +65,15 @@ export function corpusCounts() {
 }
 
 export type HookLift = { label: string; lift: number; nWinners: number; nTotal: number };
+export type PatternRow = { label: string; count: number; sharePct: number; lift: number };
 export type NicheInsight = {
   sampleSize: number;
   breakoutThresholdVpf?: number;
   hookPatternsThatOverIndex: HookLift[];
   frameworks?: HookLift[];
+  patternTable?: PatternRow[];
+  gaps?: PatternRow[];
+  saturated?: PatternRow[];
 };
 type Insights = {
   source?: string; decoded?: number; method?: string;

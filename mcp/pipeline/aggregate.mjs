@@ -52,12 +52,17 @@ function liftAnalysis(subset, key) {
     .filter((x) => x.nTotal >= 6 && x.label && !["unclassified", "generic", "none", "null", "other", "n/a", ""].includes(String(x.label).toLowerCase()))
     .sort((a, b) => b.lift - a.lift);
 
+  const table = result
+    .filter((r) => r.label && !["unclassified", "generic", "none", "null", "other", "n/a", ""].includes(String(r.label).toLowerCase()))
+    .map((r) => ({ label: r.label, count: r.nTotal, sharePct: Number((100 * r.nTotal / withVpf.length).toFixed(1)), lift: r.lift }))
+    .sort((a, b) => b.count - a.count);
   return {
     sampleSize: withVpf.length,
     breakoutThresholdVpf: Number(thresh.toFixed(2)),
     breakouts: winners.length,
     overIndexed: result.filter((r) => r.lift > 1.15).slice(0, 5),
     underIndexed: result.filter((r) => r.lift < 0.85).slice(-3),
+    table,
   };
 }
 
@@ -73,11 +78,24 @@ for (const niche of niches) {
   const sub = rows.filter((r) => r.niche === niche);
   const hooks = liftAnalysis(sub, "hookPattern");
   if (!hooks) continue;
+  // "gap" = a hook pattern that over-indexes (lift > 1.2) but is under-used
+  // (below-median share of supply). High demand, low supply = the opening.
+  const shares = hooks.table.map((t) => t.sharePct).sort((a, b) => a - b);
+  const medianShare = shares[Math.floor(shares.length / 2)] || 0;
+  const gaps = hooks.table
+    .filter((t) => t.lift >= 1.2 && t.sharePct <= medianShare && t.count >= 4)
+    .sort((a, b) => b.lift - a.lift);
+  const saturated = hooks.table
+    .filter((t) => t.sharePct >= 15 && t.lift <= 1.0)
+    .sort((a, b) => b.sharePct - a.sharePct);
   byNiche[niche] = {
     sampleSize: sub.length,
     breakoutThresholdVpf: hooks.breakoutThresholdVpf,
     hookPatternsThatOverIndex: hooks.overIndexed,
     frameworks: (liftAnalysis(sub, "framework") || {}).overIndexed || [],
+    patternTable: hooks.table,
+    gaps,
+    saturated,
   };
 }
 

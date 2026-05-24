@@ -38,6 +38,7 @@ const cases = [
   ["kill_the_slop", { copy: "Discover the revolutionary power of our product to elevate your routine. 🚀 Game-changing." }],
   ["search_corpus", { query: "skincare before-after", limit: 4 }],
   ["viral_teardowns", { niche: "skincare", limit: 3 }],
+  ["content_gaps", { niche: "skincare" }],
   ["get_status", {}],
 ];
 

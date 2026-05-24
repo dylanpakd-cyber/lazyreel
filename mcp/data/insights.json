@@ -174,6 +174,90 @@
           "nTotal": 7,
           "medianVpf": 4.44
         }
+      ],
+      "patternTable": [
+        {
+          "label": "information-offering",
+          "count": 252,
+          "sharePct": 44.2,
+          "lift": 0.97
+        },
+        {
+          "label": "before-after",
+          "count": 50,
+          "sharePct": 8.8,
+          "lift": 1.16
+        },
+        {
+          "label": "pov",
+          "count": 50,
+          "sharePct": 8.8,
+          "lift": 1.16
+        },
+        {
+          "label": "direct-callout",
+          "count": 47,
+          "sharePct": 8.2,
+          "lift": 0.81
+        },
+        {
+          "label": "belief-challenging",
+          "count": 36,
+          "sharePct": 6.3,
+          "lift": 0.37
+        },
+        {
+          "label": "removing-limitations",
+          "count": 35,
+          "sharePct": 6.1,
+          "lift": 0.88
+        },
+        {
+          "label": "question",
+          "count": 28,
+          "sharePct": 4.9,
+          "lift": 1
+        },
+        {
+          "label": "newness",
+          "count": 14,
+          "sharePct": 2.5,
+          "lift": 0.81
+        },
+        {
+          "label": "comparison",
+          "count": 12,
+          "sharePct": 2.1,
+          "lift": 1.49
+        },
+        {
+          "label": "authority",
+          "count": 7,
+          "sharePct": 1.2,
+          "lift": 2.24
+        }
+      ],
+      "gaps": [
+        {
+          "label": "authority",
+          "count": 7,
+          "sharePct": 1.2,
+          "lift": 2.24
+        },
+        {
+          "label": "comparison",
+          "count": 12,
+          "sharePct": 2.1,
+          "lift": 1.49
+        }
+      ],
+      "saturated": [
+        {
+          "label": "information-offering",
+          "count": 252,
+          "sharePct": 44.2,
+          "lift": 0.97
+        }
       ]
     },
     "fitness": {
@@ -216,6 +300,78 @@
           "nWinners": 3,
           "nTotal": 9,
           "medianVpf": 8.64
+        }
+      ],
+      "patternTable": [
+        {
+          "label": "information-offering",
+          "count": 102,
+          "sharePct": 29.4,
+          "lift": 0.73
+        },
+        {
+          "label": "belief-challenging",
+          "count": 69,
+          "sharePct": 19.9,
+          "lift": 1.14
+        },
+        {
+          "label": "direct-callout",
+          "count": 39,
+          "sharePct": 11.2,
+          "lift": 1.67
+        },
+        {
+          "label": "removing-limitations",
+          "count": 39,
+          "sharePct": 11.2,
+          "lift": 0.77
+        },
+        {
+          "label": "before-after",
+          "count": 18,
+          "sharePct": 5.2,
+          "lift": 2.99
+        },
+        {
+          "label": "question",
+          "count": 16,
+          "sharePct": 4.6,
+          "lift": 0
+        },
+        {
+          "label": "pov",
+          "count": 12,
+          "sharePct": 3.5,
+          "lift": 1.49
+        }
+      ],
+      "gaps": [
+        {
+          "label": "before-after",
+          "count": 18,
+          "sharePct": 5.2,
+          "lift": 2.99
+        },
+        {
+          "label": "direct-callout",
+          "count": 39,
+          "sharePct": 11.2,
+          "lift": 1.67
+        },
+        {
+          "label": "pov",
+          "count": 12,
+          "sharePct": 3.5,
+          "lift": 1.49
+        }
+      ],
+      "saturated": [
+        {
+          "label": "information-offering",
+          "count": 102,
+          "sharePct": 29.4,
+          "lift": 0.73
         }
       ]
     },
@@ -288,6 +444,108 @@
           "nTotal": 7,
           "medianVpf": 3.7
         }
+      ],
+      "patternTable": [
+        {
+          "label": "information-offering",
+          "count": 142,
+          "sharePct": 42.4,
+          "lift": 0.73
+        },
+        {
+          "label": "belief-challenging",
+          "count": 70,
+          "sharePct": 20.9,
+          "lift": 0.68
+        },
+        {
+          "label": "authority",
+          "count": 25,
+          "sharePct": 7.5,
+          "lift": 1.41
+        },
+        {
+          "label": "direct-callout",
+          "count": 22,
+          "sharePct": 6.6,
+          "lift": 3.59
+        },
+        {
+          "label": "removing-limitations",
+          "count": 20,
+          "sharePct": 6,
+          "lift": 1.28
+        },
+        {
+          "label": "before-after",
+          "count": 16,
+          "sharePct": 4.8,
+          "lift": 1.36
+        },
+        {
+          "label": "speed-of-claim",
+          "count": 8,
+          "sharePct": 2.4,
+          "lift": 1.79
+        },
+        {
+          "label": "question",
+          "count": 8,
+          "sharePct": 2.4,
+          "lift": 0.43
+        },
+        {
+          "label": "exclusivity",
+          "count": 7,
+          "sharePct": 2.1,
+          "lift": 1.2
+        },
+        {
+          "label": "size-of-claim",
+          "count": 7,
+          "sharePct": 2.1,
+          "lift": 0.5
+        }
+      ],
+      "gaps": [
+        {
+          "label": "speed-of-claim",
+          "count": 8,
+          "sharePct": 2.4,
+          "lift": 1.79
+        },
+        {
+          "label": "before-after",
+          "count": 16,
+          "sharePct": 4.8,
+          "lift": 1.36
+        },
+        {
+          "label": "removing-limitations",
+          "count": 20,
+          "sharePct": 6,
+          "lift": 1.28
+        },
+        {
+          "label": "exclusivity",
+          "count": 7,
+          "sharePct": 2.1,
+          "lift": 1.2
+        }
+      ],
+      "saturated": [
+        {
+          "label": "information-offering",
+          "count": 142,
+          "sharePct": 42.4,
+          "lift": 0.73
+        },
+        {
+          "label": "belief-challenging",
+          "count": 70,
+          "sharePct": 20.9,
+          "lift": 0.68
+        }
       ]
     },
     "skincare": {
@@ -345,6 +603,108 @@
           "nTotal": 16,
           "medianVpf": 1
         }
+      ],
+      "patternTable": [
+        {
+          "label": "information-offering",
+          "count": 208,
+          "sharePct": 52.1,
+          "lift": 0.81
+        },
+        {
+          "label": "belief-challenging",
+          "count": 43,
+          "sharePct": 10.8,
+          "lift": 1.28
+        },
+        {
+          "label": "before-after",
+          "count": 31,
+          "sharePct": 7.8,
+          "lift": 0.71
+        },
+        {
+          "label": "authority",
+          "count": 28,
+          "sharePct": 7,
+          "lift": 1.4
+        },
+        {
+          "label": "removing-limitations",
+          "count": 28,
+          "sharePct": 7,
+          "lift": 0.8
+        },
+        {
+          "label": "direct-callout",
+          "count": 15,
+          "sharePct": 3.8,
+          "lift": 0.45
+        },
+        {
+          "label": "speed-of-claim",
+          "count": 10,
+          "sharePct": 2.5,
+          "lift": 2.95
+        },
+        {
+          "label": "pov",
+          "count": 10,
+          "sharePct": 2.5,
+          "lift": 1.26
+        },
+        {
+          "label": "question",
+          "count": 8,
+          "sharePct": 2,
+          "lift": 2.95
+        },
+        {
+          "label": "comparison",
+          "count": 8,
+          "sharePct": 2,
+          "lift": 0.98
+        },
+        {
+          "label": "problem-agitate-solution",
+          "count": 6,
+          "sharePct": 1.5,
+          "lift": 5.9
+        }
+      ],
+      "gaps": [
+        {
+          "label": "problem-agitate-solution",
+          "count": 6,
+          "sharePct": 1.5,
+          "lift": 5.9
+        },
+        {
+          "label": "speed-of-claim",
+          "count": 10,
+          "sharePct": 2.5,
+          "lift": 2.95
+        },
+        {
+          "label": "question",
+          "count": 8,
+          "sharePct": 2,
+          "lift": 2.95
+        },
+        {
+          "label": "pov",
+          "count": 10,
+          "sharePct": 2.5,
+          "lift": 1.26
+        }
+      ],
+      "saturated": [
+        {
+          "label": "information-offering",
+          "count": 208,
+          "sharePct": 52.1,
+          "lift": 0.81
+        }
       ]
     },
     "food and beverage": {
@@ -381,7 +741,84 @@
           "nTotal": 17,
           "medianVpf": 1.65
         }
-      ]
+      ],
+      "patternTable": [
+        {
+          "label": "information-offering",
+          "count": 189,
+          "sharePct": 48.2,
+          "lift": 1.11
+        },
+        {
+          "label": "belief-challenging",
+          "count": 48,
+          "sharePct": 12.2,
+          "lift": 0.79
+        },
+        {
+          "label": "direct-callout",
+          "count": 33,
+          "sharePct": 8.4,
+          "lift": 2.21
+        },
+        {
+          "label": "newness",
+          "count": 21,
+          "sharePct": 5.4,
+          "lift": 0.32
+        },
+        {
+          "label": "question",
+          "count": 19,
+          "sharePct": 4.8,
+          "lift": 0.8
+        },
+        {
+          "label": "before-after",
+          "count": 17,
+          "sharePct": 4.3,
+          "lift": 1.25
+        },
+        {
+          "label": "removing-limitations",
+          "count": 15,
+          "sharePct": 3.8,
+          "lift": 0.46
+        },
+        {
+          "label": "pov",
+          "count": 13,
+          "sharePct": 3.3,
+          "lift": 0.9
+        },
+        {
+          "label": "comparison",
+          "count": 10,
+          "sharePct": 2.6,
+          "lift": 0
+        },
+        {
+          "label": "authority",
+          "count": 7,
+          "sharePct": 1.8,
+          "lift": 0.5
+        },
+        {
+          "label": "size-of-claim",
+          "count": 6,
+          "sharePct": 1.5,
+          "lift": 0
+        }
+      ],
+      "gaps": [
+        {
+          "label": "before-after",
+          "count": 17,
+          "sharePct": 4.3,
+          "lift": 1.25
+        }
+      ],
+      "saturated": []
     },
     "tech and SaaS": {
       "sampleSize": 396,
@@ -417,7 +854,78 @@
           "nTotal": 208,
           "medianVpf": 25
         }
-      ]
+      ],
+      "patternTable": [
+        {
+          "label": "information-offering",
+          "count": 156,
+          "sharePct": 39.4,
+          "lift": 1.07
+        },
+        {
+          "label": "newness",
+          "count": 67,
+          "sharePct": 16.9,
+          "lift": 1.02
+        },
+        {
+          "label": "removing-limitations",
+          "count": 44,
+          "sharePct": 11.1,
+          "lift": 1.13
+        },
+        {
+          "label": "belief-challenging",
+          "count": 26,
+          "sharePct": 6.6,
+          "lift": 0.9
+        },
+        {
+          "label": "question",
+          "count": 25,
+          "sharePct": 6.3,
+          "lift": 0.57
+        },
+        {
+          "label": "before-after",
+          "count": 14,
+          "sharePct": 3.5,
+          "lift": 2.25
+        },
+        {
+          "label": "comparison",
+          "count": 12,
+          "sharePct": 3,
+          "lift": 0.6
+        },
+        {
+          "label": "direct-callout",
+          "count": 12,
+          "sharePct": 3,
+          "lift": 0.6
+        },
+        {
+          "label": "size-of-claim",
+          "count": 11,
+          "sharePct": 2.8,
+          "lift": 0.67
+        },
+        {
+          "label": "exclusivity",
+          "count": 8,
+          "sharePct": 2,
+          "lift": 0.43
+        }
+      ],
+      "gaps": [
+        {
+          "label": "before-after",
+          "count": 14,
+          "sharePct": 3.5,
+          "lift": 2.25
+        }
+      ],
+      "saturated": []
     },
     "fashion": {
       "sampleSize": 400,
@@ -466,6 +974,90 @@
           "nWinners": 2,
           "nTotal": 7,
           "medianVpf": 4.17
+        }
+      ],
+      "patternTable": [
+        {
+          "label": "information-offering",
+          "count": 195,
+          "sharePct": 48.9,
+          "lift": 0.7
+        },
+        {
+          "label": "direct-callout",
+          "count": 34,
+          "sharePct": 8.5,
+          "lift": 1.85
+        },
+        {
+          "label": "belief-challenging",
+          "count": 34,
+          "sharePct": 8.5,
+          "lift": 1.08
+        },
+        {
+          "label": "newness",
+          "count": 25,
+          "sharePct": 6.3,
+          "lift": 1.16
+        },
+        {
+          "label": "question",
+          "count": 18,
+          "sharePct": 4.5,
+          "lift": 0.85
+        },
+        {
+          "label": "comparison",
+          "count": 16,
+          "sharePct": 4,
+          "lift": 1.79
+        },
+        {
+          "label": "removing-limitations",
+          "count": 16,
+          "sharePct": 4,
+          "lift": 1.36
+        },
+        {
+          "label": "before-after",
+          "count": 13,
+          "sharePct": 3.3,
+          "lift": 2.56
+        },
+        {
+          "label": "size-of-claim",
+          "count": 6,
+          "sharePct": 1.5,
+          "lift": 0
+        }
+      ],
+      "gaps": [
+        {
+          "label": "before-after",
+          "count": 13,
+          "sharePct": 3.3,
+          "lift": 2.56
+        },
+        {
+          "label": "comparison",
+          "count": 16,
+          "sharePct": 4,
+          "lift": 1.79
+        },
+        {
+          "label": "removing-limitations",
+          "count": 16,
+          "sharePct": 4,
+          "lift": 1.36
+        }
+      ],
+      "saturated": [
+        {
+          "label": "information-offering",
+          "count": 195,
+          "sharePct": 48.9,
+          "lift": 0.7
         }
       ]
     },
@@ -531,6 +1123,108 @@
           "nTotal": 9,
           "medianVpf": 7.22
         }
+      ],
+      "patternTable": [
+        {
+          "label": "information-offering",
+          "count": 196,
+          "sharePct": 49.4,
+          "lift": 0.71
+        },
+        {
+          "label": "removing-limitations",
+          "count": 35,
+          "sharePct": 8.8,
+          "lift": 1.55
+        },
+        {
+          "label": "before-after",
+          "count": 33,
+          "sharePct": 8.3,
+          "lift": 2.19
+        },
+        {
+          "label": "belief-challenging",
+          "count": 25,
+          "sharePct": 6.3,
+          "lift": 0.94
+        },
+        {
+          "label": "direct-callout",
+          "count": 21,
+          "sharePct": 5.3,
+          "lift": 1.49
+        },
+        {
+          "label": "size-of-claim",
+          "count": 21,
+          "sharePct": 5.3,
+          "lift": 1.19
+        },
+        {
+          "label": "pov",
+          "count": 18,
+          "sharePct": 4.5,
+          "lift": 1.14
+        },
+        {
+          "label": "newness",
+          "count": 11,
+          "sharePct": 2.8,
+          "lift": 1.11
+        },
+        {
+          "label": "authority",
+          "count": 8,
+          "sharePct": 2,
+          "lift": 1.78
+        },
+        {
+          "label": "question",
+          "count": 7,
+          "sharePct": 1.8,
+          "lift": 0.49
+        },
+        {
+          "label": "exclusivity",
+          "count": 6,
+          "sharePct": 1.5,
+          "lift": 1.49
+        },
+        {
+          "label": "comparison",
+          "count": 6,
+          "sharePct": 1.5,
+          "lift": 0.59
+        }
+      ],
+      "gaps": [
+        {
+          "label": "authority",
+          "count": 8,
+          "sharePct": 2,
+          "lift": 1.78
+        },
+        {
+          "label": "direct-callout",
+          "count": 21,
+          "sharePct": 5.3,
+          "lift": 1.49
+        },
+        {
+          "label": "exclusivity",
+          "count": 6,
+          "sharePct": 1.5,
+          "lift": 1.49
+        }
+      ],
+      "saturated": [
+        {
+          "label": "information-offering",
+          "count": 196,
+          "sharePct": 49.4,
+          "lift": 0.71
+        }
       ]
     },
     "hair": {
@@ -574,6 +1268,96 @@
           "nTotal": 28,
           "medianVpf": 38
         }
+      ],
+      "patternTable": [
+        {
+          "label": "information-offering",
+          "count": 75,
+          "sharePct": 38.5,
+          "lift": 0.68
+        },
+        {
+          "label": "before-after",
+          "count": 32,
+          "sharePct": 16.4,
+          "lift": 0.83
+        },
+        {
+          "label": "belief-challenging",
+          "count": 17,
+          "sharePct": 8.7,
+          "lift": 0.64
+        },
+        {
+          "label": "direct-callout",
+          "count": 13,
+          "sharePct": 6.7,
+          "lift": 3.48
+        },
+        {
+          "label": "question",
+          "count": 13,
+          "sharePct": 6.7,
+          "lift": 2.55
+        },
+        {
+          "label": "removing-limitations",
+          "count": 11,
+          "sharePct": 5.6,
+          "lift": 2.48
+        },
+        {
+          "label": "pov",
+          "count": 11,
+          "sharePct": 5.6,
+          "lift": 2.48
+        },
+        {
+          "label": "newness",
+          "count": 7,
+          "sharePct": 3.6,
+          "lift": 0.5
+        }
+      ],
+      "gaps": [
+        {
+          "label": "direct-callout",
+          "count": 13,
+          "sharePct": 6.7,
+          "lift": 3.48
+        },
+        {
+          "label": "question",
+          "count": 13,
+          "sharePct": 6.7,
+          "lift": 2.55
+        },
+        {
+          "label": "removing-limitations",
+          "count": 11,
+          "sharePct": 5.6,
+          "lift": 2.48
+        },
+        {
+          "label": "pov",
+          "count": 11,
+          "sharePct": 5.6,
+          "lift": 2.48
+        }
+      ],
+      "saturated": [
+        {
+          "label": "information-offering",
+          "count": 75,
+          "sharePct": 38.5,
+          "lift": 0.68
+        },
+        {
+          "label": "before-after",
+          "count": 32,
+          "sharePct": 16.4,
+          "lift": 0.83
+        }
       ]
     },
     "pets": {
@@ -602,6 +1386,78 @@
           "nWinners": 91,
           "nTotal": 326,
           "medianVpf": 18
+        }
+      ],
+      "patternTable": [
+        {
+          "label": "information-offering",
+          "count": 184,
+          "sharePct": 46,
+          "lift": 1
+        },
+        {
+          "label": "direct-callout",
+          "count": 55,
+          "sharePct": 13.8,
+          "lift": 0.75
+        },
+        {
+          "label": "belief-challenging",
+          "count": 44,
+          "sharePct": 11,
+          "lift": 1
+        },
+        {
+          "label": "question",
+          "count": 32,
+          "sharePct": 8,
+          "lift": 0.69
+        },
+        {
+          "label": "pov",
+          "count": 27,
+          "sharePct": 6.8,
+          "lift": 1.05
+        },
+        {
+          "label": "before-after",
+          "count": 18,
+          "sharePct": 4.5,
+          "lift": 2.4
+        },
+        {
+          "label": "newness",
+          "count": 8,
+          "sharePct": 2,
+          "lift": 1
+        },
+        {
+          "label": "removing-limitations",
+          "count": 7,
+          "sharePct": 1.8,
+          "lift": 1.2
+        }
+      ],
+      "gaps": [
+        {
+          "label": "before-after",
+          "count": 18,
+          "sharePct": 4.5,
+          "lift": 2.4
+        },
+        {
+          "label": "removing-limitations",
+          "count": 7,
+          "sharePct": 1.8,
+          "lift": 1.2
+        }
+      ],
+      "saturated": [
+        {
+          "label": "information-offering",
+          "count": 184,
+          "sharePct": 46,
+          "lift": 1
         }
       ]
     }
