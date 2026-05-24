@@ -10,8 +10,22 @@ import {
   searchVideos, relatedTrendingTags, corpusCounts, nicheInsight, overallHookLift, insightsMeta,
   getWinners, winnersForNiche, getVisualInsights, visualForNiche, wordsForNiche,
   getTrends, trendsForNiche, getExamples, examplesFor, type Example,
+  combosFor,
   type AnalyzedVideo, type HookLift, type Teardown,
 } from "./corpus.js";
+
+export function winningCombos(niche = ""): string {
+  const { combos, scope, analyzable } = combosFor(niche.trim());
+  if (!combos.length) return `# No winning combinations for "${niche}" yet\nRun pipeline/combos.mjs. Needs a niche with enough analyzable videos.`;
+  return [
+    `# Winning combinations — ${scope}`,
+    `_Not single factors — the COMBINATIONS that separate a breakout from a normal video. Cross-dimensional lift over ${analyzable.toLocaleString()} fully-featured videos (hook × format × person × emotion × setting). A combo at 4x appears 4x more often among breakouts than among normal videos._`,
+    "",
+    ...combos.map((c) => `- **${c.combo}** — ${c.lift}x more common in breakouts _(${c.dims}, ${c.nWinners}/${c.nTotal} videos)_`),
+    "",
+    `> Stack these: pick a winning combo, then ${"`"}study_examples${"`"} to watch real ones and ${"`"}replicate_format${"`"} to build it. Read small-sample combos as directional.`,
+  ].join("\n");
+}
 
 function exampleLine(e: Example): string {
   const tags = [e.videoFormat, e.hookPattern, e.emotion].filter(Boolean).join(" · ");
@@ -511,7 +525,7 @@ export function status(token?: string): string {
     tokenLine,
     "",
     "**Live now:**",
-    "- 13 skills incl. replicate_format (format→brief→model prompt), study_examples (real links), find_trends, viral_teardowns",
+    "- 14 skills incl. winning_combos (what mix wins), replicate_format, study_examples (real links), find_trends, viral_teardowns",
     `- ${getWinners().length} real breakout videos torn down (the actual viral mechanism, diagnosed from transcript + engagement)`,
     getVisualInsights().analyzed ? `- ${getVisualInsights().analyzed} videos analyzed visually (format + craft from the first 3 seconds of frames)` : "- visual/format layer: scripts ready, run pipeline/visual.mjs to populate",
     `- ${SCRIPT_FRAMEWORKS.length} named script frameworks, ${HOOK_PATTERNS.length} hook patterns, ${ANGLES.length} proven UGC angles`,

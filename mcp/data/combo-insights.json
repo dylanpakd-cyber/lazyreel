@@ -1,0 +1,694 @@
+{
+  "generatedAt": "2026-05-24",
+  "analyzable": 3712,
+  "method": "cross-dimensional contrastive lift: which feature COMBINATIONS (hook × format × person-trait × emotion) over-index among breakouts (top-quartile views-per-follower) vs the rest. Lift>1.3, min sample shown.",
+  "overall": [
+    {
+      "combo": "text-overlay-heavy + car",
+      "dims": "format×setting",
+      "lift": 6,
+      "nWinners": 8,
+      "nTotal": 12
+    },
+    {
+      "combo": "nostalgia + no-person",
+      "dims": "emotion×gender",
+      "lift": 4.8,
+      "nWinners": 8,
+      "nTotal": 13
+    },
+    {
+      "combo": "belief-challenging + pov-handheld",
+      "dims": "hook×format",
+      "lift": 4.5,
+      "nWinners": 9,
+      "nTotal": 15
+    },
+    {
+      "combo": "talking-head + gym",
+      "dims": "format×setting",
+      "lift": 4.5,
+      "nWinners": 9,
+      "nTotal": 15
+    },
+    {
+      "combo": "voiceover-broll + gym",
+      "dims": "format×setting",
+      "lift": 4.33,
+      "nWinners": 13,
+      "nTotal": 22
+    },
+    {
+      "combo": "before-after + pov-handheld",
+      "dims": "hook×format",
+      "lift": 3.5,
+      "nWinners": 7,
+      "nTotal": 13
+    },
+    {
+      "combo": "before-after + text-overlay-heavy",
+      "dims": "hook×format",
+      "lift": 3.5,
+      "nWinners": 14,
+      "nTotal": 26
+    },
+    {
+      "combo": "information-offering + screen-recording",
+      "dims": "hook×format",
+      "lift": 3.33,
+      "nWinners": 10,
+      "nTotal": 19
+    },
+    {
+      "combo": "pov-handheld + no-person",
+      "dims": "format×gender",
+      "lift": 3.3,
+      "nWinners": 11,
+      "nTotal": 21
+    },
+    {
+      "combo": "pov-handheld + faceless",
+      "dims": "format×face",
+      "lift": 3.3,
+      "nWinners": 11,
+      "nTotal": 21
+    },
+    {
+      "combo": "organic + screen-recording",
+      "dims": "framework×format",
+      "lift": 3.3,
+      "nWinners": 11,
+      "nTotal": 21
+    },
+    {
+      "combo": "screen-recording + no-person",
+      "dims": "format×gender",
+      "lift": 2.82,
+      "nWinners": 16,
+      "nTotal": 33
+    },
+    {
+      "combo": "screen-recording + faceless",
+      "dims": "format×face",
+      "lift": 2.82,
+      "nWinners": 16,
+      "nTotal": 33
+    },
+    {
+      "combo": "direct-callout + no-person",
+      "dims": "hook×gender",
+      "lift": 2.81,
+      "nWinners": 29,
+      "nTotal": 60
+    },
+    {
+      "combo": "direct-callout + faceless",
+      "dims": "hook×face",
+      "lift": 2.81,
+      "nWinners": 29,
+      "nTotal": 60
+    }
+  ],
+  "byNiche": {
+    "ABG beauty": [
+      {
+        "combo": "problem-agitate-solution + before-after",
+        "dims": "framework×format",
+        "lift": 5.99,
+        "nWinners": 4,
+        "nTotal": 6
+      },
+      {
+        "combo": "exclusivity + woman",
+        "dims": "hook×gender",
+        "lift": 4.49,
+        "nWinners": 3,
+        "nTotal": 5
+      },
+      {
+        "combo": "organic + carousel-slideshow",
+        "dims": "framework×format",
+        "lift": 4.49,
+        "nWinners": 3,
+        "nTotal": 5
+      },
+      {
+        "combo": "talking-head + store",
+        "dims": "format×setting",
+        "lift": 3.99,
+        "nWinners": 4,
+        "nTotal": 7
+      },
+      {
+        "combo": "direct-callout + humor",
+        "dims": "hook×emotion",
+        "lift": 2.99,
+        "nWinners": 3,
+        "nTotal": 6
+      },
+      {
+        "combo": "removing-limitations + relief",
+        "dims": "hook×emotion",
+        "lift": 2.99,
+        "nWinners": 4,
+        "nTotal": 8
+      },
+      {
+        "combo": "generic + woman",
+        "dims": "hook×gender",
+        "lift": 2.99,
+        "nWinners": 5,
+        "nTotal": 10
+      },
+      {
+        "combo": "comparison + bedroom",
+        "dims": "hook×setting",
+        "lift": 2.99,
+        "nWinners": 3,
+        "nTotal": 6
+      }
+    ],
+    "fitness": [
+      {
+        "combo": "pov-handheld + man",
+        "dims": "format×gender",
+        "lift": 14.94,
+        "nWinners": 5,
+        "nTotal": 6
+      },
+      {
+        "combo": "before-after + text-overlay-heavy",
+        "dims": "hook×format",
+        "lift": 3.98,
+        "nWinners": 4,
+        "nTotal": 7
+      },
+      {
+        "combo": "talking-head + gym",
+        "dims": "format×setting",
+        "lift": 3.98,
+        "nWinners": 8,
+        "nTotal": 14
+      },
+      {
+        "combo": "removing-limitations + man",
+        "dims": "hook×gender",
+        "lift": 3.49,
+        "nWinners": 7,
+        "nTotal": 13
+      },
+      {
+        "combo": "information-offering + pov-handheld",
+        "dims": "hook×format",
+        "lift": 2.99,
+        "nWinners": 3,
+        "nTotal": 6
+      },
+      {
+        "combo": "generic + text-overlay-heavy",
+        "dims": "hook×format",
+        "lift": 2.99,
+        "nWinners": 3,
+        "nTotal": 6
+      },
+      {
+        "combo": "before-after + gym",
+        "dims": "hook×setting",
+        "lift": 2.99,
+        "nWinners": 4,
+        "nTotal": 8
+      },
+      {
+        "combo": "before-after + woman",
+        "dims": "format×gender",
+        "lift": 2.99,
+        "nWinners": 4,
+        "nTotal": 8
+      }
+    ],
+    "supplements": [
+      {
+        "combo": "product-demo + bathroom",
+        "dims": "format×setting",
+        "lift": 11.86,
+        "nWinners": 4,
+        "nTotal": 5
+      },
+      {
+        "combo": "direct-callout + bedroom",
+        "dims": "hook×setting",
+        "lift": 5.93,
+        "nWinners": 4,
+        "nTotal": 6
+      },
+      {
+        "combo": "talking-head + multiple-people",
+        "dims": "format×gender",
+        "lift": 5.93,
+        "nWinners": 4,
+        "nTotal": 6
+      },
+      {
+        "combo": "text-overlay-heavy + man",
+        "dims": "format×gender",
+        "lift": 4.45,
+        "nWinners": 3,
+        "nTotal": 5
+      },
+      {
+        "combo": "voiceover-broll + no-person",
+        "dims": "format×gender",
+        "lift": 4.45,
+        "nWinners": 3,
+        "nTotal": 5
+      },
+      {
+        "combo": "voiceover-broll + faceless",
+        "dims": "format×face",
+        "lift": 4.45,
+        "nWinners": 3,
+        "nTotal": 5
+      },
+      {
+        "combo": "product-demo + no-person",
+        "dims": "format×gender",
+        "lift": 4.28,
+        "nWinners": 13,
+        "nTotal": 22
+      },
+      {
+        "combo": "product-demo + faceless",
+        "dims": "format×face",
+        "lift": 4.28,
+        "nWinners": 13,
+        "nTotal": 22
+      }
+    ],
+    "skincare": [
+      {
+        "combo": "speed-of-claim + woman",
+        "dims": "hook×gender",
+        "lift": 6,
+        "nWinners": 4,
+        "nTotal": 6
+      },
+      {
+        "combo": "problem-agitate-solution + before-after",
+        "dims": "framework×format",
+        "lift": 6,
+        "nWinners": 4,
+        "nTotal": 6
+      },
+      {
+        "combo": "pov-handheld + woman",
+        "dims": "format×gender",
+        "lift": 4,
+        "nWinners": 4,
+        "nTotal": 7
+      },
+      {
+        "combo": "talking-head + kitchen",
+        "dims": "format×setting",
+        "lift": 3,
+        "nWinners": 3,
+        "nTotal": 6
+      },
+      {
+        "combo": "problem-agitate-solution + text-overlay-heavy",
+        "dims": "framework×format",
+        "lift": 3,
+        "nWinners": 3,
+        "nTotal": 6
+      },
+      {
+        "combo": "industry-contrarian + talking-head",
+        "dims": "framework×format",
+        "lift": 2.57,
+        "nWinners": 6,
+        "nTotal": 13
+      },
+      {
+        "combo": "grwm + bathroom",
+        "dims": "format×setting",
+        "lift": 2.25,
+        "nWinners": 9,
+        "nTotal": 21
+      },
+      {
+        "combo": "information-offering + relief",
+        "dims": "hook×emotion",
+        "lift": 2.18,
+        "nWinners": 8,
+        "nTotal": 19
+      }
+    ],
+    "food and beverage": [
+      {
+        "combo": "direct-callout + product-demo",
+        "dims": "hook×format",
+        "lift": 5.36,
+        "nWinners": 9,
+        "nTotal": 14
+      },
+      {
+        "combo": "text-overlay-heavy + woman",
+        "dims": "format×gender",
+        "lift": 4.97,
+        "nWinners": 5,
+        "nTotal": 8
+      },
+      {
+        "combo": "direct-callout + no-person",
+        "dims": "hook×gender",
+        "lift": 4.47,
+        "nWinners": 6,
+        "nTotal": 10
+      },
+      {
+        "combo": "organic + carousel-slideshow",
+        "dims": "framework×format",
+        "lift": 4.47,
+        "nWinners": 3,
+        "nTotal": 5
+      },
+      {
+        "combo": "direct-callout + faceless",
+        "dims": "hook×face",
+        "lift": 4.47,
+        "nWinners": 6,
+        "nTotal": 10
+      },
+      {
+        "combo": "direct-callout + woman",
+        "dims": "hook×gender",
+        "lift": 3.97,
+        "nWinners": 4,
+        "nTotal": 7
+      },
+      {
+        "combo": "information-offering + studio",
+        "dims": "hook×setting",
+        "lift": 3.97,
+        "nWinners": 4,
+        "nTotal": 7
+      },
+      {
+        "combo": "information-offering + text-overlay-heavy",
+        "dims": "hook×format",
+        "lift": 2.98,
+        "nWinners": 6,
+        "nTotal": 12
+      }
+    ],
+    "tech and SaaS": [
+      {
+        "combo": "newness + kitchen",
+        "dims": "hook×setting",
+        "lift": 14.9,
+        "nWinners": 5,
+        "nTotal": 6
+      },
+      {
+        "combo": "before-after + no-person",
+        "dims": "hook×gender",
+        "lift": 11.92,
+        "nWinners": 4,
+        "nTotal": 5
+      },
+      {
+        "combo": "before-after + faceless",
+        "dims": "hook×face",
+        "lift": 11.92,
+        "nWinners": 4,
+        "nTotal": 5
+      },
+      {
+        "combo": "before-after + product-demo",
+        "dims": "hook×format",
+        "lift": 5.96,
+        "nWinners": 4,
+        "nTotal": 6
+      },
+      {
+        "combo": "newness + aspiration",
+        "dims": "hook×emotion",
+        "lift": 5.96,
+        "nWinners": 4,
+        "nTotal": 6
+      },
+      {
+        "combo": "removing-limitations + desk",
+        "dims": "hook×setting",
+        "lift": 3.97,
+        "nWinners": 4,
+        "nTotal": 7
+      },
+      {
+        "combo": "pov-handheld + woman",
+        "dims": "format×gender",
+        "lift": 2.98,
+        "nWinners": 3,
+        "nTotal": 6
+      },
+      {
+        "combo": "organic + screen-recording",
+        "dims": "framework×format",
+        "lift": 2.98,
+        "nWinners": 10,
+        "nTotal": 20
+      }
+    ],
+    "fashion": [
+      {
+        "combo": "comparison + multiple-people",
+        "dims": "hook×gender",
+        "lift": 7.48,
+        "nWinners": 5,
+        "nTotal": 7
+      },
+      {
+        "combo": "direct-callout + multiple-people",
+        "dims": "hook×gender",
+        "lift": 4.49,
+        "nWinners": 3,
+        "nTotal": 5
+      },
+      {
+        "combo": "comparison + kitchen",
+        "dims": "hook×setting",
+        "lift": 4.49,
+        "nWinners": 3,
+        "nTotal": 5
+      },
+      {
+        "combo": "comparison + trend-riding",
+        "dims": "hook×trend",
+        "lift": 4.49,
+        "nWinners": 3,
+        "nTotal": 5
+      },
+      {
+        "combo": "text-overlay-heavy + store",
+        "dims": "format×setting",
+        "lift": 4.49,
+        "nWinners": 3,
+        "nTotal": 5
+      },
+      {
+        "combo": "text-overlay-heavy + humor",
+        "dims": "format×emotion",
+        "lift": 3.99,
+        "nWinners": 4,
+        "nTotal": 7
+      },
+      {
+        "combo": "carousel-slideshow + multiple-people",
+        "dims": "format×gender",
+        "lift": 3.99,
+        "nWinners": 4,
+        "nTotal": 7
+      },
+      {
+        "combo": "lifestyle-broll + multiple-people",
+        "dims": "format×gender",
+        "lift": 3.24,
+        "nWinners": 13,
+        "nTotal": 25
+      }
+    ],
+    "home and cleaning": [
+      {
+        "combo": "direct-callout + text-overlay-heavy",
+        "dims": "hook×format",
+        "lift": 11.92,
+        "nWinners": 4,
+        "nTotal": 5
+      },
+      {
+        "combo": "text-overlay-heavy + man",
+        "dims": "format×gender",
+        "lift": 11.92,
+        "nWinners": 4,
+        "nTotal": 5
+      },
+      {
+        "combo": "removing-limitations + voiceover-broll",
+        "dims": "hook×format",
+        "lift": 4.47,
+        "nWinners": 3,
+        "nTotal": 5
+      },
+      {
+        "combo": "authority + product-demo",
+        "dims": "hook×format",
+        "lift": 4.47,
+        "nWinners": 3,
+        "nTotal": 5
+      },
+      {
+        "combo": "before-after + aspiration",
+        "dims": "hook×emotion",
+        "lift": 4.47,
+        "nWinners": 3,
+        "nTotal": 5
+      },
+      {
+        "combo": "authority + woman",
+        "dims": "hook×gender",
+        "lift": 4.47,
+        "nWinners": 3,
+        "nTotal": 5
+      },
+      {
+        "combo": "product-demo + aspiration",
+        "dims": "format×emotion",
+        "lift": 4.47,
+        "nWinners": 3,
+        "nTotal": 5
+      },
+      {
+        "combo": "pov-handheld + no-person",
+        "dims": "format×gender",
+        "lift": 4.47,
+        "nWinners": 3,
+        "nTotal": 5
+      }
+    ],
+    "hair": [
+      {
+        "combo": "removing-limitations + talking-head",
+        "dims": "hook×format",
+        "lift": 4.41,
+        "nWinners": 3,
+        "nTotal": 5
+      },
+      {
+        "combo": "organic + lifestyle-broll",
+        "dims": "framework×format",
+        "lift": 3.92,
+        "nWinners": 4,
+        "nTotal": 7
+      },
+      {
+        "combo": "direct-callout + woman",
+        "dims": "hook×gender",
+        "lift": 3.68,
+        "nWinners": 5,
+        "nTotal": 9
+      },
+      {
+        "combo": "problem-agitate-solution + talking-head",
+        "dims": "framework×format",
+        "lift": 3.68,
+        "nWinners": 5,
+        "nTotal": 9
+      },
+      {
+        "combo": "information-offering + product-demo",
+        "dims": "hook×format",
+        "lift": 2.94,
+        "nWinners": 4,
+        "nTotal": 8
+      },
+      {
+        "combo": "question + text-overlay-heavy",
+        "dims": "hook×format",
+        "lift": 2.94,
+        "nWinners": 3,
+        "nTotal": 6
+      },
+      {
+        "combo": "direct-callout + bedroom",
+        "dims": "hook×setting",
+        "lift": 2.94,
+        "nWinners": 3,
+        "nTotal": 6
+      },
+      {
+        "combo": "pov + bedroom",
+        "dims": "hook×setting",
+        "lift": 2.94,
+        "nWinners": 3,
+        "nTotal": 6
+      }
+    ],
+    "pets": [
+      {
+        "combo": "pov + outdoor",
+        "dims": "hook×setting",
+        "lift": 4.48,
+        "nWinners": 3,
+        "nTotal": 5
+      },
+      {
+        "combo": "lifestyle-broll + multiple-people",
+        "dims": "format×gender",
+        "lift": 4.48,
+        "nWinners": 6,
+        "nTotal": 10
+      },
+      {
+        "combo": "belief-challenging + lifestyle-broll",
+        "dims": "hook×format",
+        "lift": 2.99,
+        "nWinners": 6,
+        "nTotal": 12
+      },
+      {
+        "combo": "lifestyle-broll + car",
+        "dims": "format×setting",
+        "lift": 2.99,
+        "nWinners": 6,
+        "nTotal": 12
+      },
+      {
+        "combo": "direct-callout + trend-riding",
+        "dims": "hook×trend",
+        "lift": 2.39,
+        "nWinners": 4,
+        "nTotal": 9
+      },
+      {
+        "combo": "nostalgia + no-person",
+        "dims": "emotion×gender",
+        "lift": 2.24,
+        "nWinners": 3,
+        "nTotal": 7
+      },
+      {
+        "combo": "question + lifestyle-broll",
+        "dims": "hook×format",
+        "lift": 2.14,
+        "nWinners": 5,
+        "nTotal": 12
+      },
+      {
+        "combo": "pov-handheld + no-person",
+        "dims": "format×gender",
+        "lift": 2.14,
+        "nWinners": 5,
+        "nTotal": 12
+      }
+    ]
+  }
+}

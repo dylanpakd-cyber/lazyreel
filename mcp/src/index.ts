@@ -9,7 +9,7 @@ import {
   ListToolsRequestSchema,
 } from "@modelcontextprotocol/sdk/types.js";
 import {
-  videoIdeas, nicheDecode, formatTeardown, crackedHooks, shootBrief, killTheSlop, searchCorpus, viralTeardowns, contentGaps, formatPlaybook, findTrends, studyExamples, replicateFormat, status,
+  videoIdeas, nicheDecode, formatTeardown, crackedHooks, shootBrief, killTheSlop, searchCorpus, viralTeardowns, contentGaps, formatPlaybook, findTrends, studyExamples, replicateFormat, winningCombos, status,
 } from "./skills.js";
 import { SCRIPT_FRAMEWORKS } from "./frameworks.js";
 
@@ -153,6 +153,11 @@ const tools = [
     inputSchema: { type: "object", properties: { product: { type: "string", description: "The product/offer to make a video for." }, niche: { type: "string", description: "The niche (picks the fitting trend)." }, trend: { type: "string", description: "Optional: a specific trend name to replicate." }, model: { type: "string", description: "Optional video model: seedance|kling|veo|higgsfield." } }, required: ["product"] },
   },
   {
+    name: "winning_combos",
+    description: "The combinations that win — not single factors. Returns which feature COMBINATIONS (hook pattern × video format × person trait × emotion × setting) over-index among breakouts vs normal videos, overall or per niche. Use when the user asks what actually makes a video go viral, what mix to use, or how to stack winning traits.",
+    inputSchema: { type: "object", properties: { niche: { type: "string", description: "Optional niche filter (else cross-niche)." } } },
+  },
+  {
     name: "get_status",
     description: "Explain what this MCP server can do and what is intentionally not live yet.",
     inputSchema: { type: "object", properties: {} },
@@ -195,6 +200,8 @@ server.setRequestHandler(CallToolRequestSchema, async (req) => {
         text = studyExamples(str("niche"), str("videoFormat"), str("hookPattern"), num("limit") ?? 8); break;
       case "replicate_format":
         text = replicateFormat({ product: str("product"), niche: str("niche"), trend: str("trend"), model: str("model") }); break;
+      case "winning_combos":
+        text = winningCombos(str("niche")); break;
       case "get_status":
         text = status(process.env.ABG_TOKEN); break;
       default:

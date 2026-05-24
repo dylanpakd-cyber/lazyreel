@@ -157,6 +157,26 @@ export function getWinners(): Teardown[] {
   catch { _winners = []; }
   return _winners;
 }
+export type Combo = { combo: string; dims: string; lift: number; nWinners: number; nTotal: number };
+type ComboInsights = { analyzable?: number; overall?: Combo[]; byNiche?: Record<string, Combo[]> };
+let _combos: ComboInsights | null = null;
+function getCombos(): ComboInsights {
+  if (_combos) return _combos;
+  let c: ComboInsights;
+  try { c = JSON.parse(readFileSync(dataPath("combo-insights.json"), "utf8")); } catch { c = {}; }
+  _combos = c;
+  return c;
+}
+export function combosFor(niche: string): { combos: Combo[]; scope: string; analyzable: number } {
+  const c = getCombos();
+  const by = c.byNiche || {};
+  if (niche) {
+    const key = Object.keys(by).find((k) => k.toLowerCase().includes(niche.toLowerCase()) || niche.toLowerCase().includes(k.toLowerCase()));
+    if (key) return { combos: by[key], scope: key, analyzable: c.analyzable || 0 };
+  }
+  return { combos: c.overall || [], scope: "all niches", analyzable: c.analyzable || 0 };
+}
+
 export type Example = { url: string; niche: string; hookPattern: string; framework: string; videoFormat: string | null; emotion: string | null; views: number; viewsPerFollower: number };
 let _examples: Example[] | null = null;
 export function getExamples(): Example[] {
