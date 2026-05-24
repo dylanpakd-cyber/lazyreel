@@ -315,5 +315,14 @@
    "evidence": "Hair removing-limitations winner opens on a dual-subject matching-neon shock duo (social proof + color pop + emotional contagion + prop) vs dud's solitary neutral woman.",
    "corpusEcho": "fear 2.0x, guilt 1.93x, nostalgia 1.67x, disgust 1.5x over-index in 1M+ winners"
   }
- ]
+ ],
+ "validation": {
+  "method": "Blind out-of-sample test: 18 concept-matched pairs NOT used to derive the laws, randomized A/B, view counts hidden. A Sonnet agent picked the higher-view video from frames alone using only the 5 laws.",
+  "heldOutPairs": 18,
+  "accuracy": "17/18 (94%)",
+  "baseline": "50% (coin flip)",
+  "highConfidenceAccuracy": "11/11 (100%) on confidence>=0.8 calls",
+  "lawMarginAlignment": "16/17 (94%) — the side following more laws was the actual winner",
+  "scopeCaveat": "This separates mega-breakouts (20M-128M views) from duds (<50K) of the SAME concept — i.e. it discriminates extremes well. It does NOT yet prove fine-grained ranking (e.g. 5M vs 500K) or control for creator follower count. Next: closer-margin and same-creator pairs."
+ }
 }

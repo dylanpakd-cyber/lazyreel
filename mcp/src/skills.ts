@@ -530,9 +530,17 @@ export function breakoutVsDud(): string {
     `## Concept-matched proof (same niche + hook, winner vs dud, compared frame-by-frame)`,
     ...pairs.map(p => `- **${p.concept}** (${p.gap}): ${(p.firstFrameDelta || "").slice(0, 220)}\n  → _steal:_ ${(p.lesson || "").slice(0, 160)}`),
     "",
+    ...(m as any).validation ? [
+      "",
+      `## Validation (blind, out-of-sample)`,
+      `- ${(m as any).validation.method}`,
+      `- **Accuracy: ${(m as any).validation.accuracy}** vs ${(m as any).validation.baseline}; ${(m as any).validation.lawMarginAlignment}.`,
+      `- Scope: ${(m as any).validation.scopeCaveat}`,
+    ] : [],
+    "",
     `## Honest caveat (read before trusting this)`,
     `- ${m.confound?.takeaway || "Raw views are confounded by audience size; judge craft by creator-baseline (vpf), not raw views."}`,
-    `- Small sample (${(m.conceptControlledPairs || []).length} concept-matched pairs) and the "why" is inferred from still frames, not watch-time/A-B. Use as a first-3-seconds QC checklist + hypotheses, not laws.`,
+    `- Derived from ${(m.conceptControlledPairs || []).length} concept-matched pairs; the "why" is inferred from still frames, not watch-time/A-B. Strong at separating breakout-vs-dud extremes; not yet proven for fine-grained ranking. Use as a first-3-seconds QC checklist, not gospel.`,
   ].filter(Boolean).join("\n");
 }
 
