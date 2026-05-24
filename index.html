@@ -205,6 +205,7 @@ section{padding-block:clamp(72px,9.5vw,116px)}
 .price-head{text-align:center;max-width:42ch;margin-inline:auto}
 .price-head .pos{margin-top:14px;color:var(--body)}
 .price-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:34px}
+.price-grid-one{grid-template-columns:minmax(0,460px);justify-content:center}
 .plan{background:var(--card);border:1px solid var(--hairline-strong);border-radius:var(--r-card);padding:30px}
 .plan.feature{border-color:var(--ink);box-shadow:inset 0 0 0 2px var(--lime)}
 .plan .l{margin-bottom:14px}
@@ -405,21 +406,15 @@ section{padding-block:clamp(72px,9.5vw,116px)}
 <section id="pricing" class="wrap">
   <div class="price-head">
     <span class="label"><span class="n">06</span> / Pricing</span>
-    <h2 style="font-size:clamp(1.9rem,3.4vw,2.8rem);margin-top:12px">Free for humans. <span class="hl">Free for agents.</span></h2>
+    <h2 style="font-size:clamp(1.9rem,3.4vw,2.8rem);margin-top:12px">Free for agents. <span class="hl">Forever.</span></h2>
     <p class="pos">The feed your agent already doomscrolled. Video research for AI, not AI for video.</p>
   </div>
-  <div class="price-grid">
+  <div class="price-grid price-grid-one">
     <div class="plan feature">
       <div class="label">For agents</div>
       <div class="pr">Free<small>forever</small></div>
-      <ul><li>The full MCP (14+ tools)</li><li>Every opinionated skill + real teardowns</li><li>No card, no account</li></ul>
+      <ul><li>The full MCP (14+ tools)</li><li>Every opinionated skill + real teardowns</li><li>No card, no account, no sign-up</li></ul>
       <a class="btn btn-primary" href="mcp-install.html">Get the MCP</a>
-    </div>
-    <div class="plan">
-      <div class="label">For humans</div>
-      <div class="pr">Free<small>forever</small></div>
-      <ul><li>Browse the format library</li><li>Steal the skeletons</li><li>Bring your own agent</li></ul>
-      <a class="btn btn-ghost" href="#skills">Browse formats</a>
     </div>
   </div>
 </section>
@@ -600,7 +595,7 @@ var FAQ=[
  ["Wait, what's \"LazyReel\"?","It's the lazy way to know what's working: an MCP that already doomscrolled 21B+ views of short-form (and app ads) so your agent doesn't start from zero. You stay lazy; it hands you the decoded research: what's breaking out, why, and the real videos behind it."],
  ["Is this just prompt templates?","No. Templates make every video sound the same. LazyReel gives the agent the workflow plus a library of formats that actually worked, so it picks the right shape for your product and niche instead of reaching for the same three lines."],
  ["Will it make my agent sound like every other AI?","The opposite is the entire point. The skills are tuned to kill the tells: the \"revolutionary,\" the rocket emoji, the feature-list hook, the studio-ad polish. If it sounds like AI, it failed."],
- ["Do I need the MCP, or can I just browse?","Browse the format library free as a human. Connect the MCP free when you want your agent to do it for you. Both cost nothing."],
+ ["Do I need an account or a card?","No. The MCP is free and there's no sign-up. Generate a token on the install page, paste one prompt into your agent, and it's connected. No card, ever."],
  ["What's actually live today?","14+ MCP tools, a library of script frameworks and hook patterns, an app-ad vertical, and real breakout teardowns decoded from thousands of scraped videos. Live re-scraping on demand and private niche libraries are next. We'll always tell you which is which."]
 ];
 document.getElementById('faq-list').innerHTML=FAQ.map(function(f){return '<details><summary>'+f[0]+'<span class="chev">+</span></summary><p>'+f[1]+'</p></details>';}).join('');
