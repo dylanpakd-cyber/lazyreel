@@ -1,0 +1,177 @@
+#!/usr/bin/env node
+// decode.mjs — the decoder. Turns a video record (transcript + caption +
+// engagement) into one structured ABG CMO record: hook, hook pattern, framework,
+// niche, engagement tier, why it worked, confidence. Heuristic, offline, scales.
+//
+// Usage:
+//   node pipeline/decode.mjs --in <file.csv|file.jsonl> [--out decoded.jsonl] [--source label]
+//
+// Input formats:
+//   CSV  with a `video_transcription_text` column (the synthetic TikTok set), or
+//   JSONL with { transcript, caption?, hashtags?, views?, likes?, shares?, comments? }
+//
+// Output: JSONL, one decode record per line. The count of lines IS the "decoded" count.
+
+import { readFileSync, writeFileSync } from "node:fs";
+
+const args = Object.fromEntries(
+  process.argv.slice(2).reduce((acc, a, i, arr) => {
+    if (a.startsWith("--")) acc.push([a.slice(2), arr[i + 1]]);
+    return acc;
+  }, []),
+);
+const inFile = args.in;
+const outFile = args.out || "data/decoded/decoded.jsonl";
+const sourceLabel = args.source || "input";
+if (!inFile) { console.error("need --in <file>"); process.exit(1); }
+
+// ---- niche keyword map ----------------------------------------------------
+const NICHE = {
+  "ABG beauty": ["makeup","lip","lash","blush","mascara","brow","foundation","concealer","perfume","fragrance","nails"],
+  "skincare": ["skin","serum","retinol","retinal","spf","sunscreen","moisturizer","acne","peptide","mask","wrinkle"],
+  "supplements": ["supplement","greens","magnesium","electrolyte","protein","vitamin","collagen","creatine","gut"],
+  "fitness": ["gym","workout","fitness","muscle","band","yoga","mat","cardio","lift","steps"],
+  "food and beverage": ["matcha","coffee","creamer","snack","drink","recipe","meal","latte","tea","protein bar"],
+  "tech and SaaS": ["app","software","ai","tool","charger","gadget","saas","automation","workflow","notes"],
+  "fashion": ["jeans","dress","bag","shoes","outfit","denim","fit","wardrobe","style","flats"],
+  "home and cleaning": ["clean","shower","fridge","organizer","candle","kitchen","laundry","home","spray"],
+  "hair": ["hair","scalp","curl","shampoo","conditioner","rosemary","heatless","frizz"],
+  "pets": ["dog","cat","pet","chew","puppy","kitten","vet","leash"],
+};
+
+// ---- hook-pattern signals (the 13 taxonomy) -------------------------------
+const HOOK_SIGNALS = [
+  ["pov", /\bpov\b/i],
+  ["belief", /i thought|turns out|was wrong|i used to think|nobody told me/i],
+  ["callout", /for (everyone|the|those|anyone|all) (who|girlies)|to the (person|people|girlies|one)/i],
+  ["beforeafter", /before .* after|day 1|week \d|→|over \d+ (days|weeks)/i],
+  ["howto", /^how (to|i)\b/i],
+  ["question", /\?|^(why|how|what|is|are|do|does|can|should|did)\b/i],
+  ["authority", /experts?|doctors?|dermatolog|researchers?|scientists?|professionals?/i],
+  ["removelimit", /even if|without (a|the|any)|no (experience|gym|skill|budget)/i],
+  ["exclusivity", /the only|nothing else|no other|never found another/i],
+  ["contrast", /\bvs\b|versus|compared to|\$\d+.*\$\d+/i],
+  ["speed", /in (one|1|two|2|\d+) (use|day|days|week|weeks|minute|minutes|night)/i],
+  ["newness", /\bnew\b|nobody('?s| is) talking|just (dropped|launched)|trending|2025|2026/i],
+  ["size", /\b\d{2,}\b/],
+];
+
+// ---- framework signals (the 12) -------------------------------------------
+const FRAMEWORK_SIGNALS = [
+  ["usvsthem", /\bvs\b|versus|compared to/i],
+  ["objections", /scam|skeptic|i thought|didn'?t believe|objection|too good to be true/i],
+  ["founder", /we built|we started|our story|i founded|as a founder|why we made/i],
+  ["listicle", /^\d+ (reasons|things|ways|signs)|here are \d+|\d+ mistakes/i],
+  ["contrarian", /secret|they don'?t want|the truth about|industry|nobody tells/i],
+  ["without", /without|even if/i],
+  ["tripleg", /goal|the gap|finally hit|new year/i],
+  ["tease", /wait for it|you won'?t believe|watch what|the reason will/i],
+  ["bandwagon", /everyone('?s| is)|the .* girlies|trend|joining/i],
+  ["organic", /\bpov\b|get ready with me|grwm|day in (my|the) life|what i (use|do)/i],
+];
+
+function firstSentence(text) {
+  const t = (text || "").trim();
+  const m = t.split(/(?<=[.?!])\s+/)[0] || t;
+  return m.length > 110 ? m.slice(0, 107).trimEnd() + "..." : m;
+}
+function classify(text, signals, fallback) {
+  for (const [id, re] of signals) if (re.test(text)) return id;
+  return fallback;
+}
+function detectNiche(text) {
+  const lo = text.toLowerCase();
+  let best = null, bestHits = 0;
+  for (const [niche, words] of Object.entries(NICHE)) {
+    const hits = words.reduce((s, w) => s + (lo.includes(w) ? 1 : 0), 0);
+    if (hits > bestHits) { bestHits = hits; best = niche; }
+  }
+  return { niche: best || "general", nicheHits: bestHits };
+}
+
+// ---- read input -----------------------------------------------------------
+function parseCsvLine(line) {
+  // simple split; the synthetic set has no embedded commas in transcripts
+  return line.split(",");
+}
+function loadRecords(file) {
+  const text = readFileSync(file, "utf8");
+  if (file.endsWith(".jsonl")) {
+    return text.split(/\r?\n/).filter(Boolean).map((l) => JSON.parse(l)).map((r) => ({
+      ...r,
+      saves: r.saves ?? 0,
+    }));
+  }
+  // CSV (synthetic TikTok schema)
+  const lines = text.split(/\r?\n/).filter(Boolean);
+  const header = parseCsvLine(lines[0]);
+  const idx = (name) => header.indexOf(name);
+  const tIdx = idx("video_transcription_text");
+  const vIdx = idx("video_view_count"), lIdx = idx("video_like_count");
+  const sIdx = idx("video_share_count"), cIdx = idx("video_comment_count");
+  return lines.slice(1).map((l) => {
+    const f = parseCsvLine(l);
+    return {
+      transcript: tIdx >= 0 ? f[tIdx] : "",
+      views: vIdx >= 0 ? Number(f[vIdx]) || 0 : 0,
+      likes: lIdx >= 0 ? Number(f[lIdx]) || 0 : 0,
+      shares: sIdx >= 0 ? Number(f[sIdx]) || 0 : 0,
+      comments: cIdx >= 0 ? Number(f[cIdx]) || 0 : 0,
+    };
+  });
+}
+
+const records = loadRecords(inFile);
+
+// ---- engagement tiering: percentile of views across this corpus -----------
+const views = records.map((r) => r.views || 0).sort((a, b) => a - b);
+const pct = (p) => views[Math.min(views.length - 1, Math.floor(p * views.length))] || 0;
+const p60 = pct(0.6), p90 = pct(0.9);
+const tier = (v) => (v >= p90 ? "breakout" : v >= p60 ? "high" : "steady");
+
+// ---- decode ---------------------------------------------------------------
+const WHY = {
+  pov: "opens on a too-real moment, so the right viewer recognizes themselves in the first second",
+  belief: "leads with the viewer's own doubt, which makes the proof land harder",
+  callout: "names a hyper-specific person, so the right buyer stops scrolling",
+  beforeafter: "shows the transformation, which is its own proof",
+  howto: "promises a concrete outcome up front",
+  question: "opens a loop the viewer needs to resolve",
+  authority: "borrows expert credibility for a skeptical market",
+  removelimit: "removes the disqualifier that keeps the buyer out",
+  exclusivity: "frames the product as the only one that clears the bar",
+  contrast: "a head-to-head the viewer can judge for themselves",
+  speed: "a fast, concrete result claim",
+  newness: "novelty plus a trend signal",
+  size: "a concrete number beats a vague benefit",
+};
+
+const out = [];
+for (const r of records) {
+  const text = [r.transcript, r.caption, (r.hashtags || []).join(" ")].filter(Boolean).join(" ");
+  if (!text.trim()) continue;
+  const hookPattern = classify(text, HOOK_SIGNALS, "question");
+  const framework = classify(text, FRAMEWORK_SIGNALS, "pas");
+  const detected = detectNiche(text);
+  const niche = r.niche && r.niche !== "general" ? r.niche : detected.niche;
+  const nicheHits = r.niche && r.niche !== "general" ? 1 : detected.nicheHits;
+  const eng = { views: r.views || 0, likes: r.likes || 0, shares: r.shares || 0, comments: r.comments || 0, saves: r.saves || 0 };
+  // confidence: did we get a real niche + a strong hook signal?
+  const strongHook = hookPattern !== "question";
+  const confidence = Number((0.4 + (nicheHits > 0 ? 0.3 : 0) + (strongHook ? 0.3 : 0)).toFixed(2));
+  out.push({
+    source: sourceLabel,
+    hook: firstSentence(r.transcript || r.caption || ""),
+    hookPattern,
+    framework,
+    niche,
+    engagementTier: tier(eng.views),
+    engagement: eng,
+    whyItWorked: WHY[hookPattern],
+    confidence,
+  });
+}
+
+writeFileSync(outFile, out.map((o) => JSON.stringify(o)).join("\n") + "\n");
+console.error(`decoded ${out.length} records from ${records.length} inputs -> ${outFile}`);
+console.log(out.length);

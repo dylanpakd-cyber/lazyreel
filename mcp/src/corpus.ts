@@ -42,8 +42,53 @@ export function getTrendingTags(): TrendingTag[] {
   return _tags;
 }
 
+export type CorpusStats = {
+  generatedAt?: string; curatedTeardowns?: number; decodedByPipeline?: number; trendingTags?: number;
+};
+let _stats: CorpusStats | null = null;
+export function getStats(): CorpusStats {
+  if (_stats) return _stats;
+  let s: CorpusStats;
+  try { s = JSON.parse(readFileSync(dataPath("corpus-stats.json"), "utf8")); }
+  catch { s = {}; }
+  _stats = s;
+  return s;
+}
+
 export function corpusCounts() {
-  return { videos: getVideos().length, tags: getTrendingTags().length };
+  const s = getStats();
+  return {
+    videos: getVideos().length,
+    tags: getTrendingTags().length,
+    decoded: s.decodedByPipeline ?? 0,
+  };
+}
+
+export type NicheInsight = {
+  sampleSize: number;
+  topHookPatterns: { pattern: string; avgViews: number; n: number }[];
+  topFrameworks: string[];
+};
+type Insights = { source?: string; decoded?: number; byNiche?: Record<string, NicheInsight> };
+let _insights: Insights | null = null;
+function getInsights(): Insights {
+  if (_insights) return _insights;
+  let i: Insights;
+  try { i = JSON.parse(readFileSync(dataPath("insights.json"), "utf8")); }
+  catch { i = {}; }
+  _insights = i;
+  return i;
+}
+export function nicheInsight(niche: string): NicheInsight | null {
+  const by = getInsights().byNiche || {};
+  if (by[niche]) return by[niche];
+  // loose match
+  const key = Object.keys(by).find((k) => k.toLowerCase().includes(niche.toLowerCase()) || niche.toLowerCase().includes(k.toLowerCase()));
+  return key ? by[key] : null;
+}
+export function insightsMeta() {
+  const i = getInsights();
+  return { source: i.source, decoded: i.decoded ?? 0 };
 }
 
 function searchable(v: AnalyzedVideo): string {

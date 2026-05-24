@@ -7,7 +7,7 @@ import {
   SOPHISTICATION, BANNED_WORDS, VOICE_RULES, UGC_MODIFIERS, type HookPattern,
 } from "./frameworks.js";
 import {
-  searchVideos, relatedTrendingTags, corpusCounts, type AnalyzedVideo,
+  searchVideos, relatedTrendingTags, corpusCounts, nicheInsight, insightsMeta, type AnalyzedVideo,
 } from "./corpus.js";
 
 // --- tiny deterministic helpers -------------------------------------------
@@ -102,6 +102,14 @@ function videoCard(v: AnalyzedVideo): string {
 
 export function nicheDecode(niche: string, examples?: string): string {
   const n = niche.trim();
+  const insight = nicheInsight(n);
+  const insightBlock = insight
+    ? ["", `## What's actually pulling views in ${n} (real scraped data, n=${insight.sampleSize})`,
+       `Hook patterns ranked by average views on real videos:`,
+       ...insight.topHookPatterns.map((h) => `- **${h.pattern}** — ${h.avgViews.toLocaleString()} avg views (${h.n} videos)`),
+       `Most-used frameworks here: ${insight.topFrameworks.join(", ")}.`,
+       `_Source: ${insightsMeta().source || "decode pipeline"}, ${insightsMeta().decoded.toLocaleString()} videos decoded._`]
+    : [];
   const matches = searchVideos(n, 4);
   const tags = relatedTrendingTags(n, 8);
   const corpusBlock = matches.length
@@ -136,6 +144,7 @@ export function nicheDecode(niche: string, examples?: string): string {
     `- The exploitable opening is usually "everyone shows the product, nobody shows the problem state."`,
     `- Name 2-3 angles the niche is NOT running yet. That's your shot.`,
     examples ? `\n## Notes from what you pasted\n${examples.trim()}` : "",
+    ...insightBlock,
     ...corpusBlock,
     ...tagBlock,
     "",
@@ -318,11 +327,13 @@ export function status(token?: string): string {
     "**Live now:**",
     "- 7 skills: video_ideas, niche_decode, format_teardown, cracked_hooks, shoot_brief, kill_the_slop, search_corpus",
     `- ${SCRIPT_FRAMEWORKS.length} named script frameworks, ${HOOK_PATTERNS.length} hook patterns, ${ANGLES.length} proven UGC angles`,
-    `- ${corpusCounts().videos} analyzed-video teardowns + ${corpusCounts().tags} real TikTok trending tags (2022-2025, MIT)`,
+    `- ${corpusCounts().videos} hand-authored teardowns + ${corpusCounts().tags} real TikTok trending tags (2022-2025, MIT)`,
+    `- ${corpusCounts().decoded.toLocaleString()} real TikTok videos decoded via the Apify pipeline, with per-niche hook-pattern performance (avg views) computed from live engagement`,
     "- Awareness + sophistication models, the anti-slop bar, UGC prompt modifiers",
     "",
-    "**Not yet (honest):**",
-    "- Live ingestion of new winning videos (the corpus is curated + the MIT tag set, not a live scrape)",
+    "**How the numbers grow (honest):**",
+    "- Run `pipeline/ingest-apify.mjs` with your own Apify key to decode more videos; counts are computed from the data, never hand-typed",
+    "- Raw scraped content stays local; only derived aggregates (no source text) ship in the public repo",
     "- Transcript/embedding search over a hosted video DB",
     "- Private per-account niche libraries",
     "",
