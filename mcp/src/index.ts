@@ -9,7 +9,7 @@ import {
   ListToolsRequestSchema,
 } from "@modelcontextprotocol/sdk/types.js";
 import {
-  videoIdeas, nicheDecode, formatTeardown, crackedHooks, shootBrief, killTheSlop, status,
+  videoIdeas, nicheDecode, formatTeardown, crackedHooks, shootBrief, killTheSlop, searchCorpus, status,
 } from "./skills.js";
 import { SCRIPT_FRAMEWORKS } from "./frameworks.js";
 
@@ -96,6 +96,18 @@ const tools = [
     },
   },
   {
+    name: "search_corpus",
+    description: "Search the analyzed-video library for real teardowns matching a niche, format, hook pattern, or product. Returns the hook, framework, signature device, and why it worked. Use to ground ideas in what's performed.",
+    inputSchema: {
+      type: "object",
+      properties: {
+        query: { type: "string", description: "A niche, format, hook pattern, or product (e.g. 'skincare before-after', 'POV beauty')." },
+        limit: { type: "number", description: "Max results (1-12). Default 6." },
+      },
+      required: ["query"],
+    },
+  },
+  {
     name: "get_status",
     description: "Explain what this MCP server can do and what is intentionally not live yet.",
     inputSchema: { type: "object", properties: {} },
@@ -124,6 +136,8 @@ server.setRequestHandler(CallToolRequestSchema, async (req) => {
         text = shootBrief({ product: str("product"), audience: str("audience"), objective: str("objective"), framework: str("framework") || undefined }); break;
       case "kill_the_slop":
         text = killTheSlop(str("copy")); break;
+      case "search_corpus":
+        text = searchCorpus(str("query"), num("limit") ?? 6); break;
       case "get_status":
         text = status(process.env.ABG_TOKEN); break;
       default:

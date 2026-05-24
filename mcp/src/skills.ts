@@ -6,6 +6,9 @@ import {
   SCRIPT_FRAMEWORKS, HOOK_PATTERNS, ANGLES, VISUAL_APPROACHES, AWARENESS,
   SOPHISTICATION, BANNED_WORDS, VOICE_RULES, UGC_MODIFIERS, type HookPattern,
 } from "./frameworks.js";
+import {
+  searchVideos, relatedTrendingTags, corpusCounts, type AnalyzedVideo,
+} from "./corpus.js";
 
 // --- tiny deterministic helpers -------------------------------------------
 function seed(str: string): number {
@@ -89,8 +92,27 @@ export function videoIdeas(i: IdeaInput): string {
   ].join("\n");
 }
 
+function videoCard(v: AnalyzedVideo): string {
+  return [
+    `- **${v.hook}**`,
+    `  _${v.niche} · ${v.productType} · ${v.format} · ${v.framework} framework · ${v.hookPattern} hook · ${v.engagementTier}_`,
+    `  Signature: ${v.signatureDevice}. Why it worked: ${v.whyItWorked}.`,
+  ].join("\n");
+}
+
 export function nicheDecode(niche: string, examples?: string): string {
   const n = niche.trim();
+  const matches = searchVideos(n, 4);
+  const tags = relatedTrendingTags(n, 8);
+  const corpusBlock = matches.length
+    ? ["", `## From the analyzed-video library (${corpusCounts().videos} teardowns)`,
+       `Closest performers to ${n}, with the DNA worth stealing:`, ...matches.map(videoCard)]
+    : [];
+  const tagBlock = tags.length
+    ? ["", `## Cultural moments trending now (real TikTok data, MIT)`,
+       `Piggyback one only if it genuinely fits the product:`,
+       tags.map((t) => `#${t.tag} (${t.year}, rank ${t.rank})`).join(" · ")]
+    : [];
   return [
     `# Niche read: ${n}`,
     `_How to decode what's actually working before you write a single hook._`,
@@ -114,9 +136,25 @@ export function nicheDecode(niche: string, examples?: string): string {
     `- The exploitable opening is usually "everyone shows the product, nobody shows the problem state."`,
     `- Name 2-3 angles the niche is NOT running yet. That's your shot.`,
     examples ? `\n## Notes from what you pasted\n${examples.trim()}` : "",
+    ...corpusBlock,
+    ...tagBlock,
     "",
     `> Output you should end with: top-10 pains (each w/ a real quote), the 3 hook patterns winning now, the dominant visual approach, and 2-3 unused angles.`,
   ].filter(Boolean).join("\n");
+}
+
+export function searchCorpus(query: string, limit = 6): string {
+  const q = query.trim();
+  const hits = searchVideos(q, Math.min(Math.max(limit, 1), 12));
+  if (!hits.length) {
+    return `# No matches for "${q}"\nTry a niche (e.g. "skincare"), a format ("before-after"), or a hook pattern ("POV").`;
+  }
+  return [
+    `# ${hits.length} analyzed videos for "${q}"`,
+    `_From the ${corpusCounts().videos}-teardown library. Steal the structure, not the creative._`,
+    "",
+    ...hits.map(videoCard),
+  ].join("\n");
 }
 
 export function formatTeardown(description: string): string {
@@ -278,12 +316,13 @@ export function status(token?: string): string {
     tokenLine,
     "",
     "**Live now:**",
-    "- 6 skills: video_ideas, niche_decode, format_teardown, cracked_hooks, shoot_brief, kill_the_slop",
+    "- 7 skills: video_ideas, niche_decode, format_teardown, cracked_hooks, shoot_brief, kill_the_slop, search_corpus",
     `- ${SCRIPT_FRAMEWORKS.length} named script frameworks, ${HOOK_PATTERNS.length} hook patterns, ${ANGLES.length} proven UGC angles`,
+    `- ${corpusCounts().videos} analyzed-video teardowns + ${corpusCounts().tags} real TikTok trending tags (2022-2025, MIT)`,
     "- Awareness + sophistication models, the anti-slop bar, UGC prompt modifiers",
     "",
     "**Not yet (honest):**",
-    "- Live ingestion of new winning videos (the library is the encoded frameworks, not a live scrape)",
+    "- Live ingestion of new winning videos (the corpus is curated + the MIT tag set, not a live scrape)",
     "- Transcript/embedding search over a hosted video DB",
     "- Private per-account niche libraries",
     "",

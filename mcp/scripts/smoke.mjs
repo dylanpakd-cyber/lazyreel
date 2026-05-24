@@ -36,6 +36,7 @@ const cases = [
   ["cracked_hooks", { product: "a lash serum", niche: "ABG beauty", count: 6 }],
   ["shoot_brief", { product: "a matcha latte kit", audience: "busy founders", objective: "first purchase" }],
   ["kill_the_slop", { copy: "Discover the revolutionary power of our product to elevate your routine. 🚀 Game-changing." }],
+  ["search_corpus", { query: "skincare before-after", limit: 4 }],
   ["get_status", {}],
 ];
 

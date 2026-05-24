@@ -28,6 +28,10 @@ The skills are grounded in real DTC and UGC scripting knowledge, not vibes:
 * 6 proven UGC angles with shot counts
 * Awareness and sophistication models so the angle matches where the buyer's head is at
 * A hard anti slop bar: banned filler words plus the voice rules that separate real creator copy from AI mush
+* A library of analyzed video teardowns across the main DTC niches (beauty, skincare, supplements, fitness, food, tech, fashion, home, hair, pets), each tagged with its framework, hook pattern, signature device, and why it worked
+* Real TikTok trending hashtag data for 2022 through 2025 (MIT licensed) so niche reads can point at live cultural moments
+
+The corpus lives in mcp/data and grows over time. See mcp/data/DATA.md for sources and licenses. The search_corpus skill queries it directly.
 
 ## Install it
 

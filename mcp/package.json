@@ -7,7 +7,8 @@
     "abg-cmo-mcp": "build/index.js"
   },
   "files": [
-    "build"
+    "build",
+    "data"
   ],
   "scripts": {
     "build": "tsc && chmod +x build/index.js",
