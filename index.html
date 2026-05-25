@@ -130,7 +130,7 @@ section{padding-block:clamp(72px,9.5vw,116px)}
 .shead p{margin-top:14px;color:var(--body);max-width:54ch}
 
 /* skills */
-.skills-grid{display:grid;grid-template-columns:0.92fr 1.08fr;gap:18px;margin-top:36px;align-items:start}
+.skills-grid{display:grid;grid-template-columns:0.92fr 1.08fr;gap:18px;margin-top:36px;align-items:stretch}
 .rail{display:grid;gap:9px}
 .srow{display:block;width:100%;text-align:left;background:var(--card);border:1px solid var(--hairline);border-radius:var(--r-card);padding:16px 18px;cursor:pointer;transition:transform .18s var(--ease),border-color .18s,box-shadow .18s}
 .srow:hover{transform:translateY(-3px) rotate(-.4deg);border-color:var(--hairline-strong)}
@@ -140,13 +140,19 @@ section{padding-block:clamp(72px,9.5vw,116px)}
 .srow .de{color:var(--mute);font-size:13.5px;margin-top:5px;line-height:1.5}
 .bucket{float:right;font-family:"JetBrains Mono";font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--mute);border:1px solid var(--hairline-strong);border-radius:var(--r-pill);padding:2px 9px}
 .srow[aria-selected="true"] .bucket{color:var(--ink);border-color:var(--ink)}
-/* output preview = dark code surface on the light page */
-.preview{position:sticky;top:88px;background:#0E0E0C;border-radius:var(--r-card);overflow:hidden;border:1px solid #2A2820;min-height:360px}
-.pv-bar{display:flex;align-items:center;justify-content:space-between;height:42px;padding:0 14px;background:#16150F;border-bottom:1px solid #2A2820;font-family:"JetBrains Mono";font-size:12px;color:var(--night-mute)}
-.pv-copy{cursor:pointer;color:var(--lime);background:none;border:1px solid #3A372C;border-radius:var(--r-pill);padding:4px 12px;font-family:"JetBrains Mono";font-size:11px;transition:background .18s}
-.pv-copy:hover{background:#24211A}
-.pv-body{padding:22px 22px 26px;color:var(--night-text)}
+/* output preview = dark code surface on the light page, matches the rail height */
+.preview{background:#0E0E0C;border-radius:var(--r-card);overflow:hidden;border:1px solid #2A2820;min-height:480px;display:flex;flex-direction:column}
+.pv-bar{display:flex;align-items:center;justify-content:space-between;gap:12px;min-height:44px;padding:8px 14px;background:#16150F;border-bottom:1px solid #2A2820;font-family:"JetBrains Mono";font-size:12px;color:var(--night-mute)}
+.pv-copy{cursor:pointer;flex:0 0 auto;color:var(--on-lime);background:var(--lime);border:1px solid transparent;border-radius:var(--r-pill);padding:6px 13px;font-family:"JetBrains Mono";font-size:11px;font-weight:700;transition:background .18s,transform .15s}
+.pv-copy:hover{background:#E2FF6B;transform:translateY(-1px)}
+.pv-body{padding:20px 22px 24px;color:var(--night-text);flex:1;overflow:auto}
+.pv-cmd{font-family:"JetBrains Mono";font-size:12.5px;line-height:1.7;color:#C4BEB0;margin:0 0 16px;padding-bottom:14px;border-bottom:1px solid #221F18;white-space:pre-wrap;word-break:break-word}
+.pv-cmd b{color:var(--flag-2);font-weight:700}
+.pv-cmd .arg{color:var(--night-mute)}
 .pv-body h4{font-family:"Bricolage Grotesque";font-weight:600;font-size:18px;color:var(--night-text);margin:0 0 14px;letter-spacing:-.02em}
+.pv-done{font-family:"JetBrains Mono";font-size:12px;color:#6E7A4B;margin-top:14px}
+.pv-cursor{display:inline-block;width:8px;height:15px;background:var(--lime);margin-top:12px;vertical-align:middle;animation:blink 1.1s steps(1) infinite}
+@keyframes blink{50%{opacity:0}}
 .pv-line{font-family:"JetBrains Mono";font-size:13px;line-height:1.95;color:#C4BEB0}
 .pv-line .x{color:#fff;font-weight:700}
 .pv-line .slot{color:var(--lime)}
@@ -159,30 +165,14 @@ section{padding-block:clamp(72px,9.5vw,116px)}
 .stat .n{font-family:"Bricolage Grotesque";font-weight:800;font-size:clamp(2.6rem,5vw,4rem);letter-spacing:-.05em;line-height:1;color:var(--ink);font-variant-numeric:tabular-nums}
 .stat .l{font-family:"JetBrains Mono";font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--mute);margin-top:10px}
 
-/* difference slider */
-.cmp{position:relative;margin-top:30px;border:1px solid var(--hairline-strong);border-radius:var(--r-card);overflow:hidden;height:340px;background:var(--card);user-select:none;touch-action:pan-y}
-.cmp .pane{position:absolute;inset:0;display:flex;flex-direction:column;justify-content:center;padding:clamp(24px,5vw,56px)}
-.cmp .with{background:linear-gradient(135deg,#FBF8F1,#F2ECDD)}
-.cmp .without{clip-path:inset(0 50% 0 0);background:var(--surface-2)}
-.cmp .tag{position:absolute;top:18px;font-family:"JetBrains Mono";font-size:11px;letter-spacing:.1em;text-transform:uppercase}
-.cmp .without .tag{left:20px;color:var(--mute)}
-.cmp .with .tag{right:20px;color:var(--flag-ink)}
-.cmp .copy{font-family:"Bricolage Grotesque";font-weight:500;font-size:clamp(1.05rem,2.1vw,1.5rem);line-height:1.32;max-width:30ch;letter-spacing:-.02em}
-.cmp .with .copy{color:var(--ink)}
-.cmp .with .copy em{font-style:normal;background:linear-gradient(transparent 60%,var(--lime) 60%);padding:0 .05em}
-.cmp .without .copy{color:var(--mute)}
-.cmp-handle{position:absolute;top:0;bottom:0;left:50%;width:2px;background:var(--ink);transform:translateX(-1px);cursor:ew-resize}
-.cmp-handle .grab{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:42px;height:42px;border-radius:50%;background:var(--ink);color:var(--lime);display:grid;place-items:center;font-size:14px;font-weight:700;box-shadow:0 6px 18px rgba(40,30,10,.3)}
-.cmp-hint{margin-top:14px;font-size:13px;color:var(--mute)}
-
 /* app vertical */
-.app-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:34px;align-items:start}
+.app-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:34px;align-items:stretch}
 .app-cats,.app-pat{background:var(--card);border:1px solid var(--hairline);border-radius:var(--r-card);padding:22px}
 .app-cats h4,.app-pat h4{font-family:"Bricolage Grotesque";font-weight:600;font-size:15px;color:var(--ink);margin:0 0 16px;letter-spacing:-.01em}
 .catrow{display:flex;align-items:center;gap:12px;margin-bottom:11px;font-size:13.5px}
 .catrow .cn{width:120px;flex:0 0 auto;color:var(--body);font-family:"JetBrains Mono";font-size:11.5px;text-transform:lowercase;letter-spacing:.02em}
 .catrow .bar{flex:1;height:9px;border-radius:var(--r-pill);background:var(--surface-3);overflow:hidden}
-.catrow .bar i{display:block;height:100%;border-radius:var(--r-pill);background:linear-gradient(90deg,var(--lime),var(--lime-soft));width:0;transition:width 1s var(--ease)}
+.catrow .bar i{display:block;height:100%;border-radius:var(--r-pill);background:linear-gradient(90deg,#7DA01E,#9FC23A);width:0;transition:width 1s var(--ease)}
 .catrow .cc{width:34px;flex:0 0 auto;text-align:right;font-family:"JetBrains Mono";font-size:11.5px;color:var(--mute)}
 .patrow{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:12px 0;border-bottom:1px solid var(--hairline)}
 .patrow:last-child{border-bottom:0}
@@ -489,23 +479,29 @@ section{padding-block:clamp(72px,9.5vw,116px)}
 // ---- skills data + showcase ----
 var SKILLS=[
  {cmd:"/video-ideas",bucket:"Ideation",ti:"Concepts mapped to real frameworks",de:"Six scroll-worthy concepts for {product} in {niche}, each built on a named script framework, placed on the awareness ladder, with the visual approach and why it lands.",
+  call:'video_ideas <span class="arg">product="matcha kit" niche="matcha" audience="gen-z, US" count=5</span>',
   prompt:"Use video_ideas: product = {your product}, niche = {your niche}, audience = {who it's for}. Give me 5 concepts, each on a different script framework, mapped to awareness + sophistication, with a hook and why it lands.",
-  lines:['<b class="x">01 · Industry Contrarian (DISRUPT)</b>','Hook: "Why <span class="slot">{niche}</span> pros quietly reach for this, not the $220 one."','Who: solution-aware buyer · sophistication 4 (skeptical) · visual: product-in-action','Why: a burned market believes a mechanism, not another claim.','<b class="x">02 · Problem-Agitate-Solution (PAS)</b>','Hook: "still fighting <span class="slot">{category}</span> in 2026? it\'s not what you think."']},
+  lines:['<b class="x">5 concepts · 5 frameworks · ranked by fit</b>','','<b class="x">01 · Industry Contrarian (DISRUPT)</b>','Hook: "why <span class="slot">matcha</span> girls quietly skip the $40 tins."','Awareness: solution-aware · Sophistication: 4 · Visual: product-in-hand','Why: a burned market buys a mechanism, not another claim.','','<b class="x">02 · Problem-Agitate-Solution (PAS)</b>','Hook: "still clumpy at 2pm? it\'s not your whisk."','Beat: stuck-state cold open → agitate → the fix in one shot.','','<b class="x">03 · POV-recognition</b>','Hook: "POV: the first one that doesn\'t taste like a lawn."','Visual: face-to-camera, first sip, zero edit.','','<b class="x">04 · Listicle (rank)</b> · "I ranked 6 so you don\'t have to."','<b class="x">05 · Founder-origin</b> · "made this because every tin lied about grade."']},
  {cmd:"/niche-decode",bucket:"Analysis",ti:"Read the niche before you write",de:"A structured read of {niche}: where it sits on awareness + sophistication, what the winning videos repeat, the dominant visual approach, and the gap nobody's filling.",
+  call:'niche_decode <span class="arg">niche="matcha"</span>',
   prompt:"Use niche_decode: niche = {your niche}. Tell me the awareness + sophistication level, the 3 hook patterns winning right now, the dominant visual approach, and 2-3 angles the niche isn't running yet.",
-  lines:['Awareness: <span class="slot">solution-aware</span>. Lead with the mechanism, not the category.','Sophistication 4 (burned market). Identity + reframe beats claims.','Winning hooks now: POV-recognition · belief-challenging · direct call-out.','Dominant visual: authentic-UGC, face-to-camera (polish reads as an ad here).','The gap: <span class="slot">everyone shows the product, nobody shows the problem state.</span>']},
+  lines:['<b class="x">Niche read · matcha · 412 videos</b>','Awareness: <span class="slot">solution-aware</span>. Lead with the mechanism, not the category.','Sophistication: 4 (burned market). Identity + reframe beats claims.','','<b class="x">Hooks winning right now</b>','· POV-recognition   over-indexes, low polish','· belief-challenging   "I was wrong about this one"','· direct call-out   "for the girlies who…"','','<b class="x">Dominant format</b>','authentic-UGC, face-to-camera. Studio polish reads as an ad here.','','<b class="x">The open lane</b>','<span class="slot">everyone shows the product, nobody shows the 2pm crash.</span>','<b class="x">Avoid</b>: ingredient-deck VO, "revolutionary", drone b-roll.']},
  {cmd:"/format-teardown",bucket:"Reverse-engineer",ti:"Steal the skeleton, not the pixels",de:"Paste a winning video. Get its narrative DNA (framework + hook pattern), its edit DNA (signature device + density), and exactly how to rebuild it for your product.",
+  call:'format_teardown <span class="arg">url="tiktok.com/@…/video/…"</span>',
   prompt:"Use format_teardown: description = {paste or describe a winning video}. Break down the framework, hook pattern, signature device, edit density, and how to rebuild it for my product.",
-  lines:['Framework: Testimonial → Symptom → Switch → Proof.','Hook pattern: <span class="slot">belief-challenging POV</span>, caption-safe.','Signature device: the 7am / 7pm mirror cut. That\'s the whole video.','Density: LOW, one continuous selfie. The lack of polish IS the trust.','To clone: keep one shot, swap the mirror demo for your before/after.']},
+  lines:['<b class="x">Teardown · 4.2M views · 9.1× breakout</b>','Framework: Testimonial → Symptom → Switch → Proof.','Hook pattern: <span class="slot">belief-challenging POV</span>, caption-safe.','','<b class="x">Beat map</b>','0.0s   hook, hard cut, no logo','1.8s   symptom (the stuck state)','4.5s   the switch (product enters, no narration)','7.0s   proof (before / after in one frame)','','<b class="x">Signature device</b>','the 7am / 7pm mirror cut. that\'s the whole video.','Density: LOW, one continuous selfie. the lack of polish IS the trust.','','<b class="x">Rebuild for you</b>','keep one shot, swap the mirror demo for your before/after.']},
  {cmd:"/cracked-hooks",bucket:"Hooks",ti:"Hooks that survive the scroll",de:"Ranked hooks for {product}, each a different pattern from a 13-pattern taxonomy, each a different angle, all caption-safe and brand named late.",
+  call:'cracked_hooks <span class="arg">product="eye cream" audience="under-eye checkers" count=8</span>',
   prompt:"Use cracked_hooks: product = {your product}, niche = {your niche}, audience = {who}. Give me 8 hooks, each a different pattern, caption-safe, none naming the brand in line 1.",
-  lines:['<b class="x">[POV]</b> "POV: it\'s 7pm and your <span class="slot">{category}</span> looks exactly like it did at 7am."','<b class="x">[Belief]</b> "I thought every <span class="slot">{category}</span> was the same. Not this one."','<b class="x">[Call-out]</b> "for the girlies checking their under-eyes every 2 hours, this is for you."','<b class="x">[Size]</b> "92 of the 102 things your routine\'s missing. in one step."']},
+  lines:['<b class="x">8 hooks · 8 patterns · brand named late</b>','','<b class="x">[POV]</b> "POV: 7pm and your <span class="slot">under-eyes</span> look like 7am."','<b class="x">[Belief]</b> "I thought every eye cream was the same. not this one."','<b class="x">[Call-out]</b> "for the girlies checking under-eyes every 2 hours."','<b class="x">[Size]</b> "92 of the 102 things your routine\'s missing. one step."','<b class="x">[Curiosity]</b> "the step everyone skips that does all the work."','<b class="x">[Contrarian]</b> "stop buying the $220 one. here\'s why."','<b class="x">[Time]</b> "what 14 days of this actually looks like."','<b class="x">[Receipt]</b> "the only one that survived my gym bag."','','All caption-safe. none name the brand in line 1.']},
  {cmd:"/shoot-brief",bucket:"Brief",ti:"Product in, shoot-ready brief out",de:"A full brief for {product}: framework, angle, hook bank, and a Beat / VO / on-screen-text / B-roll table a creator can film, plus the CTA and shoot notes.",
+  call:'shoot_brief <span class="arg">product="matcha kit" objective="cold traffic"</span>',
   prompt:"Use shoot_brief: product = {your product}, audience = {who}, objective = {goal}. Give me the framework, angle, a hook bank, and a Beat/VO/on-screen-text/B-roll table I can hand to a creator.",
-  lines:['Framework: Problem-Agitate-Solution · Angle: Testimonial (4 shots)','<b class="x">Beat · VO · Text · B-roll</b>','Hook · "okay so I\'ve tried like 6 of these" · <span class="slot">6 IN A DRAWER</span> · handheld, to camera','Agitate · "and every one died by noon" · <span class="slot">STILL FADED</span> · the stuck-state, before','Solution · "this is the only one that held" · <span class="slot">9PM. STILL ON.</span> · the result, no narration']},
+  lines:['<b class="x">Brief · PAS · Testimonial angle · 4 shots</b>','','<b class="x">Beat · VO · on-screen text · B-roll</b>','Hook · "okay I tried 6 of these" · <span class="slot">6 IN A DRAWER</span> · handheld, to cam','Agitate · "every one clumped by noon" · <span class="slot">STILL CLUMPY</span> · the stuck state','Switch · "then this one" · <span class="slot">NO WHISK?</span> · pour shot, real time','Proof · "2pm, still smooth" · <span class="slot">2PM. STILL ON.</span> · the result, no VO','','CTA · soft, brand named at 0:09, link in bio','','<b class="x">Shoot notes</b>','natural light, one location, phone on a stack of books.','one take. polish kills it.']},
  {cmd:"/kill-the-slop",bucket:"Rewrite",ti:"Point it at weak copy, get a sharper cut",de:"Names exactly what's wrong with weak copy (AI-tell words, brand-centric voice, no specificity, no curiosity gap), then rewrites it shorter and sharper.",
+  call:'kill_the_slop <span class="arg">copy="Discover the revolutionary power of…"</span>',
   prompt:"Use kill_the_slop: copy = {paste your weak copy}. Name what's wrong against the anti-slop bar, then rewrite it in customer voice with a real hook pattern.",
-  lines:['<b class="x">What\'s wrong:</b>','<span class="strike">"Discover the revolutionary power of our product to elevate your routine."</span>','AI-tell words · brand-first · zero specificity · no curiosity gap.','<b class="x">Rewrite (belief-challenging):</b>','<span class="good">"I thought every one of these was the same. I was wrong about this one."</span>']}
+  lines:['<b class="x">Diagnosis</b>','<span class="strike">"Discover the revolutionary power of our product to elevate your routine."</span>','· AI-tell words: "revolutionary", "elevate"','· brand-first, not customer-first','· zero specificity, no curiosity gap','· no hook pattern, nothing stops the scroll','','<b class="x">Rewrite · belief-challenging</b>','<span class="good">"I thought every one of these was the same. I was wrong about this one."</span>','','<b class="x">Alt · POV-recognition</b>','<span class="good">"POV: the first one that actually did what it said."</span>','','shorter. customer voice. a pattern, not a pitch.']}
 ];
 var rail=document.getElementById('rail'),pvName=document.getElementById('pvName'),pvBody=document.getElementById('pvBody'),sel=0;
 SKILLS.forEach(function(s,i){
@@ -524,8 +520,15 @@ function pick(i,focus){
   for(var j=0;j<rows.length;j++){rows[j].setAttribute('aria-selected',j===i?'true':'false');rows[j].tabIndex=j===i?0:-1;}
   if(focus)rows[i].focus();
   var s=SKILLS[i];pvName.textContent=s.cmd+' · output';
-  pvBody.innerHTML='<h4>'+s.ti+'</h4>'+s.lines.map(function(l){return '<div class="pv-line">'+l+'</div>';}).join('');
+  var call=s.call||'',sp=call.indexOf(' ');
+  var callHtml=sp>0?'<b>'+call.slice(0,sp)+'</b>'+call.slice(sp):'<b>'+call+'</b>';
+  pvBody.innerHTML='<div class="pv-cmd">▸ '+callHtml+'</div>'
+    +'<h4>'+s.ti+'</h4>'
+    +s.lines.map(function(l){return '<div class="pv-line">'+(l===''?'&nbsp;':l)+'</div>';}).join('')
+    +'<div class="pv-done">✓ done · '+s.bucket.toLowerCase()+' · 1 LazyReel call</div>'
+    +'<span class="pv-cursor" aria-hidden="true"></span>';
   pvBody.dataset.prompt=s.prompt;
+  pvBody.scrollTop=0;
 }
 pick(0);
 document.getElementById('pvCopy').addEventListener('click',function(){copy(this,SKILLS[sel].prompt);});
