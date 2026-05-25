@@ -64,6 +64,15 @@ The conclusions did not arrive in one shot. The evolution is part of the evidenc
 6. **Two laws do most of the work.** Across every tier, not signaling the format and maximizing per-frame novelty were the levers that separated winners. The other three help but matter less.
 7. **Methodology moved the result more than the model did.** The same laws scored 94%, 41%, or 83% depending only on how the test was built. That is why this folder documents the how, not just the what.
 
+## Ablation: which laws carry the signal
+
+To check whether the five laws are real or just a holistic "looks viral" judgment, we ablated them on the 18 clean same-creator pairs (full-five baseline 83%), blind, each condition restricted to a subset:
+
+- **Laws 3 + 4 only** (per-frame novelty, no format label): 12/18 = 67%.
+- **Laws 1 + 2 + 5 only** (visual question, payoff taste, social/emotional charge): 9/18 = 50%, exactly chance.
+
+Reading it honestly: laws 3 and 4 are the load-bearing pair, which matches what we saw in every correct call across the earlier tiers. But neither subset reproduces the full 83%, so the laws work best as a set, and laws 1, 2, and 5 are not independently predictive within a single creator. With n=18 the confidence intervals overlap, so this is directional, not settled. The product takeaway: lead the generation gate with laws 3 and 4, but keep all five, because the set still beats either half.
+
 ## What this licenses the tool to claim
 
 That nailing the first three seconds is a real, measured edge (85% pooled, significant), not a guarantee of virality. The tool states this and shows all three test tiers plus the method note, so it cannot oversell.
