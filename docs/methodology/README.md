@@ -15,9 +15,10 @@ LazyReel makes claims about what makes short-form video win (see the `breakout_v
 
 ## Files
 
-- **`breakout-vs-dud-study.md`** : the full study answering "why does the same concept get 1K vs 1M views," including the result that nearly fooled us and how we caught it.
+- **`breakout-vs-dud-study.md`** : the full study answering "why does the same concept get 1K vs 1M views," including the result that nearly fooled us, how we caught it, and what we learned over time.
 - **`validation-protocol.md`** : the reusable blind-prediction protocol and the local pipeline (frame extraction plus sub-agent predictors), so you can run a new test the same way.
-- **`data-discipline.md`** : what is committed vs gitignored and the legal reasoning, including why we do not publish the list of analyzed video links.
+- **`corpus-index.md`** : transparent counts of what we analyzed, by niche, with the validation-pair tally.
+- **`data-discipline.md`** : what is committed vs gitignored and the legal reasoning around analyzed video links.
 
 ## Headline results (as of commit history below)
 
