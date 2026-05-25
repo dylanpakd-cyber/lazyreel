@@ -145,7 +145,7 @@ Shadows are **soft, warm, low**, never hard brutalist offset blocks.
 
 LazyWeb's section order, UGC content. Centered single column, `--page-max` width, faint dotted-grid background, full-width hairline rules between sections, numbered mono section labels (`01 / SKILLS`).
 
-**Button discipline (explicit, per feedback):** the old build had too many buttons. Hard caps:
+**Button discipline.** Hard caps:
 - Nav: at most 4 text links + 1 status pill + 1 primary CTA.
 - **One agent only.** No agent-mode switcher. Delete the two-tab toggle entirely.
 - Each content section gets at most one CTA. Most sections get zero and rely on the page's two anchor CTAs (hero + closing).

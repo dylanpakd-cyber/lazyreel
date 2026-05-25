@@ -99,4 +99,4 @@ Signature device: the muddy-to-clean shoe bookend. Density: 0-7s HIGH, 7-14s MED
 
 ## References
 
-- `references/cut-timeline.md`: the cut-rhythm laws, the framing vocabulary, and what over-indexes, as timeline directives. Read it first. (The legacy `effects-breakdown-reference.txt` is a generic cinematic-effects reference and is off-thesis for LazyReel UGC; do not pull cinematic effects from it.)
+- `references/cut-timeline.md`: the cut-rhythm laws, the framing vocabulary, and what over-indexes, as timeline directives. Read it first.
