@@ -1,187 +1,170 @@
 ---
 name: lazyreel-ugc-ad-director
-description: Create hyper-realistic AI UGC video ad prompts (Seedance 2.0). Give it a script, product concept, or an LazyReel format/brief and get Pinterest reference links and detailed, copy-paste shot prompts. Use to MAKE a short-form video from a proven format. Pairs with the LazyReel MCP — pull what works first (find_trends, study_examples, replicate_format), then this writes the prompts.
+description: Create hyper-realistic AI UGC video ad prompts (Seedance 2.0) as a 3-4 clip cut sequence, not one long static shot. Give it a script, a product concept, or a LazyReel format/brief and get Pinterest reference links plus copy-paste prompts, each clip with a positive prompt, a negative (do-not) prompt, and a one-line why-it-works tied to a measured breakout law. Use to MAKE a short-form video from a proven format. Pairs with the LazyReel MCP (pull find_trends, study_examples, breakout_vs_dud, replicate_format first) and hands the clips to the lazyreel-video-editor skill for the cut.
 ---
 
-# LazyReel — UGC Ad Director (Seedance 2.0)
+# LazyReel UGC Ad Director (Seedance 2.0)
 
-**MANDATORY RULES — read these before doing anything:**
+**MANDATORY RULES, read before doing anything:**
 
-1. Follow the EXACT output format below. Do NOT invent your own format, tabs, categories, or "director notes."
-2. Seedance 2.0 DOES generate speech and dialogue natively with lipsync. NEVER tell users to add voiceover in post.
-3. NEVER use the word "cinematic" anywhere. These are UGC ads that look like iPhone footage.
-4. Every output MUST include Pinterest links. Never skip them.
-5. Do NOT ask clarifying questions. Make creative decisions yourself and output everything in ONE response.
+1. Output a **3-4 clip cut sequence**, never one long continuous shot. A 12-15s ad is 3 to 4 short clips (each 3-4s, one action arc), hard-cut together. This is not a stylistic choice; per-frame novelty was one of the two strongest things we measured. One static clip loses.
+2. Follow the EXACT output format below. Do not invent your own tabs, categories, or director notes.
+3. Every clip gets three things: a **positive prompt**, a **Negative prompt** (what the model must not do), and a **Why it works** line tied to a specific breakout law or lift.
+4. Seedance 2.0 generates speech and dialogue natively with lipsync. Never tell users to add voiceover in post.
+5. Never use the word "cinematic" anywhere. These look like iPhone footage.
+6. Every output includes Pinterest reference links. Never skip them.
+7. Do not ask clarifying questions. Make the creative calls and output everything in one response.
+8. Ground the choices in the data. If the LazyReel MCP is connected, call `breakout_vs_dud` (the laws), `study_examples` or `viral_teardowns` (the niche's winning format), and use the brief. See `references/breakout-prompting.md`.
 
 ---
 
-## EXACT OUTPUT FORMAT — follow this structure every time:
+## EXACT OUTPUT FORMAT, follow this every time:
 
-When the user gives you a script or concept, output this EXACT structure:
-
-# Your UGC Ad — Director's Brief
+# Your UGC Ad, Director's Cut
 
 **Product:** [name]
-**Duration:** [total]s ([N] segments x 15s)
-**Ad Structure:** Hook → Problem/Proof → Benefit/Demo → CTA
+**Cut:** [total]s, [N] clips, hard-cut (cut every 1.5 to 3s)
+**Structure:** Hook (clip 1) -> Problem/Proof -> Switch/Demo -> Payoff (final clip)
+**Why this structure:** [the framework from the brief, e.g. PAS 1.8x, before-after hook 2.3x]
 
 ---
 
-## Step 1: Find Your Creator on Pinterest
+## Step 1: Find your creator on Pinterest
 
-This person stars in every scene. Pick ONE consistent character reference.
+One consistent character across every clip. Browse and pick ONE.
 
-**Browse these links and find a person who fits your ad:**
+1. [Description] -> https://www.pinterest.com/search/pins/?q=QUERY
+2. [Description] -> [Pinterest URL]
+3. [Description] -> [Pinterest URL]
+4. [Description] -> [Pinterest URL]
 
-1. [Description] → [Pinterest URL: https://www.pinterest.com/search/pins/?q=QUERY]
-2. [Description] → [Pinterest URL]
-3. [Description] → [Pinterest URL]
-4. [Description] → [Pinterest URL]
-
-**What to pick:** Natural lighting, casual clothes, phone-quality feel. NO studio lighting, NO magazine poses, NO heavy makeup. The more "real" the better.
-
-**CRITICAL:** Only use CLEAN photos — no emoji stickers, watermarks, text overlays, or app UI. Seedance recreates everything it sees as physical objects.
-
-Your chosen image becomes **@Image1** — upload it to Seedance 2.0 as a reference for every segment.
+**What to pick:** natural light, casual clothes, phone-quality feel. No studio lighting, no magazine poses, no heavy makeup. Only CLEAN photos: no emoji stickers, watermarks, text overlays, or app UI (Seedance recreates everything it sees as a physical object). Your pick becomes **@Image1**, uploaded to every clip. (Faceless and handheld over-indexed 10.5x, so a hands-only or POV creator is a valid, strong choice.)
 
 ---
 
-## Step 2: Setting & Product References (Optional)
+## Step 2: Setting and product references (optional)
 
-Grab additional Pinterest references for settings and product interaction poses:
-
-**Scene 1 — [Hook]:**
-1. [Setting search] → [Pinterest URL]
-2. [Product interaction search] → [Pinterest URL]
-
-**Scene 2 — [next section]:**
-1. [Setting search] → [Pinterest URL]
-2. [Product interaction search] → [Pinterest URL]
-
-[Continue for each scene. Only clean photos — no overlays.]
+Per clip, grab a setting and a product-interaction reference. Clean photos only.
 
 ---
 
-## Step 3: Seedance 2.0 Prompts — Copy & Paste
+## Step 3: The clip sequence, copy and paste
 
-Upload your Pinterest creator as @Image1 and your product photo as @Image3 for EVERY segment.
+Upload @Image1 (creator) and @Image3 (product photo) to every clip.
 
-### Segment 1 of [N] — [Hook] (0:00-0:15)
+### Clip 1 of [N], the Hook (0:00 to ~0:03)
 
-**What's happening:** [One sentence]
+**Beat:** [one sentence. This is the most unresolved, highest-charge shot. No title card.]
 
 ```
-9:16. 15 seconds. Single continuous shot. UGC style. iPhone handheld.
-
+9:16. ~3 seconds. Single shot, one action. UGC style, iPhone handheld, slight camera shake, natural window light.
 @Image1 is the creator. @Image3 is the product.
 
-[0:00-0:05] [Rich, detailed description — 3-4 sentences. Camera position,
-the person's full appearance, what they're wearing, their expression, what
-their hands are doing, what's on the surface in front of them and what's
-NOT there, the specific light source and direction, the background details.]
+[Rich 3-4 sentence description: camera position, the person's full appearance and exact expression, what each hand is doing, what is on the surface and what is NOT there, the specific light source and direction, the background. The opening visual poses a question the viewer needs resolved.]
 
-[0:05-0:10] [Rich, detailed description — 3-4 sentences. What changes,
-what the person does with the product, hand movements, facial expression
-shift, what's visible, what's not. Same light source. Background consistent.]
-
-[0:10-0:15] [Rich, detailed description — 3-4 sentences. Final movement,
-expression, eye contact, body position, product position. Describe the
-final moment clearly.]
-
-Audio: [Voice character — age, gender, tone, energy. E.g., "Warm male voice,
-early 40s, genuine and relaxed, dad-energy, not performative"]. [Room tone
-matching the setting — e.g., "Open kitchen acoustics, subtle ambient hum,
-warm room tone"]. Natural speech rhythm with pauses. "[Full dialogue with
-filler words, contractions, and casual pacing]."
+Audio: [voice character: age, gender, tone, energy]. [room tone matching the setting]. Natural rhythm with pauses and filler words. "[the hook line, caption-safe, lands with sound off]."
 ```
 
-### Segment 2 of [N] — [Problem/Proof] (0:15-0:30)
+**Negative:** plastic or airbrushed skin, extra or fused fingers, morphing face, warping background, floating or duplicated objects, on-screen text or watermark or logo, subtitles, cinematic color grade, lens flare, slow motion, oversaturation, beauty filter, studio lighting, title card, "GRWM" or "review" or "ad" label.
 
-[Same detailed format — @Image1 stays the SAME]
+**Why it works:** [one line, tied to a law or lift. E.g. "opens on an unresolved visual question (law 1) and front-loads a face mid-expression (law 5)."]
 
-[Continue for all segments]
+### Clip 2 of [N], [Problem/Proof] (~0:03 to ~0:07)
+
+**Beat:** [one sentence. New framing or angle. The product can enter here as a helper.]
+
+```
+[same prompt block shape, a new shot and angle, same @Image1, same light and setting for continuity]
+Audio: [continues the line]
+```
+
+**Negative:** [same base list, plus anything specific to this shot]
+
+**Why it works:** [tied to a law or lift]
+
+### Clip 3 (and 4) , [Switch/Demo then Payoff]
+
+[Same shape. The final clip delivers the payoff the hook teased, then a hard end. Product named late. No drawn-out CTA.]
 
 ---
 
-## Step 4: Generate & Review
+## Step 4: Hand the clips to the editor
 
-1. Generate all segments in Seedance 2.0 (on Max Fusion or Jianying)
-2. Check: Does the creator look consistent across segments?
-3. Check: Does it look like a real person filmed this on their phone?
-4. If anything looks off, regenerate that segment with the same @Image1
-5. Stitch segments in order and export
+You produced 3 to 4 short clips, one shot each. They are not the finished video yet. Hand them to the **lazyreel-video-editor** skill, which trims each to its beat, crops to 9:16, concatenates with hard cuts every 1.5 to 3s, normalizes loudness, and burns the sound-off caption (the first caption must carry the hook). Tell the editor the clip order and which clip is the hook.
 
----
+## Step 5: Generate and review
+
+1. Generate each clip in Seedance 2.0, same @Image1 across all.
+2. Check creator consistency and that it reads as real phone footage.
+3. Regenerate any clip that trips its Negative list.
+4. Send the set to the video-editor for the cut.
 
 ## END OF OUTPUT FORMAT
 
-Everything above between "# Your UGC Ad — Director's Brief" and "## END OF OUTPUT FORMAT" is the EXACT structure to follow. Now here are the rules for writing the prompts:
-
 ---
 
-## Prompt Writing Rules
+## Prompt writing rules
 
-### Anti-Cinematic Rules (NON-NEGOTIABLE)
+### Multi-clip, not one shot
 
-**ALWAYS use:** `iPhone handheld`, `natural lighting` / `window light`, `UGC style`, `slight camera shake`, `casual`, `authentic`, `9:16`
+Each clip is ONE action arc of 3 to 4 seconds, a distinct framing (wide, macro, reframe, insert). Do not describe two scene changes in one prompt. The variety across clips IS the per-frame novelty that wins. If a concept truly needs one continuous take, still break the coverage into a hook shot plus inserts so the editor has cuts to work with.
 
-**NEVER use:** `cinematic`, camera brands (`ARRI`, `RED`, `Blackmagic`), `anamorphic`, `film grain`, `dramatic lighting`, `speed ramp`, `bloom flash`, `lens flare`, `whip pan`, `crane`, `dolly`, `steadicam`, `gimbal`, `Dutch angle`, `color grade`, `LUT`, `bokeh`, `epic`, `breathtaking`, `stunning`, `slow motion` (unless "iPhone slow-mo"), `depth of field` alone (say "phone camera depth of field")
+### Negative prompts (the do-not list)
 
-### Detail Level
+Every clip carries a Negative line. It does two jobs: kill the AI-video glitches (plastic skin, extra fingers, morphing, warping text, floating objects) and kill the slop tells (cinematic grade, lens flare, oversaturation, beauty filter, baked-in captions or logos, a format label or title card in the opening). Add shot-specific negatives as needed (for a hands-only clip: "no face, no full body"). The full library is in `references/breakout-prompting.md`.
 
-Be VERY descriptive. Every 5-second block needs 3-4 sentences of specific detail:
-- What the person is doing with EACH hand
-- Their exact facial expression
-- What's on the surface and what's NOT there
-- Background details
-- Specific light source and direction
-- If you don't describe it, Seedance invents it — and you get random artifacts
+### Anti-cinematic vocabulary
 
-### Audio Direction
+**Always:** `iPhone handheld`, `natural light` / `window light`, `UGC style`, `slight camera shake`, `casual`, `authentic`, `9:16`.
+**Never:** `cinematic`, camera brands (`ARRI`, `RED`, `Blackmagic`), `anamorphic`, `film grain`, `dramatic lighting`, `speed ramp`, `lens flare`, `whip pan`, `crane`, `dolly`, `gimbal`, `Dutch angle`, `color grade`, `LUT`, `bokeh`, `epic`, `breathtaking`, `stunning`, `slow motion` (unless "iPhone slow-mo"), bare `depth of field` (say "phone camera depth of field").
 
-Every prompt MUST include detailed audio. Seedance 2.0 generates audio natively.
+### Detail level
 
-**Voice:** Match to demographic. E.g., "Warm female voice, mid-20s, casual, talking to a friend" or "Deep male voice, 40s, genuine dad energy, not a narrator"
+Every clip needs 3-4 sentences of specifics: what each hand does, the exact expression, what is and is not on the surface, the background, the light source and direction. If you do not describe it, Seedance invents it and you get artifacts.
 
-**Room tone — must match the setting:**
-- Bathroom: slight reverb from tiled walls
-- Bedroom: soft close acoustics, carpeted, minimal echo
-- Kitchen: open space feel, subtle ambient sounds
-- Car: muffled close acoustics
-- Outdoors: natural ambience, slight wind
-- Living room: warm room tone, furnished space
+### Audio direction (Seedance generates audio natively)
 
-**Speech pattern:** Natural with pauses, filler words, contractions. NOT scripted.
+**Voice:** match the demographic, e.g. "warm female voice, mid-20s, talking to a friend" or "deep male voice, 40s, genuine dad energy, not a narrator."
+**Room tone, must match the setting:** bathroom (slight tile reverb), bedroom (soft close, carpeted), kitchen (open, subtle ambience), car (muffled close), outdoors (natural ambience, slight wind), living room (warm furnished tone).
+**Speech:** natural, with pauses, filler words, contractions. Not scripted.
 
-### Dialogue Rules
+### Dialogue rules
 
-Write dialogue that sounds REAL, not scripted:
-- Use contractions: "I've been," "it's literally," "you're gonna"
-- Include filler words: "like," "honestly," "so basically"
-- Casual grammar — fragments and run-ons are fine
-- Sound genuinely excited or skeptical, not rehearsed
+Contractions ("I've been," "it's literally"), filler words ("like," "honestly," "so basically"), casual grammar, genuinely excited or skeptical. The first line must land as a caption with sound off.
+**Good:** "okay so I've been using this for like two weeks and honestly? it actually works."
+**Bad:** "this revolutionary product has transformed my routine completely."
 
-**Good:** "Okay so I've been using this for like two weeks and honestly? It actually works."
-**Bad:** "This revolutionary product has transformed my routine completely."
+### Reference image mapping
 
-### Pinterest URL Format
+`@Image1` = creator from Pinterest (same across ALL clips). `@Image2` = setting reference if needed. `@Image3` = product photo (user provides).
 
-`https://www.pinterest.com/search/pins/?q=WORDS+SEPARATED+BY+PLUS+SIGNS`
+### Seedance 2.0 facts
 
-Make searches specific to the scene: combine the person demographic + action + setting.
+Input up to 9 images + 3 videos + 3 audio. Output 4-15s per generation, up to 2K, 9:16. Native dialogue with lipsync, ambient, and room tone generated together. Handles long detailed prompts well with @Image refs. One action arc per prompt, so one clip per generation.
 
-### Reference Image Mapping
+## Worked example
 
-```
-@Image1 = creator from Pinterest (same across ALL segments)
-@Image2 = setting reference if needed
-@Image3 = product photo (user provides this)
-```
+Product: a matcha kit. Brief: PAS, before-after hook. The MCP says before-after hooks lift 2.3x and PAS lifts 1.8x in this niche.
 
-### Seedance 2.0 Facts
+- **Clip 1, Hook (0:00-0:03):** macro of clumpy matcha mid-whisk, no face yet, hands only. Audio caption-safe: "still clumpy at 2pm?" Negative: text, watermark, cinematic grade, smooth skin. Why: unresolved question (law 1), faceless+handheld combo (10.5x).
+- **Clip 2, Problem (0:03-0:06):** the creator's annoyed glance at the clumpy cup, new angle. Why: emotional charge (law 5), high-arousal beats neutral.
+- **Clip 3, Switch (0:06-0:10):** smooth pour from the product, macro, real time. Product enters as helper (1.6x). Why: taste of the payoff (law 2).
+- **Clip 4, Payoff (0:10-0:14):** the finished cup, one sip, knowing look, hard end. Why: delivers the withheld reveal, no drawn-out CTA (explicit CTA loses at 0.67x).
 
-- Input: up to 9 images + 3 videos + 3 audio (12 total)
-- Output: 4-15 seconds per generation, up to 2K, 9:16 for UGC
-- Native audio: dialogue with lipsync, ambient sounds, room tone — all generated together
-- Handles long detailed prompts well, especially with @Image references
-- One action arc per prompt — don't describe two scene changes in one prompt
+Hand all four to lazyreel-video-editor: cut order 1-2-3-4, clip 1 is the hook, caption "still clumpy at 2pm?" burned at 0.5s.
+
+## Quality checklist
+
+- [ ] 3-4 clips, one action arc each, never one long static shot
+- [ ] Clip 1 is the most unresolved, highest-charge shot, no title card
+- [ ] Every clip has a positive prompt, a Negative prompt, and a why-it-works tied to a law or lift
+- [ ] Anti-cinematic vocabulary respected (no "cinematic," no camera brands)
+- [ ] Audio + room tone specified per clip, dialogue sounds real, first line is sound-off legible
+- [ ] Same @Image1 across all clips, clean reference photos only
+- [ ] Product enters as a helper, named late, no explicit CTA card
+- [ ] Pinterest links present
+- [ ] Handed to the video-editor with the cut order
+
+## References
+
+- `references/breakout-prompting.md`: the five laws as positive prompt directives, the negative-prompt library (AI glitches + slop tells), the lift tables as "what to generate," and the niche-to-opening map. Read it before writing prompts.
