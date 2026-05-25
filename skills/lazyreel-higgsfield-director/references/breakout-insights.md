@@ -4,7 +4,7 @@ The distilled, measured findings from decoding the LazyReel corpus, written as d
 
 ## The five first-3-seconds laws
 
-A video that follows more of these beats one that follows fewer. In validation, the higher-law-compliance video was the higher-views video on 41 of 48 blind pairs (85%, z=4.91).
+A video that follows more of these beats one that follows fewer. In blind validation the higher-law-compliance video was the higher-views video 83% of the time on the cleanest test (same-creator, audience controlled) and 94% at extremes. It is at chance for ranking moderate-gap pairs across different creators, where follower count owns raw views, so judge by creator-baseline.
 
 1. **Open on an unresolved visual question, not a caption that explains the premise.** The first frame should make the viewer need to keep watching to find out what happens. A caption that states the premise kills it. Example contrast: a winner opened on two mismatched dogs nose to glass (will the big one hurt the small one); the dud captioned "POV: the most spoiled dog" over a static shot and had nothing left to show.
 2. **Show a taste of the payoff inside the first ~1.5s, then withhold the full reveal.** Lead with the most desirable or striking visual, then hold the resolution. A hair winner dropped one perfect curl at 1.5s and withheld the full mane for nearly a minute; the dud opened on the finished hair and had nowhere to go.

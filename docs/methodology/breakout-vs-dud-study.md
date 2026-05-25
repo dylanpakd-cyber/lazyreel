@@ -33,9 +33,11 @@ We then ran blind, out-of-sample tests. For each test we took pairs the laws wer
 | Test | Pairs | Accuracy |
 |---|---|---|
 | Extremes (concept-matched, ~1000x gap) | 18 | 17/18 = 94% |
-| Closer-margin (concept-matched, 8 to 34x gap) | 12 | 9/12 = 75% |
-| Same-creator, age-controlled | 18 | 15/18 = 83% (z=2.83) |
-| Pooled | 48 | 41/48 = 85% (95% CI 73 to 93%, z=4.91) |
+| Same-creator, age-controlled (follower-controlled) | 18 | 15/18 = 83% (z=2.83) |
+| Closer-margin (cross-creator, 5 to 34x gap) | 30 | 15/30 = 50% (chance) |
+| Pooled | 66 | 47/66 = 71% (z=3.45) |
+
+The closer-margin row taught us the most, and it only appeared when we scaled the test. At n=12 it read 75%; scaling to n=30 dropped it to 50%, exactly chance. That is not a contradiction with the 83% same-creator result, it is the follower confound surfacing where it should: at a moderate view gap between two different creators, raw views are owned by audience size, so a large account with a weak opening out-views a small account with a strong one. The craft-based laws correctly pick the stronger opening and it still loses on raw views. The same-creator test removes audience size from the comparison, which is why it holds at 83%.
 
 ## The result that almost fooled us
 
@@ -47,7 +49,8 @@ The fix: require the dud to be at least as *old* as the winner, so it is a genui
 
 ## Honest limits
 
-- Sample is small (18 clean same-creator pairs, 48 pooled). The true within-creator rate could sit anywhere from roughly 61 to 94%.
+- Sample is small (18 clean same-creator pairs, 66 pooled). The true within-creator rate could sit anywhere from roughly 61 to 94%.
+- The laws do NOT rank moderate-gap pairs across different creators (50%, n=30): raw views there are owned by follower count, not the opening. Use creator-baseline (vpf / same-creator), never raw views across creators.
 - The "why" is inferred from still frames, not watch-time curves or A/B tests.
 - Every miss was an external pull the frames cannot see: a celebrity (a Zendaya video), or a flashy opening the laws over-rewarded. The laws explain opening craft, and opening craft loses to star power or a trending sound.
 - The two laws carrying most of the signal across all tiers are: do not signal the format (no "GRWM / tutorial / review" title card), and maximize per-frame novelty (macro, motion, or new shots) rather than a static talking head.
@@ -72,7 +75,7 @@ Breaking the 48 pooled predictions out by niche (the 30 concept-matched pairs ca
 - The two soft spots are skincare (3/5) and ABG beauty (1/2, n=2).
 - No niche is near chance.
 
-So the 85% is broad, not carried by a single vertical. The per-niche samples are small, so treat the soft spots as a flag to gather more skincare and beauty pairs, not as a verdict.
+So the accuracy is broad across niches, not carried by a single vertical. The per-niche samples are small, so treat the soft spots as a flag to gather more skincare and beauty pairs, not as a verdict.
 
 ## Ablation: which laws carry the signal
 
@@ -91,4 +94,4 @@ Reading it honestly: laws 3 (per-frame novelty) and 4 (no format label) are the 
 
 ## What this licenses the tool to claim
 
-That nailing the first three seconds is a real, measured edge (85% pooled, significant), not a guarantee of virality. The tool states this and shows all three test tiers plus the method note, so it cannot oversell.
+That nailing the first three seconds is a real, measured edge *within a creator* (83%, the cleanest test) and for telling viral-grade from weak (94%), but not a cross-creator raw-view predictor (50% at moderate gaps, where follower count rules). It is a first-three-seconds QC floor and a within-creator lever, not a virality guarantee. The tool states this and shows all three tiers plus the method and ablation notes, so it cannot oversell.

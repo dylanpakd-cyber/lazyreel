@@ -444,7 +444,7 @@ export function crackedHooks(i: HookInput): string {
     "",
     ...lines,
     "",
-    ...(laws.length ? [`## The opening frame must also clear (validated, 85% blind)`, ...laws.map(l => `- [ ] ${l}`), ""] : []),
+    ...(laws.length ? [`## The opening frame must also clear (validated, 83% within-creator)`, ...laws.map(l => `- [ ] ${l}`), ""] : []),
     `> Test 3-4 of these as the first 2 seconds. The hook is 80% of the result.`,
   ].join("\n");
 }

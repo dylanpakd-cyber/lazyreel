@@ -51,9 +51,9 @@ Pairs used to test the breakout-vs-dud laws, none of which were used to derive t
 | Tier | Pairs | Result |
 |---|---|---|
 | Extremes (concept-matched, ~1000x gap) | 18 | 17/18 = 94% |
-| Closer-margin (concept-matched, 8 to 34x gap) | 12 | 9/12 = 75% |
+| Closer-margin (cross-creator, 5 to 34x gap) | 30 | 15/30 = 50% (chance) |
 | Same-creator, age-controlled | 18 | 15/18 = 83% (significant) |
-| **Pooled valid** | **48** | **41/48 = 85% (z=4.91)** |
+| **Pooled valid** | **66** | **47/66 = 71% (z=3.45); cleanest tier is same-creator 83%** |
 
 Two earlier same-creator batches (14 and 40 pairs) were discarded after we found a recency confound. They are documented in `breakout-vs-dud-study.md` as a lesson, not counted as evidence.
 

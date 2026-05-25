@@ -26,8 +26,8 @@ LazyReel makes claims about what makes short-form video win (see the `breakout_v
 | Test | What it controls for | Result |
 |---|---|---|
 | Extremes (concept-matched, ~1000x gap) | nothing | 17/18 = 94% |
-| Closer-margin (concept-matched, 8 to 34x gap) | smaller gap | 9/12 = 75% |
+| Closer-margin (cross-creator, 5 to 34x gap) | smaller gap, not follower-controlled | 15/30 = 50% (chance) |
 | Same-creator, age-controlled | audience and video age | 15/18 = 83% (z=2.83, p approximately 0.002) |
-| **Pooled across all valid pairs** | mixed | **41/48 = 85% (95% CI 73 to 93%, z=4.91)** |
+| **Pooled across all valid pairs** | mixed | **47/66 = 71% (z=3.45); read tiers separately, pooling masks the confound** |
 
 Baseline for every test is 50% (a coin flip between two videos). Full detail in `breakout-vs-dud-study.md`.

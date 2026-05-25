@@ -12,7 +12,7 @@ The opening clip decides reach. Write clip 1 to satisfy these:
 4. **No format label.** Never prompt a "GRWM," "tutorial," "review," "ad," or title-card overlay in the opening. Show it, never label it. This was one of the two strongest laws.
 5. **Social or emotional charge in frame 1.** Prompt a face mid-expression, two people, a color pop, or a prop. High-arousal openings win.
 
-Laws 3 and 4 carried the most weight in blind validation (85% on out-of-sample pairs).
+Laws 3 and 4 carried the most weight in blind validation (83% within-creator, the cleanest tier).
 
 ## The negative-prompt library (the do-not list)
 

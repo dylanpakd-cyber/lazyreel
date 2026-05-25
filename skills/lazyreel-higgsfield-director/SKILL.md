@@ -83,7 +83,7 @@ Do not render until the plan clears these. A no here is cheaper to fix in the pr
 
 ## Honest scope
 
-These laws predicted the higher-view video on 41 of 48 blind, out-of-sample pairs (85%, significant), strongest when telling a viral-grade opening from a weak one and within a single creator. They do not guarantee virality. External pulls (a celebrity, a trending sound) beat opening craft and the laws cannot see those. Treat the checklist as the floor that keeps you from losing in the first 3 seconds, not a promise of a hit. Full method in `docs/methodology` of the LazyReel repo.
+These laws predicted the higher-view video 83% of the time on the cleanest blind test (same-creator, audience controlled) and 94% at extremes, but only at chance for ranking moderate-gap pairs across different creators (follower count owns raw views there). They do not guarantee virality. External pulls (a celebrity, a trending sound) beat opening craft and the laws cannot see those. Treat the checklist as the floor that keeps you from losing in the first 3 seconds, not a promise of a hit. Full method in `docs/methodology` of the LazyReel repo.
 
 ## References
 

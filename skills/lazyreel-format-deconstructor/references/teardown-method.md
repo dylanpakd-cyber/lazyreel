@@ -89,4 +89,4 @@ Cross-reference with `breakout_vs_dud`. The opening either earns the next second
 4. Do not signal the format (no GRWM, tutorial, review, or title card in the opening).
 5. Front-load social or emotional charge in frame 1.
 
-Laws 3 and 4 carried the most weight in blind validation (85% on out-of-sample pairs). When you deconstruct, score the opening against these five first, because that is the part that decides reach.
+Laws 3 and 4 carried the most weight in blind validation (83% within-creator, the cleanest tier). When you deconstruct, score the opening against these five first, because that is the part that decides reach.

@@ -7,7 +7,7 @@
 
 ## Context
 
-Two projects overlap. **LazyReel** reverse-engineers what wins in short-form video and produces grounded prompts; it now has a validated prompt-quality and scoring layer (the five first-3-seconds laws at 85% blind out-of-sample, the 11-level product-proof ladder, and a post-render virality gate). **FormatRadar** does generative reverse-engineering (scrape a viral video, build a FormatSpec, replicate it through a generation API).
+Two projects overlap. **LazyReel** reverse-engineers what wins in short-form video and produces grounded prompts; it now has a validated prompt-quality and scoring layer (the five first-3-seconds laws at 83% within-creator (blind, the cleanest tier), the 11-level product-proof ladder, and a post-render virality gate). **FormatRadar** does generative reverse-engineering (scrape a viral video, build a FormatSpec, replicate it through a generation API).
 
 The observed problem: FormatRadar's individual prompts are undetailed and unpolished, and their hook-rate is weak. The cause is generating against no quality bar. That bar is exactly what LazyReel built and validated.
 
@@ -33,7 +33,7 @@ LazyReel is a clean, shipped MCP plus a documented research notebook with one au
 
 - FormatRadar gains a quality bar it lacked; LazyReel stays the source of truth for what wins.
 - The contract to build toward is the FormatSpec schema plus the scoring layer in `breakout-vs-dud.json`, not two diverging prompt engines.
-- Any new scorer (a brain-response model, a different predictor) must clear the same bar before we trust it: run it blind on the held-out winner/dud pairs and beat or match the 85%. A model that predicts something adjacent (brain activity, attention) is a proxy and earns trust only by predicting our actual outcome.
+- Any new scorer (a brain-response model, a different predictor) must clear the same bar before we trust it: run it blind on the held-out winner/dud pairs and beat or match the within-creator 83%. A model that predicts something adjacent (brain activity, attention) is a proxy and earns trust only by predicting our actual outcome.
 - Because the scope is research, non-commercial-licensed models are usable for benchmarking, but nothing core should depend on a model we could not ship if the scope changed.
 
 ## Worked example (the loop, proven once)
