@@ -93,14 +93,13 @@ claude plugin marketplace add dylanpakd-cyber/lazyreel
 claude plugin install lazyreel@lazyreel
 ```
 
-The skills (`lazyreel-format-deconstructor`, `lazyreel-ugc-ad-director`, `lazyreel-higgsfield-director`, `lazyreel-video-editor`) activate immediately. The MCP server is declared in `.mcp.json`; build it once so it can run, then set your free token:
+The skills (`lazyreel-format-deconstructor`, `lazyreel-ugc-ad-director`, `lazyreel-higgsfield-director`, `lazyreel-video-editor`, `lazyreel-format-prompt-builder`, `lazyreel-ugc-ad-generator`) activate immediately. The MCP server ships **pre-compiled** as a single self-contained bundle (`mcp/build/server.mjs`, declared in `.mcp.json`), so there is no build step. Just set your free token and reload:
 
 ```bash
-cd "$(claude plugin path lazyreel)/mcp" && npm install && npm run build
 export LAZYREEL_TOKEN=lr_your_token   # from the install page, or any string
 ```
 
-(The compiled server lives in `mcp/build`, which is not committed, so this one build step is needed after install. To skip it entirely, see the token-only MCP install below.)
+(The bundle is regenerated with `cd mcp && npm run bundle` whenever the server source changes.)
 
 ## Install it (MCP only)
 

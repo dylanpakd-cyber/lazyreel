@@ -1,5 +1,6 @@
 node_modules/
-mcp/build/
+mcp/build/*
+!mcp/build/server.mjs
 .DS_Store
 *.log
 .env
