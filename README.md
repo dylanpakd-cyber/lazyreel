@@ -6,6 +6,8 @@ LazyReel is a free MCP server that doomscrolled 21B+ views of short-form video (
 
 Think of it as video research for AI, not AI for video creation. It does the research and the writing: what is working, why, the ideas, the niche reads, the teardowns, the hooks, and the shoot-ready briefs. The companion skills in `skills/` turn that research into the actual generation prompts.
 
+It is a harness for making better videos, so it pairs naturally with a video-generation MCP like Higgsfield. LazyReel decides what is worth making and hands over the exact brief; the gen MCP renders it. Same agent, same chat. You stop rendering slop because the thing you generate is grounded in what actually broke out.
+
 Decode with evidence, not vibes.
 
 ## What it gives your agent
