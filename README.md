@@ -28,7 +28,7 @@ Decode with evidence, not vibes.
 7. **format_teardown.** Reverse-engineer a winning video. You get its narrative DNA, its edit DNA, the one signature device it is built around, and how to rebuild it for your product.
 8. **viral_teardowns.** Real breakouts in a niche, each diagnosed for why it out-reached the creator's following: the hook technique, the retention device, the viral mechanism, and the one move to steal.
 9. **winning_combos.** The hook by format pairings that over-index in breakouts, each with the measured lift.
-10. **breakout_vs_dud.** Why the same concept gets 1K vs 1M views: the first-3-seconds laws that separate breakouts from duds, validated blind on concept-matched and same-creator pairs (85% pooled, see `docs/methodology`). Returns the laws, what over-indexes in winners, and an honest confound caveat.
+10. **breakout_vs_dud.** Why the same concept gets 1K vs 1M views: the first-3-seconds laws that separate breakouts from duds, validated blind on concept-matched and same-creator pairs (83% within-creator on the cleanest blind test; see `docs/methodology`). Returns the laws, what over-indexes in winners, and an honest confound caveat.
 11. **format_playbook.** A named format turned into a repeatable, shootable step-by-step.
 
 ### Make the thing
@@ -137,7 +137,7 @@ What it does not do yet: live ingestion of fresh winning videos on demand, trans
 
 ## How the findings were reached
 
-The claims in these tools are tested, not asserted. `docs/methodology` records how. It covers the breakout-vs-dud study (including a result that nearly fooled us and the confound we caught), the reusable blind out-of-sample validation protocol so you can re-run a test the same way, and the data discipline that keeps scraped content out of the repo. Headline: the first-3-seconds laws predicted the higher-view video on 41 of 48 blind, out-of-sample pairs (85%, significant), with the cleanest test holding creator and video age constant. Start at `docs/methodology/README.md`.
+The claims in these tools are tested, not asserted. `docs/methodology` records how. It covers the breakout-vs-dud study (including a result that nearly fooled us and the confound we caught), the reusable blind out-of-sample validation protocol so you can re-run a test the same way, and the data discipline that keeps scraped content out of the repo. Headline: on the cleanest blind test (same-creator, age-controlled, audience held constant) the first-3-seconds laws picked the higher-view video 83% of the time (significant). At ~1000x extremes it is 94%. But ranking moderate-gap pairs across different creators on raw views is at chance, because follower count owns that comparison, so judge craft by creator-baseline. Start at `docs/methodology/README.md`.
 
 ## Data and licensing
 
