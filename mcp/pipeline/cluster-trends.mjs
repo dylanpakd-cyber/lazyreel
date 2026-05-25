@@ -11,7 +11,7 @@ import { readFileSync, writeFileSync, existsSync } from "node:fs";
 import { homedir } from "node:os";
 
 let key = process.env.ANTHROPIC_API_KEY;
-for (const p of [`${homedir()}/format-radar-deconstruct/.env`, ".env"]) {
+for (const p of [`${homedir()}/.lazyreel/.env`, ".env"]) {
   if (!key && existsSync(p)) { const m = readFileSync(p, "utf8").match(/ANTHROPIC_API_KEY=(.+)/); if (m) key = m[1].trim(); }
 }
 

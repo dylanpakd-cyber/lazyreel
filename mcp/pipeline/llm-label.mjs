@@ -8,7 +8,7 @@
 //   ANTHROPIC_API_KEY=... node pipeline/llm-label.mjs --in data/raw/normalized.jsonl \
 //       --out data/decoded/llm-labeled.jsonl [--limit 20] [--model claude-haiku-4-5-20251001]
 //
-// Reads the key from env or ~/format-radar-deconstruct/.env. Costs money per call;
+// Reads the key from env or ~/.lazyreel/.env. Costs money per call;
 // Haiku keeps it cheap (hundreds of videos for cents). Output is derived labels
 // (gitignored) — not redistributed source content.
 
@@ -16,10 +16,10 @@ import { readFileSync, writeFileSync, existsSync } from "node:fs";
 import { homedir } from "node:os";
 
 let key = process.env.ANTHROPIC_API_KEY;
-for (const p of [`${homedir()}/format-radar-deconstruct/.env`, ".env"]) {
+for (const p of [`${homedir()}/.lazyreel/.env`, ".env"]) {
   if (!key && existsSync(p)) { const m = readFileSync(p, "utf8").match(/ANTHROPIC_API_KEY=(.+)/); if (m) key = m[1].trim(); }
 }
-if (!key) { console.error("ANTHROPIC_API_KEY missing (env or ~/format-radar-deconstruct/.env)"); process.exit(1); }
+if (!key) { console.error("ANTHROPIC_API_KEY missing (env or ~/.lazyreel/.env)"); process.exit(1); }
 
 const args = Object.fromEntries(process.argv.slice(2).reduce((a, x, i, arr) => { if (x.startsWith("--")) a.push([x.slice(2), arr[i + 1]]); return a; }, []));
 const inFile = args.in || "data/raw/normalized.jsonl";

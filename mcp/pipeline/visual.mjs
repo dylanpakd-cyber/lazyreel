@@ -5,7 +5,7 @@
 // text-overlay, voiceover b-roll, screen recording, etc.), the visual hook, the
 // on-screen text, and what grabs attention in the first 3 seconds.
 //
-// Requires: yt-dlp + ffmpeg on PATH, ANTHROPIC_API_KEY (env or ~/format-radar-deconstruct/.env).
+// Requires: yt-dlp + ffmpeg on PATH, ANTHROPIC_API_KEY (env or ~/.lazyreel/.env).
 //
 // Usage:
 //   node pipeline/visual.mjs --perNiche 12 [--model claude-sonnet-4-6] [--out data/decoded/visual.jsonl]
@@ -18,7 +18,7 @@ import { execFileSync } from "node:child_process";
 import { homedir, tmpdir } from "node:os";
 
 let key = process.env.ANTHROPIC_API_KEY;
-for (const p of [`${homedir()}/format-radar-deconstruct/.env`, ".env"]) {
+for (const p of [`${homedir()}/.lazyreel/.env`, ".env"]) {
   if (!key && existsSync(p)) { const m = readFileSync(p, "utf8").match(/ANTHROPIC_API_KEY=(.+)/); if (m) key = m[1].trim(); }
 }
 if (!key) { console.error("ANTHROPIC_API_KEY missing"); process.exit(1); }
