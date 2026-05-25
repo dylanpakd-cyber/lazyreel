@@ -22,7 +22,7 @@ Turn a brief into the **cut-by-cut timeline** for a short-form UGC video: what e
 Each cut is one clip, one beat, one framing. Clip 1 is the hook.
 
 ```
-CUT [N] ([timestamp in the final edit, e.g. 0:00-0:03]) — [framing: wide / macro / reframe / insert / pov-handheld]
+CUT [N] ([timestamp in the final edit, e.g. 0:00-0:03]) | [framing: wide / macro / reframe / insert / pov-handheld]
 - BEAT: [what happens in one line]
 - FRAME: [the literal opening frame of this cut: subject, expression, hands, light, background]
 - WHY: [the law or lift this cut serves, e.g. "unresolved question (law 1)" or "before-after hook (2.3x)"]
@@ -48,7 +48,7 @@ Break the timeline into 3 to 5 second segments and rate the cut density:
 - **LOW** = a held shot of 3 to 5s (use sparingly, only once the viewer is committed)
 
 ```
-[timestamp range] = [DENSITY] ([cuts in the segment] — [count] in [duration])
+[timestamp range] = [DENSITY] ([cuts in the segment], [count] in [duration])
 ```
 
 Per-frame novelty was one of the two strongest things we measured, so the first half should run HIGH. A single held clip across the whole video is the failure mode.
