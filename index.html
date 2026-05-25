@@ -31,7 +31,7 @@
   "softwareHelp": "https://github.com/dylanpakd-cyber/lazyreel",
   "description": "A free MCP server that decoded 21B+ views of real short-form video (TikTok and Instagram, past 6 months) so a coding agent already knows what is breaking out in a niche: the hooks, formats, and the real videos behind them. Video research for AI, not AI for video creation. Pairs with a video-generation MCP like Higgsfield. 17 tools: 16 skills plus a status tool.",
   "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
-  "featureList": "niche_decode, find_trends, study_examples, search_corpus, content_gaps, app_insights, format_teardown, viral_teardowns, winning_combos, breakout_vs_dud, format_playbook, video_ideas, cracked_hooks, shoot_brief, replicate_format, kill_the_slop, get_status"
+  "featureList": "niche_report, study_videos, teardown, make_brief, breakout_laws, kill_the_slop, get_status (6 tools + a status tool), plus 6 companion make-it skills"
 }
 </script>
 <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -298,7 +298,7 @@ section{padding-block:clamp(72px,9.5vw,116px)}
     <a class="brand" href="#top" aria-label="LazyReel home">
       <span class="mk" aria-hidden="true"><svg viewBox="0 0 26 26" width="22" height="22" fill="none"><path d="M4.5 6.5 L13 13 L21.5 6.5" stroke="#1A1812" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"/><path d="M4.5 14.5 L13 21 L21.5 14.5" stroke="#F54E00" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span>LazyReel</a>
     <nav class="nav-links" aria-label="Primary">
-      <a href="#skills">Skills</a><a href="#how">The data</a><a href="#apps">Apps</a><a href="#pricing">Pricing</a><a href="#faq">FAQ</a>
+      <a href="#skills">Tools</a><a href="#how">The data</a><a href="#apps">Apps</a><a href="#pricing">Pricing</a><a href="#faq">FAQ</a>
     </nav>
     <div class="nav-right">
       <span class="pill" aria-hidden="true"><span class="dot"></span>live · doomscrolling</span>
@@ -344,14 +344,14 @@ section{padding-block:clamp(72px,9.5vw,116px)}
 <!-- SKILLS -->
 <section id="skills" class="wrap">
   <div class="shead">
-    <span class="label"><span class="n">01</span> / Skills</span>
-    <h2>Six opinionated skills, not <span class="hl">prompt templates</span>.</h2>
-    <p>Break down what it takes to make a video and each step becomes a skill your agent runs the same way every time. From the idea to the shoot-ready brief. Click one to see what it gives back.</p>
+    <span class="label"><span class="n">01</span> / Tools</span>
+    <h2>Six tools your agent calls, not <span class="hl">prompt templates</span>.</h2>
+    <p>The MCP gives your agent six tools, each one a full report from real decoded videos, not a thin slice. From the niche read to the validated breakout laws. Click one to see what it gives back.</p>
   </div>
   <div class="skills-grid">
-    <div class="rail" id="rail" role="tablist" aria-label="Skills"></div>
-    <div class="preview" role="tabpanel" aria-label="Skill output preview">
-      <div class="pv-bar"><span id="pvName">/video-ideas · output</span><button class="pv-copy" id="pvCopy">Copy this prompt</button></div>
+    <div class="rail" id="rail" role="tablist" aria-label="Tools"></div>
+    <div class="preview" role="tabpanel" aria-label="Tool output preview">
+      <div class="pv-bar"><span id="pvName">niche_report · output</span><button class="pv-copy" id="pvCopy">Copy this prompt</button></div>
       <div class="pv-body" id="pvBody"></div>
     </div>
   </div>
@@ -368,6 +368,7 @@ section{padding-block:clamp(72px,9.5vw,116px)}
     <div class="stat"><div class="n" data-to="10">0</div><div class="l">niches mapped</div></div>
   </div>
   <p class="label" style="margin-top:24px;text-transform:none;letter-spacing:0;color:var(--mute)">Real TikTok &amp; Instagram videos from the <strong style="color:var(--ink);font-weight:600">past 6 months</strong>, decoded by our own pipeline. The more recent the upload, the stronger the signal, so the last 30 days are weighted highest. The number grows every day.</p>
+  <p class="label" style="margin-top:12px;text-transform:none;letter-spacing:0;color:var(--mute)">We validate, not vibe: the breakout laws are tested blind on concept-matched and same-creator pairs (83% within-creator, the cleanest tier) and we judge craft by reach over the creator's own baseline, not raw views. The full method is open: <a href="https://github.com/dylanpakd-cyber/lazyreel/tree/master/docs/methodology" style="color:var(--flag-ink);text-decoration:underline">docs/methodology</a>.</p>
 </section>
 
 <hr class="rule" />
@@ -398,12 +399,12 @@ section{padding-block:clamp(72px,9.5vw,116px)}
 <!-- TOOLS -->
 <section class="wrap">
   <div class="shead">
-    <span class="label"><span class="n">04</span> / MCP</span>
-    <h2>A real MCP, wired into your agent.</h2>
-    <p>The tools your agent calls mid-task. It reads the niche, finds the format, pulls real examples, and writes the brief without leaving the chat.</p>
+    <span class="label"><span class="n">04</span> / The make-it skills</span>
+    <h2>Six tools to know. <span class="hl">Six skills to make.</span></h2>
+    <p>The tools tell your agent what works. These six companion skills turn it into the actual video: deconstruct a winner, write the multi-clip prompts, cut the clips. They install with the plugin and auto-activate through the workflow, no calling them by name.</p>
   </div>
   <div class="tool-grid" id="tools"></div>
-  <p class="tool-note">Connect once. Free for agents.</p>
+  <p class="tool-note">Tools + skills install together. Free for agents.</p>
 </section>
 
 <hr class="rule" />
@@ -419,7 +420,7 @@ section{padding-block:clamp(72px,9.5vw,116px)}
     <div class="plan feature">
       <div class="label">For agents</div>
       <div class="pr">Free<small>forever</small></div>
-      <ul><li>The full MCP (14+ tools)</li><li>Every opinionated skill + real teardowns</li><li>No card, no account, no sign-up</li></ul>
+      <ul><li>The full stack: 6 MCP tools + 6 make-it skills</li><li>Real decoded videos, links, and the validated breakout laws</li><li>No card, no account, no sign-up</li></ul>
       <a class="btn btn-primary" href="mcp-install.html">Get LazyReel MCP</a>
     </div>
   </div>
@@ -517,39 +518,39 @@ section{padding-block:clamp(72px,9.5vw,116px)}
 
 // ---- skills data + showcase ----
 var SKILLS=[
- {cmd:"/video-ideas",bucket:"Ideation",ti:"Concepts mapped to real frameworks",de:"Six scroll-worthy concepts for {product} in {niche}, each built on a named script framework, placed on the awareness ladder, with the visual approach and why it lands.",
-  call:'video_ideas <span class="arg">product="matcha kit" niche="matcha" audience="gen-z, US" count=5</span>',
-  prompt:"Use video_ideas: product = {your product}, niche = {your niche}, audience = {who it's for}. Give me 5 concepts, each on a different script framework, mapped to awareness + sophistication, with a hook and why it lands.",
-  lines:['<b class="x">5 concepts · 5 frameworks · ranked by fit</b>','','<b class="x">01 · Industry Contrarian (DISRUPT)</b>','Hook: "why <span class="slot">matcha</span> girls quietly skip the $40 tins."','Awareness: solution-aware · Sophistication: 4 · Visual: product-in-hand','Why: a burned market buys a mechanism, not another claim.','','<b class="x">02 · Problem-Agitate-Solution (PAS)</b>','Hook: "still clumpy at 2pm? it\'s not your whisk."','Beat: stuck-state cold open → agitate → the fix in one shot.','','<b class="x">03 · POV-recognition</b>','Hook: "POV: the first one that doesn\'t taste like a lawn."','Visual: face-to-camera, first sip, zero edit.','','<b class="x">04 · Listicle (rank)</b> · "I ranked 6 so you don\'t have to."','<b class="x">05 · Founder-origin</b> · "made this because every tin lied about grade."']},
- {cmd:"/niche-decode",bucket:"Analysis",ti:"Read the niche before you write",de:"A structured read of {niche}: where it sits on awareness + sophistication, what the winning videos repeat, the dominant visual approach, and the gap nobody's filling.",
-  call:'niche_decode <span class="arg">niche="matcha"</span>',
-  prompt:"Use niche_decode: niche = {your niche}. Tell me the awareness + sophistication level, the 3 hook patterns winning right now, the dominant visual approach, and 2-3 angles the niche isn't running yet.",
-  lines:['<b class="x">Niche read · matcha · 412 videos</b>','Awareness: <span class="slot">solution-aware</span>. Lead with the mechanism, not the category.','Sophistication: 4 (burned market). Identity + reframe beats claims.','','<b class="x">Hooks winning right now</b>','· POV-recognition   over-indexes, low polish','· belief-challenging   "I was wrong about this one"','· direct call-out   "for the girlies who…"','','<b class="x">Dominant format</b>','authentic-UGC, face-to-camera. Studio polish reads as an ad here.','','<b class="x">The open lane</b>','<span class="slot">everyone shows the product, nobody shows the 2pm crash.</span>','<b class="x">Avoid</b>: ingredient-deck VO, "revolutionary", drone b-roll.']},
- {cmd:"/format-teardown",bucket:"Reverse-engineer",ti:"Steal the skeleton, not the pixels",de:"Paste a winning video. Get its narrative DNA (framework + hook pattern), its edit DNA (signature device + density), and exactly how to rebuild it for your product.",
-  call:'format_teardown <span class="arg">url="tiktok.com/@…/video/…"</span>',
-  prompt:"Use format_teardown: description = {paste or describe a winning video}. Break down the framework, hook pattern, signature device, edit density, and how to rebuild it for my product.",
-  lines:['<b class="x">Teardown · 4.2M views · 9.1× breakout</b>','Framework: Testimonial → Symptom → Switch → Proof.','Hook pattern: <span class="slot">belief-challenging POV</span>, caption-safe.','','<b class="x">Beat map</b>','0.0s   hook, hard cut, no logo','1.8s   symptom (the stuck state)','4.5s   the switch (product enters, no narration)','7.0s   proof (before / after in one frame)','','<b class="x">Signature device</b>','the 7am / 7pm mirror cut. that\'s the whole video.','Density: LOW, one continuous selfie. the lack of polish IS the trust.','','<b class="x">Rebuild for you</b>','keep one shot, swap the mirror demo for your before/after.']},
- {cmd:"/cracked-hooks",bucket:"Hooks",ti:"Hooks that survive the scroll",de:"Ranked hooks for {product}, each a different pattern from a 13-pattern taxonomy, each a different angle, all caption-safe and brand named late.",
-  call:'cracked_hooks <span class="arg">product="eye cream" audience="under-eye checkers" count=8</span>',
-  prompt:"Use cracked_hooks: product = {your product}, niche = {your niche}, audience = {who}. Give me 8 hooks, each a different pattern, caption-safe, none naming the brand in line 1.",
-  lines:['<b class="x">8 hooks · 8 patterns · brand named late</b>','','<b class="x">[POV]</b> "POV: 7pm and your <span class="slot">under-eyes</span> look like 7am."','<b class="x">[Belief]</b> "I thought every eye cream was the same. not this one."','<b class="x">[Call-out]</b> "for the girlies checking under-eyes every 2 hours."','<b class="x">[Size]</b> "92 of the 102 things your routine\'s missing. one step."','<b class="x">[Curiosity]</b> "the step everyone skips that does all the work."','<b class="x">[Contrarian]</b> "stop buying the $220 one. here\'s why."','<b class="x">[Time]</b> "what 14 days of this actually looks like."','<b class="x">[Receipt]</b> "the only one that survived my gym bag."','','All caption-safe. none name the brand in line 1.']},
- {cmd:"/shoot-brief",bucket:"Brief",ti:"Product in, shoot-ready brief out",de:"A full brief for {product}: framework, angle, hook bank, and a Beat / VO / on-screen-text / B-roll table a creator can film, plus the CTA and shoot notes.",
-  call:'shoot_brief <span class="arg">product="matcha kit" objective="cold traffic"</span>',
-  prompt:"Use shoot_brief: product = {your product}, audience = {who}, objective = {goal}. Give me the framework, angle, a hook bank, and a Beat/VO/on-screen-text/B-roll table I can hand to a creator.",
-  lines:['<b class="x">Brief · PAS · Testimonial angle · 4 shots</b>','','<b class="x">Beat · VO · on-screen text · B-roll</b>','Hook · "okay I tried 6 of these" · <span class="slot">6 IN A DRAWER</span> · handheld, to cam','Agitate · "every one clumped by noon" · <span class="slot">STILL CLUMPY</span> · the stuck state','Switch · "then this one" · <span class="slot">NO WHISK?</span> · pour shot, real time','Proof · "2pm, still smooth" · <span class="slot">2PM. STILL ON.</span> · the result, no VO','','CTA · soft, brand named at 0:09, link in bio','','<b class="x">Shoot notes</b>','natural light, one location, phone on a stack of books.','one take. polish kills it.']},
- {cmd:"/kill-the-slop",bucket:"Rewrite",ti:"Point it at weak copy, get a sharper cut",de:"Names exactly what's wrong with weak copy (AI-tell words, brand-centric voice, no specificity, no curiosity gap), then rewrites it shorter and sharper.",
+ {cmd:"niche_report",bucket:"Research",ti:"Read the niche before you write",de:"The full read on {niche} from real decoded videos: the hooks and frameworks that over-index in breakouts (with lift + sample size), the words winners open with, real example links, and the gap nobody's filling.",
+  call:'niche_report <span class="arg">niche="skincare"</span>',
+  prompt:"Use niche_report: niche = {your niche}. Give me the hook patterns and frameworks that over-index in breakouts with the lift and sample size, the words winners open with, real example links, and the gap nobody is filling.",
+  lines:['<b class="x">What\'s working in skincare · 496 decoded</b>','<b class="x">Hooks over-indexing in breakouts</b>','· speed-of-claim   <span class="slot">8.95×</span> more common (6/8)','· question   4.18× (7/12)','· problem-agitate-solution   2.98× (3/6)','','<b class="x">Words winners open with</b>','korean 2.99× · acne 2.09× · glowy 1.23×','','<b class="x">The open lane</b>','<span class="slot">everyone shows the product, nobody shows the problem state.</span>','<b class="x">Avoid</b>: information-offering (most-used hook, under-performs).','','_focus=format · trends · combos · apps for more_']},
+ {cmd:"study_videos",bucket:"Examples",ti:"Real videos to study, best first",de:"Real TikTok links to watch, best breakouts first (reach = views ÷ followers), each tagged format / hook / emotion, plus a diagnosis of why the top ones out-reached their creator's following.",
+  call:'study_videos <span class="arg">niche="skincare"</span>',
+  prompt:"Use study_videos: niche = {your niche}. Give me the real breakout videos to watch, best first, each with reach, views, format and hook, and a short read on why the top one out-reached its creator's following.",
+  lines:['<b class="x">8 real videos · skincare · breakouts first</b>','@clearskinfaithy/… · <span class="slot">2297× reach</span> · 1.7M · talking-head · information-offering','@caoimhe.rafferty/… · 1307× reach · 4.0M · belief-challenging','@tinaglowupp/… · 878× reach · 5.8M · belief-challenging · aspiration','@gavie_spamsss/… · 693× reach · 2.7M · talking-head','','<b class="x">why the top one won</b>','hook lands in the caption (sound-off), face mid-reaction.','retention: an open loop it does not close until the end.','the move to steal: the 7pm check-in, no product until 0:08.','','_real links, not vibes. 418 curated examples._']},
+ {cmd:"teardown",bucket:"Reverse-engineer",ti:"Rebuild a winner, or your product",de:"Pass a video (link, transcript, or description) for its narrative + edit DNA, signature device, and how to rebuild it. Or pass your product to get the proven format, real examples, a brief, and a gen-prompt scaffold.",
+  call:'teardown <span class="arg">video="tiktok.com/@…/video/…"</span>',
+  prompt:"Use teardown: video = {paste or link a winning video}. Break down the framework, hook pattern, signature device, edit density, and exactly how to rebuild it for my product.",
+  lines:['<b class="x">Teardown · 4.2M views · 9.1× breakout</b>','Framework: Testimonial → Symptom → Switch → Proof.','Hook pattern: <span class="slot">belief-challenging POV</span>, caption-safe.','','<b class="x">Beat map</b>','0.0s   hook, hard cut, no logo','1.8s   symptom (the stuck state)','4.5s   the switch (product enters, no narration)','7.0s   proof (before / after in one frame)','','<b class="x">Signature device</b>','the 7am / 7pm mirror cut. that\'s the whole video.','','<b class="x">Rebuild for you</b>','keep one shot, swap the mirror demo for your before/after.']},
+ {cmd:"make_brief",bucket:"Create",ti:"Product in, shoot-ready brief out",de:"A full brief for {product}: framework, angle, a hook bank, and a Beat / VO / on-screen-text / B-roll table a creator can film, plus the CTA and shoot notes. mode=ideas for concepts, mode=hooks for a ranked hook bank.",
+  call:'make_brief <span class="arg">product="matcha kit" objective="cold traffic"</span>',
+  prompt:"Use make_brief: product = {your product}, audience = {who}, objective = {goal}. Give me the framework, angle, a hook bank, and a Beat/VO/on-screen-text/B-roll table I can hand to a creator. (mode=ideas or mode=hooks for just those.)",
+  lines:['<b class="x">Brief · PAS · Testimonial angle · 4 clips</b>','','<b class="x">Beat · VO · on-screen text · B-roll</b>','Hook · "okay I tried 6 of these" · <span class="slot">6 IN A DRAWER</span> · handheld, to cam','Agitate · "every one clumped by noon" · <span class="slot">STILL CLUMPY</span> · the stuck state','Switch · "then this one" · <span class="slot">NO WHISK?</span> · pour shot, real time','Proof · "2pm, still smooth" · <span class="slot">2PM. STILL ON.</span> · the result, no VO','','CTA · soft, brand named at 0:09, no end-card','','<b class="x">Shoot notes</b>','natural light, one location, 3-4 clips to cut. polish kills it.']},
+ {cmd:"breakout_laws",bucket:"The laws",ti:"Why 1K vs 1M views",de:"The validated first-3-seconds laws that separate breakouts from duds: from concept-matched and same-creator pairs plus corpus lift. The laws, what over-indexes, matched proof, and the honest caveat.",
+  call:'breakout_laws',
+  prompt:"Use breakout_laws. Give me the validated first-3-seconds laws that separate breakouts from duds, what over-indexes in winners, the matched proof, and the honest confound caveat.",
+  lines:['<b class="x">Why the same concept gets 1K vs 1M</b>','the first-3-seconds laws (83% within-creator, blind):','1. open on an unresolved question, not a caption','2. a taste of the payoff in ~1.5s, withhold the rest','3. a new framing every few seconds (per-frame novelty)','4. never label the format (no "GRWM / review / ad")','5. social or emotional charge in frame 1','','laws <span class="slot">3 + 4 carried the most weight</span>.','','<b class="x">honest</b>: external pulls (a celeb, a sound) beat craft,','and the laws can\'t see those. this is the floor, not a promise.']},
+ {cmd:"kill_the_slop",bucket:"Rewrite",ti:"Point it at weak copy, get a sharper cut",de:"Names exactly what's wrong with weak copy (AI-tell words, brand-centric voice, no specificity, no curiosity gap), then rewrites it shorter and sharper using a named hook pattern.",
   call:'kill_the_slop <span class="arg">copy="Discover the revolutionary power of…"</span>',
   prompt:"Use kill_the_slop: copy = {paste your weak copy}. Name what's wrong against the anti-slop bar, then rewrite it in customer voice with a real hook pattern.",
   lines:['<b class="x">Diagnosis</b>','<span class="strike">"Discover the revolutionary power of our product to elevate your routine."</span>','· AI-tell words: "revolutionary", "elevate"','· brand-first, not customer-first','· zero specificity, no curiosity gap','· no hook pattern, nothing stops the scroll','','<b class="x">Rewrite · belief-challenging</b>','<span class="good">"I thought every one of these was the same. I was wrong about this one."</span>','','<b class="x">Alt · POV-recognition</b>','<span class="good">"POV: the first one that actually did what it said."</span>','','shorter. customer voice. a pattern, not a pitch.']}
 ];
-// continuing "analysis" tail per skill: the agent is still working (no end state)
+// continuing "analysis" tail per tool: the agent is still working (no end state)
 var TAILS={
- "/video-ideas":['↳ scanning 412 matcha videos for breakout patterns…','↳ mapping each concept to its framework + awareness tier…','↳ scoring hooks against the 13-pattern taxonomy…','↳ checking the visual approach vs. what wins in-niche…','↳ filtering anything that trips the anti-slop bar…','↳ pulling 3 reference videos per concept…','↳ ranking 5 of 11 candidates by fit…','↳ drafting alt hooks for the top 2…'],
- "/niche-decode":['↳ pulling 412 decoded videos in matcha…','↳ clustering hooks by view-breakout lift…','↳ measuring the format mix vs. the rest of the corpus…','↳ locating the supply / demand gap…','↳ scoring sophistication from the comment language…','↳ flagging the AI-tells to avoid…','↳ assembling 3 reference breakouts…','↳ writing the angle nobody is running yet…'],
- "/format-teardown":['↳ fetching the source video + transcript…','↳ extracting frames across the full timeline…','↳ labeling the beat map and signature device…','↳ measuring edit density vs. the breakout set…','↳ checking caption-safety of the hook…','↳ finding 2 same-shape breakouts to confirm…','↳ mapping the rebuild onto your product…','↳ writing the one-shot shot list…'],
- "/cracked-hooks":['↳ generating across all 13 hook patterns…','↳ checking each against caption-safety…','↳ scoring curiosity gap + scroll-stop…','↳ deduping overlapping angles…','↳ holding brand mention back to line 2+…','↳ matching tone to the audience…','↳ ranking 8 of 24 candidates…','↳ drafting a B-variant for each…'],
- "/shoot-brief":['↳ selecting framework + angle for cold traffic…','↳ writing the beat / VO / text / b-roll table…','↳ building the hook bank…','↳ setting CTA placement + brand timing…','↳ pulling 2 reference videos for the editor…','↳ checking it films in one take…','↳ adding shoot notes (light, location, framing)…','↳ exporting a creator-ready brief…'],
- "/kill-the-slop":['↳ scanning the copy against the anti-slop bar…','↳ flagging AI-tell words + brand-first voice…','↳ measuring specificity and curiosity gap…','↳ selecting a hook pattern for the rewrite…','↳ generating 2 customer-voice variants…','↳ tightening each for the scroll…','↳ checking nothing reads like an ad…','↳ ranking the rewrites…']
+ "niche_report":['↳ pulling 496 decoded videos in skincare…','↳ clustering hooks by view-breakout lift…','↳ measuring the format mix vs. the rest of the corpus…','↳ surfacing the words winners open with…','↳ locating the supply / demand gap…','↳ assembling real reference breakouts…','↳ folding in the winning feature combinations…','↳ writing the angle nobody is running yet…'],
+ "study_videos":['↳ ranking 418 examples by reach (views ÷ followers)…','↳ filtering to skincare breakouts…','↳ pulling the public links + labels…','↳ reading the top one\'s transcript + engagement…','↳ diagnosing the hook technique…','↳ isolating the retention device…','↳ naming the one move to steal…'],
+ "teardown":['↳ fetching the source video + transcript…','↳ extracting frames across the full timeline…','↳ labeling the beat map and signature device…','↳ measuring edit density vs. the breakout set…','↳ finding 2 same-shape breakouts to confirm…','↳ mapping the rebuild onto your product…','↳ writing the gen-prompt scaffold…'],
+ "make_brief":['↳ selecting framework + angle for cold traffic…','↳ writing the beat / VO / text / b-roll table…','↳ building the hook bank…','↳ planning the cut as 3-4 clips…','↳ setting CTA placement + brand timing…','↳ checking it films in one take…','↳ exporting a creator-ready brief…'],
+ "breakout_laws":['↳ loading the concept-matched winner/dud pairs…','↳ comparing the first 3 seconds frame by frame…','↳ running the blind out-of-sample test…','↳ measuring per-law lift across the corpus…','↳ checking the within-creator tier…','↳ flagging the follower-count confound…','↳ writing the honest caveat…'],
+ "kill_the_slop":['↳ scanning the copy against the anti-slop bar…','↳ flagging AI-tell words + brand-first voice…','↳ measuring specificity and curiosity gap…','↳ selecting a hook pattern for the rewrite…','↳ generating 2 customer-voice variants…','↳ tightening each for the scroll…','↳ checking nothing reads like an ad…']
 };
 var rail=document.getElementById('rail'),pvName=document.getElementById('pvName'),pvBody=document.getElementById('pvBody'),sel=0;
 SKILLS.forEach(function(s,i){
@@ -610,18 +611,12 @@ document.getElementById('pvCopy').addEventListener('click',function(){copy(this,
 
 // ---- tools ----
 var TOOLS=[
- ["niche_decode","A structured read on what's actually working in a niche before you write a line."],
- ["find_trends","What's breaking out right now: formats and hooks over-indexing in the decoded feed."],
- ["study_examples","Pull real decoded videos by niche, format, or hook pattern to learn from."],
- ["winning_combos","The hook × format pairings that over-index in breakouts, with the lift."],
- ["viral_teardowns","Real breakouts diagnosed: hook technique, why it spread, what to steal."],
- ["content_gaps","Angles a niche isn't running yet. The open lane nobody's filling."],
- ["format_playbook","A named format turned into a repeatable step-by-step you can shoot."],
- ["app_insights","The app-space vertical: app-ad hook × format patterns and breakout lift."],
- ["replicate_format","Take a winning format and rebuild it end-to-end for your product."],
- ["cracked_hooks","Ranked hooks, each a different pattern, caption-safe, brand named late."],
- ["shoot_brief","Full brief: framework, angle, hook bank, Beat/VO/Text/B-roll table, CTA."],
- ["kill_the_slop","Critique weak copy against the anti-slop bar, then rewrite it sharper."]
+ ["format-deconstructor","Deconstruct a winning video into a copyable spec: why it broke out, then the shot-by-shot DNA to rebuild it."],
+ ["ugc-ad-director","Product in, copy-paste Seedance prompts out: a 3-4 clip cut sequence, each with a negative prompt and a why-it-works."],
+ ["higgsfield-director","The same multi-clip prompts engineered for Higgsfield, first 3 seconds built to clear the breakout laws."],
+ ["video-editor","The 3-4 generated clips in, a finished fast-cut sound-off-legible 9:16 short out. Real FFmpeg pipeline."],
+ ["format-prompt-builder","Turn a brief into a cut-by-cut timeline: clip order, framings, cut rhythm, the energy arc. Anti-cinematic."],
+ ["ugc-ad-generator","End-to-end: product image plus angle, generated on Seedance via fal.ai and stitched with ffmpeg."]
 ];
 document.getElementById('tools').innerHTML=TOOLS.map(function(t){return '<div class="tool"><code>'+t[0]+'</code><p>'+t[1]+'</p></div>';}).join('');
 
@@ -632,7 +627,7 @@ var FAQ=[
  ["Will it make my agent sound like every other AI?","The opposite is the entire point. The skills are tuned to kill the tells: the \"revolutionary,\" the rocket emoji, the feature-list hook, the studio-ad polish. If it sounds like AI, it failed."],
  ["Does it generate the video, or just the plan?","LazyReel does the research and the brief: the format, the hook, the script, the shot list, written as a 3-4 clip sequence (not one static clip). To generate, pair it with a video-gen MCP like Higgsfield. Then the companion video-editor skill stitches those clips into a fast-cut, captioned 9:16 short. Same agent, same chat: LazyReel decides what's worth making, the gen MCP renders the clips, the editor cuts them together so you're not shipping slop."],
  ["Do I need an account or a card?","No. The MCP is free and there's no sign-up. Generate a token on the install page, paste one prompt into your agent, and it's connected. No card, ever."],
- ["What's actually live today?","14+ MCP tools, a library of script frameworks and hook patterns, an app-ad vertical, and real breakout teardowns decoded from thousands of scraped videos. Live re-scraping on demand and private niche libraries are next. We'll always tell you which is which."]
+ ["What's actually live today?","6 MCP tools (niche reads, real example links, teardowns, briefs, the validated breakout laws, slop rewrites) plus 6 companion make-it skills (the directors and the video editor), all from 5,560+ real decoded videos. Live re-scraping on demand and private niche libraries are next. We'll always tell you which is which."]
 ];
 document.getElementById('faq-list').innerHTML=FAQ.map(function(f){return '<details><summary>'+f[0]+'<span class="chev">+</span></summary><p>'+f[1]+'</p></details>';}).join('');
 
