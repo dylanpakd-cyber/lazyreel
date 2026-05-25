@@ -64,6 +64,16 @@ The conclusions did not arrive in one shot. The evolution is part of the evidenc
 6. **Two laws do most of the work.** Across every tier, not signaling the format and maximizing per-frame novelty were the levers that separated winners. The other three help but matter less.
 7. **Methodology moved the result more than the model did.** The same laws scored 94%, 41%, or 83% depending only on how the test was built. That is why this folder documents the how, not just the what.
 
+## Does it generalize across niches?
+
+Breaking the 48 pooled predictions out by niche (the 30 concept-matched pairs carry a niche label; the 18 same-creator pairs are niche-unlabeled in the corpus and sit as one 15/18 block):
+
+- Eight of ten labeled niches land at 75 to 100% (fashion, pets, fitness, hair, home, supplements, food, tech).
+- The two soft spots are skincare (3/5) and ABG beauty (1/2, n=2).
+- No niche is near chance.
+
+So the 85% is broad, not carried by a single vertical. The per-niche samples are small, so treat the soft spots as a flag to gather more skincare and beauty pairs, not as a verdict.
+
 ## Ablation: which laws carry the signal
 
 To check whether the five laws are real or just a holistic "looks viral" judgment, we ablated them on the 18 clean same-creator pairs (full-five baseline 83%), blind, each condition restricted to a subset:

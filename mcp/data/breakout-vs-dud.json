@@ -347,6 +347,23 @@
    "laws_3_4_only": "12/18 (67%, 95% CI 44-84%)",
    "laws_1_2_5_only": "9/18 (50%, exactly chance)",
    "takeaway": "Laws 3 (per-frame novelty) and 4 (no format label) carry most of the discriminative signal (67% vs 50%; correct on 5 of 7 head-to-head disagreements). But neither subset reproduces the full 83%, so the five laws work best as a SET, and laws 1+2+5 are not independently predictive within-creator. n=18 so CIs overlap; directional finding: lead the gate with laws 3 and 4, keep all five."
+  },
+  "perNiche": {
+   "basis": "Accuracy of the full-5 prediction broken out by niche across the 48 pooled pairs. The 30 concept-matched pairs carry a niche label; the 18 same-creator pairs are niche-unlabeled in the corpus (selected by creator) and sit as one 15/18 block.",
+   "conceptMatchedByNiche": {
+    "fashion": "4/4",
+    "pets": "3/3",
+    "fitness": "3/3",
+    "hair": "3/3",
+    "home and cleaning": "2/2",
+    "supplements": "2/2",
+    "food and beverage": "2/2",
+    "tech and SaaS": "3/4",
+    "skincare": "3/5",
+    "ABG beauty": "1/2"
+   },
+   "sameCreatorBlock": "15/18 (niche-mixed, unresolved)",
+   "takeaway": "Generalizes broadly: 8 of 10 labeled niches land 75-100%, none near chance, so the 85% is not driven by a single niche. Soft spots are skincare (3/5) and ABG beauty (1/2, tiny n). Per-niche samples are small; directional."
   }
  },
  "appAdBreakoutFormats": {
