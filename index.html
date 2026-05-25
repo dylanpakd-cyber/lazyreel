@@ -6,6 +6,34 @@
 <title>LazyReel · the feed your agent already doomscrolled</title>
 <meta name="description" content="Make your agent a UGC doomscroller. 5,560+ real short-form videos decoded, 21B+ views reverse-engineered, and every breakout format behind them. Everything we found doomscrolling so you don't have to. Free, MCP-connected." />
 <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+<link rel="canonical" href="https://lazyreel-site.vercel.app/" />
+<meta name="robots" content="index, follow" />
+<!-- Open Graph / Twitter -->
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="LazyReel" />
+<meta property="og:title" content="LazyReel · the feed your agent already doomscrolled" />
+<meta property="og:description" content="A free MCP server that decoded 21B+ views of real short-form video so your coding agent already knows what's breaking out. Video research for AI, pairs with a video-gen MCP like Higgsfield." />
+<meta property="og:url" content="https://lazyreel-site.vercel.app/" />
+<meta property="og:image" content="https://lazyreel-site.vercel.app/favicon.svg" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="LazyReel · the feed your agent already doomscrolled" />
+<meta name="twitter:description" content="A free MCP that decoded 21B+ views of real short-form video so your agent knows what's breaking out before it writes. Pairs with a video-gen MCP like Higgsfield." />
+<!-- Structured data for crawlers + AI agents -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "LazyReel",
+  "applicationCategory": "DeveloperApplication",
+  "operatingSystem": "Any (MCP client: Claude Code, Cursor, Codex)",
+  "url": "https://lazyreel-site.vercel.app/",
+  "downloadUrl": "https://lazyreel-site.vercel.app/mcp-install.html",
+  "softwareHelp": "https://github.com/dylanpakd-cyber/lazyreel",
+  "description": "A free MCP server that decoded 21B+ views of real short-form video (TikTok and Instagram, past 6 months) so a coding agent already knows what is breaking out in a niche: the hooks, formats, and the real videos behind them. Video research for AI, not AI for video creation. Pairs with a video-generation MCP like Higgsfield. 17 tools: 16 skills plus a status tool.",
+  "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+  "featureList": "niche_decode, find_trends, study_examples, search_corpus, content_gaps, app_insights, format_teardown, viral_teardowns, winning_combos, breakout_vs_dud, format_playbook, video_ideas, cracked_hooks, shoot_brief, replicate_format, kill_the_slop, get_status"
+}
+</script>
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;700&family=Instrument+Serif:ital@1&display=swap" rel="stylesheet" />
@@ -81,6 +109,7 @@ section{padding-block:clamp(72px,9.5vw,116px)}
 .hero-copy .sub{max-width:46ch;margin:24px 0 0;color:var(--body);font-size:clamp(1.05rem,1.4vw,1.2rem)}
 .hero-cta{display:flex;gap:14px;align-items:center;margin-top:32px;flex-wrap:wrap}
 .compat{margin-top:22px;font-size:12.5px;color:var(--mute)}
+.compat-mob{display:none}
 
 /* phone / annotated feed (dark device on the light page) */
 .feed-stage{position:relative;justify-self:center;width:min(330px,86vw)}
@@ -243,7 +272,10 @@ section{padding-block:clamp(72px,9.5vw,116px)}
   .price-grid{grid-template-columns:1fr}
   .bucket{display:none}
 }
-@media (max-width:640px){ .nav-right .pill{display:none} }
+@media (max-width:640px){
+  .nav-right .pill{display:none}
+  .compat-desk{display:none}.compat-mob{display:inline}
+}
 @media (max-width:480px){
   .hero-cta{flex-direction:column}.hero-cta .btn{width:100%;justify-content:center}
   .cmp{height:300px}
@@ -288,7 +320,7 @@ section{padding-block:clamp(72px,9.5vw,116px)}
         <a class="btn btn-primary" href="mcp-install.html">Get started</a>
         <a class="btn btn-ghost" href="#skills">See it work <span class="arr">→</span></a>
       </div>
-      <p class="compat mono">Works with Claude Code, Cursor &amp; Codex · pairs with Higgsfield MCP to generate</p>
+      <p class="compat mono"><span class="compat-desk">Works with Claude Code, Cursor &amp; Codex · pairs with Higgsfield MCP to generate</span><span class="compat-mob">Pairs with Higgsfield MCP to generate the video</span></p>
     </div>
 
     <div class="feed-stage">
