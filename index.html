@@ -297,7 +297,7 @@ section{padding-block:clamp(72px,9.5vw,116px)}
           <div class="feed-hud"><span class="live"><span class="dot"></span>live · doomscrolling</span><span class="decoded" id="decodedCount">decoded 5,560</span></div>
           <div class="feed-view"><div class="feed-track" id="feedTrack"></div></div>
           <div class="scan" aria-hidden="true"></div>
-          <div class="feed-foot"><span>decoding feed…</span><span class="bk" id="breakoutTick">breakouts ↗ 0</span></div>
+          <div class="feed-foot"><span>decoding feed…</span><span class="bk" id="breakoutTick">breakouts ↗ 312</span></div>
         </div>
       </div>
     </div>
@@ -335,7 +335,7 @@ section{padding-block:clamp(72px,9.5vw,116px)}
     <div class="stat"><div class="n" data-to="21.2" data-suffix="B" data-dec="1">0</div><div class="l">views reverse-engineered</div></div>
     <div class="stat"><div class="n" data-to="10">0</div><div class="l">niches mapped</div></div>
   </div>
-  <p class="label" style="margin-top:24px;text-transform:none;letter-spacing:0;color:var(--mute)">Real TikTok &amp; Instagram videos, decoded by our own pipeline. The number grows every day.</p>
+  <p class="label" style="margin-top:24px;text-transform:none;letter-spacing:0;color:var(--mute)">Real TikTok &amp; Instagram videos from the <strong style="color:var(--ink);font-weight:600">past 6 months</strong>, decoded by our own pipeline. The more recent the upload, the stronger the signal, so the last 30 days are weighted highest. The number grows every day.</p>
 </section>
 
 <hr class="rule" />
@@ -461,11 +461,17 @@ section{padding-block:clamp(72px,9.5vw,116px)}
       }
     },{threshold:.3});
     io.observe(screen);
-    var tick=document.getElementById('breakoutTick'),bn=0;
-    setInterval(function(){bn=(bn+1)%99;tick.textContent='breakouts ↗ '+bn;},1500);
+    // live counters: the agent keeps decoding the feed and finding breakouts
+    var dEl=document.getElementById('decodedCount'),dn=5560;
+    var bEl=document.getElementById('breakoutTick'),bn=312;
+    dEl.textContent='decoded '+dn.toLocaleString();
+    bEl.textContent='breakouts ↗ '+bn;
+    setInterval(function(){dn+=1;dEl.textContent='decoded '+dn.toLocaleString();},2600);
+    setInterval(function(){bn+=1;bEl.textContent='breakouts ↗ '+bn;},4200);
   }else{
     screen.classList.add('lit');
-    document.getElementById('breakoutTick').textContent='breakouts ↗ 47';
+    document.getElementById('decodedCount').textContent='decoded 5,560';
+    document.getElementById('breakoutTick').textContent='breakouts ↗ 312';
   }
 })();
 
