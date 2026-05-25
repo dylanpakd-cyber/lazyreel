@@ -204,12 +204,14 @@ export function videoIdeas(i: IdeaInput): string {
     ].join("\n");
   });
 
+  const laws = breakoutChecklist();
   return [
     `# ${n} video concepts for ${product}`,
     `_Niche: ${niche}. Each concept is a different framework — pick the 2-3 that match where your buyer's head is at._`,
     "",
     ...lines,
     "",
+    ...(laws.length ? [`## First 3 seconds (validated gate — whichever concept you shoot must clear these)`, ...laws.map(l => `- [ ] ${l}`), ""] : []),
     `> One desire per video. Don't stack two of these into one clip.`,
   ].join("\n");
 }
@@ -435,12 +437,14 @@ export function crackedHooks(i: HookInput): string {
     const hook = fillHook(p, product, niche, avatar, category);
     return `${k + 1}. **[${p.name}]** "${hook}"\n   _delivery: ${pick(["check phone-mirror, no smudge", "shocked glance after the gym", "frustrated dab, then relief", "talk to camera, hold the product", "split-screen vs the old way"], s, k)} · caption-safe · brand not named in line 1_`;
   });
+  const laws = breakoutChecklist();
   return [
     `# ${n} hooks for ${product}`,
     `_Each attacks a different angle. None name the brand in the first line. All survive with the sound off._`,
     "",
     ...lines,
     "",
+    ...(laws.length ? [`## The opening frame must also clear (validated, 85% blind)`, ...laws.map(l => `- [ ] ${l}`), ""] : []),
     `> Test 3-4 of these as the first 2 seconds. The hook is 80% of the result.`,
   ].join("\n");
 }
