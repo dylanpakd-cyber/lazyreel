@@ -1,0 +1,654 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>LazyReel · an AI agent that doomscrolls for you</title>
+<meta name="description" content="An AI agent that doomscrolls for you. 5,560+ real short-form videos decoded, 21B+ views reverse-engineered, and every breakout format behind them. Everything we found doomscrolling so you don't have to. Free, MCP-connected." />
+<link rel="icon" href="favicon.svg" type="image/svg+xml" />
+<link rel="canonical" href="https://lazyreel-site.vercel.app/" />
+<meta name="robots" content="index, follow" />
+<!-- Open Graph / Twitter -->
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="LazyReel" />
+<meta property="og:title" content="LazyReel · an AI agent that doomscrolls for you" />
+<meta property="og:description" content="A free MCP that decoded 21B+ views of real short-form video so your agent already knows what's breaking out. The taste your agent's missing, built agent-first; pairs with a video-gen MCP like Higgsfield." />
+<meta property="og:url" content="https://lazyreel-site.vercel.app/" />
+<meta property="og:image" content="https://lazyreel-site.vercel.app/favicon.svg" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="LazyReel · an AI agent that doomscrolls for you" />
+<meta name="twitter:description" content="A free MCP that decoded 21B+ views of real short-form video so your agent knows what's breaking out before it writes. Pairs with a video-gen MCP like Higgsfield." />
+<!-- Structured data for crawlers + AI agents -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "LazyReel",
+  "applicationCategory": "DeveloperApplication",
+  "operatingSystem": "Any (MCP client: Claude Code, Codex)",
+  "url": "https://lazyreel-site.vercel.app/",
+  "downloadUrl": "https://lazyreel-site.vercel.app/mcp-install.html",
+  "softwareHelp": "https://github.com/dylanpakd-cyber/lazyreel",
+  "description": "A free MCP server that decoded 21B+ views of real short-form video (TikTok and Instagram, past 6 months) so a coding agent already knows what is breaking out in a niche: the hooks, formats, and the real videos behind them. The taste layer for agent-first marketing: you delegate the ideation, the agent decides what is worth making. Pairs with a video-generation MCP like Higgsfield. 6 tools plus a status tool, and 6 companion make-it skills.",
+  "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+  "featureList": "niche_report, study_videos, teardown, make_brief, breakout_laws, kill_the_slop, get_status (6 tools + a status tool), plus 6 companion make-it skills"
+}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;700&family=Instrument+Serif:ital@1&display=swap" rel="stylesheet" />
+<style>
+:root{
+  /* light warm-paper page */
+  --canvas:#F6F1E6; --surface-1:#FBF7EE; --surface-2:#F0EADC; --surface-3:#E9E1CF;
+  --card:#FFFFFF; --card-2:#FBF8F1;
+  --hairline:#E7E1D1; --hairline-strong:#D4CDBA;
+  --ink:#1A1812; --body:#46423A; --mute:#6B6557;
+  /* decode-highlight (lime, used as fill/marker) + live/breakout (orange) */
+  --lime:#D4FF3F; --lime-soft:#E6FF7A; --on-lime:#1A1A0A; --lime-ink:#46570A;
+  --flag:#F54E00; --flag-ink:#C73E00;
+  --good:#2E8B57;
+  /* dark feed device surfaces (the doomscroll stays dark, on the light page) */
+  --night:#0E0E0C; --night-2:#16150F; --night-text:#F2EEE3; --night-mute:#A8A294;
+  --r-card:16px; --r-pill:999px; --r-chip:8px; --r-phone:30px; --r-sm:10px;
+  --gut:clamp(20px,4vw,34px); --maxw:1180px;
+  --ease:cubic-bezier(.2,.7,.2,1);
+  --spring:cubic-bezier(.18,1.25,.4,1);
+  --dot:rgba(26,24,18,.05);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0; background:var(--canvas); color:var(--body);
+  font-family:Inter,system-ui,sans-serif; font-size:17px; line-height:1.55;
+  -webkit-font-smoothing:antialiased; text-rendering:optimizeLegibility;
+  background-image:radial-gradient(var(--dot) 1px,transparent 1px);
+  background-size:28px 28px; background-position:-1px -1px;
+}
+a{color:inherit;text-decoration:none}
+h1,h2,h3{font-family:"Bricolage Grotesque",sans-serif;font-weight:700;letter-spacing:-.035em;line-height:1.0;margin:0;color:var(--ink);font-optical-sizing:auto}
+p{margin:0}
+.serif{font-family:"Instrument Serif",Georgia,serif;font-style:italic;font-weight:400;letter-spacing:0}
+.hl{background:linear-gradient(transparent 58%, var(--lime) 58%, var(--lime) 94%, transparent 94%);padding:0 .06em;-webkit-box-decoration-break:clone;box-decoration-break:clone;color:inherit}
+.mono{font-family:"JetBrains Mono",ui-monospace,monospace}
+.label{font-family:"JetBrains Mono",monospace;font-size:12px;font-weight:500;letter-spacing:.16em;text-transform:uppercase;color:var(--mute)}
+.label .n{color:var(--flag-ink)}
+.wrap{width:min(var(--maxw),calc(100% - var(--gut)*2));margin-inline:auto}
+section{padding-block:clamp(72px,9.5vw,116px)}
+.rule{border:0;border-top:1px solid var(--hairline);margin:0;width:100%}
+:focus-visible{outline:3px solid var(--flag);outline-offset:3px;border-radius:4px}
+
+/* buttons */
+.btn{display:inline-flex;align-items:center;gap:.55em;min-height:48px;padding:0 24px;border-radius:var(--r-pill);font-weight:600;font-size:15px;border:1px solid transparent;cursor:pointer;transition:transform .18s var(--ease),background .18s,border-color .18s;font-family:inherit}
+.btn-primary{background:var(--ink);color:var(--canvas)}
+.btn-primary:hover{transform:translateY(-2px);background:#2C2820}
+.btn-flag{background:var(--flag);color:#fff}
+.btn-flag:hover{transform:translateY(-2px);background:#FF5E14}
+.btn-ghost{background:transparent;color:var(--ink);border-color:var(--hairline-strong)}
+.btn-ghost:hover{background:var(--surface-2);border-color:var(--mute)}
+.btn-ghost .arr{color:var(--flag-ink);transition:transform .2s var(--ease)}
+.btn-ghost:hover .arr{transform:translateX(4px)}
+.pill{display:inline-flex;align-items:center;gap:.5em;height:30px;padding:0 12px;border-radius:var(--r-pill);border:1px solid var(--hairline-strong);font-family:"JetBrains Mono",monospace;font-size:11.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--body);background:var(--surface-1)}
+.dot{width:7px;height:7px;border-radius:50%;background:var(--flag);box-shadow:0 0 0 0 rgba(245,78,0,.5);animation:pulse 2.4s var(--ease) infinite}
+@keyframes pulse{0%{box-shadow:0 0 0 0 rgba(245,78,0,.5)}70%{box-shadow:0 0 0 7px rgba(245,78,0,0)}100%{box-shadow:0 0 0 0 rgba(245,78,0,0)}}
+
+/* nav */
+.nav{position:sticky;top:0;z-index:50;background:rgba(246,241,230,.78);backdrop-filter:saturate(1.4) blur(12px);border-bottom:1px solid var(--hairline)}
+.nav-in{display:flex;align-items:center;justify-content:space-between;gap:24px;height:64px}
+.brand{display:inline-flex;align-items:center;gap:10px;font-family:"Bricolage Grotesque";font-weight:800;font-size:17px;letter-spacing:-.02em;color:var(--ink)}
+.brand .mk{display:inline-grid;place-items:center;width:24px;height:24px}
+.brand .sl{color:var(--flag)}
+.nav-links{display:flex;gap:28px;font-size:14.5px;font-weight:500;color:var(--mute)}
+.nav-links a:hover{color:var(--ink)}
+.nav-right{display:flex;align-items:center;gap:14px}
+
+/* ===== HERO ===== */
+.hero{padding-top:clamp(40px,6vw,72px);padding-bottom:clamp(20px,4vw,40px)}
+.hero-in{display:grid;grid-template-columns:1.05fr .95fr;gap:clamp(28px,5vw,64px);align-items:center}
+.hero-copy h1{font-size:clamp(2.7rem,6.2vw,4.9rem);font-weight:800;max-width:13ch;letter-spacing:-.045em}
+.hero-copy h1 .hl{background:linear-gradient(transparent 62%, var(--lime) 62%, var(--lime) 97%, transparent 97%);padding:0 .08em;border-radius:2px}
+.hero-copy .sub{max-width:46ch;margin:24px 0 0;color:var(--body);font-size:clamp(1.05rem,1.4vw,1.2rem)}
+.hero-cta{display:flex;gap:14px;align-items:center;margin-top:32px;flex-wrap:wrap}
+.compat{margin-top:22px;font-size:12.5px;color:var(--mute)}
+.compat-mob{display:none}
+
+/* phone / annotated feed (dark device on the light page) */
+.feed-stage{position:relative;justify-self:center;width:min(330px,86vw)}
+.phone{position:relative;border-radius:var(--r-phone);background:linear-gradient(180deg,#26241c,#141109);border:1px solid #312d23;padding:12px;box-shadow:0 50px 90px -50px rgba(40,30,10,.55), 0 8px 30px -16px rgba(40,30,10,.35), inset 0 1px 0 rgba(255,255,255,.06)}
+.phone-screen{position:relative;border-radius:22px;overflow:hidden;background:#0A0A08;aspect-ratio:9/17.4}
+.feed-hud{position:absolute;z-index:6;top:0;left:0;right:0;display:flex;align-items:center;justify-content:space-between;padding:12px 13px;font-family:"JetBrains Mono";font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;background:linear-gradient(180deg,rgba(10,10,8,.92),rgba(10,10,8,0));pointer-events:none}
+.feed-hud .live{display:inline-flex;align-items:center;gap:7px;color:#FF9460}
+.feed-hud .decoded{color:var(--lime)}
+.feed-foot{position:absolute;z-index:6;bottom:0;left:0;right:0;display:flex;align-items:center;justify-content:space-between;padding:11px 13px;font-family:"JetBrains Mono";font-size:10.5px;letter-spacing:.08em;color:var(--night-mute);background:linear-gradient(0deg,rgba(10,10,8,.96),rgba(10,10,8,0))}
+.feed-foot .bk{color:var(--lime)}
+.scan{position:absolute;z-index:5;left:0;right:0;height:64px;top:-64px;pointer-events:none;
+  background:linear-gradient(180deg,rgba(212,255,63,0),rgba(212,255,63,.10) 60%,rgba(212,255,63,.30));
+  border-bottom:1px solid rgba(212,255,63,.4);mix-blend-mode:screen;animation:scan 5.2s linear infinite}
+@keyframes scan{0%{top:-64px}100%{top:100%}}
+.feed-view{position:absolute;inset:0;overflow:hidden}
+.feed-track{display:flex;flex-direction:column;gap:12px;padding:12px;animation:feed 38s linear infinite;will-change:transform}
+@keyframes feed{from{transform:translateY(0)}to{transform:translateY(-50%)}}
+.fcard{position:relative;flex:0 0 auto;border-radius:14px;overflow:hidden;border:1px solid rgba(255,255,255,.08);background:var(--cardtint,#1A1912);aspect-ratio:9/13;display:flex;flex-direction:column;justify-content:flex-end;padding:13px}
+.fcard::before{content:"";position:absolute;inset:0;background:var(--grad);z-index:0}
+.fvid{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0;background:#0A0A08}
+.fcard::after{content:"";position:absolute;inset:0;z-index:1;background:linear-gradient(180deg,rgba(10,10,8,.34) 0%,rgba(10,10,8,0) 30%,rgba(10,10,8,0) 55%,rgba(10,10,8,.72) 100%)}
+.fcard .glyph{position:absolute;top:11px;left:12px;z-index:2;font-family:"JetBrains Mono";font-size:10px;letter-spacing:.08em;text-transform:uppercase;color:rgba(255,255,255,.82);text-shadow:0 1px 6px rgba(0,0,0,.6)}
+.fmeta{position:relative;z-index:3}
+.fcard .handle{font-family:"JetBrains Mono";font-size:10.5px;color:rgba(255,255,255,.82);text-shadow:0 1px 6px rgba(0,0,0,.6)}
+/* the decoded layer drawn on top */
+.anno{display:inline-flex;align-items:center;gap:5px;font-family:"JetBrains Mono";font-size:9.5px;font-weight:500;letter-spacing:.02em;padding:4px 7px;border-radius:6px;white-space:nowrap}
+.anno.hook{position:absolute;z-index:3;top:34px;left:10px;transform-origin:left center;background:var(--lime);color:var(--on-lime);box-shadow:0 4px 14px -4px rgba(212,255,63,.5)}
+.anno.lift{position:absolute;z-index:3;top:34px;right:10px;transform-origin:right center;background:var(--flag);color:#fff;font-weight:700;box-shadow:0 4px 14px -4px rgba(245,78,0,.55)}
+.anno.fmt{margin-top:9px;background:rgba(10,10,8,.7);color:var(--lime);border:1px solid rgba(212,255,63,.4)}
+.anno .k{opacity:.62}
+.fcard .bracket{position:absolute;z-index:2;inset:30px 8px 40px;border:1px dashed rgba(212,255,63,.3);border-radius:9px;pointer-events:none}
+.anno-pop{opacity:0;transform:scale(.6) translateY(-4px)}
+.lit .anno-pop{animation:annoPop .5s var(--spring) forwards}
+@keyframes annoPop{to{opacity:1;transform:scale(1) translateY(0)}}
+.feed-stage::after{content:"";position:absolute;z-index:-1;inset:-12% -18%;background:radial-gradient(60% 50% at 70% 30%,rgba(212,255,63,.16),transparent 70%),radial-gradient(50% 40% at 20% 80%,rgba(245,78,0,.12),transparent 70%);filter:blur(10px)}
+
+/* slogan tape */
+.tape{border-block:1px solid var(--hairline);background:var(--surface-1);overflow:hidden;padding-block:0}
+.tape-track{display:flex;gap:0;white-space:nowrap;animation:marq 40s linear infinite;will-change:transform}
+.tape-track span{font-family:"Bricolage Grotesque";font-weight:600;font-size:20px;padding:18px 0;color:var(--ink);letter-spacing:-.02em}
+.tape-track .s{color:var(--flag);padding-inline:22px}
+@keyframes marq{to{transform:translateX(-50%)}}
+
+/* section heads */
+.shead{max-width:36ch}
+.shead h2{font-size:clamp(1.9rem,3.4vw,2.8rem);margin-top:12px;letter-spacing:-.04em}
+.shead p{margin-top:14px;color:var(--body);max-width:54ch}
+
+/* skills */
+.skills-grid{display:grid;grid-template-columns:0.92fr 1.08fr;gap:18px;margin-top:36px;align-items:stretch}
+.rail{display:grid;gap:9px}
+.srow{display:block;width:100%;text-align:left;background:var(--card);border:1px solid var(--hairline);border-radius:var(--r-card);padding:16px 18px;cursor:pointer;transition:transform .18s var(--ease),border-color .18s,box-shadow .18s}
+.srow:hover{transform:translateY(-3px) rotate(-.4deg);border-color:var(--hairline-strong)}
+.srow[aria-selected="true"]{border-color:var(--ink);box-shadow:inset 3px 0 0 var(--lime)}
+.srow .cmd{font-family:"JetBrains Mono";font-size:12.5px;color:var(--flag-ink)}
+.srow .ti{font-family:"Bricolage Grotesque";font-weight:600;font-size:16.5px;margin-top:5px;color:var(--ink);letter-spacing:-.02em}
+.srow .de{color:var(--mute);font-size:13.5px;margin-top:5px;line-height:1.5}
+.bucket{float:right;font-family:"JetBrains Mono";font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--mute);border:1px solid var(--hairline-strong);border-radius:var(--r-pill);padding:2px 9px}
+.srow[aria-selected="true"] .bucket{color:var(--ink);border-color:var(--ink)}
+/* output preview = dark code surface on the light page, matches the rail height */
+.preview{background:#0E0E0C;border-radius:var(--r-card);overflow:hidden;border:1px solid #2A2820;min-height:480px;display:flex;flex-direction:column}
+.pv-bar{display:flex;align-items:center;justify-content:space-between;gap:12px;min-height:44px;padding:8px 14px;background:#16150F;border-bottom:1px solid #2A2820;font-family:"JetBrains Mono";font-size:12px;color:var(--night-mute)}
+.pv-copy{cursor:pointer;flex:0 0 auto;color:var(--on-lime);background:var(--lime);border:1px solid transparent;border-radius:var(--r-pill);padding:6px 13px;font-family:"JetBrains Mono";font-size:11px;font-weight:700;transition:background .18s,transform .15s}
+.pv-copy:hover{background:#E2FF6B;transform:translateY(-1px)}
+.pv-body{padding:20px 22px 24px;color:var(--night-text);flex:1;overflow:auto}
+.pv-cmd{font-family:"JetBrains Mono";font-size:12.5px;line-height:1.7;color:#C4BEB0;margin:0 0 16px;padding-bottom:14px;border-bottom:1px solid #221F18;white-space:pre-wrap;word-break:break-word}
+.pv-cmd b{color:var(--flag-2);font-weight:700}
+.pv-cmd .arg{color:var(--night-mute)}
+.pv-body h4{font-family:"Bricolage Grotesque";font-weight:600;font-size:18px;color:var(--night-text);margin:0 0 14px;letter-spacing:-.02em}
+.pv-proc{font-family:"JetBrains Mono";font-size:12.5px;line-height:1.95;color:#6E7A45}
+.pv-proc.first{margin-top:16px;padding-top:14px;border-top:1px solid #221F18}
+.pv-cursor{display:inline-block;width:8px;height:15px;background:var(--lime);margin-top:6px;vertical-align:middle;animation:blink 1.1s steps(1) infinite}
+@keyframes blink{50%{opacity:0}}
+.pv-line{font-family:"JetBrains Mono";font-size:13px;line-height:1.95;color:#C4BEB0}
+.pv-line .x{color:#fff;font-weight:700}
+.pv-line .slot{color:var(--lime)}
+.pv-line .strike{color:#C88A7E;text-decoration:line-through}
+.pv-line .good{color:var(--on-lime);background:var(--lime);border-radius:4px;padding:1px 6px;font-weight:700}
+
+/* stats */
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;text-align:left;margin-top:30px}
+.stat{border-left:2px solid var(--hairline-strong);padding-left:18px}
+.stat .n{font-family:"Bricolage Grotesque";font-weight:800;font-size:clamp(2.6rem,5vw,4rem);letter-spacing:-.05em;line-height:1;color:var(--ink);font-variant-numeric:tabular-nums}
+.stat .l{font-family:"JetBrains Mono";font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--mute);margin-top:10px}
+
+/* app vertical */
+.app-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:34px;align-items:stretch}
+.app-cats,.app-pat{background:var(--card);border:1px solid var(--hairline);border-radius:var(--r-card);padding:22px}
+.app-cats h4,.app-pat h4{font-family:"Bricolage Grotesque";font-weight:600;font-size:15px;color:var(--ink);margin:0 0 16px;letter-spacing:-.01em}
+.catrow{display:flex;align-items:center;gap:12px;margin-bottom:11px;font-size:13.5px}
+.catrow .cn{width:120px;flex:0 0 auto;color:var(--body);font-family:"JetBrains Mono";font-size:11.5px;text-transform:lowercase;letter-spacing:.02em}
+.catrow .bar{flex:1;height:9px;border-radius:var(--r-pill);background:var(--surface-3);overflow:hidden}
+.catrow .bar i{display:block;height:100%;border-radius:var(--r-pill);background:linear-gradient(90deg,#7DA01E,#9FC23A);width:0;transition:width 1s var(--ease)}
+.catrow .cc{width:34px;flex:0 0 auto;text-align:right;font-family:"JetBrains Mono";font-size:11.5px;color:var(--mute)}
+.patrow{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:12px 0;border-bottom:1px solid var(--hairline)}
+.patrow:last-child{border-bottom:0}
+.patrow .pl{display:flex;flex-direction:column;gap:3px}
+.patrow .pk{font-family:"JetBrains Mono";font-size:12.5px;color:var(--ink)}
+.patrow .pd{font-size:12px;color:var(--mute)}
+.patrow .lift{font-family:"JetBrains Mono";font-size:13px;font-weight:700;color:var(--on-lime);background:var(--lime);border-radius:var(--r-pill);padding:3px 11px;white-space:nowrap}
+.patrow .lift.down{background:var(--surface-3);color:var(--mute)}
+.app-note{margin-top:18px;font-family:"JetBrains Mono";font-size:12px;color:var(--mute);line-height:1.5}
+
+/* tools */
+.tool-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:30px}
+.tool{background:var(--card);border:1px solid var(--hairline);border-radius:var(--r-card);padding:20px;transition:transform .18s var(--ease),border-color .18s}
+.tool:hover{transform:translateY(-4px) rotate(-.4deg);border-color:var(--hairline-strong)}
+.tool code{font-family:"JetBrains Mono";font-size:13.5px;color:var(--flag-ink)}
+.tool p{margin-top:10px;color:var(--mute);font-size:14px;line-height:1.5}
+.tool-note{margin-top:18px;font-family:"JetBrains Mono";font-size:12px;color:var(--mute)}
+
+/* pricing */
+.price-head{text-align:center;max-width:42ch;margin-inline:auto}
+.price-head .pos{margin-top:14px;color:var(--body)}
+.price-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:34px}
+.price-grid-one{grid-template-columns:minmax(0,460px);justify-content:center}
+.plan{background:var(--card);border:1px solid var(--hairline-strong);border-radius:var(--r-card);padding:30px}
+.plan.feature{border-color:var(--ink);box-shadow:inset 0 0 0 2px var(--lime)}
+.plan .l{margin-bottom:14px}
+.plan .pr{font-family:"Bricolage Grotesque";font-weight:800;font-size:2.4rem;letter-spacing:-.04em;color:var(--ink)}
+.plan .pr small{display:block;font-size:13px;font-weight:400;color:var(--mute);font-family:"JetBrains Mono";margin-top:2px}
+.plan ul{list-style:none;padding:0;margin:22px 0 26px;display:grid;gap:12px}
+.plan li{display:flex;gap:10px;font-size:15px;color:var(--body)}
+.plan li::before{content:"+";color:var(--flag-ink);font-weight:700}
+.plan .btn{width:100%;justify-content:center}
+
+/* faq */
+.faq{display:grid;gap:10px;margin-top:28px;max-width:780px}
+.faq details{background:var(--card);border:1px solid var(--hairline);border-radius:var(--r-card);padding:4px 20px}
+.faq details[open]{border-color:var(--hairline-strong)}
+.faq summary{cursor:pointer;list-style:none;display:flex;justify-content:space-between;align-items:center;gap:16px;padding:16px 0;font-family:"Bricolage Grotesque";font-weight:600;font-size:16.5px;color:var(--ink);min-height:48px;letter-spacing:-.02em}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary .chev{transition:transform .25s var(--ease);color:var(--flag);font-size:20px}
+.faq details[open] summary .chev{transform:rotate(45deg)}
+.faq details p{color:var(--body);font-size:15px;padding-bottom:18px;max-width:66ch}
+
+/* footer */
+.foot{background:var(--surface-1);border-top:1px solid var(--hairline);background-image:radial-gradient(rgba(26,24,18,.04) 1px,transparent 1px);background-size:28px 28px}
+.foot-kick{font-family:"Bricolage Grotesque";font-weight:800;font-size:clamp(2.4rem,7vw,5.4rem);letter-spacing:-.05em;line-height:.98;color:var(--ink);padding-top:8px}
+.foot-kick .serif{color:var(--flag)}
+.foot-cols{display:flex;flex-wrap:wrap;gap:48px;margin-top:48px}
+.foot-cols .col{min-width:120px}
+.foot-cols h5{font-family:"JetBrains Mono";font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--mute);margin:0 0 14px;font-weight:500}
+.foot-cols a{display:block;color:var(--body);font-size:14.5px;padding:5px 0}
+.foot-cols a:hover{color:var(--flag-ink)}
+.foot-legal{margin-top:48px;padding-top:22px;border-top:1px solid var(--hairline);font-family:"JetBrains Mono";font-size:12px;color:var(--mute)}
+
+@media (max-width:920px){
+  .hero-in{grid-template-columns:1fr;gap:36px;text-align:center}
+  .hero-copy h1,.hero-copy .sub{max-width:none;margin-inline:auto}
+  .hero-cta{justify-content:center}
+}
+@media (max-width:860px){
+  .nav-links{display:none}
+  .skills-grid,.app-grid{grid-template-columns:1fr;gap:16px}
+  .preview{position:static;min-height:300px}
+  .stats{grid-template-columns:1fr;gap:24px}
+  .stat{border-left:0;border-top:2px solid var(--hairline-strong);padding-left:0;padding-top:14px}
+  .tool-grid{grid-template-columns:1fr}
+  .price-grid{grid-template-columns:1fr}
+  .bucket{display:none}
+}
+@media (max-width:640px){
+  .nav-right .pill{display:none}
+  .compat-desk{display:none}.compat-mob{display:inline}
+}
+@media (max-width:480px){
+  .hero-cta{flex-direction:column}.hero-cta .btn{width:100%;justify-content:center}
+  .cmp{height:300px}
+  .catrow .cn{width:92px}
+}
+@media (prefers-reduced-motion:reduce){
+  *{animation:none!important;transition:none!important;scroll-behavior:auto!important}
+  .feed-track{transform:translateY(0)!important}
+  .scan{display:none}
+  .anno-pop{opacity:1!important;transform:none!important}
+  .catrow .bar i{transition:none!important}
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<header class="nav">
+  <div class="wrap nav-in">
+    <a class="brand" href="#top" aria-label="LazyReel home">
+      <span class="mk" aria-hidden="true"><svg viewBox="0 0 26 26" width="22" height="22" fill="none"><path d="M4.5 6.5 L13 13 L21.5 6.5" stroke="#1A1812" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"/><path d="M4.5 14.5 L13 21 L21.5 14.5" stroke="#F54E00" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span>LazyReel</a>
+    <nav class="nav-links" aria-label="Primary">
+      <a href="#skills">Tools</a><a href="#how">The data</a><a href="#apps">Apps</a><a href="#pricing">Pricing</a><a href="#faq">FAQ</a>
+    </nav>
+    <div class="nav-right">
+      <span class="pill" aria-hidden="true"><span class="dot"></span>live · doomscrolling</span>
+      <a class="btn btn-flag" href="mcp-install.html">Get started</a>
+    </div>
+  </div>
+</header>
+
+<main id="top">
+
+<!-- HERO -->
+<section class="hero wrap">
+  <div class="hero-in">
+    <div class="hero-copy">
+      <span class="label">Agent-first UGC research</span>
+      <h1>An AI agent that<br><span class="hl">doomscrolls</span><br>for you.</h1>
+      <p class="sub">Delegate the ideation: your agent doomscrolls 5,560+ real videos, remembers what breaks out, and decides what's worth making, before a single tool renders a frame.</p>
+      <div class="hero-cta">
+        <a class="btn btn-primary" href="mcp-install.html">Get started</a>
+        <a class="btn btn-ghost" href="#skills">See it work <span class="arr">→</span></a>
+      </div>
+      <p class="compat mono"><span class="compat-desk">Works with Claude Code &amp; Codex · pairs with Higgsfield MCP to generate</span><span class="compat-mob">Pairs with Higgsfield MCP to generate the video</span></p>
+    </div>
+
+    <div class="feed-stage">
+      <div class="phone">
+        <div class="phone-screen" id="feed" role="img" aria-label="A calm, auto-scrolling FYP of real breakout videos with the LazyReel agent's decoded labels drawn on each one: hook pattern, format, and reach.">
+          <div class="feed-hud"><span class="live"><span class="dot"></span>live · doomscrolling</span><span class="decoded" id="decodedCount">decoded 5,560</span></div>
+          <div class="feed-view"><div class="feed-track" id="feedTrack"></div></div>
+          <div class="scan" aria-hidden="true"></div>
+          <div class="feed-foot"><span>decoding feed…</span><span class="bk" id="breakoutTick">breakouts ↗ 312</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SLOGAN TAPE -->
+<div class="tape" aria-hidden="true">
+  <div class="tape-track" id="tape"></div>
+</div>
+
+<!-- SKILLS -->
+<section id="skills" class="wrap">
+  <div class="shead">
+    <span class="label"><span class="n">01</span> / Tools</span>
+    <h2>Six tools your agent calls, not <span class="hl">prompt templates</span>.</h2>
+    <p>Six reads your agent pulls before it decides what to make, each a full report from real decoded videos. Click one to see what it returns.</p>
+  </div>
+  <div class="skills-grid">
+    <div class="rail" id="rail" role="tablist" aria-label="Tools"></div>
+    <div class="preview" role="tabpanel" aria-label="Tool output preview">
+      <div class="pv-bar"><span id="pvName">niche_report · output</span><button class="pv-copy" id="pvCopy">Copy this prompt</button></div>
+      <div class="pv-body" id="pvBody"></div>
+    </div>
+  </div>
+</section>
+
+<hr class="rule" />
+
+<!-- STATS -->
+<section id="how" class="wrap">
+  <span class="label"><span class="n">02</span> / The data</span>
+  <div class="stats">
+    <div class="stat"><div class="n" data-to="5560" data-suffix="+">0</div><div class="l">real videos decoded</div></div>
+    <div class="stat"><div class="n" data-to="21.2" data-suffix="B" data-dec="1">0</div><div class="l">views reverse-engineered</div></div>
+    <div class="stat"><div class="n" data-to="10">0</div><div class="l">niches mapped</div></div>
+  </div>
+  <p class="label" style="margin-top:24px;text-transform:none;letter-spacing:0;color:var(--mute)">Your agent reads what you can't: real TikTok &amp; Instagram from the <strong style="color:var(--ink);font-weight:600">past 6 months</strong>, decoded by our pipeline and kept in memory. Recent uploads weighted highest, and the corpus grows every day.</p>
+  <p class="label" style="margin-top:12px;text-transform:none;letter-spacing:0;color:var(--mute)">Validated, not vibed: the breakout laws are tested blind, 83% within-creator on the cleanest tier. Full method: <a href="https://github.com/dylanpakd-cyber/lazyreel/tree/master/docs/methodology" style="color:var(--flag-ink);text-decoration:underline">docs/methodology</a>.</p>
+</section>
+
+<hr class="rule" />
+
+<!-- APP VERTICAL -->
+<section id="apps" class="wrap">
+  <div class="shead">
+    <span class="label"><span class="n">03</span> / App space</span>
+    <h2>It decoded the<br><span class="hl">app&nbsp;ads</span>, too.</h2>
+    <p>3,000+ mobile-app ads, decoded the same way. This is about <strong style="color:var(--ink);font-weight:600">views, not installs</strong>: the hook × format wins the feed, not a polished demo.</p>
+  </div>
+  <div class="app-grid">
+    <div class="app-cats">
+      <h4>Where the 3,000+ app ads concentrate</h4>
+      <div id="appCats"></div>
+      <p class="app-note">Category share of the 3,000+ decoded app-ad videos. Coverage grows every scrape.</p>
+    </div>
+    <div class="app-pat">
+      <h4>What wins app-ad <span class="hl">views</span></h4>
+      <div id="appPats"></div>
+      <p class="app-note">Lift = view-breakout rate vs. the rest of the app set. A breakout is a top-views video, so above 1.0× over-indexes on <strong style="color:var(--ink);font-weight:600">views</strong>, not conversions.</p>
+    </div>
+  </div>
+</section>
+
+<hr class="rule" />
+
+<!-- TOOLS -->
+<section class="wrap">
+  <div class="shead">
+    <span class="label"><span class="n">04</span> / The make-it skills</span>
+    <h2>Six tools to know. <span class="hl">Six skills to make.</span></h2>
+    <p>The tools decide what's worth making; these six skills make it, any length from a 12-second ad to a 60-second-plus video. They install with the plugin and auto-activate.</p>
+  </div>
+  <div class="tool-grid" id="tools"></div>
+  <p class="tool-note">6 tools + 6 skills, installed together. Free for agents.</p>
+</section>
+
+<hr class="rule" />
+
+<!-- PRICING -->
+<section id="pricing" class="wrap">
+  <div class="price-head">
+    <span class="label"><span class="n">05</span> / Pricing</span>
+    <h2 style="font-size:clamp(1.9rem,3.4vw,2.8rem);margin-top:12px">Free for agents. <span class="hl">Forever.</span></h2>
+    <p class="pos">Delegate the ideation. Oversee the rest.</p>
+  </div>
+  <div class="price-grid price-grid-one">
+    <div class="plan feature">
+      <div class="label">For agents</div>
+      <div class="pr">Free<small>forever</small></div>
+      <ul><li>The full stack: 6 MCP tools + 6 make-it skills</li><li>Real decoded videos, links, and the validated breakout laws</li><li>No card, no account, no sign-up</li></ul>
+      <a class="btn btn-primary" href="mcp-install.html">Get LazyReel MCP</a>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section id="faq" class="wrap">
+  <span class="label"><span class="n">06</span> / Questions</span>
+  <h2 style="font-size:clamp(1.9rem,3.2vw,2.7rem);margin-top:12px">Questions</h2>
+  <div class="faq" id="faq-list"></div>
+</section>
+
+</main>
+
+<!-- FOOTER -->
+<footer class="foot">
+  <div class="wrap" style="padding-block:clamp(56px,8vw,96px)">
+    <div class="foot-kick">Stay online.<br>Ship <span class="serif">video</span>.</div>
+    <div class="foot-cols">
+      <div class="col"><h5>Product</h5><a href="#skills">Skills</a><a href="#how">The data</a><a href="#apps">Apps</a><a href="#pricing">Pricing</a><a href="mcp-install.html">MCP</a></div>
+      <div class="col"><h5>Elsewhere</h5><a href="https://github.com/dylanpakd-cyber/lazyreel">GitHub</a><a href="mcp-install.html">Install</a><a href="#">Changelog</a></div>
+      <div class="col"><h5>Operators</h5><a href="#">Manifesto</a><a href="#">Contact</a></div>
+    </div>
+    <div class="foot-legal">© LazyReel 2026. We doomscrolled so you don't have to. (Touch grass occasionally.) · <a href="https://github.com/dylanpakd-cyber/lazyreel" style="color:var(--flag-ink)">the LazyReel MCP on GitHub →</a></div>
+  </div>
+</footer>
+
+<script>
+// ---- annotated doomscroll feed (real compressed breakout clips + real decoded labels) ----
+(function(){
+  // CONFIG: where the feed clips are served from.
+  //   ''  -> use the clips committed in /assets/feed (works on Vercel out of the box)
+  //   'https://your-cdn.com/'  -> serve assets/feed/<id>.mp4|jpg from your CDN/bucket instead
+  var CDN_BASE='';
+  function clip(id,ext){return (CDN_BASE||'')+'assets/feed/'+id+'.'+ext;}
+  var FEED=[
+   {id:'7381474248075889953',handle:'@arianopoien',niche:'fitness',hook:'removing-limitations',fmt:'pov-handheld',views:'115.3M',grad:'linear-gradient(160deg,#262d33,#101317)'},
+   {id:'7364556621512527146',handle:'@meghasinghx',niche:'beauty',hook:'information-offering',fmt:'talking-head',views:'28.5M',grad:'linear-gradient(160deg,#3a2a2e,#191115)'},
+   {id:'7639453321907932446',handle:'@utwray116',niche:'food & bev',hook:'newness',fmt:'pov-handheld',views:'19.9M',grad:'linear-gradient(160deg,#33291f,#17120c)'},
+   {id:'7608022569798683918',handle:'@pawacting',niche:'fashion',hook:'before-after',fmt:'pov-handheld',views:'19.2M',grad:'linear-gradient(160deg,#332431,#161018)'},
+   {id:'7621114217508130078',handle:'@dnnyboa',niche:'fitness',hook:'belief-challenging',fmt:'talking-head',views:'6.2M',grad:'linear-gradient(160deg,#2f3327,#151710)'},
+   {id:'7628637742590676246',handle:'@popn_theapp',niche:'fashion',hook:'question',fmt:'talking-head',views:'1.0M',grad:'linear-gradient(160deg,#2c2b33,#121116)'}
+  ];
+  function card(it){
+    return '<div class="fcard" style="--grad:'+it.grad+'">'
+      +'<video class="fvid" src="'+clip(it.id,'mp4')+'" poster="'+clip(it.id,'jpg')+'" muted loop playsinline preload="metadata" aria-hidden="true"></video>'
+      +'<span class="glyph">'+it.niche+' · breakout</span>'
+      +'<div class="bracket" aria-hidden="true"></div>'
+      +'<span class="anno hook anno-pop"><span class="k">hook</span> '+it.hook+'</span>'
+      +'<span class="anno lift anno-pop">↗ '+it.views+' views</span>'
+      +'<div class="fmeta">'
+        +'<div class="handle">'+it.handle+'</div>'
+        +'<span class="anno fmt anno-pop"><span class="k">format</span> '+it.fmt+'</span>'
+      +'</div>'
+      +'</div>';
+  }
+  var html='';for(var k=0;k<2;k++){FEED.forEach(function(it){html+=card(it);});}
+  var track=document.getElementById('feedTrack');track.innerHTML=html;
+
+  var reduce=window.matchMedia('(prefers-reduced-motion:reduce)').matches;
+  var screen=document.getElementById('feed');
+  if(!reduce){
+    // play the muted clips (poster shows if a clip is missing, e.g. on the public build)
+    track.querySelectorAll('.fvid').forEach(function(v){var p=v.play();if(p&&p.catch)p.catch(function(){});});
+    var pops=track.querySelectorAll('.anno-pop');
+    var io=new IntersectionObserver(function(e){
+      if(e[0].isIntersecting){
+        screen.classList.add('lit');
+        pops.forEach(function(el,i){el.style.animationDelay=(0.2+i*0.09)+'s';});
+        io.disconnect();
+      }
+    },{threshold:.3});
+    io.observe(screen);
+    // live counters: the agent keeps decoding the feed and finding breakouts
+    var dEl=document.getElementById('decodedCount'),dn=5560;
+    var bEl=document.getElementById('breakoutTick'),bn=312;
+    dEl.textContent='decoded '+dn.toLocaleString();
+    bEl.textContent='breakouts ↗ '+bn;
+    setInterval(function(){dn+=1;dEl.textContent='decoded '+dn.toLocaleString();},2600);
+    setInterval(function(){bn+=1;bEl.textContent='breakouts ↗ '+bn;},4200);
+  }else{
+    screen.classList.add('lit');
+    document.getElementById('decodedCount').textContent='decoded 5,560';
+    document.getElementById('breakoutTick').textContent='breakouts ↗ 312';
+  }
+})();
+
+// ---- slogan tape ----
+(function(){
+  var sla=["the agent is the customer now","doomscrolled so you don't have to","delegate the ideation","a persistent brain for the feed","hand the brief to your gen tool","one founder, the whole pipeline","steal the skeleton, not the pixels","hooks that survive the scroll","what's breaking out, and why","kill the slop"];
+  var t=document.getElementById('tape'),h="";
+  for(var k=0;k<2;k++){sla.forEach(function(s){h+='<span>'+s+'</span><span class="s">✦</span>';});}
+  t.innerHTML=h;
+})();
+
+// ---- skills data + showcase ----
+var SKILLS=[
+ {cmd:"niche_report",bucket:"Research",ti:"Read the niche before you write",de:"The full read on {niche} from real decoded videos: the hooks and frameworks that over-index in breakouts (with lift + sample size), the words winners open with, real example links, and the gap nobody's filling.",
+  call:'niche_report <span class="arg">niche="skincare"</span>',
+  prompt:"Use niche_report: niche = {your niche}. Give me the hook patterns and frameworks that over-index in breakouts with the lift and sample size, the words winners open with, real example links, and the gap nobody is filling.",
+  lines:['<b class="x">What\'s working in skincare · 496 decoded</b>','<b class="x">Hooks over-indexing in breakouts</b>','· speed-of-claim   <span class="slot">8.95×</span> more common (6/8)','· question   4.18× (7/12)','· problem-agitate-solution   2.98× (3/6)','','<b class="x">Words winners open with</b>','korean 2.99× · acne 2.09× · glowy 1.23×','','<b class="x">The open lane</b>','<span class="slot">everyone shows the product, nobody shows the problem state.</span>','<b class="x">Avoid</b>: information-offering (most-used hook, under-performs).','','_focus=format · trends · combos · apps for more_']},
+ {cmd:"study_videos",bucket:"Examples",ti:"Real videos to study, best first",de:"Real TikTok links to watch, best breakouts first (reach = views ÷ followers), each tagged format / hook / emotion, plus a diagnosis of why the top ones out-reached their creator's following.",
+  call:'study_videos <span class="arg">niche="skincare"</span>',
+  prompt:"Use study_videos: niche = {your niche}. Give me the real breakout videos to watch, best first, each with reach, views, format and hook, and a short read on why the top one out-reached its creator's following.",
+  lines:['<b class="x">8 real videos · skincare · breakouts first</b>','@clearskinfaithy/… · <span class="slot">2297× reach</span> · 1.7M · talking-head · information-offering','@caoimhe.rafferty/… · 1307× reach · 4.0M · belief-challenging','@tinaglowupp/… · 878× reach · 5.8M · belief-challenging · aspiration','@gavie_spamsss/… · 693× reach · 2.7M · talking-head','','<b class="x">why the top one won</b>','hook lands in the caption (sound-off), face mid-reaction.','retention: an open loop it does not close until the end.','the move to steal: the 7pm check-in, no product until 0:08.','','_real links, not vibes. 418 curated examples._']},
+ {cmd:"teardown",bucket:"Reverse-engineer",ti:"Rebuild a winner, or your product",de:"Pass a video (link, transcript, or description) for its narrative + edit DNA, signature device, and how to rebuild it. Or pass your product to get the proven format, real examples, a brief, and a gen-prompt scaffold.",
+  call:'teardown <span class="arg">video="tiktok.com/@…/video/…"</span>',
+  prompt:"Use teardown: video = {paste or link a winning video}. Break down the framework, hook pattern, signature device, edit density, and exactly how to rebuild it for my product.",
+  lines:['<b class="x">Teardown · 4.2M views · 9.1× breakout</b>','Framework: Testimonial → Symptom → Switch → Proof.','Hook pattern: <span class="slot">belief-challenging POV</span>, caption-safe.','','<b class="x">Beat map</b>','0.0s   hook, hard cut, no logo','1.8s   symptom (the stuck state)','4.5s   the switch (product enters, no narration)','7.0s   proof (before / after in one frame)','','<b class="x">Signature device</b>','the 7am / 7pm mirror cut. that\'s the whole video.','','<b class="x">Rebuild for you</b>','keep one shot, swap the mirror demo for your before/after.']},
+ {cmd:"make_brief",bucket:"Create",ti:"Product in, shoot-ready brief out",de:"A full brief for {product}: framework, angle, a hook bank, and a Beat / VO / on-screen-text / B-roll table a creator can film, plus the CTA and shoot notes. mode=ideas for concepts, mode=hooks for a ranked hook bank.",
+  call:'make_brief <span class="arg">product="matcha kit" objective="cold traffic"</span>',
+  prompt:"Use make_brief: product = {your product}, audience = {who}, objective = {goal}. Give me the framework, angle, a hook bank, and a Beat/VO/on-screen-text/B-roll table I can hand to a creator. (mode=ideas or mode=hooks for just those.)",
+  lines:['<b class="x">Brief · PAS · Testimonial angle · 4 clips</b>','','<b class="x">Beat · VO · on-screen text · B-roll</b>','Hook · "okay I tried 6 of these" · <span class="slot">6 IN A DRAWER</span> · handheld, to cam','Agitate · "every one clumped by noon" · <span class="slot">STILL CLUMPY</span> · the stuck state','Switch · "then this one" · <span class="slot">NO WHISK?</span> · pour shot, real time','Proof · "2pm, still smooth" · <span class="slot">2PM. STILL ON.</span> · the result, no VO','','CTA · soft, brand named at 0:09, no end-card','','<b class="x">Shoot notes</b>','natural light, one location, one clip per beat (more for a longer cut). polish kills it.']},
+ {cmd:"breakout_laws",bucket:"The laws",ti:"Why 1K vs 1M views",de:"The validated first-3-seconds laws that separate breakouts from duds: from concept-matched and same-creator pairs plus corpus lift. The laws, what over-indexes, matched proof, and the honest caveat.",
+  call:'breakout_laws',
+  prompt:"Use breakout_laws. Give me the validated first-3-seconds laws that separate breakouts from duds, what over-indexes in winners, the matched proof, and the honest confound caveat.",
+  lines:['<b class="x">Why the same concept gets 1K vs 1M</b>','the first-3-seconds laws (83% within-creator, blind):','1. open on an unresolved question, not a caption','2. a taste of the payoff in ~1.5s, withhold the rest','3. a new framing every few seconds (per-frame novelty)','4. never label the format (no "GRWM / review / ad")','5. social or emotional charge in frame 1','','laws <span class="slot">3 + 4 carried the most weight</span>.','','<b class="x">honest</b>: external pulls (a celeb, a sound) beat craft,','and the laws can\'t see those. this is the floor, not a promise.']},
+ {cmd:"kill_the_slop",bucket:"Rewrite",ti:"Point it at weak copy, get a sharper cut",de:"Names exactly what's wrong with weak copy (AI-tell words, brand-centric voice, no specificity, no curiosity gap), then rewrites it shorter and sharper using a named hook pattern.",
+  call:'kill_the_slop <span class="arg">copy="Discover the revolutionary power of…"</span>',
+  prompt:"Use kill_the_slop: copy = {paste your weak copy}. Name what's wrong against the anti-slop bar, then rewrite it in customer voice with a real hook pattern.",
+  lines:['<b class="x">Diagnosis</b>','<span class="strike">"Discover the revolutionary power of our product to elevate your routine."</span>','· AI-tell words: "revolutionary", "elevate"','· brand-first, not customer-first','· zero specificity, no curiosity gap','· no hook pattern, nothing stops the scroll','','<b class="x">Rewrite · belief-challenging</b>','<span class="good">"I thought every one of these was the same. I was wrong about this one."</span>','','<b class="x">Alt · POV-recognition</b>','<span class="good">"POV: the first one that actually did what it said."</span>','','shorter. customer voice. a pattern, not a pitch.']}
+];
+// continuing "analysis" tail per tool: the agent is still working (no end state)
+var TAILS={
+ "niche_report":['↳ pulling 496 decoded videos in skincare…','↳ clustering hooks by view-breakout lift…','↳ measuring the format mix vs. the rest of the corpus…','↳ surfacing the words winners open with…','↳ locating the supply / demand gap…','↳ assembling real reference breakouts…','↳ folding in the winning feature combinations…','↳ writing the angle nobody is running yet…'],
+ "study_videos":['↳ ranking 418 examples by reach (views ÷ followers)…','↳ filtering to skincare breakouts…','↳ pulling the public links + labels…','↳ reading the top one\'s transcript + engagement…','↳ diagnosing the hook technique…','↳ isolating the retention device…','↳ naming the one move to steal…'],
+ "teardown":['↳ fetching the source video + transcript…','↳ extracting frames across the full timeline…','↳ labeling the beat map and signature device…','↳ measuring edit density vs. the breakout set…','↳ finding 2 same-shape breakouts to confirm…','↳ mapping the rebuild onto your product…','↳ writing the gen-prompt scaffold…'],
+ "make_brief":['↳ selecting framework + angle for cold traffic…','↳ writing the beat / VO / text / b-roll table…','↳ building the hook bank…','↳ planning the cut, one clip per beat…','↳ setting CTA placement + brand timing…','↳ scaling the clip count to the target length…','↳ exporting a creator-ready brief…'],
+ "breakout_laws":['↳ loading the concept-matched winner/dud pairs…','↳ comparing the first 3 seconds frame by frame…','↳ running the blind out-of-sample test…','↳ measuring per-law lift across the corpus…','↳ checking the within-creator tier…','↳ flagging the follower-count confound…','↳ writing the honest caveat…'],
+ "kill_the_slop":['↳ scanning the copy against the anti-slop bar…','↳ flagging AI-tell words + brand-first voice…','↳ measuring specificity and curiosity gap…','↳ selecting a hook pattern for the rewrite…','↳ generating 2 customer-voice variants…','↳ tightening each for the scroll…','↳ checking nothing reads like an ad…']
+};
+var rail=document.getElementById('rail'),pvName=document.getElementById('pvName'),pvBody=document.getElementById('pvBody'),sel=0;
+SKILLS.forEach(function(s,i){
+  var b=document.createElement('button');
+  b.className='srow';b.setAttribute('role','tab');b.setAttribute('aria-selected',i===0?'true':'false');b.tabIndex=i===0?0:-1;
+  b.innerHTML='<span class="bucket">'+s.bucket+'</span><div class="cmd">'+s.cmd+'</div><div class="ti">'+s.ti+'</div><div class="de">'+s.de+'</div>';
+  b.addEventListener('click',function(){pick(i);});
+  b.addEventListener('keydown',function(e){
+    if(e.key==='ArrowDown'||e.key==='ArrowRight'){e.preventDefault();pick((sel+1)%SKILLS.length,true);}
+    if(e.key==='ArrowUp'||e.key==='ArrowLeft'){e.preventDefault();pick((sel-1+SKILLS.length)%SKILLS.length,true);}
+  });
+  rail.appendChild(b);
+});
+function pick(i,focus){
+  sel=i;var rows=rail.children;
+  for(var j=0;j<rows.length;j++){rows[j].setAttribute('aria-selected',j===i?'true':'false');rows[j].tabIndex=j===i?0:-1;}
+  if(focus)rows[i].focus();
+  var s=SKILLS[i];pvName.textContent=s.cmd+' · output';
+  var call=s.call||'',sp=call.indexOf(' ');
+  var callHtml=sp>0?'<b>'+call.slice(0,sp)+'</b>'+call.slice(sp):'<b>'+call+'</b>';
+  var tail=TAILS[s.cmd]||[];
+  pvBody.innerHTML='<div class="pv-cmd">▸ '+callHtml+'</div>'
+    +'<h4>'+s.ti+'</h4>'
+    +s.lines.map(function(l){return '<div class="pv-line">'+(l===''?'&nbsp;':l)+'</div>';}).join('')
+    +tail.map(function(l,k){return '<div class="pv-proc'+(k===0?' first':'')+'">'+l+'</div>';}).join('')
+    +'<span class="pv-cursor" aria-hidden="true"></span>';
+  pvBody.dataset.prompt=s.prompt;
+  pvBody.scrollTop=0;
+}
+pick(0);
+document.getElementById('pvCopy').addEventListener('click',function(){copy(this,SKILLS[sel].prompt);});
+
+// ---- app vertical (real app-insights data, shown as share of the app-ad set) ----
+(function(){
+  var CATS=[["other",40],["productivity",22],["photo/video-editor",12],["fitness",6],["AI-tool",4],["calorie/health",3],["dating/rizz",3],["finance",3],["wellness/sleep",1]];
+  var total=CATS.reduce(function(a,c){return a+c[1];},0),max=40;
+  document.getElementById('appCats').innerHTML=CATS.map(function(c){
+    var pct=Math.round(c[1]/total*100);
+    return '<div class="catrow"><span class="cn">'+c[0]+'</span><span class="bar"><i data-w="'+Math.round(c[1]/max*100)+'"></i></span><span class="cc">'+pct+'%</span></div>';
+  }).join('');
+  var PATS=[
+   ["text-overlay","format · beats talking-head on app ads","1.37×",false],
+   ["direct-callout","hook · \"this app is for you if…\"","1.25×",false],
+   ["caption-only","product entry · name it in the caption, not shot 1","1.14×",false],
+   ["demo","hook · show it doing the thing","1.14×",false],
+   ["listicle","hook · ranks apps, under-indexes solo","0.93×",true]
+  ];
+  document.getElementById('appPats').innerHTML=PATS.map(function(p){
+    return '<div class="patrow"><div class="pl"><span class="pk">'+p[0]+'</span><span class="pd">'+p[1]+'</span></div><span class="lift'+(p[3]?' down':'')+'">'+p[2]+'</span></div>';
+  }).join('');
+  var reduce=window.matchMedia('(prefers-reduced-motion:reduce)').matches;
+  var bars=document.querySelectorAll('#appCats .bar i');
+  function fill(){bars.forEach(function(b){b.style.width=b.dataset.w+'%';});}
+  if(reduce){fill();return;}
+  var io=new IntersectionObserver(function(e){if(e[0].isIntersecting){fill();io.disconnect();}},{threshold:.4});
+  io.observe(document.getElementById('appCats'));
+})();
+
+// ---- tools ----
+var TOOLS=[
+ ["format-deconstructor","Deconstruct any winning video into a copyable spec: why it broke out, then the shot-by-shot DNA to rebuild it."],
+ ["ugc-ad-director","Product in, copy-paste Seedance prompts out: a multi-clip cut sequence sized to your video, each clip with a negative prompt and a why-it-works."],
+ ["higgsfield-director","The same multi-clip prompts engineered for Higgsfield, first 3 seconds built to clear the breakout laws, chained with video-extend for long videos."],
+ ["video-editor","Your generated clips in, however many the video needs, a finished fast-cut sound-off-legible 9:16 video out, any length. Real FFmpeg pipeline."],
+ ["format-prompt-builder","Turn a brief into a cut-by-cut timeline at any length: clip order, framings, cut rhythm, the energy arc. Anti-cinematic."],
+ ["ugc-ad-generator","End-to-end: product image plus angle, generated on Seedance via fal.ai and stitched with ffmpeg, short ad or long video."]
+];
+document.getElementById('tools').innerHTML=TOOLS.map(function(t){return '<div class="tool"><code>'+t[0]+'</code><p>'+t[1]+'</p></div>';}).join('');
+
+// ---- faq ----
+var FAQ=[
+ ["Wait, what's \"LazyReel\"?","It's the brain your agent's been missing: an MCP that already doomscrolled 21B+ views of short-form (and app ads) so it doesn't start from zero. You delegate the ideation, what's worth making and why; it hands back the decoded research and the real videos behind it. Generation tools give your agent hands; LazyReel gives it taste."],
+ ["Why \"agent-first\"?","Because the agent is the customer now. Most marketing software is built for a human clicking around a dashboard. LazyReel is built for the agent doing the work: it calls the tools, reads the research, and makes the calls on what to make. You point it at a product and hand off the ideation. This is the first layer of that, the taste; the generation tools are the hands."],
+ ["Is this just prompt templates?","No. Templates make every video sound the same. LazyReel gives the agent the workflow plus a library of formats that actually worked, so it picks the right shape for your product and niche instead of reaching for the same three lines."],
+ ["Will it make my agent sound like every other AI?","The opposite is the entire point. The skills are tuned to kill the tells: the \"revolutionary,\" the rocket emoji, the feature-list hook, the studio-ad polish. If it sounds like AI, it failed."],
+ ["Does it generate the video, or just the plan?","LazyReel does the research and the brief: the format, the hook, the script, the shot list, written as a multi-clip sequence sized to your video, not one static clip. The skills are universal on length: a 12-second ad is a few clips, a 60-90 second-plus video is many, chained for continuity (Seedance reference-to-video, or Higgsfield video-extend for a seamless single subject). To generate, pair it with a video-gen MCP like Higgsfield. Then the companion video-editor skill stitches those clips into a fast-cut, captioned 9:16 video at any length. Same agent, same chat: LazyReel decides what's worth making, the gen MCP renders the clips, the editor cuts them together so you're not shipping slop."],
+ ["Do I need an account or a card?","No. The MCP is free and there's no sign-up. Generate a token on the install page, paste one prompt into your agent, and it's connected. No card, ever."],
+ ["What's actually live today?","6 MCP tools (niche reads, real example links, teardowns, briefs, the validated breakout laws, slop rewrites) plus 6 companion make-it skills (the directors and the video editor), all from 5,560+ real decoded videos. Live re-scraping on demand and private niche libraries are next. We'll always tell you which is which."]
+];
+document.getElementById('faq-list').innerHTML=FAQ.map(function(f){return '<details><summary>'+f[0]+'<span class="chev">+</span></summary><p>'+f[1]+'</p></details>';}).join('');
+
+// ---- copy helper ----
+function copy(btn,txt){var old=btn.textContent;navigator.clipboard.writeText(txt).then(function(){btn.textContent='Copied';setTimeout(function(){btn.textContent=old;},1600);}).catch(function(){btn.textContent='Copy failed';});}
+
+// ---- stats count up ----
+(function(){
+  var reduce=window.matchMedia('(prefers-reduced-motion:reduce)').matches;
+  document.querySelectorAll('.stat .n').forEach(function(el){
+    var to=parseFloat(el.dataset.to),dec=parseInt(el.dataset.dec||0),suf=el.dataset.suffix||"";
+    function fmt(v){var s=dec?v.toFixed(dec):Math.round(v).toLocaleString();return s+suf;}
+    if(reduce){el.textContent=fmt(to);return;}
+    var io=new IntersectionObserver(function(e){if(e[0].isIntersecting){
+      var st=null;function run(ts){if(!st)st=ts;var p=Math.min((ts-st)/1100,1);var e2=1-Math.pow(1-p,3);el.textContent=fmt(to*e2);if(p<1)requestAnimationFrame(run);}requestAnimationFrame(run);io.disconnect();}},{threshold:.5});
+    io.observe(el);
+  });
+})();
+</script>
+</body>
+</html>
+

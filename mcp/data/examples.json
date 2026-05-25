@@ -1,0 +1,4187 @@
+{
+ "generatedAt": "2026-05-24",
+ "note": "Curated real example videos behind the insights \u2014 public TikTok links + labels + breakout multiple (views/followers). Links only, no video content or transcripts. Study these to see the pattern live.",
+ "count": 418,
+ "examples": [
+  {
+   "url": "https://www.tiktok.com/@__ally00/video/7634441797044931861",
+   "niche": "food and beverage",
+   "hookPattern": "none",
+   "framework": "organic",
+   "videoFormat": "lifestyle-broll",
+   "emotion": "none",
+   "views": 5900000,
+   "viewsPerFollower": 19155.84
+  },
+  {
+   "url": "https://www.tiktok.com/@cutecore.y/video/7624514555867041046",
+   "niche": "food and beverage",
+   "hookPattern": "belief-challenging",
+   "framework": "organic",
+   "videoFormat": "text-overlay-heavy",
+   "emotion": null,
+   "views": 4400000,
+   "viewsPerFollower": 17322.83
+  },
+  {
+   "url": "https://www.tiktok.com/@comfortmeal/video/7536038769338617106",
+   "niche": "food and beverage",
+   "hookPattern": "direct-callout",
+   "framework": "organic",
+   "videoFormat": "product-demo",
+   "emotion": null,
+   "views": 3500000,
+   "viewsPerFollower": 13565.89
+  },
+  {
+   "url": "https://www.tiktok.com/@emilys.beauty.room_/video/7547847483657882910",
+   "niche": "food and beverage",
+   "hookPattern": "pov",
+   "framework": "organic",
+   "videoFormat": "lifestyle-broll",
+   "emotion": "humor",
+   "views": 11100000,
+   "viewsPerFollower": 13454.55
+  },
+  {
+   "url": "https://www.tiktok.com/@trippydrinks/video/7610291644616740126",
+   "niche": "food and beverage",
+   "hookPattern": "belief-challenging",
+   "framework": "organic",
+   "videoFormat": "text-overlay-heavy",
+   "emotion": null,
+   "views": 1600000,
+   "viewsPerFollower": 13333.33
+  },
+  {
+   "url": "https://www.tiktok.com/@tayvin.6/video/7619148701298167053",
+   "niche": "tech and SaaS",
+   "hookPattern": "generic",
+   "framework": "organic",
+   "videoFormat": "voiceover-broll",
+   "emotion": null,
+   "views": 8900000,
+   "viewsPerFollower": 10136.67
+  },
+  {
+   "url": "https://www.tiktok.com/@swerve_app/video/7511548835169160490",
+   "niche": "fitness",
+   "hookPattern": "belief-challenging",
+   "framework": "organic",
+   "videoFormat": "voiceover-broll",
+   "emotion": null,
+   "views": 25200000,
+   "viewsPerFollower": 9473.68
+  },
+  {
+   "url": "https://www.tiktok.com/@kirsttiinnee/video/7451789252808969478",
+   "niche": "food and beverage",
+   "hookPattern": "before-after",
+   "framework": "organic",
+   "videoFormat": "text-overlay-heavy",
+   "emotion": null,
+   "views": 42900000,
+   "viewsPerFollower": 8685.97
+  },
+  {
+   "url": "https://www.tiktok.com/@auraclick09/video/7623423641967021330",
+   "niche": "tech and SaaS",
+   "hookPattern": "newness",
+   "framework": "organic",
+   "videoFormat": "product-demo",
+   "emotion": null,
+   "views": 10300000,
+   "viewsPerFollower": 8640.94
+  },
+  {
+   "url": "https://www.tiktok.com/@pwincesslilinn/video/7527694098870963464",
+   "niche": "food and beverage",
+   "hookPattern": "information-offering",
+   "framework": "organic",
+   "videoFormat": "text-overlay-heavy",
+   "emotion": null,
+   "views": 1900000,
+   "viewsPerFollower": 8520.18
+  },
+  {
+   "url": "https://www.tiktok.com/@homehacksyouneed/video/7604914844642331934",
+   "niche": "home and cleaning",
+   "hookPattern": "information-offering",
+   "framework": "organic",
+   "videoFormat": "pov-handheld",
+   "emotion": null,
+   "views": 309200,
+   "viewsPerFollower": 7730
+  },
+  {
+   "url": "https://www.tiktok.com/@valerie_martinez98/video/7638435096453762335",
+   "niche": "home and cleaning",
+   "hookPattern": "belief-challenging",
+   "framework": "organic",
+   "videoFormat": "before-after",
+   "emotion": "humor",
+   "views": 3700000,
+   "viewsPerFollower": 7074.57
+  },
+  {
+   "url": "https://www.tiktok.com/@ijmuk27530663e8w/video/7639297144096165134",
+   "niche": "tech and SaaS",
+   "hookPattern": "information-offering",
+   "framework": "organic",
+   "videoFormat": "product-demo",
+   "emotion": null,
+   "views": 1100000,
+   "viewsPerFollower": 6395.35
+  },
+  {
+   "url": "https://www.tiktok.com/@daneliftz/video/7631707798509833480",
+   "niche": "fitness",
+   "hookPattern": "generic",
+   "framework": "organic",
+   "videoFormat": "text-overlay-heavy",
+   "emotion": null,
+   "views": 1700000,
+   "viewsPerFollower": 6181.82
+  },
+  {
+   "url": "https://www.tiktok.com/@milena.psn/video/7629744031861460256",
+   "niche": "food and beverage",
+   "hookPattern": "question",
+   "framework": "organic",
+   "videoFormat": "text-overlay-heavy",
+   "emotion": null,
+   "views": 6800000,
+   "viewsPerFollower": 5933.68
+  },
+  {
+   "url": "https://www.tiktok.com/@gxggz1l/video/7557251618928872711",
+   "niche": "food and beverage",
+   "hookPattern": "information-offering",
+   "framework": "organic",
+   "videoFormat": "product-demo",
+   "emotion": null,
+   "views": 1800000,
+   "viewsPerFollower": 5825.24
+  },
+  {
+   "url": "https://www.tiktok.com/@es_homedecor/video/7636752019037916418",
+   "niche": "tech and SaaS",
+   "hookPattern": "belief-challenging",
+   "framework": "problem-agitate-solution",
+   "videoFormat": "product-demo",
+   "emotion": "relief",
+   "views": 1700000,
+   "viewsPerFollower": 5802.05
+  },
+  {
+   "url": "https://www.tiktok.com/@giljuhfs/video/7143046039975578922",
+   "niche": "home and cleaning",
+   "hookPattern": "before-after",
+   "framework": "organic",
+   "videoFormat": "product-demo",
+   "emotion": "relief",
+   "views": 8900000,
+   "viewsPerFollower": 5690.54
+  },
+  {
+   "url": "https://www.tiktok.com/@ilike.cleaning/video/7594427693127486727",
+   "niche": "tech and SaaS",
+   "hookPattern": "belief-challenging",
+   "framework": "industry-contrarian",
+   "videoFormat": "screen-recording",
+   "emotion": null,
+   "views": 12400000,
+   "viewsPerFollower": 5498.89
+  },
+  {
+   "url": "https://www.tiktok.com/@shadandruby/video/7625268380605484310",
+   "niche": "pets",
+   "hookPattern": "none",
+   "framework": "organic",
+   "videoFormat": "text-overlay-heavy",
+   "emotion": null,
+   "views": 13300000,
+   "viewsPerFollower": 5343.51
+  },
+  {
+   "url": "https://www.tiktok.com/@_mdearest/video/7639884573119204622",
+   "niche": "food and beverage",
+   "hookPattern": "information-offering",
+   "framework": "organic",
+   "videoFormat": "product-demo",
+   "emotion": "aspiration",
+   "views": 481100,
+   "viewsPerFollower": 5286.81
+  },
+  {
+   "url": "https://www.tiktok.com/@smartlivinghub48/video/7608445610051538197",
+   "niche": "tech and SaaS",
+   "hookPattern": "bandwagon",
+   "framework": "organic",
+   "videoFormat": "product-demo",
+   "emotion": null,
+   "views": 2500000,
+   "viewsPerFollower": 5274.26
+  },
+  {
+   "url": "https://www.tiktok.com/@elyxoxo_8/video/7618596890933759240",
+   "niche": "food and beverage",
+   "hookPattern": "question",
+   "framework": "organic",
+   "videoFormat": "product-demo",
+   "emotion": null,
+   "views": 1900000,
+   "viewsPerFollower": 5026.46
+  },
+  {
+   "url": "https://www.tiktok.com/@matcha.andmoree/video/7599608570136513800",
+   "niche": "food and beverage",
+   "hookPattern": "information-offering",
+   "framework": "organic",
+   "videoFormat": "text-overlay-heavy",
+   "emotion": null,
+   "views": 12300000,
+   "viewsPerFollower": 4951.69
+  },
+  {
+   "url": "https://www.tiktok.com/@user.6771738/video/7570021177339432223",
+   "niche": "food and beverage",
+   "hookPattern": "direct-callout",
+   "framework": "organic",
+   "videoFormat": "pov-handheld",
+   "emotion": null,
+   "views": 2400000,
+   "viewsPerFollower": 4948.45
+  },
+  {
+   "url": "https://www.tiktok.com/@lupe.mp4_/video/7638970639306476814",
+   "niche": "food and beverage",
+   "hookPattern": "information-offering",
+   "framework": "organic",
+   "videoFormat": "lifestyle-broll",
+   "emotion": "none",
+   "views": 325000,
+   "viewsPerFollower": 4779.41
+  },
+  {
+   "url": "https://www.tiktok.com/@brokieasiantech/video/7615487786048605441",
+   "niche": "tech and SaaS",
+   "hookPattern": "pov",
+   "framework": "organic",
+   "videoFormat": "text-overlay-heavy",
+   "emotion": null,
+   "views": 1600000,
+   "viewsPerFollower": 4705.88
+  },
+  {
+   "url": "https://www.tiktok.com/@gymreferences/video/7307342820409494817",
+   "niche": "fitness",
+   "hookPattern": "information-offering",
+   "framework": "organic",
+   "videoFormat": "lifestyle-broll",
+   "emotion": null,
+   "views": 10300000,
+   "viewsPerFollower": 4413.02
+  },
+  {
+   "url": "https://www.tiktok.com/@saintk4y/video/7629726358028979478",
+   "niche": "fitness",
+   "hookPattern": "generic",
+   "framework": "organic",
+   "videoFormat": "lifestyle-broll",
+   "emotion": null,
+   "views": 1800000,
+   "viewsPerFollower": 4306.22
+  },
+  {
+   "url": "https://www.tiktok.com/@bowielabradoodle/video/7640769398789131553",
+   "niche": "pets",
+   "hookPattern": "information-offering",
+   "framework": "organic",
+   "videoFormat": "text-overlay-heavy",
+   "emotion": "humor",
+   "views": 5900000,
+   "viewsPerFollower": 4278.46
+  },
+  {
+   "url": "https://www.tiktok.com/@ace.tech1/video/7637333729735642399",
+   "niche": "tech and SaaS",
+   "hookPattern": "information-offering",
+   "framework": "organic",
+   "videoFormat": "text-overlay-heavy",
+   "emotion": null,
+   "views": 1300000,
+   "viewsPerFollower": 4166.67
+  },
+  {
+   "url": "https://www.tiktok.com/@i_sometimeswishtobea_man/video/7621337597373173022",
+   "niche": "supplements",
+   "hookPattern": "information-offering",
+   "framework": "organic",
+   "videoFormat": null,
+   "emotion": "humor",
+   "views": 2300000,
+   "viewsPerFollower": 4028.02
+  },
+  {
+   "url": "https://www.tiktok.com/@shmoneypenny/video/7525837411658648862",
+   "niche": "pets",
+   "hookPattern": "information-offering",
+   "framework": "organic",
+   "videoFormat": null,
+   "emotion": "humor",
+   "views": 8800000,
+   "viewsPerFollower": 3946.19
+  },
+  {
+   "url": "https://www.tiktok.com/@kiaraleigh._/video/7627173579687300374",
+   "niche": "tech and SaaS",
+   "hookPattern": "direct-callout",
+   "framework": "organic",
+   "videoFormat": null,
+   "emotion": "aspiration",
+   "views": 5600000,
+   "viewsPerFollower": 3802.04
+  },
+  {
+   "url": "https://www.tiktok.com/@flickswitch_/video/7630383160416537857",
+   "niche": "tech and SaaS",
+   "hookPattern": "removing-limitations",
+   "framework": "organic",
+   "videoFormat": "pov-handheld",
+   "emotion": null,
+   "views": 2600000,
+   "viewsPerFollower": 3708.99
+  },
+  {
+   "url": "https://www.tiktok.com/@hadz6346/video/7635121411119435029",
+   "niche": "pets",
+   "hookPattern": "information-offering",
+   "framework": "organic",
+   "videoFormat": null,
+   "emotion": "aspiration",
+   "views": 65500000,
+   "viewsPerFollower": 3700.56
+  },
+  {
+   "url": "https://www.tiktok.com/@lo.mekelburg/video/7519393599944002871",
+   "niche": "fitness",
+   "hookPattern": "pov",
+   "framework": "organic",
+   "videoFormat": "pov-handheld",
+   "emotion": null,
+   "views": 3200000,
+   "viewsPerFollower": 3682.39
+  },
+  {
+   "url": "https://www.tiktok.com/@cozybryant8/video/7638655655909346591",
+   "niche": "fitness",
+   "hookPattern": "before-after",
+   "framework": "organic",
+   "videoFormat": "text-overlay-heavy",
+   "emotion": null,
+   "views": 4100000,
+   "viewsPerFollower": 3580.79
+  },
+  {
+   "url": "https://www.tiktok.com/@lazyreach/video/7634618666419571990",
+   "niche": "tech and SaaS",
+   "hookPattern": "removing-limitations",
+   "framework": "organic",
+   "videoFormat": "product-demo",
+   "emotion": null,
+   "views": 2300000,
+   "viewsPerFollower": 3571.43
+  },
+  {
+   "url": "https://www.tiktok.com/@beanthefrug/video/7631585881614241046",
+   "niche": "pets",
+   "hookPattern": "direct-callout",
+   "framework": "organic",
+   "videoFormat": "text-overlay-heavy",
+   "emotion": null,
+   "views": 1200000,
+   "viewsPerFollower": 3519.06
+  },
+  {
+   "url": "https://www.tiktok.com/@trencycle/video/7433012870624873735",
+   "niche": "pets",
+   "hookPattern": "generic",
+   "framework": "organic",
+   "videoFormat": "voiceover-broll",
+   "emotion": null,
+   "views": 4900000,
+   "viewsPerFollower": 3417.02
+  },
+  {
+   "url": "https://www.tiktok.com/@f_dez7/video/7487245729363266822",
+   "niche": "food and beverage",
+   "hookPattern": "information-offering",
+   "framework": "organic",
+   "videoFormat": "product-demo",
+   "emotion": null,
+   "views": 7300000,
+   "viewsPerFollower": 3258.93
+  },
+  {
+   "url": "https://www.tiktok.com/@jadalynsmedia/video/7621984053490765086",
+   "niche": "tech and SaaS",
+   "hookPattern": "information-offering",
+   "framework": "organic",
+   "videoFormat": null,
+   "emotion": "curiosity",
+   "views": 4400000,
+   "viewsPerFollower": 3197.67
+  },
+  {
+   "url": "https://www.tiktok.com/@squ1dn37/video/7625647411947506975",
+   "niche": "fashion",
+   "hookPattern": "pov",
+   "framework": "organic",
+   "videoFormat": null,
+   "emotion": "humor",
+   "views": 465400,
+   "viewsPerFollower": 3062.5
+  },
+  {
+   "url": "https://www.tiktok.com/@jezus04_/video/7639228501027048717",
+   "niche": "pets",
+   "hookPattern": "pov",
+   "framework": "organic",
+   "videoFormat": null,
+   "emotion": "humor",
+   "views": 28300000,
+   "viewsPerFollower": 3038.01
+  },
+  {
+   "url": "https://www.tiktok.com/@jayneongjy/video/7640042005040516373",
+   "niche": "pets",
+   "hookPattern": "none",
+   "framework": "organic",
+   "videoFormat": "text-overlay-heavy",
+   "emotion": "humor",
+   "views": 11700000,
+   "viewsPerFollower": 3029.52
+  },
+  {
+   "url": "https://www.tiktok.com/@eveline_bob/video/7640296775844138254",
+   "niche": "fashion",
+   "hookPattern": "none",
+   "framework": "organic",
+   "videoFormat": "text-overlay-heavy",
+   "emotion": "none",
+   "views": 1800000,
+   "viewsPerFollower": 2985.07
+  },
+  {
+   "url": "https://www.tiktok.com/@mulanhairextension/video/7630644711874661662",
+   "niche": "hair",
+   "hookPattern": "information-offering",
+   "framework": "organic",
+   "videoFormat": "product-demo",
+   "emotion": null,
+   "views": 4900000,
+   "viewsPerFollower": 2980.54
+  },
+  {
+   "url": "https://www.tiktok.com/@looksbymichelle/video/7598356123892206879",
+   "niche": "food and beverage",
+   "hookPattern": "information-offering",
+   "framework": "organic",
+   "videoFormat": null,
+   "emotion": "relief",
+   "views": 2400000,
+   "viewsPerFollower": 2912.62
+  },
+  {
+   "url": "https://www.tiktok.com/@theulloa98/video/7523412616820182280",
+   "niche": "food and beverage",
+   "hookPattern": "pov",
+   "framework": "organic",
+   "videoFormat": "lifestyle-broll",
+   "emotion": null,
+   "views": 11200000,
+   "viewsPerFollower": 2874.74
+  },
+  {
+   "url": "https://www.tiktok.com/@luvsadvicex/video/7189083150650199298",
+   "niche": "tech and SaaS",
+   "hookPattern": "information-offering",
+   "framework": "listicle",
+   "videoFormat": null,
+   "emotion": "aspiration",
+   "views": 347000,
+   "viewsPerFollower": 2844.26
+  },
+  {
+   "url": "https://www.tiktok.com/@xo_karoline/video/7637118038898134294",
+   "niche": "pets",
+   "hookPattern": "question",
+   "framework": "organic",
+   "videoFormat": "text-overlay-heavy",
+   "emotion": null,
+   "views": 3000000,
+   "viewsPerFollower": 2816.9
+  },
+  {
+   "url": "https://www.tiktok.com/@glowgenie_kbeauty/video/7632104489771617567",
+   "niche": "ABG beauty",
+   "hookPattern": "information-offering",
+   "framework": "problem-agitate-solution",
+   "videoFormat": "product-demo",
+   "emotion": null,
+   "views": 11200000,
+   "viewsPerFollower": 2792.32
+  },
+  {
+   "url": "https://www.tiktok.com/@mistyandminka/video/7618623178591472927",
+   "niche": "pets",
+   "hookPattern": "direct-callout",
+   "framework": "organic",
+   "videoFormat": "text-overlay-heavy",
+   "emotion": null,
+   "views": 50000000,
+   "viewsPerFollower": 2777.78
+  },
+  {
+   "url": "https://www.tiktok.com/@maddieeee_6/video/7585659522346175799",
+   "niche": "hair",
+   "hookPattern": "before-after",
+   "framework": "organic",
+   "videoFormat": null,
+   "emotion": "aspiration",
+   "views": 15800000,
+   "viewsPerFollower": 2776.31
+  },
+  {
+   "url": "https://www.tiktok.com/@jinjinmatcha/video/7477008184574610719",
+   "niche": "food and beverage",
+   "hookPattern": "direct-callout",
+   "framework": "organic",
+   "videoFormat": "product-demo",
+   "emotion": "humor",
+   "views": 13700000,
+   "viewsPerFollower": 2752.66
+  },
+  {
+   "url": "https://www.tiktok.com/@bridgetbmillie/video/7629769466607357197",
+   "niche": "food and beverage",
+   "hookPattern": "information-offering",
+   "framework": "organic",
+   "videoFormat": "talking-head",
+   "emotion": null,
+   "views": 4300000,
+   "viewsPerFollower": 2652.68
+  },
+  {
+   "url": "https://www.tiktok.com/@flawlesssliikeme/video/7638746911951850783",
+   "niche": "fitness",
+   "hookPattern": "information-offering",
+   "framework": "organic",
+   "videoFormat": null,
+   "emotion": "aspiration",
+   "views": 338700,
+   "viewsPerFollower": 2646.09
+  },
+  {
+   "url": "https://www.tiktok.com/@fitoils/video/7514850162083253546",
+   "niche": "fitness",
+   "hookPattern": "belief-challenging",
+   "framework": "problem-agitate-solution",
+   "videoFormat": "voiceover-broll",
+   "emotion": null,
+   "views": 3400000,
+   "viewsPerFollower": 2550.64
+  },
+  {
+   "url": "https://www.tiktok.com/@mila.angelo/video/7387842522254445829",
+   "niche": "tech and SaaS",
+   "hookPattern": "information-offering",
+   "framework": "listicle",
+   "videoFormat": null,
+   "emotion": "aspiration",
+   "views": 8200000,
+   "viewsPerFollower": 2502.29
+  },
+  {
+   "url": "https://www.tiktok.com/@a6741265/video/7598636920859577618",
+   "niche": "food and beverage",
+   "hookPattern": "information-offering",
+   "framework": "organic",
+   "videoFormat": "product-demo",
+   "emotion": null,
+   "views": 2800000,
+   "viewsPerFollower": 2458.3
+  },
+  {
+   "url": "https://www.tiktok.com/@val_skye_98/video/7617584975176535310",
+   "niche": "food and beverage",
+   "hookPattern": "information-offering",
+   "framework": "organic",
+   "videoFormat": "product-demo",
+   "emotion": null,
+   "views": 2600000,
+   "viewsPerFollower": 2405.18
+  },
+  {
+   "url": "https://www.tiktok.com/@beautytok43/video/7642614354822565142",
+   "niche": "ABG beauty",
+   "hookPattern": "information-offering",
+   "framework": "organic",
+   "videoFormat": "product-demo",
+   "emotion": null,
+   "views": 805400,
+   "viewsPerFollower": 2327.75
+  },
+  {
+   "url": "https://www.tiktok.com/@thematchascientist_/video/7576715063118073102",
+   "niche": "food and beverage",
+   "hookPattern": "exclusivity",
+   "framework": "organic",
+   "videoFormat": "text-overlay-heavy",
+   "emotion": null,
+   "views": 9700000,
+   "viewsPerFollower": 2297.49
+  },
+  {
+   "url": "https://www.tiktok.com/@clearskinfaithy/video/7639178321342827807",
+   "niche": "skincare",
+   "hookPattern": "information-offering",
+   "framework": "organic",
+   "videoFormat": "talking-head",
+   "emotion": "relief",
+   "views": 1700000,
+   "viewsPerFollower": 2297.3
+  },
+  {
+   "url": "https://www.tiktok.com/@kikilulu7460/video/7633813396655246622",
+   "niche": "pets",
+   "hookPattern": "direct-callout",
+   "framework": "organic",
+   "videoFormat": "lifestyle-broll",
+   "emotion": null,
+   "views": 4500000,
+   "viewsPerFollower": 2271.58
+  },
+  {
+   "url": "https://www.tiktok.com/@bellahamelll/video/7585649038633028919",
+   "niche": "pets",
+   "hookPattern": "information-offering",
+   "framework": "organic",
+   "videoFormat": "lifestyle-broll",
+   "emotion": "humor",
+   "views": 8200000,
+   "viewsPerFollower": 2255.23
+  },
+  {
+   "url": "https://www.tiktok.com/@kz7.setup/video/7626465568299732246",
+   "niche": "tech and SaaS",
+   "hookPattern": "information-offering",
+   "framework": "organic",
+   "videoFormat": "product-demo",
+   "emotion": null,
+   "views": 1400000,
+   "viewsPerFollower": 2194.36
+  },
+  {
+   "url": "https://www.tiktok.com/@serghei_u/video/7637990948403744014",
+   "niche": "fitness",
+   "hookPattern": "generic",
+   "framework": "organic",
+   "videoFormat": "product-demo",
+   "emotion": null,
+   "views": 12800000,
+   "viewsPerFollower": 2192.91
+  },
+  {
+   "url": "https://www.tiktok.com/@eat_with_lily/video/7638127860284247326",
+   "niche": "food and beverage",
+   "hookPattern": "information-offering",
+   "framework": "organic",
+   "videoFormat": "product-demo",
+   "emotion": null,
+   "views": 3700000,
+   "viewsPerFollower": 2175.19
+  },
+  {
+   "url": "https://www.tiktok.com/@ellamiiiiiiiiiiii/video/7555248888815357191",
+   "niche": "food and beverage",
+   "hookPattern": "newness",
+   "framework": "organic",
+   "videoFormat": "product-demo",
+   "emotion": null,
+   "views": 20500000,
+   "viewsPerFollower": 2153.59
+  },
+  {
+   "url": "https://www.tiktok.com/@kitchenconqueror/video/7170801533565766958",
+   "niche": "tech and SaaS",
+   "hookPattern": "information-offering",
+   "framework": "organic",
+   "videoFormat": "product-demo",
+   "emotion": "aspiration",
+   "views": 55800000,
+   "viewsPerFollower": 2105.66
+  },
+  {
+   "url": "https://www.tiktok.com/@kid_eustass1/video/7628419501029100813",
+   "niche": "fashion",
+   "hookPattern": "information-offering",
+   "framework": "organic",
+   "videoFormat": null,
+   "emotion": "aspiration",
+   "views": 780000,
+   "viewsPerFollower": 2063.49
+  },
+  {
+   "url": "https://www.tiktok.com/@xbus2603021031/video/7624487881083489567",
+   "niche": "supplements",
+   "hookPattern": "size-of-claim",
+   "framework": "problem-agitate-solution",
+   "videoFormat": "voiceover-broll",
+   "emotion": "fear",
+   "views": 1900000,
+   "viewsPerFollower": 2010.58
+  },
+  {
+   "url": "https://www.tiktok.com/@itsautumnkovacs/video/7264605680395406634",
+   "niche": "food and beverage",
+   "hookPattern": "information-offering",
+   "framework": "organic",
+   "videoFormat": null,
+   "emotion": "aspiration",
+   "views": 62700000,
+   "viewsPerFollower": 1984.18
+  },
+  {
+   "url": "https://www.tiktok.com/@xij188_ht/video/7585541740321344781",
+   "niche": "tech and SaaS",
+   "hookPattern": "removing-limitations",
+   "framework": "problem-agitate-solution",
+   "videoFormat": "product-demo",
+   "emotion": null,
+   "views": 13800000,
+   "viewsPerFollower": 1983.04
+  },
+  {
+   "url": "https://www.tiktok.com/@bleh3173/video/7637039426010402051",
+   "niche": "fashion",
+   "hookPattern": "removing-limitations",
+   "framework": "organic",
+   "videoFormat": "text-overlay-heavy",
+   "emotion": null,
+   "views": 591400,
+   "viewsPerFollower": 1971.33
+  },
+  {
+   "url": "https://www.tiktok.com/@thehairhussle/video/7628639187561893133",
+   "niche": "hair",
+   "hookPattern": "question",
+   "framework": "organic",
+   "videoFormat": "text-overlay-heavy",
+   "emotion": null,
+   "views": 2100000,
+   "viewsPerFollower": 1946.25
+  },
+  {
+   "url": "https://www.tiktok.com/@mokumatcha/video/7621916007535217940",
+   "niche": "food and beverage",
+   "hookPattern": "direct-callout",
+   "framework": "organic",
+   "videoFormat": "product-demo",
+   "emotion": null,
+   "views": 8800000,
+   "viewsPerFollower": 1941.32
+  },
+  {
+   "url": "https://www.tiktok.com/@mqrin.nn/video/7642423800058875138",
+   "niche": "tech and SaaS",
+   "hookPattern": "none",
+   "framework": "organic",
+   "videoFormat": "text-overlay-heavy",
+   "emotion": "none",
+   "views": 435800,
+   "viewsPerFollower": 1928.32
+  },
+  {
+   "url": "https://www.tiktok.com/@zippy_shiryl_goodthi/video/7497802810101255470",
+   "niche": "home and cleaning",
+   "hookPattern": "information-offering",
+   "framework": "problem-agitate-solution",
+   "videoFormat": "product-demo",
+   "emotion": null,
+   "views": 787200,
+   "viewsPerFollower": 1924.69
+  },
+  {
+   "url": "https://www.tiktok.com/@yellowbusisgreen/video/7197756473210932507",
+   "niche": "tech and SaaS",
+   "hookPattern": "newness",
+   "framework": "organic",
+   "videoFormat": null,
+   "emotion": "aspiration",
+   "views": 226200,
+   "viewsPerFollower": 1869.42
+  },
+  {
+   "url": "https://www.tiktok.com/@lifebytea/video/7628672387000569110",
+   "niche": "food and beverage",
+   "hookPattern": "none",
+   "framework": "organic",
+   "videoFormat": "lifestyle-broll",
+   "emotion": "none",
+   "views": 440100,
+   "viewsPerFollower": 1841.42
+  },
+  {
+   "url": "https://www.tiktok.com/@cozy.life70/video/7637329358134283550",
+   "niche": "home and cleaning",
+   "hookPattern": "information-offering",
+   "framework": "organic",
+   "videoFormat": null,
+   "emotion": "relief",
+   "views": 3800000,
+   "viewsPerFollower": 1806.94
+  },
+  {
+   "url": "https://www.tiktok.com/@cooldude00456/video/7601617911270116631",
+   "niche": "tech and SaaS",
+   "hookPattern": "information-offering",
+   "framework": "organic",
+   "videoFormat": "product-demo",
+   "emotion": null,
+   "views": 10100000,
+   "viewsPerFollower": 1805.51
+  },
+  {
+   "url": "https://www.tiktok.com/@bjusmarco/video/7479762558296132882",
+   "niche": "fitness",
+   "hookPattern": "information-offering",
+   "framework": "organic",
+   "videoFormat": "voiceover-broll",
+   "emotion": null,
+   "views": 8800000,
+   "viewsPerFollower": 1777.06
+  },
+  {
+   "url": "https://www.tiktok.com/@itshollywatts/video/7637060276688407829",
+   "niche": "pets",
+   "hookPattern": "information-offering",
+   "framework": "organic",
+   "videoFormat": "talking-head",
+   "emotion": null,
+   "views": 6700000,
+   "viewsPerFollower": 1766.41
+  },
+  {
+   "url": "https://www.tiktok.com/@user..null/video/7636783296701140245",
+   "niche": "pets",
+   "hookPattern": "belief-challenging",
+   "framework": "organic",
+   "videoFormat": "text-overlay-heavy",
+   "emotion": null,
+   "views": 4500000,
+   "viewsPerFollower": 1730.77
+  },
+  {
+   "url": "https://www.tiktok.com/@scoutheckman/video/7603071058396155157",
+   "niche": "pets",
+   "hookPattern": "information-offering",
+   "framework": "organic",
+   "videoFormat": "text-overlay-heavy",
+   "emotion": null,
+   "views": 25300000,
+   "viewsPerFollower": 1721.09
+  },
+  {
+   "url": "https://www.tiktok.com/@baggagelimit/video/7641140584618396948",
+   "niche": "fashion",
+   "hookPattern": "direct-callout",
+   "framework": "organic",
+   "videoFormat": "text-overlay-heavy",
+   "emotion": "humor",
+   "views": 1600000,
+   "viewsPerFollower": 1703.94
+  },
+  {
+   "url": "https://www.tiktok.com/@jblifts9/video/7641754721044188430",
+   "niche": "fitness",
+   "hookPattern": "generic",
+   "framework": "organic",
+   "videoFormat": "text-overlay-heavy",
+   "emotion": null,
+   "views": 1000000,
+   "viewsPerFollower": 1644.74
+  },
+  {
+   "url": "https://www.tiktok.com/@simplify.bm/video/7607040354361134358",
+   "niche": "tech and SaaS",
+   "hookPattern": "none",
+   "framework": "none",
+   "videoFormat": "product-demo",
+   "emotion": "none",
+   "views": 2200000,
+   "viewsPerFollower": 1641.79
+  },
+  {
+   "url": "https://www.tiktok.com/@.idkanymore._/video/7638250854276943117",
+   "niche": "hair",
+   "hookPattern": "information-offering",
+   "framework": "organic",
+   "videoFormat": null,
+   "emotion": "aspiration",
+   "views": 9300000,
+   "viewsPerFollower": 1630.72
+  },
+  {
+   "url": "https://www.tiktok.com/@user49160378/video/7626021918084254998",
+   "niche": "fashion",
+   "hookPattern": "information-offering",
+   "framework": "organic",
+   "videoFormat": "lifestyle-broll",
+   "emotion": null,
+   "views": 6100000,
+   "viewsPerFollower": 1595.19
+  },
+  {
+   "url": "https://www.tiktok.com/@saradelores/video/7633201772323949838",
+   "niche": "pets",
+   "hookPattern": "belief-challenging",
+   "framework": "organic",
+   "videoFormat": "lifestyle-broll",
+   "emotion": null,
+   "views": 74800000,
+   "viewsPerFollower": 1591.49
+  },
+  {
+   "url": "https://www.tiktok.com/@cafechelsc/video/7505614577489480967",
+   "niche": "food and beverage",
+   "hookPattern": "generic",
+   "framework": "organic",
+   "videoFormat": "product-demo",
+   "emotion": null,
+   "views": 4000000,
+   "viewsPerFollower": 1546.19
+  },
+  {
+   "url": "https://www.tiktok.com/@tspaappleton/video/7374150562008485166",
+   "niche": "hair",
+   "hookPattern": "information-offering",
+   "framework": "listicle",
+   "videoFormat": null,
+   "emotion": "aspiration",
+   "views": 23800000,
+   "viewsPerFollower": 1545.45
+  },
+  {
+   "url": "https://www.tiktok.com/@dankmustardblud/video/7554830716928937230",
+   "niche": "tech and SaaS",
+   "hookPattern": "none",
+   "framework": "none",
+   "videoFormat": "text-overlay-heavy",
+   "emotion": null,
+   "views": 4300000,
+   "viewsPerFollower": 1529.16
+  },
+  {
+   "url": "https://www.tiktok.com/@cookbook_is/video/7588610800416296213",
+   "niche": "food and beverage",
+   "hookPattern": "speed-of-claim",
+   "framework": "organic",
+   "videoFormat": null,
+   "emotion": "relief",
+   "views": 5900000,
+   "viewsPerFollower": 1509.34
+  },
+  {
+   "url": "https://www.tiktok.com/@sidneyx.b/video/7499884982039596310",
+   "niche": "hair",
+   "hookPattern": "before-after",
+   "framework": "organic",
+   "videoFormat": "talking-head",
+   "emotion": null,
+   "views": 34400000,
+   "viewsPerFollower": 1502.18
+  },
+  {
+   "url": "https://www.tiktok.com/@yasminemakaila/video/7369773431404956958",
+   "niche": "pets",
+   "hookPattern": "direct-callout",
+   "framework": "organic",
+   "videoFormat": "text-overlay-heavy",
+   "emotion": "humor",
+   "views": 4700000,
+   "viewsPerFollower": 1490.64
+  },
+  {
+   "url": "https://www.tiktok.com/@dollpig456/video/7529753280860163341",
+   "niche": "tech and SaaS",
+   "hookPattern": "before-after",
+   "framework": "problem-agitate-solution",
+   "videoFormat": "product-demo",
+   "emotion": null,
+   "views": 7000000,
+   "viewsPerFollower": 1448.38
+  },
+  {
+   "url": "https://www.tiktok.com/@popn_theapp/video/7628637742590676246",
+   "niche": "fashion",
+   "hookPattern": "question",
+   "framework": "organic",
+   "videoFormat": "talking-head",
+   "emotion": "aspiration",
+   "views": 1000000,
+   "viewsPerFollower": 1447.18
+  },
+  {
+   "url": "https://www.tiktok.com/@trendloom.com2/video/7619974122940009748",
+   "niche": "tech and SaaS",
+   "hookPattern": "newness",
+   "framework": "organic",
+   "videoFormat": "product-demo",
+   "emotion": null,
+   "views": 2200000,
+   "viewsPerFollower": 1442.62
+  },
+  {
+   "url": "https://www.tiktok.com/@bensonthegoldenretrieve/video/7563696703010835726",
+   "niche": "pets",
+   "hookPattern": "pov",
+   "framework": "organic",
+   "videoFormat": null,
+   "emotion": "nostalgia",
+   "views": 8100000,
+   "viewsPerFollower": 1442.46
+  },
+  {
+   "url": "https://www.tiktok.com/@danielsorbunpt/video/7621336772756213013",
+   "niche": "supplements",
+   "hookPattern": "belief-challenging",
+   "framework": "industry-contrarian",
+   "videoFormat": null,
+   "emotion": "relief",
+   "views": 575500,
+   "viewsPerFollower": 1390.1
+  },
+  {
+   "url": "https://www.tiktok.com/@dreapoliquin/video/7514883951010286854",
+   "niche": "hair",
+   "hookPattern": "pov",
+   "framework": "organic",
+   "videoFormat": "before-after",
+   "emotion": null,
+   "views": 25700000,
+   "viewsPerFollower": 1367.02
+  },
+  {
+   "url": "https://www.tiktok.com/@ie333m/video/7640919297509952798",
+   "niche": "pets",
+   "hookPattern": "pov",
+   "framework": "organic",
+   "videoFormat": "lifestyle-broll",
+   "emotion": null,
+   "views": 2500000,
+   "viewsPerFollower": 1363.88
+  },
+  {
+   "url": "https://www.tiktok.com/@orlandobugman/video/7294294650339233066",
+   "niche": "home and cleaning",
+   "hookPattern": "information-offering",
+   "framework": "problem-agitate-solution",
+   "videoFormat": "talking-head",
+   "emotion": null,
+   "views": 17800000,
+   "viewsPerFollower": 1358.78
+  },
+  {
+   "url": "https://www.tiktok.com/@justlifewithstef/video/7436503164968324395",
+   "niche": "home and cleaning",
+   "hookPattern": "question",
+   "framework": "information-offering",
+   "videoFormat": "talking-head",
+   "emotion": null,
+   "views": 11100000,
+   "viewsPerFollower": 1348.56
+  },
+  {
+   "url": "https://www.tiktok.com/@user5063100270060/video/7640122371046640909",
+   "niche": "home and cleaning",
+   "hookPattern": "before-after",
+   "framework": "problem-agitate-solution",
+   "videoFormat": "other",
+   "emotion": null,
+   "views": 5700000,
+   "viewsPerFollower": 1338.97
+  },
+  {
+   "url": "https://www.tiktok.com/@voguemage/video/7536628436115197191",
+   "niche": "fashion",
+   "hookPattern": "generic",
+   "framework": "organic",
+   "videoFormat": "lifestyle-broll",
+   "emotion": null,
+   "views": 2000000,
+   "viewsPerFollower": 1336.9
+  },
+  {
+   "url": "https://www.tiktok.com/@meghasinghx/video/7364556621512527146",
+   "niche": "ABG beauty",
+   "hookPattern": "information-offering",
+   "framework": "organic",
+   "videoFormat": "talking-head",
+   "emotion": null,
+   "views": 28500000,
+   "viewsPerFollower": 1325.58
+  },
+  {
+   "url": "https://www.tiktok.com/@natattack.2/video/7524354299497811231",
+   "niche": "ABG beauty",
+   "hookPattern": "information-offering",
+   "framework": "organic",
+   "videoFormat": "before-after",
+   "emotion": "humor",
+   "views": 17900000,
+   "viewsPerFollower": 1316.18
+  },
+  {
+   "url": "https://www.tiktok.com/@caoimhe.rafferty/video/7630356833814842646",
+   "niche": "skincare",
+   "hookPattern": "belief-challenging",
+   "framework": "organic",
+   "videoFormat": null,
+   "emotion": "curiosity",
+   "views": 4000000,
+   "viewsPerFollower": 1307.19
+  },
+  {
+   "url": "https://www.tiktok.com/@jandelgym/video/7614536234374827295",
+   "niche": "fitness",
+   "hookPattern": "none",
+   "framework": "organic",
+   "videoFormat": "before-after",
+   "emotion": "none",
+   "views": 3100000,
+   "viewsPerFollower": 1284.18
+  },
+  {
+   "url": "https://www.tiktok.com/@itsmrsgracie/video/7546730099631246614",
+   "niche": "fitness",
+   "hookPattern": "removing-limitations",
+   "framework": "organic",
+   "videoFormat": "before-after",
+   "emotion": null,
+   "views": 48000000,
+   "viewsPerFollower": 1283.42
+  },
+  {
+   "url": "https://www.tiktok.com/@nany_deals/video/7601319714773568798",
+   "niche": "tech and SaaS",
+   "hookPattern": "belief-challenging",
+   "framework": "organic",
+   "videoFormat": "product-demo",
+   "emotion": null,
+   "views": 10800000,
+   "viewsPerFollower": 1269.24
+  },
+  {
+   "url": "https://www.tiktok.com/@33yvoovy/video/7621520932993076494",
+   "niche": "tech and SaaS",
+   "hookPattern": "newness",
+   "framework": "problem-agitate-solution",
+   "videoFormat": null,
+   "emotion": null,
+   "views": 4200000,
+   "viewsPerFollower": 1267.73
+  },
+  {
+   "url": "https://www.tiktok.com/@crazy.hubert/video/7325599891382652165",
+   "niche": "pets",
+   "hookPattern": "information-offering",
+   "framework": "organic",
+   "videoFormat": "lifestyle-broll",
+   "emotion": null,
+   "views": 127900000,
+   "viewsPerFollower": 1267.59
+  },
+  {
+   "url": "https://www.tiktok.com/@casptech/video/7605842194250894600",
+   "niche": "tech and SaaS",
+   "hookPattern": "information-offering",
+   "framework": "organic",
+   "videoFormat": "text-overlay-heavy",
+   "emotion": null,
+   "views": 747000,
+   "viewsPerFollower": 1266.1
+  },
+  {
+   "url": "https://www.tiktok.com/@zenvygear/video/7331806873064197382",
+   "niche": "tech and SaaS",
+   "hookPattern": "newness",
+   "framework": "organic",
+   "videoFormat": "product-demo",
+   "emotion": null,
+   "views": 73900000,
+   "viewsPerFollower": 1252.54
+  },
+  {
+   "url": "https://www.tiktok.com/@lilymaymusic/video/7563846282733800735",
+   "niche": "tech and SaaS",
+   "hookPattern": "information-offering",
+   "framework": "listicle",
+   "videoFormat": null,
+   "emotion": "aspiration",
+   "views": 2900000,
+   "viewsPerFollower": 1249.46
+  },
+  {
+   "url": "https://www.tiktok.com/@utwray116/video/7639453321907932446",
+   "niche": "food and beverage",
+   "hookPattern": "newness",
+   "framework": "organic",
+   "videoFormat": "pov-handheld",
+   "emotion": "humor",
+   "views": 19900000,
+   "viewsPerFollower": 1213.41
+  },
+  {
+   "url": "https://www.tiktok.com/@itzqueenkeen/video/7448726953412103454",
+   "niche": "supplements",
+   "hookPattern": "authority",
+   "framework": "organic",
+   "videoFormat": "product-demo",
+   "emotion": null,
+   "views": 1500000,
+   "viewsPerFollower": 1202.89
+  },
+  {
+   "url": "https://www.tiktok.com/@myscrub.gun/video/7304737777545989419",
+   "niche": "tech and SaaS",
+   "hookPattern": "none",
+   "framework": "organic",
+   "videoFormat": "product-demo",
+   "emotion": "none",
+   "views": 13300000,
+   "viewsPerFollower": 1198.2
+  },
+  {
+   "url": "https://www.tiktok.com/@kristinsfish/video/7616812467406081294",
+   "niche": "ABG beauty",
+   "hookPattern": "information-offering",
+   "framework": "organic",
+   "videoFormat": "lifestyle-broll",
+   "emotion": null,
+   "views": 26100000,
+   "viewsPerFollower": 1186.36
+  },
+  {
+   "url": "https://www.tiktok.com/@thegreenrituals/video/7627099735450553622",
+   "niche": "food and beverage",
+   "hookPattern": "listicle",
+   "framework": "organic",
+   "videoFormat": "text-overlay-heavy",
+   "emotion": "humor",
+   "views": 1600000,
+   "viewsPerFollower": 1186.06
+  },
+  {
+   "url": "https://www.tiktok.com/@trendloom.com2/video/7624597055599660308",
+   "niche": "tech and SaaS",
+   "hookPattern": "information-offering",
+   "framework": "organic",
+   "videoFormat": "text-overlay-heavy",
+   "emotion": null,
+   "views": 1800000,
+   "viewsPerFollower": 1180.33
+  },
+  {
+   "url": "https://www.tiktok.com/@foiledbykayla/video/7570162948522380599",
+   "niche": "hair",
+   "hookPattern": "none",
+   "framework": "organic",
+   "videoFormat": "lifestyle-broll",
+   "emotion": null,
+   "views": 44600000,
+   "viewsPerFollower": 1137.76
+  },
+  {
+   "url": "https://www.tiktok.com/@lollydollychxr/video/7601791992602938642",
+   "niche": "home and cleaning",
+   "hookPattern": "generic",
+   "framework": "organic",
+   "videoFormat": "text-overlay-heavy",
+   "emotion": null,
+   "views": 611200,
+   "viewsPerFollower": 1131.85
+  },
+  {
+   "url": "https://www.tiktok.com/@thecodydyer/video/7609048852447939871",
+   "niche": "fitness",
+   "hookPattern": "belief-challenging",
+   "framework": "industry-contrarian",
+   "videoFormat": "lifestyle-broll",
+   "emotion": null,
+   "views": 970800,
+   "viewsPerFollower": 1100.68
+  },
+  {
+   "url": "https://www.tiktok.com/@dmgnxy/video/7351808443109494059",
+   "niche": "fitness",
+   "hookPattern": "direct-callout",
+   "framework": "industry-contrarian",
+   "videoFormat": "voiceover-broll",
+   "emotion": null,
+   "views": 7600000,
+   "viewsPerFollower": 1099.7
+  },
+  {
+   "url": "https://www.tiktok.com/@itswellnessbyanna/video/7637275314879483150",
+   "niche": "food and beverage",
+   "hookPattern": "information-offering",
+   "framework": "organic",
+   "videoFormat": "text-overlay-heavy",
+   "emotion": null,
+   "views": 272900,
+   "viewsPerFollower": 1078.66
+  },
+  {
+   "url": "https://www.tiktok.com/@kane.themicrobully/video/7630317862791433480",
+   "niche": "pets",
+   "hookPattern": "newness",
+   "framework": "organic",
+   "videoFormat": "lifestyle-broll",
+   "emotion": null,
+   "views": 238600,
+   "viewsPerFollower": 1074.77
+  },
+  {
+   "url": "https://www.tiktok.com/@velourahairwig/video/7634352509657697566",
+   "niche": "hair",
+   "hookPattern": "direct-callout",
+   "framework": "organic",
+   "videoFormat": "lifestyle-broll",
+   "emotion": null,
+   "views": 20200000,
+   "viewsPerFollower": 1068.78
+  },
+  {
+   "url": "https://www.tiktok.com/@funnypetvideos221/video/7624240986507496734",
+   "niche": "pets",
+   "hookPattern": "information-offering",
+   "framework": "organic",
+   "videoFormat": "lifestyle-broll",
+   "emotion": null,
+   "views": 1900000,
+   "viewsPerFollower": 1059.68
+  },
+  {
+   "url": "https://www.tiktok.com/@cleaningwithakurd/video/7642511384361717014",
+   "niche": "home and cleaning",
+   "hookPattern": "none",
+   "framework": "organic",
+   "videoFormat": "voiceover-broll",
+   "emotion": "none",
+   "views": 1300000,
+   "viewsPerFollower": 1050.08
+  },
+  {
+   "url": "https://www.tiktok.com/@feminine.find5/video/7624788621639404821",
+   "niche": "fashion",
+   "hookPattern": "removing-limitations",
+   "framework": "organic",
+   "videoFormat": "product-demo",
+   "emotion": null,
+   "views": 1300000,
+   "viewsPerFollower": 1048.39
+  },
+  {
+   "url": "https://www.tiktok.com/@storytime.problem/video/7632428236516887830",
+   "niche": "pets",
+   "hookPattern": "belief-challenging",
+   "framework": "organic",
+   "videoFormat": "lifestyle-broll",
+   "emotion": "humor",
+   "views": 3600000,
+   "viewsPerFollower": 1017.24
+  },
+  {
+   "url": "https://www.tiktok.com/@biffgnnn/video/7614066276385738015",
+   "niche": "fitness",
+   "hookPattern": "belief-challenging",
+   "framework": "industry-contrarian",
+   "videoFormat": "text-overlay-heavy",
+   "emotion": null,
+   "views": 44400000,
+   "viewsPerFollower": 1006.8
+  },
+  {
+   "url": "https://www.tiktok.com/@g00dhairbecky/video/7525910519383969037",
+   "niche": "hair",
+   "hookPattern": "direct-callout",
+   "framework": "organic",
+   "videoFormat": "text-overlay-heavy",
+   "emotion": null,
+   "views": 14700000,
+   "viewsPerFollower": 993.24
+  },
+  {
+   "url": "https://www.tiktok.com/@moker5931/video/7640022464424168711",
+   "niche": "hair",
+   "hookPattern": "removing-limitations",
+   "framework": "problem-agitate-solution",
+   "videoFormat": "talking-head",
+   "emotion": null,
+   "views": 1800000,
+   "viewsPerFollower": 988.47
+  },
+  {
+   "url": "https://www.tiktok.com/@bebegadget/video/7638572335540325662",
+   "niche": "tech and SaaS",
+   "hookPattern": "direct-callout",
+   "framework": "organic",
+   "videoFormat": "product-demo",
+   "emotion": "aspiration",
+   "views": 1300000,
+   "viewsPerFollower": 986.34
+  },
+  {
+   "url": "https://www.tiktok.com/@nworby/video/7604949217789938974",
+   "niche": "supplements",
+   "hookPattern": "direct-callout",
+   "framework": "us-vs-them",
+   "videoFormat": "text-overlay-heavy",
+   "emotion": null,
+   "views": 283200,
+   "viewsPerFollower": 983.33
+  },
+  {
+   "url": "https://www.tiktok.com/@javisells/video/7313279296213241130",
+   "niche": "home and cleaning",
+   "hookPattern": "removing-limitations",
+   "framework": "problem-agitate-solution",
+   "videoFormat": "voiceover-broll",
+   "emotion": null,
+   "views": 2700000,
+   "viewsPerFollower": 981.1
+  },
+  {
+   "url": "https://www.tiktok.com/@magicjohn_official.us10/video/7527371615907106079",
+   "niche": "tech and SaaS",
+   "hookPattern": "newness",
+   "framework": "problem-agitate-solution",
+   "videoFormat": "product-demo",
+   "emotion": null,
+   "views": 2700000,
+   "viewsPerFollower": 963.94
+  },
+  {
+   "url": "https://www.tiktok.com/@bodygymgym/video/7340249852778958082",
+   "niche": "fitness",
+   "hookPattern": "information-offering",
+   "framework": "organic",
+   "videoFormat": null,
+   "emotion": "none",
+   "views": 3800000,
+   "viewsPerFollower": 963.73
+  },
+  {
+   "url": "https://www.tiktok.com/@michaela.freeman/video/7642512979153390879",
+   "niche": "pets",
+   "hookPattern": "question",
+   "framework": "organic",
+   "videoFormat": "lifestyle-broll",
+   "emotion": null,
+   "views": 1700000,
+   "viewsPerFollower": 962.08
+  },
+  {
+   "url": "https://www.tiktok.com/@thatsrough70/video/7558513531121945878",
+   "niche": "ABG beauty",
+   "hookPattern": "direct-callout",
+   "framework": "us-vs-them",
+   "videoFormat": "grwm",
+   "emotion": "humor",
+   "views": 400200,
+   "viewsPerFollower": 957.42
+  },
+  {
+   "url": "https://www.tiktok.com/@pinka_zefirka/video/7636342724710386966",
+   "niche": "ABG beauty",
+   "hookPattern": "information-offering",
+   "framework": "organic",
+   "videoFormat": "grwm",
+   "emotion": "aspiration",
+   "views": 11000000,
+   "viewsPerFollower": 956.52
+  },
+  {
+   "url": "https://www.tiktok.com/@cara.tin3/video/7485573907991268663",
+   "niche": "food and beverage",
+   "hookPattern": "before-after",
+   "framework": "organic",
+   "videoFormat": "product-demo",
+   "emotion": null,
+   "views": 1800000,
+   "viewsPerFollower": 942.41
+  },
+  {
+   "url": "https://www.tiktok.com/@dnnyboa/video/7621114217508130078",
+   "niche": "fitness",
+   "hookPattern": "belief-challenging",
+   "framework": "organic",
+   "videoFormat": "talking-head",
+   "emotion": null,
+   "views": 6200000,
+   "viewsPerFollower": 937.97
+  },
+  {
+   "url": "https://www.tiktok.com/@amber_lolsm/video/7596288398558694658",
+   "niche": "fashion",
+   "hookPattern": "information-offering",
+   "framework": "organic",
+   "videoFormat": null,
+   "emotion": "aspiration",
+   "views": 4000000,
+   "viewsPerFollower": 936.11
+  },
+  {
+   "url": "https://www.tiktok.com/@uwinezajulie/video/7223605607222365483",
+   "niche": "home and cleaning",
+   "hookPattern": "information-offering",
+   "framework": "listicle",
+   "videoFormat": "text-overlay-heavy",
+   "emotion": null,
+   "views": 40300000,
+   "viewsPerFollower": 930.72
+  },
+  {
+   "url": "https://www.tiktok.com/@www.paigey/video/7535925837833735455",
+   "niche": "ABG beauty",
+   "hookPattern": "before-after",
+   "framework": "organic",
+   "videoFormat": "grwm",
+   "emotion": "aspiration",
+   "views": 7900000,
+   "viewsPerFollower": 927.88
+  },
+  {
+   "url": "https://www.tiktok.com/@farizasfits/video/7568244777079098637",
+   "niche": "ABG beauty",
+   "hookPattern": "before-after",
+   "framework": "organic",
+   "videoFormat": "grwm",
+   "emotion": null,
+   "views": 5200000,
+   "viewsPerFollower": 920.19
+  },
+  {
+   "url": "https://www.tiktok.com/@trowsand0/video/7639631420675329312",
+   "niche": "tech and SaaS",
+   "hookPattern": "information-offering",
+   "framework": "organic",
+   "videoFormat": "product-demo",
+   "emotion": null,
+   "views": 2200000,
+   "viewsPerFollower": 920.12
+  },
+  {
+   "url": "https://www.tiktok.com/@user9555304060253/video/7640051671548185870",
+   "niche": "home and cleaning",
+   "hookPattern": "removing-limitations",
+   "framework": "problem-agitate-solution",
+   "videoFormat": "lifestyle-broll",
+   "emotion": null,
+   "views": 591800,
+   "viewsPerFollower": 914.68
+  },
+  {
+   "url": "https://www.tiktok.com/@aruel912/video/7455775581095890206",
+   "niche": "home and cleaning",
+   "hookPattern": "authority",
+   "framework": "organic",
+   "videoFormat": "product-demo",
+   "emotion": null,
+   "views": 5500000,
+   "viewsPerFollower": 893.73
+  },
+  {
+   "url": "https://www.tiktok.com/@claudiaxdonam/video/7632047995550321928",
+   "niche": "fashion",
+   "hookPattern": "direct-callout",
+   "framework": "organic",
+   "videoFormat": "lifestyle-broll",
+   "emotion": null,
+   "views": 2100000,
+   "viewsPerFollower": 892.48
+  },
+  {
+   "url": "https://www.tiktok.com/@luisfernanfit/video/7361598928917171462",
+   "niche": "fitness",
+   "hookPattern": "removing-limitations",
+   "framework": "organic",
+   "videoFormat": "lifestyle-broll",
+   "emotion": null,
+   "views": 5700000,
+   "viewsPerFollower": 886.61
+  },
+  {
+   "url": "https://www.tiktok.com/@kobs1357/video/7641497866287975702",
+   "niche": "fitness",
+   "hookPattern": "information-offering",
+   "framework": "organic",
+   "videoFormat": "text-overlay-heavy",
+   "emotion": "aspiration",
+   "views": 540800,
+   "viewsPerFollower": 886.56
+  },
+  {
+   "url": "https://www.tiktok.com/@reese.sosebee/video/7627199473122299149",
+   "niche": "fashion",
+   "hookPattern": "information-offering",
+   "framework": "organic",
+   "videoFormat": null,
+   "emotion": "aspiration",
+   "views": 1600000,
+   "viewsPerFollower": 879.6
+  },
+  {
+   "url": "https://www.tiktok.com/@tinaglowupp/video/7619078684879752470",
+   "niche": "skincare",
+   "hookPattern": "belief-challenging",
+   "framework": "listicle",
+   "videoFormat": null,
+   "emotion": "aspiration",
+   "views": 5800000,
+   "viewsPerFollower": 877.99
+  },
+  {
+   "url": "https://www.tiktok.com/@tulip6942/video/7636434146751040782",
+   "niche": "tech and SaaS",
+   "hookPattern": "removing-limitations",
+   "framework": "organic",
+   "videoFormat": "product-demo",
+   "emotion": null,
+   "views": 1400000,
+   "viewsPerFollower": 876.64
+  },
+  {
+   "url": "https://www.tiktok.com/@usieeus/video/7611905291185163527",
+   "niche": "tech and SaaS",
+   "hookPattern": "information-offering",
+   "framework": "organic",
+   "videoFormat": "text-overlay-heavy",
+   "emotion": null,
+   "views": 1100000,
+   "viewsPerFollower": 875.8
+  },
+  {
+   "url": "https://www.tiktok.com/@antheasotto/video/7640345626961644830",
+   "niche": "fitness",
+   "hookPattern": "information-offering",
+   "framework": "organic",
+   "videoFormat": null,
+   "emotion": "aspiration",
+   "views": 918300,
+   "viewsPerFollower": 867.96
+  },
+  {
+   "url": "https://www.tiktok.com/@fashiond0ll1/video/7618227855712914710",
+   "niche": "fashion",
+   "hookPattern": "none",
+   "framework": "organic",
+   "videoFormat": "text-overlay-heavy",
+   "emotion": "humor",
+   "views": 1800000,
+   "viewsPerFollower": 850.26
+  },
+  {
+   "url": "https://www.tiktok.com/@jpfgym/video/7637693214924770574",
+   "niche": "fitness",
+   "hookPattern": "information-offering",
+   "framework": "organic",
+   "videoFormat": "voiceover-broll",
+   "emotion": null,
+   "views": 226900,
+   "viewsPerFollower": 849.81
+  },
+  {
+   "url": "https://www.tiktok.com/@dom.g46/video/7470974371771845910",
+   "niche": "pets",
+   "hookPattern": "information-offering",
+   "framework": "organic",
+   "videoFormat": null,
+   "emotion": "humor",
+   "views": 16100000,
+   "viewsPerFollower": 847.37
+  },
+  {
+   "url": "https://www.tiktok.com/@hoangbac4139/video/7637396146092051742",
+   "niche": "tech and SaaS",
+   "hookPattern": "before-after",
+   "framework": "founder-objections",
+   "videoFormat": "product-demo",
+   "emotion": null,
+   "views": 609700,
+   "viewsPerFollower": 845.63
+  },
+  {
+   "url": "https://www.tiktok.com/@dd.hacks/video/7436767158887255342",
+   "niche": "home and cleaning",
+   "hookPattern": "information-offering",
+   "framework": "listicle",
+   "videoFormat": "voiceover-broll",
+   "emotion": null,
+   "views": 2200000,
+   "viewsPerFollower": 836.5
+  },
+  {
+   "url": "https://www.tiktok.com/@ashleekaznica/video/7607460717846908191",
+   "niche": "pets",
+   "hookPattern": "information-offering",
+   "framework": "organic",
+   "videoFormat": "lifestyle-broll",
+   "emotion": null,
+   "views": 11600000,
+   "viewsPerFollower": 828.57
+  },
+  {
+   "url": "https://www.tiktok.com/@lunexyshop/video/7625112216894770453",
+   "niche": "tech and SaaS",
+   "hookPattern": "newness",
+   "framework": "organic",
+   "videoFormat": "product-demo",
+   "emotion": null,
+   "views": 1400000,
+   "viewsPerFollower": 820.15
+  },
+  {
+   "url": "https://www.tiktok.com/@lumigrapher/video/7630398288373615892",
+   "niche": "food and beverage",
+   "hookPattern": "belief-challenging",
+   "framework": "organic",
+   "videoFormat": "pov-handheld",
+   "emotion": null,
+   "views": 2100000,
+   "viewsPerFollower": 816.49
+  },
+  {
+   "url": "https://www.tiktok.com/@matchanoscar/video/7637547976260455712",
+   "niche": "food and beverage",
+   "hookPattern": "information-offering",
+   "framework": "organic",
+   "videoFormat": "product-demo",
+   "emotion": null,
+   "views": 715400,
+   "viewsPerFollower": 815.74
+  },
+  {
+   "url": "https://www.tiktok.com/@ch.ckendipper/video/7640526547891391766",
+   "niche": "pets",
+   "hookPattern": "information-offering",
+   "framework": "organic",
+   "videoFormat": null,
+   "emotion": "humor",
+   "views": 2900000,
+   "viewsPerFollower": 808.25
+  },
+  {
+   "url": "https://www.tiktok.com/@kayliecoloradical/video/7629808484191669535",
+   "niche": "food and beverage",
+   "hookPattern": "information-offering",
+   "framework": "organic",
+   "videoFormat": null,
+   "emotion": "aspiration",
+   "views": 1300000,
+   "viewsPerFollower": 800.0
+  },
+  {
+   "url": "https://www.tiktok.com/@giaandgunner/video/7642216932346727694",
+   "niche": "pets",
+   "hookPattern": "information-offering",
+   "framework": "organic",
+   "videoFormat": "pov-handheld",
+   "emotion": null,
+   "views": 6400000,
+   "viewsPerFollower": 796.81
+  },
+  {
+   "url": "https://www.tiktok.com/@techsosna/video/7471745242639666454",
+   "niche": "tech and SaaS",
+   "hookPattern": "information-offering",
+   "framework": "organic",
+   "videoFormat": "carousel-slideshow",
+   "emotion": null,
+   "views": 9400000,
+   "viewsPerFollower": 789.92
+  },
+  {
+   "url": "https://www.tiktok.com/@jordanxlocked/video/7631387761588636958",
+   "niche": "fitness",
+   "hookPattern": "none",
+   "framework": "organic",
+   "videoFormat": "text-overlay-heavy",
+   "emotion": "curiosity",
+   "views": 1800000,
+   "viewsPerFollower": 787.4
+  },
+  {
+   "url": "https://www.tiktok.com/@noah___e/video/7626900758985706766",
+   "niche": "fitness",
+   "hookPattern": "before-after",
+   "framework": "organic",
+   "videoFormat": "text-overlay-heavy",
+   "emotion": null,
+   "views": 352900,
+   "viewsPerFollower": 785.97
+  },
+  {
+   "url": "https://www.tiktok.com/@sheniquasdiary/video/7592608067775221047",
+   "niche": "supplements",
+   "hookPattern": "information-offering",
+   "framework": "organic",
+   "videoFormat": null,
+   "emotion": "humor",
+   "views": 880300,
+   "viewsPerFollower": 781.79
+  },
+  {
+   "url": "https://www.tiktok.com/@paoranita/video/7603921399626927381",
+   "niche": "hair",
+   "hookPattern": "information-offering",
+   "framework": "organic",
+   "videoFormat": null,
+   "emotion": "humor",
+   "views": 3100000,
+   "viewsPerFollower": 780.46
+  },
+  {
+   "url": "https://www.tiktok.com/@ugh.llamas/video/7610204086985706783",
+   "niche": "pets",
+   "hookPattern": "before-after",
+   "framework": "organic",
+   "videoFormat": "pov-handheld",
+   "emotion": null,
+   "views": 477600,
+   "viewsPerFollower": 779.12
+  },
+  {
+   "url": "https://www.tiktok.com/@charlottteroth/video/7639163987157847326",
+   "niche": "fashion",
+   "hookPattern": "none",
+   "framework": "none",
+   "videoFormat": "lifestyle-broll",
+   "emotion": "none",
+   "views": 3400000,
+   "viewsPerFollower": 778.21
+  },
+  {
+   "url": "https://www.tiktok.com/@godbodycam/video/7621328568211016973",
+   "niche": "supplements",
+   "hookPattern": "direct-callout",
+   "framework": "industry-contrarian",
+   "videoFormat": "voiceover-broll",
+   "emotion": null,
+   "views": 363900,
+   "viewsPerFollower": 777.56
+  },
+  {
+   "url": "https://www.tiktok.com/@mni.gaia/video/7624548247566093590",
+   "niche": "hair",
+   "hookPattern": "removing-limitations",
+   "framework": "organic",
+   "videoFormat": null,
+   "emotion": "relief",
+   "views": 2500000,
+   "viewsPerFollower": 768.76
+  },
+  {
+   "url": "https://www.tiktok.com/@danger69691/video/7059152558878887215",
+   "niche": "pets",
+   "hookPattern": "pov",
+   "framework": "organic",
+   "videoFormat": null,
+   "emotion": "humor",
+   "views": 14200000,
+   "viewsPerFollower": 767.57
+  },
+  {
+   "url": "https://www.tiktok.com/@user78782936093286/video/7571550888049855758",
+   "niche": "tech and SaaS",
+   "hookPattern": "belief-challenging",
+   "framework": "problem-agitate-solution",
+   "videoFormat": null,
+   "emotion": null,
+   "views": 3400000,
+   "viewsPerFollower": 765.42
+  },
+  {
+   "url": "https://www.tiktok.com/@tipsfromemii0/video/7362078184545815813",
+   "niche": "tech and SaaS",
+   "hookPattern": "information-offering",
+   "framework": "listicle",
+   "videoFormat": null,
+   "emotion": "relief",
+   "views": 625600,
+   "viewsPerFollower": 753.73
+  },
+  {
+   "url": "https://www.tiktok.com/@hairwithme35/video/7527837511075302678",
+   "niche": "hair",
+   "hookPattern": "information-offering",
+   "framework": "organic",
+   "videoFormat": "lifestyle-broll",
+   "emotion": null,
+   "views": 2900000,
+   "viewsPerFollower": 753.25
+  },
+  {
+   "url": "https://www.tiktok.com/@rust.to.revive1/video/7574915453202550047",
+   "niche": "tech and SaaS",
+   "hookPattern": "before-after",
+   "framework": "organic",
+   "videoFormat": "product-demo",
+   "emotion": null,
+   "views": 1700000,
+   "viewsPerFollower": 739.77
+  },
+  {
+   "url": "https://www.tiktok.com/@kinniewws/video/7509048993498909974",
+   "niche": "ABG beauty",
+   "hookPattern": "information-offering",
+   "framework": "organic",
+   "videoFormat": "grwm",
+   "emotion": null,
+   "views": 20900000,
+   "viewsPerFollower": 738.52
+  },
+  {
+   "url": "https://www.tiktok.com/@loganinspires/video/7563316624325872910",
+   "niche": "supplements",
+   "hookPattern": "pov",
+   "framework": "organic",
+   "videoFormat": null,
+   "emotion": "aspiration",
+   "views": 4000000,
+   "viewsPerFollower": 737.33
+  },
+  {
+   "url": "https://www.tiktok.com/@myhia_ariose/video/7100079348983614766",
+   "niche": "fashion",
+   "hookPattern": "belief-challenging",
+   "framework": "organic",
+   "videoFormat": null,
+   "emotion": "relief",
+   "views": 10700000,
+   "viewsPerFollower": 727.89
+  },
+  {
+   "url": "https://www.tiktok.com/@aaliyah.bloomy/video/7579157462322908446",
+   "niche": "tech and SaaS",
+   "hookPattern": "information-offering",
+   "framework": "listicle",
+   "videoFormat": null,
+   "emotion": "aspiration",
+   "views": 1300000,
+   "viewsPerFollower": 724.64
+  },
+  {
+   "url": "https://www.tiktok.com/@lcvickers/video/7042644103758155054",
+   "niche": "hair",
+   "hookPattern": "none",
+   "framework": "organic",
+   "videoFormat": "grwm",
+   "emotion": "none",
+   "views": 11800000,
+   "viewsPerFollower": 719.51
+  },
+  {
+   "url": "https://www.tiktok.com/@riyadhoopar/video/7603509207580544270",
+   "niche": "ABG beauty",
+   "hookPattern": "comparison",
+   "framework": "organic",
+   "videoFormat": "carousel-slideshow",
+   "emotion": null,
+   "views": 2500000,
+   "viewsPerFollower": 717.98
+  },
+  {
+   "url": "https://www.tiktok.com/@m35k8/video/7591499811275263252",
+   "niche": "fitness",
+   "hookPattern": "information-offering",
+   "framework": "organic",
+   "videoFormat": null,
+   "emotion": "aspiration",
+   "views": 3100000,
+   "viewsPerFollower": 717.43
+  },
+  {
+   "url": "https://www.tiktok.com/@techtoktrev/video/7636248861903768846",
+   "niche": "tech and SaaS",
+   "hookPattern": "question",
+   "framework": "organic",
+   "videoFormat": "other",
+   "emotion": "curiosity",
+   "views": 728500,
+   "viewsPerFollower": 703.19
+  },
+  {
+   "url": "https://www.tiktok.com/@caulkdraggin/video/7639912767943642398",
+   "niche": "pets",
+   "hookPattern": "pov",
+   "framework": "tease",
+   "videoFormat": null,
+   "emotion": "fear",
+   "views": 10500000,
+   "viewsPerFollower": 700.0
+  },
+  {
+   "url": "https://www.tiktok.com/@goeinspire/video/7344488310967962922",
+   "niche": "ABG beauty",
+   "hookPattern": "before-after",
+   "framework": "problem-agitate-solution",
+   "videoFormat": "before-after",
+   "emotion": null,
+   "views": 10400000,
+   "viewsPerFollower": 697.99
+  },
+  {
+   "url": "https://www.tiktok.com/@virginie.karakaya/video/7639561239567420685",
+   "niche": "pets",
+   "hookPattern": "pov",
+   "framework": "organic",
+   "videoFormat": "lifestyle-broll",
+   "emotion": null,
+   "views": 9900000,
+   "viewsPerFollower": 697.18
+  },
+  {
+   "url": "https://www.tiktok.com/@trxpz.tech3/video/7598578495823891744",
+   "niche": "tech and SaaS",
+   "hookPattern": "information-offering",
+   "framework": "organic",
+   "videoFormat": "text-overlay-heavy",
+   "emotion": null,
+   "views": 652000,
+   "viewsPerFollower": 695.84
+  },
+  {
+   "url": "https://www.tiktok.com/@iretnas1/video/7598931387521043734",
+   "niche": "tech and SaaS",
+   "hookPattern": "size-of-claim",
+   "framework": "bandwagon",
+   "videoFormat": "product-demo",
+   "emotion": null,
+   "views": 833600,
+   "viewsPerFollower": 695.83
+  },
+  {
+   "url": "https://www.tiktok.com/@gavie_spamsss/video/7629830788170747156",
+   "niche": "skincare",
+   "hookPattern": "belief-challenging",
+   "framework": "industry-contrarian",
+   "videoFormat": "talking-head",
+   "emotion": null,
+   "views": 2700000,
+   "viewsPerFollower": 692.66
+  },
+  {
+   "url": "https://www.tiktok.com/@carla.angelicaa/video/7598415964098612493",
+   "niche": "hair",
+   "hookPattern": "direct-callout",
+   "framework": "problem-agitate-solution",
+   "videoFormat": "product-demo",
+   "emotion": null,
+   "views": 25400000,
+   "viewsPerFollower": 686.49
+  },
+  {
+   "url": "https://www.tiktok.com/@derti_tech/video/7629800067142110467",
+   "niche": "tech and SaaS",
+   "hookPattern": "none",
+   "framework": "none",
+   "videoFormat": "product-demo",
+   "emotion": "none",
+   "views": 2500000,
+   "viewsPerFollower": 685.31
+  },
+  {
+   "url": "https://www.tiktok.com/@techclipsfactory/video/7610148423370640662",
+   "niche": "tech and SaaS",
+   "hookPattern": "information-offering",
+   "framework": "organic",
+   "videoFormat": "talking-head",
+   "emotion": "relief",
+   "views": 1900000,
+   "viewsPerFollower": 684.68
+  },
+  {
+   "url": "https://www.tiktok.com/@lunamode32/video/7640644715418864926",
+   "niche": "tech and SaaS",
+   "hookPattern": "belief-challenging",
+   "framework": "organic",
+   "videoFormat": null,
+   "emotion": "aspiration",
+   "views": 389600,
+   "viewsPerFollower": 683.51
+  },
+  {
+   "url": "https://www.tiktok.com/@fidg4e/video/7550224333948390670",
+   "niche": "tech and SaaS",
+   "hookPattern": "information-offering",
+   "framework": "organic",
+   "videoFormat": "product-demo",
+   "emotion": "none",
+   "views": 85900000,
+   "viewsPerFollower": 683.37
+  },
+  {
+   "url": "https://www.tiktok.com/@villertex/video/7637199122738482463",
+   "niche": "fashion",
+   "hookPattern": "generic",
+   "framework": "organic",
+   "videoFormat": "pov-handheld",
+   "emotion": null,
+   "views": 936300,
+   "viewsPerFollower": 682.93
+  },
+  {
+   "url": "https://www.tiktok.com/@amazbells/video/7389262983534234923",
+   "niche": "pets",
+   "hookPattern": "pov",
+   "framework": "organic",
+   "videoFormat": "lifestyle-broll",
+   "emotion": null,
+   "views": 6700000,
+   "viewsPerFollower": 682.07
+  },
+  {
+   "url": "https://www.tiktok.com/@fluffylabadventures/video/7634607863565946119",
+   "niche": "pets",
+   "hookPattern": "information-offering",
+   "framework": "organic",
+   "videoFormat": "text-overlay-heavy",
+   "emotion": null,
+   "views": 1100000,
+   "viewsPerFollower": 681.96
+  },
+  {
+   "url": "https://www.tiktok.com/@top10best_global/video/7349978370152647978",
+   "niche": "pets",
+   "hookPattern": "information-offering",
+   "framework": "listicle",
+   "videoFormat": "text-overlay-heavy",
+   "emotion": "curiosity",
+   "views": 1000000,
+   "viewsPerFollower": 678.43
+  },
+  {
+   "url": "https://www.tiktok.com/@aaavila03/video/7552373818648562957",
+   "niche": "hair",
+   "hookPattern": "direct-callout",
+   "framework": "problem-agitate-solution",
+   "videoFormat": "talking-head",
+   "emotion": null,
+   "views": 18900000,
+   "viewsPerFollower": 677.42
+  },
+  {
+   "url": "https://www.tiktok.com/@pawacting/video/7608022569798683918",
+   "niche": "fashion",
+   "hookPattern": "before-after",
+   "framework": "organic",
+   "videoFormat": "pov-handheld",
+   "emotion": null,
+   "views": 19200000,
+   "viewsPerFollower": 662.07
+  },
+  {
+   "url": "https://www.tiktok.com/@makeup_vaness/video/7554152147177180471",
+   "niche": "hair",
+   "hookPattern": "comparison",
+   "framework": "listicle",
+   "videoFormat": null,
+   "emotion": "curiosity",
+   "views": 9400000,
+   "viewsPerFollower": 661.97
+  },
+  {
+   "url": "https://www.tiktok.com/@user93720217/video/7642999629889408287",
+   "niche": "fashion",
+   "hookPattern": "none",
+   "framework": "organic",
+   "videoFormat": null,
+   "emotion": "aspiration",
+   "views": 508000,
+   "viewsPerFollower": 660.6
+  },
+  {
+   "url": "https://www.tiktok.com/@gymwmaya/video/7628368566517091598",
+   "niche": "supplements",
+   "hookPattern": "pov",
+   "framework": "organic",
+   "videoFormat": null,
+   "emotion": "humor",
+   "views": 603200,
+   "viewsPerFollower": 658.52
+  },
+  {
+   "url": "https://www.tiktok.com/@resbiotic/video/7548898850971372855",
+   "niche": "supplements",
+   "hookPattern": "authority",
+   "framework": "founder",
+   "videoFormat": "talking-head",
+   "emotion": null,
+   "views": 5500000,
+   "viewsPerFollower": 655.54
+  },
+  {
+   "url": "https://www.tiktok.com/@alwayslatekatethegreat/video/7625997909145750797",
+   "niche": "supplements",
+   "hookPattern": "belief-challenging",
+   "framework": "organic",
+   "videoFormat": null,
+   "emotion": "curiosity",
+   "views": 762500,
+   "viewsPerFollower": 653.38
+  },
+  {
+   "url": "https://www.tiktok.com/@xdofficialog420/video/7637694474751069453",
+   "niche": "skincare",
+   "hookPattern": "information-offering",
+   "framework": "organic",
+   "videoFormat": "talking-head",
+   "emotion": null,
+   "views": 1600000,
+   "viewsPerFollower": 650.94
+  },
+  {
+   "url": "https://www.tiktok.com/@veronicachikaaa/video/7639004187195411732",
+   "niche": "pets",
+   "hookPattern": "information-offering",
+   "framework": "organic",
+   "videoFormat": "lifestyle-broll",
+   "emotion": "humor",
+   "views": 5700000,
+   "viewsPerFollower": 645.38
+  },
+  {
+   "url": "https://www.tiktok.com/@kathryn.lexi_hair/video/7624167348928548098",
+   "niche": "hair",
+   "hookPattern": "information-offering",
+   "framework": "organic",
+   "videoFormat": null,
+   "emotion": "aspiration",
+   "views": 1500000,
+   "viewsPerFollower": 643.78
+  },
+  {
+   "url": "https://www.tiktok.com/@doubleweentwins/video/7627941137923198238",
+   "niche": "pets",
+   "hookPattern": "information-offering",
+   "framework": "organic",
+   "videoFormat": null,
+   "emotion": "humor",
+   "views": 3200000,
+   "viewsPerFollower": 640.64
+  },
+  {
+   "url": "https://www.tiktok.com/@mr____arham...4/video/7323186344879033633",
+   "niche": "tech and SaaS",
+   "hookPattern": "information-offering",
+   "framework": "listicle",
+   "videoFormat": "product-demo",
+   "emotion": null,
+   "views": 47300000,
+   "viewsPerFollower": 638.33
+  },
+  {
+   "url": "https://www.tiktok.com/@zanluflybeauty2/video/7513378607448788266",
+   "niche": "ABG beauty",
+   "hookPattern": "information-offering",
+   "framework": "organic",
+   "videoFormat": "product-demo",
+   "emotion": null,
+   "views": 3900000,
+   "viewsPerFollower": 618.26
+  },
+  {
+   "url": "https://www.tiktok.com/@the.hole.motivati/video/7602091911091866893",
+   "niche": "fitness",
+   "hookPattern": "removing-limitations",
+   "framework": "organic",
+   "videoFormat": "talking-head",
+   "emotion": "aspiration",
+   "views": 1100000,
+   "viewsPerFollower": 609.76
+  },
+  {
+   "url": "https://www.tiktok.com/@seeph0/video/7410872202427469088",
+   "niche": "hair",
+   "hookPattern": "information-offering",
+   "framework": "before-after",
+   "videoFormat": null,
+   "emotion": "aspiration",
+   "views": 30000000,
+   "viewsPerFollower": 609.76
+  },
+  {
+   "url": "https://www.tiktok.com/@sxm33d/video/7603813557850967310",
+   "niche": "fitness",
+   "hookPattern": "belief-challenging",
+   "framework": "bandwagon",
+   "videoFormat": "text-overlay-heavy",
+   "emotion": null,
+   "views": 769300,
+   "viewsPerFollower": 607.18
+  },
+  {
+   "url": "https://www.tiktok.com/@andremelendez/video/7616424534505229582",
+   "niche": "food and beverage",
+   "hookPattern": "information-offering",
+   "framework": "organic",
+   "videoFormat": "pov-handheld",
+   "emotion": "aspiration",
+   "views": 1900000,
+   "viewsPerFollower": 604.33
+  },
+  {
+   "url": "https://www.tiktok.com/@flourish_ugochii/video/7576402630042324280",
+   "niche": "supplements",
+   "hookPattern": "pov",
+   "framework": "organic",
+   "videoFormat": null,
+   "emotion": "humor",
+   "views": 781500,
+   "viewsPerFollower": 601.15
+  },
+  {
+   "url": "https://www.tiktok.com/@happytailhub1/video/7629762279671614734",
+   "niche": "pets",
+   "hookPattern": "size-of-claim",
+   "framework": "organic",
+   "videoFormat": "product-demo",
+   "emotion": null,
+   "views": 54000000,
+   "viewsPerFollower": 598.01
+  },
+  {
+   "url": "https://www.tiktok.com/@thatgoldendogace/video/7056224421392108847",
+   "niche": "pets",
+   "hookPattern": "question",
+   "framework": "organic",
+   "videoFormat": null,
+   "emotion": "humor",
+   "views": 9600000,
+   "viewsPerFollower": 596.27
+  },
+  {
+   "url": "https://www.tiktok.com/@themanegoddess/video/7628450788515319070",
+   "niche": "hair",
+   "hookPattern": "before-after",
+   "framework": "organic",
+   "videoFormat": "before-after",
+   "emotion": "humor",
+   "views": 11900000,
+   "viewsPerFollower": 592.04
+  },
+  {
+   "url": "https://www.tiktok.com/@cozyqwertix/video/7557743677011922198",
+   "niche": "tech and SaaS",
+   "hookPattern": "information-offering",
+   "framework": "organic",
+   "videoFormat": "product-demo",
+   "emotion": null,
+   "views": 5400000,
+   "viewsPerFollower": 589.33
+  },
+  {
+   "url": "https://www.tiktok.com/@houseofmeows7/video/7598104852668943671",
+   "niche": "pets",
+   "hookPattern": "information-offering",
+   "framework": "organic",
+   "videoFormat": null,
+   "emotion": "humor",
+   "views": 54000000,
+   "viewsPerFollower": 587.6
+  },
+  {
+   "url": "https://www.tiktok.com/@d4yzzi/video/7568049092136373512",
+   "niche": "fashion",
+   "hookPattern": "information-offering",
+   "framework": "organic",
+   "videoFormat": "lifestyle-broll",
+   "emotion": null,
+   "views": 1200000,
+   "viewsPerFollower": 584.23
+  },
+  {
+   "url": "https://www.tiktok.com/@bunnysgvts/video/7479901159625526574",
+   "niche": "ABG beauty",
+   "hookPattern": "before-after",
+   "framework": "organic",
+   "videoFormat": "grwm",
+   "emotion": null,
+   "views": 1100000,
+   "viewsPerFollower": 584.17
+  },
+  {
+   "url": "https://www.tiktok.com/@healthytipsss_/video/7490766827568565535",
+   "niche": "supplements",
+   "hookPattern": "none",
+   "framework": "none",
+   "videoFormat": "text-overlay-heavy",
+   "emotion": null,
+   "views": 1300000,
+   "viewsPerFollower": 582.96
+  },
+  {
+   "url": "https://www.tiktok.com/@izzballa/video/7603511185534700813",
+   "niche": "hair",
+   "hookPattern": "before-after",
+   "framework": "organic",
+   "videoFormat": "talking-head",
+   "emotion": "relief",
+   "views": 2200000,
+   "viewsPerFollower": 581.7
+  },
+  {
+   "url": "https://www.tiktok.com/@carly_unfiltered/video/7615482389581597982",
+   "niche": "supplements",
+   "hookPattern": "information-offering",
+   "framework": "listicle",
+   "videoFormat": "talking-head",
+   "emotion": null,
+   "views": 14200000,
+   "viewsPerFollower": 579.59
+  },
+  {
+   "url": "https://www.tiktok.com/@selvoria/video/7501559690325757190",
+   "niche": "skincare",
+   "hookPattern": "belief-challenging",
+   "framework": "industry-contrarian",
+   "videoFormat": "talking-head",
+   "emotion": null,
+   "views": 4500000,
+   "viewsPerFollower": 576.78
+  },
+  {
+   "url": "https://www.tiktok.com/@_ash_spamm_/video/7510345631626480927",
+   "niche": "fitness",
+   "hookPattern": "information-offering",
+   "framework": "organic",
+   "videoFormat": null,
+   "emotion": "aspiration",
+   "views": 1200000,
+   "viewsPerFollower": 571.43
+  },
+  {
+   "url": "https://www.tiktok.com/@trickirudnicki/video/7122532121042013486",
+   "niche": "fitness",
+   "hookPattern": "direct-callout",
+   "framework": "organic",
+   "videoFormat": null,
+   "emotion": "frustration",
+   "views": 3200000,
+   "viewsPerFollower": 571.22
+  },
+  {
+   "url": "https://www.tiktok.com/@matcha_by_jann/video/7521393606897241362",
+   "niche": "food and beverage",
+   "hookPattern": "information-offering",
+   "framework": "organic",
+   "videoFormat": "product-demo",
+   "emotion": "aspiration",
+   "views": 3200000,
+   "viewsPerFollower": 569.5
+  },
+  {
+   "url": "https://www.tiktok.com/@raicesbeauty/video/7633143580126760205",
+   "niche": "ABG beauty",
+   "hookPattern": "information-offering",
+   "framework": "organic",
+   "videoFormat": "product-demo",
+   "emotion": "nostalgia",
+   "views": 22900000,
+   "viewsPerFollower": 566.83
+  },
+  {
+   "url": "https://www.tiktok.com/@yiranofficial/video/7589531626137226517",
+   "niche": "supplements",
+   "hookPattern": "comparison",
+   "framework": "listicle",
+   "videoFormat": "product-demo",
+   "emotion": null,
+   "views": 5200000,
+   "viewsPerFollower": 566.39
+  },
+  {
+   "url": "https://www.tiktok.com/@jacktech833/video/7500231127890709803",
+   "niche": "tech and SaaS",
+   "hookPattern": "size-of-claim",
+   "framework": "problem-agitate-solution",
+   "videoFormat": "product-demo",
+   "emotion": null,
+   "views": 7500000,
+   "viewsPerFollower": 563.91
+  },
+  {
+   "url": "https://www.tiktok.com/@willowwanders13/video/7615658840930946311",
+   "niche": "pets",
+   "hookPattern": "belief-challenging",
+   "framework": "organic",
+   "videoFormat": "lifestyle-broll",
+   "emotion": null,
+   "views": 993000,
+   "viewsPerFollower": 560.7
+  },
+  {
+   "url": "https://www.tiktok.com/@bec_see/video/7091802252280630529",
+   "niche": "fashion",
+   "hookPattern": "problem-agitate-solution",
+   "framework": "organic",
+   "videoFormat": null,
+   "emotion": "relief",
+   "views": 2100000,
+   "viewsPerFollower": 560.45
+  },
+  {
+   "url": "https://www.tiktok.com/@mimakess/video/7485154841971461422",
+   "niche": "food and beverage",
+   "hookPattern": "direct-callout",
+   "framework": "organic",
+   "videoFormat": "product-demo",
+   "emotion": null,
+   "views": 2700000,
+   "viewsPerFollower": 559.24
+  },
+  {
+   "url": "https://www.tiktok.com/@zen.living4/video/7563222613120683285",
+   "niche": "tech and SaaS",
+   "hookPattern": "newness",
+   "framework": "problem-agitate-solution",
+   "videoFormat": "text-overlay-heavy",
+   "emotion": null,
+   "views": 6700000,
+   "viewsPerFollower": 558.33
+  },
+  {
+   "url": "https://www.tiktok.com/@vvaldiant/video/7626232344969563400",
+   "niche": "fashion",
+   "hookPattern": "information-offering",
+   "framework": "organic",
+   "videoFormat": null,
+   "emotion": "humor",
+   "views": 567400,
+   "viewsPerFollower": 555.19
+  },
+  {
+   "url": "https://www.tiktok.com/@mopmaster214/video/7639009408319507725",
+   "niche": "home and cleaning",
+   "hookPattern": "information-offering",
+   "framework": "organic",
+   "videoFormat": null,
+   "emotion": "relief",
+   "views": 424200,
+   "viewsPerFollower": 551.63
+  },
+  {
+   "url": "https://www.tiktok.com/@_.nicoli/video/7626840172092493078",
+   "niche": "hair",
+   "hookPattern": "question",
+   "framework": "organic",
+   "videoFormat": "text-overlay-heavy",
+   "emotion": null,
+   "views": 2600000,
+   "viewsPerFollower": 550.5
+  },
+  {
+   "url": "https://www.tiktok.com/@lexas.house/video/7629397179882310934",
+   "niche": "home and cleaning",
+   "hookPattern": "belief-challenging",
+   "framework": "problem-agitate-solution",
+   "videoFormat": "pov-handheld",
+   "emotion": "disgust",
+   "views": 586100,
+   "viewsPerFollower": 549.3
+  },
+  {
+   "url": "https://www.tiktok.com/@syyyr25/video/7602716109728419102",
+   "niche": "supplements",
+   "hookPattern": "direct-callout",
+   "framework": "listicle",
+   "videoFormat": "talking-head",
+   "emotion": null,
+   "views": 486200,
+   "viewsPerFollower": 543.85
+  },
+  {
+   "url": "https://www.tiktok.com/@zvb.beauty/video/7348190051475492138",
+   "niche": "ABG beauty",
+   "hookPattern": "comparison",
+   "framework": "organic",
+   "videoFormat": "talking-head",
+   "emotion": null,
+   "views": 12900000,
+   "viewsPerFollower": 537.5
+  },
+  {
+   "url": "https://www.tiktok.com/@neonxstudio/video/7584981546797403393",
+   "niche": "pets",
+   "hookPattern": "question",
+   "framework": "organic",
+   "videoFormat": "lifestyle-broll",
+   "emotion": null,
+   "views": 212200000,
+   "viewsPerFollower": 532.9
+  },
+  {
+   "url": "https://www.tiktok.com/@mojic4liftz_/video/7600901204637502734",
+   "niche": "fitness",
+   "hookPattern": "information-offering",
+   "framework": "organic",
+   "videoFormat": "voiceover-broll",
+   "emotion": "aspiration",
+   "views": 709900,
+   "viewsPerFollower": 530.96
+  },
+  {
+   "url": "https://www.tiktok.com/@lilizzie78/video/7600976900651093278",
+   "niche": "pets",
+   "hookPattern": "pov",
+   "framework": "organic",
+   "videoFormat": null,
+   "emotion": "humor",
+   "views": 4300000,
+   "viewsPerFollower": 527.41
+  },
+  {
+   "url": "https://www.tiktok.com/@damyneshagarrett/video/7628425855328324895",
+   "niche": "pets",
+   "hookPattern": "pov",
+   "framework": "organic",
+   "videoFormat": "lifestyle-broll",
+   "emotion": null,
+   "views": 15200000,
+   "viewsPerFollower": 525.95
+  },
+  {
+   "url": "https://www.tiktok.com/@vtk4796/video/7628218740542377238",
+   "niche": "tech and SaaS",
+   "hookPattern": "none",
+   "framework": "organic",
+   "videoFormat": "text-overlay-heavy",
+   "emotion": "none",
+   "views": 387400,
+   "viewsPerFollower": 524.93
+  },
+  {
+   "url": "https://www.tiktok.com/@girlclub.1/video/7618460150503869704",
+   "niche": "fashion",
+   "hookPattern": "information-offering",
+   "framework": "organic",
+   "videoFormat": "lifestyle-broll",
+   "emotion": null,
+   "views": 1600000,
+   "viewsPerFollower": 524.42
+  },
+  {
+   "url": "https://www.tiktok.com/@lilly_the_ragdolll/video/7591957223912246560",
+   "niche": "pets",
+   "hookPattern": "pov",
+   "framework": "organic",
+   "videoFormat": null,
+   "emotion": "humor",
+   "views": 18400000,
+   "viewsPerFollower": 524.22
+  },
+  {
+   "url": "https://www.tiktok.com/@lovinghome.lovinghome/video/7482975654682561799",
+   "niche": "tech and SaaS",
+   "hookPattern": "newness",
+   "framework": "organic",
+   "videoFormat": "product-demo",
+   "emotion": "aspiration",
+   "views": 12900000,
+   "viewsPerFollower": 522.27
+  },
+  {
+   "url": "https://www.tiktok.com/@aj.qadir/video/7592188197669522710",
+   "niche": "tech and SaaS",
+   "hookPattern": "removing-limitations",
+   "framework": "problem-agitate-solution",
+   "videoFormat": "pov-handheld",
+   "emotion": null,
+   "views": 2400000,
+   "viewsPerFollower": 520.16
+  },
+  {
+   "url": "https://www.tiktok.com/@incelhat3r/video/7602458308603104526",
+   "niche": "fashion",
+   "hookPattern": "direct-callout",
+   "framework": "organic",
+   "videoFormat": "pov-handheld",
+   "emotion": null,
+   "views": 12400000,
+   "viewsPerFollower": 518.83
+  },
+  {
+   "url": "https://www.tiktok.com/@yviemeow/video/7641308879447477512",
+   "niche": "pets",
+   "hookPattern": "before-after",
+   "framework": "organic",
+   "videoFormat": null,
+   "emotion": "aspiration",
+   "views": 4900000,
+   "viewsPerFollower": 518.74
+  },
+  {
+   "url": "https://www.tiktok.com/@herbsterz/video/7497052269788155178",
+   "niche": "tech and SaaS",
+   "hookPattern": "newness",
+   "framework": "organic",
+   "videoFormat": "product-demo",
+   "emotion": "aspiration",
+   "views": 6200000,
+   "viewsPerFollower": 516.67
+  },
+  {
+   "url": "https://www.tiktok.com/@gaby2o6/video/7642066200855416094",
+   "niche": "hair",
+   "hookPattern": "information-offering",
+   "framework": "organic",
+   "videoFormat": null,
+   "emotion": "aspiration",
+   "views": 919000,
+   "viewsPerFollower": 516.58
+  },
+  {
+   "url": "https://www.tiktok.com/@wrinkleminibulldog/video/7631403867250429215",
+   "niche": "pets",
+   "hookPattern": "pov",
+   "framework": "organic",
+   "videoFormat": "text-overlay-heavy",
+   "emotion": null,
+   "views": 360600,
+   "viewsPerFollower": 512.94
+  },
+  {
+   "url": "https://www.tiktok.com/@kelle92/video/7558874635119480095",
+   "niche": "hair",
+   "hookPattern": "before-after",
+   "framework": "organic",
+   "videoFormat": null,
+   "emotion": "aspiration",
+   "views": 55300000,
+   "viewsPerFollower": 511.56
+  },
+  {
+   "url": "https://www.tiktok.com/@thepetnest01/video/7524738939962330399",
+   "niche": "pets",
+   "hookPattern": "none",
+   "framework": "organic",
+   "videoFormat": "other",
+   "emotion": "humor",
+   "views": 31700000,
+   "viewsPerFollower": 508.01
+  },
+  {
+   "url": "https://www.tiktok.com/@sophiereidfit/video/7473912958066707734",
+   "niche": "fitness",
+   "hookPattern": "before-after",
+   "framework": "problem-agitate-solution",
+   "videoFormat": "text-overlay-heavy",
+   "emotion": "aspiration",
+   "views": 20200000,
+   "viewsPerFollower": 505
+  },
+  {
+   "url": "https://www.tiktok.com/@fuckitveganchicknnugget/video/7108487819227712811",
+   "niche": "home and cleaning",
+   "hookPattern": "before-after",
+   "framework": "organic",
+   "videoFormat": "text-overlay-heavy",
+   "emotion": "relief",
+   "views": 14900000,
+   "viewsPerFollower": 503.38
+  },
+  {
+   "url": "https://www.tiktok.com/@wyxira/video/7505953638733434158",
+   "niche": "fashion",
+   "hookPattern": "information-offering",
+   "framework": "organic",
+   "videoFormat": "talking-head",
+   "emotion": null,
+   "views": 6600000,
+   "viewsPerFollower": 500
+  },
+  {
+   "url": "https://www.tiktok.com/@mf1009065271/video/7626729683396185375",
+   "niche": "tech and SaaS",
+   "hookPattern": "removing-limitations",
+   "framework": "problem-agitate-solution",
+   "videoFormat": "lifestyle-broll",
+   "emotion": "relief",
+   "views": 3200000,
+   "viewsPerFollower": 498.75
+  },
+  {
+   "url": "https://www.tiktok.com/@duncantalkstech/video/7537189131428924677",
+   "niche": "tech and SaaS",
+   "hookPattern": "exclusivity",
+   "framework": "listicle",
+   "videoFormat": null,
+   "emotion": "curiosity",
+   "views": 6600000,
+   "viewsPerFollower": 496.24
+  },
+  {
+   "url": "https://www.tiktok.com/@poorheartz577/video/7630553521020013845",
+   "niche": "fashion",
+   "hookPattern": "removing-limitations",
+   "framework": "organic",
+   "videoFormat": "lifestyle-broll",
+   "emotion": null,
+   "views": 516500,
+   "viewsPerFollower": 495.68
+  },
+  {
+   "url": "https://www.tiktok.com/@hayleyjoanmakeup/video/7633450344931953950",
+   "niche": "ABG beauty",
+   "hookPattern": "before-after",
+   "framework": "organic",
+   "videoFormat": "talking-head",
+   "emotion": null,
+   "views": 4400000,
+   "viewsPerFollower": 495.38
+  },
+  {
+   "url": "https://www.tiktok.com/@enjoelment/video/7607593383011355917",
+   "niche": "fitness",
+   "hookPattern": "removing-limitations",
+   "framework": "organic",
+   "videoFormat": "before-after",
+   "emotion": null,
+   "views": 3200000,
+   "viewsPerFollower": 494.06
+  },
+  {
+   "url": "https://www.tiktok.com/@gliderpalace/video/7577508800953863437",
+   "niche": "pets",
+   "hookPattern": "information-offering",
+   "framework": "organic",
+   "videoFormat": "text-overlay-heavy",
+   "emotion": null,
+   "views": 859900,
+   "viewsPerFollower": 491.65
+  },
+  {
+   "url": "https://www.tiktok.com/@cookingwithkingj/video/7364068976130936106",
+   "niche": "food and beverage",
+   "hookPattern": "information-offering",
+   "framework": "organic",
+   "videoFormat": null,
+   "emotion": "aspiration",
+   "views": 5600000,
+   "viewsPerFollower": 491.23
+  },
+  {
+   "url": "https://www.tiktok.com/@petiteavril.toypoodle/video/7642064807222316321",
+   "niche": "pets",
+   "hookPattern": "information-offering",
+   "framework": "organic",
+   "videoFormat": "lifestyle-broll",
+   "emotion": "nostalgia",
+   "views": 417500,
+   "viewsPerFollower": 484.34
+  },
+  {
+   "url": "https://www.tiktok.com/@sausagedogai/video/7613665553726672158",
+   "niche": "pets",
+   "hookPattern": "none",
+   "framework": "organic",
+   "videoFormat": "lifestyle-broll",
+   "emotion": "humor",
+   "views": 5600000,
+   "viewsPerFollower": 478.63
+  },
+  {
+   "url": "https://www.tiktok.com/@ctrl.nelly/video/7607640850658577677",
+   "niche": "fitness",
+   "hookPattern": "direct-callout",
+   "framework": "bandwagon",
+   "videoFormat": "text-overlay-heavy",
+   "emotion": null,
+   "views": 5300000,
+   "viewsPerFollower": 477.48
+  },
+  {
+   "url": "https://www.tiktok.com/@obsessivegumballfan/video/7639896153068211486",
+   "niche": "ABG beauty",
+   "hookPattern": "direct-callout",
+   "framework": "us-vs-them",
+   "videoFormat": "text-overlay-heavy",
+   "emotion": "humor",
+   "views": 790000,
+   "viewsPerFollower": 470.8
+  },
+  {
+   "url": "https://www.tiktok.com/@izasfaves/video/7623877306079022350",
+   "niche": "supplements",
+   "hookPattern": "information-offering",
+   "framework": "organic",
+   "videoFormat": null,
+   "emotion": "aspiration",
+   "views": 2700000,
+   "viewsPerFollower": 470.38
+  },
+  {
+   "url": "https://www.tiktok.com/@asr_store_/video/7612947398590991638",
+   "niche": "tech and SaaS",
+   "hookPattern": "newness",
+   "framework": "bandwagon",
+   "videoFormat": "product-demo",
+   "emotion": "fomo",
+   "views": 6200000,
+   "viewsPerFollower": 469.7
+  },
+  {
+   "url": "https://www.tiktok.com/@mystimatcha/video/7614001661454978325",
+   "niche": "food and beverage",
+   "hookPattern": "information-offering",
+   "framework": "organic",
+   "videoFormat": "product-demo",
+   "emotion": "none",
+   "views": 1400000,
+   "viewsPerFollower": 464.96
+  },
+  {
+   "url": "https://www.tiktok.com/@ambergail15/video/7626634668871257375",
+   "niche": "pets",
+   "hookPattern": "information-offering",
+   "framework": "organic",
+   "videoFormat": null,
+   "emotion": "humor",
+   "views": 1300000,
+   "viewsPerFollower": 464.29
+  },
+  {
+   "url": "https://www.tiktok.com/@hzdiff/video/7634140313942019350",
+   "niche": "tech and SaaS",
+   "hookPattern": "question",
+   "framework": "organic",
+   "videoFormat": "product-demo",
+   "emotion": null,
+   "views": 3600000,
+   "viewsPerFollower": 459.01
+  },
+  {
+   "url": "https://www.tiktok.com/@girlygirl8680/video/7260562873414372613",
+   "niche": "food and beverage",
+   "hookPattern": "information-offering",
+   "framework": "organic",
+   "videoFormat": null,
+   "emotion": "aspiration",
+   "views": 28800000,
+   "viewsPerFollower": 454.26
+  },
+  {
+   "url": "https://www.tiktok.com/@jaad0165/video/7636473532163149089",
+   "niche": "fitness",
+   "hookPattern": "before-after",
+   "framework": "organic",
+   "videoFormat": "text-overlay-heavy",
+   "emotion": null,
+   "views": 204100,
+   "viewsPerFollower": 453.56
+  },
+  {
+   "url": "https://www.tiktok.com/@_hkl0v3rr/video/7380455178236906795",
+   "niche": "ABG beauty",
+   "hookPattern": "information-offering",
+   "framework": "organic",
+   "videoFormat": "talking-head",
+   "emotion": null,
+   "views": 7600000,
+   "viewsPerFollower": 452.38
+  },
+  {
+   "url": "https://www.tiktok.com/@iamlombarbii/video/7623814918780816670",
+   "niche": "fashion",
+   "hookPattern": "information-offering",
+   "framework": "bandwagon",
+   "videoFormat": null,
+   "emotion": "humor",
+   "views": 290600,
+   "viewsPerFollower": 445.71
+  },
+  {
+   "url": "https://www.tiktok.com/@bigbellyzoe/video/7637864667448102175",
+   "niche": "pets",
+   "hookPattern": "pov",
+   "framework": "organic",
+   "videoFormat": null,
+   "emotion": "humor",
+   "views": 1500000,
+   "viewsPerFollower": 440.66
+  },
+  {
+   "url": "https://www.tiktok.com/@muyu.qin/video/7639687466651274526",
+   "niche": "pets",
+   "hookPattern": "comparison",
+   "framework": "organic",
+   "videoFormat": "lifestyle-broll",
+   "emotion": null,
+   "views": 10100000,
+   "viewsPerFollower": 439.13
+  },
+  {
+   "url": "https://www.tiktok.com/@cupidsmatcha/video/7470299885128994091",
+   "niche": "food and beverage",
+   "hookPattern": "information-offering",
+   "framework": "listicle",
+   "videoFormat": "product-demo",
+   "emotion": "relief",
+   "views": 4700000,
+   "viewsPerFollower": 435.19
+  },
+  {
+   "url": "https://www.tiktok.com/@cbqfarm/video/7520214793760853270",
+   "niche": "pets",
+   "hookPattern": "information-offering",
+   "framework": "organic",
+   "videoFormat": "product-demo",
+   "emotion": null,
+   "views": 954600,
+   "viewsPerFollower": 432.93
+  },
+  {
+   "url": "https://www.tiktok.com/@drewscarfinds/video/7598425926900124983",
+   "niche": "tech and SaaS",
+   "hookPattern": "before-after",
+   "framework": "problem-agitate-solution",
+   "videoFormat": "pov-handheld",
+   "emotion": null,
+   "views": 21500000,
+   "viewsPerFollower": 431.73
+  },
+  {
+   "url": "https://www.tiktok.com/@prettygirlbeatsss2/video/7584920375310568734",
+   "niche": "hair",
+   "hookPattern": "pov",
+   "framework": "organic",
+   "videoFormat": "talking-head",
+   "emotion": null,
+   "views": 28700000,
+   "viewsPerFollower": 430.93
+  },
+  {
+   "url": "https://www.tiktok.com/@shopet.oficial/video/7163387911105236230",
+   "niche": "pets",
+   "hookPattern": "information-offering",
+   "framework": "organic",
+   "videoFormat": "product-demo",
+   "emotion": null,
+   "views": 5900000,
+   "viewsPerFollower": 430.66
+  },
+  {
+   "url": "https://www.tiktok.com/@ameiak7/video/7630297851721010445",
+   "niche": "fashion",
+   "hookPattern": "newness",
+   "framework": "organic",
+   "videoFormat": "lifestyle-broll",
+   "emotion": null,
+   "views": 514300,
+   "viewsPerFollower": 428.94
+  },
+  {
+   "url": "https://www.tiktok.com/@itgirl._.guides/video/7357793865861975338",
+   "niche": "tech and SaaS",
+   "hookPattern": "information-offering",
+   "framework": "organic",
+   "videoFormat": null,
+   "emotion": "aspiration",
+   "views": 2600000,
+   "viewsPerFollower": 421.05
+  },
+  {
+   "url": "https://www.tiktok.com/@itsjinxietime/video/7629189159940394258",
+   "niche": "pets",
+   "hookPattern": "question",
+   "framework": "organic",
+   "videoFormat": "lifestyle-broll",
+   "emotion": "humor",
+   "views": 1300000,
+   "viewsPerFollower": 420.17
+  },
+  {
+   "url": "https://www.tiktok.com/@miloandazul/video/7631240428066442528",
+   "niche": "pets",
+   "hookPattern": "newness",
+   "framework": "organic",
+   "videoFormat": "pov-handheld",
+   "emotion": null,
+   "views": 4200000,
+   "viewsPerFollower": 415.84
+  },
+  {
+   "url": "https://www.tiktok.com/@bethanyhu/video/7583684915959532822",
+   "niche": "ABG beauty",
+   "hookPattern": "information-offering",
+   "framework": "organic",
+   "videoFormat": "grwm",
+   "emotion": "humor",
+   "views": 10300000,
+   "viewsPerFollower": 413.65
+  },
+  {
+   "url": "https://www.tiktok.com/@rochielin/video/7269123981075090694",
+   "niche": "home and cleaning",
+   "hookPattern": "question",
+   "framework": "organic",
+   "videoFormat": null,
+   "emotion": "humor",
+   "views": 9100000,
+   "viewsPerFollower": 411.76
+  },
+  {
+   "url": "https://www.tiktok.com/@priscillas_matcha/video/7629941365618576670",
+   "niche": "hair",
+   "hookPattern": "speed-of-claim",
+   "framework": "organic",
+   "videoFormat": null,
+   "emotion": "aspiration",
+   "views": 7200000,
+   "viewsPerFollower": 411.43
+  },
+  {
+   "url": "https://www.tiktok.com/@user2423866288168/video/7634653438860692750",
+   "niche": "fashion",
+   "hookPattern": "information-offering",
+   "framework": "listicle",
+   "videoFormat": "text-overlay-heavy",
+   "emotion": "humor",
+   "views": 1400000,
+   "viewsPerFollower": 411.28
+  },
+  {
+   "url": "https://www.tiktok.com/@therabbitwhisky/video/7641592076781538582",
+   "niche": "pets",
+   "hookPattern": "information-offering",
+   "framework": "organic",
+   "videoFormat": "lifestyle-broll",
+   "emotion": null,
+   "views": 2600000,
+   "viewsPerFollower": 409.58
+  },
+  {
+   "url": "https://www.tiktok.com/@kiisinia/video/7628510998529445141",
+   "niche": "fashion",
+   "hookPattern": "information-offering",
+   "framework": "organic",
+   "videoFormat": "carousel-slideshow",
+   "emotion": null,
+   "views": 659300,
+   "viewsPerFollower": 409.5
+  },
+  {
+   "url": "https://www.tiktok.com/@bellas.world80/video/7534778992092663070",
+   "niche": "home and cleaning",
+   "hookPattern": "information-offering",
+   "framework": "listicle",
+   "videoFormat": "text-overlay-heavy",
+   "emotion": null,
+   "views": 18300000,
+   "viewsPerFollower": 409.4
+  },
+  {
+   "url": "https://www.tiktok.com/@diamondsolutions_/video/7147750294217100586",
+   "niche": "home and cleaning",
+   "hookPattern": "information-offering",
+   "framework": "organic",
+   "videoFormat": "product-demo",
+   "emotion": "curiosity",
+   "views": 2400000,
+   "viewsPerFollower": 407.54
+  },
+  {
+   "url": "https://www.tiktok.com/@gadgetxfly/video/7541123234763181342",
+   "niche": "tech and SaaS",
+   "hookPattern": "information-offering",
+   "framework": "organic",
+   "videoFormat": "product-demo",
+   "emotion": null,
+   "views": 3200000,
+   "viewsPerFollower": 406.66
+  },
+  {
+   "url": "https://www.tiktok.com/@makeupbeauty.love/video/7612941988924624150",
+   "niche": "ABG beauty",
+   "hookPattern": "information-offering",
+   "framework": "listicle",
+   "videoFormat": "text-overlay-heavy",
+   "emotion": null,
+   "views": 733300,
+   "viewsPerFollower": 404.24
+  },
+  {
+   "url": "https://www.tiktok.com/@matchannichole/video/7473196659808226606",
+   "niche": "food and beverage",
+   "hookPattern": "removing-limitations",
+   "framework": "organic",
+   "videoFormat": "product-demo",
+   "emotion": "relief",
+   "views": 3700000,
+   "viewsPerFollower": 403.27
+  },
+  {
+   "url": "https://www.tiktok.com/@elxx222/video/7641591413464993026",
+   "niche": "food and beverage",
+   "hookPattern": "information-offering",
+   "framework": "organic",
+   "videoFormat": "talking-head",
+   "emotion": null,
+   "views": 2700000,
+   "viewsPerFollower": 401.67
+  },
+  {
+   "url": "https://www.tiktok.com/@shesalussh/video/7641303175206620447",
+   "niche": "food and beverage",
+   "hookPattern": "none",
+   "framework": "organic",
+   "videoFormat": "product-demo",
+   "emotion": "none",
+   "views": 2700000,
+   "viewsPerFollower": 401.37
+  },
+  {
+   "url": "https://www.tiktok.com/@alexreinreviews/video/7489284202266021166",
+   "niche": "tech and SaaS",
+   "hookPattern": "question",
+   "framework": "organic",
+   "videoFormat": null,
+   "emotion": "curiosity",
+   "views": 1700000,
+   "viewsPerFollower": 396.09
+  },
+  {
+   "url": "https://www.tiktok.com/@jvainiwi9m9/video/7245448110577552641",
+   "niche": "tech and SaaS",
+   "hookPattern": "information-offering",
+   "framework": "listicle",
+   "videoFormat": "lifestyle-broll",
+   "emotion": null,
+   "views": 47900000,
+   "viewsPerFollower": 395.87
+  },
+  {
+   "url": "https://www.tiktok.com/@.ephxnyyl/video/7478306924266622230",
+   "niche": "ABG beauty",
+   "hookPattern": "information-offering",
+   "framework": "organic",
+   "videoFormat": "talking-head",
+   "emotion": null,
+   "views": 29800000,
+   "viewsPerFollower": 395.23
+  },
+  {
+   "url": "https://www.tiktok.com/@astrid.lewis8/video/7622237018419957022",
+   "niche": "pets",
+   "hookPattern": "information-offering",
+   "framework": "organic",
+   "videoFormat": "text-overlay-heavy",
+   "emotion": "humor",
+   "views": 43100000,
+   "viewsPerFollower": 394.69
+  },
+  {
+   "url": "https://www.tiktok.com/@taniarodriguez1609/video/7350529605301832965",
+   "niche": "hair",
+   "hookPattern": "size-of-claim",
+   "framework": "organic",
+   "videoFormat": null,
+   "emotion": "aspiration",
+   "views": 14600000,
+   "viewsPerFollower": 392.47
+  },
+  {
+   "url": "https://www.tiktok.com/@aysenurhairstyle/video/7574065907262049544",
+   "niche": "hair",
+   "hookPattern": "information-offering",
+   "framework": "organic",
+   "videoFormat": null,
+   "emotion": "curiosity",
+   "views": 34100000,
+   "viewsPerFollower": 391.5
+  },
+  {
+   "url": "https://www.tiktok.com/@whiskerwonders107/video/7619777492936576288",
+   "niche": "pets",
+   "hookPattern": "question",
+   "framework": "organic",
+   "videoFormat": "lifestyle-broll",
+   "emotion": null,
+   "views": 10800000,
+   "viewsPerFollower": 385.71
+  },
+  {
+   "url": "https://www.tiktok.com/@itsbeautyhub/video/7379055715656142126",
+   "niche": "ABG beauty",
+   "hookPattern": "information-offering",
+   "framework": "organic",
+   "videoFormat": "talking-head",
+   "emotion": "aspiration",
+   "views": 26400000,
+   "viewsPerFollower": 383.72
+  },
+  {
+   "url": "https://www.tiktok.com/@yskzone7/video/7570612348197621005",
+   "niche": "tech and SaaS",
+   "hookPattern": "information-offering",
+   "framework": "problem-agitate-solution",
+   "videoFormat": "product-demo",
+   "emotion": null,
+   "views": 5100000,
+   "viewsPerFollower": 383.46
+  },
+  {
+   "url": "https://www.tiktok.com/@purpoesful03/video/7197783456892456234",
+   "niche": "ABG beauty",
+   "hookPattern": "information-offering",
+   "framework": "organic",
+   "videoFormat": "talking-head",
+   "emotion": "aspiration",
+   "views": 4200000,
+   "viewsPerFollower": 381.82
+  },
+  {
+   "url": "https://www.tiktok.com/@bailey.hull40/video/7622746371191360798",
+   "niche": "fashion",
+   "hookPattern": "information-offering",
+   "framework": "organic",
+   "videoFormat": "pov-handheld",
+   "emotion": null,
+   "views": 509500,
+   "viewsPerFollower": 377.13
+  },
+  {
+   "url": "https://www.tiktok.com/@egzonabakes/video/7522145400099212550",
+   "niche": "food and beverage",
+   "hookPattern": "removing-limitations",
+   "framework": "organic",
+   "videoFormat": "product-demo",
+   "emotion": null,
+   "views": 16500000,
+   "viewsPerFollower": 376.71
+  },
+  {
+   "url": "https://www.tiktok.com/@dane.g9/video/7555304966114594062",
+   "niche": "food and beverage",
+   "hookPattern": "direct-callout",
+   "framework": "organic",
+   "videoFormat": "talking-head",
+   "emotion": null,
+   "views": 1400000,
+   "viewsPerFollower": 372.14
+  },
+  {
+   "url": "https://www.tiktok.com/@alexmuzio/video/7595781698277690655",
+   "niche": "home and cleaning",
+   "hookPattern": "information-offering",
+   "framework": "problem-agitate-solution",
+   "videoFormat": "talking-head",
+   "emotion": null,
+   "views": 2400000,
+   "viewsPerFollower": 371.8
+  },
+  {
+   "url": "https://www.tiktok.com/@daddy.patty/video/7463882226569153835",
+   "niche": "pets",
+   "hookPattern": "belief-challenging",
+   "framework": "founder-objections",
+   "videoFormat": "lifestyle-broll",
+   "emotion": "humor",
+   "views": 6300000,
+   "viewsPerFollower": 370.59
+  },
+  {
+   "url": "https://www.tiktok.com/@deventra3.0/video/7523846155768270110",
+   "niche": "tech and SaaS",
+   "hookPattern": "comparison",
+   "framework": "organic",
+   "videoFormat": "product-demo",
+   "emotion": null,
+   "views": 15100000,
+   "viewsPerFollower": 370.1
+  },
+  {
+   "url": "https://www.tiktok.com/@deallias/video/7524219977449164050",
+   "niche": "skincare",
+   "hookPattern": "information-offering",
+   "framework": "listicle",
+   "videoFormat": "product-demo",
+   "emotion": null,
+   "views": 11900000,
+   "viewsPerFollower": 366.15
+  },
+  {
+   "url": "https://www.tiktok.com/@diziheart/video/7638688896183733526",
+   "niche": "hair",
+   "hookPattern": "direct-callout",
+   "framework": "organic",
+   "videoFormat": "talking-head",
+   "emotion": null,
+   "views": 1500000,
+   "viewsPerFollower": 365.59
+  },
+  {
+   "url": "https://www.tiktok.com/@_235.6k/video/7610292190270590222",
+   "niche": "hair",
+   "hookPattern": "information-offering",
+   "framework": "organic",
+   "videoFormat": null,
+   "emotion": "aspiration",
+   "views": 2600000,
+   "viewsPerFollower": 364.91
+  },
+  {
+   "url": "https://www.tiktok.com/@roleat.tae/video/7522660218925337887",
+   "niche": "supplements",
+   "hookPattern": "question",
+   "framework": "problem-agitate-solution",
+   "videoFormat": "talking-head",
+   "emotion": null,
+   "views": 6600000,
+   "viewsPerFollower": 360.66
+  },
+  {
+   "url": "https://www.tiktok.com/@resinrattlelab/video/7595787068987510047",
+   "niche": "supplements",
+   "hookPattern": "size-of-claim",
+   "framework": "problem-agitate-solution",
+   "videoFormat": null,
+   "emotion": "fear",
+   "views": 876100,
+   "viewsPerFollower": 358.62
+  },
+  {
+   "url": "https://www.tiktok.com/@riichivl/video/7615339594783018262",
+   "niche": "fitness",
+   "hookPattern": "information-offering",
+   "framework": "organic",
+   "videoFormat": null,
+   "emotion": "aspiration",
+   "views": 4400000,
+   "viewsPerFollower": 357.72
+  },
+  {
+   "url": "https://www.tiktok.com/@boa_choiceofkbeauty/video/7344896188665089326",
+   "niche": "ABG beauty",
+   "hookPattern": "information-offering",
+   "framework": "listicle",
+   "videoFormat": null,
+   "emotion": null,
+   "views": 7300000,
+   "viewsPerFollower": 354.37
+  },
+  {
+   "url": "https://www.tiktok.com/@stylesby.jess/video/7479548781944507679",
+   "niche": "hair",
+   "hookPattern": "question",
+   "framework": "problem-agitate-solution",
+   "videoFormat": "before-after",
+   "emotion": null,
+   "views": 12400000,
+   "viewsPerFollower": 353.28
+  },
+  {
+   "url": "https://www.tiktok.com/@thefionawalks/video/7642518094174326030",
+   "niche": "pets",
+   "hookPattern": "information-offering",
+   "framework": "organic",
+   "videoFormat": "pov-handheld",
+   "emotion": null,
+   "views": 33400000,
+   "viewsPerFollower": 351.21
+  },
+  {
+   "url": "https://www.tiktok.com/@gisgue019/video/7262800903235718442",
+   "niche": "food and beverage",
+   "hookPattern": "speed-of-claim",
+   "framework": "organic",
+   "videoFormat": null,
+   "emotion": "aspiration",
+   "views": 25500000,
+   "viewsPerFollower": 349.32
+  },
+  {
+   "url": "https://www.tiktok.com/@katisthetical/video/7408524435298209057",
+   "niche": "pets",
+   "hookPattern": "none",
+   "framework": "organic",
+   "videoFormat": "lifestyle-broll",
+   "emotion": "none",
+   "views": 12500000,
+   "viewsPerFollower": 349.16
+  },
+  {
+   "url": "https://www.tiktok.com/@baofu125/video/7618975168483904782",
+   "niche": "supplements",
+   "hookPattern": "information-offering",
+   "framework": "problem-agitate-solution",
+   "videoFormat": "product-demo",
+   "emotion": null,
+   "views": 6700000,
+   "viewsPerFollower": 348.96
+  },
+  {
+   "url": "https://www.tiktok.com/@cicciothebrit/video/7229218443864673538",
+   "niche": "pets",
+   "hookPattern": "information-offering",
+   "framework": "organic",
+   "videoFormat": "lifestyle-broll",
+   "emotion": null,
+   "views": 49600000,
+   "viewsPerFollower": 348.07
+  },
+  {
+   "url": "https://www.tiktok.com/@bedheadhaze/video/7311361253660757253",
+   "niche": "pets",
+   "hookPattern": "information-offering",
+   "framework": "organic",
+   "videoFormat": null,
+   "emotion": "aspiration",
+   "views": 7500000,
+   "viewsPerFollower": 342.47
+  },
+  {
+   "url": "https://www.tiktok.com/@catsofbarnet/video/7407488396504911136",
+   "niche": "pets",
+   "hookPattern": "information-offering",
+   "framework": "organic",
+   "videoFormat": "text-overlay-heavy",
+   "emotion": "humor",
+   "views": 14400000,
+   "viewsPerFollower": 339.62
+  },
+  {
+   "url": "https://www.tiktok.com/@itsbellaandme/video/7636974193329917215",
+   "niche": "pets",
+   "hookPattern": "pov",
+   "framework": "organic",
+   "videoFormat": null,
+   "emotion": "aspiration",
+   "views": 9600000,
+   "viewsPerFollower": 338.03
+  },
+  {
+   "url": "https://www.tiktok.com/@vlad0sikq/video/7638359840644959510",
+   "niche": "tech and SaaS",
+   "hookPattern": "none",
+   "framework": "organic",
+   "videoFormat": "screen-recording",
+   "emotion": "none",
+   "views": 711000,
+   "viewsPerFollower": 337.45
+  },
+  {
+   "url": "https://www.tiktok.com/@addierain/video/7572209346524810527",
+   "niche": "home and cleaning",
+   "hookPattern": "removing-limitations",
+   "framework": "problem-agitate-solution",
+   "videoFormat": "voiceover-broll",
+   "emotion": null,
+   "views": 2600000,
+   "viewsPerFollower": 335.79
+  },
+  {
+   "url": "https://www.tiktok.com/@chillicleans_/video/7598300366559595807",
+   "niche": "home and cleaning",
+   "hookPattern": "information-offering",
+   "framework": "organic",
+   "videoFormat": "before-after",
+   "emotion": "humor",
+   "views": 1600000,
+   "viewsPerFollower": 334.73
+  },
+  {
+   "url": "https://www.tiktok.com/@ladomincajani/video/7557788749007015199",
+   "niche": "food and beverage",
+   "hookPattern": "information-offering",
+   "framework": "problem-agitate-solution",
+   "videoFormat": "talking-head",
+   "emotion": null,
+   "views": 1100000,
+   "viewsPerFollower": 334.24
+  },
+  {
+   "url": "https://www.tiktok.com/@not_nickel_c/video/7070931179653958955",
+   "niche": "fitness",
+   "hookPattern": "information-offering",
+   "framework": "organic",
+   "videoFormat": "talking-head",
+   "emotion": null,
+   "views": 2700000,
+   "viewsPerFollower": 333.54
+  },
+  {
+   "url": "https://www.tiktok.com/@myalgorithmatethat/video/7521183049560689950",
+   "niche": "food and beverage",
+   "hookPattern": "information-offering",
+   "framework": "organic",
+   "videoFormat": "product-demo",
+   "emotion": "aspiration",
+   "views": 18000000,
+   "viewsPerFollower": 328.47
+  },
+  {
+   "url": "https://www.tiktok.com/@everestbreezestore/video/7363141212792016170",
+   "niche": "tech and SaaS",
+   "hookPattern": "information-offering",
+   "framework": "organic",
+   "videoFormat": "product-demo",
+   "emotion": null,
+   "views": 15500000,
+   "viewsPerFollower": 327
+  },
+  {
+   "url": "https://www.tiktok.com/@novasdiary_/video/7620122882009566495",
+   "niche": "pets",
+   "hookPattern": "before-after",
+   "framework": "organic",
+   "videoFormat": "lifestyle-broll",
+   "emotion": null,
+   "views": 12200000,
+   "viewsPerFollower": 324.47
+  },
+  {
+   "url": "https://www.tiktok.com/@victoriareze/video/7642764952549215502",
+   "niche": "pets",
+   "hookPattern": "information-offering",
+   "framework": "organic",
+   "videoFormat": null,
+   "emotion": "humor",
+   "views": 1200000,
+   "viewsPerFollower": 322.49
+  },
+  {
+   "url": "https://www.tiktok.com/@steamed.bun.siste/video/7625619945753152798",
+   "niche": "pets",
+   "hookPattern": "information-offering",
+   "framework": "organic",
+   "videoFormat": "lifestyle-broll",
+   "emotion": "humor",
+   "views": 40300000,
+   "viewsPerFollower": 321.88
+  },
+  {
+   "url": "https://www.tiktok.com/@momostillfedup/video/7602795829279100173",
+   "niche": "food and beverage",
+   "hookPattern": "belief-challenging",
+   "framework": "organic",
+   "videoFormat": null,
+   "emotion": "disgust",
+   "views": 9100000,
+   "viewsPerFollower": 321.55
+  },
+  {
+   "url": "https://www.tiktok.com/@xo.txff/video/7634689399657221389",
+   "niche": "fashion",
+   "hookPattern": "generic",
+   "framework": "organic",
+   "videoFormat": "product-demo",
+   "emotion": null,
+   "views": 615200,
+   "viewsPerFollower": 319.58
+  },
+  {
+   "url": "https://www.tiktok.com/@biaancaalifts/video/7604357650993663263",
+   "niche": "fitness",
+   "hookPattern": "direct-callout",
+   "framework": "organic",
+   "videoFormat": "lifestyle-broll",
+   "emotion": null,
+   "views": 1500000,
+   "viewsPerFollower": 318.81
+  },
+  {
+   "url": "https://www.tiktok.com/@genoaskin/video/7084216381641673989",
+   "niche": "skincare",
+   "hookPattern": "authority",
+   "framework": "information-offering",
+   "videoFormat": "text-overlay-heavy",
+   "emotion": null,
+   "views": 61300000,
+   "viewsPerFollower": 318.77
+  },
+  {
+   "url": "https://www.tiktok.com/@ams.3i/video/7558814526922132758",
+   "niche": "ABG beauty",
+   "hookPattern": "information-offering",
+   "framework": "organic",
+   "videoFormat": "talking-head",
+   "emotion": null,
+   "views": 15200000,
+   "viewsPerFollower": 317.33
+  },
+  {
+   "url": "https://www.tiktok.com/@jayctech/video/7616774295481634061",
+   "niche": "tech and SaaS",
+   "hookPattern": "before-after",
+   "framework": "organic",
+   "videoFormat": "product-demo",
+   "emotion": null,
+   "views": 6300000,
+   "viewsPerFollower": 316.58
+  },
+  {
+   "url": "https://www.tiktok.com/@witchy.lashes/video/7555971278339968287",
+   "niche": "ABG beauty",
+   "hookPattern": "information-offering",
+   "framework": "organic",
+   "videoFormat": "talking-head",
+   "emotion": null,
+   "views": 9300000,
+   "viewsPerFollower": 315.25
+  },
+  {
+   "url": "https://www.tiktok.com/@sunsh1ne87/video/7629936771807153421",
+   "niche": "pets",
+   "hookPattern": "information-offering",
+   "framework": "organic",
+   "videoFormat": null,
+   "emotion": "aspiration",
+   "views": 6200000,
+   "viewsPerFollower": 314.72
+  },
+  {
+   "url": "https://www.tiktok.com/@sydniruth/video/7185444674595769642",
+   "niche": "home and cleaning",
+   "hookPattern": "comparison",
+   "framework": "problem-agitate-solution",
+   "videoFormat": "text-overlay-heavy",
+   "emotion": "relief",
+   "views": 2700000,
+   "viewsPerFollower": 314.54
+  },
+  {
+   "url": "https://www.tiktok.com/@cleanwithjake/video/7639532369069853966",
+   "niche": "home and cleaning",
+   "hookPattern": "information-offering",
+   "framework": "organic",
+   "videoFormat": "product-demo",
+   "emotion": "relief",
+   "views": 1500000,
+   "viewsPerFollower": 313.41
+  },
+  {
+   "url": "https://www.tiktok.com/@bishuwish/video/7521886124525194526",
+   "niche": "ABG beauty",
+   "hookPattern": "belief-challenging",
+   "framework": "problem-agitate-solution",
+   "videoFormat": "before-after",
+   "emotion": "curiosity",
+   "views": 77100000,
+   "viewsPerFollower": 313.41
+  },
+  {
+   "url": "https://www.tiktok.com/@0taco_bella9/video/7603886122980199702",
+   "niche": "skincare",
+   "hookPattern": "pov",
+   "framework": "organic",
+   "videoFormat": "talking-head",
+   "emotion": null,
+   "views": 666200,
+   "viewsPerFollower": 312.92
+  },
+  {
+   "url": "https://www.tiktok.com/@alex.olarte/video/7562292075752885518",
+   "niche": "fitness",
+   "hookPattern": "belief-challenging",
+   "framework": "problem-agitate-solution",
+   "videoFormat": "talking-head",
+   "emotion": "relief",
+   "views": 9400000,
+   "viewsPerFollower": 311.26
+  },
+  {
+   "url": "https://www.tiktok.com/@cloudi_light_/video/7634989997979864334",
+   "niche": "ABG beauty",
+   "hookPattern": "belief-challenging",
+   "framework": "organic",
+   "videoFormat": "talking-head",
+   "emotion": null,
+   "views": 3600000,
+   "viewsPerFollower": 307.69
+  },
+  {
+   "url": "https://www.tiktok.com/@matchasunday/video/7374584028009155886",
+   "niche": "food and beverage",
+   "hookPattern": "information-offering",
+   "framework": "organic",
+   "videoFormat": "product-demo",
+   "emotion": null,
+   "views": 4600000,
+   "viewsPerFollower": 306.67
+  },
+  {
+   "url": "https://www.tiktok.com/@aflavorfulbite/video/7566237194558491917",
+   "niche": "food and beverage",
+   "hookPattern": "information-offering",
+   "framework": "organic",
+   "videoFormat": "product-demo",
+   "emotion": "aspiration",
+   "views": 154900000,
+   "viewsPerFollower": 306.61
+  },
+  {
+   "url": "https://www.tiktok.com/@haerins.abc/video/7608758046747135245",
+   "niche": "fashion",
+   "hookPattern": "none",
+   "framework": "organic",
+   "videoFormat": "carousel-slideshow",
+   "emotion": "aspiration",
+   "views": 214000,
+   "viewsPerFollower": 304.84
+  },
+  {
+   "url": "https://www.tiktok.com/@lifehacks.fan/video/7622677751903915294",
+   "niche": "supplements",
+   "hookPattern": "before-after",
+   "framework": "problem-agitate-solution",
+   "videoFormat": null,
+   "emotion": "aspiration",
+   "views": 5500000,
+   "viewsPerFollower": 303.87
+  },
+  {
+   "url": "https://www.tiktok.com/@lissage.cannes/video/7083239808188861701",
+   "niche": "hair",
+   "hookPattern": "information-offering",
+   "framework": "organic",
+   "videoFormat": "before-after",
+   "emotion": null,
+   "views": 41200000,
+   "viewsPerFollower": 303.83
+  },
+  {
+   "url": "https://www.tiktok.com/@benjithepressa_/video/7637175861908671758",
+   "niche": "pets",
+   "hookPattern": "removing-limitations",
+   "framework": "organic",
+   "videoFormat": "lifestyle-broll",
+   "emotion": null,
+   "views": 6100000,
+   "viewsPerFollower": 303.48
+  },
+  {
+   "url": "https://www.tiktok.com/@kevenveras_/video/7476526140027505966",
+   "niche": "tech and SaaS",
+   "hookPattern": "direct-callout",
+   "framework": "industry-contrarian",
+   "videoFormat": null,
+   "emotion": "betrayal",
+   "views": 1800000,
+   "viewsPerFollower": 301.91
+  },
+  {
+   "url": "https://www.tiktok.com/@nineartsss/video/7557142444563893512",
+   "niche": "ABG beauty",
+   "hookPattern": "question",
+   "framework": "organic",
+   "videoFormat": "before-after",
+   "emotion": null,
+   "views": 901400,
+   "viewsPerFollower": 299.57
+  },
+  {
+   "url": "https://www.tiktok.com/@dogcat_0327/video/7207585274312871211",
+   "niche": "pets",
+   "hookPattern": "none - no spoken hook present",
+   "framework": "organic",
+   "videoFormat": "lifestyle-broll",
+   "emotion": null,
+   "views": 328400000,
+   "viewsPerFollower": 298.55
+  },
+  {
+   "url": "https://www.tiktok.com/@sputnik_the_skunk/video/7344707100532149547",
+   "niche": "pets",
+   "hookPattern": "information-offering",
+   "framework": "organic",
+   "videoFormat": "pov-handheld",
+   "emotion": null,
+   "views": 5700000,
+   "viewsPerFollower": 298.43
+  },
+  {
+   "url": "https://www.tiktok.com/@fruit.makeups/video/7143055253510950187",
+   "niche": "ABG beauty",
+   "hookPattern": "information-offering",
+   "framework": "organic",
+   "videoFormat": null,
+   "emotion": "curiosity",
+   "views": 2600000,
+   "viewsPerFollower": 298.37
+  },
+  {
+   "url": "https://www.tiktok.com/@sylviavanhoevenbeauty/video/7491887801248648491",
+   "niche": "ABG beauty",
+   "hookPattern": "exclusivity",
+   "framework": "problem-agitate-solution",
+   "videoFormat": "talking-head",
+   "emotion": null,
+   "views": 16000000,
+   "viewsPerFollower": 297.95
+  },
+  {
+   "url": "https://www.tiktok.com/@supremebeauty.com/video/7516655936367349022",
+   "niche": "ABG beauty",
+   "hookPattern": "information-offering",
+   "framework": "organic",
+   "videoFormat": "pov-handheld",
+   "emotion": null,
+   "views": 5600000,
+   "viewsPerFollower": 297.87
+  },
+  {
+   "url": "https://www.tiktok.com/@fatimamukhtar40/video/7599354537228406037",
+   "niche": "skincare",
+   "hookPattern": "speed-of-claim",
+   "framework": "problem-agitate-solution",
+   "videoFormat": "before-after",
+   "emotion": "relief",
+   "views": 563500,
+   "viewsPerFollower": 297.52
+  },
+  {
+   "url": "https://www.tiktok.com/@mimi_rants01/video/7630351382670888205",
+   "niche": "tech and SaaS",
+   "hookPattern": "newness",
+   "framework": "bandwagon",
+   "videoFormat": null,
+   "emotion": "aspiration",
+   "views": 275900,
+   "viewsPerFollower": 294.76
+  },
+  {
+   "url": "https://www.tiktok.com/@arianopoien/video/7381474248075889953",
+   "niche": "fitness",
+   "hookPattern": "removing-limitations",
+   "framework": "organic",
+   "videoFormat": "pov-handheld",
+   "emotion": null,
+   "views": 115300000,
+   "viewsPerFollower": 293.61
+  },
+  {
+   "url": "https://www.tiktok.com/@haroldjrc/video/7592403400650804498",
+   "niche": "supplements",
+   "hookPattern": "belief-challenging",
+   "framework": "problem-agitate-solution",
+   "videoFormat": "product-demo",
+   "emotion": "guilt",
+   "views": 2900000,
+   "viewsPerFollower": 293.11
+  },
+  {
+   "url": "https://www.tiktok.com/@annabelleafzali/video/7579710514377395511",
+   "niche": "hair",
+   "hookPattern": "before-after",
+   "framework": "problem-agitate-solution",
+   "videoFormat": "talking-head",
+   "emotion": null,
+   "views": 32300000,
+   "viewsPerFollower": 292.31
+  },
+  {
+   "url": "https://www.tiktok.com/@pootypig/video/7449432365111201066",
+   "niche": "pets",
+   "hookPattern": "direct-callout",
+   "framework": "organic",
+   "videoFormat": "lifestyle-broll",
+   "emotion": "humor",
+   "views": 4300000,
+   "viewsPerFollower": 288.59
+  },
+  {
+   "url": "https://www.tiktok.com/@hlvitals_supplements/video/7473509781064437038",
+   "niche": "supplements",
+   "hookPattern": "information-offering",
+   "framework": "organic",
+   "videoFormat": "product-demo",
+   "emotion": null,
+   "views": 2200000,
+   "viewsPerFollower": 281.98
+  },
+  {
+   "url": "https://www.tiktok.com/@soykennyfit/video/7507125873745677586",
+   "niche": "supplements",
+   "hookPattern": "information-offering",
+   "framework": "listicle",
+   "videoFormat": null,
+   "emotion": "aspiration",
+   "views": 4200000,
+   "viewsPerFollower": 267.52
+  },
+  {
+   "url": "https://www.tiktok.com/@lexliftz/video/7629183157060816141",
+   "niche": "supplements",
+   "hookPattern": "question",
+   "framework": "organic",
+   "videoFormat": null,
+   "emotion": "humor",
+   "views": 2200000,
+   "viewsPerFollower": 263.47
+  },
+  {
+   "url": "https://www.tiktok.com/@harper4144/video/7597562562456096031",
+   "niche": "skincare",
+   "hookPattern": "belief-challenging",
+   "framework": "organic",
+   "videoFormat": "pov-handheld",
+   "emotion": "relief",
+   "views": 423300,
+   "viewsPerFollower": 281.45
+  },
+  {
+   "url": "https://www.tiktok.com/@tiktok0a1854c7/video/7638505876512410910",
+   "niche": "skincare",
+   "hookPattern": "direct-callout",
+   "framework": "problem-agitate-solution",
+   "videoFormat": "talking-head",
+   "emotion": "aspiration",
+   "views": 565900,
+   "viewsPerFollower": 169.38
+  },
+  {
+   "url": "https://www.tiktok.com/@curlsncosmetics/video/7321178471605144878",
+   "niche": "skincare",
+   "hookPattern": "information-offering",
+   "framework": "organic",
+   "videoFormat": null,
+   "emotion": null,
+   "views": 13600000,
+   "viewsPerFollower": 165.05
+  },
+  {
+   "url": "https://www.tiktok.com/@harper4144/video/7600528670872079671",
+   "niche": "skincare",
+   "hookPattern": "belief-challenging",
+   "framework": "problem-agitate-solve",
+   "videoFormat": "text-overlay-heavy",
+   "emotion": null,
+   "views": 223700,
+   "viewsPerFollower": 148.74
+  },
+  {
+   "url": "https://www.tiktok.com/@dealswithkeelz/video/7632465100489624846",
+   "niche": "skincare",
+   "hookPattern": "before-after",
+   "framework": "problem-agitate-solution",
+   "videoFormat": "talking-head",
+   "emotion": "disgust|relief",
+   "views": 12900000,
+   "viewsPerFollower": 141.45
+  },
+  {
+   "url": "https://www.tiktok.com/@skincarepharm_kbeauty/video/7619289117645393160",
+   "niche": "skincare",
+   "hookPattern": "information-offering",
+   "framework": "listicle",
+   "videoFormat": null,
+   "emotion": "relief",
+   "views": 7800000,
+   "viewsPerFollower": 103.45
+  },
+  {
+   "url": "https://www.tiktok.com/@korean.skincare77/video/7625771197564816654",
+   "niche": "skincare",
+   "hookPattern": "belief-challenging",
+   "framework": "problem-agitate-solution",
+   "videoFormat": "before-after",
+   "emotion": "fear",
+   "views": 253900,
+   "viewsPerFollower": 102.75
+  },
+  {
+   "url": "https://www.tiktok.com/@sooph1iee/video/7394779478989278497",
+   "niche": "skincare",
+   "hookPattern": "information-offering",
+   "framework": "organic",
+   "videoFormat": null,
+   "emotion": "aspiration",
+   "views": 5000000,
+   "viewsPerFollower": 102.46
+  },
+  {
+   "url": "https://www.tiktok.com/@cammie.scott/video/7500724614717279518",
+   "niche": "skincare",
+   "hookPattern": "before-after",
+   "framework": "organic",
+   "videoFormat": "before-after",
+   "emotion": null,
+   "views": 15500000,
+   "viewsPerFollower": 101.77
+  },
+  {
+   "url": "https://www.tiktok.com/@choi.koreanskin/video/7639523672708992286",
+   "niche": "skincare",
+   "hookPattern": "belief-challenging",
+   "framework": "industry-contrarian",
+   "videoFormat": null,
+   "emotion": "curiosity",
+   "views": 1800000,
+   "viewsPerFollower": 90.91
+  },
+  {
+   "url": "https://www.tiktok.com/@glambyval/video/7631230267679886614",
+   "niche": "skincare",
+   "hookPattern": "information-offering",
+   "framework": "organic",
+   "videoFormat": "talking-head",
+   "emotion": null,
+   "views": 2700000,
+   "viewsPerFollower": 90.6
+  },
+  {
+   "url": "https://www.tiktok.com/@prettyprogress23/video/7640405619731598613",
+   "niche": "skincare",
+   "hookPattern": "direct-callout",
+   "framework": "organic",
+   "videoFormat": "pov-handheld",
+   "emotion": null,
+   "views": 3700000,
+   "viewsPerFollower": 88.94
+  },
+  {
+   "url": "https://www.tiktok.com/@summercooljinny/video/7562392757227195661",
+   "niche": "skincare",
+   "hookPattern": "information-offering",
+   "framework": "organic",
+   "videoFormat": "talking-head",
+   "emotion": "relief",
+   "views": 6200000,
+   "viewsPerFollower": 79.28
+  },
+  {
+   "url": "https://www.tiktok.com/@blueyoobin/video/7461593937682189590",
+   "niche": "skincare",
+   "hookPattern": "information-offering",
+   "framework": "listicle",
+   "videoFormat": "product-demo",
+   "emotion": null,
+   "views": 10300000,
+   "viewsPerFollower": 79.17
+  },
+  {
+   "url": "https://www.tiktok.com/@dipyrkkh/video/7318452456189365509",
+   "niche": "skincare",
+   "hookPattern": "information-offering",
+   "framework": "listicle",
+   "videoFormat": "talking-head",
+   "emotion": null,
+   "views": 8500000,
+   "viewsPerFollower": 79
+  }
+ ]
+}

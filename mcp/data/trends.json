@@ -1,0 +1,324 @@
+{
+  "generatedAt": "2026-05-24",
+  "method": "cluster by creative-unit (framework|format|hook) \u2192 gates (recurrence\u22652 creators, transfer\u22652 niches, performance\u2265corpus-median vpf) \u2192 agent-named formula + 3-part name",
+  "count": 18,
+  "corpusMedianVpf": 5.45,
+  "trends": [
+    {
+      "name": "Text-card silent relatability loop",
+      "formula": "Relatable situation shown \u2192 bold text overlay names it \u2192 escalating text beats \u2192 punchline payoff",
+      "whyItTravels": "Silent text carries the joke/insight with sound off, so it reads in any niche or feed.",
+      "framework": "organic",
+      "videoFormat": "text-overlay-heavy",
+      "hookPattern": "none",
+      "recurrence": "15 creators",
+      "transfer": [
+        "tech and SaaS",
+        "fashion",
+        "home and cleaning",
+        "pets",
+        "fitness"
+      ],
+      "medianVpf": 160.52,
+      "examples": 15
+    },
+    {
+      "name": "Screen-record utility walkthrough",
+      "formula": "Open inside the app/screen \u2192 show the steps live \u2192 result on screen \u2192 implied 'go get it'",
+      "whyItTravels": "Watching the tool actually work is proof; transfers to any app or digital workflow.",
+      "framework": "organic",
+      "videoFormat": "screen-recording",
+      "hookPattern": "information-offering",
+      "recurrence": "12 creators",
+      "transfer": [
+        "tech and SaaS",
+        "fashion"
+      ],
+      "medianVpf": 158.62,
+      "examples": 12
+    },
+    {
+      "name": "Handheld POV belief-flip confession",
+      "formula": "State a common belief \u2192 POV doubt/confession \u2192 quick contradiction \u2192 corrected behavior",
+      "whyItTravels": "A first-person 'I was wrong' disarms skepticism, which travels across burned categories.",
+      "framework": "organic",
+      "videoFormat": "pov-handheld",
+      "hookPattern": "belief-challenging",
+      "recurrence": "10 creators",
+      "transfer": [
+        "food and beverage",
+        "skincare",
+        "home and cleaning",
+        "hair",
+        "fashion",
+        "fitness",
+        "pets"
+      ],
+      "medianVpf": 119.15,
+      "examples": 10
+    },
+    {
+      "name": "Handheld POV transformation reveal",
+      "formula": "Show the before state \u2192 POV process handheld \u2192 transformation reveal \u2192 satisfied payoff",
+      "whyItTravels": "The visual before/after is its own proof, niche-agnostic and shareable.",
+      "framework": "organic",
+      "videoFormat": "pov-handheld",
+      "hookPattern": "before-after",
+      "recurrence": "10 creators",
+      "transfer": [
+        "ABG beauty",
+        "home and cleaning",
+        "fashion",
+        "pets"
+      ],
+      "medianVpf": 83.83,
+      "examples": 10
+    },
+    {
+      "name": "Caption-card before-after transformation",
+      "formula": "Text states the before \u2192 cut \u2192 text states the after \u2192 visual proof",
+      "whyItTravels": "Caption-led transformations need no spoken hook and recur across the widest set of niches.",
+      "framework": "organic",
+      "videoFormat": "text-overlay-heavy",
+      "hookPattern": "before-after",
+      "recurrence": "18 creators",
+      "transfer": [
+        "pets",
+        "food and beverage",
+        "home and cleaning",
+        "fashion",
+        "fitness",
+        "tech and SaaS",
+        "hair"
+      ],
+      "medianVpf": 81.55,
+      "examples": 18
+    },
+    {
+      "name": "Problem-card grimy-to-gleaming flip",
+      "formula": "Text names the problem \u2192 agitate the gross/annoying state \u2192 product enters \u2192 clean 'after'",
+      "whyItTravels": "The disgust-to-relief swing is universal; the text card makes it caption-safe.",
+      "framework": "problem-agitate-solution",
+      "videoFormat": "text-overlay-heavy",
+      "hookPattern": "before-after",
+      "recurrence": "6 creators",
+      "transfer": [
+        "home and cleaning",
+        "hair",
+        "pets",
+        "fitness"
+      ],
+      "medianVpf": 63.93,
+      "examples": 6
+    },
+    {
+      "name": "Text-overlay aesthetic vibe montage",
+      "formula": "Aesthetic clips + running text commentary \u2192 vibe builds \u2192 identity payoff",
+      "whyItTravels": "Vibe + relatable text lets any lifestyle niche ride the same montage shell.",
+      "framework": "organic",
+      "videoFormat": "text-overlay-heavy",
+      "hookPattern": "generic",
+      "recurrence": "10 creators",
+      "transfer": [
+        "fitness",
+        "fashion",
+        "home and cleaning",
+        "pets"
+      ],
+      "medianVpf": 63.93,
+      "examples": 10
+    },
+    {
+      "name": "Hands-on demo direct-callout",
+      "formula": "Call out the buyer/problem \u2192 hands demonstrate the product \u2192 visible result \u2192 implicit get",
+      "whyItTravels": "Showing the product work to a named person is the broadest, most-used winning shell.",
+      "framework": "organic",
+      "videoFormat": "product-demo",
+      "hookPattern": "direct-callout",
+      "recurrence": "24 creators",
+      "transfer": [
+        "food and beverage",
+        "fashion",
+        "home and cleaning",
+        "tech and SaaS",
+        "pets",
+        "ABG beauty"
+      ],
+      "medianVpf": 59.91,
+      "examples": 24
+    },
+    {
+      "name": "Lifestyle this-vs-that comparison",
+      "formula": "Option A shown \u2192 option B side-by-side \u2192 the winner is obvious",
+      "whyItTravels": "Head-to-head contrast lets the viewer judge for themselves; works for any pick.",
+      "framework": "organic",
+      "videoFormat": "lifestyle-broll",
+      "hookPattern": "comparison",
+      "recurrence": "4 creators",
+      "transfer": [
+        "pets",
+        "fashion"
+      ],
+      "medianVpf": 59.29,
+      "examples": 7
+    },
+    {
+      "name": "Lifestyle no-excuse barrier-drop",
+      "formula": "Name the barrier/excuse \u2192 show it done anyway in real life \u2192 result",
+      "whyItTravels": "Removing the disqualifier ('even if\u2026') recruits people who counted themselves out.",
+      "framework": "organic",
+      "videoFormat": "lifestyle-broll",
+      "hookPattern": "removing-limitations",
+      "recurrence": "15 creators",
+      "transfer": [
+        "fitness",
+        "pets",
+        "supplements",
+        "fashion"
+      ],
+      "medianVpf": 40.72,
+      "examples": 15
+    },
+    {
+      "name": "Product-demo even-if proof",
+      "formula": "Name the usual disqualifier \u2192 demo it works anyway \u2192 concrete proof",
+      "whyItTravels": "'Works even if X' converts the skeptics that other angles lose.",
+      "framework": "organic",
+      "videoFormat": "product-demo",
+      "hookPattern": "removing-limitations",
+      "recurrence": "19 creators",
+      "transfer": [
+        "ABG beauty",
+        "food and beverage",
+        "tech and SaaS",
+        "home and cleaning",
+        "fashion"
+      ],
+      "medianVpf": 37.84,
+      "examples": 20
+    },
+    {
+      "name": "Voiceover b-roll tip explainer",
+      "formula": "Narrate the tip over b-roll \u2192 walk the steps \u2192 payoff",
+      "whyItTravels": "Voice-led teaching over cheap b-roll is fast to make and reads as helpful, not salesy.",
+      "framework": "organic",
+      "videoFormat": "voiceover-broll",
+      "hookPattern": "information-offering",
+      "recurrence": "16 creators",
+      "transfer": [
+        "fitness",
+        "supplements",
+        "food and beverage",
+        "pets",
+        "ABG beauty",
+        "home and cleaning",
+        "fashion"
+      ],
+      "medianVpf": 36.78,
+      "examples": 17
+    },
+    {
+      "name": "Talking-head pain-callout pitch",
+      "formula": "Call out the sufferer \u2192 agitate the pain \u2192 solution reveal \u2192 CTA",
+      "whyItTravels": "Direct face-to-camera callout to a specific pain is high-intent and category-portable.",
+      "framework": "problem-agitate-solution",
+      "videoFormat": "talking-head",
+      "hookPattern": "direct-callout",
+      "recurrence": "7 creators",
+      "transfer": [
+        "ABG beauty",
+        "skincare",
+        "supplements",
+        "hair"
+      ],
+      "medianVpf": 36.48,
+      "examples": 8
+    },
+    {
+      "name": "Contrarian secret-reveal b-roll",
+      "formula": "Declassify a secret \u2192 name the industry failure \u2192 reframe \u2192 proof",
+      "whyItTravels": "'What they won't tell you' reframing wins skeptical, sophisticated markets.",
+      "framework": "industry-contrarian",
+      "videoFormat": "lifestyle-broll",
+      "hookPattern": "belief-challenging",
+      "recurrence": "9 creators",
+      "transfer": [
+        "supplements",
+        "fashion",
+        "fitness",
+        "pets",
+        "food and beverage"
+      ],
+      "medianVpf": 30.91,
+      "examples": 9
+    },
+    {
+      "name": "Authority-framed product demo",
+      "formula": "Authority/credential claim \u2192 demo \u2192 why it works \u2192 trust payoff",
+      "whyItTravels": "Borrowed expertise de-risks the buy; transfers wherever trust is the blocker.",
+      "framework": "organic",
+      "videoFormat": "product-demo",
+      "hookPattern": "authority",
+      "recurrence": "8 creators",
+      "transfer": [
+        "ABG beauty",
+        "home and cleaning",
+        "food and beverage",
+        "supplements",
+        "skincare"
+      ],
+      "medianVpf": 30.52,
+      "examples": 8
+    },
+    {
+      "name": "Voiceover problem-to-fix walkthrough",
+      "formula": "Narrate the problem \u2192 agitate \u2192 show the fix \u2192 relief",
+      "whyItTravels": "Narrated problem\u2192fix needs no on-camera talent and suits service/home niches.",
+      "framework": "problem-agitate-solution",
+      "videoFormat": "voiceover-broll",
+      "hookPattern": "removing-limitations",
+      "recurrence": "6 creators",
+      "transfer": [
+        "home and cleaning",
+        "pets"
+      ],
+      "medianVpf": 28.26,
+      "examples": 6
+    },
+    {
+      "name": "Without-the-effort shortcut demo",
+      "formula": "Promise the result without the usual cost \u2192 minimal demo \u2192 lifestyle win",
+      "whyItTravels": "Effort-averse buyers respond to 'the result without the work' across categories.",
+      "framework": "x-without-y",
+      "videoFormat": "product-demo",
+      "hookPattern": "removing-limitations",
+      "recurrence": "7 creators",
+      "transfer": [
+        "ABG beauty",
+        "skincare",
+        "home and cleaning",
+        "food and beverage",
+        "tech and SaaS"
+      ],
+      "medianVpf": 28.23,
+      "examples": 7
+    },
+    {
+      "name": "Handheld in-the-moment POV",
+      "formula": "Drop into a real moment \u2192 handheld follow \u2192 casual product appearance",
+      "whyItTravels": "Feeling 'in the moment' collapses the ad distance; the product rides along naturally.",
+      "framework": "organic",
+      "videoFormat": "pov-handheld",
+      "hookPattern": "none",
+      "recurrence": "9 creators",
+      "transfer": [
+        "fitness",
+        "food and beverage",
+        "tech and SaaS",
+        "fashion"
+      ],
+      "medianVpf": 28.01,
+      "examples": 9
+    }
+  ]
+}

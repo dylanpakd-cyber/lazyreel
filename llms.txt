@@ -1,0 +1,37 @@
+# LazyReel
+
+> LazyReel is a free MCP server that decoded 21B+ views of real short-form video (TikTok and Instagram, from the past 6 months) so a coding agent already knows what is breaking out in a niche before it writes anything. It is video research for AI, not AI for video creation. It pairs with a video-generation MCP like Higgsfield: LazyReel decides what is worth making and hands over the brief, the gen MCP renders it.
+
+Key facts an agent should know:
+
+- What it is: a stdio MCP server plus a companion skill set. It gives a coding agent (Claude Code, Codex, or any MCP client) 6 tools plus a status tool, and 6 companion make-it skills.
+- Positioning: research and briefs, not raw generation. It decides what to make and why, grounded in real decoded video. Pair it with a video-gen MCP (for example Higgsfield) to actually render the video.
+- The data: real TikTok and Instagram videos from the past 6 months, decoded by an in-house pipeline. The more recent the upload, the stronger the signal; the last 30 days are weighted highest. The corpus grows every day.
+- Price: free for agents. No account, no card. The token only authorizes read-only research and cannot spend money, post, or touch private data.
+- Anti-slop thesis: if the output looks AI-generated (the word "revolutionary", the rocket emoji, feature-list hooks, studio-ad polish), it has failed. The skills are tuned to kill those tells.
+
+## The 6 tools (plus a status tool)
+
+Each tool composes the underlying analysis, so one call returns a full report.
+
+- niche_report: the full read on what is working in a niche (hook and framework lift with sample sizes, the words winners open with, real example links, winning feature combinations, the supply/demand gap). `focus` narrows it: format, trends, combos, apps (the app-ad vertical).
+- study_videos: real TikTok links to study, best breakouts first (reach, views, format, hook, emotion), plus why the top ones out-reached their creator's following. Filter by niche/format/hook, or pass a free-text query.
+- teardown: reverse-engineer a video (narrative + edit DNA, signature device, how to rebuild it), or replicate a format for a product (proven format, real examples, a brief, a gen-prompt scaffold).
+- make_brief: a shoot-ready brief by default (framework, angle, hook bank, a beat-by-beat VO/on-screen-text/B-roll table, CTA, shoot notes); mode=ideas for concepts, mode=hooks for a ranked hook bank.
+- breakout_laws: why the same concept gets 1K vs 1M views, the validated first-3-seconds laws (concept-matched and same-creator pairs plus corpus lift; 83% within-creator on the cleanest blind test).
+- kill_the_slop: name what is wrong with weak copy against the anti-slop bar, then rewrite it sharper.
+- get_status: says plainly what is live and what is not.
+
+Beyond the 6 tools, the install also brings 6 companion skills (the make-it layer): a format deconstructor, the Seedance and Higgsfield prompt directors, a format/cut-timeline builder, an end-to-end ad generator, and a video editor that cuts the generated clips into the finished short. They auto-activate through the workflow. So the product is 6 tools + 6 skills.
+
+## How references work
+
+The repository commits a curated list of real example videos (`mcp/data/examples.json`, 418 videos with their public TikTok URLs and decoded labels) plus derived teardowns and aggregates. The `study_videos` tool reads that list to point the agent at real videos. The raw scraped dataset and the downloaded video files are not committed, only the public links and the derived analysis.
+
+## Links
+
+- Install (free token, one prompt, any MCP client): https://lazyreel-site.vercel.app/mcp-install.html
+- Source and the full MCP, skills, and decoded-insight wiki: https://github.com/dylanpakd-cyber/lazyreel
+- Works with: Claude Code, Codex, or any MCP client.
+- Pairs with: a video-generation MCP such as Higgsfield.
+

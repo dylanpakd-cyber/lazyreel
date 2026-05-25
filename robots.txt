@@ -1,0 +1,21 @@
+# LazyReel: open to crawlers and AI agents
+User-agent: *
+Allow: /
+
+# Explicitly welcome AI/LLM crawlers
+User-agent: GPTBot
+Allow: /
+User-agent: ClaudeBot
+Allow: /
+User-agent: anthropic-ai
+Allow: /
+User-agent: PerplexityBot
+Allow: /
+User-agent: Google-Extended
+Allow: /
+User-agent: CCBot
+Allow: /
+
+# Plain-text summary written for LLMs/agents: /llms.txt
+Sitemap: https://lazyreel-site.vercel.app/sitemap.xml
+

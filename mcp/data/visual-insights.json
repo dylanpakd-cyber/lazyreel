@@ -1,0 +1,622 @@
+{
+  "generatedAt": "2026-05-24",
+  "analyzed": 237,
+  "note": "Visual layer: format + craft attributes labeled from the first ~3s of each video by a vision model, then contrastive lift on views-per-follower. Derived analysis only; no frames, urls, or source text.",
+  "formatDistribution": {
+    "text-overlay-heavy": 38,
+    "lifestyle-broll": 36,
+    "product-demo": 33,
+    "talking-head": 32,
+    "grwm": 29,
+    "pov-handheld": 21,
+    "before-after": 15,
+    "meme-edit": 13,
+    "green-screen": 5,
+    "founder-led": 4,
+    "voiceover-broll": 4,
+    "day-in-the-life": 3,
+    "street-interview": 2,
+    "carousel-slideshow": 1,
+    "screen-recording": 1
+  },
+  "formatsThatOverIndex": [
+    {
+      "label": "pov-handheld",
+      "lift": 12.54,
+      "nWinners": 17,
+      "nTotal": 21,
+      "sharePct": 8.9
+    },
+    {
+      "label": "meme-edit",
+      "lift": 3.44,
+      "nWinners": 7,
+      "nTotal": 13,
+      "sharePct": 5.5
+    },
+    {
+      "label": "product-demo",
+      "lift": 1.69,
+      "nWinners": 12,
+      "nTotal": 33,
+      "sharePct": 13.9
+    },
+    {
+      "label": "text-overlay-heavy",
+      "lift": 1.2,
+      "nWinners": 11,
+      "nTotal": 38,
+      "sharePct": 16
+    },
+    {
+      "label": "lifestyle-broll",
+      "lift": 0.98,
+      "nWinners": 9,
+      "nTotal": 36,
+      "sharePct": 15.2
+    },
+    {
+      "label": "founder-led",
+      "lift": 0.98,
+      "nWinners": 1,
+      "nTotal": 4,
+      "sharePct": 1.7
+    },
+    {
+      "label": "voiceover-broll",
+      "lift": 0.98,
+      "nWinners": 1,
+      "nTotal": 4,
+      "sharePct": 1.7
+    },
+    {
+      "label": "talking-head",
+      "lift": 0.1,
+      "nWinners": 1,
+      "nTotal": 32,
+      "sharePct": 13.5
+    },
+    {
+      "label": "green-screen",
+      "lift": 0,
+      "nWinners": 0,
+      "nTotal": 5,
+      "sharePct": 2.1
+    },
+    {
+      "label": "grwm",
+      "lift": 0,
+      "nWinners": 0,
+      "nTotal": 29,
+      "sharePct": 12.2
+    },
+    {
+      "label": "before-after",
+      "lift": 0,
+      "nWinners": 0,
+      "nTotal": 15,
+      "sharePct": 6.3
+    }
+  ],
+  "craft": {
+    "creatorStyling": {
+      "distribution": {
+        "casual-messy": 113,
+        "none-visible": 86,
+        "polished": 38
+      },
+      "lift": [
+        {
+          "label": "none-visible",
+          "lift": 2.12,
+          "nWinners": 36,
+          "nTotal": 86,
+          "sharePct": 36.3
+        },
+        {
+          "label": "casual-messy",
+          "lift": 0.75,
+          "nWinners": 23,
+          "nTotal": 113,
+          "sharePct": 47.7
+        },
+        {
+          "label": "polished",
+          "lift": 0.08,
+          "nWinners": 1,
+          "nTotal": 38,
+          "sharePct": 16
+        }
+      ]
+    },
+    "cameraFraming": {
+      "distribution": {
+        "medium-eye-level": 129,
+        "selfie-closeup": 43,
+        "low-angle": 28,
+        "overhead": 16,
+        "wide": 16,
+        "n-a": 4,
+        "screen": 1
+      },
+      "lift": [
+        {
+          "label": "low-angle",
+          "lift": 2.56,
+          "nWinners": 13,
+          "nTotal": 28,
+          "sharePct": 11.8
+        },
+        {
+          "label": "overhead",
+          "lift": 1.34,
+          "nWinners": 5,
+          "nTotal": 16,
+          "sharePct": 6.8
+        },
+        {
+          "label": "wide",
+          "lift": 0.98,
+          "nWinners": 4,
+          "nTotal": 16,
+          "sharePct": 6.8
+        },
+        {
+          "label": "medium-eye-level",
+          "lift": 0.82,
+          "nWinners": 28,
+          "nTotal": 129,
+          "sharePct": 54.4
+        },
+        {
+          "label": "selfie-closeup",
+          "lift": 0.67,
+          "nWinners": 8,
+          "nTotal": 43,
+          "sharePct": 18.1
+        }
+      ]
+    },
+    "lighting": {
+      "distribution": {
+        "soft-diffused": 89,
+        "mixed": 71,
+        "natural-window": 60,
+        "low-light": 12,
+        "n-a": 5
+      },
+      "lift": [
+        {
+          "label": "low-light",
+          "lift": 1.48,
+          "nWinners": 4,
+          "nTotal": 12,
+          "sharePct": 5.1
+        },
+        {
+          "label": "mixed",
+          "lift": 1.32,
+          "nWinners": 22,
+          "nTotal": 71,
+          "sharePct": 30
+        },
+        {
+          "label": "natural-window",
+          "lift": 0.9,
+          "nWinners": 14,
+          "nTotal": 60,
+          "sharePct": 25.3
+        },
+        {
+          "label": "soft-diffused",
+          "lift": 0.75,
+          "nWinners": 18,
+          "nTotal": 89,
+          "sharePct": 37.6
+        }
+      ]
+    },
+    "faceInFirst3s": {
+      "lift": [
+        {
+          "label": "false",
+          "lift": 2.13,
+          "nWinners": 47,
+          "nTotal": 112,
+          "sharePct": 47.3
+        },
+        {
+          "label": "true",
+          "lift": 0.34,
+          "nWinners": 13,
+          "nTotal": 125,
+          "sharePct": 52.7
+        }
+      ]
+    }
+  },
+  "byNiche": {
+    "ABG beauty": {
+      "sampleSize": 24,
+      "formatDistribution": {
+        "grwm": 13,
+        "product-demo": 3,
+        "text-overlay-heavy": 3,
+        "green-screen": 2,
+        "lifestyle-broll": 1,
+        "day-in-the-life": 1,
+        "talking-head": 1
+      },
+      "formatsThatOverIndex": [
+        {
+          "label": "product-demo",
+          "lift": 1.5,
+          "nWinners": 1,
+          "nTotal": 3,
+          "sharePct": 12.5
+        },
+        {
+          "label": "text-overlay-heavy",
+          "lift": 1.5,
+          "nWinners": 1,
+          "nTotal": 3,
+          "sharePct": 12.5
+        },
+        {
+          "label": "grwm",
+          "lift": 0.55,
+          "nWinners": 2,
+          "nTotal": 13,
+          "sharePct": 54.2
+        }
+      ]
+    },
+    "fitness": {
+      "sampleSize": 24,
+      "formatDistribution": {
+        "lifestyle-broll": 5,
+        "pov-handheld": 4,
+        "meme-edit": 4,
+        "text-overlay-heavy": 4,
+        "before-after": 3,
+        "founder-led": 2,
+        "street-interview": 1,
+        "talking-head": 1
+      },
+      "formatsThatOverIndex": [
+        {
+          "label": "meme-edit",
+          "lift": 9,
+          "nWinners": 3,
+          "nTotal": 4,
+          "sharePct": 16.7
+        },
+        {
+          "label": "pov-handheld",
+          "lift": 3,
+          "nWinners": 2,
+          "nTotal": 4,
+          "sharePct": 16.7
+        },
+        {
+          "label": "lifestyle-broll",
+          "lift": 0.75,
+          "nWinners": 1,
+          "nTotal": 5,
+          "sharePct": 20.8
+        },
+        {
+          "label": "before-after",
+          "lift": 0,
+          "nWinners": 0,
+          "nTotal": 3,
+          "sharePct": 12.5
+        },
+        {
+          "label": "text-overlay-heavy",
+          "lift": 0,
+          "nWinners": 0,
+          "nTotal": 4,
+          "sharePct": 16.7
+        }
+      ]
+    },
+    "supplements": {
+      "sampleSize": 23,
+      "formatDistribution": {
+        "talking-head": 11,
+        "lifestyle-broll": 3,
+        "text-overlay-heavy": 3,
+        "voiceover-broll": 1,
+        "pov-handheld": 1,
+        "carousel-slideshow": 1,
+        "before-after": 1,
+        "founder-led": 1,
+        "product-demo": 1
+      },
+      "formatsThatOverIndex": [
+        {
+          "label": "lifestyle-broll",
+          "lift": 1.42,
+          "nWinners": 1,
+          "nTotal": 3,
+          "sharePct": 13
+        },
+        {
+          "label": "talking-head",
+          "lift": 0.63,
+          "nWinners": 2,
+          "nTotal": 11,
+          "sharePct": 47.8
+        },
+        {
+          "label": "text-overlay-heavy",
+          "lift": 0,
+          "nWinners": 0,
+          "nTotal": 3,
+          "sharePct": 13
+        }
+      ]
+    },
+    "skincare": {
+      "sampleSize": 24,
+      "formatDistribution": {
+        "talking-head": 7,
+        "grwm": 5,
+        "text-overlay-heavy": 4,
+        "meme-edit": 3,
+        "product-demo": 2,
+        "pov-handheld": 1,
+        "green-screen": 1,
+        "before-after": 1
+      },
+      "formatsThatOverIndex": [
+        {
+          "label": "text-overlay-heavy",
+          "lift": 3,
+          "nWinners": 2,
+          "nTotal": 4,
+          "sharePct": 16.7
+        },
+        {
+          "label": "talking-head",
+          "lift": 1.2,
+          "nWinners": 2,
+          "nTotal": 7,
+          "sharePct": 29.2
+        },
+        {
+          "label": "meme-edit",
+          "lift": 0,
+          "nWinners": 0,
+          "nTotal": 3,
+          "sharePct": 12.5
+        },
+        {
+          "label": "grwm",
+          "lift": 0,
+          "nWinners": 0,
+          "nTotal": 5,
+          "sharePct": 20.8
+        }
+      ]
+    },
+    "food and beverage": {
+      "sampleSize": 24,
+      "formatDistribution": {
+        "lifestyle-broll": 9,
+        "text-overlay-heavy": 4,
+        "talking-head": 4,
+        "pov-handheld": 3,
+        "product-demo": 2,
+        "meme-edit": 1,
+        "grwm": 1
+      },
+      "formatsThatOverIndex": [
+        {
+          "label": "pov-handheld",
+          "lift": 99,
+          "nWinners": 3,
+          "nTotal": 3,
+          "sharePct": 12.5
+        },
+        {
+          "label": "text-overlay-heavy",
+          "lift": 1,
+          "nWinners": 1,
+          "nTotal": 4,
+          "sharePct": 16.7
+        },
+        {
+          "label": "lifestyle-broll",
+          "lift": 0.86,
+          "nWinners": 2,
+          "nTotal": 9,
+          "sharePct": 37.5
+        },
+        {
+          "label": "talking-head",
+          "lift": 0,
+          "nWinners": 0,
+          "nTotal": 4,
+          "sharePct": 16.7
+        }
+      ]
+    },
+    "tech and SaaS": {
+      "sampleSize": 23,
+      "formatDistribution": {
+        "product-demo": 13,
+        "pov-handheld": 2,
+        "meme-edit": 2,
+        "lifestyle-broll": 2,
+        "text-overlay-heavy": 1,
+        "screen-recording": 1,
+        "voiceover-broll": 1,
+        "green-screen": 1
+      },
+      "formatsThatOverIndex": [
+        {
+          "label": "product-demo",
+          "lift": 1.77,
+          "nWinners": 5,
+          "nTotal": 13,
+          "sharePct": 56.5
+        }
+      ]
+    },
+    "fashion": {
+      "sampleSize": 23,
+      "formatDistribution": {
+        "text-overlay-heavy": 6,
+        "lifestyle-broll": 5,
+        "grwm": 5,
+        "pov-handheld": 2,
+        "before-after": 2,
+        "meme-edit": 1,
+        "street-interview": 1,
+        "product-demo": 1
+      },
+      "formatsThatOverIndex": [
+        {
+          "label": "lifestyle-broll",
+          "lift": 1.89,
+          "nWinners": 2,
+          "nTotal": 5,
+          "sharePct": 21.7
+        },
+        {
+          "label": "text-overlay-heavy",
+          "lift": 0.57,
+          "nWinners": 1,
+          "nTotal": 6,
+          "sharePct": 26.1
+        },
+        {
+          "label": "grwm",
+          "lift": 0,
+          "nWinners": 0,
+          "nTotal": 5,
+          "sharePct": 21.7
+        }
+      ]
+    },
+    "home and cleaning": {
+      "sampleSize": 24,
+      "formatDistribution": {
+        "product-demo": 7,
+        "text-overlay-heavy": 5,
+        "before-after": 3,
+        "lifestyle-broll": 2,
+        "talking-head": 2,
+        "pov-handheld": 1,
+        "green-screen": 1,
+        "meme-edit": 1,
+        "founder-led": 1,
+        "day-in-the-life": 1
+      },
+      "formatsThatOverIndex": [
+        {
+          "label": "product-demo",
+          "lift": 1.2,
+          "nWinners": 2,
+          "nTotal": 7,
+          "sharePct": 29.2
+        },
+        {
+          "label": "text-overlay-heavy",
+          "lift": 0.75,
+          "nWinners": 1,
+          "nTotal": 5,
+          "sharePct": 20.8
+        },
+        {
+          "label": "before-after",
+          "lift": 0,
+          "nWinners": 0,
+          "nTotal": 3,
+          "sharePct": 12.5
+        }
+      ]
+    },
+    "hair": {
+      "sampleSize": 24,
+      "formatDistribution": {
+        "before-after": 5,
+        "grwm": 5,
+        "talking-head": 5,
+        "product-demo": 3,
+        "lifestyle-broll": 2,
+        "meme-edit": 1,
+        "pov-handheld": 1,
+        "text-overlay-heavy": 1,
+        "voiceover-broll": 1
+      },
+      "formatsThatOverIndex": [
+        {
+          "label": "before-after",
+          "lift": 2,
+          "nWinners": 2,
+          "nTotal": 5,
+          "sharePct": 20.8
+        },
+        {
+          "label": "product-demo",
+          "lift": 1.5,
+          "nWinners": 1,
+          "nTotal": 3,
+          "sharePct": 12.5
+        },
+        {
+          "label": "grwm",
+          "lift": 0.75,
+          "nWinners": 1,
+          "nTotal": 5,
+          "sharePct": 20.8
+        },
+        {
+          "label": "talking-head",
+          "lift": 0,
+          "nWinners": 0,
+          "nTotal": 5,
+          "sharePct": 20.8
+        }
+      ]
+    },
+    "pets": {
+      "sampleSize": 24,
+      "formatDistribution": {
+        "text-overlay-heavy": 7,
+        "lifestyle-broll": 7,
+        "pov-handheld": 6,
+        "talking-head": 1,
+        "day-in-the-life": 1,
+        "product-demo": 1,
+        "voiceover-broll": 1
+      },
+      "formatsThatOverIndex": [
+        {
+          "label": "pov-handheld",
+          "lift": 3,
+          "nWinners": 3,
+          "nTotal": 6,
+          "sharePct": 25
+        },
+        {
+          "label": "text-overlay-heavy",
+          "lift": 2.25,
+          "nWinners": 3,
+          "nTotal": 7,
+          "sharePct": 29.2
+        },
+        {
+          "label": "lifestyle-broll",
+          "lift": 0,
+          "nWinners": 0,
+          "nTotal": 7,
+          "sharePct": 29.2
+        }
+      ]
+    }
+  }
+}

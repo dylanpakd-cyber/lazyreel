@@ -1,0 +1,165 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Install LazyReel · one prompt, your agent does the rest</title>
+<meta name="description" content="Generate a free install token and paste one prompt into Claude Code or Codex. Your agent installs the LazyReel MCP and is ready to make a video." />
+<link rel="icon" href="favicon.svg" type="image/svg+xml" />
+<link rel="canonical" href="https://lazyreel-site.vercel.app/mcp-install.html" />
+<meta name="robots" content="index, follow" />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="LazyReel" />
+<meta property="og:title" content="Install LazyReel · one prompt, your agent does the rest" />
+<meta property="og:description" content="Generate a free token and paste one prompt into any MCP client. Your agent installs the LazyReel MCP and is ready on the next message. No sign-up." />
+<meta property="og:url" content="https://lazyreel-site.vercel.app/mcp-install.html" />
+<meta name="twitter:card" content="summary" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;700&family=Instrument+Serif:ital@1&display=swap" rel="stylesheet" />
+<style>
+:root{
+  --canvas:#F6F1E6;--surface-1:#FBF7EE;--surface-2:#F0EADC;--surface-3:#E9E1CF;
+  --card:#FFFFFF;
+  --hairline:#E7E1D1;--hairline-strong:#D4CDBA;
+  --ink:#1A1812;--body:#46423A;--mute:#6B6557;
+  --lime:#D4FF3F;--on-lime:#1A1A0A;--lime-ink:#46570A;--flag:#F54E00;--flag-ink:#C73E00;
+  --good:#2E8B57;
+  --r-card:16px;--r-pill:999px;--r-term:14px;--gut:clamp(20px,4vw,32px);--maxw:1000px;
+  --ease:cubic-bezier(.2,.7,.2,1);--dot:rgba(26,24,18,.05);
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--canvas);color:var(--body);font-family:Inter,system-ui,sans-serif;font-size:17px;line-height:1.55;-webkit-font-smoothing:antialiased;
+  background-image:radial-gradient(var(--dot) 1px,transparent 1px);background-size:28px 28px}
+a{color:inherit;text-decoration:none}
+h1,h2,h3{font-family:"Bricolage Grotesque",sans-serif;font-weight:800;letter-spacing:-.04em;line-height:1.02;margin:0;color:var(--ink);font-optical-sizing:auto}
+.serif{font-family:"Instrument Serif",Georgia,serif;font-style:italic;font-weight:400}
+.hl{background:linear-gradient(transparent 58%,var(--lime) 58%,var(--lime) 94%,transparent 94%);padding:0 .06em;-webkit-box-decoration-break:clone;box-decoration-break:clone;color:inherit}
+.label{font-family:"JetBrains Mono",monospace;font-size:12px;font-weight:500;letter-spacing:.16em;text-transform:uppercase;color:var(--mute)}
+.wrap{width:min(var(--maxw),calc(100% - var(--gut)*2));margin-inline:auto}
+:focus-visible{outline:3px solid var(--lime);outline-offset:3px;border-radius:4px}
+.btn{display:inline-flex;align-items:center;gap:.5em;min-height:48px;padding:0 24px;border-radius:var(--r-pill);font-weight:600;font-size:15px;border:1px solid transparent;cursor:pointer;transition:transform .18s var(--ease),background .18s;font-family:inherit}
+.btn-primary{background:var(--ink);color:var(--canvas)}.btn-primary:hover{transform:translateY(-2px);background:#2C2820}
+.btn-flag{background:var(--flag);color:#fff}.btn-flag:hover{transform:translateY(-2px);background:#FF5E14}
+.btn-ghost{background:transparent;color:var(--ink);border:1px solid var(--hairline-strong)}.btn-ghost:hover{background:var(--surface-2)}
+
+.nav{position:sticky;top:0;z-index:50;background:rgba(246,241,230,.78);backdrop-filter:saturate(1.4) blur(12px);border-bottom:1px solid var(--hairline)}
+.nav-in{display:flex;align-items:center;justify-content:space-between;height:64px}
+.brand{display:inline-flex;align-items:center;gap:10px;font-family:"Bricolage Grotesque";font-weight:800;font-size:17px;letter-spacing:-.02em;color:var(--ink)}
+.brand .mk{display:inline-grid;place-items:center;width:24px;height:24px}
+.brand .sl{color:var(--flag)}
+.back{font-size:14.5px;font-weight:500;color:var(--mute)}.back:hover{color:var(--ink)}
+
+.hero{padding-top:clamp(44px,7vw,72px);padding-bottom:8px}
+.hero h1{font-size:clamp(2.3rem,5vw,3.6rem);max-width:18ch;letter-spacing:-.045em}
+.hero p{margin-top:18px;color:var(--body);max-width:56ch;font-size:1.08rem}
+.safe{margin-top:16px;display:inline-flex;gap:8px;align-items:center;font-family:"JetBrains Mono";font-size:12px;color:var(--body);border:1px solid var(--hairline-strong);border-radius:var(--r-pill);padding:6px 14px;background:var(--surface-1)}
+.safe .dot{width:7px;height:7px;border-radius:50%;background:var(--good)}
+
+section{padding-block:clamp(28px,5vw,44px)}
+.step-label{display:flex;align-items:center;gap:12px;margin-bottom:14px}
+.step-num{display:inline-grid;place-items:center;width:28px;height:28px;border-radius:50%;background:var(--lime);color:var(--on-lime);font-family:"JetBrains Mono";font-size:13px;font-weight:700}
+.step-label h2{font-size:1.35rem}
+
+/* token */
+.token-row{display:flex;gap:12px;flex-wrap:wrap;align-items:center}
+.token-box{flex:1;min-width:280px;display:flex;align-items:center;justify-content:space-between;gap:14px;background:var(--card);border:1px solid var(--hairline-strong);border-radius:var(--r-card);padding:14px 16px;font-family:"JetBrains Mono";font-size:14px}
+.token-box .tk{color:var(--ink);word-break:break-all}
+.token-box .ph{color:var(--mute)}
+.token-mini{background:none;border:1px solid var(--hairline-strong);border-radius:var(--r-pill);padding:6px 12px;font-family:"JetBrains Mono";font-size:11.5px;cursor:pointer;color:var(--body)}
+
+/* client tabs */
+.tabs{display:flex;gap:8px;margin-bottom:14px;flex-wrap:wrap}
+.tab{font-family:"JetBrains Mono";font-size:12.5px;padding:8px 16px;border-radius:var(--r-pill);border:1px solid var(--hairline-strong);background:var(--surface-1);cursor:pointer;color:var(--body)}
+.tab[aria-selected="true"]{background:var(--lime);color:var(--on-lime);border-color:var(--lime)}
+
+/* prompt block */
+.block{background:#0B0B09;border:1px solid var(--hairline-strong);border-radius:var(--r-term);overflow:hidden}
+.block-bar{display:flex;justify-content:space-between;align-items:center;gap:12px;min-height:52px;padding:8px 12px;background:#16150F;border-bottom:1px solid #2A2820;font-family:"JetBrains Mono";font-size:12px;color:var(--night-mute,#A8A294)}
+.copy{cursor:pointer;color:#F2EEE3;background:#2A2620;border:1px solid transparent;border-radius:var(--r-pill);padding:8px 16px;font-family:"JetBrains Mono";font-size:11.5px;font-weight:500;transition:background .18s,transform .15s}
+.copy:hover{background:#3A352D;transform:translateY(-1px)}
+#promptCopy{background:var(--lime);color:var(--on-lime);font-weight:700}
+#promptCopy:hover{background:#E2FF6B}
+.block pre{margin:0;padding:18px;font-family:"JetBrains Mono";font-size:13px;line-height:1.7;color:#C4BEB0;white-space:pre-wrap;overflow-x:auto}
+.block pre .c{color:var(--mute)}
+.block pre .g{color:var(--lime)}
+.block pre .o{color:var(--flag-2)}
+
+.foot{margin-top:40px;border-top:1px solid var(--hairline);padding-block:36px;font-family:"JetBrains Mono";font-size:12px;color:var(--mute)}
+@media (max-width:560px){.token-box{flex-direction:column;align-items:flex-start}}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+</style>
+</head>
+<body>
+
+<header class="nav">
+  <div class="wrap nav-in">
+    <a class="brand" href="index.html"><span class="mk" aria-hidden="true"><svg viewBox="0 0 26 26" width="22" height="22" fill="none"><path d="M4.5 6.5 L13 13 L21.5 6.5" stroke="#1A1812" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"/><path d="M4.5 14.5 L13 21 L21.5 14.5" stroke="#F54E00" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span>LazyReel</a>
+    <a class="back" href="index.html">← Back to LazyReel</a>
+  </div>
+</header>
+
+<main>
+<section class="hero wrap">
+  <span class="label">MCP install</span>
+  <h1>One prompt your agent can <span class="hl"><span class="serif">safely</span></span> run.</h1>
+  <p>Your free token is generated below. Copy the block, paste it into Claude Code, Codex, or any MCP-capable agent. It installs the LazyReel MCP, 6 tools backed by 5,560+ real decoded videos and the validated breakout laws, ready on the next message. No sign-up. For the full stack (the 6 make-it skills too, auto-activating), install the plugin instead, see the repo.</p>
+  <span class="safe"><span class="dot"></span>Free · read-only research · won't spend, buy, or touch private data</span>
+</section>
+
+<section class="wrap" style="padding-top:6px">
+  <div class="block">
+    <div class="block-bar"><span>install-lazyreel.md · works with any agent</span>
+      <span style="display:inline-flex;gap:8px"><button class="copy" id="regen">Regenerate</button><button class="copy" id="promptCopy">Copy</button></span></div>
+    <pre id="prompt"></pre>
+  </div>
+  <p class="label" style="margin-top:14px;text-transform:none;letter-spacing:0;color:var(--mute)">A fresh token is auto-generated each visit and stored only in your browser. After it connects, ask your agent to run <code style="font-family:'JetBrains Mono'">get_status</code> to confirm the 6 tools are live, then ask for a niche read, real example videos, or what's breaking out.</p>
+</section>
+
+<div class="wrap foot">© LazyReel 2026. The MCP is free and open. <a style="color:var(--flag)" href="index.html">Back to the site →</a></div>
+</main>
+
+<script>
+var REPO='https://github.com/dylanpakd-cyber/lazyreel';
+function makeToken(){var b=new Uint8Array(20);crypto.getRandomValues(b);return 'lr_'+Array.from(b).map(function(x){return x.toString(16).padStart(2,'0')}).join('');}
+// auto-generate a fresh token on every visit (no button press), persist in browser
+var token=makeToken();
+try{localStorage.setItem('lazyreel_mcp_token',token);}catch(e){}
+
+// ONE universal install block: works for Claude Code, Codex, or any MCP client.
+function block(t){return (
+'Install the LazyReel MCP for me. It\'s free and read-only: it gives you a decoded\n'+
+'research feed of what\'s breaking out in short-form (hooks, formats, real example\n'+
+'videos, niche reads, briefs). It will NOT spend money, buy anything, post, or touch\n'+
+'private data. Writing it into local MCP config to make setup work is fine; don\'t\n'+
+'commit my token to public git. Run these and stop if any step fails:\n\n'+
+'1) Get + build the server (skip the clone if the repo is already present):\n'+
+'   git clone '+REPO+' ~/lazyreel 2>/dev/null; cd ~/lazyreel/mcp && npm install && npm run build\n'+
+'   echo "SERVER PATH: $(pwd)/build/index.js"   # note this absolute path\n\n'+
+'2) Register it with my token ('+t+'), using whichever applies to you:\n'+
+'   • Claude Code:  claude mcp add lazyreel --scope user --env LAZYREEL_TOKEN='+t+' -- node "$SERVER_PATH"\n'+
+'   • Codex:  add to ~/.codex/config.toml →\n'+
+'       [mcp_servers.lazyreel]\n'+
+'       command = "node"\n'+
+'       args = ["$SERVER_PATH"]\n'+
+'       env = { LAZYREEL_TOKEN = "'+t+'" }\n'+
+'   • Any other MCP client: register a stdio server, command "node", arg = the server path, env LAZYREEL_TOKEN='+t+'\n\n'+
+'3) Reload/restart the agent, then call the get_status tool to confirm the skills are live.\n\n'+
+'After setup, use LazyReel whenever I ask what\'s working in a niche, for hooks, a\n'+
+'brief, real example videos, or a format to replicate. The 6 tools: niche_report,\n'+
+'study_videos, teardown, make_brief, breakout_laws, kill_the_slop.'
+);}
+function render(){
+  var html=block(token).replace(/&/g,'&amp;').replace(/</g,'&lt;')
+    .replace(/(get_status|niche_report|niche_report|study_videos|niche_report|study_videos|niche_report|niche_report|niche_report|teardown|make_brief|make_brief)/g,'<span class="g">$1</span>')
+    .replace(/(lr_[0-9a-f]+)/g,'<span class="o">$1</span>');
+  document.getElementById('prompt').innerHTML=html;
+}
+render();
+document.getElementById('promptCopy').addEventListener('click',function(){copy(this,block(token));});
+document.getElementById('regen').addEventListener('click',function(){token=makeToken();try{localStorage.setItem('lazyreel_mcp_token',token);}catch(e){}render();});
+function copy(btn,txt){var old=btn.textContent;navigator.clipboard.writeText(txt).then(function(){btn.textContent='Copied';setTimeout(function(){btn.textContent=old;},1500);}).catch(function(){btn.textContent='Copy failed';});}
+</script>
+</body>
+</html>
+

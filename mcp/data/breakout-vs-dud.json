@@ -1,0 +1,1155 @@
+{
+ "generatedAt": "2026-05-24",
+ "question": "Why do some videos get ~1K views and others ~1M+? What differs in the first frames and for the same concept?",
+ "method": "Corpus contrast of 1M+ winners (n=2361) vs <10K duds (n=694) on labeled hook/structure, PLUS 6 concept-matched winner/dud pairs (same niche+hook) compared frame-by-frame across their full timelines.",
+ "confound": {
+  "note": "Raw views are heavily driven by audience size, not only craft.",
+  "medianFollowersHigh": 234500,
+  "medianFollowersLow": 12600,
+  "oneMplusThatAreTrueBreakouts_vpf10": "1463/2361",
+  "takeaway": "~19x bigger accounts in the 1M+ set, BUT 62% of 1M+ videos still out-reached their own following 10x+, so there is a real learnable execution signal. Use creator-baseline (vpf), not raw views, to judge craft."
+ },
+ "corpusContrast": {
+  "hookPattern": [
+   {
+    "value": "speed-of-claim",
+    "pctHigh": 1.1,
+    "pctLow": 0.1,
+    "lift": 7.33
+   },
+   {
+    "value": "before-after",
+    "pctHigh": 6.9,
+    "pctLow": 3.0,
+    "lift": 2.29
+   },
+   {
+    "value": "authority",
+    "pctHigh": 2.2,
+    "pctLow": 1.2,
+    "lift": 1.91
+   },
+   {
+    "value": "direct-callout",
+    "pctHigh": 6.7,
+    "pctLow": 4.0,
+    "lift": 1.64
+   },
+   {
+    "value": "pov",
+    "pctHigh": 5.6,
+    "pctLow": 3.5,
+    "lift": 1.6
+   },
+   {
+    "value": "comparison",
+    "pctHigh": 2.2,
+    "pctLow": 1.7,
+    "lift": 1.27
+   }
+  ],
+  "framework": [
+   {
+    "value": "problem-agitate-solution",
+    "pctHigh": 12.1,
+    "pctLow": 6.8,
+    "lift": 1.78
+   },
+   {
+    "value": "founder-objections",
+    "pctHigh": 1.3,
+    "pctLow": 0.7,
+    "lift": 1.76
+   },
+   {
+    "value": "x-without-y",
+    "pctHigh": 1.3,
+    "pctLow": 1.0,
+    "lift": 1.26
+   },
+   {
+    "value": "us-vs-them",
+    "pctHigh": 1.1,
+    "pctLow": 1.0,
+    "lift": 1.05
+   },
+   {
+    "value": "organic",
+    "pctHigh": 64.9,
+    "pctLow": 67.3,
+    "lift": 0.96
+   },
+   {
+    "value": "industry-contrarian",
+    "pctHigh": 3.7,
+    "pctLow": 4.0,
+    "lift": 0.92
+   }
+  ],
+  "emotion": [
+   {
+    "value": "fear",
+    "pctHigh": 1.4,
+    "pctLow": 0.7,
+    "lift": 2.0
+   },
+   {
+    "value": "guilt",
+    "pctHigh": 2.2,
+    "pctLow": 1.1,
+    "lift": 1.93
+   },
+   {
+    "value": "nostalgia",
+    "pctHigh": 2.3,
+    "pctLow": 1.4,
+    "lift": 1.67
+   },
+   {
+    "value": "disgust",
+    "pctHigh": 1.4,
+    "pctLow": 0.9,
+    "lift": 1.5
+   },
+   {
+    "value": "betrayal",
+    "pctHigh": 1.7,
+    "pctLow": 1.4,
+    "lift": 1.28
+   },
+   {
+    "value": "humor",
+    "pctHigh": 16.6,
+    "pctLow": 13.5,
+    "lift": 1.22
+   }
+  ],
+  "adObviousness": [
+   {
+    "value": "semi-native",
+    "pctHigh": 34.5,
+    "pctLow": 29.6,
+    "lift": 1.17
+   },
+   {
+    "value": "native",
+    "pctHigh": 53.0,
+    "pctLow": 52.8,
+    "lift": 1.0
+   },
+   {
+    "value": "clearly-ad",
+    "pctHigh": 12.4,
+    "pctLow": 17.6,
+    "lift": 0.7
+   }
+  ],
+  "productRole": [
+   {
+    "value": "helper",
+    "pctHigh": 11.9,
+    "pctLow": 7.7,
+    "lift": 1.55
+   },
+   {
+    "value": "punchline",
+    "pctHigh": 1.1,
+    "pctLow": 0.9,
+    "lift": 1.17
+   },
+   {
+    "value": "cta-only",
+    "pctHigh": 2.3,
+    "pctLow": 2.0,
+    "lift": 1.15
+   },
+   {
+    "value": "hero",
+    "pctHigh": 41.4,
+    "pctLow": 40.4,
+    "lift": 1.02
+   },
+   {
+    "value": "none",
+    "pctHigh": 31.8,
+    "pctLow": 33.4,
+    "lift": 0.95
+   },
+   {
+    "value": "background",
+    "pctHigh": 11.1,
+    "pctLow": 15.1,
+    "lift": 0.73
+   }
+  ],
+  "ctaType": [
+   {
+    "value": "soft",
+    "pctHigh": 15.1,
+    "pctLow": 9.5,
+    "lift": 1.59
+   },
+   {
+    "value": "comment-prompt",
+    "pctHigh": 6.6,
+    "pctLow": 6.1,
+    "lift": 1.09
+   },
+   {
+    "value": "none",
+    "pctHigh": 71.4,
+    "pctLow": 74.7,
+    "lift": 0.96
+   },
+   {
+    "value": "explicit",
+    "pctHigh": 2.2,
+    "pctLow": 2.7,
+    "lift": 0.81
+   },
+   {
+    "value": "link-in-bio",
+    "pctHigh": 4.5,
+    "pctLow": 6.8,
+    "lift": 0.67
+   }
+  ]
+ },
+ "conceptControlledPairs": [
+  {
+   "concept": "pets / question",
+   "winnerViews": 212200000,
+   "dudViews": 18900,
+   "gap": "11,228x",
+   "winnerOpening": "Frame 0.3s: a massive grey pit bull presses its face and open mouth against a glass sliding door while a tiny black-and-tan miniature pinscher stretches up to touch noses with it through the glass — no text, no caption, just two mismatched dogs having an intimate glass-divided encounter in a snowy backyard. The size contrast is extreme and the pit bull's slightly bared teeth make the moment look simultaneously threatening and adorable. Frames 1.1–2.2s: nearly identical locked-off composition, both dogs remain nose-to-nose through the glass. The scene holds tension — will the big dog hurt the little one? The viewer is frozen by the question. By 3s a human hand appears at the top of the frame beginning to slide the door open — the payoff has been set up and is now arriving.",
+   "dudOpening": "Frame 0.3s: a golden retriever sits on an outdoor chaise lounge in a sunny, palm-tree-dotted backyard with a pool. Text overlay reads 'POV / The most spoiled, dramatic / golden retriever'. The dog is cute but static — sitting calmly, looking into camera, no action, no tension. Frames 1.5–3s: same locked-off wide-ish shot, same static dog, same overlaid text persists. The composition is pleasant-lifestyle but generates no question, no tension, and no visual change. The dog does not move meaningfully for the entire opening window.",
+   "firstFrameDelta": "(1) Action vs stasis: the winner's first frame shows an ongoing inter-species interaction — noses touching through glass — that is already mid-event and raises an immediate 'what happens next?' question. The dud's first frame shows a dog sitting still. (2) Scale tension: the winner puts a very large dog and a tiny dog in the same frame, creating visual contrast that forces the eye to process threat/cuteness simultaneously. The dud shows only one dog, same-scale with the scene. (3) Barrier as story device: the glass door in the winner is a physical obstacle that the viewer's brain projects through — the drama lives in the barrier. The dud has no obstacle, no tension structure. (4) Text-free vs captioned opening: the winner has zero text in the first 2+ seconds; the entire hook is purely visual and immediate. The dud leans on the 'POV / most spoiled dramatic golden retriever' caption to explain what to feel before showing it. (5) Framing: the winner fills the frame tightly with two dog faces at mid-frame height, creating an intimate close-to-medium shot. The dud uses a wide environmental shot that distributes attention across pool, palms, and chair.",
+   "arcDelta": "Winner (approx 11s total): the video is a single escalating scene. By t_3s the human hand slides the glass door open; t_3.3–4.4s show the pit bull entering through the opening door gap. By t_5.5–6.5s the pit bull is fully inside, both dogs are face-to-face without the glass, and their expressions (the pit bull's big grin, the min-pin's tense alert posture) create a comedy of scale. t_7.6–10.9s hold on the two dogs standing side by side inside, the big one grinning — resolution that is funny and wholesome. The entire arc is one tight scene: threat setup → door opens → dogs meet → wholesome payoff. No scene changes. Dud (approx 16s total): a lifestyle montage of a golden retriever in various poses in an affluent backyard setting. The dog pans slightly, zooms slightly, camera shifts angle — but there is no narrative event. Each new frame is the same 'pretty dog in nice yard' tableau from a slightly different angle. Text stays on screen the whole time. No payoff moment is ever delivered — the video just ends on another medium shot of the golden looking off-screen. No arc, no scene change, no escalation, no resolution.",
+   "viewDriver": "The winner's first frame contains an unanswered physical question — a small dog nose-to-glass with a massive pit bull — that the viewer cannot resolve without watching. The tension of the barrier (will the big dog hurt the little one when the door opens?) makes scrolling away neurologically costly. The dud tells the viewer its premise in a text caption immediately and then shows nothing that the caption hasn't already fully explained, removing any incentive to watch on.",
+   "lesson": "Never caption your premise — instead, open with the physical question that your video will answer: put two mismatched subjects in mid-interaction through a barrier or obstacle in frame one, with zero explanatory text, so the viewer's only path to resolution is watching."
+  },
+  {
+   "concept": "hair / before-after",
+   "winnerViews": 156200000,
+   "dudViews": 28500,
+   "gap": "5,481x",
+   "winnerOpening": "Frame 0.3s: a young girl's head fills most of the frame, showing tight cornrow-style braids sectioned all over her scalp and secured with colorful rubber bands — the SET state of a 'braids-in curls-out' tube method. Her hands are holding what appears to be a rubber band or tube at nose level. Text overlay: 'Curls on tubes' with a crown emoji. The before state is already interesting and specific — the viewer can see a unusual hair technique in progress that they have never seen. Frame 1.5s: the girl's hands pull a first tube off, revealing a single perfect ringlet curl cascading free — the transformation is literally happening in real time in the scroll-stop window. By t_3s one side of her head already shows multiple released curls falling while tight braids remain on the other half, creating a dramatic split visual.",
+   "dudOpening": "Frame 0.3s: a woman takes a mirror selfie in what appears to be a restaurant or hotel lobby, wearing a white blazer, hair styled in loose dark waves. Only the word 'Hai' (mid-type) is visible as text — the video opens on a self-shot mirror selfie with hair that looks nice but shows no before state, no technique, and no dramatic contrast. Frame 1.5s: cuts to a close medium shot of the same woman's face with text 'Hair? I know hair.' — a lifestyle/authority-claim framing. Frame 3s: cuts to a back-facing shot of the woman on a scenic overlook, dark hair blowing in wind — again beautiful but showing nothing technically remarkable. The dud's first 3 seconds are a montage of 'I have good hair and I go to nice places.'",
+   "firstFrameDelta": "(1) Before-state specificity: the winner's first frame shows an unmistakably weird and specific technique (cornrow-style sections covered in colorful elastic bands) that immediately signals 'you have not seen this before.' The dud's first frame shows a woman with nice dark hair in a mirror selfie — indistinguishable from thousands of hair creator videos. (2) Transformation visible in the hook window: by second 1.5, the winner has already released one curl and the viewer can see the before-and-after split happening simultaneously in a single frame — the payoff is tasted immediately. The dud does not show any transformation for its entire duration; every frame is 'woman with styled dark waves in different locations.' (3) Subject age and novelty: the winner features a child — an unexpected subject for a hair technique video — which adds a cute-factor and novelty that an adult woman's hair tutorial cannot match in scroll competition. (4) Identity of technique: 'Curls on tubes' text tells the viewer the technique has a name and is learnable; the dud's 'Hair? I know hair.' is an authority claim with no technique attached. (5) Motion in frame: the winner shows active hands removing tubes in the opening seconds, creating motion-based attention. The dud is largely static portrait/lifestyle shots.",
+   "arcDelta": "Winner (approx 57s total): a single sustained reveal with continuous escalating payoff. t_3–5.6s show curls being released one by one, each new curl dropping perfectly and hitting the child's shoulders. t_11.3s: a mid-stage shot showing half-braids, half-ringlet-cascade — visually striking split. t_16.9–22.5s: more tubes removed, the curl mass grows, shot from behind to show the volume building. t_28.2–33.8s: close overhead/behind shots showing the braid sections still being opened while a full curtain of curls is already cascading down. t_39.5–45.1s: the child is now facing away, virtually all curls released, the back view is a full mane of defined ringlets. t_50.7s: continued release from behind. t_56.4s: final face-forward reveal — the child turns to face camera with a full head of voluminous perfect ringlet curls, big blue eyes visible through the hair, a soft smile. The payoff is earned and visually stunning. Dud (approx 31s total): a montage of the creator in various locations (mirror selfie, scenic overlook, gym, hotel room, salon, night flight, bedroom) with her dark hair in slightly different styled states — but no before, no transformation, no technique demonstration. The 'Hair? I know hair.' caption runs unchanged over every single scene throughout the entire video. There is no escalation, no reveal, and no payoff — the video ends on a shot of her at the gym from behind with her hair in a ponytail. The viewer who stayed 30 seconds learns nothing and sees nothing they did not already see in second 1.",
+   "viewDriver": "The winner delivers a partial reveal — one perfect ringlet dropping free — within the first 1.5 seconds, then withholds the full transformation for almost a minute while continuously releasing more curls. The viewer is in a state of ongoing reward from the 2-second mark onward, and the final face-forward reveal is a genuine payoff moment. The dud has no transformation at all — it is an aesthetic montage — so the viewer has no completion loop to close and no reason to stay past the first scene cut.",
+   "lesson": "In a before-after hair video, show a partial transformation (one curl released, one section painted, one strand flat-ironed) inside the first 2 seconds so the viewer tastes the payoff immediately — then make them watch the full reveal unfold over the rest of the video; never open on the 'after' state already finished."
+  },
+  {
+   "concept": "food and beverage / information-offering",
+   "winnerViews": 154900000,
+   "dudViews": 44200,
+   "gap": "3,505x",
+   "winnerOpening": "Frame 0.3s: extreme macro close-up of two hands holding a single golden-brown taco shell with visibly caramelized cheese crust, text 'crispy beef tacos' overlaid center -- the entire frame is the food. Frame 1.5s: pulls back to reveal a plated spread of 5-6 identical tacos with avocado crema bowl and lime wedges, abundant restaurant-quality shot. Frame 3s: macro close-up of an open taco being held, bright-green avocado sauce pouring over seasoned beef with cheese-pull strands visible.",
+   "dudOpening": "Frame 0.3s: hands and torso in a grey zip-up hoodie stirring white foam into a glass of matcha, camera at counter level -- person's torso fills upper half of frame, the drink is secondary. Frame 1.1s: milk pouring from a mason jar into the glass, no text on screen. Frame 1.5s: matcha pouring from a small pitcher, compositionally softer. Frame 2.2s: wide kitchen establishing shot, person (back to camera, blurred motion) walking away -- food completely out of frame, becomes a vlog shot. Frame 3s: person at fridge, no drink visible.",
+   "firstFrameDelta": "Winner leads with the finished RESULT at extreme macro -- the food fills 100% of the frame in the first 0.3s, maximizing desire and clarity of subject. Dud opens with a process shot where the person's body competes for attention, and by frame 4 abandons the drink entirely for a wide lifestyle kitchen shot with no food visible. Winner has on-screen text label at 0.3s grounding the concept; dud has no text until after 3s. Winner's first frame communicates 'this is the payoff' in one image; dud's first 3s could be any lifestyle kitchen vlog with no identifiable food promise.",
+   "arcDelta": "Winner (~15.5s total) uses a result-first structure: shows finished tacos first (0-6s), then cuts backwards to the recipe -- onions sizzling, ground beef cooking, red sauce being added, spice cascade in closeup, shredded cheese layered on tortilla, tortilla folded and placed face-down in a pan. Final frame is the cheese-pull money shot. Scene changes every ~1.5s, all macro food shots, no face/talking head. Dud (~11s) shows a process-chronological structure: it opens mid-pour, rewinds to the full recipe (sifting matcha, whisking in a ceramic bowl, measuring milk, pouring oat milk into a glass, finally the finished drink) and ends at the same pour it opened with. No distinct 'payoff' frame; the finished drink appeared in second 0 so there is no build or reveal.",
+   "viewDriver": "The winner opens on the finished, hyper-appetizing result in extreme macro before showing a single process step -- the crunch-and-cheese-pull promise is answered in 0.3 seconds, giving the algorithm an immediate high-save/share food-porn signal, whereas the dud buries its payoff inside a process video and loses the food from frame entirely by second 2.",
+   "lesson": "Open your food video on the most visually satisfying state of the finished dish in tight macro (filling the entire frame) before showing any cooking step -- the algorithm rewards the first-second desire signal, not the recipe education."
+  },
+  {
+   "concept": "ABG beauty / information-offering",
+   "winnerViews": 150000000,
+   "dudViews": 42400,
+   "gap": "3,538x",
+   "winnerOpening": "Frame 0.3s: extreme macro close-up of a hand with long painted nails squeezing a dark wet foaming sponge/brush over a white sink -- no face, no text, pure visceral wet-foam texture. Frame 1.5s: cuts to extreme close-up of a woman's eye area with a metallic pink dermaplaning blade gliding along the brow bone, text overlay 'Viral Makeup Products (Close-up) Grwm' appears. Frame 3s: Fenty Skin tube being pulled from a medicine cabinet, still close-up, text still on screen.",
+   "dudOpening": "Frame 0.3s: medium shot of a young woman's face looking into the camera -- she has visible acne, wearing a pink t-shirt, messy bedroom background (AC unit in window). She is touching her cheek with one hand. Nothing is actively happening visually. Frame 1.5s: same framing, she appears to be talking, no text visible. Frame 3s: text 'get ready with me for work / for the WORST shift I've had, to da[te]' appears -- narrative/vlog hook, not a product hook. Camera position has not changed.",
+   "firstFrameDelta": "Winner opens at macro-tactile level with zero face visible -- the texture of wet foam on skin fills the screen as a sensory trigger, then immediately cuts to a 'viral product in action' extreme eye close-up. The concept ('viral makeup products GRWM') is communicated as a visual promise of discovery and sensory detail within the first 1.5s. Dud opens in a static medium talking-head shot -- the creator's face (including visible acne, which is not framed as a beauty hook) is the subject, and the hook is a mundane workplace narrative ('worst shift') with no beauty product in frame for the full 3s window. Winner front-loads visual stimulation at extreme close range; dud front-loads a person talking at mid-distance about a work anecdote.",
+   "arcDelta": "Winner (~79s total) is structured as a non-stop product showcase: roughly every 7-8 seconds a new beauty step arrives in a new macro angle -- primer application with pastel nails on cheek, black/gold sponge blending foundation, concealer wand loaded with dripping product, extreme cheekbone highlighter shot, a jam-packed makeup drawer (NARS/Tarte/MAC/L'Oreal visible), extreme lip-liner on lips, a green skincare ring tool swatched on white, and a surprising playful cut to a pink pressed-flower keyboard. No single shot stays more than ~8s. Dud (~370s, over 6 minutes) is a chronological talking-head GRWM vlog in the same bedroom at the same medium distance throughout -- products appear briefly but are never held up in close-up for more than a moment. The transformation occurs but takes 6 minutes of similar-looking frames to deliver it. No scene variety, no macro product shots, no pace variation.",
+   "viewDriver": "The winner's extreme-macro format makes every frame look different and satisfying at a sensory level -- each 7-second clip is its own complete visual moment -- whereas the dud's fixed talking-head distance means the algorithm sees 370 seconds of near-identical frames and no compelling thumbnail-level image to push to non-followers.",
+   "lesson": "For a beauty GRWM, shoot every product application in tight macro (fill the frame with skin, tool, or product texture) and cut to a new macro angle every 5-8 seconds -- the close-up format creates a self-sustaining visual novelty loop that a static talking-head cannot replicate regardless of how good the transformation is."
+  },
+  {
+   "concept": "tech and SaaS / newness",
+   "winnerViews": 137100000,
+   "dudViews": 42300,
+   "gap": "3,241x",
+   "winnerOpening": "Frame 0.3s: a physically fit young man reclines in a barber chair, eyes open and looking upward, while a large sleek black-and-copper cylindrical device is mounted on a mechanical arm directly over him. The setting is an upscale exposed-brick loft barbershop with string lights. Zero text on screen — pure visual mystery. Frame 1.5s: same scene, man now eyes closed, relaxed. Frame 3s: the device arm has rotated slightly, device glows faintly amber. Still no text. The opening is entirely wordless, letting the device's alien silhouette drive curiosity.",
+   "dudOpening": "Frame 0.3s: a teenage boy in a bedroom stands holding a small dual-lens camera, pointing it toward camera while a swirling white light-ring animation and the word 'gadget' in glowing blue appear as graphic overlays. Acoustic-treatment panels visible in background. Frame 1.5s: he is now the center of frame with an animated fire explosion over his head and the word 'your' in red text — an ADD-edit talking-head reveal. Frame 2.1s: cuts to an outdoor close-up hand-held shot of the same small black camera against a blacktop driveway. Frame 3s: product name 'QOOCAM' appears in large white text over the outdoor shot. The opening uses standard teen-reviewer bedroom energy with graphic overlays to signal the review format immediately.",
+   "firstFrameDelta": "The winner shows zero people talking to camera and zero text in the first 3 seconds — just an unexplained, visually striking device over a beautiful human in an aspirational setting, which forces the viewer to ask 'what is that thing?' The dud opens with a talking-head teenager plus explicit word-graphic overlays ('gadget,' 'your') that telegraph the genre immediately as a bedroom tech review. The winner's device is large-scale, cinematic, and mysterious; the dud's device is small, nondescript, and needs text labels to convey significance. The winner's location is upscale loft barbershop; the dud's is a generic bedroom. The winner has no host-to-camera address in the first 3s; the dud is immediately talking at you.",
+   "arcDelta": "The winner is a multi-clip compilation: roughly 5-7 independent clips each featuring a different futuristic device on a different beautiful person in a different aspirational location (barbershop loft, Miami rooftop pool, outdoor terrace, beach-adjacent salon). Each device is visually unique — steampunk copper comb on green hair, military-green box helmet, tall silver cylinder at sunset, sci-fi dome helmet, 'ARC' scalp massager, a large disc lifting blonde hair. No one explains anything — every clip is pure demonstration in a beautiful environment. The dud follows a single-creator review arc: bedroom intro, outdoor b-roll of the product alone, '$3499' price-shock screen, then PiP talking-head overlay while showing product angles, followed by indoor use, ending back at the bedroom. It's slower (one product, one person, one format throughout 21 seconds) and relies on verbal explanation rather than visual spectacle.",
+   "viewDriver": "The winner never names a product or explains anything — it stacks back-to-back clips of visually alien devices on attractive people in luxury settings, forcing the viewer's brain to demand resolution for each new mystery device. Every 6 seconds delivers a new 'wait, what is THAT?' moment, which keeps rewatching and sharing the compilation. The dud opens its format immediately (bedroom teen review) so there is no mystery left to resolve.",
+   "lesson": "When showcasing tech newness, withhold the product name and any verbal explanation for the first 3 seconds — let a single striking visual of the device in use (not explained, not labeled) on an aspirational subject create the curiosity gap that forces scroll-stopping."
+  },
+  {
+   "concept": "hair / removing-limitations",
+   "winnerViews": 135500000,
+   "dudViews": 36700,
+   "gap": "3,692x",
+   "winnerOpening": "Frame 0.3s: a blonde woman and a blonde girl (mother and daughter) side by side in a hallway, both in matching bright neon outfits (hot pink top + green bottoms / all-green with pink logo), both frozen in wide-eyed shock/delight expressions, each holding strips of stretchy brightly-colored fabric — red for mom, purple for daughter. It's a reaction-face-plus-prop frame that immediately communicates something fun and unexpected is happening. Frame 1.5s: mom has scissors in one hand, pointing with the other at the purple fabric the daughter holds — implying imminent cutting/transformation. Mischievous grins. Frame 3s: both now have the fabric stretched over their heads as makeshift stocking caps, long blonde hair cascading from underneath — mom in orange fabric cap, daughter in purple — huge smiles.",
+   "dudOpening": "Frame 0.3s: a single woman with long dark wavy hair stands in front of a closet door in a floral midi dress, hands raised touching her hair, face neutral and composed, looking slightly to one side. Frame 1.5s: she has turned sideways showing the back of her hair cascading past her shoulders. Frame 3s: she is now turned fully backward, hands behind her head, showing the full back of her voluminous wavy hair against the white door. The opening is a slow, elegant 3-shot hair showcase — beautiful but static, no action, no surprise, no character tension.",
+   "firstFrameDelta": "The winner opens with two people, matching outfits, and exaggerated mutual reaction faces (shock/delight) in the first 0.3 seconds — social proof, color, and emotional contagion all at once, plus a visible prop (colored fabric strips) that creates instant curiosity. The dud opens with a solitary woman in a static pose displaying hair from three angles — visually appealing but emotionally flat and single-axis. The winner uses bold neon color blocking (hot pink + green + red + purple) that pops on a phone screen; the dud uses muted white, floral pink, and dark hair against a white door — softer contrast. The winner establishes a social/comedic scenario in frame one; the dud establishes a beauty showcase, which viewers have already seen a thousand times.",
+   "arcDelta": "The winner transitions at roughly 13 seconds into an entirely different creator (young woman with long straight black hair) showing a satin bonnet hair-protection routine — the video is actually a stitched compilation of at least two clips across different hair-type creators (the stocking-cap hack for straight/blonde hair; the bonnet wrapping technique for relaxed/straight black hair). Pacing is rapid within each clip. The bonnet segment shows: face in frame with long hair, brushing, wrapping with bonnet, braiding the bonnet, holding the braid in her mouth while tying, final ponytail version — each step is one fast cut. The dud is a single-creator structured tutorial lasting 103 seconds: opening beauty pose, towel-turban bathroom shot with title card 'Hair Wash Routine for soft, shiny & long hair,' scalp massage tool, pre-wash wrap, in-shower shampoo lather, conditioning rinse, microfiber towel, wet comb-through, blow drying, pink satin bonnet for sleep, final beauty-shot back in the floral dress. Beautifully produced but linear and slow — 104 seconds for a routine that never delivers a surprise.",
+   "viewDriver": "The winner's first 0.3-second frame is a dual-subject reaction shot — two people in matching neon, mouths open in surprise, holding strange fabric — which packs social proof, color shock, and an open curiosity loop all before a single word or action unfolds. The dud's opening is a solo beauty pose that communicates 'tutorial coming' with no tension, making scroll-stopping optional.",
+   "lesson": "Lead with a two-person reaction shot showing exaggerated surprise expressions and a visible prop before any explanation — matching outfits amplify the visual pop, and the combined emotional energy of two faces registers as social proof that something genuinely astonishing is about to happen."
+  }
+ ],
+ "laws": [
+  {
+   "law": "Open on an unresolved visual QUESTION, never a caption that explains the premise",
+   "evidence": "Pets winner: two mismatched dogs nose-to-glass mid-event (will the big one hurt the small one?) vs dud's 'POV most spoiled dog' caption over a static dog. Tech winner: unexplained alien device on a person vs dud's 'gadget review' text overlay. Duds that front-load the premise as text leave nothing to watch for.",
+   "corpusEcho": "clearly-ad openings under-index 0.7x; the winner hides the format"
+  },
+  {
+   "law": "Put a TASTE of the payoff inside the scroll-stop window (<=1.5-2s), then withhold the full reveal (open loop)",
+   "evidence": "Hair before-after winner drops one perfect ringlet at 1.5s but withholds the full mane ~57s; dud opens already on the finished 'after' with nowhere to go. Food winner answers desire with the finished dish in macro at 0.3s but withholds the how.",
+   "corpusEcho": "speed-of-claim hook 7.3x; before-after 2.3x"
+  },
+  {
+   "law": "Maximize per-FRAME novelty: macro, motion, or a new shot every 5-8s. The transformation must be visible at the frame level, not just narrated",
+   "evidence": "ABG winner cuts to a new macro product/skin shot every 7-8s (each frame looks different) vs dud's static 6-minute talking-head at one distance -- 'the transformation is invisible at the algorithm's frame-comparison level.' Food winner fills 100% of frame with the dish at 0.3s; tech winner stacks 7 distinct devices.",
+   "corpusEcho": "product-as-helper 1.55x, product-as-background 0.73x"
+  },
+  {
+   "law": "Do NOT signal the format ('ad' / 'review' / 'tutorial') -- disguise it",
+   "evidence": "Tech dud: 'gadget review' overlay + fire animation kills the mystery at 0.3s. Hair dud: 'Hair Wash Routine' title card = 'tutorial incoming', thumb-stop optional. Winners show, never announce.",
+   "corpusEcho": "link-in-bio CTA 0.67x, explicit CTA 0.81x; soft/no CTA wins"
+  },
+  {
+   "law": "Front-load social + emotional charge in frame 1",
+   "evidence": "Hair removing-limitations winner opens on a dual-subject matching-neon shock duo (social proof + color pop + emotional contagion + prop) vs dud's solitary neutral woman.",
+   "corpusEcho": "fear 2.0x, guilt 1.93x, nostalgia 1.67x, disgust 1.5x over-index in 1M+ winners"
+  }
+ ],
+ "validation": {
+  "method": "Blind out-of-sample tests: pairs the laws were NOT derived from, randomized A/B, view counts hidden. A Sonnet agent picked the higher-view video from frames alone using only the 5 laws.",
+  "tests": [
+   {
+    "name": "Extremes — concept-matched, ~1000x+ gap",
+    "pairs": 927,
+    "accuracy": "871/927 (93.96%, z=26.77 vs 50% baseline)",
+    "reads": "separates viral-grade openings from obviously weak ones; partly an easy task (production quality co-varies)"
+   },
+   {
+    "name": "Same-creator A/B — follower AND recency controlled",
+    "pairs": 926,
+    "accuracy": "769/926 (83.05%, z=20.11 vs 50% baseline)",
+    "reads": "the cleanest causal test; predicts a creator's own hit vs flop with audience held constant"
+   },
+   {
+    "name": "Closer-margin — cross-creator, 5-34x gap",
+    "pairs": 927,
+    "accuracy": "464/927 (50.05%, chance, z=0.03 vs 50% baseline)",
+    "reads": "an earlier small slice looked stronger; at moderate gaps between DIFFERENT creators, raw views are dominated by follower count, so craft cannot rank them"
+   }
+  ],
+  "baseline": "50% (coin flip between two videos); z is the binomial z-score against this baseline",
+  "methodNote": "Rigor check that mattered: a first same-creator attempt scored 64% (n=14) then 41% (n=54) and looked like a failure, until we found the low-view 'dud' was usually the creator's NEWEST upload (un-aged, not a real flop). Requiring the dud to be OLDER than the winner fixed the confound and gives the clean 83% same-creator read. Trust the controlled number, not the first two.",
+  "interpretation": "The laws measure OPENING CRAFT, and craft's predictive power depends entirely on whether audience size is controlled. It is strong within a single creator (83%, the cleanest test) and at extremes (94%), but at chance (50%) for ranking moderate-gap pairs across different creators, because raw views there are owned by follower count, not the opening. This is the same confound surfacing, not a failure of the laws: a big account with a weak opening out-views a small account with a strong one. Practical rule, reinforced: judge craft by creator-baseline (vpf / same-creator), never raw views across creators. Use the laws as a first-3-seconds QC floor and a within-creator lever, not a cross-creator view predictor.",
+  "pooled": "2,104/2,780 = 75.68% (z=27.08 vs 50% baseline). NOTE: pooling masks tier structure and is less meaningful than reading the tiers separately, because the tiers differ in difficulty and in whether the follower confound is controlled.",
+  "ablation": {
+   "basis": "Laws-3+4-only, blind, across an older 48-pair diagnostic slice (cached frames, no new data). Plus a laws-1+2+5-only run on the same-creator diagnostic tier.",
+   "laws_3_4_pooled": "34/48 = 71% (95% CI 57-82%, z=2.89, significant vs 50%)",
+   "byTier": {
+    "extremes": "14/18 (78%), older diagnostic only",
+    "closerMargin": "8/12 (67%), older diagnostic only",
+    "sameCreator": "12/18 (67%), older diagnostic only"
+   },
+   "laws_1_2_5_sameCreator": "9/18 = 50% (chance)",
+   "takeaway": "In the older 48-pair ablation diagnostic, laws 3 (per-frame novelty) and 4 (no format label) were the load-bearing pair, while laws 1+2+5 alone were at chance yet added signal in combination. Treat that ablation as directional and read the scaled 2,780-pair full-five validation tiers for the current headline numbers."
+  },
+  "perNiche": {
+   "basis": "Historical 48-pair diagnostic, retained for directional niche coverage only. The concept-matched pairs carry a niche label; the same-creator pairs are niche-unlabeled in the corpus and sit as one mixed block.",
+   "conceptMatchedByNiche": {
+    "fashion": "4/4",
+    "pets": "3/3",
+    "fitness": "3/3",
+    "hair": "3/3",
+    "home and cleaning": "2/2",
+    "supplements": "2/2",
+    "food and beverage": "2/2",
+    "tech and SaaS": "3/4",
+    "skincare": "3/5",
+    "ABG beauty": "1/2"
+   },
+   "sameCreatorBlock": "historical mixed same-creator block; use the scaled headline tier for current same-creator accuracy",
+   "takeaway": "Generalizes broadly in the historical diagnostic: 8 of 10 labeled niches land 75-100%, none near chance, so the directional signal is not driven by a single niche. Soft spots are skincare (3/5) and ABG beauty (1/2, tiny n). Per-niche samples are small; directional."
+  }
+ },
+ "appAdBreakoutFormats": {
+  "note": "App-ad breakout intelligence derived from a structured study of a competitor UGC-research tool's surfaced breakout data (a competitor UGC-research tool). DERIVED ANALYSIS ONLY: archetypes, rules, and frameworks in our words; per-concept tags are heuristic-derived. Raw creator handles, app brand names, exact view rows, and captions are kept local and gitignored, never published. Scoring insight that underpins all of this: a competitor UGC-research tool ranks breakout by creator-relative multiple (views / creator median), not raw views.",
+  "schema": {
+   "breakoutRole": "selected_mechanic_proof (spike, floor collapses, copy mechanism only) | cluster_proof (similar videos cluster within ~3x, highest-confidence to replicate) | recurrence_floor_proof (modest top multiple but uniformly high floor, durable) | seed_plus_related_anchor (low-view seed with a high-view similar anchor, early discovery)",
+   "formulaOwnershipPattern": "inventor_dominates (one creator holds 70-90%, do not copy for same app) | democratized (many creators at similar scale, best entry point) | second_mover_transfer (adoptable 30-100 days later with a new IP/subject) | burst_seeding (one creator posts 3-5 in a week, recurrence is engineered)",
+   "productProofMode": "11-level ladder, see productProofLadder. Levels 1-2 (caption/app-card only) can NEVER be copy_directly.",
+   "crossNichePortability": "which proven narrative skeletons are present: murky_prop, complain_crashout, accusation_receipt, baitswitch_list, before_after_transformation",
+   "creatorBaselineGap": "top video views / nearest-similar views. >10x = creator-authority spike (do not train). <3x = replicable formula.",
+   "captionFormulaVisible": "a repeatable caption template is present and extractable",
+   "durationRequirement": "short (<30s: prop/complain) | medium (30-60s: talking-head/receipt) | long (60-90s: transformation/song payoff)",
+   "hookArchetype": "one of the 10 archetypes below",
+   "copyDecision": "copy_directly (proof 7+ and cluster/recurrence) | copy_structurally (proof 5-7, adapt) | mechanism_test_only (proof 3-4 or a spike) | adapt_with_product_rewrite (proof 1-2, prove your product first)"
+  },
+  "breakoutRoles": [
+   {
+    "id": "selected_mechanic_proof",
+    "means": "A spike (often 3M+, 2000x+) but similar videos collapse under ~300K. Proves the mechanism can spike; do not assume repeatability."
+   },
+   {
+    "id": "cluster_proof",
+    "means": "Strong selected video AND similar videos cluster at comparable scale. Highest-confidence format to replicate."
+   },
+   {
+    "id": "recurrence_floor_proof",
+    "means": "Modest top multiple but similar videos uniformly high. Durable even when the breakout score is not extreme."
+   },
+   {
+    "id": "seed_plus_related_anchor",
+    "means": "Low-view seed with at least one high-scale similar video. Formula discovery at early stage."
+   }
+  ],
+  "formulaOwnershipPatterns": [
+   {
+    "id": "inventor_dominates",
+    "means": "One creator holds 70-90% of a formula's volume; tied to their persona. New entrants: copy the mechanism for a DIFFERENT app, wait 60-100 days, or use a different IP frame."
+   },
+   {
+    "id": "democratized",
+    "means": "Many creators in one view band, no dominant owner. Best entry point: proven, reproducible, ceiling set by the formula not a personality. Democratizes when the hook is a universal experience, not a personal story."
+   },
+   {
+    "id": "second_mover_transfer",
+    "means": "Adopted at scale 30-100 days after invention by changing the subject or the IP. After 100 days it trends to saturation."
+   },
+   {
+    "id": "burst_seeding",
+    "means": "One creator posts 3-5 same-formula videos in 5-7 days. The recurrence is engineered by creator-relative scoring, not organic discovery."
+   }
+  ],
+  "productProofLadder": [
+   {
+    "level": 11,
+    "id": "product_as_conflict_engine",
+    "note": "App creates/blocks/resolves/judges the central conflict (a lockout mission, a transcript-as-receipt, a tutor correction). Highest-confidence copy mode."
+   },
+   {
+    "level": 10,
+    "id": "product_as_social_object",
+    "note": "The product surface is what others react to or coordinate around."
+   },
+   {
+    "level": 9,
+    "id": "physical_asset_or_real_world_service",
+    "note": "A branded physical object or service proves it exists."
+   },
+   {
+    "level": 8,
+    "id": "receipt_or_scorecard_artifact",
+    "note": "Product generates a receipt, scorecard, grade, or result card."
+   },
+   {
+    "level": 7,
+    "id": "visible_interface",
+    "note": "App UI directly visible and relevant to the payoff."
+   },
+   {
+    "level": "5-6",
+    "id": "output_artifact / delayed_endcard",
+    "note": "Product output visible, or app appears only in the final seconds."
+   },
+   {
+    "level": "3-4",
+    "id": "app_name_overlay / minimal_control_surface",
+    "note": "Named in overlay/comment, or a small surface visible but not the workflow."
+   },
+   {
+    "level": "1-2",
+    "id": "category_culture_match / app_card_caption_only",
+    "note": "Belongs to the product's culture but no product artifact appears. Cannot be copy_directly."
+   },
+   {
+    "level": 0,
+    "id": "false_or_absent",
+    "note": "Wrong product (semantic query drift). Reject for training."
+   }
+  ],
+  "formulaLifecycle": [
+   "Day 0-1: inventor posts first execution, low views, high multiple if baseline low",
+   "Day 1-7: 2-3 variations, views climb",
+   "Day 7-20: enters Winning Formulas, copies begin, 1-15K spread",
+   "Day 20-40: hits scale (300K-2M) for 1-2 executions",
+   "Day 30-100: second-mover window for a new IP or app category (highest-value adoption)",
+   "Day 60-100: democratization, many creators at 5-15K, ceiling capped",
+   "Day 100-180: enters Trending This Week, saturated for the origin app, transfer still viable"
+  ],
+  "hookArchetypes": [
+   {
+    "id": "murky-prop-interrupt",
+    "template": "Hold a real physical object with something visibly wrong close to camera. No words needed in the first second; the object is the hook.",
+    "whyItWorks": "Analog pattern-interrupt forces the pause every hook needs.",
+    "craftRule": "Must be a physical object held in frame; a screen recording or graphic of the same thing does not carry the interrupt.",
+    "durationRequirement": "short",
+    "provenScale": "peaks ~3.6M, transfers across 4+ eco/health/scanner app categories, disproportionately high shares",
+    "copyDecision": "copy_structurally for any app with an environmental/health/safety angle"
+   },
+   {
+    "id": "frustrated-closeup-X-is-hard",
+    "template": "Single direct-camera shot, exasperated face, text overlay names a specific difficulty ('why is [X] so hard').",
+    "whyItWorks": "Specific, vulnerable difficulty creates audience identification.",
+    "craftRule": "Name a specific language/skill, not generic difficulty; requires comfort with vulnerable delivery. Dies at 70-110s unless chaptered.",
+    "durationRequirement": "short-medium",
+    "provenScale": "2.3M-7.8M, transferred across 4+ languages and 2 platforms, the most cross-creator-proven formula in the set",
+    "copyDecision": "copy_structurally for any learning/challenge app"
+   },
+   {
+    "id": "complain-crashout",
+    "template": "Creator visibly frustrated or sleep-deprived that the app forced an inconvenient action. Encodes 'this is annoying AND it is the only thing that works.'",
+    "whyItWorks": "Friction-with-payoff is a universal experience, so it democratizes.",
+    "craftRule": "Must feel unpolished; one take. Scripted delivery kills it.",
+    "durationRequirement": "short",
+    "provenScale": "240K-2.3M, portable across alarm, scanner, learning, fitness (any friction app)",
+    "copyDecision": "copy_structurally for any app that imposes friction in service of a goal"
+   },
+   {
+    "id": "memory-advice-story-open",
+    "template": "Open with 'I will never forget [person] who told me [secret]', positioning product discovery as a life revelation, not a pitch.",
+    "whyItWorks": "Parasocial story buys the viewer in before the product is named.",
+    "craftRule": "The named person is the delivery mechanism; product lands in caption.",
+    "durationRequirement": "medium",
+    "provenScale": "works across competing scanner apps at seed scale",
+    "copyDecision": "adapt_with_product_rewrite"
+   },
+   {
+    "id": "baitswitch-list",
+    "template": "Looks like a 'my top 5 [viral format]' video; each item is swapped for a niche-specific fear or pain point; product resolves one.",
+    "whyItWorks": "Familiar format frame, surprising payload.",
+    "craftRule": "Fears must be specific and emotionally true; generic fears underperform.",
+    "durationRequirement": "medium",
+    "provenScale": "ported across 6 categories in one week, generic template",
+    "copyDecision": "copy_structurally with audience-specific fears"
+   },
+   {
+    "id": "direct-viewer-blame",
+    "template": "Address camera, assign moral responsibility to the viewer, open on physical evidence.",
+    "whyItWorks": "Blame activates a defense response that prevents scrolling.",
+    "craftRule": "Only for cause-driven apps (eco/health/fitness); aggressive without justification elsewhere.",
+    "durationRequirement": "short",
+    "provenScale": "~895K, high share-to-view even at low views",
+    "copyDecision": "copy_structurally for cause-driven apps only"
+   },
+   {
+    "id": "screen-text-exchange",
+    "template": "Phone screen shows a text thread; something goes wrong; the assistant app resolves it.",
+    "whyItWorks": "Relatable social stakes in a familiar surface.",
+    "craftRule": "Do not copy the caption verbatim; pioneer captions get exhausted by the copycat cluster.",
+    "durationRequirement": "medium",
+    "provenScale": "~390K pioneer, copycat cluster 15 days behind",
+    "copyDecision": "copy_structurally"
+   },
+   {
+    "id": "you-didnt-want-x",
+    "template": "Static graphic with a philosophical overlay that reframes a surface desire into a deeper identity desire; product fulfills the deeper one.",
+    "whyItWorks": "Feels like a discovered truth, not an ad; an IP frame imports a fandom.",
+    "craftRule": "Works for apps that can claim to fulfill an identity desire; anime/gaming aesthetic only where the audience is native.",
+    "durationRequirement": "short",
+    "provenScale": "~265K burst from one creator in a week",
+    "copyDecision": "mechanism_test_only"
+   },
+   {
+    "id": "ip-face-rating",
+    "template": "Run a rating/analysis app on a beloved fictional character; capture the character's fandom and the app community at once.",
+    "whyItWorks": "IP provides audience expansion; the rating provides the engagement hook.",
+    "craftRule": "A new entrant can join an inventor-dominated formula 100 days later by picking a DIFFERENT IP.",
+    "durationRequirement": "medium",
+    "provenScale": "1.2M+ with IP-specific expansion; same IP still working 100 days later",
+    "copyDecision": "mechanism_test_only (heavily creator/IP dependent)"
+   },
+   {
+    "id": "authority-quote-solicitation",
+    "template": "'What is the sweetest thing a [teacher/parent/coach] ever said to you? I will go first.' Product lives in caption.",
+    "whyItWorks": "Nostalgia and emotional resonance in the target audience; product is a silent co-protagonist.",
+    "craftRule": "Often locked to the inventor's authority persona; extract the structure (emotion-first, product-last), not the exact video.",
+    "durationRequirement": "medium",
+    "provenScale": "1.8M, clearest inventor-in-command signal",
+    "copyDecision": "adapt_with_product_rewrite"
+   }
+  ],
+  "breakoutRules": [
+   "Score breakout by creator-relative multiple (views / creator median), never raw views. A 2K-view video from a micro-creator can be a stronger 'formula works' signal than a 200K video from a brand account.",
+   "A dud in an inventor-dominates niche is not a bad video; it is a late entrant to an owned formula. Same format, 163 views vs 1.6M, is proof of ownership, not failure.",
+   "High breakout multiple + collapsed similar-video floor = creator-authority spike, not a replicable formula. Train on clustered floors, not spikes.",
+   "Zero shares on a million-view video signals paid/boosted reach. Organic breakouts have shares proportional to views. Discard zero-share million-view rows as training data.",
+   "Caption-only or app-card-only proof (levels 1-2) proves the hook and the creator's trust, NOT that the product drove the result. It can never be copy_directly.",
+   "The 72-hour window: an Early-Signals entry whose similar hooks show the same formula at 300K+ from another app category is a proven formula with an unclaimed slot. Highest-value discovery pattern."
+  ],
+  "concepts": [
+   {
+    "concept": "kitchen counter fruit-slicing monologue",
+    "source": "trending-this-week",
+    "lifecycleStage": "saturated (100-180d, transfer-only)",
+    "appCategories": [
+     "relationship",
+     "education",
+     "finance",
+     "language",
+     "music",
+     "search"
+    ],
+    "hookArchetype": "other",
+    "breakoutRole": "cluster_proof",
+    "creatorBaselineGap": 1.2,
+    "peakViewBucket": "100K-1M",
+    "productProofMode": "app_card_caption_only(1-2)",
+    "copyDecision": "adapt_with_product_rewrite",
+    "crossNichePortability": [],
+    "durationRequirement": "medium",
+    "captionFormulaVisible": true,
+    "tagSource": "heuristic-derived from breakoutSpread + synthesis rules; raw handles/apps/captions kept local"
+   },
+   {
+    "concept": "frantic alarm scavenger hunt POV",
+    "source": "trending-this-week",
+    "lifecycleStage": "saturated (100-180d, transfer-only)",
+    "appCategories": [
+     "alarm",
+     "productivity"
+    ],
+    "hookArchetype": "complain-crashout",
+    "breakoutRole": "cluster_proof",
+    "creatorBaselineGap": 2.9,
+    "peakViewBucket": "100K-1M",
+    "productProofMode": "product_as_conflict_engine(11)",
+    "copyDecision": "copy_structurally",
+    "crossNichePortability": [],
+    "durationRequirement": "short",
+    "captionFormulaVisible": true,
+    "tagSource": "heuristic-derived from breakoutSpread + synthesis rules; raw handles/apps/captions kept local"
+   },
+   {
+    "concept": "murky water bottle shock prop",
+    "source": "trending-this-week",
+    "lifecycleStage": "saturated (100-180d, transfer-only)",
+    "appCategories": [
+     "eco",
+     "health",
+     "productivity",
+     "food scanner"
+    ],
+    "hookArchetype": "murky-prop-interrupt",
+    "breakoutRole": "recurrence_floor_proof",
+    "creatorBaselineGap": 5.7,
+    "peakViewBucket": "1M+",
+    "productProofMode": "physical_prop_interrupt(9)",
+    "copyDecision": "copy_structurally",
+    "crossNichePortability": [
+     "murky_prop"
+    ],
+    "durationRequirement": "short",
+    "captionFormulaVisible": false,
+    "tagSource": "heuristic-derived from breakoutSpread + synthesis rules; raw handles/apps/captions kept local"
+   },
+   {
+    "concept": "had a good day until comparison spiral",
+    "source": "trending-this-week",
+    "lifecycleStage": "saturated (100-180d, transfer-only)",
+    "appCategories": [
+     "investing",
+     "food",
+     "health",
+     "education",
+     "parenting"
+    ],
+    "hookArchetype": "other",
+    "breakoutRole": "unknown",
+    "creatorBaselineGap": null,
+    "peakViewBucket": "n-a",
+    "productProofMode": "app_card_caption_only(1-2)",
+    "copyDecision": "adapt_with_product_rewrite",
+    "crossNichePortability": [],
+    "durationRequirement": "medium",
+    "captionFormulaVisible": false,
+    "tagSource": "heuristic-derived from breakoutSpread + synthesis rules; raw handles/apps/captions kept local"
+   },
+   {
+    "concept": "my top 5 horror movies bait-and-switch",
+    "source": "trending-this-week",
+    "lifecycleStage": "saturated (100-180d, transfer-only)",
+    "appCategories": [
+     "eco",
+     "height",
+     "skincare",
+     "babysitting",
+     "language learning",
+     "period tracking"
+    ],
+    "hookArchetype": "baitswitch-list",
+    "breakoutRole": "cluster_proof",
+    "creatorBaselineGap": 1.3,
+    "peakViewBucket": "10-100K",
+    "productProofMode": "app_card_caption_only(1-2)",
+    "copyDecision": "adapt_with_product_rewrite",
+    "crossNichePortability": [
+     "baitswitch_list"
+    ],
+    "durationRequirement": "medium",
+    "captionFormulaVisible": true,
+    "tagSource": "heuristic-derived from breakoutSpread + synthesis rules; raw handles/apps/captions kept local"
+   },
+   {
+    "concept": "GRWM makeup as B-roll text hook",
+    "source": "trending-this-week",
+    "lifecycleStage": "saturated (100-180d, transfer-only)",
+    "appCategories": [
+     "investing",
+     "babysitting",
+     "eco",
+     "skincare",
+     "language learning"
+    ],
+    "hookArchetype": "screen-text-exchange",
+    "breakoutRole": "selected_mechanic_proof",
+    "creatorBaselineGap": 12.5,
+    "peakViewBucket": "100K-1M",
+    "productProofMode": "visible_interface_or_scorecard(7-8)",
+    "copyDecision": "mechanism_test_only",
+    "crossNichePortability": [],
+    "durationRequirement": "medium",
+    "captionFormulaVisible": false,
+    "tagSource": "heuristic-derived from breakoutSpread + synthesis rules; raw handles/apps/captions kept local"
+   },
+   {
+    "concept": "why is [X] so hard exasperated close-up",
+    "source": "trending-this-week",
+    "lifecycleStage": "saturated (100-180d, transfer-only)",
+    "appCategories": [
+     "language learning",
+     "education",
+     "challenge apps"
+    ],
+    "hookArchetype": "frustrated-closeup-X-is-hard",
+    "breakoutRole": "recurrence_floor_proof",
+    "creatorBaselineGap": 3.6,
+    "peakViewBucket": "1M+",
+    "productProofMode": "app_card_caption_only(1-2)",
+    "copyDecision": "adapt_with_product_rewrite",
+    "crossNichePortability": [],
+    "durationRequirement": "short-medium",
+    "captionFormulaVisible": true,
+    "tagSource": "heuristic-derived from breakoutSpread + synthesis rules; raw handles/apps/captions kept local"
+   },
+   {
+    "concept": "explore-global-breakout-grid",
+    "source": "explore-grid",
+    "lifecycleStage": "global grid snapshot",
+    "appCategories": [],
+    "hookArchetype": "other",
+    "breakoutRole": "cluster_proof",
+    "creatorBaselineGap": 1.2,
+    "peakViewBucket": "1M+",
+    "productProofMode": "app_card_caption_only(1-2)",
+    "copyDecision": "adapt_with_product_rewrite",
+    "crossNichePortability": [],
+    "durationRequirement": "medium",
+    "captionFormulaVisible": false,
+    "tagSource": "heuristic-derived from breakoutSpread + synthesis rules; raw handles/apps/captions kept local"
+   },
+   {
+    "concept": "celebrate ending toxic relationship",
+    "source": "videos-to-copy-breakout-hits",
+    "lifecycleStage": "seed signal (creator-relative, verify floor)",
+    "appCategories": [
+     "dating"
+    ],
+    "hookArchetype": "other",
+    "breakoutRole": "cluster_proof",
+    "creatorBaselineGap": 1.6,
+    "peakViewBucket": "10-100K",
+    "productProofMode": "app_card_caption_only(1-2)",
+    "copyDecision": "adapt_with_product_rewrite",
+    "crossNichePortability": [],
+    "durationRequirement": "medium",
+    "captionFormulaVisible": false,
+    "tagSource": "heuristic-derived from breakoutSpread + synthesis rules; raw handles/apps/captions kept local"
+   },
+   {
+    "concept": "complain about frustrating customer behavior",
+    "source": "videos-to-copy-breakout-hits",
+    "lifecycleStage": "seed signal (creator-relative, verify floor)",
+    "appCategories": [
+     "reselling",
+     "marketplace"
+    ],
+    "hookArchetype": "ip-face-rating",
+    "breakoutRole": "cluster_proof",
+    "creatorBaselineGap": 2.5,
+    "peakViewBucket": "10-100K",
+    "productProofMode": "visible_interface_or_scorecard(7-8)",
+    "copyDecision": "copy_structurally",
+    "crossNichePortability": [],
+    "durationRequirement": "medium",
+    "captionFormulaVisible": true,
+    "tagSource": "heuristic-derived from breakoutSpread + synthesis rules; raw handles/apps/captions kept local"
+   },
+   {
+    "concept": "turn mundane anecdote into song",
+    "source": "videos-to-copy-viral-now",
+    "lifecycleStage": "proven at scale (2-5d, shrinking window)",
+    "appCategories": [
+     "music"
+    ],
+    "hookArchetype": "other",
+    "breakoutRole": "cluster_proof",
+    "creatorBaselineGap": 2.2,
+    "peakViewBucket": "1M+",
+    "productProofMode": "app_card_caption_only(1-2)",
+    "copyDecision": "adapt_with_product_rewrite",
+    "crossNichePortability": [
+     "baitswitch_list"
+    ],
+    "durationRequirement": "medium",
+    "captionFormulaVisible": true,
+    "tagSource": "heuristic-derived from breakoutSpread + synthesis rules; raw handles/apps/captions kept local"
+   },
+   {
+    "concept": "demand constant partner photo updates",
+    "source": "videos-to-copy-viral-now",
+    "lifecycleStage": "proven at scale (2-5d, shrinking window)",
+    "appCategories": [
+     "photo sharing",
+     "social"
+    ],
+    "hookArchetype": "other",
+    "breakoutRole": "selected_mechanic_proof",
+    "creatorBaselineGap": 66.4,
+    "peakViewBucket": "1M+",
+    "productProofMode": "app_card_caption_only(1-2)",
+    "copyDecision": "adapt_with_product_rewrite",
+    "crossNichePortability": [],
+    "durationRequirement": "medium",
+    "captionFormulaVisible": true,
+    "tagSource": "heuristic-derived from breakoutSpread + synthesis rules; raw handles/apps/captions kept local"
+   },
+   {
+    "concept": "showcase ordinary foreign life item",
+    "source": "videos-to-copy-viral-now",
+    "lifecycleStage": "proven at scale (2-5d, shrinking window)",
+    "appCategories": [
+     "language learning",
+     "social"
+    ],
+    "hookArchetype": "murky-prop-interrupt",
+    "breakoutRole": "recurrence_floor_proof",
+    "creatorBaselineGap": 9.6,
+    "peakViewBucket": "1M+",
+    "productProofMode": "physical_prop_interrupt(9)",
+    "copyDecision": "copy_structurally",
+    "crossNichePortability": [
+     "murky_prop"
+    ],
+    "durationRequirement": "short",
+    "captionFormulaVisible": false,
+    "tagSource": "heuristic-derived from breakoutSpread + synthesis rules; raw handles/apps/captions kept local"
+   },
+   {
+    "concept": "share shocking public accusation story",
+    "source": "videos-to-copy-viral-now",
+    "lifecycleStage": "proven at scale (2-5d, shrinking window)",
+    "appCategories": [
+     "language learning"
+    ],
+    "hookArchetype": "other",
+    "breakoutRole": "recurrence_floor_proof",
+    "creatorBaselineGap": 2.0,
+    "peakViewBucket": "100K-1M",
+    "productProofMode": "app_card_caption_only(1-2)",
+    "copyDecision": "adapt_with_product_rewrite",
+    "crossNichePortability": [
+     "accusation_receipt"
+    ],
+    "durationRequirement": "medium",
+    "captionFormulaVisible": false,
+    "tagSource": "heuristic-derived from breakoutSpread + synthesis rules; raw handles/apps/captions kept local"
+   },
+   {
+    "concept": "turn casual texts into song",
+    "source": "videos-to-copy-viral-now",
+    "lifecycleStage": "proven at scale (2-5d, shrinking window)",
+    "appCategories": [
+     "music"
+    ],
+    "hookArchetype": "other",
+    "breakoutRole": "recurrence_floor_proof",
+    "creatorBaselineGap": 1.0,
+    "peakViewBucket": "100K-1M",
+    "productProofMode": "app_card_caption_only(1-2)",
+    "copyDecision": "adapt_with_product_rewrite",
+    "crossNichePortability": [],
+    "durationRequirement": "medium",
+    "captionFormulaVisible": true,
+    "tagSource": "heuristic-derived from breakoutSpread + synthesis rules; raw handles/apps/captions kept local"
+   },
+   {
+    "concept": "claim fictional character resemblance",
+    "source": "videos-to-copy-viral-now",
+    "lifecycleStage": "proven at scale (2-5d, shrinking window)",
+    "appCategories": [
+     "looksmaxxing",
+     "appearance"
+    ],
+    "hookArchetype": "ip-face-rating",
+    "breakoutRole": "cluster_proof",
+    "creatorBaselineGap": 1.0,
+    "peakViewBucket": "100K-1M",
+    "productProofMode": "visible_interface_or_scorecard(7-8)",
+    "copyDecision": "copy_structurally",
+    "crossNichePortability": [],
+    "durationRequirement": "medium",
+    "captionFormulaVisible": true,
+    "tagSource": "heuristic-derived from breakoutSpread + synthesis rules; raw handles/apps/captions kept local"
+   },
+   {
+    "concept": "share unforgettable simple advice story",
+    "source": "videos-to-copy-winning-formulas",
+    "lifecycleStage": "sweet spot (3-30d, enterable)",
+    "appCategories": [
+     "skincare scanner"
+    ],
+    "hookArchetype": "memory-advice-story-open",
+    "breakoutRole": "cluster_proof",
+    "creatorBaselineGap": 1.5,
+    "peakViewBucket": "<10K",
+    "productProofMode": "app_card_caption_only(1-2)",
+    "copyDecision": "adapt_with_product_rewrite",
+    "crossNichePortability": [],
+    "durationRequirement": "medium",
+    "captionFormulaVisible": false,
+    "tagSource": "heuristic-derived from breakoutSpread + synthesis rules; raw handles/apps/captions kept local"
+   },
+   {
+    "concept": "complain about extreme app feature",
+    "source": "videos-to-copy-winning-formulas",
+    "lifecycleStage": "sweet spot (3-30d, enterable)",
+    "appCategories": [
+     "alarm clock"
+    ],
+    "hookArchetype": "frustrated-closeup-X-is-hard",
+    "breakoutRole": "cluster_proof",
+    "creatorBaselineGap": 2.0,
+    "peakViewBucket": "10-100K",
+    "productProofMode": "app_card_caption_only(1-2)",
+    "copyDecision": "adapt_with_product_rewrite",
+    "crossNichePortability": [
+     "complain_crashout"
+    ],
+    "durationRequirement": "short-medium",
+    "captionFormulaVisible": false,
+    "tagSource": "heuristic-derived from breakoutSpread + synthesis rules; raw handles/apps/captions kept local"
+   },
+   {
+    "concept": "crowdsource extreme deadline advice",
+    "source": "videos-to-copy-winning-formulas",
+    "lifecycleStage": "sweet spot (3-30d, enterable)",
+    "appCategories": [
+     "skincare app"
+    ],
+    "hookArchetype": "other",
+    "breakoutRole": "cluster_proof",
+    "creatorBaselineGap": 1.0,
+    "peakViewBucket": "<10K",
+    "productProofMode": "app_card_caption_only(1-2)",
+    "copyDecision": "adapt_with_product_rewrite",
+    "crossNichePortability": [],
+    "durationRequirement": "medium",
+    "captionFormulaVisible": false,
+    "tagSource": "heuristic-derived from breakoutSpread + synthesis rules; raw handles/apps/captions kept local"
+   },
+   {
+    "concept": "unbelievable fast result timeframe",
+    "source": "videos-to-copy-winning-formulas",
+    "lifecycleStage": "sweet spot (3-30d, enterable)",
+    "appCategories": [
+     "skincare app"
+    ],
+    "hookArchetype": "other",
+    "breakoutRole": "cluster_proof",
+    "creatorBaselineGap": 1.5,
+    "peakViewBucket": "10-100K",
+    "productProofMode": "app_card_caption_only(1-2)",
+    "copyDecision": "adapt_with_product_rewrite",
+    "crossNichePortability": [],
+    "durationRequirement": "medium",
+    "captionFormulaVisible": false,
+    "tagSource": "heuristic-derived from breakoutSpread + synthesis rules; raw handles/apps/captions kept local"
+   },
+   {
+    "concept": "main character validation scenario POV",
+    "source": "videos-to-copy-early-signals",
+    "lifecycleStage": "unclaimed (0-24h, check similar-hook anchors)",
+    "appCategories": [
+     "face rating",
+     "looksmaxxing"
+    ],
+    "hookArchetype": "ip-face-rating",
+    "breakoutRole": "cluster_proof",
+    "creatorBaselineGap": 1.5,
+    "peakViewBucket": "100K-1M",
+    "productProofMode": "visible_interface_or_scorecard(7-8)",
+    "copyDecision": "copy_structurally",
+    "crossNichePortability": [],
+    "durationRequirement": "medium",
+    "captionFormulaVisible": true,
+    "tagSource": "heuristic-derived from breakoutSpread + synthesis rules; raw handles/apps/captions kept local"
+   },
+   {
+    "concept": "link app data to tour",
+    "source": "videos-to-copy-early-signals",
+    "lifecycleStage": "unclaimed (0-24h, check similar-hook anchors)",
+    "appCategories": [
+     "music analytics"
+    ],
+    "hookArchetype": "other",
+    "breakoutRole": "cluster_proof",
+    "creatorBaselineGap": 2.9,
+    "peakViewBucket": "10-100K",
+    "productProofMode": "app_card_caption_only(1-2)",
+    "copyDecision": "adapt_with_product_rewrite",
+    "crossNichePortability": [
+     "baitswitch_list"
+    ],
+    "durationRequirement": "medium",
+    "captionFormulaVisible": true,
+    "tagSource": "heuristic-derived from breakoutSpread + synthesis rules; raw handles/apps/captions kept local"
+   },
+   {
+    "concept": "contrast college major workload stereotypes",
+    "source": "videos-to-copy-early-signals",
+    "lifecycleStage": "unclaimed (0-24h, check similar-hook anchors)",
+    "appCategories": [],
+    "hookArchetype": "other",
+    "breakoutRole": "cluster_proof",
+    "creatorBaselineGap": 1.7,
+    "peakViewBucket": "10-100K",
+    "productProofMode": "app_card_caption_only(1-2)",
+    "copyDecision": "adapt_with_product_rewrite",
+    "crossNichePortability": [],
+    "durationRequirement": "medium",
+    "captionFormulaVisible": true,
+    "tagSource": "heuristic-derived from breakoutSpread + synthesis rules; raw handles/apps/captions kept local"
+   },
+   {
+    "concept": "exaggerate completely ruined day hook",
+    "source": "videos-to-copy-early-signals",
+    "lifecycleStage": "unclaimed (0-24h, check similar-hook anchors)",
+    "appCategories": [],
+    "hookArchetype": "screen-text-exchange",
+    "breakoutRole": "cluster_proof",
+    "creatorBaselineGap": 1.9,
+    "peakViewBucket": "100K-1M",
+    "productProofMode": "visible_interface_or_scorecard(7-8)",
+    "copyDecision": "copy_structurally",
+    "crossNichePortability": [],
+    "durationRequirement": "medium",
+    "captionFormulaVisible": true,
+    "tagSource": "heuristic-derived from breakoutSpread + synthesis rules; raw handles/apps/captions kept local"
+   },
+   {
+    "concept": "prompt wholesome authority figure quote",
+    "source": "videos-to-copy-early-signals",
+    "lifecycleStage": "unclaimed (0-24h, check similar-hook anchors)",
+    "appCategories": [],
+    "hookArchetype": "ip-face-rating",
+    "breakoutRole": "recurrence_floor_proof",
+    "creatorBaselineGap": 3.4,
+    "peakViewBucket": "1M+",
+    "productProofMode": "visible_interface_or_scorecard(7-8)",
+    "copyDecision": "copy_structurally",
+    "crossNichePortability": [],
+    "durationRequirement": "medium",
+    "captionFormulaVisible": false,
+    "tagSource": "heuristic-derived from breakoutSpread + synthesis rules; raw handles/apps/captions kept local"
+   },
+   {
+    "concept": "how bro feels meme template",
+    "source": "videos-to-copy-early-signals",
+    "lifecycleStage": "unclaimed (0-24h, check similar-hook anchors)",
+    "appCategories": [
+     "face rating",
+     "looksmaxxing"
+    ],
+    "hookArchetype": "ip-face-rating",
+    "breakoutRole": "cluster_proof",
+    "creatorBaselineGap": 1.6,
+    "peakViewBucket": "1M+",
+    "productProofMode": "visible_interface_or_scorecard(7-8)",
+    "copyDecision": "copy_structurally",
+    "crossNichePortability": [],
+    "durationRequirement": "medium",
+    "captionFormulaVisible": true,
+    "tagSource": "heuristic-derived from breakoutSpread + synthesis rules; raw handles/apps/captions kept local"
+   },
+   {
+    "concept": "hook with sudden official mail",
+    "source": "videos-to-copy-early-signals",
+    "lifecycleStage": "unclaimed (0-24h, check similar-hook anchors)",
+    "appCategories": [],
+    "hookArchetype": "other",
+    "breakoutRole": "cluster_proof",
+    "creatorBaselineGap": 1.0,
+    "peakViewBucket": "10-100K",
+    "productProofMode": "app_card_caption_only(1-2)",
+    "copyDecision": "adapt_with_product_rewrite",
+    "crossNichePortability": [],
+    "durationRequirement": "medium",
+    "captionFormulaVisible": false,
+    "tagSource": "heuristic-derived from breakoutSpread + synthesis rules; raw handles/apps/captions kept local"
+   },
+   {
+    "concept": "directly blame viewer for problem",
+    "source": "videos-to-copy-early-signals",
+    "lifecycleStage": "unclaimed (0-24h, check similar-hook anchors)",
+    "appCategories": [],
+    "hookArchetype": "murky-prop-interrupt",
+    "breakoutRole": "recurrence_floor_proof",
+    "creatorBaselineGap": 3.3,
+    "peakViewBucket": "100K-1M",
+    "productProofMode": "physical_prop_interrupt(9)",
+    "copyDecision": "copy_structurally",
+    "crossNichePortability": [
+     "accusation_receipt"
+    ],
+    "durationRequirement": "short",
+    "captionFormulaVisible": false,
+    "tagSource": "heuristic-derived from breakoutSpread + synthesis rules; raw handles/apps/captions kept local"
+   },
+   {
+    "concept": "point out funny product flaw",
+    "source": "videos-to-copy-early-signals",
+    "lifecycleStage": "unclaimed (0-24h, check similar-hook anchors)",
+    "appCategories": [],
+    "hookArchetype": "other",
+    "breakoutRole": "cluster_proof",
+    "creatorBaselineGap": 1.4,
+    "peakViewBucket": "10-100K",
+    "productProofMode": "app_card_caption_only(1-2)",
+    "copyDecision": "adapt_with_product_rewrite",
+    "crossNichePortability": [],
+    "durationRequirement": "medium",
+    "captionFormulaVisible": false,
+    "tagSource": "heuristic-derived from breakoutSpread + synthesis rules; raw handles/apps/captions kept local"
+   },
+   {
+    "concept": "you didn't want X template",
+    "source": "videos-to-copy-early-signals",
+    "lifecycleStage": "unclaimed (0-24h, check similar-hook anchors)",
+    "appCategories": [
+     "gamified fitness",
+     "productivity"
+    ],
+    "hookArchetype": "you-didnt-want-x",
+    "breakoutRole": "cluster_proof",
+    "creatorBaselineGap": 3.3,
+    "peakViewBucket": "100K-1M",
+    "productProofMode": "app_card_caption_only(1-2)",
+    "copyDecision": "adapt_with_product_rewrite",
+    "crossNichePortability": [],
+    "durationRequirement": "short",
+    "captionFormulaVisible": false,
+    "tagSource": "heuristic-derived from breakoutSpread + synthesis rules; raw handles/apps/captions kept local"
+   }
+  ]
+ }
+}

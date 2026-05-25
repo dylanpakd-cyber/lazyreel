@@ -1,0 +1,397 @@
+{
+  "note": "Mobile-app marketing insights from 94 app-ad videos in the LazyReel corpus. Derived only; app names are public. The app-space vertical.",
+  "analyzed": 94,
+  "appsTracked": {
+    "count": 54,
+    "apps": [
+      {
+        "appName": "Notion",
+        "appCategory": "productivity",
+        "count": 3
+      },
+      {
+        "appName": "Libby",
+        "appCategory": "other",
+        "count": 2
+      },
+      {
+        "appName": "Orion Store",
+        "appCategory": "productivity",
+        "count": 2
+      },
+      {
+        "appName": "Mojo",
+        "appCategory": "photo/video-editor",
+        "count": 2
+      },
+      {
+        "appName": "Shein",
+        "appCategory": "other",
+        "count": 2
+      },
+      {
+        "appName": "WeGlow",
+        "appCategory": "fitness",
+        "count": 1
+      },
+      {
+        "appName": "Oasis",
+        "appCategory": "calorie/health",
+        "count": 1
+      },
+      {
+        "appName": "Plaud AI",
+        "appCategory": "AI-tool",
+        "count": 1
+      },
+      {
+        "appName": "Dog Talk",
+        "appCategory": "other",
+        "count": 1
+      },
+      {
+        "appName": "Osta Recipes",
+        "appCategory": "other",
+        "count": 1
+      },
+      {
+        "appName": "Glam Up",
+        "appCategory": "photo/video-editor",
+        "count": 1
+      },
+      {
+        "appName": "Form",
+        "appCategory": "fitness",
+        "count": 1
+      },
+      {
+        "appName": "Disco",
+        "appCategory": "other",
+        "count": 1
+      },
+      {
+        "appName": "SIMP Music",
+        "appCategory": "other",
+        "count": 1
+      },
+      {
+        "appName": "Temu",
+        "appCategory": "other",
+        "count": 1
+      },
+      {
+        "appName": "Dazz Cam",
+        "appCategory": "photo/video-editor",
+        "count": 1
+      },
+      {
+        "appName": "Launch Center",
+        "appCategory": "productivity",
+        "count": 1
+      },
+      {
+        "appName": "CapCut",
+        "appCategory": "photo/video-editor",
+        "count": 1
+      },
+      {
+        "appName": "Kanopy",
+        "appCategory": "other",
+        "count": 1
+      },
+      {
+        "appName": "Stick",
+        "appCategory": "other",
+        "count": 1
+      },
+      {
+        "appName": "Widget Lab",
+        "appCategory": "other",
+        "count": 1
+      },
+      {
+        "appName": "Structured",
+        "appCategory": "productivity",
+        "count": 1
+      },
+      {
+        "appName": "Youtify",
+        "appCategory": "other",
+        "count": 1
+      },
+      {
+        "appName": "Dola AI",
+        "appCategory": "AI-tool",
+        "count": 1
+      },
+      {
+        "appName": "Blowy",
+        "appCategory": "other",
+        "count": 1
+      },
+      {
+        "appName": "Edison",
+        "appCategory": "productivity",
+        "count": 1
+      },
+      {
+        "appName": "Muviz Edge",
+        "appCategory": "other",
+        "count": 1
+      },
+      {
+        "appName": "Smart Tools",
+        "appCategory": "productivity",
+        "count": 1
+      },
+      {
+        "appName": "Routinely",
+        "appCategory": "productivity",
+        "count": 1
+      },
+      {
+        "appName": "Moodstream",
+        "appCategory": "photo/video-editor",
+        "count": 1
+      },
+      {
+        "appName": "Hypelist",
+        "appCategory": "productivity",
+        "count": 1
+      },
+      {
+        "appName": "Obimy",
+        "appCategory": "dating/rizz",
+        "count": 1
+      },
+      {
+        "appName": "Unstuck",
+        "appCategory": "productivity",
+        "count": 1
+      },
+      {
+        "appName": "Blackmagic Cam",
+        "appCategory": "photo/video-editor",
+        "count": 1
+      },
+      {
+        "appName": "More",
+        "appCategory": "fitness",
+        "count": 1
+      },
+      {
+        "appName": "Beat Boxing Fitness",
+        "appCategory": "fitness",
+        "count": 1
+      },
+      {
+        "appName": "Fitfo",
+        "appCategory": "fitness",
+        "count": 1
+      },
+      {
+        "appName": "OnStream",
+        "appCategory": "other",
+        "count": 1
+      },
+      {
+        "appName": "Alipay",
+        "appCategory": "finance",
+        "count": 1
+      },
+      {
+        "appName": "Mono",
+        "appCategory": "productivity",
+        "count": 1
+      },
+      {
+        "appName": "GoodNotes",
+        "appCategory": "productivity",
+        "count": 1
+      },
+      {
+        "appName": "Robinhood",
+        "appCategory": "finance",
+        "count": 1
+      },
+      {
+        "appName": "Love8",
+        "appCategory": "dating/rizz",
+        "count": 1
+      },
+      {
+        "appName": "XLocker",
+        "appCategory": "other",
+        "count": 1
+      },
+      {
+        "appName": "Moda",
+        "appCategory": "AI-tool",
+        "count": 1
+      },
+      {
+        "appName": "BeautyCam",
+        "appCategory": "photo/video-editor",
+        "count": 1
+      },
+      {
+        "appName": "Todewy",
+        "appCategory": "productivity",
+        "count": 1
+      },
+      {
+        "appName": "Olive",
+        "appCategory": "calorie/health",
+        "count": 1
+      },
+      {
+        "appName": "The Vocal Coach",
+        "appCategory": "other",
+        "count": 1
+      },
+      {
+        "appName": "WidgetSmith",
+        "appCategory": "other",
+        "count": 1
+      },
+      {
+        "appName": "Mecco",
+        "appCategory": "other",
+        "count": 1
+      },
+      {
+        "appName": "ChatGPT",
+        "appCategory": "AI-tool",
+        "count": 1
+      },
+      {
+        "appName": "Ecosia",
+        "appCategory": "other",
+        "count": 1
+      },
+      {
+        "appName": "unknown",
+        "appCategory": "mixed",
+        "count": 35
+      }
+    ]
+  },
+  "categoryCounts": {
+    "other": 40,
+    "productivity": 22,
+    "photo/video-editor": 12,
+    "fitness": 6,
+    "AI-tool": 4,
+    "calorie/health": 3,
+    "dating/rizz": 3,
+    "finance": 3,
+    "wellness/sleep": 1
+  },
+  "appAdPatterns": {
+    "hookType": {
+      "overall": {
+        "demo": 32,
+        "listicle": 29,
+        "direct-callout": 20,
+        "problem-solution": 5,
+        "social-proof": 5,
+        "belief-challenging": 3
+      },
+      "breakoutLift": [
+        {
+          "value": "direct-callout",
+          "breakout_count": 6,
+          "breakout_pct": 0.25,
+          "rest_pct": 0.2,
+          "lift": 1.25
+        },
+        {
+          "value": "demo",
+          "breakout_count": 9,
+          "breakout_pct": 0.375,
+          "rest_pct": 0.329,
+          "lift": 1.14
+        },
+        {
+          "value": "listicle",
+          "breakout_count": 7,
+          "breakout_pct": 0.292,
+          "rest_pct": 0.314,
+          "lift": 0.93
+        }
+      ]
+    },
+    "productEntry": {
+      "overall": {
+        "shot-1": 59,
+        "caption-only": 32,
+        "mid": 3
+      },
+      "breakoutLift": [
+        {
+          "value": "caption-only",
+          "breakout_count": 9,
+          "breakout_pct": 0.375,
+          "rest_pct": 0.329,
+          "lift": 1.14
+        },
+        {
+          "value": "shot-1",
+          "breakout_count": 15,
+          "breakout_pct": 0.625,
+          "rest_pct": 0.629,
+          "lift": 0.99
+        }
+      ]
+    },
+    "format": {
+      "overall": {
+        "talking-head": 61,
+        "text-overlay": 25,
+        "screen-recording": 8
+      },
+      "breakoutLift": [
+        {
+          "value": "text-overlay",
+          "breakout_count": 8,
+          "breakout_pct": 0.333,
+          "rest_pct": 0.243,
+          "lift": 1.37
+        },
+        {
+          "value": "talking-head",
+          "breakout_count": 14,
+          "breakout_pct": 0.583,
+          "rest_pct": 0.671,
+          "lift": 0.87
+        }
+      ]
+    },
+    "hookXformatBreakoutLift": [
+      {
+        "hookType": "direct-callout",
+        "format": "text-overlay",
+        "breakout_count": 4,
+        "breakout_pct": 0.167,
+        "rest_pct": 0.114,
+        "lift": 1.46
+      },
+      {
+        "hookType": "listicle",
+        "format": "talking-head",
+        "breakout_count": 6,
+        "breakout_pct": 0.25,
+        "rest_pct": 0.257,
+        "lift": 0.97
+      },
+      {
+        "hookType": "demo",
+        "format": "talking-head",
+        "breakout_count": 4,
+        "breakout_pct": 0.167,
+        "rest_pct": 0.2,
+        "lift": 0.83
+      }
+    ]
+  }
+}

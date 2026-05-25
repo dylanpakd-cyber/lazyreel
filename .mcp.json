@@ -1,0 +1,10 @@
+{
+  "mcpServers": {
+    "lazyreel": {
+      "command": "node",
+      "args": ["${CLAUDE_PLUGIN_ROOT}/mcp/build/server.mjs"],
+      "env": { "LAZYREEL_TOKEN": "${LAZYREEL_TOKEN}" }
+    }
+  }
+}
+

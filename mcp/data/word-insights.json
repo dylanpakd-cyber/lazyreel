@@ -1,0 +1,1502 @@
+{
+  "generatedAt": "2026-05-24",
+  "note": "Free language analysis of spoken-hook openings. 'overIndex' = the word/phrase is more common among breakouts (top-quartile views-per-follower) than the rest. Counts are document frequencies; no full transcripts stored.",
+  "overall": {
+    "sampleSize": 5532,
+    "commonOpeningWords": [
+      {
+        "term": "hair",
+        "count": 201
+      },
+      {
+        "term": "one",
+        "count": 189
+      },
+      {
+        "term": "all",
+        "count": 176
+      },
+      {
+        "term": "day",
+        "count": 175
+      },
+      {
+        "term": "ready",
+        "count": 170
+      },
+      {
+        "term": "time",
+        "count": 167
+      },
+      {
+        "term": "guys",
+        "count": 165
+      },
+      {
+        "term": "skin",
+        "count": 165
+      },
+      {
+        "term": "these",
+        "count": 163
+      },
+      {
+        "term": "routine",
+        "count": 161
+      },
+      {
+        "term": "can",
+        "count": 150
+      },
+      {
+        "term": "home",
+        "count": 149
+      }
+    ],
+    "commonOpeningBigrams": [
+      {
+        "term": "utterances text",
+        "count": 128
+      },
+      {
+        "term": "start time",
+        "count": 70
+      },
+      {
+        "term": "hey guys",
+        "count": 37
+      },
+      {
+        "term": "end time",
+        "count": 35
+      },
+      {
+        "term": "hair care",
+        "count": 27
+      },
+      {
+        "term": "protein powder",
+        "count": 25
+      },
+      {
+        "term": "we're gonna",
+        "count": 24
+      },
+      {
+        "term": "good morning",
+        "count": 23
+      },
+      {
+        "term": "home hacks",
+        "count": 22
+      },
+      {
+        "term": "fit check",
+        "count": 22
+      },
+      {
+        "term": "gonna show",
+        "count": 21
+      },
+      {
+        "term": "time end",
+        "count": 21
+      }
+    ],
+    "wordsThatOverIndex": [],
+    "phrasesThatOverIndex": []
+  },
+  "byNiche": {
+    "ABG beauty": {
+      "sampleSize": 712,
+      "commonOpeningWords": [
+        {
+          "term": "ready",
+          "count": 141
+        },
+        {
+          "term": "beauty",
+          "count": 63
+        },
+        {
+          "term": "guys",
+          "count": 52
+        },
+        {
+          "term": "makeuptutorial",
+          "count": 46
+        },
+        {
+          "term": "hey",
+          "count": 42
+        },
+        {
+          "term": "day",
+          "count": 40
+        },
+        {
+          "term": "tutorial",
+          "count": 39
+        },
+        {
+          "term": "school",
+          "count": 32
+        },
+        {
+          "term": "today",
+          "count": 30
+        },
+        {
+          "term": "look",
+          "count": 30
+        },
+        {
+          "term": "all",
+          "count": 23
+        },
+        {
+          "term": "don't",
+          "count": 23
+        }
+      ],
+      "commonOpeningBigrams": [
+        {
+          "term": "guys ready",
+          "count": 20
+        },
+        {
+          "term": "hey guys",
+          "count": 19
+        },
+        {
+          "term": "ready school",
+          "count": 16
+        },
+        {
+          "term": "utterances text",
+          "count": 13
+        },
+        {
+          "term": "first day",
+          "count": 9
+        },
+        {
+          "term": "good morning",
+          "count": 8
+        },
+        {
+          "term": "ready while",
+          "count": 8
+        },
+        {
+          "term": "hey y'all",
+          "count": 8
+        },
+        {
+          "term": "ready last",
+          "count": 7
+        },
+        {
+          "term": "last day",
+          "count": 7
+        },
+        {
+          "term": "ready first",
+          "count": 7
+        },
+        {
+          "term": "beauty beautyhacks",
+          "count": 7
+        }
+      ],
+      "wordsThatOverIndex": [
+        {
+          "term": "all",
+          "lift": 1.93,
+          "nWinners": 9,
+          "nTotal": 23
+        },
+        {
+          "term": "tutorial",
+          "lift": 1.33,
+          "nWinners": 12,
+          "nTotal": 39
+        },
+        {
+          "term": "beauty",
+          "lift": 1.3,
+          "nWinners": 19,
+          "nTotal": 63
+        },
+        {
+          "term": "guys",
+          "lift": 1.22,
+          "nWinners": 15,
+          "nTotal": 52
+        }
+      ],
+      "phrasesThatOverIndex": []
+    },
+    "fitness": {
+      "sampleSize": 506,
+      "commonOpeningWords": [
+        {
+          "term": "gym",
+          "count": 88
+        },
+        {
+          "term": "workout",
+          "count": 53
+        },
+        {
+          "term": "fitcheck",
+          "count": 53
+        },
+        {
+          "term": "fitness",
+          "count": 45
+        },
+        {
+          "term": "gymmotivation",
+          "count": 34
+        },
+        {
+          "term": "day",
+          "count": 27
+        },
+        {
+          "term": "fit",
+          "count": 27
+        },
+        {
+          "term": "gymgirl",
+          "count": 20
+        },
+        {
+          "term": "outfitinspo",
+          "count": 20
+        },
+        {
+          "term": "body",
+          "count": 19
+        },
+        {
+          "term": "check",
+          "count": 18
+        },
+        {
+          "term": "back",
+          "count": 18
+        }
+      ],
+      "commonOpeningBigrams": [
+        {
+          "term": "fit check",
+          "count": 14
+        },
+        {
+          "term": "utterances text",
+          "count": 11
+        },
+        {
+          "term": "outfitinspo fitcheck",
+          "count": 9
+        },
+        {
+          "term": "full body",
+          "count": 8
+        },
+        {
+          "term": "gym fitness",
+          "count": 8
+        },
+        {
+          "term": "gym gymmotivation",
+          "count": 7
+        },
+        {
+          "term": "fitcheck outfitinspo",
+          "count": 7
+        },
+        {
+          "term": "leg day",
+          "count": 5
+        },
+        {
+          "term": "can tell",
+          "count": 5
+        },
+        {
+          "term": "everything from",
+          "count": 5
+        },
+        {
+          "term": "fitness fittok",
+          "count": 4
+        },
+        {
+          "term": "body workout",
+          "count": 4
+        }
+      ],
+      "wordsThatOverIndex": [
+        {
+          "term": "don't",
+          "lift": 1.99,
+          "nWinners": 6,
+          "nTotal": 15
+        },
+        {
+          "term": "gym",
+          "lift": 1.62,
+          "nWinners": 31,
+          "nTotal": 88
+        },
+        {
+          "term": "gymgirl",
+          "lift": 1.28,
+          "nWinners": 6,
+          "nTotal": 20
+        },
+        {
+          "term": "fitness",
+          "lift": 1.21,
+          "nWinners": 13,
+          "nTotal": 45
+        }
+      ],
+      "phrasesThatOverIndex": []
+    },
+    "supplements": {
+      "sampleSize": 548,
+      "commonOpeningWords": [
+        {
+          "term": "creatine",
+          "count": 71
+        },
+        {
+          "term": "protein",
+          "count": 70
+        },
+        {
+          "term": "take",
+          "count": 53
+        },
+        {
+          "term": "wellness",
+          "count": 46
+        },
+        {
+          "term": "powder",
+          "count": 28
+        },
+        {
+          "term": "these",
+          "count": 27
+        },
+        {
+          "term": "every",
+          "count": 26
+        },
+        {
+          "term": "one",
+          "count": 25
+        },
+        {
+          "term": "taking",
+          "count": 24
+        },
+        {
+          "term": "start",
+          "count": 23
+        },
+        {
+          "term": "time",
+          "count": 23
+        },
+        {
+          "term": "utterances",
+          "count": 22
+        }
+      ],
+      "commonOpeningBigrams": [
+        {
+          "term": "protein powder",
+          "count": 25
+        },
+        {
+          "term": "utterances text",
+          "count": 22
+        },
+        {
+          "term": "start time",
+          "count": 14
+        },
+        {
+          "term": "protein powders",
+          "count": 11
+        },
+        {
+          "term": "wellness habits",
+          "count": 10
+        },
+        {
+          "term": "taking creatine",
+          "count": 9
+        },
+        {
+          "term": "end time",
+          "count": 8
+        },
+        {
+          "term": "take creatine",
+          "count": 8
+        },
+        {
+          "term": "every single",
+          "count": 8
+        },
+        {
+          "term": "every day",
+          "count": 6
+        },
+        {
+          "term": "good morning",
+          "count": 5
+        },
+        {
+          "term": "only take",
+          "count": 5
+        }
+      ],
+      "wordsThatOverIndex": [
+        {
+          "term": "gym",
+          "lift": 2.67,
+          "nWinners": 8,
+          "nTotal": 17
+        },
+        {
+          "term": "best",
+          "lift": 1.5,
+          "nWinners": 6,
+          "nTotal": 18
+        },
+        {
+          "term": "don't",
+          "lift": 1.38,
+          "nWinners": 6,
+          "nTotal": 19
+        },
+        {
+          "term": "from",
+          "lift": 1.36,
+          "nWinners": 5,
+          "nTotal": 16
+        },
+        {
+          "term": "every",
+          "lift": 1.33,
+          "nWinners": 8,
+          "nTotal": 26
+        },
+        {
+          "term": "creatine",
+          "lift": 1.26,
+          "nWinners": 21,
+          "nTotal": 71
+        }
+      ],
+      "phrasesThatOverIndex": []
+    },
+    "skincare": {
+      "sampleSize": 495,
+      "commonOpeningWords": [
+        {
+          "term": "skin",
+          "count": 136
+        },
+        {
+          "term": "routine",
+          "count": 87
+        },
+        {
+          "term": "products",
+          "count": 32
+        },
+        {
+          "term": "glow",
+          "count": 26
+        },
+        {
+          "term": "look",
+          "count": 25
+        },
+        {
+          "term": "glowy",
+          "count": 24
+        },
+        {
+          "term": "morning",
+          "count": 22
+        },
+        {
+          "term": "face",
+          "count": 22
+        },
+        {
+          "term": "guys",
+          "count": 21
+        },
+        {
+          "term": "night",
+          "count": 21
+        },
+        {
+          "term": "let's",
+          "count": 19
+        },
+        {
+          "term": "want",
+          "count": 18
+        }
+      ],
+      "commonOpeningBigrams": [
+        {
+          "term": "night routine",
+          "count": 12
+        },
+        {
+          "term": "glass skin",
+          "count": 10
+        },
+        {
+          "term": "medicube global",
+          "count": 10
+        },
+        {
+          "term": "glowy skin",
+          "count": 10
+        },
+        {
+          "term": "morning routine",
+          "count": 9
+        },
+        {
+          "term": "skin care",
+          "count": 8
+        },
+        {
+          "term": "utterances text",
+          "count": 8
+        },
+        {
+          "term": "routine skin",
+          "count": 6
+        },
+        {
+          "term": "products used",
+          "count": 6
+        },
+        {
+          "term": "clear skin",
+          "count": 6
+        },
+        {
+          "term": "skin look",
+          "count": 6
+        },
+        {
+          "term": "good morning",
+          "count": 6
+        }
+      ],
+      "wordsThatOverIndex": [
+        {
+          "term": "korean",
+          "lift": 2.99,
+          "nWinners": 8,
+          "nTotal": 16
+        },
+        {
+          "term": "acne",
+          "lift": 2.09,
+          "nWinners": 7,
+          "nTotal": 17
+        },
+        {
+          "term": "these",
+          "lift": 1.5,
+          "nWinners": 5,
+          "nTotal": 15
+        },
+        {
+          "term": "all",
+          "lift": 1.5,
+          "nWinners": 6,
+          "nTotal": 18
+        },
+        {
+          "term": "face",
+          "lift": 1.4,
+          "nWinners": 7,
+          "nTotal": 22
+        },
+        {
+          "term": "products",
+          "lift": 1.36,
+          "nWinners": 10,
+          "nTotal": 32
+        },
+        {
+          "term": "don't",
+          "lift": 1.36,
+          "nWinners": 5,
+          "nTotal": 16
+        },
+        {
+          "term": "glowy",
+          "lift": 1.23,
+          "nWinners": 7,
+          "nTotal": 24
+        }
+      ],
+      "phrasesThatOverIndex": []
+    },
+    "food and beverage": {
+      "sampleSize": 567,
+      "commonOpeningWords": [
+        {
+          "term": "make",
+          "count": 50
+        },
+        {
+          "term": "chicken",
+          "count": 48
+        },
+        {
+          "term": "cooking",
+          "count": 37
+        },
+        {
+          "term": "recipe",
+          "count": 31
+        },
+        {
+          "term": "today",
+          "count": 27
+        },
+        {
+          "term": "dinner",
+          "count": 27
+        },
+        {
+          "term": "food",
+          "count": 26
+        },
+        {
+          "term": "one",
+          "count": 26
+        },
+        {
+          "term": "time",
+          "count": 25
+        },
+        {
+          "term": "these",
+          "count": 21
+        },
+        {
+          "term": "matchalover",
+          "count": 21
+        },
+        {
+          "term": "matchalatte",
+          "count": 21
+        }
+      ],
+      "commonOpeningBigrams": [
+        {
+          "term": "first time",
+          "count": 12
+        },
+        {
+          "term": "let's make",
+          "count": 8
+        },
+        {
+          "term": "utterances text",
+          "count": 7
+        },
+        {
+          "term": "mac cheese",
+          "count": 5
+        },
+        {
+          "term": "today we're",
+          "count": 5
+        },
+        {
+          "term": "cooking recipe",
+          "count": 5
+        },
+        {
+          "term": "high protein",
+          "count": 5
+        },
+        {
+          "term": "let make",
+          "count": 5
+        },
+        {
+          "term": "potatoes home",
+          "count": 4
+        },
+        {
+          "term": "them because",
+          "count": 4
+        },
+        {
+          "term": "make strawberry",
+          "count": 4
+        },
+        {
+          "term": "fried chicken",
+          "count": 4
+        }
+      ],
+      "wordsThatOverIndex": [
+        {
+          "term": "matchalover",
+          "lift": 2.24,
+          "nWinners": 9,
+          "nTotal": 21
+        },
+        {
+          "term": "love",
+          "lift": 1.63,
+          "nWinners": 6,
+          "nTotal": 17
+        },
+        {
+          "term": "one",
+          "lift": 1.33,
+          "nWinners": 8,
+          "nTotal": 26
+        },
+        {
+          "term": "asmr",
+          "lift": 1.28,
+          "nWinners": 6,
+          "nTotal": 20
+        },
+        {
+          "term": "good",
+          "lift": 1.25,
+          "nWinners": 5,
+          "nTotal": 17
+        },
+        {
+          "term": "easy",
+          "lift": 1.25,
+          "nWinners": 5,
+          "nTotal": 17
+        }
+      ],
+      "phrasesThatOverIndex": []
+    },
+    "tech and SaaS": {
+      "sampleSize": 614,
+      "commonOpeningWords": [
+        {
+          "term": "tech",
+          "count": 74
+        },
+        {
+          "term": "apps",
+          "count": 57
+        },
+        {
+          "term": "setup",
+          "count": 38
+        },
+        {
+          "term": "need",
+          "count": 37
+        },
+        {
+          "term": "iphone",
+          "count": 30
+        },
+        {
+          "term": "gadget",
+          "count": 30
+        },
+        {
+          "term": "first",
+          "count": 29
+        },
+        {
+          "term": "one",
+          "count": 29
+        },
+        {
+          "term": "here",
+          "count": 29
+        },
+        {
+          "term": "phone",
+          "count": 28
+        },
+        {
+          "term": "these",
+          "count": 27
+        },
+        {
+          "term": "app",
+          "count": 26
+        }
+      ],
+      "commonOpeningBigrams": [
+        {
+          "term": "utterances text",
+          "count": 25
+        },
+        {
+          "term": "apps need",
+          "count": 18
+        },
+        {
+          "term": "start time",
+          "count": 15
+        },
+        {
+          "term": "end time",
+          "count": 9
+        },
+        {
+          "term": "gaming setup",
+          "count": 6
+        },
+        {
+          "term": "need installed",
+          "count": 6
+        },
+        {
+          "term": "amazon products",
+          "count": 5
+        },
+        {
+          "term": "time end",
+          "count": 5
+        },
+        {
+          "term": "here some",
+          "count": 5
+        },
+        {
+          "term": "these apps",
+          "count": 5
+        },
+        {
+          "term": "need download",
+          "count": 5
+        },
+        {
+          "term": "we're gonna",
+          "count": 4
+        }
+      ],
+      "wordsThatOverIndex": [
+        {
+          "term": "best",
+          "lift": 2.49,
+          "nWinners": 10,
+          "nTotal": 22
+        },
+        {
+          "term": "setup",
+          "lift": 2.42,
+          "nWinners": 17,
+          "nTotal": 38
+        },
+        {
+          "term": "gadget",
+          "lift": 1.73,
+          "nWinners": 11,
+          "nTotal": 30
+        }
+      ],
+      "phrasesThatOverIndex": []
+    },
+    "fashion": {
+      "sampleSize": 595,
+      "commonOpeningWords": [
+        {
+          "term": "fashion",
+          "count": 103
+        },
+        {
+          "term": "outfitinspo",
+          "count": 84
+        },
+        {
+          "term": "outfit",
+          "count": 83
+        },
+        {
+          "term": "outfitideas",
+          "count": 34
+        },
+        {
+          "term": "dress",
+          "count": 32
+        },
+        {
+          "term": "haul",
+          "count": 32
+        },
+        {
+          "term": "fit",
+          "count": 30
+        },
+        {
+          "term": "from",
+          "count": 28
+        },
+        {
+          "term": "style",
+          "count": 27
+        },
+        {
+          "term": "fitcheck",
+          "count": 26
+        },
+        {
+          "term": "summer",
+          "count": 25
+        },
+        {
+          "term": "outfits",
+          "count": 25
+        }
+      ],
+      "commonOpeningBigrams": [
+        {
+          "term": "outfit inspo",
+          "count": 14
+        },
+        {
+          "term": "outfitinspo outfitideas",
+          "count": 9
+        },
+        {
+          "term": "outfit day",
+          "count": 8
+        },
+        {
+          "term": "husband dress",
+          "count": 8
+        },
+        {
+          "term": "fashion nova",
+          "count": 7
+        },
+        {
+          "term": "fit check",
+          "count": 7
+        },
+        {
+          "term": "reference husband",
+          "count": 7
+        },
+        {
+          "term": "utterances text",
+          "count": 6
+        },
+        {
+          "term": "start time",
+          "count": 6
+        },
+        {
+          "term": "outfit outfitideas",
+          "count": 5
+        },
+        {
+          "term": "outfitideas outfitinspo",
+          "count": 5
+        },
+        {
+          "term": "dress week",
+          "count": 5
+        }
+      ],
+      "wordsThatOverIndex": [
+        {
+          "term": "style",
+          "lift": 1.76,
+          "nWinners": 10,
+          "nTotal": 27
+        },
+        {
+          "term": "inspo",
+          "lift": 1.61,
+          "nWinners": 7,
+          "nTotal": 20
+        },
+        {
+          "term": "dress",
+          "lift": 1.57,
+          "nWinners": 11,
+          "nTotal": 32
+        },
+        {
+          "term": "streetwear",
+          "lift": 1.4,
+          "nWinners": 7,
+          "nTotal": 22
+        },
+        {
+          "term": "clothes",
+          "lift": 1.38,
+          "nWinners": 6,
+          "nTotal": 19
+        }
+      ],
+      "phrasesThatOverIndex": []
+    },
+    "home and cleaning": {
+      "sampleSize": 551,
+      "commonOpeningWords": [
+        {
+          "term": "home",
+          "count": 110
+        },
+        {
+          "term": "clean",
+          "count": 69
+        },
+        {
+          "term": "cleaning",
+          "count": 63
+        },
+        {
+          "term": "hack",
+          "count": 46
+        },
+        {
+          "term": "hacks",
+          "count": 40
+        },
+        {
+          "term": "house",
+          "count": 35
+        },
+        {
+          "term": "these",
+          "count": 31
+        },
+        {
+          "term": "all",
+          "count": 29
+        },
+        {
+          "term": "asmr",
+          "count": 28
+        },
+        {
+          "term": "one",
+          "count": 28
+        },
+        {
+          "term": "lifehacks",
+          "count": 28
+        },
+        {
+          "term": "life",
+          "count": 26
+        }
+      ],
+      "commonOpeningBigrams": [
+        {
+          "term": "home hacks",
+          "count": 22
+        },
+        {
+          "term": "utterances text",
+          "count": 20
+        },
+        {
+          "term": "life hack",
+          "count": 16
+        },
+        {
+          "term": "lifehacks tiktokhacks",
+          "count": 14
+        },
+        {
+          "term": "diyhacks diy",
+          "count": 14
+        },
+        {
+          "term": "diy viraltiktok",
+          "count": 14
+        },
+        {
+          "term": "start time",
+          "count": 12
+        },
+        {
+          "term": "hack lifehacks",
+          "count": 12
+        },
+        {
+          "term": "tiktokhacks tiktokhacks",
+          "count": 12
+        },
+        {
+          "term": "tiktokhacks viralhacks",
+          "count": 12
+        },
+        {
+          "term": "viralhacks homhacks",
+          "count": 12
+        },
+        {
+          "term": "homhacks momhacks",
+          "count": 12
+        }
+      ],
+      "wordsThatOverIndex": [
+        {
+          "term": "utterances",
+          "lift": 1.61,
+          "nWinners": 7,
+          "nTotal": 20
+        },
+        {
+          "term": "text",
+          "lift": 1.61,
+          "nWinners": 7,
+          "nTotal": 20
+        },
+        {
+          "term": "good",
+          "lift": 1.5,
+          "nWinners": 7,
+          "nTotal": 21
+        },
+        {
+          "term": "these",
+          "lift": 1.43,
+          "nWinners": 10,
+          "nTotal": 31
+        },
+        {
+          "term": "asmr",
+          "lift": 1.42,
+          "nWinners": 9,
+          "nTotal": 28
+        },
+        {
+          "term": "cleaning",
+          "lift": 1.39,
+          "nWinners": 20,
+          "nTotal": 63
+        },
+        {
+          "term": "start",
+          "lift": 1.38,
+          "nWinners": 6,
+          "nTotal": 19
+        },
+        {
+          "term": "lifehack",
+          "lift": 1.38,
+          "nWinners": 6,
+          "nTotal": 19
+        },
+        {
+          "term": "all",
+          "lift": 1.35,
+          "nWinners": 9,
+          "nTotal": 29
+        }
+      ],
+      "phrasesThatOverIndex": [
+        {
+          "term": "utterances text",
+          "lift": 1.61,
+          "nWinners": 7,
+          "nTotal": 20
+        }
+      ]
+    },
+    "hair": {
+      "sampleSize": 408,
+      "commonOpeningWords": [
+        {
+          "term": "hair",
+          "count": 181
+        },
+        {
+          "term": "hairstyle",
+          "count": 33
+        },
+        {
+          "term": "tutorial",
+          "count": 32
+        },
+        {
+          "term": "routine",
+          "count": 29
+        },
+        {
+          "term": "hairtutorial",
+          "count": 28
+        },
+        {
+          "term": "care",
+          "count": 28
+        },
+        {
+          "term": "haircare",
+          "count": 26
+        },
+        {
+          "term": "day",
+          "count": 21
+        },
+        {
+          "term": "longhair",
+          "count": 19
+        },
+        {
+          "term": "gonna",
+          "count": 17
+        },
+        {
+          "term": "guys",
+          "count": 16
+        },
+        {
+          "term": "long",
+          "count": 14
+        }
+      ],
+      "commonOpeningBigrams": [
+        {
+          "term": "hair care",
+          "count": 27
+        },
+        {
+          "term": "hair tutorial",
+          "count": 20
+        },
+        {
+          "term": "care routine",
+          "count": 15
+        },
+        {
+          "term": "utterances text",
+          "count": 13
+        },
+        {
+          "term": "hair hairstyle",
+          "count": 7
+        },
+        {
+          "term": "hair wash",
+          "count": 6
+        },
+        {
+          "term": "care products",
+          "count": 6
+        },
+        {
+          "term": "haircare routine",
+          "count": 6
+        },
+        {
+          "term": "start time",
+          "count": 5
+        },
+        {
+          "term": "long hair",
+          "count": 5
+        },
+        {
+          "term": "gonna show",
+          "count": 5
+        },
+        {
+          "term": "we're gonna",
+          "count": 4
+        }
+      ],
+      "wordsThatOverIndex": [
+        {
+          "term": "hairtutorial",
+          "lift": 4.64,
+          "nWinners": 17,
+          "nTotal": 28
+        },
+        {
+          "term": "one",
+          "lift": 2.57,
+          "nWinners": 6,
+          "nTotal": 13
+        },
+        {
+          "term": "hairinspo",
+          "lift": 1.5,
+          "nWinners": 4,
+          "nTotal": 12
+        },
+        {
+          "term": "guys",
+          "lift": 1.36,
+          "nWinners": 5,
+          "nTotal": 16
+        }
+      ],
+      "phrasesThatOverIndex": []
+    },
+    "pets": {
+      "sampleSize": 536,
+      "commonOpeningWords": [
+        {
+          "term": "dog",
+          "count": 80
+        },
+        {
+          "term": "cat",
+          "count": 52
+        },
+        {
+          "term": "dogsoftiktok",
+          "count": 47
+        },
+        {
+          "term": "cute",
+          "count": 44
+        },
+        {
+          "term": "pet",
+          "count": 36
+        },
+        {
+          "term": "dogs",
+          "count": 32
+        },
+        {
+          "term": "puppy",
+          "count": 30
+        },
+        {
+          "term": "cattok",
+          "count": 30
+        },
+        {
+          "term": "catsoftiktok",
+          "count": 30
+        },
+        {
+          "term": "petsoftiktok",
+          "count": 21
+        },
+        {
+          "term": "cats",
+          "count": 21
+        },
+        {
+          "term": "kitten",
+          "count": 21
+        }
+      ],
+      "commonOpeningBigrams": [
+        {
+          "term": "catsoftiktok cattok",
+          "count": 7
+        },
+        {
+          "term": "dog dogsoftiktok",
+          "count": 4
+        },
+        {
+          "term": "golden retriever",
+          "count": 4
+        },
+        {
+          "term": "goldenretriever dogsoftiktok",
+          "count": 4
+        },
+        {
+          "term": "cattok cat",
+          "count": 4
+        },
+        {
+          "term": "busted dachshund",
+          "count": 4
+        },
+        {
+          "term": "dachshund dogsofttiktok",
+          "count": 4
+        },
+        {
+          "term": "dogsofttiktok sausagedogunnydog",
+          "count": 4
+        },
+        {
+          "term": "sausagedogunnydog cutepets",
+          "count": 4
+        },
+        {
+          "term": "cat pet",
+          "count": 4
+        },
+        {
+          "term": "catlover cattok",
+          "count": 4
+        },
+        {
+          "term": "pet cute",
+          "count": 4
+        }
+      ],
+      "wordsThatOverIndex": [
+        {
+          "term": "cattok",
+          "lift": 2.29,
+          "nWinners": 13,
+          "nTotal": 30
+        },
+        {
+          "term": "catsoftiktok",
+          "lift": 2.29,
+          "nWinners": 13,
+          "nTotal": 30
+        },
+        {
+          "term": "baby",
+          "lift": 2.1,
+          "nWinners": 7,
+          "nTotal": 17
+        },
+        {
+          "term": "she",
+          "lift": 1.36,
+          "nWinners": 5,
+          "nTotal": 16
+        },
+        {
+          "term": "love",
+          "lift": 1.25,
+          "nWinners": 5,
+          "nTotal": 17
+        }
+      ],
+      "phrasesThatOverIndex": []
+    }
+  }
+}

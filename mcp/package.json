@@ -1,0 +1,27 @@
+{
+  "name": "lazyreel-mcp",
+  "version": "0.1.0",
+  "description": "LazyReel: an MCP server that gives a coding agent genuinely good short-form / UGC video marketing skills (ideation, niche analysis, format teardown, hooks, shoot briefs, anti-slop rewrites).",
+  "type": "module",
+  "bin": {
+    "lazyreel-mcp": "build/index.js"
+  },
+  "files": [
+    "build",
+    "data"
+  ],
+  "scripts": {
+    "build": "tsc && chmod +x build/index.js",
+    "bundle": "npm run build && npx --yes esbuild build/index.js --bundle --platform=node --format=esm --outfile=build/server.mjs && chmod +x build/server.mjs",
+    "start": "node build/index.js",
+    "smoke": "node scripts/smoke.mjs"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.0.4",
+    "zod": "^3.23.8"
+  },
+  "devDependencies": {
+    "typescript": "^5.5.4",
+    "@types/node": "^22.0.0"
+  }
+}

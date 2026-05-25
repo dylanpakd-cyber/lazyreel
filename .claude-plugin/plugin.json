@@ -1,0 +1,11 @@
+{
+  "name": "lazyreel",
+  "version": "0.1.0",
+  "description": "Make your agent a UGC doomscroller. The LazyReel MCP (what is breaking out, the hooks, formats, and real videos) plus the companion skills that turn it into multi-clip video prompts and the finished cut. The skills auto-activate through the video workflow, so the agent leverages them without being asked.",
+  "author": { "name": "LazyReel", "url": "https://github.com/dylanpakd-cyber/lazyreel" },
+  "homepage": "https://lazyreel-site.vercel.app",
+  "repository": "https://github.com/dylanpakd-cyber/lazyreel",
+  "license": "MIT",
+  "keywords": ["mcp", "ugc", "short-form", "video", "tiktok", "marketing", "skills"]
+}
+
