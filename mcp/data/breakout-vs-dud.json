@@ -342,5 +342,786 @@
   "methodNote": "Rigor check that mattered: a first same-creator attempt scored 64% (n=14) then 41% (n=54) and looked like a failure, until we found the low-view 'dud' was usually the creator's NEWEST upload (un-aged, not a real flop). Requiring the dud to be OLDER than the winner fixed the confound and gave the clean 83%. Trust the controlled number, not the first two.",
   "interpretation": "The first-3-seconds laws carry REAL predictive signal, even within a single creator (83%, significant) — not just a QC floor. The two laws doing most of the work are #4 (don't signal the format with a 'GRWM/tutorial/review' title card) and #3 (per-frame novelty vs a static talking head). Caveats: n=18 so the true rate could sit anywhere ~61-94%; the 'why' is inferred from still frames, not watch-time; and external pulls (a celebrity, a trending sound) can override the opening craft entirely (every miss was that).",
   "pooled": "Across all 48 valid controlled pairs (3 tiers combined): 41/48 = 85% (95% CI 73-93%, z=+4.91 vs 50%, p<0.0001). Highly significant."
+ },
+ "appAdBreakoutFormats": {
+  "note": "App-ad breakout intelligence derived from a structured study of a competitor UGC-research tool's surfaced breakout data (a competitor UGC-research tool). DERIVED ANALYSIS ONLY: archetypes, rules, and frameworks in our words; per-concept tags are heuristic-derived. Raw creator handles, app brand names, exact view rows, and captions are kept local and gitignored, never published. Scoring insight that underpins all of this: a competitor UGC-research tool ranks breakout by creator-relative multiple (views / creator median), not raw views.",
+  "schema": {
+   "breakoutRole": "selected_mechanic_proof (spike, floor collapses, copy mechanism only) | cluster_proof (similar videos cluster within ~3x, highest-confidence to replicate) | recurrence_floor_proof (modest top multiple but uniformly high floor, durable) | seed_plus_related_anchor (low-view seed with a high-view similar anchor, early discovery)",
+   "formulaOwnershipPattern": "inventor_dominates (one creator holds 70-90%, do not copy for same app) | democratized (many creators at similar scale, best entry point) | second_mover_transfer (adoptable 30-100 days later with a new IP/subject) | burst_seeding (one creator posts 3-5 in a week, recurrence is engineered)",
+   "productProofMode": "11-level ladder, see productProofLadder. Levels 1-2 (caption/app-card only) can NEVER be copy_directly.",
+   "crossNichePortability": "which proven narrative skeletons are present: murky_prop, complain_crashout, accusation_receipt, baitswitch_list, before_after_transformation",
+   "creatorBaselineGap": "top video views / nearest-similar views. >10x = creator-authority spike (do not train). <3x = replicable formula.",
+   "captionFormulaVisible": "a repeatable caption template is present and extractable",
+   "durationRequirement": "short (<30s: prop/complain) | medium (30-60s: talking-head/receipt) | long (60-90s: transformation/song payoff)",
+   "hookArchetype": "one of the 10 archetypes below",
+   "copyDecision": "copy_directly (proof 7+ and cluster/recurrence) | copy_structurally (proof 5-7, adapt) | mechanism_test_only (proof 3-4 or a spike) | adapt_with_product_rewrite (proof 1-2, prove your product first)"
+  },
+  "breakoutRoles": [
+   {
+    "id": "selected_mechanic_proof",
+    "means": "A spike (often 3M+, 2000x+) but similar videos collapse under ~300K. Proves the mechanism can spike; do not assume repeatability."
+   },
+   {
+    "id": "cluster_proof",
+    "means": "Strong selected video AND similar videos cluster at comparable scale. Highest-confidence format to replicate."
+   },
+   {
+    "id": "recurrence_floor_proof",
+    "means": "Modest top multiple but similar videos uniformly high. Durable even when the breakout score is not extreme."
+   },
+   {
+    "id": "seed_plus_related_anchor",
+    "means": "Low-view seed with at least one high-scale similar video. Formula discovery at early stage."
+   }
+  ],
+  "formulaOwnershipPatterns": [
+   {
+    "id": "inventor_dominates",
+    "means": "One creator holds 70-90% of a formula's volume; tied to their persona. New entrants: copy the mechanism for a DIFFERENT app, wait 60-100 days, or use a different IP frame."
+   },
+   {
+    "id": "democratized",
+    "means": "Many creators in one view band, no dominant owner. Best entry point: proven, reproducible, ceiling set by the formula not a personality. Democratizes when the hook is a universal experience, not a personal story."
+   },
+   {
+    "id": "second_mover_transfer",
+    "means": "Adopted at scale 30-100 days after invention by changing the subject or the IP. After 100 days it trends to saturation."
+   },
+   {
+    "id": "burst_seeding",
+    "means": "One creator posts 3-5 same-formula videos in 5-7 days. The recurrence is engineered by creator-relative scoring, not organic discovery."
+   }
+  ],
+  "productProofLadder": [
+   {
+    "level": 11,
+    "id": "product_as_conflict_engine",
+    "note": "App creates/blocks/resolves/judges the central conflict (a lockout mission, a transcript-as-receipt, a tutor correction). Highest-confidence copy mode."
+   },
+   {
+    "level": 10,
+    "id": "product_as_social_object",
+    "note": "The product surface is what others react to or coordinate around."
+   },
+   {
+    "level": 9,
+    "id": "physical_asset_or_real_world_service",
+    "note": "A branded physical object or service proves it exists."
+   },
+   {
+    "level": 8,
+    "id": "receipt_or_scorecard_artifact",
+    "note": "Product generates a receipt, scorecard, grade, or result card."
+   },
+   {
+    "level": 7,
+    "id": "visible_interface",
+    "note": "App UI directly visible and relevant to the payoff."
+   },
+   {
+    "level": "5-6",
+    "id": "output_artifact / delayed_endcard",
+    "note": "Product output visible, or app appears only in the final seconds."
+   },
+   {
+    "level": "3-4",
+    "id": "app_name_overlay / minimal_control_surface",
+    "note": "Named in overlay/comment, or a small surface visible but not the workflow."
+   },
+   {
+    "level": "1-2",
+    "id": "category_culture_match / app_card_caption_only",
+    "note": "Belongs to the product's culture but no product artifact appears. Cannot be copy_directly."
+   },
+   {
+    "level": 0,
+    "id": "false_or_absent",
+    "note": "Wrong product (semantic query drift). Reject for training."
+   }
+  ],
+  "formulaLifecycle": [
+   "Day 0-1: inventor posts first execution, low views, high multiple if baseline low",
+   "Day 1-7: 2-3 variations, views climb",
+   "Day 7-20: enters Winning Formulas, copies begin, 1-15K spread",
+   "Day 20-40: hits scale (300K-2M) for 1-2 executions",
+   "Day 30-100: second-mover window for a new IP or app category (highest-value adoption)",
+   "Day 60-100: democratization, many creators at 5-15K, ceiling capped",
+   "Day 100-180: enters Trending This Week, saturated for the origin app, transfer still viable"
+  ],
+  "hookArchetypes": [
+   {
+    "id": "murky-prop-interrupt",
+    "template": "Hold a real physical object with something visibly wrong close to camera. No words needed in the first second; the object is the hook.",
+    "whyItWorks": "Analog pattern-interrupt forces the pause every hook needs.",
+    "craftRule": "Must be a physical object held in frame; a screen recording or graphic of the same thing does not carry the interrupt.",
+    "durationRequirement": "short",
+    "provenScale": "peaks ~3.6M, transfers across 4+ eco/health/scanner app categories, disproportionately high shares",
+    "copyDecision": "copy_structurally for any app with an environmental/health/safety angle"
+   },
+   {
+    "id": "frustrated-closeup-X-is-hard",
+    "template": "Single direct-camera shot, exasperated face, text overlay names a specific difficulty ('why is [X] so hard').",
+    "whyItWorks": "Specific, vulnerable difficulty creates audience identification.",
+    "craftRule": "Name a specific language/skill, not generic difficulty; requires comfort with vulnerable delivery. Dies at 70-110s unless chaptered.",
+    "durationRequirement": "short-medium",
+    "provenScale": "2.3M-7.8M, transferred across 4+ languages and 2 platforms, the most cross-creator-proven formula in the set",
+    "copyDecision": "copy_structurally for any learning/challenge app"
+   },
+   {
+    "id": "complain-crashout",
+    "template": "Creator visibly frustrated or sleep-deprived that the app forced an inconvenient action. Encodes 'this is annoying AND it is the only thing that works.'",
+    "whyItWorks": "Friction-with-payoff is a universal experience, so it democratizes.",
+    "craftRule": "Must feel unpolished; one take. Scripted delivery kills it.",
+    "durationRequirement": "short",
+    "provenScale": "240K-2.3M, portable across alarm, scanner, learning, fitness (any friction app)",
+    "copyDecision": "copy_structurally for any app that imposes friction in service of a goal"
+   },
+   {
+    "id": "memory-advice-story-open",
+    "template": "Open with 'I will never forget [person] who told me [secret]', positioning product discovery as a life revelation, not a pitch.",
+    "whyItWorks": "Parasocial story buys the viewer in before the product is named.",
+    "craftRule": "The named person is the delivery mechanism; product lands in caption.",
+    "durationRequirement": "medium",
+    "provenScale": "works across competing scanner apps at seed scale",
+    "copyDecision": "adapt_with_product_rewrite"
+   },
+   {
+    "id": "baitswitch-list",
+    "template": "Looks like a 'my top 5 [viral format]' video; each item is swapped for a niche-specific fear or pain point; product resolves one.",
+    "whyItWorks": "Familiar format frame, surprising payload.",
+    "craftRule": "Fears must be specific and emotionally true; generic fears underperform.",
+    "durationRequirement": "medium",
+    "provenScale": "ported across 6 categories in one week, generic template",
+    "copyDecision": "copy_structurally with audience-specific fears"
+   },
+   {
+    "id": "direct-viewer-blame",
+    "template": "Address camera, assign moral responsibility to the viewer, open on physical evidence.",
+    "whyItWorks": "Blame activates a defense response that prevents scrolling.",
+    "craftRule": "Only for cause-driven apps (eco/health/fitness); aggressive without justification elsewhere.",
+    "durationRequirement": "short",
+    "provenScale": "~895K, high share-to-view even at low views",
+    "copyDecision": "copy_structurally for cause-driven apps only"
+   },
+   {
+    "id": "screen-text-exchange",
+    "template": "Phone screen shows a text thread; something goes wrong; the assistant app resolves it.",
+    "whyItWorks": "Relatable social stakes in a familiar surface.",
+    "craftRule": "Do not copy the caption verbatim; pioneer captions get exhausted by the copycat cluster.",
+    "durationRequirement": "medium",
+    "provenScale": "~390K pioneer, copycat cluster 15 days behind",
+    "copyDecision": "copy_structurally"
+   },
+   {
+    "id": "you-didnt-want-x",
+    "template": "Static graphic with a philosophical overlay that reframes a surface desire into a deeper identity desire; product fulfills the deeper one.",
+    "whyItWorks": "Feels like a discovered truth, not an ad; an IP frame imports a fandom.",
+    "craftRule": "Works for apps that can claim to fulfill an identity desire; anime/gaming aesthetic only where the audience is native.",
+    "durationRequirement": "short",
+    "provenScale": "~265K burst from one creator in a week",
+    "copyDecision": "mechanism_test_only"
+   },
+   {
+    "id": "ip-face-rating",
+    "template": "Run a rating/analysis app on a beloved fictional character; capture the character's fandom and the app community at once.",
+    "whyItWorks": "IP provides audience expansion; the rating provides the engagement hook.",
+    "craftRule": "A new entrant can join an inventor-dominated formula 100 days later by picking a DIFFERENT IP.",
+    "durationRequirement": "medium",
+    "provenScale": "1.2M+ with IP-specific expansion; same IP still working 100 days later",
+    "copyDecision": "mechanism_test_only (heavily creator/IP dependent)"
+   },
+   {
+    "id": "authority-quote-solicitation",
+    "template": "'What is the sweetest thing a [teacher/parent/coach] ever said to you? I will go first.' Product lives in caption.",
+    "whyItWorks": "Nostalgia and emotional resonance in the target audience; product is a silent co-protagonist.",
+    "craftRule": "Often locked to the inventor's authority persona; extract the structure (emotion-first, product-last), not the exact video.",
+    "durationRequirement": "medium",
+    "provenScale": "1.8M, clearest inventor-in-command signal",
+    "copyDecision": "adapt_with_product_rewrite"
+   }
+  ],
+  "breakoutRules": [
+   "Score breakout by creator-relative multiple (views / creator median), never raw views. A 2K-view video from a micro-creator can be a stronger 'formula works' signal than a 200K video from a brand account.",
+   "A dud in an inventor-dominates niche is not a bad video; it is a late entrant to an owned formula. Same format, 163 views vs 1.6M, is proof of ownership, not failure.",
+   "High breakout multiple + collapsed similar-video floor = creator-authority spike, not a replicable formula. Train on clustered floors, not spikes.",
+   "Zero shares on a million-view video signals paid/boosted reach. Organic breakouts have shares proportional to views. Discard zero-share million-view rows as training data.",
+   "Caption-only or app-card-only proof (levels 1-2) proves the hook and the creator's trust, NOT that the product drove the result. It can never be copy_directly.",
+   "The 72-hour window: an Early-Signals entry whose similar hooks show the same formula at 300K+ from another app category is a proven formula with an unclaimed slot. Highest-value discovery pattern."
+  ],
+  "concepts": [
+   {
+    "concept": "kitchen counter fruit-slicing monologue",
+    "source": "trending-this-week",
+    "lifecycleStage": "saturated (100-180d, transfer-only)",
+    "appCategories": [
+     "relationship",
+     "education",
+     "finance",
+     "language",
+     "music",
+     "search"
+    ],
+    "hookArchetype": "other",
+    "breakoutRole": "cluster_proof",
+    "creatorBaselineGap": 1.2,
+    "peakViewBucket": "100K-1M",
+    "productProofMode": "app_card_caption_only(1-2)",
+    "copyDecision": "adapt_with_product_rewrite",
+    "crossNichePortability": [],
+    "durationRequirement": "medium",
+    "captionFormulaVisible": true,
+    "tagSource": "heuristic-derived from breakoutSpread + synthesis rules; raw handles/apps/captions kept local"
+   },
+   {
+    "concept": "frantic alarm scavenger hunt POV",
+    "source": "trending-this-week",
+    "lifecycleStage": "saturated (100-180d, transfer-only)",
+    "appCategories": [
+     "alarm",
+     "productivity"
+    ],
+    "hookArchetype": "complain-crashout",
+    "breakoutRole": "cluster_proof",
+    "creatorBaselineGap": 2.9,
+    "peakViewBucket": "100K-1M",
+    "productProofMode": "product_as_conflict_engine(11)",
+    "copyDecision": "copy_structurally",
+    "crossNichePortability": [],
+    "durationRequirement": "short",
+    "captionFormulaVisible": true,
+    "tagSource": "heuristic-derived from breakoutSpread + synthesis rules; raw handles/apps/captions kept local"
+   },
+   {
+    "concept": "murky water bottle shock prop",
+    "source": "trending-this-week",
+    "lifecycleStage": "saturated (100-180d, transfer-only)",
+    "appCategories": [
+     "eco",
+     "health",
+     "productivity",
+     "food scanner"
+    ],
+    "hookArchetype": "murky-prop-interrupt",
+    "breakoutRole": "recurrence_floor_proof",
+    "creatorBaselineGap": 5.7,
+    "peakViewBucket": "1M+",
+    "productProofMode": "physical_prop_interrupt(9)",
+    "copyDecision": "copy_structurally",
+    "crossNichePortability": [
+     "murky_prop"
+    ],
+    "durationRequirement": "short",
+    "captionFormulaVisible": false,
+    "tagSource": "heuristic-derived from breakoutSpread + synthesis rules; raw handles/apps/captions kept local"
+   },
+   {
+    "concept": "had a good day until comparison spiral",
+    "source": "trending-this-week",
+    "lifecycleStage": "saturated (100-180d, transfer-only)",
+    "appCategories": [
+     "investing",
+     "food",
+     "health",
+     "education",
+     "parenting"
+    ],
+    "hookArchetype": "other",
+    "breakoutRole": "unknown",
+    "creatorBaselineGap": null,
+    "peakViewBucket": "n-a",
+    "productProofMode": "app_card_caption_only(1-2)",
+    "copyDecision": "adapt_with_product_rewrite",
+    "crossNichePortability": [],
+    "durationRequirement": "medium",
+    "captionFormulaVisible": false,
+    "tagSource": "heuristic-derived from breakoutSpread + synthesis rules; raw handles/apps/captions kept local"
+   },
+   {
+    "concept": "my top 5 horror movies bait-and-switch",
+    "source": "trending-this-week",
+    "lifecycleStage": "saturated (100-180d, transfer-only)",
+    "appCategories": [
+     "eco",
+     "height",
+     "skincare",
+     "babysitting",
+     "language learning",
+     "period tracking"
+    ],
+    "hookArchetype": "baitswitch-list",
+    "breakoutRole": "cluster_proof",
+    "creatorBaselineGap": 1.3,
+    "peakViewBucket": "10-100K",
+    "productProofMode": "app_card_caption_only(1-2)",
+    "copyDecision": "adapt_with_product_rewrite",
+    "crossNichePortability": [
+     "baitswitch_list"
+    ],
+    "durationRequirement": "medium",
+    "captionFormulaVisible": true,
+    "tagSource": "heuristic-derived from breakoutSpread + synthesis rules; raw handles/apps/captions kept local"
+   },
+   {
+    "concept": "GRWM makeup as B-roll text hook",
+    "source": "trending-this-week",
+    "lifecycleStage": "saturated (100-180d, transfer-only)",
+    "appCategories": [
+     "investing",
+     "babysitting",
+     "eco",
+     "skincare",
+     "language learning"
+    ],
+    "hookArchetype": "screen-text-exchange",
+    "breakoutRole": "selected_mechanic_proof",
+    "creatorBaselineGap": 12.5,
+    "peakViewBucket": "100K-1M",
+    "productProofMode": "visible_interface_or_scorecard(7-8)",
+    "copyDecision": "mechanism_test_only",
+    "crossNichePortability": [],
+    "durationRequirement": "medium",
+    "captionFormulaVisible": false,
+    "tagSource": "heuristic-derived from breakoutSpread + synthesis rules; raw handles/apps/captions kept local"
+   },
+   {
+    "concept": "why is [X] so hard exasperated close-up",
+    "source": "trending-this-week",
+    "lifecycleStage": "saturated (100-180d, transfer-only)",
+    "appCategories": [
+     "language learning",
+     "education",
+     "challenge apps"
+    ],
+    "hookArchetype": "frustrated-closeup-X-is-hard",
+    "breakoutRole": "recurrence_floor_proof",
+    "creatorBaselineGap": 3.6,
+    "peakViewBucket": "1M+",
+    "productProofMode": "app_card_caption_only(1-2)",
+    "copyDecision": "adapt_with_product_rewrite",
+    "crossNichePortability": [],
+    "durationRequirement": "short-medium",
+    "captionFormulaVisible": true,
+    "tagSource": "heuristic-derived from breakoutSpread + synthesis rules; raw handles/apps/captions kept local"
+   },
+   {
+    "concept": "explore-global-breakout-grid",
+    "source": "explore-grid",
+    "lifecycleStage": "global grid snapshot",
+    "appCategories": [],
+    "hookArchetype": "other",
+    "breakoutRole": "cluster_proof",
+    "creatorBaselineGap": 1.2,
+    "peakViewBucket": "1M+",
+    "productProofMode": "app_card_caption_only(1-2)",
+    "copyDecision": "adapt_with_product_rewrite",
+    "crossNichePortability": [],
+    "durationRequirement": "medium",
+    "captionFormulaVisible": false,
+    "tagSource": "heuristic-derived from breakoutSpread + synthesis rules; raw handles/apps/captions kept local"
+   },
+   {
+    "concept": "celebrate ending toxic relationship",
+    "source": "videos-to-copy-breakout-hits",
+    "lifecycleStage": "seed signal (creator-relative, verify floor)",
+    "appCategories": [
+     "dating"
+    ],
+    "hookArchetype": "other",
+    "breakoutRole": "cluster_proof",
+    "creatorBaselineGap": 1.6,
+    "peakViewBucket": "10-100K",
+    "productProofMode": "app_card_caption_only(1-2)",
+    "copyDecision": "adapt_with_product_rewrite",
+    "crossNichePortability": [],
+    "durationRequirement": "medium",
+    "captionFormulaVisible": false,
+    "tagSource": "heuristic-derived from breakoutSpread + synthesis rules; raw handles/apps/captions kept local"
+   },
+   {
+    "concept": "complain about frustrating customer behavior",
+    "source": "videos-to-copy-breakout-hits",
+    "lifecycleStage": "seed signal (creator-relative, verify floor)",
+    "appCategories": [
+     "reselling",
+     "marketplace"
+    ],
+    "hookArchetype": "ip-face-rating",
+    "breakoutRole": "cluster_proof",
+    "creatorBaselineGap": 2.5,
+    "peakViewBucket": "10-100K",
+    "productProofMode": "visible_interface_or_scorecard(7-8)",
+    "copyDecision": "copy_structurally",
+    "crossNichePortability": [],
+    "durationRequirement": "medium",
+    "captionFormulaVisible": true,
+    "tagSource": "heuristic-derived from breakoutSpread + synthesis rules; raw handles/apps/captions kept local"
+   },
+   {
+    "concept": "turn mundane anecdote into song",
+    "source": "videos-to-copy-viral-now",
+    "lifecycleStage": "proven at scale (2-5d, shrinking window)",
+    "appCategories": [
+     "music"
+    ],
+    "hookArchetype": "other",
+    "breakoutRole": "cluster_proof",
+    "creatorBaselineGap": 2.2,
+    "peakViewBucket": "1M+",
+    "productProofMode": "app_card_caption_only(1-2)",
+    "copyDecision": "adapt_with_product_rewrite",
+    "crossNichePortability": [
+     "baitswitch_list"
+    ],
+    "durationRequirement": "medium",
+    "captionFormulaVisible": true,
+    "tagSource": "heuristic-derived from breakoutSpread + synthesis rules; raw handles/apps/captions kept local"
+   },
+   {
+    "concept": "demand constant partner photo updates",
+    "source": "videos-to-copy-viral-now",
+    "lifecycleStage": "proven at scale (2-5d, shrinking window)",
+    "appCategories": [
+     "photo sharing",
+     "social"
+    ],
+    "hookArchetype": "other",
+    "breakoutRole": "selected_mechanic_proof",
+    "creatorBaselineGap": 66.4,
+    "peakViewBucket": "1M+",
+    "productProofMode": "app_card_caption_only(1-2)",
+    "copyDecision": "adapt_with_product_rewrite",
+    "crossNichePortability": [],
+    "durationRequirement": "medium",
+    "captionFormulaVisible": true,
+    "tagSource": "heuristic-derived from breakoutSpread + synthesis rules; raw handles/apps/captions kept local"
+   },
+   {
+    "concept": "showcase ordinary foreign life item",
+    "source": "videos-to-copy-viral-now",
+    "lifecycleStage": "proven at scale (2-5d, shrinking window)",
+    "appCategories": [
+     "language learning",
+     "social"
+    ],
+    "hookArchetype": "murky-prop-interrupt",
+    "breakoutRole": "recurrence_floor_proof",
+    "creatorBaselineGap": 9.6,
+    "peakViewBucket": "1M+",
+    "productProofMode": "physical_prop_interrupt(9)",
+    "copyDecision": "copy_structurally",
+    "crossNichePortability": [
+     "murky_prop"
+    ],
+    "durationRequirement": "short",
+    "captionFormulaVisible": false,
+    "tagSource": "heuristic-derived from breakoutSpread + synthesis rules; raw handles/apps/captions kept local"
+   },
+   {
+    "concept": "share shocking public accusation story",
+    "source": "videos-to-copy-viral-now",
+    "lifecycleStage": "proven at scale (2-5d, shrinking window)",
+    "appCategories": [
+     "language learning"
+    ],
+    "hookArchetype": "other",
+    "breakoutRole": "recurrence_floor_proof",
+    "creatorBaselineGap": 2.0,
+    "peakViewBucket": "100K-1M",
+    "productProofMode": "app_card_caption_only(1-2)",
+    "copyDecision": "adapt_with_product_rewrite",
+    "crossNichePortability": [
+     "accusation_receipt"
+    ],
+    "durationRequirement": "medium",
+    "captionFormulaVisible": false,
+    "tagSource": "heuristic-derived from breakoutSpread + synthesis rules; raw handles/apps/captions kept local"
+   },
+   {
+    "concept": "turn casual texts into song",
+    "source": "videos-to-copy-viral-now",
+    "lifecycleStage": "proven at scale (2-5d, shrinking window)",
+    "appCategories": [
+     "music"
+    ],
+    "hookArchetype": "other",
+    "breakoutRole": "recurrence_floor_proof",
+    "creatorBaselineGap": 1.0,
+    "peakViewBucket": "100K-1M",
+    "productProofMode": "app_card_caption_only(1-2)",
+    "copyDecision": "adapt_with_product_rewrite",
+    "crossNichePortability": [],
+    "durationRequirement": "medium",
+    "captionFormulaVisible": true,
+    "tagSource": "heuristic-derived from breakoutSpread + synthesis rules; raw handles/apps/captions kept local"
+   },
+   {
+    "concept": "claim fictional character resemblance",
+    "source": "videos-to-copy-viral-now",
+    "lifecycleStage": "proven at scale (2-5d, shrinking window)",
+    "appCategories": [
+     "looksmaxxing",
+     "appearance"
+    ],
+    "hookArchetype": "ip-face-rating",
+    "breakoutRole": "cluster_proof",
+    "creatorBaselineGap": 1.0,
+    "peakViewBucket": "100K-1M",
+    "productProofMode": "visible_interface_or_scorecard(7-8)",
+    "copyDecision": "copy_structurally",
+    "crossNichePortability": [],
+    "durationRequirement": "medium",
+    "captionFormulaVisible": true,
+    "tagSource": "heuristic-derived from breakoutSpread + synthesis rules; raw handles/apps/captions kept local"
+   },
+   {
+    "concept": "share unforgettable simple advice story",
+    "source": "videos-to-copy-winning-formulas",
+    "lifecycleStage": "sweet spot (3-30d, enterable)",
+    "appCategories": [
+     "skincare scanner"
+    ],
+    "hookArchetype": "memory-advice-story-open",
+    "breakoutRole": "cluster_proof",
+    "creatorBaselineGap": 1.5,
+    "peakViewBucket": "<10K",
+    "productProofMode": "app_card_caption_only(1-2)",
+    "copyDecision": "adapt_with_product_rewrite",
+    "crossNichePortability": [],
+    "durationRequirement": "medium",
+    "captionFormulaVisible": false,
+    "tagSource": "heuristic-derived from breakoutSpread + synthesis rules; raw handles/apps/captions kept local"
+   },
+   {
+    "concept": "complain about extreme app feature",
+    "source": "videos-to-copy-winning-formulas",
+    "lifecycleStage": "sweet spot (3-30d, enterable)",
+    "appCategories": [
+     "alarm clock"
+    ],
+    "hookArchetype": "frustrated-closeup-X-is-hard",
+    "breakoutRole": "cluster_proof",
+    "creatorBaselineGap": 2.0,
+    "peakViewBucket": "10-100K",
+    "productProofMode": "app_card_caption_only(1-2)",
+    "copyDecision": "adapt_with_product_rewrite",
+    "crossNichePortability": [
+     "complain_crashout"
+    ],
+    "durationRequirement": "short-medium",
+    "captionFormulaVisible": false,
+    "tagSource": "heuristic-derived from breakoutSpread + synthesis rules; raw handles/apps/captions kept local"
+   },
+   {
+    "concept": "crowdsource extreme deadline advice",
+    "source": "videos-to-copy-winning-formulas",
+    "lifecycleStage": "sweet spot (3-30d, enterable)",
+    "appCategories": [
+     "skincare app"
+    ],
+    "hookArchetype": "other",
+    "breakoutRole": "cluster_proof",
+    "creatorBaselineGap": 1.0,
+    "peakViewBucket": "<10K",
+    "productProofMode": "app_card_caption_only(1-2)",
+    "copyDecision": "adapt_with_product_rewrite",
+    "crossNichePortability": [],
+    "durationRequirement": "medium",
+    "captionFormulaVisible": false,
+    "tagSource": "heuristic-derived from breakoutSpread + synthesis rules; raw handles/apps/captions kept local"
+   },
+   {
+    "concept": "unbelievable fast result timeframe",
+    "source": "videos-to-copy-winning-formulas",
+    "lifecycleStage": "sweet spot (3-30d, enterable)",
+    "appCategories": [
+     "skincare app"
+    ],
+    "hookArchetype": "other",
+    "breakoutRole": "cluster_proof",
+    "creatorBaselineGap": 1.5,
+    "peakViewBucket": "10-100K",
+    "productProofMode": "app_card_caption_only(1-2)",
+    "copyDecision": "adapt_with_product_rewrite",
+    "crossNichePortability": [],
+    "durationRequirement": "medium",
+    "captionFormulaVisible": false,
+    "tagSource": "heuristic-derived from breakoutSpread + synthesis rules; raw handles/apps/captions kept local"
+   },
+   {
+    "concept": "main character validation scenario POV",
+    "source": "videos-to-copy-early-signals",
+    "lifecycleStage": "unclaimed (0-24h, check similar-hook anchors)",
+    "appCategories": [
+     "face rating",
+     "looksmaxxing"
+    ],
+    "hookArchetype": "ip-face-rating",
+    "breakoutRole": "cluster_proof",
+    "creatorBaselineGap": 1.5,
+    "peakViewBucket": "100K-1M",
+    "productProofMode": "visible_interface_or_scorecard(7-8)",
+    "copyDecision": "copy_structurally",
+    "crossNichePortability": [],
+    "durationRequirement": "medium",
+    "captionFormulaVisible": true,
+    "tagSource": "heuristic-derived from breakoutSpread + synthesis rules; raw handles/apps/captions kept local"
+   },
+   {
+    "concept": "link app data to tour",
+    "source": "videos-to-copy-early-signals",
+    "lifecycleStage": "unclaimed (0-24h, check similar-hook anchors)",
+    "appCategories": [
+     "music analytics"
+    ],
+    "hookArchetype": "other",
+    "breakoutRole": "cluster_proof",
+    "creatorBaselineGap": 2.9,
+    "peakViewBucket": "10-100K",
+    "productProofMode": "app_card_caption_only(1-2)",
+    "copyDecision": "adapt_with_product_rewrite",
+    "crossNichePortability": [
+     "baitswitch_list"
+    ],
+    "durationRequirement": "medium",
+    "captionFormulaVisible": true,
+    "tagSource": "heuristic-derived from breakoutSpread + synthesis rules; raw handles/apps/captions kept local"
+   },
+   {
+    "concept": "contrast college major workload stereotypes",
+    "source": "videos-to-copy-early-signals",
+    "lifecycleStage": "unclaimed (0-24h, check similar-hook anchors)",
+    "appCategories": [],
+    "hookArchetype": "other",
+    "breakoutRole": "cluster_proof",
+    "creatorBaselineGap": 1.7,
+    "peakViewBucket": "10-100K",
+    "productProofMode": "app_card_caption_only(1-2)",
+    "copyDecision": "adapt_with_product_rewrite",
+    "crossNichePortability": [],
+    "durationRequirement": "medium",
+    "captionFormulaVisible": true,
+    "tagSource": "heuristic-derived from breakoutSpread + synthesis rules; raw handles/apps/captions kept local"
+   },
+   {
+    "concept": "exaggerate completely ruined day hook",
+    "source": "videos-to-copy-early-signals",
+    "lifecycleStage": "unclaimed (0-24h, check similar-hook anchors)",
+    "appCategories": [],
+    "hookArchetype": "screen-text-exchange",
+    "breakoutRole": "cluster_proof",
+    "creatorBaselineGap": 1.9,
+    "peakViewBucket": "100K-1M",
+    "productProofMode": "visible_interface_or_scorecard(7-8)",
+    "copyDecision": "copy_structurally",
+    "crossNichePortability": [],
+    "durationRequirement": "medium",
+    "captionFormulaVisible": true,
+    "tagSource": "heuristic-derived from breakoutSpread + synthesis rules; raw handles/apps/captions kept local"
+   },
+   {
+    "concept": "prompt wholesome authority figure quote",
+    "source": "videos-to-copy-early-signals",
+    "lifecycleStage": "unclaimed (0-24h, check similar-hook anchors)",
+    "appCategories": [],
+    "hookArchetype": "ip-face-rating",
+    "breakoutRole": "recurrence_floor_proof",
+    "creatorBaselineGap": 3.4,
+    "peakViewBucket": "1M+",
+    "productProofMode": "visible_interface_or_scorecard(7-8)",
+    "copyDecision": "copy_structurally",
+    "crossNichePortability": [],
+    "durationRequirement": "medium",
+    "captionFormulaVisible": false,
+    "tagSource": "heuristic-derived from breakoutSpread + synthesis rules; raw handles/apps/captions kept local"
+   },
+   {
+    "concept": "how bro feels meme template",
+    "source": "videos-to-copy-early-signals",
+    "lifecycleStage": "unclaimed (0-24h, check similar-hook anchors)",
+    "appCategories": [
+     "face rating",
+     "looksmaxxing"
+    ],
+    "hookArchetype": "ip-face-rating",
+    "breakoutRole": "cluster_proof",
+    "creatorBaselineGap": 1.6,
+    "peakViewBucket": "1M+",
+    "productProofMode": "visible_interface_or_scorecard(7-8)",
+    "copyDecision": "copy_structurally",
+    "crossNichePortability": [],
+    "durationRequirement": "medium",
+    "captionFormulaVisible": true,
+    "tagSource": "heuristic-derived from breakoutSpread + synthesis rules; raw handles/apps/captions kept local"
+   },
+   {
+    "concept": "hook with sudden official mail",
+    "source": "videos-to-copy-early-signals",
+    "lifecycleStage": "unclaimed (0-24h, check similar-hook anchors)",
+    "appCategories": [],
+    "hookArchetype": "other",
+    "breakoutRole": "cluster_proof",
+    "creatorBaselineGap": 1.0,
+    "peakViewBucket": "10-100K",
+    "productProofMode": "app_card_caption_only(1-2)",
+    "copyDecision": "adapt_with_product_rewrite",
+    "crossNichePortability": [],
+    "durationRequirement": "medium",
+    "captionFormulaVisible": false,
+    "tagSource": "heuristic-derived from breakoutSpread + synthesis rules; raw handles/apps/captions kept local"
+   },
+   {
+    "concept": "directly blame viewer for problem",
+    "source": "videos-to-copy-early-signals",
+    "lifecycleStage": "unclaimed (0-24h, check similar-hook anchors)",
+    "appCategories": [],
+    "hookArchetype": "murky-prop-interrupt",
+    "breakoutRole": "recurrence_floor_proof",
+    "creatorBaselineGap": 3.3,
+    "peakViewBucket": "100K-1M",
+    "productProofMode": "physical_prop_interrupt(9)",
+    "copyDecision": "copy_structurally",
+    "crossNichePortability": [
+     "accusation_receipt"
+    ],
+    "durationRequirement": "short",
+    "captionFormulaVisible": false,
+    "tagSource": "heuristic-derived from breakoutSpread + synthesis rules; raw handles/apps/captions kept local"
+   },
+   {
+    "concept": "point out funny product flaw",
+    "source": "videos-to-copy-early-signals",
+    "lifecycleStage": "unclaimed (0-24h, check similar-hook anchors)",
+    "appCategories": [],
+    "hookArchetype": "other",
+    "breakoutRole": "cluster_proof",
+    "creatorBaselineGap": 1.4,
+    "peakViewBucket": "10-100K",
+    "productProofMode": "app_card_caption_only(1-2)",
+    "copyDecision": "adapt_with_product_rewrite",
+    "crossNichePortability": [],
+    "durationRequirement": "medium",
+    "captionFormulaVisible": false,
+    "tagSource": "heuristic-derived from breakoutSpread + synthesis rules; raw handles/apps/captions kept local"
+   },
+   {
+    "concept": "you didn't want X template",
+    "source": "videos-to-copy-early-signals",
+    "lifecycleStage": "unclaimed (0-24h, check similar-hook anchors)",
+    "appCategories": [
+     "gamified fitness",
+     "productivity"
+    ],
+    "hookArchetype": "you-didnt-want-x",
+    "breakoutRole": "cluster_proof",
+    "creatorBaselineGap": 3.3,
+    "peakViewBucket": "100K-1M",
+    "productProofMode": "app_card_caption_only(1-2)",
+    "copyDecision": "adapt_with_product_rewrite",
+    "crossNichePortability": [],
+    "durationRequirement": "short",
+    "captionFormulaVisible": false,
+    "tagSource": "heuristic-derived from breakoutSpread + synthesis rules; raw handles/apps/captions kept local"
+   }
+  ]
  }
 }

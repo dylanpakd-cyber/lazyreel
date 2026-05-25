@@ -540,6 +540,19 @@ export function breakoutVsDud(): string {
       `- **Read this:** ${(m as any).validation.interpretation || ""}`,
     ] : []),
     "",
+    ...((m as any).appAdBreakoutFormats ? (() => {
+      const aa = (m as any).appAdBreakoutFormats;
+      const arches = (aa.hookArchetypes || []).slice(0, 10);
+      return [
+        `## App-ad breakout formats (for mobile-app UGC; scored creator-relative)`,
+        `_Derived archetypes; raw sources kept local. copyDecision is gated by the product-proof ladder: caption/app-card-only proof can never be copy_directly._`,
+        ...arches.map((a: any) => `- **${a.id}** (${a.durationRequirement}, ${a.copyDecision}) — ${a.template}`),
+        "",
+        `### App-ad breakout rules`,
+        ...((aa.breakoutRules || []).map((r: string) => `- ${r}`)),
+      ];
+    })() : []),
+    "",
     `## Honest caveat`,
     `- ${m.confound?.takeaway || "Raw views are confounded by audience size; judge craft by creator-baseline (vpf), not raw views."}`,
     `- The "why" is inferred from still frames, not watch-time/A-B. Treat the laws as a first-3-seconds QC floor, not a virality guarantee.`,
