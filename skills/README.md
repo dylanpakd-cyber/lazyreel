@@ -8,6 +8,7 @@ The **"make it"** half of ABG CMO. The MCP (`../mcp`) tells you *what works*; th
 | **abg-format-prompt-builder** | Break a video into a shot/effects timeline (density map, energy arc, signature device) you can prompt from. |
 | **abg-ugc-ad-director** | Product/concept/format → copy-paste UGC video prompts (Seedance 2.0): Pinterest creator refs, shot-by-shot prompts, native audio direction, anti-cinematic rules. |
 | **abg-ugc-ad-generator** | Product image + ad angle → a full multi-shot UGC ad generated via Seedance on fal.ai, stitched with ffmpeg (includes `scripts/` + `references/`). End-to-end automation. |
+| **lazyreel-higgsfield-director** | Brief → Higgsfield video prompts whose first 3 seconds are engineered to clear the *validated* breakout laws (85% blind, see `../docs/methodology`). Carries the measured insight payload in `references/breakout-insights.md` and a pre-render checklist so you gate the opening before spending credits. The Higgsfield-side counterpart to the Seedance director. |
 
 ## The full loop (insight → creation)
 
