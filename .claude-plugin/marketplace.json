@@ -1,0 +1,11 @@
+{
+  "name": "lazyreel",
+  "owner": { "name": "dylanpakd-cyber", "url": "https://github.com/dylanpakd-cyber/lazyreel" },
+  "plugins": [
+    {
+      "name": "lazyreel",
+      "source": "./",
+      "description": "LazyReel MCP plus the companion skills (format-deconstructor, ugc-ad-director, higgsfield-director, video-editor) that auto-activate through the video workflow."
+    }
+  ]
+}

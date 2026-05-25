@@ -84,7 +84,25 @@ DESIGN.md, COPY.md, PLAN.md   the design system, copy deck, and build plan
 
 The `wiki/` folder is the part to browse first. It reads like a research notebook: each niche and each hook pattern has its own page with what wins and why.
 
-## Install it
+## Install as a plugin (recommended: MCP + skills, auto-activating)
+
+One install brings the MCP server and all the companion skills together. The skills then auto-activate by their triggers through the video workflow, so the agent leverages them without being called by name (deconstruct a video, write the multi-clip prompts, cut the clips), and the MCP tools are available the whole time.
+
+```bash
+claude plugin marketplace add dylanpakd-cyber/lazyreel
+claude plugin install lazyreel@lazyreel
+```
+
+The skills (`lazyreel-format-deconstructor`, `lazyreel-ugc-ad-director`, `lazyreel-higgsfield-director`, `lazyreel-video-editor`) activate immediately. The MCP server is declared in `.mcp.json`; build it once so it can run, then set your free token:
+
+```bash
+cd "$(claude plugin path lazyreel)/mcp" && npm install && npm run build
+export LAZYREEL_TOKEN=lr_your_token   # from the install page, or any string
+```
+
+(The compiled server lives in `mcp/build`, which is not committed, so this one build step is needed after install. To skip it entirely, see the token-only MCP install below.)
+
+## Install it (MCP only)
 
 The easy way is the install page. It generates a free token and gives you one prompt to paste into your agent. Open `mcp-install.html`, copy the block, paste it into Claude Code, Cursor, Codex, or any MCP client, and you are done.
 
