@@ -1,4 +1,4 @@
-# ABG CMO — decoded insights wiki
+# LazyReel decoded insights wiki
 
 Auto-generated from 5,560 real short-form videos decoded by the pipeline. This is derived analysis (no source video content). Regenerate with `node pipeline/build-wiki.mjs`.
 
@@ -90,24 +90,24 @@ Hook patterns that over-index among breakouts in more than one niche:
 
 ## What wins overall
 
-- **humor** — 2x more common in breakouts (n=10)
-- **bandwagon** — 1.8x more common in breakouts (n=8)
-- **direct-callout** — 1.45x more common in breakouts (n=328)
-- **exclusivity** — 1.41x more common in breakouts (n=50)
-- **speed-of-claim** — 1.35x more common in breakouts (n=58)
+- **humor**: 2x more common in breakouts (n=10)
+- **bandwagon**: 1.8x more common in breakouts (n=8)
+- **direct-callout**: 1.45x more common in breakouts (n=328)
+- **exclusivity**: 1.41x more common in breakouts (n=50)
+- **speed-of-claim**: 1.35x more common in breakouts (n=58)
 
 ## Niches
 
-- [ABG beauty](niches/abg-beauty.md) — 716 videos decoded
-- [fitness](niches/fitness.md) — 511 videos decoded
-- [supplements](niches/supplements.md) — 548 videos decoded
-- [skincare](niches/skincare.md) — 496 videos decoded
-- [food and beverage](niches/food-and-beverage.md) — 572 videos decoded
-- [tech and SaaS](niches/tech-and-saas.md) — 615 videos decoded
-- [fashion](niches/fashion.md) — 600 videos decoded
-- [home and cleaning](niches/home-and-cleaning.md) — 554 videos decoded
-- [hair](niches/hair.md) — 410 videos decoded
-- [pets](niches/pets.md) — 538 videos decoded
+- [ABG beauty](niches/abg-beauty.md): 716 videos decoded
+- [fitness](niches/fitness.md): 511 videos decoded
+- [supplements](niches/supplements.md): 548 videos decoded
+- [skincare](niches/skincare.md): 496 videos decoded
+- [food and beverage](niches/food-and-beverage.md): 572 videos decoded
+- [tech and SaaS](niches/tech-and-saas.md): 615 videos decoded
+- [fashion](niches/fashion.md): 600 videos decoded
+- [home and cleaning](niches/home-and-cleaning.md): 554 videos decoded
+- [hair](niches/hair.md): 410 videos decoded
+- [pets](niches/pets.md): 538 videos decoded
 
 ## Hook patterns
 

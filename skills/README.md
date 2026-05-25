@@ -1,4 +1,4 @@
-# ABG CMO — video-creation skills
+# LazyReel video-creation skills
 
 The **"make it"** half of ABG CMO. The MCP (`../mcp`) tells you *what works*; these skills turn that into *actual videos*.
 
@@ -25,4 +25,4 @@ Copy a skill folder into your agent's skills directory (e.g. `~/.claude/skills/`
 
 ## Design note
 
-These are the project's own video-creation skills (renamed to ABG CMO). The MCP stays the **curated insight feed** — it grounds every prompt in a *proven, real* format with links to the actual videos — and these skills are where the human + agent compose the prompt from that grounding. The point is the pairing: prompts grounded in what genuinely broke out, never a guess.
+These are the project's own video-creation skills. The MCP stays the **curated insight feed**. It grounds every prompt in a *proven, real* format with links to the actual videos, and these skills are where the human and agent compose the prompt from that grounding. The point is the pairing: prompts grounded in what genuinely broke out, never a guess.
