@@ -9,13 +9,15 @@ The **"make it"** half of LazyReel. The MCP (`../mcp`) tells you *what works*; t
 | **lazyreel-ugc-ad-director** | Product/concept/format → copy-paste UGC video prompts (Seedance 2.0): Pinterest creator refs, shot-by-shot prompts, native audio direction, anti-cinematic rules. |
 | **lazyreel-ugc-ad-generator** | Product image + ad angle → a full multi-shot UGC ad generated via Seedance on fal.ai, stitched with ffmpeg (includes `scripts/` + `references/`). End-to-end automation. |
 | **lazyreel-higgsfield-director** | Brief → Higgsfield video prompts whose first 3 seconds are engineered to clear the *validated* breakout laws (85% blind, see `../docs/methodology`). Carries the measured insight payload in `references/breakout-insights.md` and a pre-render checklist so you gate the opening before spending credits. The Higgsfield-side counterpart to the Seedance director. |
+| **lazyreel-video-editor** | The 3-4 generated clips (or raw UGC) → a finished, fast-cut, sound-off-legible 9:16 short that obeys the cut-rhythm laws. Real FFmpeg + Remotion pipeline (trim, reframe, concat, normalize, burn captions). Carries `references/cut-rhythm.md`, the measured edit decisions. Where the clips become the video. |
 
 ## The full loop (insight → creation)
 
 ```
 MCP: find_trends / niche_decode / study_examples / viral_teardowns   →  what wins + real videos to study
 lazyreel-format-deconstructor                                             →  why it wins, as a copyable spec
-lazyreel-ugc-ad-director  (or  lazyreel-ugc-ad-generator for full automation)  →  the model-ready prompts / the finished ad
+lazyreel-ugc-ad-director  (or  lazyreel-ugc-ad-generator for full automation)  →  the model-ready, multi-clip prompts
+lazyreel-video-editor                                                     →  stitch the 3-4 clips into the finished cut
 ```
 
 A creator goes: *see what's working in my niche → watch the real breakouts → understand why → get the prompts (or the generated ad) to make my own.*
