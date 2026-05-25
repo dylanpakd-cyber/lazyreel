@@ -340,6 +340,7 @@
   ],
   "baseline": "50% (coin flip)",
   "methodNote": "Rigor check that mattered: a first same-creator attempt scored 64% (n=14) then 41% (n=54) and looked like a failure, until we found the low-view 'dud' was usually the creator's NEWEST upload (un-aged, not a real flop). Requiring the dud to be OLDER than the winner fixed the confound and gave the clean 83%. Trust the controlled number, not the first two.",
-  "interpretation": "The first-3-seconds laws carry REAL predictive signal, even within a single creator (83%, significant) — not just a QC floor. The two laws doing most of the work are #4 (don't signal the format with a 'GRWM/tutorial/review' title card) and #3 (per-frame novelty vs a static talking head). Caveats: n=18 so the true rate could sit anywhere ~61-94%; the 'why' is inferred from still frames, not watch-time; and external pulls (a celebrity, a trending sound) can override the opening craft entirely (every miss was that)."
+  "interpretation": "The first-3-seconds laws carry REAL predictive signal, even within a single creator (83%, significant) — not just a QC floor. The two laws doing most of the work are #4 (don't signal the format with a 'GRWM/tutorial/review' title card) and #3 (per-frame novelty vs a static talking head). Caveats: n=18 so the true rate could sit anywhere ~61-94%; the 'why' is inferred from still frames, not watch-time; and external pulls (a celebrity, a trending sound) can override the opening craft entirely (every miss was that).",
+  "pooled": "Across all 48 valid controlled pairs (3 tiers combined): 41/48 = 85% (95% CI 73-93%, z=+4.91 vs 50%, p<0.0001). Highly significant."
  }
 }

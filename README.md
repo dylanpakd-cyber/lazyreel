@@ -26,7 +26,7 @@ Decode with evidence, not vibes.
 7. **format_teardown.** Reverse-engineer a winning video. You get its narrative DNA, its edit DNA, the one signature device it is built around, and how to rebuild it for your product.
 8. **viral_teardowns.** Real breakouts in a niche, each diagnosed for why it out-reached the creator's following: the hook technique, the retention device, the viral mechanism, and the one move to steal.
 9. **winning_combos.** The hook by format pairings that over-index in breakouts, each with the measured lift.
-10. **breakout_vs_dud.** Same creator, two videos. Compare a breakout against a dud to isolate the one variable that changed the outcome.
+10. **breakout_vs_dud.** Why the same concept gets 1K vs 1M views: the first-3-seconds laws that separate breakouts from duds, validated blind on concept-matched and same-creator pairs (85% pooled, see `docs/methodology`). Returns the laws, what over-indexes in winners, and an honest confound caveat.
 11. **format_playbook.** A named format turned into a repeatable, shootable step-by-step.
 
 ### Make the thing
@@ -69,6 +69,8 @@ mcp/            the real stdio MCP server (TypeScript)
   pipeline/     the scrape, label, score, and teardown pipeline (how the corpus is built)
 skills/         companion agent skills that turn research into generation prompts
   abg-ugc-ad-director/, abg-ugc-ad-generator/, abg-format-*/  (each with its own references/)
+docs/           how the findings were reached, validated, and committed
+  methodology/  the research method, the blind validation protocol, data discipline
 wiki/           a browsable graph of insights, readable on GitHub
   niches/       10 niche reads     patterns/   the hook-pattern teardowns
 index.html      the marketing site (also deployed on its own)
@@ -111,6 +113,10 @@ The smoke run spawns the server, calls every tool, and prints a pass or fail for
 This is a working MCP connection with genuinely good, framework-grounded output. It is not a mock. The corpus is real video, decoded by the pipeline in `mcp/pipeline`, and the aggregates are committed so you can read them.
 
 What it does not do yet: live ingestion of fresh winning videos on demand, transcript search over a hosted video database, and private niche libraries per account. The `get_status` tool says so plainly. Growing the analyzed-video corpus is the ongoing work.
+
+## How the findings were reached
+
+The claims in these tools are tested, not asserted. `docs/methodology` records how. It covers the breakout-vs-dud study (including a result that nearly fooled us and the confound we caught), the reusable blind out-of-sample validation protocol so you can re-run a test the same way, and the data discipline that keeps scraped content out of the repo. Headline: the first-3-seconds laws predicted the higher-view video on 41 of 48 blind, out-of-sample pairs (85%, significant), with the cleanest test holding creator and video age constant. Start at `docs/methodology/README.md`.
 
 ## Data and licensing
 
