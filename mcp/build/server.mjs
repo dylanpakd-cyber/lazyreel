@@ -14843,7 +14843,7 @@ function crackedHooks(i) {
     "",
     ...lines,
     "",
-    ...laws.length ? [`## The opening frame must also clear (validated, 85% blind)`, ...laws.map((l) => `- [ ] ${l}`), ""] : [],
+    ...laws.length ? [`## The opening frame must also clear (validated, 83% within-creator)`, ...laws.map((l) => `- [ ] ${l}`), ""] : [],
     `> Test 3-4 of these as the first 2 seconds. The hook is 80% of the result.`
   ].join("\n");
 }
@@ -15002,14 +15002,19 @@ function killTheSlop(copy) {
 }
 function status(token) {
   const t = (token || "").trim();
-  const tokenLine = t ? `**Install token:** \`${t.slice(0, 8)}\u2026\` \u2014 active. Authorizes the read-only UGC skills.` : `**Install token:** none set (the skills still work; the token just namespaces an install).`;
+  const tokenLine = t ? `**Install token:** \`${t.slice(0, 8)}\u2026\` is active. Authorizes the read-only UGC tools.` : `**Install token:** none set (the tools still work; the token just namespaces an install).`;
   return [
-    "# LazyReel MCP \u2014 status",
+    "# LazyReel MCP status",
     "",
     tokenLine,
     "",
-    "**Live now:**",
-    "- 16 skills incl. breakout_vs_dud (why 1K vs 1M), winning_combos (what mix wins), replicate_format, study_examples (real links), find_trends, viral_teardowns",
+    "**Live now, 6 tools:**",
+    "- niche_report (what's working in a niche: hook/framework lift, real links, the gap; focus=format|trends|combos|apps)",
+    "- study_videos (real TikTok links to study, best breakouts first, plus why the top ones won)",
+    "- teardown (rebuild a winning video's DNA, or replicate a format for your product with a gen-prompt scaffold)",
+    "- make_brief (the shoot-ready brief; mode=ideas|hooks for concepts or a hook bank)",
+    "- breakout_laws (why the same concept gets 1K vs 1M views: the validated first-3-seconds laws)",
+    "- kill_the_slop (critique weak copy against the anti-slop bar, then rewrite it sharper)",
     `- ${getWinners().length} real breakout videos torn down (the actual viral mechanism, diagnosed from transcript + engagement)`,
     getVisualInsights().analyzed ? `- ${getVisualInsights().analyzed} videos analyzed visually (format + craft from the first 3 seconds of frames)` : "- visual/format layer: scripts ready, run pipeline/visual.mjs to populate",
     `- ${SCRIPT_FRAMEWORKS.length} named script frameworks, ${HOOK_PATTERNS.length} hook patterns, ${ANGLES.length} proven UGC angles`,
@@ -15026,7 +15031,7 @@ function status(token) {
     "- Transcript/embedding search over a hosted video DB",
     "- Private per-account niche libraries",
     "",
-    "It's a real MCP connection with genuinely good, framework-grounded outputs \u2014 not a mock."
+    "It's a real MCP connection with genuinely good, framework-grounded outputs, not a mock."
   ].join("\n");
 }
 
@@ -15034,152 +15039,78 @@ function status(token) {
 var server = new Server({ name: "lazyreel", version: "0.1.0" }, { capabilities: { tools: {} } });
 var tools = [
   {
-    name: "video_ideas",
-    description: "Generate scroll-worthy short-form video concepts for a product, each mapped to a named script framework, awareness level, and visual approach. Use when the user wants ideas, angles, or concepts for a video.",
+    name: "niche_report",
+    description: "The full read on what is working in a niche, grounded in real decoded videos: the hook patterns and frameworks that over-index in breakouts (with lift and sample size), the words winners open with, real example links, the winning feature combinations, and the supply/demand gap nobody is filling. Use this first, before writing anything, to ground the work. Set `focus` to narrow it: 'overview' (default, the full report), 'format' (how winners look: formats + craft), 'trends' (cross-niche copyable formulas), 'combos' (the winning mixes), 'apps' (the app-ad vertical).",
+    inputSchema: {
+      type: "object",
+      properties: {
+        niche: { type: "string", description: "The niche / category (e.g. 'skincare', 'matcha DTC'). Optional when focus is 'trends' or 'apps'." },
+        focus: { type: "string", description: "overview (default) | format | trends | combos | apps" },
+        limit: { type: "number", description: "For focus=trends: how many (1-18). Default 8." }
+      },
+      required: []
+    }
+  },
+  {
+    name: "study_videos",
+    description: "Return REAL TikTok videos to watch and study, best breakouts first (each with reach multiple, views, format, hook, emotion), PLUS a diagnosis of why the top breakouts out-reached their creator's following (hook technique, retention device, the one move to steal). Filter by niche, video format, and/or hook pattern, or pass a free-text `query`. Use whenever the user wants to SEE real examples, get reference videos, or find videos to replicate. This is where the real links live.",
+    inputSchema: {
+      type: "object",
+      properties: {
+        niche: { type: "string", description: "Niche filter (e.g. 'skincare')." },
+        videoFormat: { type: "string", description: "Format filter (e.g. 'before-after', 'talking-head')." },
+        hookPattern: { type: "string", description: "Hook pattern filter (e.g. 'direct-callout')." },
+        query: { type: "string", description: "Free-text search instead of filters (e.g. 'POV beauty before-after')." },
+        limit: { type: "number", description: "Max videos (1-20). Default 8." }
+      },
+      required: []
+    }
+  },
+  {
+    name: "teardown",
+    description: "Reverse-engineer a format. Two modes: pass `video` (a description, transcript, or URL of a winning video) to get its narrative + edit DNA, signature device, and how to rebuild it; OR pass `product` (plus niche/model) to get the proven format to copy, real examples to watch first, a shoot-ready brief, and a generation-prompt scaffold for a video model. Use when the user wants to learn from a specific video or actually replicate a format for their product.",
+    inputSchema: {
+      type: "object",
+      properties: {
+        video: { type: "string", description: "A description, transcript, or URL of the video to tear down." },
+        product: { type: "string", description: "A product to replicate a winning format for (the make-a-video bridge)." },
+        niche: { type: "string", description: "The niche (picks the fitting trend) when using `product`." },
+        trend: { type: "string", description: "Optional: a specific trend name to replicate." },
+        model: { type: "string", description: "Optional video model: seedance|kling|veo|higgsfield." }
+      },
+      required: []
+    }
+  },
+  {
+    name: "make_brief",
+    description: "Write the creative. Default returns a shoot-ready brief (framework, angle, hook bank, a Beat/VO/on-screen-text/B-roll table, CTA, shoot notes). Set `mode`='ideas' for scroll-worthy concepts mapped to named frameworks, or `mode`='hooks' for a ranked hook bank (each a different pattern, caption-safe, brand-late). Use when the user wants ideas, hooks, a script, or a full brief for a video.",
     inputSchema: {
       type: "object",
       properties: {
         product: { type: "string", description: "The product or offer." },
-        niche: { type: "string", description: "The niche / category (e.g. 'ABG beauty', 'matcha DTC')." },
-        audience: { type: "string", description: "Who the video is for." },
-        count: { type: "number", description: "How many concepts (3-8). Default 5." }
-      },
-      required: ["product"]
-    }
-  },
-  {
-    name: "niche_decode",
-    description: "Return a structured method + checklist for decoding what's actually working in a niche (awareness, sophistication, customer-research mining, winning-hook analysis, the exploitable gap). Use before writing, to ground the work in the niche.",
-    inputSchema: {
-      type: "object",
-      properties: {
-        niche: { type: "string", description: "The niche to decode." },
-        examples: { type: "string", description: "Optional: pasted notes, competitor videos, or review snippets to fold in." }
-      },
-      required: ["niche"]
-    }
-  },
-  {
-    name: "format_teardown",
-    description: "Reverse-engineer a winning video's DNA: narrative framework, hook pattern, edit/effects structure, signature device, and how to rebuild it for a different product. Use when the user pastes or describes a video they want to learn from.",
-    inputSchema: {
-      type: "object",
-      properties: {
-        description: { type: "string", description: "A description, transcript, or URL of the video to tear down." }
-      },
-      required: ["description"]
-    }
-  },
-  {
-    name: "cracked_hooks",
-    description: "Write ranked short-form hooks for a product, each labeled by pattern (from a 13-pattern taxonomy), each a different angle, all caption-safe and brand-late. Use when the user wants hooks or first lines.",
-    inputSchema: {
-      type: "object",
-      properties: {
-        product: { type: "string", description: "The product or offer." },
+        mode: { type: "string", description: "brief (default) | ideas | hooks" },
         niche: { type: "string", description: "The niche / category." },
-        audience: { type: "string", description: "Who the hooks should speak to." },
-        count: { type: "number", description: "How many hooks (5-12). Default 8." }
+        audience: { type: "string", description: "Who the video is for." },
+        objective: { type: "string", description: "For the brief: the objective (e.g. 'first purchase')." },
+        framework: { type: "string", description: `For the brief: optional framework id. One of: ${SCRIPT_FRAMEWORKS.map((f) => f.id).join(", ")}.` },
+        count: { type: "number", description: "For ideas/hooks: how many. Default 5/8." }
       },
       required: ["product"]
     }
   },
   {
-    name: "shoot_brief",
-    description: "Produce a shoot-ready brief: framework, angle, hook bank, a Beat/VO/on-screen-text/B-roll table, CTA, and shoot notes. Use when the user wants a full brief or script for a video.",
-    inputSchema: {
-      type: "object",
-      properties: {
-        product: { type: "string", description: "The product or offer." },
-        audience: { type: "string", description: "Target audience." },
-        objective: { type: "string", description: "The objective (e.g. 'first purchase', 'email signups')." },
-        framework: { type: "string", description: `Optional framework id/name. One of: ${SCRIPT_FRAMEWORKS.map((f) => f.id).join(", ")}.` }
-      },
-      required: ["product"]
-    }
+    name: "breakout_laws",
+    description: "Why the SAME concept gets 1K vs 1M views: the validated first-3-seconds laws that separate breakouts from duds, derived from concept-matched winner/dud pairs compared frame-by-frame PLUS corpus-wide lift. Returns the laws, what over-indexes in winners, matched proof, and an honest confound caveat. Use when the user asks why a video flopped vs went viral, how to fix a weak opening, or what to nail in the first 3 seconds.",
+    inputSchema: { type: "object", properties: {} }
   },
   {
     name: "kill_the_slop",
     description: "Critique weak ad copy against the anti-slop bar (AI-tell words, brand-centric voice, no specificity, no curiosity gap), then rewrite it sharper using a named hook pattern. Use when the user has copy that sounds generic or AI-written.",
     inputSchema: {
       type: "object",
-      properties: {
-        copy: { type: "string", description: "The weak copy to tear down and rewrite." }
-      },
+      properties: { copy: { type: "string", description: "The weak copy to tear down and rewrite." } },
       required: ["copy"]
     }
-  },
-  {
-    name: "search_corpus",
-    description: "Search the analyzed-video library for real teardowns matching a niche, format, hook pattern, or product. Returns the hook, framework, signature device, and why it worked. Use to ground ideas in what's performed.",
-    inputSchema: {
-      type: "object",
-      properties: {
-        query: { type: "string", description: "A niche, format, hook pattern, or product (e.g. 'skincare before-after', 'POV beauty')." },
-        limit: { type: "number", description: "Max results (1-12). Default 6." }
-      },
-      required: ["query"]
-    }
-  },
-  {
-    name: "viral_teardowns",
-    description: "Return real breakout videos in a niche, each diagnosed for WHY it over-reached the creator's following: the hook technique, retention device, viral mechanism, and the one move to steal. Grounded in the actual transcript + engagement, not view counts. Use when the user asks what made videos go viral or wants proven mechanics to copy.",
-    inputSchema: {
-      type: "object",
-      properties: {
-        niche: { type: "string", description: "The niche to pull breakout teardowns for (e.g. 'skincare', 'ABG beauty')." },
-        limit: { type: "number", description: "Max teardowns (1-10). Default 5." }
-      },
-      required: ["niche"]
-    }
-  },
-  {
-    name: "content_gaps",
-    description: "Map supply vs demand in a niche: which hook patterns are crowded (everyone uses them) vs which over-perform but are under-used (the opening). Use when the user asks where the opportunity is, what's saturated, or how to stand out in a niche.",
-    inputSchema: {
-      type: "object",
-      properties: { niche: { type: "string", description: "The niche to map (e.g. 'skincare')." } },
-      required: ["niche"]
-    }
-  },
-  {
-    name: "format_playbook",
-    description: "How winning videos in a niche actually LOOK, read from the first 3 seconds of real videos: which content formats (talking-head, before-after, voiceover-broll, etc.) over-perform, plus the craft attributes (styling, framing, lighting) that correlate with breakouts. Use when the user asks what format to shoot, how a video should look, or about production/visual style.",
-    inputSchema: {
-      type: "object",
-      properties: { niche: { type: "string", description: "The niche (e.g. 'skincare')." } },
-      required: ["niche"]
-    }
-  },
-  {
-    name: "find_trends",
-    description: "Surface cross-niche trends mined from the corpus: patterns that recur across multiple creators AND niches and over-perform, each as a copyable formula + name (clustered by creative-unit, not topic). Use when the user asks what's trending, what patterns are working across niches, or for copyable formats.",
-    inputSchema: { type: "object", properties: { niche: { type: "string", description: "Optional niche filter." }, limit: { type: "number", description: "Max trends (1-18). Default 8." } } }
-  },
-  {
-    name: "study_examples",
-    description: "Return links to REAL TikTok videos to watch and study, filtered by niche, video format, and/or hook pattern, best breakouts first (with reach multiple + views). Use when the user wants to SEE real examples of a pattern/format/niche, get reference videos, or find videos to replicate. This grounds every recommendation in actual videos.",
-    inputSchema: { type: "object", properties: { niche: { type: "string", description: "Niche filter (e.g. 'skincare')." }, videoFormat: { type: "string", description: "Format filter (e.g. 'before-after', 'talking-head')." }, hookPattern: { type: "string", description: "Hook pattern filter (e.g. 'direct-callout')." }, limit: { type: "number", description: "Max videos (1-20). Default 8." } } }
-  },
-  {
-    name: "replicate_format",
-    description: "The make-a-video bridge: given a product (and niche/trend/model), return the proven format to copy, real example videos to watch first, a shoot-ready brief, AND a generation prompt scaffold for a specific AI video model (Seedance/Kling/Veo/Higgsfield). Use when the user wants to actually MAKE or replicate a video, not just analyze.",
-    inputSchema: { type: "object", properties: { product: { type: "string", description: "The product/offer to make a video for." }, niche: { type: "string", description: "The niche (picks the fitting trend)." }, trend: { type: "string", description: "Optional: a specific trend name to replicate." }, model: { type: "string", description: "Optional video model: seedance|kling|veo|higgsfield." } }, required: ["product"] }
-  },
-  {
-    name: "winning_combos",
-    description: "The combinations that win \u2014 not single factors. Returns which feature COMBINATIONS (hook pattern \xD7 video format \xD7 person trait \xD7 emotion \xD7 setting) over-index among breakouts vs normal videos, overall or per niche. Use when the user asks what actually makes a video go viral, what mix to use, or how to stack winning traits.",
-    inputSchema: { type: "object", properties: { niche: { type: "string", description: "Optional niche filter (else cross-niche)." } } }
-  },
-  {
-    name: "app_insights",
-    description: "The app-space vertical: how mobile apps market on short-form \u2014 which app categories advertise on UGC, the apps tracked, and which app-ad patterns over-index in breakouts. Use when the user asks about marketing a mobile app, app-store UGC, or app-ad formats.",
-    inputSchema: { type: "object", properties: {} }
-  },
-  {
-    name: "breakout_vs_dud",
-    description: "Why the SAME concept gets 1K vs 1M views: the first-3-seconds laws that separate breakouts from duds, derived from concept-matched winner/dud pairs (same niche+hook) compared frame-by-frame PLUS corpus-wide lift. Returns the laws, what over-indexes in winners, matched proof, and an honest confound caveat. Use when the user asks why a video flopped vs went viral, how to fix a weak opening, or what to nail in the first 3 seconds.",
-    inputSchema: { type: "object", properties: {} }
   },
   {
     name: "get_status",
@@ -15188,6 +15119,7 @@ var tools = [
   }
 ];
 server.setRequestHandler(ListToolsRequestSchema, async () => ({ tools }));
+var SEP = "\n\n---\n\n";
 server.setRequestHandler(CallToolRequestSchema, async (req) => {
   const { name, arguments: a = {} } = req.params;
   const args = a;
@@ -15196,53 +15128,55 @@ server.setRequestHandler(CallToolRequestSchema, async (req) => {
   let text;
   try {
     switch (name) {
-      case "video_ideas":
-        text = videoIdeas({ product: str("product"), niche: str("niche"), audience: str("audience"), count: num("count") });
+      case "niche_report": {
+        const niche = str("niche");
+        const focus = (str("focus") || "overview").toLowerCase();
+        if (focus === "trends")
+          text = findTrends(niche, num("limit") ?? 8);
+        else if (focus === "apps")
+          text = appInsights();
+        else if (focus === "format")
+          text = formatPlaybook(niche);
+        else if (focus === "combos")
+          text = winningCombos(niche);
+        else
+          text = [nicheDecode(niche), winningCombos(niche), contentGaps(niche)].join(SEP);
         break;
-      case "niche_decode":
-        text = nicheDecode(str("niche"), str("examples") || void 0);
+      }
+      case "study_videos": {
+        const q = str("query");
+        if (q) {
+          text = searchCorpus(q, num("limit") ?? 8);
+        } else {
+          const niche = str("niche");
+          const ex = studyExamples(niche, str("videoFormat"), str("hookPattern"), num("limit") ?? 8);
+          text = niche ? ex + SEP + viralTeardowns(niche, 3) : ex;
+        }
         break;
-      case "format_teardown":
-        text = formatTeardown(str("description"));
+      }
+      case "teardown": {
+        const video = str("video") || str("description");
+        if (video)
+          text = formatTeardown(video);
+        else
+          text = replicateFormat({ product: str("product"), niche: str("niche"), trend: str("trend"), model: str("model") });
         break;
-      case "cracked_hooks":
-        text = crackedHooks({ product: str("product"), niche: str("niche"), audience: str("audience"), count: num("count") });
+      }
+      case "make_brief": {
+        const mode = str("mode").toLowerCase();
+        if (mode === "ideas")
+          text = videoIdeas({ product: str("product"), niche: str("niche"), audience: str("audience"), count: num("count") });
+        else if (mode === "hooks")
+          text = crackedHooks({ product: str("product"), niche: str("niche"), audience: str("audience"), count: num("count") });
+        else
+          text = shootBrief({ product: str("product"), audience: str("audience"), objective: str("objective"), framework: str("framework") || void 0 });
         break;
-      case "shoot_brief":
-        text = shootBrief({ product: str("product"), audience: str("audience"), objective: str("objective"), framework: str("framework") || void 0 });
+      }
+      case "breakout_laws":
+        text = breakoutVsDud();
         break;
       case "kill_the_slop":
         text = killTheSlop(str("copy"));
-        break;
-      case "search_corpus":
-        text = searchCorpus(str("query"), num("limit") ?? 6);
-        break;
-      case "viral_teardowns":
-        text = viralTeardowns(str("niche"), num("limit") ?? 5);
-        break;
-      case "content_gaps":
-        text = contentGaps(str("niche"));
-        break;
-      case "format_playbook":
-        text = formatPlaybook(str("niche"));
-        break;
-      case "find_trends":
-        text = findTrends(str("niche"), num("limit") ?? 8);
-        break;
-      case "study_examples":
-        text = studyExamples(str("niche"), str("videoFormat"), str("hookPattern"), num("limit") ?? 8);
-        break;
-      case "replicate_format":
-        text = replicateFormat({ product: str("product"), niche: str("niche"), trend: str("trend"), model: str("model") });
-        break;
-      case "winning_combos":
-        text = winningCombos(str("niche"));
-        break;
-      case "app_insights":
-        text = appInsights();
-        break;
-      case "breakout_vs_dud":
-        text = breakoutVsDud();
         break;
       case "get_status":
         text = status(process.env.LAZYREEL_TOKEN || process.env.ABG_TOKEN);

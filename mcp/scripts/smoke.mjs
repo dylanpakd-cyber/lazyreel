@@ -30,16 +30,19 @@ function rpc(method, params) {
 }
 
 const cases = [
-  ["video_ideas", { product: "a lash serum", niche: "ABG beauty", audience: "girlies who've tried everything", count: 4 }],
-  ["niche_decode", { niche: "matcha DTC" }],
-  ["format_teardown", { description: "15s testimonial: girl checks mascara at 7pm, still perfect, link in bio" }],
-  ["cracked_hooks", { product: "a lash serum", niche: "ABG beauty", count: 6 }],
-  ["shoot_brief", { product: "a matcha latte kit", audience: "busy founders", objective: "first purchase" }],
+  ["niche_report", { niche: "skincare" }],
+  ["niche_report", { niche: "skincare", focus: "format" }],
+  ["niche_report", { focus: "trends" }],
+  ["niche_report", { focus: "apps" }],
+  ["study_videos", { niche: "skincare", limit: 4 }],
+  ["study_videos", { query: "before-after" }],
+  ["teardown", { video: "15s testimonial: girl checks mascara at 7pm, still perfect, link in bio" }],
+  ["teardown", { product: "a matcha latte kit", niche: "food and beverage", model: "higgsfield" }],
+  ["make_brief", { product: "a matcha latte kit", audience: "busy founders", objective: "first purchase" }],
+  ["make_brief", { product: "a lash serum", niche: "ABG beauty", mode: "ideas", count: 4 }],
+  ["make_brief", { product: "a lash serum", niche: "ABG beauty", mode: "hooks", count: 6 }],
+  ["breakout_laws", {}],
   ["kill_the_slop", { copy: "Discover the revolutionary power of our product to elevate your routine. 🚀 Game-changing." }],
-  ["search_corpus", { query: "skincare before-after", limit: 4 }],
-  ["viral_teardowns", { niche: "skincare", limit: 3 }],
-  ["content_gaps", { niche: "skincare" }],
-  ["breakout_vs_dud", {}],
   ["get_status", {}],
 ];
 

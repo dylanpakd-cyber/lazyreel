@@ -608,15 +608,20 @@ export function killTheSlop(copy: string): string {
 export function status(token?: string): string {
   const t = (token || "").trim();
   const tokenLine = t
-    ? `**Install token:** \`${t.slice(0, 8)}…\` — active. Authorizes the read-only UGC skills.`
-    : `**Install token:** none set (the skills still work; the token just namespaces an install).`;
+    ? `**Install token:** \`${t.slice(0, 8)}…\` is active. Authorizes the read-only UGC tools.`
+    : `**Install token:** none set (the tools still work; the token just namespaces an install).`;
   return [
-    "# LazyReel MCP — status",
+    "# LazyReel MCP status",
     "",
     tokenLine,
     "",
-    "**Live now:**",
-    "- 16 skills incl. breakout_vs_dud (why 1K vs 1M), winning_combos (what mix wins), replicate_format, study_examples (real links), find_trends, viral_teardowns",
+    "**Live now, 6 tools:**",
+    "- niche_report (what's working in a niche: hook/framework lift, real links, the gap; focus=format|trends|combos|apps)",
+    "- study_videos (real TikTok links to study, best breakouts first, plus why the top ones won)",
+    "- teardown (rebuild a winning video's DNA, or replicate a format for your product with a gen-prompt scaffold)",
+    "- make_brief (the shoot-ready brief; mode=ideas|hooks for concepts or a hook bank)",
+    "- breakout_laws (why the same concept gets 1K vs 1M views: the validated first-3-seconds laws)",
+    "- kill_the_slop (critique weak copy against the anti-slop bar, then rewrite it sharper)",
     `- ${getWinners().length} real breakout videos torn down (the actual viral mechanism, diagnosed from transcript + engagement)`,
     getVisualInsights().analyzed ? `- ${getVisualInsights().analyzed} videos analyzed visually (format + craft from the first 3 seconds of frames)` : "- visual/format layer: scripts ready, run pipeline/visual.mjs to populate",
     `- ${SCRIPT_FRAMEWORKS.length} named script frameworks, ${HOOK_PATTERNS.length} hook patterns, ${ANGLES.length} proven UGC angles`,
@@ -633,6 +638,6 @@ export function status(token?: string): string {
     "- Transcript/embedding search over a hosted video DB",
     "- Private per-account niche libraries",
     "",
-    "It's a real MCP connection with genuinely good, framework-grounded outputs — not a mock.",
+    "It's a real MCP connection with genuinely good, framework-grounded outputs, not a mock.",
   ].join("\n");
 }
