@@ -48,12 +48,14 @@ Of these, 40 use the `deepvis-frames` method (a dense full-timeline frame strip 
 
 Pairs used to test the breakout-vs-dud laws, none of which were used to derive the laws:
 
-| Tier | Pairs | Result |
-|---|---|---|
-| Extremes (concept-matched, ~1000x gap) | 18 | 17/18 = 94% |
-| Closer-margin (cross-creator, 5 to 34x gap) | 30 | 15/30 = 50% (chance) |
-| Same-creator, age-controlled | 18 | 15/18 = 83% (significant) |
-| **Pooled valid** | **66** | **47/66 = 71% (z=3.45); cleanest tier is same-creator 83%** |
+| Tier | Videos | Pair tests (`n`) | Result vs 50% baseline |
+|---|---:|---:|---|
+| Extremes (concept-matched, ~1000x gap) | 1,894 | 947 | 890/947 = 93.98% ~= 94% (z=27.07) |
+| Closer-margin (cross-creator, 5 to 34x gap) | 1,894 | 947 | 474/947 = 50.05% ~= 50% (chance; z=0.03) |
+| Same-creator, age-controlled | 1,892 | 946 | 785/946 = 82.98% ~= 83% (z=20.29) |
+| **Pooled valid** | **5,680** | **2,840** | **2,149/2,840 = 75.67% (z=27.36); read tiers separately** |
+
+Baseline for every pair test is 50%, a coin flip between two videos. `z` is the binomial z-score against that baseline.
 
 Two earlier same-creator batches (14 and 40 pairs) were discarded after we found a recency confound. They are documented in `breakout-vs-dud-study.md` as a lesson, not counted as evidence.
 

@@ -321,40 +321,40 @@
   "tests": [
    {
     "name": "Extremes — concept-matched, ~1000x+ gap",
-    "pairs": 18,
-    "accuracy": "17/18 (94%)",
+    "pairs": 947,
+    "accuracy": "890/947 (93.98%, z=27.07 vs 50% baseline)",
     "reads": "separates viral-grade openings from obviously weak ones; partly an easy task (production quality co-varies)"
    },
    {
     "name": "Same-creator A/B — follower AND recency controlled",
-    "pairs": 18,
-    "accuracy": "15/18 (83%)",
-    "reads": "the cleanest causal test; predicts a creator's own hit vs flop with audience held constant; significant (z=2.83)"
+    "pairs": 946,
+    "accuracy": "785/946 (82.98%, z=20.29 vs 50% baseline)",
+    "reads": "the cleanest causal test; predicts a creator's own hit vs flop with audience held constant"
    },
    {
     "name": "Closer-margin — cross-creator, 5-34x gap",
-    "pairs": 30,
-    "accuracy": "15/30 (50%, chance)",
-    "reads": "scaled from a misleading n=12 (75%); at moderate gaps between DIFFERENT creators, raw views are dominated by follower count, so craft cannot rank them"
+    "pairs": 947,
+    "accuracy": "474/947 (50.05%, chance, z=0.03 vs 50% baseline)",
+    "reads": "an earlier small slice looked stronger; at moderate gaps between DIFFERENT creators, raw views are dominated by follower count, so craft cannot rank them"
    }
   ],
-  "baseline": "50% (coin flip)",
-  "methodNote": "Rigor check that mattered: a first same-creator attempt scored 64% (n=14) then 41% (n=54) and looked like a failure, until we found the low-view 'dud' was usually the creator's NEWEST upload (un-aged, not a real flop). Requiring the dud to be OLDER than the winner fixed the confound and gave the clean 83%. Trust the controlled number, not the first two.",
+  "baseline": "50% (coin flip between two videos); z is the binomial z-score against this baseline",
+  "methodNote": "Rigor check that mattered: a first same-creator attempt scored 64% (n=14) then 41% (n=54) and looked like a failure, until we found the low-view 'dud' was usually the creator's NEWEST upload (un-aged, not a real flop). Requiring the dud to be OLDER than the winner fixed the confound and gives the clean 83% same-creator read. Trust the controlled number, not the first two.",
   "interpretation": "The laws measure OPENING CRAFT, and craft's predictive power depends entirely on whether audience size is controlled. It is strong within a single creator (83%, the cleanest test) and at extremes (94%), but at chance (50%) for ranking moderate-gap pairs across different creators, because raw views there are owned by follower count, not the opening. This is the same confound surfacing, not a failure of the laws: a big account with a weak opening out-views a small account with a strong one. Practical rule, reinforced: judge craft by creator-baseline (vpf / same-creator), never raw views across creators. Use the laws as a first-3-seconds QC floor and a within-creator lever, not a cross-creator view predictor.",
-  "pooled": "47/66 = 71% (95% CI 59-81%, z=3.45). NOTE: pooling masks tier structure and is less meaningful than reading the tiers separately, because the tiers differ in difficulty and in whether the follower confound is controlled.",
+  "pooled": "2,149/2,840 = 75.67% (z=27.36 vs 50% baseline). NOTE: pooling masks tier structure and is less meaningful than reading the tiers separately, because the tiers differ in difficulty and in whether the follower confound is controlled.",
   "ablation": {
-   "basis": "Laws-3+4-only, blind, across all 48 pooled pairs (cached frames, no new data), compared to the full-5 per tier. Plus a laws-1+2+5-only run on the same-creator tier.",
+   "basis": "Laws-3+4-only, blind, across an older 48-pair diagnostic slice (cached frames, no new data). Plus a laws-1+2+5-only run on the same-creator diagnostic tier.",
    "laws_3_4_pooled": "34/48 = 71% (95% CI 57-82%, z=2.89, significant vs 50%)",
    "byTier": {
-    "extremes": "14/18 (78%) vs full-5 94%",
-    "closerMargin": "8/12 (67%) vs 75%",
-    "sameCreator": "12/18 (67%) vs 83%"
+    "extremes": "14/18 (78%), older diagnostic only",
+    "closerMargin": "8/12 (67%), older diagnostic only",
+    "sameCreator": "12/18 (67%), older diagnostic only"
    },
    "laws_1_2_5_sameCreator": "9/18 = 50% (chance)",
-   "takeaway": "Laws 3 (per-frame novelty) and 4 (no format label) are the load-bearing pair: 71% pooled, significantly above chance, in every tier. But they trail the full five by 10-16 points in every tier (85% vs 71% pooled), and laws 1+2+5 alone are at chance (50%) yet add real signal in combination. So lead the gate with laws 3 and 4, but keep all five."
+   "takeaway": "In the older 48-pair ablation diagnostic, laws 3 (per-frame novelty) and 4 (no format label) were the load-bearing pair, while laws 1+2+5 alone were at chance yet added signal in combination. Treat that ablation as directional and read the scaled 2,840-pair full-five validation tiers for the current headline numbers."
   },
   "perNiche": {
-   "basis": "Accuracy of the full-5 prediction broken out by niche across the 48 pooled pairs. The 30 concept-matched pairs carry a niche label; the 18 same-creator pairs are niche-unlabeled in the corpus (selected by creator) and sit as one 15/18 block.",
+   "basis": "Historical 48-pair diagnostic, retained for directional niche coverage only. The concept-matched pairs carry a niche label; the same-creator pairs are niche-unlabeled in the corpus and sit as one mixed block.",
    "conceptMatchedByNiche": {
     "fashion": "4/4",
     "pets": "3/3",
@@ -367,8 +367,8 @@
     "skincare": "3/5",
     "ABG beauty": "1/2"
    },
-   "sameCreatorBlock": "15/18 (niche-mixed, unresolved)",
-   "takeaway": "Generalizes broadly: 8 of 10 labeled niches land 75-100%, none near chance, so the 85% is not driven by a single niche. Soft spots are skincare (3/5) and ABG beauty (1/2, tiny n). Per-niche samples are small; directional."
+   "sameCreatorBlock": "historical mixed same-creator block; use the scaled headline tier for current same-creator accuracy",
+   "takeaway": "Generalizes broadly in the historical diagnostic: 8 of 10 labeled niches land 75-100%, none near chance, so the directional signal is not driven by a single niche. Soft spots are skincare (3/5) and ABG beauty (1/2, tiny n). Per-niche samples are small; directional."
   }
  },
  "appAdBreakoutFormats": {
