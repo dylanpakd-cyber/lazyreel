@@ -1,4 +1,4 @@
-# fal.ai API — Seedance 2.0
+# fal.ai API: Seedance 2.0
 
 This skill uses three fal.ai endpoints for Seedance 2.0. All three share the same auth, response format, and pricing structure.
 
@@ -9,19 +9,19 @@ All requests need this header:
 Authorization: Key <FAL_KEY>
 ```
 
-Load the key from `.env` or environment — never hardcode and never pass through chat.
+Load the key from `.env` or environment, never hardcode and never pass through chat.
 
 ## The three endpoints
 
 | Mode | Endpoint | Use case |
 |---|---|---|
 | Image-to-video | `https://fal.run/bytedance/seedance-2.0/image-to-video` | Your image IS the literal first frame; Seedance animates from it |
-| Reference-to-video | `https://fal.run/bytedance/seedance-2.0/reference-to-video` | Up to 9 image refs + 3 video refs + 3 audio refs — reference them in the prompt with `@Image1`, `@Video1`, `@Audio1` |
-| Text-to-video | `https://fal.run/bytedance/seedance-2.0/text-to-video` | No visual input — pure prompt (fallback when user has no product image) |
+| Reference-to-video | `https://fal.run/bytedance/seedance-2.0/reference-to-video` | Up to 9 image refs + 3 video refs + 3 audio refs, reference them in the prompt with `@Image1`, `@Video1`, `@Audio1` |
+| Text-to-video | `https://fal.run/bytedance/seedance-2.0/text-to-video` | No visual input, pure prompt (fallback when user has no product image) |
 
-**Note:** There is no separate "Pro" tier on fal.ai — this IS Seedance 2.0. The `/pro/` path from older docs does not exist. Use the three endpoints above.
+**Note:** There is no separate "Pro" tier on fal.ai, this IS Seedance 2.0. The `/pro/` path from older docs does not exist. Use the three endpoints above.
 
-## Pricing — real numbers
+## Pricing: real numbers
 
 Seedance 2.0 is expensive. Budget accordingly.
 
@@ -34,7 +34,7 @@ Seedance 2.0 is expensive. Budget accordingly.
 
 The video-reference discount (40% off) is significant. If you're doing multi-shot character consistency (passing shot 1's output video as a reference for shot 2), it's both better quality AND cheaper than always regenerating from just the product image.
 
-480p is roughly half the cost of 720p. 1080p is roughly double. fal.ai posts current rates at [https://fal.ai/models/bytedance/seedance-2.0/image-to-video](https://fal.ai/models/bytedance/seedance-2.0/image-to-video) — check before the first run if it's been a while.
+480p is roughly half the cost of 720p. 1080p is roughly double. fal.ai posts current rates at [https://fal.ai/models/bytedance/seedance-2.0/image-to-video](https://fal.ai/models/bytedance/seedance-2.0/image-to-video), check before the first run if it's been a while.
 
 ## Install the Python client
 
@@ -134,7 +134,7 @@ with ThreadPoolExecutor(max_workers=5) as pool:
 
 A 5-second 720p clip usually takes 40–90 seconds to generate. Running shots in parallel cuts total time roughly 3–5x.
 
-### Cowork sandbox — use sync endpoint instead of fal_client
+### Cowork sandbox: use sync endpoint instead of fal_client
 
 `fal_client.subscribe` and `fal_client.submit` both route through `queue.fal.run` under the hood, which is unreliable inside Cowork's sandbox even with the host on the allowlist. When running in Cowork, bypass the client and POST directly to the sync endpoint:
 
@@ -155,22 +155,22 @@ response.raise_for_status()
 result = response.json()  # {"video": {"url": "..."}, "seed": 42}
 ```
 
-The sync endpoint holds the HTTP connection open until generation completes (~60-120 seconds for a 5-second clip). Response shape is identical to the client's output. For parallel multi-shot runs from Cowork, fire multiple sync requests from a ThreadPoolExecutor — each thread holds its own long-lived connection.
+The sync endpoint holds the HTTP connection open until generation completes (~60-120 seconds for a 5-second clip). Response shape is identical to the client's output. For parallel multi-shot runs from Cowork, fire multiple sync requests from a ThreadPoolExecutor, each thread holds its own long-lived connection.
 
-In Claude Code, use `fal_client.subscribe` as documented above — it's more convenient and the queue endpoint works fine outside the sandbox.
+In Claude Code, use `fal_client.subscribe` as documented above, it's more convenient and the queue endpoint works fine outside the sandbox.
 
 ## Parameter reference (shared across endpoints)
 
 ### Duration
-- Type: string (NOT integer — this catches people)
+- Type: string (NOT integer, this catches people)
 - Values: `"auto"`, `"4"`, `"5"`, `"6"`, `"7"`, `"8"`, `"9"`, `"10"`, `"11"`, `"12"`, `"13"`, `"14"`, `"15"`
 - Default: `"auto"` (model picks based on prompt)
-- For UGC shots, use `"5"` — tight enough for punchy pacing
+- For UGC shots, use `"5"`, tight enough for punchy pacing
 
 ### Resolution
-- `"480p"` — cheapest, fine for testing but text on packaging will garble
-- `"720p"` — default, good balance
-- `"1080p"` — highest quality, ~2x cost
+- `"480p"`, cheapest, fine for testing but text on packaging will garble
+- `"720p"`, default, good balance
+- `"1080p"`, highest quality, ~2x cost
 
 ### Aspect ratio
 - For UGC going to Meta/TikTok/Reels: `"9:16"`
@@ -178,12 +178,12 @@ In Claude Code, use `fal_client.subscribe` as documented above — it's more con
 - `"auto"` lets the model infer from the input image
 
 ### generate_audio
-- `true` (default) — Seedance generates dialogue, SFX, ambient audio
-- `false` — silent clip; dub in post (ElevenLabs, music in CapCut)
-- **Cost is the same either way** — audio is free to generate, you're paying for the video
+- `true` (default), Seedance generates dialogue, SFX, ambient audio
+- `false`, silent clip; dub in post (ElevenLabs, music in CapCut)
+- **Cost is the same either way**, audio is free to generate, you're paying for the video
 
 ### image_to_video extras
-- `end_image_url` (optional) — if provided, Seedance transitions from `image_url` (first frame) to `end_image_url` (last frame). Great for before/after ads.
+- `end_image_url` (optional), if provided, Seedance transitions from `image_url` (first frame) to `end_image_url` (last frame). Great for before/after ads.
 
 ## File upload
 
@@ -203,7 +203,7 @@ curl -X POST https://fal.run/storage/upload \
 Returns JSON with the upload URL.
 
 **Option 3: Already-hosted image**
-If the product image is already on the user's Shopify CDN or similar, pass that URL directly — no re-upload needed.
+If the product image is already on the user's Shopify CDN or similar, pass that URL directly, no re-upload needed.
 
 ## Response shape
 
@@ -216,7 +216,7 @@ If the product image is already on the user's Shopify CDN or similar, pass that 
 }
 ```
 
-The `video.url` is a signed URL — download it to local disk right after the call. Don't save it and expect it to work tomorrow.
+The `video.url` is a signed URL, download it to local disk right after the call. Don't save it and expect it to work tomorrow.
 
 ```python
 import requests

@@ -21,15 +21,15 @@ handheld phone framing. She says "You guys, this just came in and I've
 been waiting a month for this." UGC style, iPhone quality, vertical 9:16.
 ```
 
-## Anatomy — what each piece does
+## Anatomy: what each piece does
 
 **Shot type + framing**: "close-up," "medium shot," "POV," "overhead," "selfie-style." This controls how Seedance composes the frame.
 
-**Subject**: If using reference-to-video, describe the creator ("25-year-old woman," "early-30s man with beard," etc.) so the generated character looks consistent across shots. Be specific about age and a couple features — Seedance will lock on these.
+**Subject**: If using reference-to-video, describe the creator ("25-year-old woman," "early-30s man with beard," etc.) so the generated character looks consistent across shots. Be specific about age and a couple features, Seedance will lock on these.
 
-**Action**: Keep it to ONE clear action per shot. "Holding the product and tilting it toward the camera" works. "Opening the box, then showing the product, then putting it on" does not — it's too many actions for a single 5-second clip.
+**Action**: Keep it to ONE clear action per shot. "Holding the product and tilting it toward the camera" works. "Opening the box, then showing the product, then putting it on" does not, it's too many actions for a single 5-second clip.
 
-**Environment + lighting**: UGC lives in real environments. Bedroom, kitchen, bathroom, car, coffee shop, outdoor walk. Always specify natural lighting (morning, golden hour, overcast) — studio lighting reads as commercial, not UGC.
+**Environment + lighting**: UGC lives in real environments. Bedroom, kitchen, bathroom, car, coffee shop, outdoor walk. Always specify natural lighting (morning, golden hour, overcast), studio lighting reads as commercial, not UGC.
 
 **Camera movement**: "Handheld," "slight shake," "static selfie-style," "slow pan." For UGC, handheld + static selfie-style is the default. Don't ask for complex camera moves unless it's a specific directed shot.
 
@@ -41,14 +41,14 @@ been waiting a month for this." UGC style, iPhone quality, vertical 9:16.
 
 Drop these in whenever relevant:
 
-- `iPhone quality` — prevents overly-polished lighting
-- `slight camera shake` — adds realism
-- `selfie-style arm extension` — classic UGC framing for first-person shots
-- `imperfect framing` — Seedance will otherwise center everything perfectly
-- `natural skin texture, visible pores` — avoids the "plastic skin" AI tell
-- `casual lighting, not studio` — blocks the overhead softbox look
-- `real apartment, not staged` — for lifestyle shots
-- `vertical 9:16, mobile-first framing` — always end with this for paid social
+- `iPhone quality`, prevents overly-polished lighting
+- `slight camera shake`, adds realism
+- `selfie-style arm extension`, classic UGC framing for first-person shots
+- `imperfect framing`, Seedance will otherwise center everything perfectly
+- `natural skin texture, visible pores`, avoids the "plastic skin" AI tell
+- `casual lighting, not studio`, blocks the overhead softbox look
+- `real apartment, not staged`, for lifestyle shots
+- `vertical 9:16, mobile-first framing`, always end with this for paid social
 
 ## Dialogue rules
 
@@ -58,9 +58,9 @@ Write dialogue like a real person texts, not like a script:
 - ✅ "Bro, these just came in. Look at this."
 - ❌ "Introducing the new product you've been waiting for."
 
-Include a natural pause or filler in the first 1 second — Seedance uses that pause to establish the subject before speech starts.
+Include a natural pause or filler in the first 1 second, Seedance uses that pause to establish the subject before speech starts.
 
-## Reference syntax — CRITICAL for reference-to-video
+## Reference syntax: CRITICAL for reference-to-video
 
 In reference-to-video mode you pass arrays of reference inputs: `image_urls`, `video_urls`, `audio_urls`. To use them you must explicitly reference each one in the prompt text using `@` syntax:
 
@@ -98,12 +98,12 @@ UGC style, iPhone quality, vertical 9:16.
 - `@Audio1` = a recording of the user's (or a chosen voice's) audio
 - Seedance will lip-sync the visual character to that audio
 
-## Reference-to-video vs image-to-video — how the prompt differs
+## Reference-to-video vs image-to-video: how the prompt differs
 
 **Image-to-video** (product image = literal first frame):
 - Prompt describes what happens AFTER the frame
 - Example: "The product box sits on a wooden table. A hand enters frame from the right and picks it up, turning it to show the side label."
-- No `@` syntax needed — there's only one input, the first-frame image
+- No `@` syntax needed, there's only one input, the first-frame image
 
 **Reference-to-video** (inputs inform the scene, Seedance composes around them):
 - Prompt describes the whole scene AND references inputs with `@Image1`, `@Video1`, `@Audio1`
@@ -118,10 +118,10 @@ UGC style, iPhone quality, vertical 9:16.
 | Creator face morphs between shots | No character reference | Pass a creator reference image across all shots in reference-to-video mode |
 | Dialogue doesn't match audio | Prompt dialogue wasn't in quotes | Wrap dialogue in quotes exactly as you want it spoken |
 | Generic "stock ad" aesthetic | Missing UGC modifiers | Add `iPhone quality, handheld, UGC style, casual lighting` |
-| Product disappears mid-shot | Too many actions | One action per shot — split into two clips |
+| Product disappears mid-shot | Too many actions | One action per shot, split into two clips |
 | Weird mouth movement | Audio generation artifact | Regenerate with same seed, or generate without audio and dub later |
 
-## Negative prompting (soft — Seedance doesn't take explicit negative prompts like Stable Diffusion)
+## Negative prompting (soft: Seedance doesn't take explicit negative prompts like Stable Diffusion)
 
 Seedance v2 doesn't have a formal negative prompt field. Work around it by adding "not" phrasing in the main prompt:
 
@@ -142,7 +142,7 @@ Pattern:
 [explicit list of forbidden elements]
 ```
 
-Example (blush stick — high-risk makeup application):
+Example (blush stick, high-risk makeup application):
 
 ```
 A 25-year-old woman in her bathroom holds @Image1 up to the camera,
@@ -159,7 +159,7 @@ Notice:
 - The desired state is DESCRIBED positively (natural blush on cheeks that matches the product)
 - The action is CONSTRAINED ("stays in her hand the entire shot")
 
-If the first generation still hallucinates forbidden elements, regenerate with even more explicit language. This is iteration territory — expect 1-2 retries for hard categories.
+If the first generation still hallucinates forbidden elements, regenerate with even more explicit language. This is iteration territory, expect 1-2 retries for hard categories.
 
 ## Continuing a shot into the next one (character consistency)
 

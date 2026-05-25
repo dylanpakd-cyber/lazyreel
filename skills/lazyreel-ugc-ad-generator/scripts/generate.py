@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-generate.py — Seedance 2.0 multi-shot generator.
+generate.py, Seedance 2.0 multi-shot generator.
 
 Submits multiple shots to fal.ai in parallel, waits for completion, and
 downloads the resulting MP4s to a local folder.
@@ -148,7 +148,7 @@ def download_video(url: str, dest_path: str) -> None:
 
 
 def call_fal_sync(endpoint: str, args: dict) -> dict:
-    """POST directly to fal.run sync endpoint — bypasses fal_client/queue.
+    """POST directly to fal.run sync endpoint, bypasses fal_client/queue.
     Used in Cowork environments where queue.fal.run is unreliable."""
     url = f"https://fal.run/{endpoint}"
     r = requests.post(
@@ -165,7 +165,7 @@ def call_fal_sync(endpoint: str, args: dict) -> dict:
 
 
 def call_fal_client(endpoint: str, args: dict) -> dict:
-    """Standard path via fal_client.subscribe — works outside Cowork."""
+    """Standard path via fal_client.subscribe, works outside Cowork."""
     import fal_client
     return fal_client.subscribe(endpoint, arguments=args, with_logs=False)
 

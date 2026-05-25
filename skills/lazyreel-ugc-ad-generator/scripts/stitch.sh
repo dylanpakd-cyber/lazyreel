@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# stitch.sh — concatenate Seedance clips into one vertical UGC ad.
+# stitch.sh: concatenate Seedance clips into one vertical UGC ad.
 #
 # Usage: ./stitch.sh <clips-dir> <output-file>
 # Example: ./stitch.sh outputs/my-ad/clips outputs/my-ad/final-ad.mp4
