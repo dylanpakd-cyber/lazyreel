@@ -1,10 +1,10 @@
 {
-  "name": "abg-cmo-mcp",
+  "name": "lazyreel-mcp",
   "version": "0.1.0",
-  "description": "ABG CMO — an MCP server that gives a coding agent genuinely good short-form / UGC video marketing skills (ideation, niche analysis, format teardown, hooks, shoot briefs, anti-slop rewrites).",
+  "description": "LazyReel — an MCP server that gives a coding agent genuinely good short-form / UGC video marketing skills (ideation, niche analysis, format teardown, hooks, shoot briefs, anti-slop rewrites).",
   "type": "module",
   "bin": {
-    "abg-cmo-mcp": "build/index.js"
+    "lazyreel-mcp": "build/index.js"
   },
   "files": [
     "build",

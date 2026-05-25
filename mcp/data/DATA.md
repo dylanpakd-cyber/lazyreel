@@ -4,7 +4,7 @@ This folder holds the redistributable data the skills draw on. Everything here i
 
 ## analyzed-videos.json
 
-Original work. These are representative teardowns of short form video patterns that perform, authored in ABG CMO's own framework language. They are not scraped TikTok content and contain no real user data. Safe to redistribute. Grow this file freely.
+Original work. These are representative teardowns of short form video patterns that perform, authored in LazyReel's own framework language. They are not scraped TikTok content and contain no real user data. Safe to redistribute. Grow this file freely.
 
 ## trending-hashtags.csv
 

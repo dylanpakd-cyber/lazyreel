@@ -72,7 +72,7 @@ mcp/            the real stdio MCP server (TypeScript)
   data/         the decoded corpus: teardowns, aggregates, trending tags (see DATA.md)
   pipeline/     the scrape, label, score, and teardown pipeline (how the corpus is built)
 skills/         companion agent skills that turn research into generation prompts
-  abg-ugc-ad-director/, abg-ugc-ad-generator/, abg-format-*/  (each with its own references/)
+  lazyreel-ugc-ad-director/, lazyreel-ugc-ad-generator/, lazyreel-format-*/  (each with its own references/)
 docs/           how the findings were reached, validated, and committed
   methodology/  the research method, the blind validation protocol, data discipline
 wiki/           a browsable graph of insights, readable on GitHub

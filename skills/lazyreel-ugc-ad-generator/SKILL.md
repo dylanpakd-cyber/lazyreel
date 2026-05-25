@@ -1,9 +1,9 @@
 ---
-name: abg-ugc-ad-generator
+name: lazyreel-ugc-ad-generator
 description: Generate multi-shot UGC video ads for DTC brands and creative agencies using Seedance 2.0 via the fal.ai API. Auto-writes UGC dialogue and shot lists from a product image plus an ad angle (unboxing, testimonial, lifestyle demo, problem-solution, before-after, or freeform), fires prompts to Seedance, downloads every clip, and stitches them into one finished vertical ad with ffmpeg. Use whenever the user wants to create a UGC ad, generate UGC video, make a TikTok/Reels/Meta video ad, turn a product photo into video, clone a UGC ad, or make creator-style video content for a DTC brand. Also trigger on phrases like "make me a UGC video ad," "generate a Seedance ad," "UGC from this product," or when the user drops a product image and asks for a video ad.
 ---
 
-# ABG CMO — UGC Ad Generator (Seedance 2.0 + fal.ai)
+# LazyReel — UGC Ad Generator (Seedance 2.0 + fal.ai)
 
 Generates multi-shot UGC video ads for DTC brands using Seedance 2.0 on fal.ai. One product image plus one ad angle produces a finished vertical ad with hook, demo, and CTA — ready to upload to Meta, TikTok, or Reels.
 

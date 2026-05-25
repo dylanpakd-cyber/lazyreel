@@ -1,9 +1,9 @@
 ---
-name: abg-ugc-ad-director
-description: Create hyper-realistic AI UGC video ad prompts (Seedance 2.0). Give it a script, product concept, or an ABG CMO format/brief and get Pinterest reference links and detailed, copy-paste shot prompts. Use to MAKE a short-form video from a proven format. Pairs with the ABG CMO MCP — pull what works first (find_trends, study_examples, replicate_format), then this writes the prompts.
+name: lazyreel-ugc-ad-director
+description: Create hyper-realistic AI UGC video ad prompts (Seedance 2.0). Give it a script, product concept, or an LazyReel format/brief and get Pinterest reference links and detailed, copy-paste shot prompts. Use to MAKE a short-form video from a proven format. Pairs with the LazyReel MCP — pull what works first (find_trends, study_examples, replicate_format), then this writes the prompts.
 ---
 
-# ABG CMO — UGC Ad Director (Seedance 2.0)
+# LazyReel — UGC Ad Director (Seedance 2.0)
 
 **MANDATORY RULES — read these before doing anything:**
 

@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 // decode.mjs — the decoder. Turns a video record (transcript + caption +
-// engagement) into one structured ABG CMO record: hook, hook pattern, framework,
+// engagement) into one structured LazyReel record: hook, hook pattern, framework,
 // niche, engagement tier, why it worked, confidence. Heuristic, offline, scales.
 //
 // Usage:

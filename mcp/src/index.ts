@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-// ABG CMO MCP server — stdio. Exposes 6 UGC-video marketing skills as tools.
+// LazyReel MCP server — stdio. Exposes 6 UGC-video marketing skills as tools.
 // stdout is reserved for JSON-RPC; all logging goes to stderr.
 
 import { Server } from "@modelcontextprotocol/sdk/server/index.js";
@@ -14,7 +14,7 @@ import {
 import { SCRIPT_FRAMEWORKS } from "./frameworks.js";
 
 const server = new Server(
-  { name: "abg-cmo", version: "0.1.0" },
+  { name: "lazyreel", version: "0.1.0" },
   { capabilities: { tools: {} } },
 );
 
@@ -230,7 +230,7 @@ server.setRequestHandler(CallToolRequestSchema, async (req) => {
 async function main() {
   const transport = new StdioServerTransport();
   await server.connect(transport);
-  console.error("ABG CMO MCP server running on stdio.");
+  console.error("LazyReel MCP server running on stdio.");
 }
 
 main().catch((e) => {

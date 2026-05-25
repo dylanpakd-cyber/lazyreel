@@ -58,7 +58,7 @@ const sharedPatterns = Object.entries(patternNiches)
   .map(([p, ns]) => `- **[${p}](patterns/${slug(p)}.md)** wins in ${ns.length} niches: ${ns.map((x) => x.niche).join(", ")}`)
   .join("\n");
 
-writeFileSync(`${WIKI}/README.md`, `# ABG CMO — decoded insights wiki
+writeFileSync(`${WIKI}/README.md`, `# LazyReel — decoded insights wiki
 
 Auto-generated from ${stats.decodedByPipeline?.toLocaleString() || "the"} real short-form videos decoded by the pipeline. This is derived analysis (no source video content). Regenerate with \`node pipeline/build-wiki.mjs\`.
 

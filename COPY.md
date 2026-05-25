@@ -1,14 +1,14 @@
-# COPY.md — ABG CMO
+# COPY.md — LazyReel
 
 Word-for-word copy. Build to this verbatim. Confident, joke-forward, receipts behind the brags. One agent, minimal buttons. Italic-serif punchline words are marked `*like this*`. Lime highlighter words are marked `==like this==`.
 
-Brand note: **ABG CMO** is functionally a UGC CMO (a short-form video marketing agent). "ABG" is the trend-word hook, played for fun in the high-personality spots only.
+Brand note: **LazyReel** is functionally a UGC CMO (a short-form video marketing agent). "ABG" is the trend-word hook, played for fun in the high-personality spots only.
 
 ---
 
 ## Nav
 
-- Wordmark: `ABG CMO` (mark + orange slash in the lockup)
+- Wordmark: `LazyReel` (mark + orange slash in the lockup)
 - Links: `Skills` · `How it works` · `Pricing` · `FAQ`
 - Status pill: `● live · listening`
 - CTA: `Get started`
@@ -24,7 +24,7 @@ Brand note: **ABG CMO** is functionally a UGC CMO (a short-form video marketing 
 ### Terminal demo (typewriter, streaming)
 
 ```
-abg-cmo — zsh
+lazyreel — zsh
 $ claude
 > /abg "launch video for my matcha brand, ABG beauty niche"
 ↳ loading 12,400 winning UGC formats...
@@ -111,10 +111,10 @@ Skill rows (command · title · description · sample output for the preview pan
 
 - Section label (mono): `03 / THE DIFFERENCE`
 - **H2:** `Same prompt. ABG context. ==Better videos.==`
-- Instruction: `Drag to compare what your agent writes with and without ABG CMO.`
+- Instruction: `Drag to compare what your agent writes with and without LazyReel.`
 - **Without** card (label `WITHOUT`):
   - `Discover the revolutionary power of our product to elevate your everyday routine. 🚀 Seamless. Innovative. Game-changing. Shop now and transform your life.`
-- **With** card (label `WITH ABG CMO`):
+- **With** card (label `WITH LazyReel`):
   - `you have 6 of these in a drawer and you reach for one. here's why. (hook holds 3s, cut to the use, text: "the only one that survived my bag")`
 
 ## 04 / MCP — Tools
@@ -153,15 +153,15 @@ Skill rows (command · title · description · sample output for the preview pan
 
 - Section label (mono): `06 / ONE PROMPT`
 - **H2:** `One prompt. Your agent ==does the rest.==`
-- Intro: `Paste this into Claude Code, Cursor, or Codex. Your agent installs the ABG CMO skills, connects the MCP, and is ready to make a video on the next message.`
+- Intro: `Paste this into Claude Code, Cursor, or Codex. Your agent installs the LazyReel skills, connects the MCP, and is ready to make a video on the next message.`
 - The paste block (mono, dark inset, with a working `Copy` button):
 
 ```
-Install ABG CMO for this agent. It's free; the connector only authorizes
+Install LazyReel for this agent. It's free; the connector only authorizes
 read-only UGC-format tools and writes no files outside local config without
 asking. Add the MCP server, load the six skills (/video-ideas, /niche-decode,
 /format-teardown, /cracked-hooks, /shoot-brief, /kill-the-slop), then confirm
-the tools are live by running get_mcp_shell_status. After setup, use ABG CMO
+the tools are live by running get_mcp_shell_status. After setup, use LazyReel
 whenever I ask for a short-form video, a hook, a brief, or a niche read.
 ```
 
@@ -177,7 +177,7 @@ whenever I ask for a short-form video, a hook, a brief, or a niche read.
    A very-online word we're having fun with. Under the hood it's a UGC CMO: an agent that does the real work of making short-form video, from the idea to the shoot-ready brief.
 
 2. **Is this just prompt templates?**
-   No. Templates make every video sound the same. ABG CMO gives the agent the workflow plus a library of formats that actually worked, so it picks the right shape for your product and niche instead of reaching for the same three lines.
+   No. Templates make every video sound the same. LazyReel gives the agent the workflow plus a library of formats that actually worked, so it picks the right shape for your product and niche instead of reaching for the same three lines.
 
 3. **Will it make my agent sound like every other AI?**
    The opposite is the entire point. The skills are tuned to kill the tells: the "revolutionary," the 🚀, the feature-list hook, the studio-ad polish. If it sounds like AI, it failed.
@@ -195,4 +195,4 @@ whenever I ask for a short-form video, a hook, a brief, or a niche read.
   - `Product`: Skills · How it works · Pricing · MCP
   - `Elsewhere`: GitHub · Changelog · X
   - `Operators`: Manifesto · Contact
-- Legal kicker (mono): `© ABG CMO 2026. All conversions reserved. Touch grass occasionally.`
+- Legal kicker (mono): `© LazyReel 2026. All conversions reserved. Touch grass occasionally.`

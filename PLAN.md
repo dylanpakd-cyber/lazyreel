@@ -1,8 +1,8 @@
-# ABG CMO Landing Site — Implementation Plan
+# LazyReel Landing Site — Implementation Plan
 
 > **For agentic workers:** Build this with the `frontend-design` skill. Follow [DESIGN.md](DESIGN.md) for the visual system and [COPY.md](COPY.md) for verbatim words. Steps use checkbox (`- [ ]`) syntax. Because this is a static marketing page, the acceptance check at each task is a **screenshot at 390 / 768 / 1440px**, not a unit test. Commit after each task.
 
-**Goal:** Build a single-page, hand-crafted marketing site for ABG CMO that looks like a real operator made it, not an AI.
+**Goal:** Build a single-page, hand-crafted marketing site for LazyReel that looks like a real operator made it, not an AI.
 
 **Architecture:** Next.js (App Router). Content lives in one typed `lib/content.ts` module (lifted verbatim from COPY.md); every section is a focused presentational component; only the four genuinely interactive pieces (Skills showcase, Stats count-up, Difference slider, OnePrompt copy block) plus the Terminal/SloganTape animations are client components. A single CSS-variable token system in `globals.css` carries the whole visual language. No utility-class soup, no component library.
 
@@ -94,7 +94,7 @@ body{ background:var(--paper); color:var(--ink); font-family:var(--font-inter),s
 
 **Files:** Create `components/Nav.tsx` + `.module.css`
 
-- [ ] **Step 1:** Sticky nav. Left: `ABG CMO` wordmark with a CM mark and an orange (`--flag`) slash. Center: 4 links (Skills, How it works, Pricing, FAQ) collapsing below ~720px. Right: a status pill (`● live · listening`, pulsing `--flag` dot) + one primary pill CTA `Get started`. **No more than this — button discipline per DESIGN.md §5.**
+- [ ] **Step 1:** Sticky nav. Left: `LazyReel` wordmark with a CM mark and an orange (`--flag`) slash. Center: 4 links (Skills, How it works, Pricing, FAQ) collapsing below ~720px. Right: a status pill (`● live · listening`, pulsing `--flag` dot) + one primary pill CTA `Get started`. **No more than this — button discipline per DESIGN.md §5.**
 - [ ] **Step 2 (acceptance):** Screenshot at 1440 and 390. Desktop shows all links; mobile hides center links, keeps CTA + status pill. Exactly one filled button.
 - [ ] **Step 3:** Commit.
 
@@ -102,8 +102,8 @@ body{ background:var(--paper); color:var(--ink); font-family:var(--font-inter),s
 
 **Files:** Create `components/Hero.tsx`, `components/Terminal.tsx` (+ modules)
 
-- [ ] **Step 1:** Centered hero: mono eyebrow `AGENT-FIRST UGC`; H1 `Make your agent an ABG CMO.` with "ABG" set in Instrument Serif italic and a lime highlighter swipe behind it; subhead; **two CTAs max** (`Get started` filled pill + `See it work →` text link, not a second filled button); compatibility line. **No agent-mode switcher.**
-- [ ] **Step 2:** `Terminal` (client): dark inset (`--ink-2`), faux title bar `abg-cmo — zsh`, the `terminalLines` revealed with a typewriter effect and a blinking cursor; line colors per DESIGN.md §6 (command white, prompt orange, `↳` muted, `✓` lime). Reduced-motion shows all lines instantly.
+- [ ] **Step 1:** Centered hero: mono eyebrow `AGENT-FIRST UGC`; H1 `Make your agent an LazyReel.` with "ABG" set in Instrument Serif italic and a lime highlighter swipe behind it; subhead; **two CTAs max** (`Get started` filled pill + `See it work →` text link, not a second filled button); compatibility line. **No agent-mode switcher.**
+- [ ] **Step 2:** `Terminal` (client): dark inset (`--ink-2`), faux title bar `lazyreel — zsh`, the `terminalLines` revealed with a typewriter effect and a blinking cursor; line colors per DESIGN.md §6 (command white, prompt orange, `↳` muted, `✓` lime). Reduced-motion shows all lines instantly.
 - [ ] **Step 3 (acceptance):** Screenshot at all three widths. The highlighted italic "ABG" reads as the focal point; terminal animates then rests; exactly one filled CTA.
 - [ ] **Step 4:** Commit.
 
@@ -136,7 +136,7 @@ body{ background:var(--paper); color:var(--ink); font-family:var(--font-inter),s
 
 **Files:** Create `components/Difference.tsx` + module
 
-- [ ] **Step 1:** Two stacked comparison cards (WITHOUT = the cringe AI-slop copy; WITH ABG CMO = the real hook), a draggable vertical divider with a handle, `aria-label`, and keyboard support (←/→ move the divider). Instruction line `Drag to compare`. H2 with "Better videos." highlighted.
+- [ ] **Step 1:** Two stacked comparison cards (WITHOUT = the cringe AI-slop copy; WITH LazyReel = the real hook), a draggable vertical divider with a handle, `aria-label`, and keyboard support (←/→ move the divider). Instruction line `Drag to compare`. H2 with "Better videos." highlighted.
 - [ ] **Step 2 (acceptance):** Screenshot mid-drag; works with mouse, touch, and keyboard; the contrast between slop and real copy is obvious.
 - [ ] **Step 3:** Commit.
 

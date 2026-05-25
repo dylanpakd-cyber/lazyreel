@@ -1,4 +1,4 @@
-// skills.ts — the 6 ABG CMO skills. Each composes the framework library into a
+// skills.ts — the 6 LazyReel skills. Each composes the framework library into a
 // genuinely good, specific output. Deterministic (seeded by the input) so the
 // same brief gives stable results, but varied across products.
 
@@ -593,7 +593,7 @@ export function status(token?: string): string {
     ? `**Install token:** \`${t.slice(0, 8)}…\` — active. Authorizes the read-only UGC skills.`
     : `**Install token:** none set (the skills still work; the token just namespaces an install).`;
   return [
-    "# ABG CMO MCP — status",
+    "# LazyReel MCP — status",
     "",
     tokenLine,
     "",

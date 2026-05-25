@@ -1,4 +1,4 @@
-# DESIGN.md — ABG CMO
+# DESIGN.md — LazyReel
 
 > This file is the design system prompt. Hand it to Claude Code with the `frontend-design` skill and build the site to this spec. Words live in [COPY.md](COPY.md). Build/sequence steps live in [PLAN.md](PLAN.md). Build the whole thing as one cohesive, hand-crafted page. No template, no component-library default look.
 
@@ -6,9 +6,9 @@
 
 ## 1. The product, in one breath
 
-**ABG CMO** gives a coding agent the taste, formats, and hooks it takes to make short-form video that actually performs. Plug it in and your agent stops writing generic AI ad mush and starts shipping UGC that converts. It ships as an MCP connector plus a set of opinionated, video-creation skills.
+**LazyReel** gives a coding agent the taste, formats, and hooks it takes to make short-form video that actually performs. Plug it in and your agent stops writing generic AI ad mush and starts shipping UGC that converts. It ships as an MCP connector plus a set of opinionated, video-creation skills.
 
-- **Headline:** "Make your agent an ABG CMO."
+- **Headline:** "Make your agent an LazyReel."
 - **Positioning line:** "UGC taste for AI. Not AI for UGC."
 - **What it actually is:** a UGC / short-form video marketing agent. "ABG" is the trend-word hook, used for fun (67labs / terminally-online energy). The substance underneath is dead serious: it does the real work of making a video, from idea to shoot-ready brief.
 - **Audience:** founders, e-commerce operators, and creators who already live in Claude Code / Cursor / Codex.
@@ -150,7 +150,7 @@ LazyWeb's section order, UGC content. Centered single column, `--page-max` width
 - **One agent only.** No agent-mode switcher. Delete the two-tab toggle entirely.
 - Each content section gets at most one CTA. Most sections get zero and rely on the page's two anchor CTAs (hero + closing).
 
-1. **Nav (sticky).** Wordmark `ABG CMO` with a CM-style mark and an orange slash. Center links: Skills, How it works, Pricing, FAQ. Right: a live-status pill + one "Get started" pill CTA.
+1. **Nav (sticky).** Wordmark `LazyReel` with a CM-style mark and an orange slash. Center links: Skills, How it works, Pricing, FAQ. Right: a live-status pill + one "Get started" pill CTA.
 2. **Hero (centered).** Mono eyebrow, H1 with one italic-serif highlighted word, confident subhead, **two CTAs max** (primary "Get started", text-link "See it work"), compatibility line ("Works with Claude Code, Cursor & Codex"), and an **animated terminal** running a single `/abg` command with streaming success lines. No switcher.
 3. **Slogan tape.** A single-row marquee of creator slogans. Pure personality.
 4. **Opinionated skills (`01 / SKILLS`).** The centerpiece, built exactly like LazyWeb's: a left rail of **6** clickable skill commands, a right **preview panel** that renders the selected skill's output as a believable mini-report. The preview uses **placeholder slots** (`{product}`, `{niche}`) so it reads like a real fill-in-the-blank output you'd get back, and ends with a **"Copy this prompt"** affordance. Default the first skill selected. The 6 skills map to the buckets of making a video (ideation, niche/video analysis + context, teardown, hooks, shoot-brief, rewrite). No video editing. See COPY.md for all 6 + sample outputs.
@@ -158,7 +158,7 @@ LazyWeb's section order, UGC content. Centered single column, `--page-max` width
 6. **Before / after (`03 / THE DIFFERENCE`).** A drag slider: "Same prompt. ABG context. Better videos." Left card is generic AI ad slop (painfully recognizable), right card is the ABG version.
 7. **Tools (`04 / MCP`).** The real 6 MCP tools as a grid of mono-titled cards. Presentational this phase.
 8. **Pricing (`05 / PRICING`).** LazyWeb's clean 2-up: "For agents" (free) + "For humans" (free), each a checklist card with one CTA. Positioning line above.
-9. **The closing prompt block (`06 / ONE PROMPT`).** The LazyWeb "One prompt. Your agent installs the rest." pattern: a dark inset panel holding a single copy-pasteable prompt, with a big **Copy** button. You paste it into your agent and it installs + runs the ABG CMO skills. This is the "click, get the output, paste it in, it just works" moment the operator called out. Presentational copy this phase (real token/wiring comes with the MCP phase), but the Copy button must work.
+9. **The closing prompt block (`06 / ONE PROMPT`).** The LazyWeb "One prompt. Your agent installs the rest." pattern: a dark inset panel holding a single copy-pasteable prompt, with a big **Copy** button. You paste it into your agent and it installs + runs the LazyReel skills. This is the "click, get the output, paste it in, it just works" moment the operator called out. Presentational copy this phase (real token/wiring comes with the MCP phase), but the Copy button must work.
 10. **FAQ (`07 / QUESTIONS`).** Native `<details>` disclosures.
 11. **Footer.** Giant kicker line, three link columns, legal kicker (the ABG wink).
 
@@ -167,7 +167,7 @@ LazyWeb's section order, UGC content. Centered single column, `--page-max` width
 - **Buttons / CTAs.** Pill shape. Primary: ink fill, paper text. Secondary: a plain text link with an arrow, not a second filled button (this is how we cut button clutter). Min height 44px. The orange `--flag` is allowed on at most one CTA on the whole page.
 - **Pills / badges.** Mono, uppercase, `--r-pill`, hairline border, optional leading dot. Status pill gets a pulsing `--flag` dot.
 - **Cards.** `--r-card`, `--shadow-rest` at rest, `--shadow-lift` + 1-degree tilt on hover. Cream-2 surface. No heavy borders.
-- **Terminal / console.** Dark inset (`--ink-2`), `--r-term`, faux title bar ("abg-cmo — zsh"), mono body with colored lines: command white, prompt orange, muted gray, success lime (`--term-green`). Typewriter reveal + blinking cursor.
+- **Terminal / console.** Dark inset (`--ink-2`), `--r-term`, faux title bar ("lazyreel — zsh"), mono body with colored lines: command white, prompt orange, muted gray, success lime (`--term-green`). Typewriter reveal + blinking cursor.
 - **Skills showcase (centerpiece).** Left: a vertical list of **6** skill rows (mono command, Space Grotesk title, muted one-liner); the selected row gets a lime highlighter mark + a left border. Right: a preview panel with a faux report header (`/skill — output`, a "Copy" affordance) rendering the selected skill's sample output (a brief, a teardown, a hook list, a niche report) with `{placeholder}` slots. Clicking a row swaps the preview. Keyboard-navigable (arrow keys, Enter).
 - **Stat counter.** Big Space Grotesk number + mono label. IntersectionObserver triggers a single count-up.
 - **Comparison slider.** Two stacked cards, a draggable vertical handle, keyboard-accessible (arrow keys move the divider), `aria-label`. Instruction line: "Drag to compare."

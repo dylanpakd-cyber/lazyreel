@@ -1,4 +1,4 @@
-// frameworks.ts — the encoded knowledge base behind every ABG CMO skill.
+// frameworks.ts — the encoded knowledge base behind every LazyReel skill.
 // Sourced from real DTC/UGC scripting playbooks: 12 named script frameworks,
 // a 13-pattern hook taxonomy, 6 proven UGC angles, awareness/sophistication
 // models, and a hard anti-slop bar. Skills compose these into outputs.

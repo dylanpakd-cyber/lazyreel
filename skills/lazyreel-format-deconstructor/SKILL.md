@@ -1,5 +1,5 @@
 ---
-name: abg-format-deconstructor
+name: lazyreel-format-deconstructor
 description: Deconstruct a breakout short-form video into a precise, copyable spec. First diagnose why it broke out (the three gates, the false-positive labels, the measured lift), then produce a shot-by-shot timeline (hook frame, on-screen text, props, cuts, audio, the signature device) described richly enough to write generation prompts from it. Use when the user pastes or links a winning video and wants to understand AND replicate its structure, or wants a "FormatSpec" of a pattern. Pairs with the LazyReel MCP (viral_teardowns, breakout_vs_dud, winning_combos, study_examples) and hands off to the UGC ad director skills to write the prompts.
 ---
 
