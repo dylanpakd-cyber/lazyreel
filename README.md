@@ -118,7 +118,7 @@ What it does not do yet: live ingestion of fresh winning videos on demand, trans
 
 ## How the findings were reached
 
-The claims in these tools are tested, not asserted. `docs/methodology` records how. It covers the breakout-vs-dud study (including a result that nearly fooled us and the confound we caught), the reusable blind out-of-sample validation protocol so you can re-run a test the same way, and the data discipline that keeps scraped content out of the repo. Headline: in the even 5,680-video validation read, baseline is 50% for every two-video choice. The first-3-seconds laws picked the higher-view video 785/946 times on the cleanest same-creator, age-controlled tier (82.98% ~= 83%, z=20.29), 890/947 times at ~1000x extremes (93.98% ~= 94%, z=27.07), and 474/947 times on closer-margin cross-creator pairs (50.05%, chance, z=0.03). Pooled across all tiers: 2,149/2,840 = 75.67% (z=27.36), but judge craft by creator-baseline because pooling masks the cross-creator confound. Start at `docs/methodology/README.md`.
+The claims in these tools are tested, not asserted. `docs/methodology` records how. It covers the breakout-vs-dud study (including a result that nearly fooled us and the confound we caught), the reusable blind out-of-sample validation protocol so you can re-run a test the same way, and the data discipline that keeps scraped content out of the repo. Headline: in the even 5,560-video validation read, baseline is 50% for every two-video choice. The first-3-seconds laws picked the higher-view video 769/926 times on the cleanest same-creator, age-controlled tier (83.05% ~= 83%, z=20.11), 871/927 times at ~1000x extremes (93.96% ~= 94%, z=26.77), and 464/927 times on closer-margin cross-creator pairs (50.05%, chance, z=0.03). Pooled across all tiers: 2,104/2,780 = 75.68% (z=27.08), but judge craft by creator-baseline because pooling masks the cross-creator confound. Start at `docs/methodology/README.md`.
 
 ## Data and licensing
 
@@ -127,4 +127,3 @@ Derived analysis and aggregates are committed to this repo. Raw scraped video, f
 ## Free
 
 Free for agents. The token only authorizes the read-only research skills. It cannot spend money, buy anything, post, or touch private data.
-

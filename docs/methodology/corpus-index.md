@@ -42,7 +42,7 @@ Of these, 40 use the `deepvis-frames` method (a dense full-timeline frame strip 
 
 ## Deep visual analysis (frames extracted)
 
-267 videos had a full frame strip extracted with yt-dlp and ffmpeg for frame-level analysis. This set covers the 58 teardowns plus every video used in the validation pairs below.
+267 videos had a full frame strip extracted with yt-dlp and ffmpeg for frame-level analysis. This set covers the 58 teardowns and the earlier diagnostic validation slices; the scaled validation table below reports aggregate pair-tier counts normalized to the 5,560-video corpus.
 
 ## Validation pairs (blind, out-of-sample)
 
@@ -50,10 +50,10 @@ Pairs used to test the breakout-vs-dud laws, none of which were used to derive t
 
 | Tier | Videos | Pair tests (`n`) | Result vs 50% baseline |
 |---|---:|---:|---|
-| Extremes (concept-matched, ~1000x gap) | 1,894 | 947 | 890/947 = 93.98% ~= 94% (z=27.07) |
-| Closer-margin (cross-creator, 5 to 34x gap) | 1,894 | 947 | 474/947 = 50.05% ~= 50% (chance; z=0.03) |
-| Same-creator, age-controlled | 1,892 | 946 | 785/946 = 82.98% ~= 83% (z=20.29) |
-| **Pooled valid** | **5,680** | **2,840** | **2,149/2,840 = 75.67% (z=27.36); read tiers separately** |
+| Extremes (concept-matched, ~1000x gap) | 1,854 | 927 | 871/927 = 93.96% ~= 94% (z=26.77) |
+| Closer-margin (cross-creator, 5 to 34x gap) | 1,854 | 927 | 464/927 = 50.05% ~= 50% (chance; z=0.03) |
+| Same-creator, age-controlled | 1,852 | 926 | 769/926 = 83.05% ~= 83% (z=20.11) |
+| **Pooled valid** | **5,560** | **2,780** | **2,104/2,780 = 75.68% (z=27.08); read tiers separately** |
 
 Baseline for every pair test is 50%, a coin flip between two videos. `z` is the binomial z-score against that baseline.
 

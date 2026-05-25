@@ -30,14 +30,14 @@ We paired a mega-breakout with a flop of the *same niche and same hook pattern*,
 
 We then ran blind, out-of-sample tests. For each test we took pairs the laws were not derived from, randomized which video was option A vs B, hid all view counts, and asked a fresh sub-agent to pick the higher-view video from frames alone using only the five laws. Baseline for every test is 50%, a coin flip between two videos.
 
-For the scaled pair-tier read, 5,680 validation videos form 2,840 pair tests, split as evenly as possible across the three tiers. Here `n` is pair tests and `z` is the binomial z-score against the 50% baseline.
+For the scaled pair-tier read, 5,560 validation videos form 2,780 pair tests, split as evenly as possible across the three tiers. Here `n` is pair tests and `z` is the binomial z-score against the 50% baseline.
 
 | Test | Videos | Pair tests (`n`) | Accuracy vs 50% baseline |
 |---|---:|---:|---|
-| Extremes (concept-matched, ~1000x gap) | 1,894 | 947 | 890/947 = 93.98% ~= 94% (z=27.07) |
-| Same-creator, age-controlled (follower-controlled) | 1,892 | 946 | 785/946 = 82.98% ~= 83% (z=20.29) |
-| Closer-margin (cross-creator, 5 to 34x gap) | 1,894 | 947 | 474/947 = 50.05% ~= 50% (chance; z=0.03) |
-| **Pooled** | **5,680** | **2,840** | **2,149/2,840 = 75.67% (z=27.36)** |
+| Extremes (concept-matched, ~1000x gap) | 1,854 | 927 | 871/927 = 93.96% ~= 94% (z=26.77) |
+| Same-creator, age-controlled (follower-controlled) | 1,852 | 926 | 769/926 = 83.05% ~= 83% (z=20.11) |
+| Closer-margin (cross-creator, 5 to 34x gap) | 1,854 | 927 | 464/927 = 50.05% ~= 50% (chance; z=0.03) |
+| **Pooled** | **5,560** | **2,780** | **2,104/2,780 = 75.68% (z=27.08)** |
 
 The closer-margin row taught us the most, and it only appeared when we scaled the test. An earlier small slice read 75%, but the even scaled read is 50.05%, exactly chance. That is not a contradiction with the 83% same-creator result, it is the follower confound surfacing where it should: at a moderate view gap between two different creators, raw views are owned by audience size, so a large account with a weak opening out-views a small account with a strong one. The craft-based laws can pick the stronger opening and still lose on raw views. The same-creator test removes audience size from the comparison, which is why it holds at 83%.
 
@@ -47,12 +47,12 @@ The same-creator test is the cleanest, because two videos by one creator share a
 
 We did not accept that number. We checked video age using the TikTok id (the creation timestamp is the top 32 bits: `created_unix = int(video_id) >> 32`). In 38 of 40 pairs the low-views "dud" was actually the creator's *newest* upload, a median of 133 days younger than the "winner." It had not flopped, it just had not aged. The test was measuring recency, not craft.
 
-The fix: require the dud to be at least as *old* as the winner, so it is a genuinely matured flop. The scaled clean read gives 785/946 = 82.98%, statistically significant against the 50% baseline. Lesson recorded in the artifact's `methodNote`: trust the controlled number, and scaling a test is what exposed the confound that a small sample hid.
+The fix: require the dud to be at least as *old* as the winner, so it is a genuinely matured flop. The scaled clean read gives 769/926 = 83.05%, statistically significant against the 50% baseline. Lesson recorded in the artifact's `methodNote`: trust the controlled number, and scaling a test is what exposed the confound that a small sample hid.
 
 ## Honest limits
 
 - The pooled sample is large, but the tiers have different controls. A single pooled result can hide that the closer-margin cross-creator row is at chance.
-- The laws do NOT rank moderate-gap pairs across different creators (50.05%, n=947): raw views there are owned by follower count, not the opening. Use creator-baseline (vpf / same-creator), never raw views across creators.
+- The laws do NOT rank moderate-gap pairs across different creators (50.05%, n=927): raw views there are owned by follower count, not the opening. Use creator-baseline (vpf / same-creator), never raw views across creators.
 - The "why" is inferred from still frames, not watch-time curves or A/B tests.
 - Every miss was an external pull the frames cannot see: a celebrity (a Zendaya video), or a flashy opening the laws over-rewarded. The laws explain opening craft, and opening craft loses to star power or a trending sound.
 - The two laws carrying most of the signal across all tiers are: do not signal the format (no "GRWM / tutorial / review" title card), and maximize per-frame novelty (macro, motion, or new shots) rather than a static talking head.

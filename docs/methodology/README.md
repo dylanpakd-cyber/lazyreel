@@ -20,14 +20,13 @@ LazyReel makes claims about what makes short-form video win (see the `breakout_v
 - **`corpus-index.md`** : transparent counts of what we analyzed, by niche, with the validation-pair tally.
 - **`data-discipline.md`** : what is committed vs gitignored and the legal reasoning around analyzed video links.
 
-## Headline results (scaled to 5,680 validation videos)
+## Headline results (scaled to 5,560 validation videos)
 
 | Test | What it controls for | Result |
 |---|---|---|
-| Extremes (concept-matched, ~1000x gap) | nothing beyond concept matching | 890/947 = 93.98% ~= 94% (z=27.07) |
-| Closer-margin (cross-creator, 5 to 34x gap) | smaller gap, not follower-controlled | 474/947 = 50.05% ~= 50% (chance; z=0.03) |
-| Same-creator, age-controlled | audience and video age | 785/946 = 82.98% ~= 83% (z=20.29) |
-| **Pooled across all valid pairs** | evenly spread across tiers | **2,149/2,840 = 75.67% (z=27.36); read tiers separately, pooling masks the confound** |
+| Extremes (concept-matched, ~1000x gap) | nothing beyond concept matching | 871/927 = 93.96% ~= 94% (z=26.77) |
+| Closer-margin (cross-creator, 5 to 34x gap) | smaller gap, not follower-controlled | 464/927 = 50.05% ~= 50% (chance; z=0.03) |
+| Same-creator, age-controlled | audience and video age | 769/926 = 83.05% ~= 83% (z=20.11) |
+| **Pooled across all valid pairs** | evenly spread across tiers | **2,104/2,780 = 75.68% (z=27.08); read tiers separately, pooling masks the confound** |
 
-Baseline for every test is 50%: a coin flip between two videos. Here `n` is the number of paired tests, so 5,680 validation videos produce 2,840 pair tests. `z` is the binomial z-score against that 50% baseline, not the number of tests run. Full detail in `breakout-vs-dud-study.md`.
-
+Baseline for every test is 50%: a coin flip between two videos. Here `n` is the number of paired tests, so 5,560 validation videos produce 2,780 pair tests. `z` is the binomial z-score against that 50% baseline, not the number of tests run. Full detail in `breakout-vs-dud-study.md`.
