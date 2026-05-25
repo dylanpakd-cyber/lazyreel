@@ -317,12 +317,28 @@
   }
  ],
  "validation": {
-  "method": "Blind out-of-sample test: 18 concept-matched pairs NOT used to derive the laws, randomized A/B, view counts hidden. A Sonnet agent picked the higher-view video from frames alone using only the 5 laws.",
-  "heldOutPairs": 18,
-  "accuracy": "17/18 (94%)",
+  "method": "Blind out-of-sample tests: pairs the laws were NOT derived from, randomized A/B, view counts hidden. A Sonnet agent picked the higher-view video from frames alone using only the 5 laws. Three progressively harder tests:",
+  "tests": [
+   {
+    "name": "Extremes — concept-matched, ~1000x+ gap",
+    "pairs": 18,
+    "accuracy": "17/18 (94%)",
+    "reads": "separates viral-grade openings from obviously weak ones"
+   },
+   {
+    "name": "Closer-margin — concept-matched, 8-34x gap",
+    "pairs": 12,
+    "accuracy": "9/12 (75%)",
+    "reads": "can still rank same-concept videos with a real but smaller gap"
+   },
+   {
+    "name": "Same-creator A/B — follower confound REMOVED",
+    "pairs": 14,
+    "accuracy": "9/14 (64%)",
+    "reads": "only modestly better than chance at calling one creator's own hit vs flop"
+   }
+  ],
   "baseline": "50% (coin flip)",
-  "highConfidenceAccuracy": "11/11 (100%) on confidence>=0.8 calls",
-  "lawMarginAlignment": "16/17 (94%) — the side following more laws was the actual winner",
-  "scopeCaveat": "This separates mega-breakouts (20M-128M views) from duds (<50K) of the SAME concept — i.e. it discriminates extremes well. It does NOT yet prove fine-grained ranking (e.g. 5M vs 500K) or control for creator follower count. Next: closer-margin and same-creator pairs."
+  "interpretation": "The first-3-seconds laws are a NECESSARY QC FLOOR, not a SUFFICIENT predictor. They're strong at telling a viral-grade opening from a weak one (94%) and decent at ranking same-concept videos (75%), but only modestly predictive once the creator/audience is held constant (64%). Translation: nailing the opening keeps you from losing in the first 3 seconds, but within-creator variance — topic resonance, audio/trend, timing, luck — mostly lives OUTSIDE the opening frames. Use the laws to avoid self-sabotage, not to guarantee a mega-hit."
  }
 }

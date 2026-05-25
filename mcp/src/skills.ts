@@ -530,17 +530,17 @@ export function breakoutVsDud(): string {
     `## Concept-matched proof (same niche + hook, winner vs dud, compared frame-by-frame)`,
     ...pairs.map(p => `- **${p.concept}** (${p.gap}): ${(p.firstFrameDelta || "").slice(0, 220)}\n  → _steal:_ ${(p.lesson || "").slice(0, 160)}`),
     "",
-    ...(m as any).validation ? [
+    ...((m as any).validation ? [
       "",
-      `## Validation (blind, out-of-sample)`,
-      `- ${(m as any).validation.method}`,
-      `- **Accuracy: ${(m as any).validation.accuracy}** vs ${(m as any).validation.baseline}; ${(m as any).validation.lawMarginAlignment}.`,
-      `- Scope: ${(m as any).validation.scopeCaveat}`,
-    ] : [],
+      `## Validation (blind, out-of-sample) vs ${(m as any).validation.baseline || "50% baseline"}`,
+      `_${(m as any).validation.method || ""}_`,
+      ...(((m as any).validation.tests || []) as any[]).map(t => `- **${t.accuracy}** — ${t.name}${t.reads ? ` _(${t.reads})_` : ""}`),
+      `- **Read this:** ${(m as any).validation.interpretation || ""}`,
+    ] : []),
     "",
-    `## Honest caveat (read before trusting this)`,
+    `## Honest caveat`,
     `- ${m.confound?.takeaway || "Raw views are confounded by audience size; judge craft by creator-baseline (vpf), not raw views."}`,
-    `- Derived from ${(m.conceptControlledPairs || []).length} concept-matched pairs; the "why" is inferred from still frames, not watch-time/A-B. Strong at separating breakout-vs-dud extremes; not yet proven for fine-grained ranking. Use as a first-3-seconds QC checklist, not gospel.`,
+    `- The "why" is inferred from still frames, not watch-time/A-B. Treat the laws as a first-3-seconds QC floor, not a virality guarantee.`,
   ].filter(Boolean).join("\n");
 }
 
