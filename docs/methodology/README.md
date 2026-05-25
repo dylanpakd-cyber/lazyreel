@@ -19,6 +19,7 @@ LazyReel makes claims about what makes short-form video win (see the `breakout_v
 - **`validation-protocol.md`** : the reusable blind-prediction protocol and the local pipeline (frame extraction plus sub-agent predictors), so you can run a new test the same way.
 - **`corpus-index.md`** : transparent counts of what we analyzed, by niche, with the validation-pair tally.
 - **`data-discipline.md`** : what is committed vs gitignored and the legal reasoning around analyzed video links.
+- **`../adr/0001-shared-brain-lazyreel-formatradar.md`** : the decision to merge LazyReel and FormatRadar at the intelligence layer (shared FormatSpec + scoring gate), not the codebases.
 
 ## Headline results (as of commit history below)
 
