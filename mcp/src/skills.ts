@@ -535,6 +535,7 @@ export function breakoutVsDud(): string {
       `## Validation (blind, out-of-sample) vs ${(m as any).validation.baseline || "50% baseline"}`,
       `_${(m as any).validation.method || ""}_`,
       ...(((m as any).validation.tests || []) as any[]).map(t => `- **${t.accuracy}** — ${t.name}${t.reads ? ` _(${t.reads})_` : ""}`),
+      ...((m as any).validation.methodNote ? [`- _Method check:_ ${(m as any).validation.methodNote}`] : []),
       `- **Read this:** ${(m as any).validation.interpretation || ""}`,
     ] : []),
     "",

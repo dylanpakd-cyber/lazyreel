@@ -317,7 +317,7 @@
   }
  ],
  "validation": {
-  "method": "Blind out-of-sample tests: pairs the laws were NOT derived from, randomized A/B, view counts hidden. A Sonnet agent picked the higher-view video from frames alone using only the 5 laws. Three progressively harder tests:",
+  "method": "Blind out-of-sample tests: pairs the laws were NOT derived from, randomized A/B, view counts hidden. A Sonnet agent picked the higher-view video from frames alone using only the 5 laws.",
   "tests": [
    {
     "name": "Extremes — concept-matched, ~1000x+ gap",
@@ -329,16 +329,17 @@
     "name": "Closer-margin — concept-matched, 8-34x gap",
     "pairs": 12,
     "accuracy": "9/12 (75%)",
-    "reads": "can still rank same-concept videos with a real but smaller gap"
+    "reads": "still ranks same-concept videos with a real but smaller gap"
    },
    {
-    "name": "Same-creator A/B — follower confound REMOVED",
-    "pairs": 14,
-    "accuracy": "9/14 (64%)",
-    "reads": "only modestly better than chance at calling one creator's own hit vs flop"
+    "name": "Same-creator A/B — follower AND recency confounds removed (dud is a matured flop, older than the winner)",
+    "pairs": 18,
+    "accuracy": "15/18 (83%)",
+    "reads": "predicts a creator's own hit vs flop with audience held constant; statistically significant (z=2.83, p~0.002)"
    }
   ],
   "baseline": "50% (coin flip)",
-  "interpretation": "The first-3-seconds laws are a NECESSARY QC FLOOR, not a SUFFICIENT predictor. They're strong at telling a viral-grade opening from a weak one (94%) and decent at ranking same-concept videos (75%), but only modestly predictive once the creator/audience is held constant (64%). Translation: nailing the opening keeps you from losing in the first 3 seconds, but within-creator variance — topic resonance, audio/trend, timing, luck — mostly lives OUTSIDE the opening frames. Use the laws to avoid self-sabotage, not to guarantee a mega-hit."
+  "methodNote": "Rigor check that mattered: a first same-creator attempt scored 64% (n=14) then 41% (n=54) and looked like a failure, until we found the low-view 'dud' was usually the creator's NEWEST upload (un-aged, not a real flop). Requiring the dud to be OLDER than the winner fixed the confound and gave the clean 83%. Trust the controlled number, not the first two.",
+  "interpretation": "The first-3-seconds laws carry REAL predictive signal, even within a single creator (83%, significant) — not just a QC floor. The two laws doing most of the work are #4 (don't signal the format with a 'GRWM/tutorial/review' title card) and #3 (per-frame novelty vs a static talking head). Caveats: n=18 so the true rate could sit anywhere ~61-94%; the 'why' is inferred from still frames, not watch-time; and external pulls (a celebrity, a trending sound) can override the opening craft entirely (every miss was that)."
  }
 }
