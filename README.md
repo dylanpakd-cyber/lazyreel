@@ -127,3 +127,4 @@ Derived analysis and aggregates are committed to this repo. Raw scraped video, f
 ## Free
 
 Free for agents. The token only authorizes the read-only research skills. It cannot spend money, buy anything, post, or touch private data.
+

@@ -128,3 +128,4 @@ Hook patterns that over-index among breakouts in more than one niche:
 
 ---
 _Method: a model labels each video's real spoken hook; engagement is normalized by follower count (over-performance, not raw views); patterns are mined by contrastive lift (breakouts vs the rest). See [../mcp/pipeline/README.md](../mcp/pipeline/README.md)._
+

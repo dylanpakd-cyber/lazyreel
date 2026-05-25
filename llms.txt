@@ -34,3 +34,4 @@ The repository commits a curated list of real example videos (`mcp/data/examples
 - Source and the full MCP, skills, and decoded-insight wiki: https://github.com/dylanpakd-cyber/lazyreel
 - Works with: Claude Code, Cursor, Codex, or any MCP client.
 - Pairs with: a video-generation MCP such as Higgsfield.
+

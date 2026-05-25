@@ -58,3 +58,4 @@ This is a working MCP connection with framework-grounded generation, not a mock.
 What it does *not* yet do: live ingestion of new winning videos, transcript/embedding
 search over a hosted video DB, or private per-account niche libraries. `get_status`
 says so plainly.
+

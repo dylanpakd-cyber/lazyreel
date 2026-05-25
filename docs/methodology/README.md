@@ -30,3 +30,4 @@ LazyReel makes claims about what makes short-form video win (see the `breakout_v
 | **Pooled across all valid pairs** | evenly spread across tiers | **2,149/2,840 = 75.67% (z=27.36); read tiers separately, pooling masks the confound** |
 
 Baseline for every test is 50%: a coin flip between two videos. Here `n` is the number of paired tests, so 5,680 validation videos produce 2,840 pair tests. `z` is the binomial z-score against that 50% baseline, not the number of tests run. Full detail in `breakout-vs-dud-study.md`.
+

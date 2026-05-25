@@ -18,3 +18,4 @@ Allow: /
 
 # Plain-text summary written for LLMs/agents: /llms.txt
 Sitemap: https://lazyreel-site.vercel.app/sitemap.xml
+

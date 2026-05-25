@@ -218,3 +218,4 @@ body{ background:var(--paper); color:var(--ink); font-family:var(--font-inter),s
 ## Out of scope (do not build this phase)
 
 MCP server wiring, live tool calls, real tokens, auth, deploy. Reconcile the human-facing skill names (`/video-ideas` etc.) with the wire tool names (`search_video_patterns` etc.) when the MCP phase starts.
+

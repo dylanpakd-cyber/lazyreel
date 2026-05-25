@@ -25,3 +25,4 @@ cd mcp && npm install && npm run build && npm run smoke   # the MCP
 ## The one rule
 
 The product sells "stop shipping AI slop." If the site or the skill outputs look AI-generated — purple gradients, "revolutionary / supercharge / 🚀", generic hooks — it fails its own thesis. The anti-slop bar lives in `DESIGN.md §3` and `mcp/src/frameworks.ts` (`BANNED_WORDS`, `VOICE_RULES`).
+

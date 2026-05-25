@@ -212,3 +212,4 @@ LazyWeb's section order, UGC content. Centered single column, `--page-max` width
 - **67labs** (67labs.co): the warm-neutral palette + token feel, the highlighter-behind-words mechanic, the italic-serif punchline word, pill shapes, 1-degree hover tilt, live faux-UI, slogan tape, and joke microcopy.
 
 Borrow the craft language. Keep the world (UGC) and the voice ours.
+

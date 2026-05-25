@@ -196,3 +196,4 @@ whenever I ask for a short-form video, a hook, a brief, or a niche read.
   - `Elsewhere`: GitHub · Changelog · X
   - `Operators`: Manifesto · Contact
 - Legal kicker (mono): `© LazyReel 2026. All conversions reserved. Touch grass occasionally.`
+
