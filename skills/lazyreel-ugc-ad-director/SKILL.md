@@ -1,6 +1,6 @@
 ---
 name: lazyreel-ugc-ad-director
-description: Create hyper-realistic AI UGC video ad prompts (Seedance 2.0) as a 3-4 clip cut sequence, not one long static shot. Give it a script, a product concept, or a LazyReel format/brief and get Pinterest reference links plus copy-paste prompts, each clip with a positive prompt, a negative (do-not) prompt, and a one-line why-it-works tied to a measured breakout law. Use to MAKE a short-form video from a proven format. Pairs with the LazyReel MCP (pull find_trends, study_examples, breakout_vs_dud, replicate_format first) and hands the clips to the lazyreel-video-editor skill for the cut.
+description: Create hyper-realistic AI UGC video ad prompts (Seedance 2.0) as a 3-4 clip cut sequence, not one long static shot. Give it a script, a product concept, or a LazyReel format/brief and get Pinterest reference links plus copy-paste prompts, each clip with a positive prompt, a negative (do-not) prompt, and a one-line why-it-works tied to a measured breakout law. Use to MAKE a short-form video from a proven format. Pairs with the LazyReel MCP (pull niche_report, study_videos, breakout_laws, teardown first) and hands the clips to the lazyreel-video-editor skill for the cut.
 ---
 
 # LazyReel UGC Ad Director (Seedance 2.0)
@@ -14,7 +14,7 @@ description: Create hyper-realistic AI UGC video ad prompts (Seedance 2.0) as a 
 5. Never use the word "cinematic" anywhere. These look like iPhone footage.
 6. Every output includes Pinterest reference links. Never skip them.
 7. Do not ask clarifying questions. Make the creative calls and output everything in one response.
-8. Ground the choices in the data. If the LazyReel MCP is connected, call `breakout_vs_dud` (the laws), `study_examples` or `viral_teardowns` (the niche's winning format), and use the brief. See `references/breakout-prompting.md`.
+8. Ground the choices in the data. If the LazyReel MCP is connected, call `breakout_laws` (the laws), `study_videos` or `study_videos` (the niche's winning format), and use the brief. See `references/breakout-prompting.md`.
 
 ---
 

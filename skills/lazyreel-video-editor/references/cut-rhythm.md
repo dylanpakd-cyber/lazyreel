@@ -1,6 +1,6 @@
 # Cut rhythm: the measured edit decisions
 
-The edit-side insight payload. Every rule here maps a validated breakout finding to a concrete cut decision. The numbers come from the LazyReel corpus (real decoded TikTok and Instagram). The MCP `breakout_vs_dud` tool serves the live version. Read this before you plan a cut, so the edit follows what wins instead of what feels cinematic.
+The edit-side insight payload. Every rule here maps a validated breakout finding to a concrete cut decision. The numbers come from the LazyReel corpus (real decoded TikTok and Instagram). The MCP `breakout_laws` tool serves the live version. Read this before you plan a cut, so the edit follows what wins instead of what feels cinematic.
 
 ## Per-frame novelty is the thing (and a single clip kills it)
 

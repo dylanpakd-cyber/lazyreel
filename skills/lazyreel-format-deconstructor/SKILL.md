@@ -1,6 +1,6 @@
 ---
 name: lazyreel-format-deconstructor
-description: Deconstruct a breakout short-form video into a precise, copyable spec. First diagnose why it broke out (the three gates, the false-positive labels, the measured lift), then produce a shot-by-shot timeline (hook frame, on-screen text, props, cuts, audio, the signature device) described richly enough to write generation prompts from it. Use when the user pastes or links a winning video and wants to understand AND replicate its structure, or wants a "FormatSpec" of a pattern. Pairs with the LazyReel MCP (viral_teardowns, breakout_vs_dud, winning_combos, study_examples) and hands off to the UGC ad director skills to write the prompts.
+description: Deconstruct a breakout short-form video into a precise, copyable spec. First diagnose why it broke out (the three gates, the false-positive labels, the measured lift), then produce a shot-by-shot timeline (hook frame, on-screen text, props, cuts, audio, the signature device) described richly enough to write generation prompts from it. Use when the user pastes or links a winning video and wants to understand AND replicate its structure, or wants a "FormatSpec" of a pattern. Pairs with the LazyReel MCP (study_videos, breakout_laws, niche_report, study_videos) and hands off to the UGC ad director skills to write the prompts.
 ---
 
 # LazyReel format deconstructor
@@ -14,9 +14,9 @@ The thing that makes this more than a generic "describe the video" pass is `refe
 A video link, a description, or a transcript. The richer the input (frames, captions, audio), the higher your confidence. If you only have a description, say so and lower the confidence on the craft section.
 
 If the LazyReel MCP is connected, anchor the read in real data first:
-- `breakout_vs_dud` for the first-3-seconds laws and the creator-baseline confound.
-- `viral_teardowns` or `study_examples` for the niche, to see what already over-performs.
-- `winning_combos` for the feature combinations that over-index.
+- `breakout_laws` for the first-3-seconds laws and the creator-baseline confound.
+- `study_videos` or `study_videos` for the niche, to see what already over-performs.
+- `niche_report` for the feature combinations that over-index.
 
 ## Part 1: why it broke out (the diagnosis)
 

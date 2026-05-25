@@ -148,13 +148,12 @@ function block(t){return (
 '   • Any other MCP client: register a stdio server, command "node", arg = the server path, env LAZYREEL_TOKEN='+t+'\n\n'+
 '3) Reload/restart the agent, then call the get_status tool to confirm the skills are live.\n\n'+
 'After setup, use LazyReel whenever I ask what\'s working in a niche, for hooks, a\n'+
-'brief, real example videos, or a format to replicate. Tools include: niche_decode,\n'+
-'find_trends, study_examples, winning_combos, viral_teardowns, content_gaps,\n'+
-'format_playbook, app_insights, replicate_format, cracked_hooks, shoot_brief.'
+'brief, real example videos, or a format to replicate. The 6 tools: niche_report,\n'+
+'study_videos, teardown, make_brief, breakout_laws, kill_the_slop.'
 );}
 function render(){
   var html=block(token).replace(/&/g,'&amp;').replace(/</g,'&lt;')
-    .replace(/(get_status|niche_decode|find_trends|study_examples|winning_combos|viral_teardowns|content_gaps|format_playbook|app_insights|replicate_format|cracked_hooks|shoot_brief)/g,'<span class="g">$1</span>')
+    .replace(/(get_status|niche_report|niche_report|study_videos|niche_report|study_videos|niche_report|niche_report|niche_report|teardown|make_brief|make_brief)/g,'<span class="g">$1</span>')
     .replace(/(lr_[0-9a-f]+)/g,'<span class="o">$1</span>');
   document.getElementById('prompt').innerHTML=html;
 }

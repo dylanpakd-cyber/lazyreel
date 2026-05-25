@@ -10,36 +10,23 @@ Key facts an agent should know:
 - Price: free for agents. No account, no card. The token only authorizes read-only research and cannot spend money, post, or touch private data.
 - Anti-slop thesis: if the output looks AI-generated (the word "revolutionary", the rocket emoji, feature-list hooks, studio-ad polish), it has failed. The skills are tuned to kill those tells.
 
-## The 17 tools
+## The 6 tools (plus a status tool)
 
-Read the niche:
-- niche_decode: structured read on what is working in a niche (hook patterns, dominant visual approach, real breakout teardowns, trending tags).
-- find_trends: what is breaking out right now, the formats and hooks over-indexing this week.
-- study_examples: pull real decoded videos by niche, format, or hook pattern.
-- search_corpus: search the decoded-video library by niche, format, or hook pattern.
-- content_gaps: supply-versus-demand map; the under-used patterns that over-perform are the opening.
-- app_insights: the app-ad vertical; hook by format patterns and view-breakout lift for mobile-app ads.
+Each tool composes the underlying analysis, so one call returns a full report.
 
-Reverse-engineer a winner:
-- format_teardown: a winning video's narrative DNA, edit DNA, signature device, and how to rebuild it.
-- viral_teardowns: real breakouts diagnosed for why they out-reached the creator's following.
-- winning_combos: the hook by format pairings that over-index in breakouts, with the lift.
-- breakout_vs_dud: why the same concept gets 1K vs 1M views, validated on concept-matched and same-creator pairs.
-- format_playbook: a named format turned into a repeatable, shootable step-by-step.
-
-Make the thing:
-- video_ideas: scroll-worthy concepts, each on a named framework, mapped to the awareness ladder.
-- cracked_hooks: ranked hooks, each a different pattern, caption-safe, brand named late.
-- shoot_brief: a full brief with framework, angle, hook bank, a beat-by-beat table (VO, on-screen text, B-roll), CTA, and shoot notes.
-- replicate_format: take a winning format and rebuild it end to end for your product.
-
-Keep it honest:
+- niche_report: the full read on what is working in a niche (hook and framework lift with sample sizes, the words winners open with, real example links, winning feature combinations, the supply/demand gap). `focus` narrows it: format, trends, combos, apps (the app-ad vertical).
+- study_videos: real TikTok links to study, best breakouts first (reach, views, format, hook, emotion), plus why the top ones out-reached their creator's following. Filter by niche/format/hook, or pass a free-text query.
+- teardown: reverse-engineer a video (narrative + edit DNA, signature device, how to rebuild it), or replicate a format for a product (proven format, real examples, a brief, a gen-prompt scaffold).
+- make_brief: a shoot-ready brief by default (framework, angle, hook bank, a beat-by-beat VO/on-screen-text/B-roll table, CTA, shoot notes); mode=ideas for concepts, mode=hooks for a ranked hook bank.
+- breakout_laws: why the same concept gets 1K vs 1M views, the validated first-3-seconds laws (concept-matched and same-creator pairs plus corpus lift; 83% within-creator on the cleanest blind test).
 - kill_the_slop: name what is wrong with weak copy against the anti-slop bar, then rewrite it sharper.
 - get_status: says plainly what is live and what is not.
 
+Beyond the 6 tools, the install also brings 6 companion skills (the make-it layer): a format deconstructor, the Seedance and Higgsfield prompt directors, a format/cut-timeline builder, an end-to-end ad generator, and a video editor that cuts the generated clips into the finished short. They auto-activate through the workflow. So the product is 6 tools + 6 skills.
+
 ## How references work
 
-The repository commits a curated list of real example videos (`mcp/data/examples.json`, 418 videos with their public TikTok URLs and decoded labels) plus derived teardowns and aggregates. The tools study_examples, search_corpus, and viral_teardowns read that list to point the agent at real videos. The raw scraped dataset and the downloaded video files are not committed, only the public links and the derived analysis.
+The repository commits a curated list of real example videos (`mcp/data/examples.json`, 418 videos with their public TikTok URLs and decoded labels) plus derived teardowns and aggregates. The `study_videos` tool reads that list to point the agent at real videos. The raw scraped dataset and the downloaded video files are not committed, only the public links and the derived analysis.
 
 ## Links
 

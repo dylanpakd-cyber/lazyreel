@@ -14,7 +14,7 @@ The **"make it"** half of LazyReel. The MCP (`../mcp`) tells you *what works*; t
 ## The full loop (insight → creation)
 
 ```
-MCP: find_trends / niche_decode / study_examples / viral_teardowns   →  what wins + real videos to study
+MCP tools: niche_report / study_videos / breakout_laws   →  what wins + real videos to study
 lazyreel-format-deconstructor                                             →  why it wins, as a copyable spec
 lazyreel-ugc-ad-director  (or  lazyreel-ugc-ad-generator for full automation)  →  the model-ready, multi-clip prompts
 lazyreel-video-editor                                                     →  stitch the 3-4 clips into the finished cut

@@ -1,6 +1,6 @@
 ---
 name: lazyreel-video-editor
-description: Assemble and cut short-form UGC into a finished video that wins. Takes the 3-4 generated clips from a video-gen MCP (Higgsfield, Seedance) or raw UGC footage and edits them into a fast-cut, sound-off-legible, hook-first 9:16 piece that obeys the validated breakout laws. Real FFmpeg and Remotion, not hand-waving. Use when the user has clips to stitch, wants to cut footage into a short, asks to "edit the video," "stitch these clips," "add captions," "make it 9:16," or hands off rendered clips from the director skills. Pairs with the LazyReel MCP (breakout_vs_dud for the cut rhythm) and the director skills upstream.
+description: Assemble and cut short-form UGC into a finished video that wins. Takes the 3-4 generated clips from a video-gen MCP (Higgsfield, Seedance) or raw UGC footage and edits them into a fast-cut, sound-off-legible, hook-first 9:16 piece that obeys the validated breakout laws. Real FFmpeg and Remotion, not hand-waving. Use when the user has clips to stitch, wants to cut footage into a short, asks to "edit the video," "stitch these clips," "add captions," "make it 9:16," or hands off rendered clips from the director skills. Pairs with the LazyReel MCP (breakout_laws for the cut rhythm) and the director skills upstream.
 ---
 
 # LazyReel video editor
@@ -30,7 +30,7 @@ The cut plan, before you touch FFmpeg:
 
 ```
 generated clips (Higgsfield / Seedance)  OR  raw UGC footage
-  -> plan the cut (the brief + breakout_vs_dud laws)
+  -> plan the cut (the brief + breakout_laws laws)
   -> FFmpeg: trim, reframe to 9:16, concat, normalize audio   (deterministic)
   -> captions + overlays (burned-in or Remotion)              (sound-off survival)
   -> audio (native, or ElevenLabs VO if scripted)
@@ -41,7 +41,7 @@ Do not try to make one tool do everything. FFmpeg does the deterministic cutting
 
 ## Layer 1: plan the cut
 
-Pull the cut rhythm from the data, do not guess. If the LazyReel MCP is connected, call `breakout_vs_dud` for the first-3-seconds laws and the per-frame-novelty finding, and use the brief's beat structure for clip order. Write a tiny edit decision list: which clip is the hook, the order, the cut points, where the product enters, what the on-screen caption says in the first second.
+Pull the cut rhythm from the data, do not guess. If the LazyReel MCP is connected, call `breakout_laws` for the first-3-seconds laws and the per-frame-novelty finding, and use the brief's beat structure for clip order. Write a tiny edit decision list: which clip is the hook, the order, the cut points, where the product enters, what the on-screen caption says in the first second.
 
 ## Layer 2: deterministic cuts (FFmpeg)
 
@@ -129,4 +129,4 @@ ffmpeg -i normalized.mp4 -vf "subtitles=captions.srt:force_style='Fontsize=16,Bo
 
 - `references/cut-rhythm.md`: the measured cut rhythm, the sound-off rule, the 9:16 safe area, and how each breakout law maps to a concrete edit decision. Read it before you plan a cut.
 - Upstream: the `lazyreel-higgsfield-director` and `lazyreel-ugc-ad-director` skills produce the multi-clip prompts this skill assembles.
-- Live insight: the LazyReel MCP `breakout_vs_dud` tool serves the first-3-seconds laws.
+- Live insight: the LazyReel MCP `breakout_laws` tool serves the first-3-seconds laws.

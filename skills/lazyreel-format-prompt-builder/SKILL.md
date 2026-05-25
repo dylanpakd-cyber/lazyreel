@@ -1,6 +1,6 @@
 ---
 name: lazyreel-format-prompt-builder
-description: Turn a brief or a decoded format into a cut-by-cut timeline for a short-form UGC video: the clip order, the per-cut framing and beat, the cut rhythm, and the energy arc, grounded in the validated breakout laws. Anti-cinematic by design (per-frame novelty comes from cuts and real capture, never lens flares or speed ramps). Use when the user wants a shot list, a video timeline, to plan a sequence, or to turn a FormatSpec into a structure to prompt from. Feeds the lazyreel-ugc-ad-director and lazyreel-higgsfield-director (which write the model prompts) and the lazyreel-video-editor (which executes the cut). Pairs with the LazyReel MCP (breakout_vs_dud, shoot_brief, format_playbook).
+description: Turn a brief or a decoded format into a cut-by-cut timeline for a short-form UGC video: the clip order, the per-cut framing and beat, the cut rhythm, and the energy arc, grounded in the validated breakout laws. Anti-cinematic by design (per-frame novelty comes from cuts and real capture, never lens flares or speed ramps). Use when the user wants a shot list, a video timeline, to plan a sequence, or to turn a FormatSpec into a structure to prompt from. Feeds the lazyreel-ugc-ad-director and lazyreel-higgsfield-director (which write the model prompts) and the lazyreel-video-editor (which executes the cut). Pairs with the LazyReel MCP (breakout_laws, make_brief, niche_report).
 ---
 
 # LazyReel cut-and-pacing timeline builder
@@ -11,7 +11,7 @@ Turn a brief into the **cut-by-cut timeline** for a short-form UGC video: what e
 
 ## How it works
 
-1. Take the brief, the FormatSpec from `lazyreel-format-deconstructor`, or a `format_playbook` result. If the LazyReel MCP is connected, call `breakout_vs_dud` for the cut-rhythm laws and `shoot_brief` for the beats.
+1. Take the brief, the FormatSpec from `lazyreel-format-deconstructor`, or a `niche_report` result. If the LazyReel MCP is connected, call `breakout_laws` for the cut-rhythm laws and `make_brief` for the beats.
 2. Build the timeline as **3 to 5 cuts** (clips), each a distinct framing. Never one continuous shot.
 3. Output the four sections below, then hand off to a director skill to write the prompts and to the video-editor to cut.
 

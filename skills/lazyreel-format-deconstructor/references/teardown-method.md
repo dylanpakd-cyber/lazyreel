@@ -1,6 +1,6 @@
 # Teardown method and the measured insights
 
-This is the insight payload for the deconstructor. Every number here is from the LazyReel corpus (real decoded TikTok and Instagram, past 6 months), not intuition. The MCP tools `viral_teardowns`, `breakout_vs_dud`, and `winning_combos` serve live versions. Read this before you judge a video, so the read is grounded in what actually over-performs, not in what looks impressive.
+This is the insight payload for the deconstructor. Every number here is from the LazyReel corpus (real decoded TikTok and Instagram, past 6 months), not intuition. The MCP tools `study_videos`, `breakout_laws`, and `niche_report` serve live versions. Read this before you judge a video, so the read is grounded in what actually over-performs, not in what looks impressive.
 
 ## The creator-baseline rule (read this first)
 
@@ -55,7 +55,7 @@ What loses, so flag it as a weak model to copy:
 
 Note the trap: the single most-used hook in the corpus, information-offering, sits around 44 to 52% of videos per niche and UNDER-performs. Common is not the same as winning.
 
-## Feature combinations that over-index (winning_combos)
+## Feature combinations that over-index (niche_report)
 
 Combinations beat single features. The strongest in the corpus:
 - lifestyle-broll + store setting: 19.5x (n=13/15)
@@ -82,7 +82,7 @@ Every real breakout is built around one moment: the single shot or beat the whol
 
 ## The first-3-seconds laws (the opening is what the feed judges)
 
-Cross-reference with `breakout_vs_dud`. The opening either earns the next second or it does not:
+Cross-reference with `breakout_laws`. The opening either earns the next second or it does not:
 1. Open on an unresolved visual question, not a caption that states the premise.
 2. Show a taste of the payoff inside ~1.5s, then withhold the full reveal.
 3. Maximize per-frame novelty (macro, motion, a new shot every 5 to 8s).

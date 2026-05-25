@@ -8,13 +8,15 @@ taxonomy, 6 proven angles, awareness/sophistication models, and a hard anti-slop
 
 ## Tools
 
+6 tools (each composes the underlying analysis, so one call returns a full report).
+
 | Tool | What it does |
 | --- | --- |
-| `video_ideas` | Scroll-worthy concepts, each mapped to a named framework + awareness + visual approach |
-| `niche_decode` | A structured method to read what's working in a niche before you write |
-| `format_teardown` | Reverse-engineer a winning video's narrative + edit DNA, and how to rebuild it |
-| `cracked_hooks` | Ranked hooks, each a different pattern, caption-safe, brand named late |
-| `shoot_brief` | Full brief: framework, angle, hook bank, Beat/VO/Text/B-roll table, CTA, shoot notes |
+| `niche_report` | The full read on a niche: hook/framework lift with sample sizes, the words winners open with, real example links, winning combos, the gap. `focus`=format/trends/combos/apps |
+| `study_videos` | Real TikTok links to study (best breakouts first, with reach/views/format/hook), plus why the top ones won. Filter by niche/format/hook or pass a query |
+| `teardown` | Reverse-engineer a video's narrative + edit DNA and how to rebuild it, or replicate a format for a product (with a gen-prompt scaffold) |
+| `make_brief` | A shoot-ready brief (framework, angle, hook bank, Beat/VO/Text/B-roll table, CTA, notes). `mode`=ideas or hooks |
+| `breakout_laws` | Why the same concept gets 1K vs 1M views: the validated first-3-seconds laws, what over-indexes, matched proof, the honest caveat |
 | `kill_the_slop` | Critique weak copy against the anti-slop bar, then rewrite it sharper |
 | `get_status` | What's live and what's intentionally not yet |
 

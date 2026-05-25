@@ -1,6 +1,6 @@
 # Breakout insights for video generation
 
-The distilled, measured findings from decoding the LazyReel corpus, written as directives you can apply directly when prompting Higgsfield. Every number here is from blind, out-of-sample validation, not intuition. Provenance and the full method are in `docs/methodology` of the LazyReel repo. The `breakout_vs_dud` MCP tool serves a live version of this.
+The distilled, measured findings from decoding the LazyReel corpus, written as directives you can apply directly when prompting Higgsfield. Every number here is from blind, out-of-sample validation, not intuition. Provenance and the full method are in `docs/methodology` of the LazyReel repo. The `breakout_laws` MCP tool serves a live version of this.
 
 ## The five first-3-seconds laws
 

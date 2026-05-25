@@ -1,6 +1,6 @@
 ---
 name: lazyreel-higgsfield-director
-description: Turn LazyReel's validated breakout insights into Higgsfield video-generation prompts as a 3-4 clip cut sequence whose first three seconds are engineered to clear the breakout laws before you spend a credit. Each clip gets a positive prompt, a negative (do-not) prompt, and a why-it-works tied to a measured law. Use when the user wants to generate a UGC or short-form video with Higgsfield, write a Higgsfield prompt, render an ad from a LazyReel brief, or asks "what should the opening shot be." Pairs with the LazyReel MCP (call breakout_vs_dud, shoot_brief, viral_teardowns, replicate_format first), the Higgsfield MCP (generate_image, generate_video, virality_predictor), and hands the clips to the lazyreel-video-editor skill for the cut.
+description: Turn LazyReel's validated breakout insights into Higgsfield video-generation prompts as a 3-4 clip cut sequence whose first three seconds are engineered to clear the breakout laws before you spend a credit. Each clip gets a positive prompt, a negative (do-not) prompt, and a why-it-works tied to a measured law. Use when the user wants to generate a UGC or short-form video with Higgsfield, write a Higgsfield prompt, render an ad from a LazyReel brief, or asks "what should the opening shot be." Pairs with the LazyReel MCP (call breakout_laws, make_brief, study_videos, teardown first), the Higgsfield MCP (generate_image, generate_video, virality_predictor), and hands the clips to the lazyreel-video-editor skill for the cut.
 ---
 
 # LazyReel to Higgsfield director
@@ -11,7 +11,7 @@ The payload that makes this worth more than a generic prompt template is `refere
 
 ## Where this sits
 
-- **Upstream (LazyReel MCP):** what to make. Call `breakout_vs_dud` for the laws and the confound caveat, `shoot_brief` or `replicate_format` for the structure, `viral_teardowns` or `study_examples` for the niche's winning format.
+- **Upstream (LazyReel MCP):** what to make. Call `breakout_laws` for the laws and the confound caveat, `make_brief` or `teardown` for the structure, `study_videos` or `study_videos` for the niche's winning format.
 - **Here:** translate that into a 3-4 clip plan and the Higgsfield prompts that satisfy the laws.
 - **Downstream (Higgsfield MCP):** `generate_image` for a controlled first frame, `generate_video` to render each clip, `virality_predictor` as a post-render gate.
 - **Then (lazyreel-video-editor skill):** hand it the clips to trim, cut, caption, and assemble into the finished 9:16 short.
@@ -27,7 +27,7 @@ A 10 to 15 second ad is **3 to 4 clips**, one shot each, hard-cut. Per-frame nov
 ## The method
 
 ### 1. Pull the brief, do not invent it
-If a LazyReel brief was handed to you, use it. If not, get one: call `breakout_vs_dud` (the laws), then `shoot_brief` for the product and niche, and note the niche's strongest format from `viral_teardowns`. Never write from a blank page when the research tools exist.
+If a LazyReel brief was handed to you, use it. If not, get one: call `breakout_laws` (the laws), then `make_brief` for the product and niche, and note the niche's strongest format from `study_videos`. Never write from a blank page when the research tools exist.
 
 ### 2. Write each clip with three parts
 For every clip in the sequence:

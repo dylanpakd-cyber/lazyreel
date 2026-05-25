@@ -1,6 +1,6 @@
 # Breakout prompting: the measured insights as prompt directives
 
-The insight payload for the director. Every rule maps a validated corpus finding to a concrete prompt decision. Numbers are from the LazyReel corpus (real decoded TikTok and Instagram, past 6 months); the MCP `breakout_vs_dud` and `winning_combos` tools serve live versions. Read this before writing prompts so the clips chase what wins, not what looks impressive.
+The insight payload for the director. Every rule maps a validated corpus finding to a concrete prompt decision. Numbers are from the LazyReel corpus (real decoded TikTok and Instagram, past 6 months); the MCP `breakout_laws` and `niche_report` tools serve live versions. Read this before writing prompts so the clips chase what wins, not what looks impressive.
 
 ## The five laws, as positive prompt directives
 

@@ -1,6 +1,6 @@
 # Cut-timeline directives
 
-The insight payload for the timeline builder. Every rule maps a validated finding to a timeline decision. Numbers are from the LazyReel corpus (real decoded TikTok and Instagram, past 6 months); the MCP `breakout_vs_dud` and `winning_combos` tools serve live versions.
+The insight payload for the timeline builder. Every rule maps a validated finding to a timeline decision. Numbers are from the LazyReel corpus (real decoded TikTok and Instagram, past 6 months); the MCP `breakout_laws` and `niche_report` tools serve live versions.
 
 ## The cut rhythm is the structure
 

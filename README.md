@@ -12,37 +12,18 @@ Decode with evidence, not vibes.
 
 ## What it gives your agent
 
-17 tools: 16 skills plus a status tool. They fall into four jobs.
+**6 tools** (plus a status tool). Each one composes the underlying analysis, so a single call returns a full report, not a thin slice.
 
-### Read the niche
-
-1. **niche_decode.** A structured read on what is actually working in a niche, backed by real scraped data: which hook patterns over-perform, the dominant visual approach, real breakout teardowns, and trending tags.
-2. **find_trends.** What is breaking out right now. The formats and hooks over-indexing in the decoded feed this week.
-3. **study_examples.** Pull real decoded videos by niche, format, or hook pattern so the agent learns from winners instead of guessing.
-4. **search_corpus.** Search the decoded-video library directly by niche, format, or hook pattern.
-5. **content_gaps.** A supply versus demand map of a niche. Which hook patterns are crowded, and which over-perform but stay under-used. The under-used winners are the opening.
-6. **app_insights.** The app-ad vertical. Hook by format patterns and view-breakout lift for mobile-app ads, which behave differently from product UGC.
-
-### Reverse-engineer a winner
-
-7. **format_teardown.** Reverse-engineer a winning video. You get its narrative DNA, its edit DNA, the one signature device it is built around, and how to rebuild it for your product.
-8. **viral_teardowns.** Real breakouts in a niche, each diagnosed for why it out-reached the creator's following: the hook technique, the retention device, the viral mechanism, and the one move to steal.
-9. **winning_combos.** The hook by format pairings that over-index in breakouts, each with the measured lift.
-10. **breakout_vs_dud.** Why the same concept gets 1K vs 1M views: the first-3-seconds laws that separate breakouts from duds, validated blind on concept-matched and same-creator pairs (83% within-creator on the cleanest blind test; see `docs/methodology`). Returns the laws, what over-indexes in winners, and an honest confound caveat.
-11. **format_playbook.** A named format turned into a repeatable, shootable step-by-step.
-
-### Make the thing
-
-12. **video_ideas.** Scroll-worthy concepts for a product, each built on a named script framework, placed on the awareness ladder, with the visual approach and why it lands.
-13. **cracked_hooks.** Ranked hooks for a product. Each one is a different pattern, each one is caption-safe, and the brand is never named in the first line.
-14. **shoot_brief.** A full brief. Framework, angle, a hook bank, a beat-by-beat script table (VO, on-screen text, B-roll), the CTA, and shoot notes.
-15. **replicate_format.** Take a winning format and rebuild it end to end for your product, with the brief attached.
-
-### Keep it honest
-
-16. **kill_the_slop.** Point it at weak copy. It names exactly what is wrong against the anti-slop bar, then rewrites it shorter and sharper in customer voice.
+1. **niche_report.** The full read on what is working in a niche, from real decoded videos: the hook patterns and frameworks that over-index in breakouts (with lift and sample size), the words winners open with, real example links, the winning feature combinations, and the supply/demand gap nobody is filling. `focus` narrows it: `format` (how winners look), `trends` (cross-niche formulas), `combos` (the winning mixes), `apps` (the app-ad vertical).
+2. **study_videos.** Real TikTok links to watch and study, best breakouts first (each with reach multiple, views, format, hook, emotion), plus a diagnosis of why the top ones out-reached their creator's following. Filter by niche/format/hook, or pass a free-text query.
+3. **teardown.** Reverse-engineer a format. Pass a video (description, transcript, or URL) for its narrative + edit DNA and how to rebuild it; or pass a product to get the proven format, real examples, a shoot-ready brief, and a generation-prompt scaffold.
+4. **make_brief.** Write the creative. Default returns a shoot-ready brief (framework, angle, hook bank, a Beat/VO/on-screen-text/B-roll table, CTA, shoot notes); `mode=ideas` for concepts, `mode=hooks` for a ranked hook bank.
+5. **breakout_laws.** Why the same concept gets 1K vs 1M views: the validated first-3-seconds laws that separate breakouts from duds (concept-matched and same-creator pairs plus corpus lift; 83% within-creator on the cleanest blind test, see `docs/methodology`). Returns the laws, what over-indexes, matched proof, and an honest confound caveat.
+6. **kill_the_slop.** Point it at weak copy. It names exactly what is wrong against the anti-slop bar, then rewrites it sharper using a named hook pattern.
 
 And **get_status**, which says plainly what is live and what is not. No marketing in the tool output.
+
+These 6 tools are the research layer. The 6 companion **skills** in `skills/` are the make-it layer (deconstruct, the Seedance and Higgsfield directors, the video editor) that turn this research into the prompts and the finished cut. So the product is **6 tools + 6 skills**.
 
 ## What is inside
 
@@ -56,9 +37,9 @@ The skills are grounded in real DTC and UGC scripting knowledge, not vibes:
 * A library of analyzed video teardowns across the main DTC niches (beauty, skincare, supplements, fitness, food, tech, fashion, home, hair, pets), each tagged with its framework, hook pattern, signature device, and why it worked
 * Real TikTok trending-hashtag data for 2022 through 2025 (MIT licensed) so niche reads can point at live cultural moments
 
-The corpus lives in `mcp/data` and grows over time. See `mcp/data/DATA.md` for sources and licenses. The `search_corpus` tool queries it directly.
+The corpus lives in `mcp/data` and grows over time. See `mcp/data/DATA.md` for sources and licenses. The `study_videos` tool queries it directly.
 
-How the tools point at real videos: the committed reference list is `mcp/data/examples.json`, 418 real videos with their public links and decoded labels (niche, hook pattern, format, views, views-per-follower). That file is what `study_examples`, `search_corpus`, and `viral_teardowns` read to hand your agent real videos to study. The raw scrape and the downloaded video files stay out of the repo. Only the public links and the derived analysis are committed.
+How the tools point at real videos: the committed reference list is `mcp/data/examples.json`, 418 real videos with their public links and decoded labels (niche, hook pattern, format, views, views-per-follower). That file is what `study_videos` reads to hand your agent real videos to study. The raw scrape and the downloaded video files stay out of the repo. Only the public links and the derived analysis are committed.
 
 ## The window, and why recency wins
 

@@ -110,7 +110,7 @@ image_url = r.json()["url"]
 
 ## Ground the script in the breakout laws
 
-Before you write the shot script, pull what wins so the ad is not a guess. If the LazyReel MCP is connected, call `breakout_vs_dud` for the first-3-seconds laws and `study_examples` for the niche's winning format. Then write the shots as a cut sequence, never one held shot:
+Before you write the shot script, pull what wins so the ad is not a guess. If the LazyReel MCP is connected, call `breakout_laws` for the first-3-seconds laws and `study_videos` for the niche's winning format. Then write the shots as a cut sequence, never one held shot:
 
 - **Shot 1 is the hook.** The most unresolved, highest-charge visual. It opens a loop and carries no title card or format label (no "GRWM", "review", "ad"). Its first line of dialogue must read as a burned caption with sound off, because most viewers start muted.
 - **Per-frame novelty.** Each shot is a distinct framing; the stitched ad should cut every 1.5 to 3 seconds. This is why the angle presets are multi-shot, do not collapse them into one long take.
