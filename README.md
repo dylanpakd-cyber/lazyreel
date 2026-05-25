@@ -58,6 +58,8 @@ The skills are grounded in real DTC and UGC scripting knowledge, not vibes:
 
 The corpus lives in `mcp/data` and grows over time. See `mcp/data/DATA.md` for sources and licenses. The `search_corpus` tool queries it directly.
 
+How the tools point at real videos: the committed reference list is `mcp/data/examples.json`, 418 real videos with their public links and decoded labels (niche, hook pattern, format, views, views-per-follower). That file is what `study_examples`, `search_corpus`, and `viral_teardowns` read to hand your agent real videos to study. The raw scrape and the downloaded video files stay out of the repo. Only the public links and the derived analysis are committed.
+
 ## The window, and why recency wins
 
 Every video in the corpus is from the **past 6 months**. Short-form moves fast, so the more recent the upload, the stronger the signal. The **last 30 days are weighted highest**: a format that broke out a year ago is history, while a format breaking out this month is the brief. The corpus grows every day, and older videos age out of the window. When two formats tie on performance, the more recent one wins, because it reflects what the feed is rewarding right now.
