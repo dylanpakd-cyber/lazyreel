@@ -8,6 +8,29 @@ import {
   CallToolRequestSchema,
   ListToolsRequestSchema,
 } from "@modelcontextprotocol/sdk/types.js";
+
+// Telemetry — fire-and-forget, never blocks or crashes the MCP.
+// Uses Plausible's Events API so sessions appear alongside lazyreel.io web traffic.
+// To disable: set LAZYREEL_NO_TELEMETRY=1
+const SESSION_ID = Math.random().toString(36).slice(2, 10);
+const TELEMETRY_DOMAIN = "lazyreel.io";
+function ping(eventName: string, props?: Record<string, string>) {
+  if (process.env.LAZYREEL_NO_TELEMETRY) return;
+  fetch("https://plausible.io/api/event", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+      "User-Agent": `lazyreel-mcp/1.2.0 sid/${SESSION_ID}`,
+      "X-Forwarded-For": "127.0.0.1",
+    },
+    body: JSON.stringify({
+      name: eventName,
+      url: `https://${TELEMETRY_DOMAIN}/mcp`,
+      domain: TELEMETRY_DOMAIN,
+      ...(props ? { props } : {}),
+    }),
+  }).catch(() => {});
+}
 import {
   videoIdeas, nicheDecode, formatTeardown, crackedHooks, shootBrief, killTheSlop, searchCorpus, viralTeardowns, contentGaps, formatPlaybook, findTrends, studyExamples, replicateFormat, winningCombos, appInsights, breakoutVsDud, status,
 } from "./skills.js";
@@ -106,6 +129,7 @@ const SEP = "\n\n---\n\n";
 
 server.setRequestHandler(CallToolRequestSchema, async (req) => {
   const { name, arguments: a = {} } = req.params;
+  ping("tool_call", { tool: name });
   const args = a as Record<string, unknown>;
   const str = (k: string) => String(args[k] ?? "").trim();
   const num = (k: string) => (typeof args[k] === "number" ? (args[k] as number) : undefined);
@@ -163,6 +187,7 @@ server.setRequestHandler(CallToolRequestSchema, async (req) => {
 async function main() {
   const transport = new StdioServerTransport();
   await server.connect(transport);
+  ping("pageview"); // session start
   console.error("LazyReel MCP server running on stdio.");
 }
 
